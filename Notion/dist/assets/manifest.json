@@ -1,0 +1,725 @@
+{
+  "assets": [
+    {
+      "contentType": "font/woff2",
+      "id": "39bfede2281a9a34",
+      "kind": "font",
+      "name": "NotionInter-Regular.woff2",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/39bfede2281a9a34.woff2",
+      "url": "https://www.notion.com/front-static/fonts/NotionInter-Regular.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "fd301286f705eaab",
+      "kind": "font",
+      "name": "NotionInter-Bold.woff2",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/fd301286f705eaab.woff2",
+      "url": "https://www.notion.com/front-static/fonts/NotionInter-Bold.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "2f33bc8b5763a4ce",
+      "kind": "font",
+      "name": "NotionInter-Medium.woff2",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/2f33bc8b5763a4ce.woff2",
+      "url": "https://www.notion.com/front-static/fonts/NotionInter-Medium.woff2"
+    },
+    {
+      "contentType": "image/png",
+      "id": "e9423d3e3f1b5b00",
+      "kind": "image",
+      "name": "agentTop.png",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/e9423d3e3f1b5b00.png",
+      "url": "https://www.notion.com/front-static/accent-illustrations/agentTop.png?v=2"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "0e43ccc190a49a84",
+      "kind": "image",
+      "name": "FedEx.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/0e43ccc190a49a84.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/1WOBygtnWVcfsk5EfcSJVM/99b994e046e92fee4878075877a9441c/FedEx.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "fb71d6932d980315",
+      "kind": "image",
+      "name": "OpenAI.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/fb71d6932d980315.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/6gu2Rybt4VdhS2GEEA99PO/ac0fedd553b2f541fde79cdda05271cc/OpenAI.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "9aa7c587eea3393c",
+      "kind": "image",
+      "name": "a24-mono.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/9aa7c587eea3393c.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/4aacFfCek6OBBghMJHaBSk/9cb5eb86db70a11dbb6bc62b6535293b/a24-mono.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "340a03ef589011a4",
+      "kind": "image",
+      "name": "Figma_Wordmark__Black_.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/340a03ef589011a4.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/6T4QxYfpIzIbZgWUSa5Rb1/8c6cb40bbf2304f8486222d777314b83/Figma_Wordmark__Black_.svg"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "5445c15a5d54c5a0",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/5445c15a5d54c5a0",
+      "url": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fpages%2Fhome%2Fteams-agents-hero%2Fpile_1.webp&w=640&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "c74d726f5348e3c3",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/c74d726f5348e3c3",
+      "url": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fpages%2Fhome%2Fteams-agents-hero%2Fpile_2.webp&w=640&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "bbbcd5691f09e15c",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/bbbcd5691f09e15c",
+      "url": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fpages%2Fhome%2Fteams-agents-hero%2Fpile_3.webp&w=640&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "98a8f208a21691c1",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/98a8f208a21691c1",
+      "url": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fpages%2Fhome%2Fteams-agents-hero%2Fpile_4.webp&w=640&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "bb6903386ea2854e",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/bb6903386ea2854e",
+      "url": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fpages%2Fhome%2Fteams-agents-hero%2Fpile_5.webp&w=640&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "86b64cc6ef091ff2",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/86b64cc6ef091ff2",
+      "url": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fpages%2Fhome%2Fteams-agents-hero%2Fpile_6.webp&w=640&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "f26f5480f9e530b2",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/f26f5480f9e530b2",
+      "url": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fpages%2Fhome%2Fteams-agents-hero%2Fpile_7.webp&w=640&q=75"
+    },
+    {
+      "contentType": "image/png",
+      "id": "67e53ec7e5fa3e31",
+      "kind": "image",
+      "name": "personPeekLeft2.png",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/67e53ec7e5fa3e31.png",
+      "url": "https://www.notion.com/front-static/accent-illustrations/personPeekLeft2.png?v=1"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "873617613aff1920",
+      "kind": "image",
+      "name": "substack-wordmark-mono.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/873617613aff1920.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/6ZbZcPA6g5hFrPMbOPfraR/ef4bc2c92ed55a60c9609900717d3755/substack-wordmark-mono.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "e4d784e4712bbc66",
+      "kind": "image",
+      "name": "cursor-logo-mono.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/e4d784e4712bbc66.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/5zvQQUAMUwmWaGbC9qhXpK/633c8d40bbbb2b42faec7ea3339788ff/cursor-logo-mono.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "6a765641f273f58b",
+      "kind": "image",
+      "name": "Ramp.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/6a765641f273f58b.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/4KBpzIRuWO9Bkoho07RwHW/7e608b80b697431b92ffb144e545cf3c/Ramp.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "559398908d095acb",
+      "kind": "image",
+      "name": "clay-mono-black.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/559398908d095acb.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/4ljglPuQFOp4jC8kIacMa1/73c44685b85c73a717baac0329633d59/clay-mono-black.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "2c85719b349d7592",
+      "kind": "image",
+      "name": "lamborghini-script-mono.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/2c85719b349d7592.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/2Srehy5L0uv68kHfd341sB/b486900e403e6bd0b4cd29bca21d79b4/lamborghini-script-mono.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "8304b695a44140c1",
+      "kind": "image",
+      "name": "david-zwirner-mono.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/8304b695a44140c1.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/5PYK3Lg8UW2Pk5pjMSo0oo/386446de76c143e694ec9790807eff7e/david-zwirner-mono.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "6ad9fa4bbe2209ab",
+      "kind": "image",
+      "name": "Vercel.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/6ad9fa4bbe2209ab.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/6NEhbP27yAbhvWdLKPHTFV/6978b1603c567d69f5fe7b4895b1d30f/Vercel.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "5104608acfee5279",
+      "kind": "image",
+      "name": "Faire_logo_-_black.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/5104608acfee5279.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/2lvHXS3UJ5sJscJTW8GTpc/c22ac415979069ab3be881b2749e0d77/Faire_logo_-_black.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "ff4d275d1f5402ec",
+      "kind": "image",
+      "name": "full-logo--black.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/ff4d275d1f5402ec.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/5noP5n1Gp9wULYfUEzujKv/49d56f55c09d72488606d57671e7d8c4/full-logo--black.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "6aa305bcdee9a6d8",
+      "kind": "image",
+      "name": "goop-mono.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/6aa305bcdee9a6d8.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/6mSBovk8ZRupLUOZtSu9vp/2bc7912e143755ee406413ab0b9e0b68/goop-mono.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "eea36b2d2ea574f9",
+      "kind": "image",
+      "name": "Discord-Logo-Black.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/eea36b2d2ea574f9.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/7hER3ka9QgDiTjLh5Fh3ZZ/acda79bc2449edf5d964a3fc89e19623/Discord-Logo-Black.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "3666af6734d6082a",
+      "kind": "image",
+      "name": "dolby-wordmark-mono.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/3666af6734d6082a.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/28h89MWosNZz4BozEZgayf/92843d67b2b141281b53f4ec1ab6bc0f/dolby-wordmark-mono.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "44d5d2d1c1f7c52b",
+      "kind": "image",
+      "name": "1Password.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/44d5d2d1c1f7c52b.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/kelAN094ZCNSM1hzESs2C/71fdfc39756f757c95f984aa78fc1e82/1Password.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "b375ef34067f3c0e",
+      "kind": "image",
+      "name": "Loreal-k.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/b375ef34067f3c0e.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/nyxHXSMqMnFKE3RD3tteN/fa4e6ab45c999ace2a528a45c5bfb812/Loreal-k.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "4370e960bb2f35f8",
+      "kind": "image",
+      "name": "Volvo_Spread_Word_Mark_2025_bl.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/4370e960bb2f35f8.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/1TZBxOqNgDNBTJUEkD9Rn2/95219318a8bc7198d69e3fe0190ea94c/Volvo_Spread_Word_Mark_2025_bl.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "3263805108b563fc",
+      "kind": "image",
+      "name": "Remote-black.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/3263805108b563fc.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/14SNuPmXDPWdGE0I8TMeNL/6070db21d1b9f0e95c91e9ceb8b225e1/Remote-black.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "e326a48ea2c665b1",
+      "kind": "image",
+      "name": "patreon-wordmark-mono.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/e326a48ea2c665b1.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/29FPcEW8k9owCOzkg5toXL/2e9fb3201f80820a7779e7675d4e927e/patreon-wordmark-mono.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "5ac029c6d7cd8cbe",
+      "kind": "image",
+      "name": "toyota-black.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/5ac029c6d7cd8cbe.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/75O9653Z83boVzSMBMSY2D/4b36e928296e00612213aff4bdd369f2/toyota-black.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "fdf0292f1cd630cd",
+      "kind": "image",
+      "name": "Nvidia.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/fdf0292f1cd630cd.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/27zUO0UMDpEBMwPKUUilFH/daba398de4e970fcda7a138ff09d480a/Nvidia.svg"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "ebe77bf4d4463f26",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/ebe77bf4d4463f26",
+      "url": "https://www.notion.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fspoqsaf9291f%2F3kVtQWll6jUqQepQ0kaYlz%2F382b34f23ecb349129239f0b649aba8c%2Fweb-homepage-hero-1920x1200_final.jpg&w=1920&q=90"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "87a90d0569cff114",
+      "kind": "font",
+      "name": "LyonText-Regular-Web.0v5-4d-mnyixl.woff2",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/87a90d0569cff114.woff2",
+      "url": "https://www.notion.com/_next/static/media/LyonText-Regular-Web.0v5-4d-mnyixl.woff2"
+    },
+    {
+      "contentType": "font/woff2",
+      "id": "b32cb5a59967bdb5",
+      "kind": "font",
+      "name": "NotionInter-SemiBold.woff2",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/b32cb5a59967bdb5.woff2",
+      "url": "https://www.notion.com/front-static/fonts/NotionInter-SemiBold.woff2"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "9ea99dece4fc417b",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/9ea99dece4fc417b",
+      "url": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fnav%2FallFeaturesNav%2Fautomate.png&w=384&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "5c350b26955642bb",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/5c350b26955642bb",
+      "url": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fnav%2FallFeaturesNav%2Ffind.png&w=384&q=75"
+    },
+    {
+      "contentType": "image/png",
+      "id": "b410ceba844fb1e8",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/b410ceba844fb1e8",
+      "url": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fnav%2FallFeaturesNav%2Fcapture.png&w=384&q=75"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "5791ad41778326a6",
+      "kind": "image",
+      "name": "Company_Cursor__Colorway_White.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/5791ad41778326a6.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/OJRQbA3XzRNfCfMh3UWf4/76408a06d9d9a1ed52fcd109b264de80/Company_Cursor__Colorway_White.svg"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "ef6bc05ee6bb945b",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/ef6bc05ee6bb945b",
+      "url": "https://www.notion.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fspoqsaf9291f%2F5s8E0EU3tXEvGrFrRwgxhb%2Fc44fce43494ccd6f098746c64b679aab%2Fcapture_desktop.jpg&w=1080&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "ad3415552a0bc6bc",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/ad3415552a0bc6bc",
+      "url": "https://www.notion.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fspoqsaf9291f%2F5bqhI7eaPc7AeAtuuTvtuh%2F915d56f683fcd7edbd9f1e0434136b0d%2Fpin_capture.png&w=1080&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "1dbf071efbecd4ad",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/1dbf071efbecd4ad",
+      "url": "https://www.notion.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fspoqsaf9291f%2F3wptjGyp47YX2bFx2LikSS%2F06eae544cf0d12dcd58a41e157031c9a%2FMini_AIMN.png&w=1080&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "11dd7e682cf992e5",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/11dd7e682cf992e5",
+      "url": "https://www.notion.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fspoqsaf9291f%2F1FOyxGfzHA9kKA1BVPQa4m%2F721dc34d66976c6dbaa4b16b260b9a97%2Ffind_desktop.png&w=1080&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "4c7e40ce8c85d37b",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/4c7e40ce8c85d37b",
+      "url": "https://www.notion.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fspoqsaf9291f%2F3PH2HDqwPQKa0Xtq1EzIHs%2Fdf192356392843cf5999e8691221fae1%2Fimage.png&w=1080&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "6b4a81c8592da514",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/6b4a81c8592da514",
+      "url": "https://www.notion.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fspoqsaf9291f%2F4mw82WFsPwlqM8p3SFChGp%2F0f24425d9c398b7231eb089e4677e069%2Fchat_input.png&w=1080&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "2f29b6f81ad64138",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/2f29b6f81ad64138",
+      "url": "https://www.notion.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fspoqsaf9291f%2F5CESaDHalT60BVMktTrFD9%2F986587f634695de956580c1654b4f777%2Fautomate_front_desktop.jpg&w=1080&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "3533a61deb40b406",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/3533a61deb40b406",
+      "url": "https://www.notion.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fspoqsaf9291f%2F4U19kO5gM7RYsJa4Xr2oGF%2F806a8c048e2a03bf4886d3085a03986d%2Fimage.png&w=1080&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "ecb2ca83a24a60e4",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/ecb2ca83a24a60e4",
+      "url": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fagents%2Fmailbox.png&w=96&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "fb94ecd97ac7ae41",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/fb94ecd97ac7ae41",
+      "url": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fagents%2Frock.png&w=96&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "87bfcdcdc252c372",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/87bfcdcdc252c372",
+      "url": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fagents%2Fsign.png&w=96&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "fbab8674efa552f2",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/fbab8674efa552f2",
+      "url": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fagents%2Fapple.png&w=96&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "0592e92cb2e75c5e",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/0592e92cb2e75c5e",
+      "url": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fagents%2Flight_bulb.png&w=96&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "ef90659a3d7b65c7",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/ef90659a3d7b65c7",
+      "url": "https://www.notion.com/_next/image?url=%2Ffront-static%2Fpages%2Fhome%2Fjune%2Fworker.png&w=48&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "9c414f9a5d0d2a1d",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/9c414f9a5d0d2a1d",
+      "url": "https://www.notion.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fspoqsaf9291f%2F3M9ceMRlhgl2rIRgqs6nSq%2F8a641169512d0053ac357d97ba527758%2Fcursor.png&w=1080&q=75"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "43951461a4ae0e36",
+      "kind": "image",
+      "name": "Company_faire__Colorway_White.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/43951461a4ae0e36.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/6HI6Z7JAuvLnNK8mDWdnF8/fd2d3b36fc27b8bbad2042136c7991f2/Company_faire__Colorway_White.svg"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "946c6d150be27beb",
+      "kind": "image",
+      "name": "Ramp_Business_Corporation_Logo_1.svg",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/946c6d150be27beb.svg",
+      "url": "https://images.ctfassets.net/spoqsaf9291f/6zW25mUZj4PMuydbiGSEIi/9b8c5eb1d8e0db2abf4c531433a39a6e/Ramp_Business_Corporation_Logo_1.svg"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "09cbb00d8baeb64d",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/09cbb00d8baeb64d",
+      "url": "https://www.notion.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fspoqsaf9291f%2F3pCHbRV7f5UjIssdK3CDpy%2F7b48cf81bad50d66e31caa5a3b80d5b5%2Ffaire.png&w=1080&q=75"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "2b9642f15f836dfe",
+      "kind": "image",
+      "name": "image",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/2b9642f15f836dfe",
+      "url": "https://www.notion.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Fspoqsaf9291f%2F69ZGgVfnKktXcsoatPFe10%2Fbb284c982b9a95f943eef6bbda821104%2Framp.png&w=1080&q=75"
+    },
+    {
+      "contentType": "image/vnd.microsoft.icon",
+      "id": "eaa89dda9b191945",
+      "kind": "image",
+      "name": "favicon.ico",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/eaa89dda9b191945.ico",
+      "url": "https://www.notion.com/front-static/favicon.ico"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "117f251afe4976ac",
+      "kind": "image",
+      "name": "svg-1",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/117f251afe4976ac.svg",
+      "url": "inline-svg:117f251afe4976ac"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "90a99e4e3603affe",
+      "kind": "image",
+      "name": "svg-2",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/90a99e4e3603affe.svg",
+      "url": "inline-svg:90a99e4e3603affe"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "ff87bd51096c1306",
+      "kind": "image",
+      "name": "svg-3",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/ff87bd51096c1306.svg",
+      "url": "inline-svg:ff87bd51096c1306"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "c3c4379cbb7bbbc7",
+      "kind": "image",
+      "name": "svg-4",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/c3c4379cbb7bbbc7.svg",
+      "url": "inline-svg:c3c4379cbb7bbbc7"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "f91ba0be6f31b841",
+      "kind": "image",
+      "name": "svg-5",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/f91ba0be6f31b841.svg",
+      "url": "inline-svg:f91ba0be6f31b841"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "e52b7a51887fa064",
+      "kind": "image",
+      "name": "svg-6",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/e52b7a51887fa064.svg",
+      "url": "inline-svg:e52b7a51887fa064"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "90dde5b1479c6fea",
+      "kind": "image",
+      "name": "svg-7",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/90dde5b1479c6fea.svg",
+      "url": "inline-svg:90dde5b1479c6fea"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "36e5d11f818d7059",
+      "kind": "image",
+      "name": "svg-8",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/36e5d11f818d7059.svg",
+      "url": "inline-svg:36e5d11f818d7059"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "e581ad28af86c8a1",
+      "kind": "image",
+      "name": "svg-9",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/e581ad28af86c8a1.svg",
+      "url": "inline-svg:e581ad28af86c8a1"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "b150d946f291bf00",
+      "kind": "image",
+      "name": "svg-10",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/b150d946f291bf00.svg",
+      "url": "inline-svg:b150d946f291bf00"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "09ec8613d54a9365",
+      "kind": "image",
+      "name": "svg-11",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/09ec8613d54a9365.svg",
+      "url": "inline-svg:09ec8613d54a9365"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "30766347da5c6e9b",
+      "kind": "image",
+      "name": "svg-12",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/30766347da5c6e9b.svg",
+      "url": "inline-svg:30766347da5c6e9b"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "dca63cec77b1d182",
+      "kind": "image",
+      "name": "svg-13",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/dca63cec77b1d182.svg",
+      "url": "inline-svg:dca63cec77b1d182"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "ad27be07e2aa6d0d",
+      "kind": "image",
+      "name": "svg-14",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/ad27be07e2aa6d0d.svg",
+      "url": "inline-svg:ad27be07e2aa6d0d"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "862a48520acea2b5",
+      "kind": "image",
+      "name": "svg-15",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/862a48520acea2b5.svg",
+      "url": "inline-svg:862a48520acea2b5"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "b726ab545bcc99f5",
+      "kind": "image",
+      "name": "svg-16",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/b726ab545bcc99f5.svg",
+      "url": "inline-svg:b726ab545bcc99f5"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "41c2045e866b1b8d",
+      "kind": "image",
+      "name": "svg-17",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/41c2045e866b1b8d.svg",
+      "url": "inline-svg:41c2045e866b1b8d"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "cb0d9bfe82f1879d",
+      "kind": "image",
+      "name": "svg-18",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/cb0d9bfe82f1879d.svg",
+      "url": "inline-svg:cb0d9bfe82f1879d"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "376a6ee85b098adf",
+      "kind": "image",
+      "name": "svg-19",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/376a6ee85b098adf.svg",
+      "url": "inline-svg:376a6ee85b098adf"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "3dbea8347de1250e",
+      "kind": "image",
+      "name": "svg-20",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/3dbea8347de1250e.svg",
+      "url": "inline-svg:3dbea8347de1250e"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "33dd9d9851026619",
+      "kind": "image",
+      "name": "svg-21",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/33dd9d9851026619.svg",
+      "url": "inline-svg:33dd9d9851026619"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "688567ff0c56b448",
+      "kind": "image",
+      "name": "svg-22",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/688567ff0c56b448.svg",
+      "url": "inline-svg:688567ff0c56b448"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "330dfb7a3cec4ce8",
+      "kind": "image",
+      "name": "svg-23",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/330dfb7a3cec4ce8.svg",
+      "url": "inline-svg:330dfb7a3cec4ce8"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "47c43a5279d28dbd",
+      "kind": "image",
+      "name": "svg-24",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/47c43a5279d28dbd.svg",
+      "url": "inline-svg:47c43a5279d28dbd"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "64f0872a59df6c54",
+      "kind": "image",
+      "name": "svg-25",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/64f0872a59df6c54.svg",
+      "url": "inline-svg:64f0872a59df6c54"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "6b0220fcbb602525",
+      "kind": "image",
+      "name": "svg-26",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/6b0220fcbb602525.svg",
+      "url": "inline-svg:6b0220fcbb602525"
+    },
+    {
+      "contentType": "image/svg+xml",
+      "id": "f4126864ea9327ef",
+      "kind": "image",
+      "name": "svg-27",
+      "path": "/var/folders/xn/bmcxm5r96mqcfx0blfzt9h8c0000gn/T/browser-use/assets/f7f9c082-9e47-4fe9-beca-0425d3da1585/f4126864ea9327ef.svg",
+      "url": "inline-svg:f4126864ea9327ef"
+    }
+  ],
+  "failures": [
+    {
+      "contentType": null,
+      "id": "9fb2446e84ec65d3",
+      "name": "web-homepage-hero-1920x1200_final.mp4",
+      "reason": "Loaded resource fetch failed: Asset bundling failed; page fetch failed: Browser Use encountered an error interacting with this webpage: TypeError: Failed to fetch (videos.ctfassets.net)\n    at https://www.notion.com/_next/static/chunks/2gf12s9v67nup.js:13:1866\n    at a (https://transcend-cdn.com/cm/a36a42ad-3a71-444f-9e8a-b19950129dc6/airgap.js:10:13398)\n    at f (https://transcend-cdn.com/cm/a36a42ad-3a71-444f-9e8a-b19950129dc6/airgap.js:10:13755)\n    at https://transcend-cdn.com/cm/a36a42ad-3a71-444f-9e8a-b19950129dc6/airgap.js:10:13776\n    at HX (<anonymous>:1:41)\n    at <anonymous>:1:354",
+      "url": "https://videos.ctfassets.net/spoqsaf9291f/1EL7UZIXfcqngxsNSbL8tR/291f61f56f29dd8e788deaec8561d882/web-homepage-hero-1920x1200_final.mp4"
+    }
+  ]
+}
