@@ -283,12 +283,12 @@ body { min-width: 320px; margin: 0; }
 [data-page="stats"] [data-slot="top-models-stack"] {
   position: absolute; right: calc(var(--top-models-bar-gap) / 2);
   bottom: 0; left: calc(var(--top-models-bar-gap) / 2);
-  z-index: 1; display: grid; min-height: 0; overflow: hidden;
+  z-index: 1; display: flex; flex-direction: column; min-height: 0; overflow: hidden;
   background: var(--stats-bg); box-shadow: 0 -4px 0 var(--stats-bg);
 }
 
 [data-page="stats"] [data-slot="top-models-stack"] i {
-  display: block; min-height: 0; transition: background .12s ease;
+  display: block; min-height: 0; flex-shrink: 1; transition: background .12s ease;
 }
 [data-page="stats"] [data-slot="top-models-stack"] i + i { border-top: 2px solid var(--stats-bg); }
 
