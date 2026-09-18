@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Model Usage Rankings | OpenCode Data</title>
+  <meta name="description" content="Explore OpenCode usage across AI models, including token volume, rankings, market share, token pricing, session cost, cache ratio, and geo breakdowns.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="app">
+<main data-page="stats" data-theme="system">
+
+<!-- ─── HEADER ─── -->
+<header data-component="top">
+  <div data-slot="header-bar">
+    <a data-slot="brand" href="#" aria-label="Data home">
+      <svg data-slot="stats-wordmark" width="66" height="20" viewBox="0 0 66 20" fill="none" aria-hidden="true">
+        <path opacity="0.2" d="M12 16H4V8H12V16Z" fill="currentColor"></path>
+        <path d="M12 4H4V16H12V4ZM16 20H0V0H16V20Z" fill="currentColor"></path>
+        <path d="M63.3543 16L62.5119 12.8711H58.6437L57.8013 16H55.7383L59.2454 4H61.9618L65.4689 16H63.3543ZM61.0678 7.851L60.6896 5.94269H60.4489L60.0707 7.851L59.1595 11.1347H61.9962L61.0678 7.851Z" fill="currentColor"></path>
+        <path d="M52.5951 5.87392V16H50.4461V5.87392H47.4375V4H55.6209V5.87392H52.5951Z" fill="currentColor"></path>
+        <path d="M45.2059 16L44.3635 12.8711H40.4953L39.6529 16H37.5898L41.097 4H43.8133L47.3205 16H45.2059ZM42.9194 7.851L42.5411 5.94269H42.3004L41.9222 7.851L41.011 11.1347H43.8477L42.9194 7.851Z" fill="currentColor"></path>
+        <path d="M28 4H32.0917C32.8138 4 33.4556 4.11461 34.0172 4.34384C34.5903 4.5616 35.0716 4.9169 35.4613 5.40974C35.8625 5.89112 36.1662 6.51003 36.3725 7.26648C36.5788 8.02292 36.6819 8.9341 36.6819 10C36.6819 11.0659 36.5788 11.9771 36.3725 12.7335C36.1662 13.49 35.8625 14.1146 35.4613 14.6075C35.0716 15.0888 34.5903 15.4441 34.0172 15.6734C33.4556 15.8911 32.8138 16 32.0917 16H28V4ZM32.0917 14.1261C32.8252 14.1261 33.3926 13.9026 33.7937 13.4556C34.1948 12.9971 34.3954 12.3152 34.3954 11.4097V8.59026C34.3954 7.68481 34.1948 7.0086 33.7937 6.5616C33.3926 6.10315 32.8252 5.87392 32.0917 5.87392H30.149V14.1261H32.0917Z" fill="currentColor"></path>
+      </svg>
+    </a>
+    <nav data-component="section-nav" aria-label="Data sections">
+      <ul>
+        <li><a href="#top-models">Top Models</a></li>
+        <li><a href="#leaderboard">Leaderboard</a></li>
+        <li><a href="#session-cost">Session Cost</a></li>
+        <li><a href="#token-cost">Token Cost</a></li>
+        <li><a href="#cache-ratio">Cache Ratio</a></li>
+        <li><a href="#market-share">Market Share</a></li>
+        <li><a href="#geo-breakdown">Geo Breakdown</a></li>
+      </ul>
+    </nav>
+    <div data-slot="header-actions">
+      <a data-slot="header-button" data-variant="neutral" href="https://github.com/anomalyco/opencode" target="_blank" rel="noreferrer" aria-label="Star OpenCode on GitHub (208K stars)">
+        <strong>GitHub</strong>
+        <span>[208K]</span>
+      </a>
+      <a data-slot="header-button" data-variant="contrast" href="https://opencode.ai/">
+        <strong>Try OpenCode</strong>
+      </a>
+      <button data-slot="menu-button" type="button" aria-controls="stats-mobile-nav" aria-expanded="false" aria-label="Open navigation" onclick="toggleMobileMenu()">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M2 4.72H14M2 8.5H14M2 12.28H14" stroke="currentColor"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <nav id="stats-mobile-nav" data-slot="mobile-menu" aria-label="Data sections" hidden>
+    <a data-slot="mobile-menu-item" data-variant="github" href="https://github.com/anomalyco/opencode" target="_blank" rel="noreferrer">
+      <strong>GitHub</strong><span>[208K]</span>
+    </a>
+    <a data-slot="mobile-menu-item" href="#top-models">Top Models</a>
+    <a data-slot="mobile-menu-item" href="#leaderboard">Leaderboard</a>
+    <a data-slot="mobile-menu-item" href="#session-cost">Session Cost</a>
+    <a data-slot="mobile-menu-item" href="#token-cost">Token Cost</a>
+    <a data-slot="mobile-menu-item" href="#cache-ratio">Cache Ratio</a>
+    <a data-slot="mobile-menu-item" href="#market-share">Market Share</a>
+    <a data-slot="mobile-menu-item" href="#geo-breakdown">Geo Breakdown</a>
+  </nav>
+</header>
+
+<div data-component="container">
+<div data-component="content">
+
+<!-- ─── HERO ─── -->
+<section data-section="hero">
+  <p data-slot="hero-meta" role="status" aria-atomic="true">
+    <span data-slot="visually-hidden">Updated Sep 18, 02:16 AM UTC</span>
+    <svg aria-hidden="true" width="16" height="16" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" clip-rule="evenodd" d="M13 13H3V3H13V13ZM6.46777 6.81641V7.81641H7.5791V11.3721H8.5791V6.81641H6.46777ZM7.30078 4.62891V5.62891H8.85645V4.62891H7.30078Z" fill="currentColor"></path>
+    </svg>
+    <span data-slot="hero-meta-label" aria-hidden="true">Updated</span>
+    <span data-slot="hero-meta-time" aria-hidden="true">
+      <span data-slot="hero-meta-ticker" data-ticking="false">
+        <span data-slot="hero-meta-ticker-track">
+          <span data-slot="hero-meta-ticker-item">Sep 18</span>
+          <span data-slot="hero-meta-ticker-item">Sep 18</span>
+        </span>
+      </span>
+      <span data-slot="hero-meta-separator">,</span>
+      <span data-slot="hero-meta-ticker" data-ticking="false">
+        <span data-slot="hero-meta-ticker-track">
+          <span data-slot="hero-meta-ticker-item">02:16 AM UTC</span>
+          <span data-slot="hero-meta-ticker-item">02:16 AM UTC</span>
+        </span>
+      </span>
+    </span>
+  </p>
+  <div data-slot="hero-canvas">
+    <div data-slot="hero-pattern" aria-hidden="true"></div>
+    <h1><a data-slot="heading-link" href="#overview">Model Data</a></h1>
+    <p data-slot="hero-copy">See which models are winning real usage, how the mix is shifting,<br data-slot="hero-copy-break"> and what that means for cost.</p>
+  </div>
+</section>
+
+<!-- ─── TOP MODELS ─── -->
+<section id="top-models" data-section="top-models">
+  <h2 data-slot="top-models-title">
+    <strong><a data-slot="heading-link" href="#top-models"><span data-slot="heading-anchor" aria-hidden="true">#</span>Top Models.</a></strong>
+    <span>Usage of models across OpenCode.</span>
+  </h2>
+  <div id="top-models-chart" data-component="top-models-chart" role="img" aria-label="Stacked top model usage chart">
+    <div data-slot="top-models-axis" aria-hidden="true" id="chart-axis"></div>
+    <div data-slot="top-models-bars" id="chart-bars"></div>
+  </div>
+  <div data-slot="chart-footer">
+    <div data-component="usage-filter" data-variant="product">
+      <button data-active="true" id="btn-tokens">Tokens</button>
+      <button id="btn-users">Users</button>
+    </div>
+    <div data-component="usage-filter" data-variant="range">
+      <button id="btn-1m">1M</button>
+      <button data-active="true" id="btn-2m">2M</button>
+    </div>
+  </div>
+</section>
+
+<!-- ─── LEADERBOARD ─── -->
+<section id="leaderboard" data-section="leaderboard">
+  <h2 data-slot="section-title">
+    <strong><a data-slot="heading-link" href="#leaderboard"><span data-slot="heading-anchor" aria-hidden="true">#</span>Leaderboard.</a></strong>
+    <span>Today's most active models by output tokens.</span>
+  </h2>
+  <div data-component="leaderboard" id="leaderboard-grid"></div>
+</section>
+
+<!-- ─── SESSION COST ─── -->
+<section id="session-cost" data-section="session-cost">
+  <h2 data-slot="section-title">
+    <strong><a data-slot="heading-link" href="#session-cost"><span data-slot="heading-anchor" aria-hidden="true">#</span>Session Cost.</a></strong>
+    <span>Average cost per coding session by model.</span>
+  </h2>
+  <div data-component="data-table" id="session-cost-table"></div>
+</section>
+
+<!-- ─── TOKEN COST ─── -->
+<section id="token-cost" data-section="token-cost">
+  <h2 data-slot="section-title">
+    <strong><a data-slot="heading-link" href="#token-cost"><span data-slot="heading-anchor" aria-hidden="true">#</span>Token Cost.</a></strong>
+    <span>Price per million tokens by model.</span>
+  </h2>
+  <div data-component="data-table" id="token-cost-table"></div>
+</section>
+
+<!-- ─── CACHE RATIO ─── -->
+<section id="cache-ratio" data-section="cache-ratio">
+  <h2 data-slot="section-title">
+    <strong><a data-slot="heading-link" href="#cache-ratio"><span data-slot="heading-anchor" aria-hidden="true">#</span>Cache Ratio.</a></strong>
+    <span>Prompt cache hit rates by model.</span>
+  </h2>
+  <div data-component="data-table" id="cache-ratio-table"></div>
+</section>
+
+<!-- ─── MARKET SHARE ─── -->
+<section id="market-share" data-section="market-share">
+  <h2 data-slot="section-title">
+    <strong><a data-slot="heading-link" href="#market-share"><span data-slot="heading-anchor" aria-hidden="true">#</span>Market Share.</a></strong>
+    <span>Token volume breakdown by model author.</span>
+  </h2>
+  <div id="market-share-chart" data-component="market-share-chart" role="img" aria-label="Market share stacked bar chart"></div>
+</section>
+
+<!-- ─── RETENTION ─── -->
+<section id="retention" data-section="retention">
+  <h2 data-slot="section-title">
+    <strong><a data-slot="heading-link" href="#retention"><span data-slot="heading-anchor" aria-hidden="true">#</span>Retention.</a></strong>
+    <span>Week-over-week user retention by model.</span>
+  </h2>
+  <div data-component="retention-chart" id="retention-chart"></div>
+</section>
+
+<!-- ─── GEO BREAKDOWN ─── -->
+<section id="geo-breakdown" data-section="geo-breakdown">
+  <h2 data-slot="section-title">
+    <strong><a data-slot="heading-link" href="#geo-breakdown"><span data-slot="heading-anchor" aria-hidden="true">#</span>Geo Breakdown.</a></strong>
+    <span>Token usage by country.</span>
+  </h2>
+  <div data-component="data-table" id="geo-table"></div>
+</section>
+
+</div><!-- /content -->
+</div><!-- /container -->
+
+<!-- ─── FOOTER ─── -->
+<footer data-component="footer">
+  <div data-slot="footer-grid">
+    <a data-slot="footer-mark" href="#">
+      <svg data-slot="opencode-mark" width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+        <rect width="40" height="40" fill="currentColor"/>
+        <rect x="8" y="8" width="24" height="24" fill="var(--stats-bg)"/>
+        <rect x="12" y="16" width="16" height="16" fill="currentColor" opacity="0.2"/>
+      </svg>
+    </a>
+    <div data-slot="footer-column">
+      <h2>Resources</h2>
+      <nav>
+        <a href="https://opencode.ai/" target="_blank">Website</a>
+        <a href="https://github.com/anomalyco/opencode" target="_blank">GitHub</a>
+        <a href="#">Documentation</a>
+      </nav>
+    </div>
+    <div data-slot="footer-column">
+      <h2>Community</h2>
+      <nav>
+        <a href="#">Discord</a>
+        <a href="#">Twitter</a>
+        <a href="#">Blog</a>
+      </nav>
+    </div>
+    <div data-slot="footer-column">
+      <h2>Company</h2>
+      <nav>
+        <a href="#">About</a>
+        <a href="#">Careers</a>
+        <a href="#">Contact</a>
+      </nav>
+    </div>
+    <div data-slot="footer-column">
+      <h2>Legal</h2>
+      <nav>
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+      </nav>
+    </div>
+  </div>
+  <div data-slot="footer-pattern"></div>
+  <div data-slot="footer-bottom">
+    <div>
+      <span data-slot="status">All systems operational</span>
+    </div>
+    <div data-slot="footer-controls">
+      <div data-slot="theme-toggle">
+        <button data-slot="theme-option" aria-pressed="false" aria-label="Light theme" onclick="setTheme('light')">
+          <svg data-slot="theme-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="3" stroke="currentColor"/><path d="M8 2V4M8 12V14M2 8H4M12 8H14M3.76 3.76L5.17 5.17M10.83 10.83L12.24 12.24M12.24 3.76L10.83 5.17M5.17 10.83L3.76 12.24" stroke="currentColor"/></svg>
+        </button>
+        <button data-slot="theme-option" aria-pressed="true" aria-label="System theme" onclick="setTheme('system')">
+          <svg data-slot="theme-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="3" width="12" height="9" rx="1" stroke="currentColor"/><path d="M5 14H11" stroke="currentColor"/></svg>
+        </button>
+        <button data-slot="theme-option" aria-pressed="false" aria-label="Dark theme" onclick="setTheme('dark')">
+          <svg data-slot="theme-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M13.36 10.06A6 6 0 015.94 2.64 6 6 0 108 14a6 6 0 005.36-3.94z" stroke="currentColor"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
