@@ -1,0 +1,13 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="icon-copy">
+<mask id="mask0_0_7" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+<rect id="Bounding box" width="24" height="24" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_0_7)">
+<g id="Union">
+<path d="M7 19H16V20H6V6H7V19Z" fill="#F2F0E7"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18 18H8V4H18V18ZM9 17H17V5H9V17Z" fill="#F2F0E7"/>
+</g>
+</g>
+</g>
+</svg>
