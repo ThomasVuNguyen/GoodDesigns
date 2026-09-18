@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KERNEL: browser infrastructure for web agents and automations</title>
+  <meta name="description" content="browser infrastructure for ai agents and web automations. anti-bot detection, reusable sessions, fast spin-up, and autoscaling browsers.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- ====== GIANT HERO BANNER ====== -->
+  <section class="hero-banner" id="hero-banner">
+    <div class="hero-giant-text" aria-hidden="true">KERNEL</div>
+  </section>
+
+  <!-- ====== STICKY NAVIGATION ====== -->
+  <header class="site-header" id="site-header">
+    <nav class="nav-bar">
+      <a href="/" class="nav-logo" aria-label="Kernel Home">
+        <svg class="logo-svg" viewBox="0 0 120 28" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <text x="0" y="22" font-family="'Arial Black', 'Impact', sans-serif" font-weight="900" font-size="24" letter-spacing="-1">KERNEL</text>
+        </svg>
+      </a>
+      <div class="nav-links">
+        <a href="#customers" class="nav-link">customers</a>
+        <a href="#solutions" class="nav-link">solutions</a>
+        <a href="#pricing" class="nav-link">pricing</a>
+        <a href="#resources" class="nav-link">resources</a>
+        <a href="#book-demo" class="nav-link nav-link--cta">book demo</a>
+        <a href="#sign-in" class="nav-link">sign in / up</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ====== HERO SECTION ====== -->
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <div class="hero-text-group">
+          <h1 class="hero-headline">
+            you build agents.<br>
+            we give them the internet.
+          </h1>
+          <div class="hero-badges">
+            <span class="badge">soc2</span>
+            <span class="badge">hipaa</span>
+          </div>
+        </div>
+        <p class="hero-sub">crazy fast, open source browser infra. any site, accessible and actionable at scale.</p>
+        <div class="hero-ctas">
+          <a href="#" class="btn btn--primary">start building</a>
+          <a href="#" class="btn btn--secondary">book demo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== LOGO BAR ====== -->
+    <section class="logo-bar" id="logo-bar">
+      <p class="logo-bar-label">loved by 11,000+ teams building agents</p>
+      <div class="logo-bar-logos">
+        <div class="logo-item">
+          <div class="logo-icon logo-icon--cashapp">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><rect width="24" height="24" rx="4" fill="#00D64F"/><text x="7" y="18" font-size="16" fill="white" font-weight="bold">$</text></svg>
+          </div>
+          <span>Cash App</span>
+        </div>
+        <div class="logo-item">
+          <div class="logo-icon">▲</div>
+          <span>Vercel</span>
+        </div>
+        <div class="logo-item">
+          <div class="logo-icon">🐦</div>
+          <span>Framer</span>
+        </div>
+        <div class="logo-item">
+          <div class="logo-icon logo-icon--yc">
+            <svg viewBox="0 0 24 24" width="20" height="20"><rect width="24" height="24" rx="4" fill="#F26522"/><text x="5" y="18" font-size="16" fill="white" font-weight="bold">Y</text></svg>
+          </div>
+          <span>Combinator</span>
+        </div>
+        <div class="logo-item">
+          <span class="logo-text-brand">⇄ Rye</span>
+        </div>
+        <div class="logo-item">
+          <span class="logo-text-brand logo-text-brand--emergent">emergent</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FEATURES GRID ====== -->
+    <section class="features" id="features">
+      <div class="features-grid">
+        <!-- Feature 1: Sandboxed Chromium -->
+        <div class="feature-card feature-card--green">
+          <div class="feature-visual">
+            <div class="browser-mock">
+              <div class="browser-mock-toolbar">
+                <span class="browser-arrow">←</span>
+                <span class="browser-arrow">→</span>
+                <span class="browser-arrow">↻</span>
+                <div class="browser-address-bar">
+                  <div class="browser-address-dot"></div>
+                </div>
+              </div>
+              <div class="browser-mock-body">
+                <div class="cdp-url-box">
+                  <span>cdp websocket url</span>
+                  <span class="copy-icon">⧉</span>
+                </div>
+                <div class="browser-tags">
+                  <span class="tag-label">mode</span>
+                  <span class="tag tag--outlined">headful</span>
+                  <span class="tag-label">gpu</span>
+                  <span class="tag tag--outlined">enabled</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3 class="feature-title">sandboxed chromium</h3>
+          <p class="feature-desc">we spin up cloud browsers in &lt;30ms for agents to act on websites</p>
+        </div>
+
+        <!-- Feature 2: GPU Acceleration -->
+        <div class="feature-card feature-card--dark">
+          <div class="feature-visual">
+            <div class="gpu-grid">
+              <div class="grid-lines">
+                <div class="grid-dot" style="top:20%;left:40%"></div>
+                <div class="grid-dot" style="top:30%;left:50%"></div>
+                <div class="grid-dot" style="top:45%;left:35%"></div>
+                <div class="grid-dot" style="top:55%;left:45%"></div>
+                <div class="grid-dot" style="top:65%;left:30%"></div>
+                <div class="grid-dot" style="top:75%;left:40%"></div>
+              </div>
+              <div class="fps-badge">60 fps</div>
+            </div>
+          </div>
+          <h3 class="feature-title">gpu acceleration</h3>
+          <p class="feature-desc">your agent can use memory-intensive and canvas-based websites</p>
+        </div>
+
+        <!-- Feature 3: Stealth -->
+        <div class="feature-card feature-card--dark">
+          <div class="feature-visual">
+            <div class="stealth-visual">
+              <div class="stealth-checks">
+                <span class="check-badge" style="top:10%;right:25%">✓</span>
+                <span class="check-badge" style="top:10%;right:5%">✓</span>
+                <span class="check-badge" style="top:30%;left:5%">✓</span>
+              </div>
+              <div class="cowboy-emoji">🤠</div>
+              <div class="stealth-controls">
+                <span class="stealth-dot">:</span>
+                <span class="stealth-star">★</span>
+              </div>
+            </div>
+          </div>
+          <h3 class="feature-title">stealth</h3>
+          <p class="feature-desc">we solve captchas and manage proxies to help you see fewer of them</p>
+        </div>
+
+        <!-- Feature 4: Managed Auth -->
+        <div class="feature-card feature-card--light">
+          <div class="feature-visual">
+            <div class="auth-visual">
+              <div class="auth-profile-bar">
+                <span class="auth-profile-name">your-profile</span>
+                <span class="auth-status">active</span>
+                <span class="auth-refresh">↻</span>
+              </div>
+            </div>
+          </div>
+          <h3 class="feature-title">managed auth</h3>
+          <p class="feature-desc">we automagically handle auth for agents so you don't have to</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== BENCHMARK SECTION ====== -->
+    <section class="benchmarks" id="benchmarks">
+      <div class="benchmarks-header">
+        <h2 class="section-title">the kernel difference</h2>
+        <div class="benchmark-tabs">
+          <a href="#" class="bench-tab bench-tab--active">throughput</a>
+          <a href="#" class="bench-tab">cold start</a>
+        </div>
+      </div>
+      <div class="benchmark-card">
+        <div class="benchmark-info">
+          <p class="benchmark-description">per-action speed inside a running session, measured by computesdk.</p>
+          <a href="#" class="benchmark-link">view benchmarks</a>
+        </div>
+        <div class="benchmark-bars">
+          <div class="bench-bar bench-bar--small">
+            <span class="bench-bar-label">browser use</span>
+            <span class="bench-bar-value">3.61 actions/sec</span>
+          </div>
+          <div class="bench-bar bench-bar--medium">
+            <span class="bench-bar-label">browserbase</span>
+            <span class="bench-bar-value">4.00 actions/sec</span>
+          </div>
+          <div class="bench-bar bench-bar--large bench-bar--highlight">
+            <span class="bench-bar-label">kernel</span>
+            <span class="bench-bar-value">6.43 actions/sec</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== SOLUTIONS TABS ====== -->
+    <section class="solutions-tabs" id="solutions">
+      <div class="solutions-tab-bar">
+        <a href="#" class="sol-tab">qa</a>
+        <a href="#" class="sol-tab">healthcare</a>
+        <a href="#" class="sol-tab">e-commerce</a>
+        <a href="#" class="sol-tab">gtm</a>
+      </div>
+    </section>
+
+    <!-- ====== CUSTOMER STORY (QA SECTION) ====== -->
+    <section class="customer-story" id="customer-story">
+      <div class="story-visual">
+        <div class="story-browser-mock">
+          <div class="browser-mock-toolbar browser-mock-toolbar--dark">
+            <span class="browser-arrow">←</span>
+            <span class="browser-arrow">→</span>
+            <span class="browser-arrow">↻</span>
+            <div class="browser-address-bar browser-address-bar--dark">
+              <div class="browser-address-dot"></div>
+            </div>
+          </div>
+          <div class="story-browser-body">
+            <div class="cursor cursor--1">⚠️</div>
+            <div class="cursor cursor--2">✈️</div>
+            <div class="cursor cursor--3">✈️</div>
+            <div class="cursor cursor--4">✈️</div>
+            <div class="cursor cursor--5">◇</div>
+            <div class="bug-badge bug-badge--1">● bug found</div>
+            <div class="bug-badge bug-badge--2">● bug found</div>
+          </div>
+        </div>
+      </div>
+      <div class="story-content">
+        <blockquote class="story-quote">
+          "we evaluated many options, and kernel is the only one that could deliver the performance all of our customers' test suites required."
+        </blockquote>
+        <p class="story-author">jinjing liang, co-founder & ceo, stably</p>
+        <a href="#" class="story-cta">build qa agents</a>
+      </div>
+    </section>
+
+    <!-- ====== CUSTOMERS SECTION ====== -->
+    <section class="customers" id="customers">
+      <div class="customers-header">
+        <h2 class="section-title">loved by 11,000+ teams building agents</h2>
+        <a href="#" class="view-all-link">view all</a>
+      </div>
+      <div class="customers-grid">
+        <div class="customer-card">
+          <div class="customer-card-info">
+            <div class="customer-dot customer-dot--green"></div>
+            <h3 class="customer-name">the prompting company</h3>
+            <p class="customer-desc">runs 50,000+ kernel browsers every month to get brands cited by llms</p>
+          </div>
+          <div class="customer-card-logo">
+            <div class="customer-logo-placeholder">
+              <span style="font-size:12px;text-transform:uppercase;letter-spacing:2px;font-weight:600;text-align:center;line-height:1.3">the<br>PROMPTING<br>COMPANY</span>
+            </div>
+          </div>
+          <a href="#" class="customer-card-link">read story</a>
+        </div>
+        <div class="customer-card">
+          <div class="customer-card-info">
+            <div class="customer-dot customer-dot--green"></div>
+            <h3 class="customer-name">effective</h3>
+            <p class="customer-desc">runs 10mm+ insurance regulatory filings & 24/7 workloads on kernel</p>
+          </div>
+          <div class="customer-card-logo">
+            <div class="customer-logo-placeholder">
+              <span style="font-size:18px;font-style:italic;font-weight:500">✳ effective<sup style="font-size:8px">®</sup></span>
+            </div>
+          </div>
+          <a href="#" class="customer-card-link">read story</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FRIENDS / PARTNERS SECTION ====== -->
+    <section class="friends" id="friends">
+      <h2 class="section-title">friends of kernel</h2>
+      <div class="friends-grid">
+        <div class="friend-card">
+          <div class="friend-logo">
+            <span style="font-size:32px;font-weight:900">A\</span>
+          </div>
+          <h3 class="friend-name">anthropic</h3>
+          <p class="friend-desc">how we partnered with anthropic on claude managed agents</p>
+        </div>
+        <div class="friend-card">
+          <div class="friend-logo friend-logo--tall">
+            <span style="font-size:24px;font-weight:900;background:#000;color:#fff;padding:4px 6px;border-radius:4px">S</span>
+          </div>
+          <h3 class="friend-name">stripe</h3>
+          <p class="friend-desc">how we partnered with stripe on stripe projects</p>
+        </div>
+        <div class="friend-card">
+          <div class="friend-logo">
+            <span style="font-size:32px;font-weight:900">🔒</span>
+          </div>
+          <h3 class="friend-name">1password</h3>
+          <p class="friend-desc">how we partnered with 1password to rethink auth for agents</p>
+        </div>
+        <div class="friend-card">
+          <div class="friend-logo">
+            <span style="font-size:36px;font-weight:900">▲</span>
+          </div>
+          <h3 class="friend-name">vercel</h3>
+          <p class="friend-desc">how we partnered with vercel to support web bot auth</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== CTA PROMPT SECTION ====== -->
+    <section class="cta-prompt" id="cta-prompt">
+      <a href="#" class="prompt-copy-btn">
+        <span>copy prompt</span>
+      </a>
+    </section>
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-logo-mark">
+          <svg viewBox="0 0 60 60" fill="currentColor" width="80" height="80">
+            <text x="0" y="24" font-family="'Arial Black', 'Impact', sans-serif" font-weight="900" font-size="26">KR</text>
+            <text x="0" y="52" font-family="'Arial Black', 'Impact', sans-serif" font-weight="900" font-size="26">NL</text>
+          </svg>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">articles</h4>
+        <a href="#" class="footer-link">payments for browser agents, powered by kernel</a>
+        <a href="#" class="footer-link">how our in-house go proxy rewrite made wakeups 92% faster</a>
+        <a href="#" class="footer-link">introducing hypeman: our open source sandbox infra</a>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">follow</h4>
+        <p class="footer-text">built in public on <a href="#" class="footer-inline-link">github</a>, debated on <a href="#" class="footer-inline-link">discord</a>, curated on <a href="#" class="footer-inline-link">linkedin</a>, and occasionally broadcast on <a href="#" class="footer-inline-link">twitter x</a>.</p>
+      </div>
+      <div class="footer-col">
+        <h4 class="footer-col-title">legal</h4>
+        <p class="footer-text">it's too early for this — pulitzer prize–winning <a href="#" class="footer-inline-link">terms</a>, and a distinguished non-fiction read about <a href="#" class="footer-inline-link">privacy</a>.</p>
+        <div class="footer-badges">
+          <span class="badge">soc2</span>
+          <span class="badge">hipaa</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-nav-col">
+        <h4 class="footer-nav-title">resources</h4>
+        <a href="#" class="footer-nav-link">customers</a>
+        <a href="#" class="footer-nav-link">benchmarks</a>
+        <a href="#" class="footer-nav-link">blog</a>
+        <a href="#" class="footer-nav-link">pricing</a>
+        <a href="#" class="footer-nav-link">security</a>
+        <a href="#" class="footer-nav-link">brand assets</a>
+        <a href="#" class="footer-nav-link">ai library</a>
+      </div>
+      <div class="footer-nav-col">
+        <h4 class="footer-nav-title">solutions</h4>
+        <a href="#" class="footer-nav-link">e-commerce</a>
+        <a href="#" class="footer-nav-link">gtm</a>
+        <a href="#" class="footer-nav-link">healthcare</a>
+        <a href="#" class="footer-nav-link">qa</a>
+      </div>
+      <div class="footer-nav-col">
+        <h4 class="footer-nav-title">developers</h4>
+        <a href="#" class="footer-nav-link">changelog</a>
+        <a href="#" class="footer-nav-link">docs</a>
+        <a href="#" class="footer-nav-link">status</a>
+        <a href="#" class="footer-nav-link">trust</a>
+      </div>
+    </div>
+
+    <div class="footer-copyright">
+      <p>© 2026 kernel</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
