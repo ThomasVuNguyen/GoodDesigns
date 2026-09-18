@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Coding Agent for Building Ambitious Software | Cursor</title>
+  <meta name="description" content="Cursor is the AI-first code editor. Build software faster with AI agents that understand your codebase.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <!-- Top bar with logo and icons -->
+      <div class="sidebar-header">
+        <button class="sidebar-logo-btn" aria-label="Home">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="sidebar-header-actions">
+          <button class="sidebar-icon-btn" aria-label="Layout view">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="18" rx="1"/>
+              <rect x="14" y="3" width="7" height="18" rx="1"/>
+            </svg>
+          </button>
+          <button class="sidebar-icon-btn" aria-label="Search">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Navigation items -->
+      <nav class="sidebar-nav">
+        <a href="#" class="nav-item active" id="nav-new-chat">
+          <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            <line x1="9" y1="10" x2="15" y2="10"/>
+          </svg>
+          <span>New Chat</span>
+        </a>
+        <a href="#" class="nav-item" id="nav-automations">
+          <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2"/>
+            <path d="M8 12h8"/>
+            <path d="M12 8v8"/>
+          </svg>
+          <span>Automations</span>
+        </a>
+        <a href="#" class="nav-item" id="nav-codebase">
+          <svg class="nav-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 18 22 12 16 6"/>
+            <polyline points="8 6 2 12 8 18"/>
+          </svg>
+          <span>Codebase</span>
+          <span class="badge-early-beta">Early Beta</span>
+        </a>
+      </nav>
+
+      <!-- Chats section -->
+      <div class="sidebar-chats-section">
+        <div class="chats-header">
+          <span class="chats-label">Chats</span>
+          <button class="sidebar-icon-btn filter-btn" aria-label="Filter chats">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="4" y1="6" x2="20" y2="6"/>
+              <line x1="7" y1="12" x2="17" y2="12"/>
+              <line x1="10" y1="18" x2="14" y2="18"/>
+            </svg>
+          </button>
+        </div>
+        <span class="chats-period">Last 30 days</span>
+      </div>
+
+      <!-- Spacer -->
+      <div class="sidebar-spacer"></div>
+
+      <!-- Bottom section -->
+      <div class="sidebar-bottom">
+        <button class="try-grok-btn" id="try-grok-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+            <line x1="9" y1="9" x2="9.01" y2="9"/>
+            <line x1="15" y1="9" x2="15.01" y2="9"/>
+          </svg>
+          <span>Try Grok Bot</span>
+        </button>
+        <div class="user-profile" id="user-profile">
+          <div class="user-avatar">
+            <img src="assets/avatar.jpg" alt="User avatar" onerror="this.style.display='none'; this.parentElement.classList.add('avatar-fallback');">
+          </div>
+          <div class="user-info">
+            <span class="user-name">Thomas Nguyen</span>
+            <span class="user-plan">Pro</span>
+          </div>
+          <button class="user-menu-btn" aria-label="More options">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="5" r="1"/>
+              <circle cx="12" cy="12" r="1"/>
+              <circle cx="12" cy="19" r="1"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main-content" id="main-content">
+      <div class="main-scroll-area">
+        <!-- Start from scratch header -->
+        <div class="main-header">
+          <div class="header-controls">
+            <button class="header-dropdown" id="mode-dropdown">
+              <span>Start from scratch</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"/>
+              </svg>
+            </button>
+            <div class="header-actions-group">
+              <button class="header-icon-btn cloud-btn" aria-label="Cloud">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/>
+                </svg>
+              </button>
+              <button class="header-icon-btn" aria-label="More">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                  <polyline points="6 9 12 15 18 9"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Chat input area -->
+        <div class="chat-input-container" id="chat-input-container">
+          <div class="chat-input-wrapper">
+            <textarea
+              class="chat-input"
+              id="chat-input"
+              placeholder="Ask Cursor to build, fix bugs, explore"
+              rows="3"
+            ></textarea>
+            <div class="chat-input-bottom">
+              <div class="input-left-actions">
+                <button class="add-context-btn" aria-label="Add context">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="12" y1="8" x2="12" y2="16"/>
+                    <line x1="8" y1="12" x2="16" y2="12"/>
+                  </svg>
+                </button>
+                <button class="model-selector" id="model-selector">
+                  <span>Cursor Grok 4.6 High Fast</span>
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="6 9 12 15 18 9"/>
+                  </svg>
+                </button>
+              </div>
+              <button class="mic-btn" id="mic-btn" aria-label="Voice input">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+                  <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                  <line x1="12" y1="19" x2="12" y2="23"/>
+                  <line x1="8" y1="23" x2="16" y2="23"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Suggestion chips -->
+        <div class="suggestion-chips" id="suggestion-chips">
+          <button class="chip" id="chip-security">
+            <span>Run security audit</span>
+          </button>
+          <button class="chip" id="chip-marketplace">
+            <span>Explore Marketplace</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="7" y1="17" x2="17" y2="7"/>
+              <polyline points="7 7 17 7 17 17"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Conversation cards -->
+        <div class="conversations-list" id="conversations-list">
+          <!-- Card 1: Error review (with Open PR) -->
+          <div class="conversation-card" id="card-error-review">
+            <div class="card-preview">
+              <div class="card-preview-content">
+                <div class="card-stats">
+                  <span class="stat-files">24 files</span>
+                  <span class="stat-additions">+2139</span>
+                  <span class="stat-deletions">-47</span>
+                </div>
+                <div class="card-pr-badge pr-open">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="18" cy="18" r="3"/>
+                    <circle cx="6" cy="6" r="3"/>
+                    <path d="M13 6h3a2 2 0 0 1 2 2v7"/>
+                    <line x1="6" y1="9" x2="6" y2="21"/>
+                  </svg>
+                  <span>Open</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Error review</h3>
+              <div class="card-meta">
+                <svg class="meta-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="18" cy="18" r="3"/>
+                  <circle cx="6" cy="6" r="3"/>
+                  <path d="M13 6h3a2 2 0 0 1 2 2v7"/>
+                  <line x1="6" y1="9" x2="6" y2="21"/>
+                </svg>
+                <span class="meta-model">Cursor Grok 4.6 High</span>
+                <span class="meta-source">starship</span>
+                <span class="meta-time">1w</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: General greeting (Branch) -->
+          <div class="conversation-card" id="card-general-greeting">
+            <div class="card-preview">
+              <div class="card-preview-content empty-preview">
+                <div class="card-branch-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="6" y1="3" x2="6" y2="15"/>
+                    <circle cx="18" cy="6" r="3"/>
+                    <circle cx="6" cy="18" r="3"/>
+                    <path d="M18 9a9 9 0 0 1-9 9"/>
+                  </svg>
+                  <span>Branch</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">General greeting</h3>
+              <div class="card-meta">
+                <svg class="meta-icon meta-icon-bolt" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                </svg>
+                <span class="meta-model">Composer 2.5</span>
+                <span class="meta-time">1w</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Posthog ai obs cursor chats -->
+          <div class="conversation-card" id="card-posthog">
+            <div class="card-preview">
+              <div class="card-preview-content empty-preview">
+                <div class="card-branch-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="6" y1="3" x2="6" y2="15"/>
+                    <circle cx="18" cy="6" r="3"/>
+                    <circle cx="6" cy="18" r="3"/>
+                    <path d="M18 9a9 9 0 0 1-9 9"/>
+                  </svg>
+                  <span>Branch</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Posthog ai obs cursor chats <span class="unread-dot"></span></h3>
+              <div class="card-meta">
+                <svg class="meta-icon meta-icon-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="9 12 11 14 15 10"/>
+                </svg>
+                <span class="meta-model">Cursor Grok 4.6 High Fast</span>
+                <span class="meta-source">Grokbot</span>
+                <span class="meta-time">2w</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: New development environment (with code preview image) -->
+          <div class="conversation-card" id="card-new-dev">
+            <div class="card-preview">
+              <div class="card-preview-content has-image-preview">
+                <div class="code-preview-image">
+                  <div class="code-line-decoration line-green"></div>
+                  <div class="code-line-decoration line-teal"></div>
+                  <div class="code-line-decoration line-dark"></div>
+                  <div class="code-line-decoration line-olive"></div>
+                </div>
+                <div class="card-branch-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="6" y1="3" x2="6" y2="15"/>
+                    <circle cx="18" cy="6" r="3"/>
+                    <circle cx="6" cy="18" r="3"/>
+                    <path d="M18 9a9 9 0 0 1-9 9"/>
+                  </svg>
+                  <span>Branch</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">New development environment</h3>
+              <div class="card-meta">
+                <svg class="meta-icon meta-icon-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="9 12 11 14 15 10"/>
+                </svg>
+                <span class="meta-model">Setup</span>
+                <span class="meta-source">Grokbot</span>
+                <span class="meta-time">2w</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5: Cursor grokbot posthog observations (Merged) -->
+          <div class="conversation-card" id="card-posthog-obs">
+            <div class="card-preview">
+              <div class="card-preview-content">
+                <div class="card-stats">
+                  <span class="stat-files">6 files</span>
+                  <span class="stat-additions">+192</span>
+                  <span class="stat-deletions">-44</span>
+                </div>
+                <div class="card-pr-badge pr-merged">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <circle cx="18" cy="18" r="3"/>
+                    <circle cx="6" cy="6" r="3"/>
+                    <path d="M6 9v12"/>
+                    <path d="M18 9a9 9 0 0 0-9 9"/>
+                  </svg>
+                  <span>Merged</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Cursor grokbot posthog observations</h3>
+              <div class="card-meta">
+                <svg class="meta-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="18" cy="18" r="3"/>
+                  <circle cx="6" cy="6" r="3"/>
+                  <path d="M13 6h3a2 2 0 0 1 2 2v7"/>
+                  <line x1="6" y1="9" x2="6" y2="21"/>
+                </svg>
+                <span class="meta-model">Cursor Grok 4.6 High Fast</span>
+                <span class="meta-source">Grokbot</span>
+                <span class="meta-time">2w</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6: Initial greeting -->
+          <div class="conversation-card" id="card-initial-greeting">
+            <div class="card-preview">
+              <div class="card-preview-content empty-preview">
+                <div class="card-branch-badge">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="6" y1="3" x2="6" y2="15"/>
+                    <circle cx="18" cy="6" r="3"/>
+                    <circle cx="6" cy="18" r="3"/>
+                    <path d="M18 9a9 9 0 0 1-9 9"/>
+                  </svg>
+                  <span>Branch</span>
+                </div>
+              </div>
+            </div>
+            <div class="card-info">
+              <h3 class="card-title">Initial greeting <span class="unread-dot"></span></h3>
+              <div class="card-meta">
+                <svg class="meta-icon meta-icon-check" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"/>
+                  <polyline points="9 12 11 14 15 10"/>
+                </svg>
+                <span class="meta-model">GPT-5.2</span>
+                <span class="meta-source">Grokbot</span>
+                <span class="meta-time">2w</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
