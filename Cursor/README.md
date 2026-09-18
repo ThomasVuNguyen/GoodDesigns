@@ -1,107 +1,115 @@
-# Cursor Agents Clone
+# Cursor.com Clone
 
-A pixel-perfect static clone of the Cursor AI Agents interface (`cursor.com/agents`).
+A pixel-perfect, self-contained clone of [cursor.com](https://cursor.com) — the AI-powered code editor homepage.
 
-## Reference
+**Reference URL**: https://cursor.com  
+**Capture Date**: September 18, 2026  
+**Page Title**: Cursor — The new way to build software
 
-- **URL**: https://cursor.com/agents
-- **Capture date**: September 17, 2026
-- **Page title**: AI Coding Agent for Building Ambitious Software | Cursor
-
-## Run Locally
+## Quick Start
 
 ```bash
-cd dist
-python3 -m http.server 8091
-# Open http://localhost:8091
+cd Cursor/dist
+npx -y serve -l 8090
 ```
 
-Or use any static file server:
-
-```bash
-npx -y serve dist
-```
+Then open [http://localhost:8090](http://localhost:8090)
 
 ## Folder Structure
 
 ```
 Cursor/
-├── README.md              ← You are here
-└── dist/
-    ├── index.html         ← Main page
-    ├── styles.css         ← Complete stylesheet with design tokens
-    ├── script.js          ← Interactive behaviors
-    └── assets/
-        └── avatar.jpg     ← User profile avatar
+├── README.md              # This file
+└── dist/                  # Static build output
+    ├── index.html         # Main page markup
+    ├── styles.css         # Complete design system + responsive styles
+    ├── script.js          # Interactivity (scroll animations, mobile menu, tabs)
+    └── assets/            # All media served locally
+        ├── fonts/         # Inter & EB Garamond font files
+        ├── logos/         # Cursor logo, partner logos
+        ├── screenshots/   # Product demo screenshots
+        ├── testimonials/  # Testimonial author avatars
+        └── wallpapers/    # Hero background imagery
 ```
 
-## Implemented Sections
+## Implemented Sections (in order)
 
-1. **Sidebar** — Logo, layout/search icons, navigation (New Chat, Automations, Codebase), Chats section with filter, Try Grok Bot button, user profile with avatar
-2. **Main header** — "Start from scratch" dropdown with cloud icon and chevron
-3. **Chat input** — Textarea with placeholder, add-context button, model selector dropdown, microphone button
-4. **Suggestion chips** — "Run security audit" and "Explore Marketplace" pill buttons
-5. **Conversation cards** — 6 cards with:
-   - Preview thumbnails (with file stats, PR status badges, branch badges, code preview images)
-   - Card titles with optional unread indicators
-   - Meta row with model icons, model names, sources, and timestamps
+1. **Sticky Header** — Logo, nav links (Models, Product, Enterprise, Pricing, Resources), Sign in, Contact sales, Download buttons
+2. **Hero** — Headline, dual CTA buttons (Download + Request a Demo), product demo screenshot with CLI overlay
+3. **Agentic Development** — "Agents turn ideas into code" feature block with questions UI mockup
+4. **Background Agent** — Full-width card showing agent-based development workflow
+5. **Knows Your Codebase** — Split layout with feature description and product screenshot
+6. **Natural Conversation** — Chat-style interface mockup
+7. **Works Where You Do** — Multi-tool integration showcase (Slack, email, docs)
+8. **Testimonials (Row 1)** — Diana Hu (Y Combinator), Jensen Huang (NVIDIA), Andrej Karpathy (Eureka Labs)
+9. **"The new way to build software"** — Serif italic heading (EB Garamond)
+10. **Testimonials (Row 2)** — Patrick Collison (Stripe), shadcn, Greg Brockman (OpenAI)
+11. **Stay on the Frontier** — Three feature cards: Models, Agents, Enterprise
+12. **Applied Research Team** — Team photo with "Join us" CTA
+13. **Recent Highlights** — Four blog post preview cards
+14. **Final CTA** — Download prompt with CLI install command
+15. **Footer** — Product, Resources, Company, Legal columns + social links
 
-## Implemented Interactions
+## Interactive Behaviors
 
-- Chat input auto-resize on typing
-- Navigation item active state toggle
-- Suggestion chips populate the chat input on click
-- Conversation card selection highlighting
-- Microphone button recording toggle (turns red)
-- Hover states on all interactive elements
-- Keyboard shortcut: Cmd/Ctrl+K focuses the chat input
-- Mobile responsive sidebar (slides in/out)
+| Feature | Behavior |
+|---------|----------|
+| **Sticky Header** | Stays fixed at top on scroll |
+| **Mobile Menu** | Hamburger toggle shows/hides nav at ≤1023px |
+| **Scroll Animations** | Elements fade-in/slide-up via IntersectionObserver |
+| **CLI Copy** | Click to copy `curl` install command to clipboard |
+| **Hover States** | Nav links, buttons, cards all have hover transitions |
 
 ## Responsive Breakpoints
 
-- **Desktop**: 1280×900 (primary viewport)
-- **Mobile**: 768px and below (sidebar collapses)
+| Breakpoint | Layout Changes |
+|------------|---------------|
+| `≤1023px` | Mobile header with hamburger menu; stacked layouts |
+| `≤768px` | Grid columns collapse to single column; demo CLI hidden |
+| `≤640px` | Testimonial grid to single column |
+| `≤480px` | Tighter padding, smaller typography |
 
-## Design Tokens & Reusable Components
+## Design Tokens (CSS Variables)
 
-### Tokens (in `styles.css` `:root`)
+Located in `:root` at the top of `styles.css`:
 
-| Token | Value | Usage |
-|-------|-------|-------|
-| `--bg-page` | `#c8d1e0` | Page background |
-| `--bg-sidebar` | `rgba(215, 220, 232, 0.6)` | Sidebar with blur |
-| `--bg-input` | `#edeef0` | Chat input background |
-| `--bg-mic` | `#3c3c3c` | Microphone button |
-| `--text-primary` | `#1a1a1a` | Primary text |
-| `--text-secondary` | `#6b6b6b` | Secondary text |
-| `--text-addition` | `#2e7d32` | Git additions (+) |
-| `--text-deletion` | `#c62828` | Git deletions (-) |
-| `--text-open` | `#2e7d32` | Open PR badge |
-| `--text-merged` | `#7b1fa2` | Merged PR badge |
-| `--font-family` | Inter, system stack | Typography |
-| `--radius-lg` | `12px` | Card/container corners |
-| `--radius-xl` | `16px` | Chat input corners |
+- **Colors**: `--color-bg`, `--color-text-pri`, `--color-accent` (#d4541e coral), `--color-border-*`
+- **Typography**: `--font-sans` (Inter), `--font-serif` (EB Garamond)
+- **Spacing**: `--space-*` scale from 4px to 96px
+- **Radii**: `--radius-sm/md/lg/xl`
+- **Shadows**: `--shadow-card`, `--shadow-float`
+- **Container**: `--container-max` (1280px)
 
-### Reusable Components
+## Reusable Components
 
-- `.nav-item` — Sidebar navigation item with icon + label + optional badge
-- `.chip` — Pill-shaped suggestion button with optional trailing icon
-- `.conversation-card` — Horizontal card with preview thumbnail + info section
-- `.card-pr-badge` / `.card-branch-badge` — Status badges for git state
-- `.try-grok-btn` — Outlined action button
-- `.user-profile` — User info row with avatar
-- `.chat-input-wrapper` — Input container with model selector and mic
+- `.feature-card` — Rounded card with title, description, link, and media
+- `.testimonial-card` — Quote block with avatar, name, and title
+- `.window-chrome` — macOS-style window header with dots and title bar
+- `.highlight-card` — Blog post preview with date, category, and author
+- `.feature-link` — Coral-colored action link with arrow icon
 
 ## Known Intentional Differences
 
-- **Avatar image**: Generated placeholder instead of actual user photo
-- **Font**: Uses Google Fonts Inter (the reference may use a custom/local build)
-- **SVG icons**: Approximated from visual inspection; actual Cursor uses custom icon set
-- **Suggestion chip text**: May differ slightly from dynamic reference content
+- **Images**: Product screenshots and avatars are locally-hosted approximations
+- **Dynamic Content**: No real API calls; all content is static HTML
+- **Videos**: Static screenshots replace any animated/video content from the live site
+- **Links**: All navigation links are `#` anchors (non-functional routing)
 
-## Licensing Notes
+## Asset Licensing
 
-- This clone is for personal reference and learning purposes
-- The Cursor brand, logo, and product design are owned by Anysphere Inc.
-- Replace all brand assets before any public use
-- The avatar image is AI-generated and can be freely replaced
+This clone is for **personal reference and learning purposes only**. The following assets are property of Anysphere Inc. (Cursor) and should be replaced before any public or commercial use:
+
+- Cursor logo and brand marks
+- Product screenshots
+- Testimonial photos and quotes
+- Marketing copy
+
+Replace these with your own assets when adapting the layout for other projects.
+
+## Browser Compatibility
+
+Tested and verified:
+- ✅ Zero broken images
+- ✅ Zero horizontal overflow
+- ✅ Zero console errors
+- ✅ All local assets load without network dependency on cursor.com
