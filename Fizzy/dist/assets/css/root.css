@@ -1,0 +1,309 @@
+:root {
+
+  --lch-black: 0% 0 0;
+  --lch-white: 100% 0 0;
+  --lch-target: 97.88% 0.1212 108.45;
+
+  --lch-canvas: 97.89% 0.0029 264.54;
+  --lch-canvas-dark: 95.89% 0.0029 264.54;
+  --lch-canvas-light: 99.89% 0.0029 264.54;
+  --lch-canvas-light-hover: 100% 0 0;
+
+  --lch-ink-darkest: 26% 0.05 264;
+  --lch-ink-darker: 40% 0.026 262;
+  --lch-ink-dark: 57% 0.014 260;
+  --lch-ink-medium: 66% 0.008 258;
+  --lch-ink-light: 84% 0.005 256;
+  --lch-ink-lighter: 92% 0.003 254;
+  --lch-ink-lightest: 96% 0.002 252;
+  --lch-ink-hover-dark: 34% 0.05 264;
+  --lch-ink-hover-light: 87% 0.003 254;
+  --lch-ink-inverted: var(--lch-ink-lightest);
+
+  --lch-red-darkest: 26% 0.105 34;
+  --lch-red-darker: 40% 0.154 36;
+  --lch-red-dark: 59% 0.19 38;
+  --lch-red-medium: 66% 0.204 40;
+  --lch-red-light: 84.08% 0.0837 41.96;
+  --lch-red-lighter: 92% 0.03 44;
+  --lch-red-lightest: 96% 0.013 46;
+
+  --lch-yellow-darkest: 26% 0.0729 40;
+  --lch-yellow-darker: 40% 0.12 50;
+  --lch-yellow-dark: 58% 0.156 60;
+  --lch-yellow-medium: 74% 0.184 70;
+  --lch-yellow-light: 84% 0.12 80;
+  --lch-yellow-lighter: 92% 0.076 90;
+  --lch-yellow-lightest: 96% 0.034 100;
+
+  --lch-lime-darkest: 26% 0.064 109;
+  --lch-lime-darker: 40% 0.101 110;
+  --lch-lime-dark: 56.5% 0.142 111;
+  --lch-lime-medium: 68% 0.176 113.11;
+  --lch-lime-light: 83.92% 0.0927 113.6;
+  --lch-lime-lighter: 92% 0.046 114;
+  --lch-lime-lightest: 96% 0.034 115;
+
+  --lch-green-darkest: 26% 0.071 149;
+  --lch-green-darker: 40% 0.12 148;
+  --lch-green-dark: 55% 0.162 147;
+  --lch-green-medium: 66% 0.208 146;
+  --lch-green-light: 83.92% 0.0772 145.06;
+  --lch-green-lighter: 92% 0.044 144;
+  --lch-green-lightest: 96% 0.022 143;
+
+  --lch-aqua-darkest: 26% 0.059 214;
+  --lch-aqua-darker: 40% 0.093 212;
+  --lch-aqua-dark: 55.5% 0.122 210;
+  --lch-aqua-medium: 66% 0.152 208;
+  --lch-aqua-light: 83.88% 0.0555 206.02;
+  --lch-aqua-lighter: 92% 0.02 204;
+  --lch-aqua-lightest: 96% 0.012 202;
+
+  --lch-blue-darkest: 26% 0.126 264;
+  --lch-blue-darker: 40% 0.166 262;
+  --lch-blue-dark: 57.02% 0.1895 260.46;
+  --lch-blue-medium: 66% 0.196 257.82;
+  --lch-blue-light: 84.04% 0.0719 255.29;
+  --lch-blue-lighter: 92% 0.026 254;
+  --lch-blue-lightest: 96% 0.016 252;
+  --lch-blue-hover: 51.02% 0.1895 260.46;
+
+  --lch-violet-darkest: 26% 0.148 292;
+  --lch-violet-darker: 40% 0.2 290;
+  --lch-violet-dark: 58% 0.216 287.6;
+  --lch-violet-medium: 66% 0.206 285.52;
+  --lch-violet-light: 84.08% 0.0791 283.47;
+  --lch-violet-lighter: 92% 0.03 282;
+  --lch-violet-lightest: 96% 0.015 280;
+
+  --lch-purple-darkest: 26% 0.131 314;
+  --lch-purple-darker: 40% 0.178 312;
+  --lch-purple-dark: 58% 0.21 310;
+  --lch-purple-medium: 66% 0.258 308;
+  --lch-purple-light: 84.09% 0.0778 305.77;
+  --lch-purple-lighter: 92% 0.03 304;
+  --lch-purple-lightest: 96% 0.019 302;
+
+  --lch-pink-darkest: 26% 0.12 348;
+  --lch-pink-darker: 40% 0.16 346;
+  --lch-pink-dark: 59% 0.188 344;
+  --lch-pink-medium: 71.8% 0.2008 342;
+  --lch-pink-light: 84.04% 0.0737 340;
+  --lch-pink-lighter: 92% 0.03 338;
+  --lch-pink-lightest: 96% 0.02 336;
+
+  --color-black: oklch(var(--lch-black));
+  --color-white: oklch(var(--lch-white));
+  --color-target: oklch(var(--lch-target));
+  --color-canvas: oklch(var(--lch-canvas));
+  --color-canvas-dark: oklch(var(--lch-canvas-dark));
+  --color-canvas-light: oklch(var(--lch-canvas-light));
+  --color-canvas-light-inverted: oklch(var(--lch-canvas-light-inverted));
+  --color-canvas-light-hover: oklch(var(--lch-canvas-light-hover));
+  --color-ink: oklch(var(--lch-ink-darkest));
+  --color-ink-inverted: oklch(var(--lch-ink-inverted));
+  --color-ink-hover-dark: oklch(var(--lch-ink-hover-dark));
+  --color-ink-hover-light: oklch(var(--lch-ink-hover-light));
+  --color-red: oklch(var(--lch-red-medium));
+  --color-yellow: oklch(var(--lch-yellow-medium));
+  --color-lime: oklch(var(--lch-lime-medium));
+  --color-green: oklch(var(--lch-green-medium));
+  --color-aqua: oklch(var(--lch-aqua-medium));
+  --color-blue: oklch(var(--lch-blue-dark));
+  --color-blue-hover: oklch(var(--lch-blue-hover));
+  --color-violet: oklch(var(--lch-violet-medium));
+  --color-purple: oklch(var(--lch-purple-medium));
+  --color-pink: oklch(var(--lch-pink-medium));
+
+  --color-ink-lightest: oklch(var(--lch-ink-lightest));
+  --color-ink-lighter: oklch(var(--lch-ink-lighter));
+  --color-ink-light: oklch(var(--lch-ink-light));
+  --color-ink-medium: oklch(var(--lch-ink-medium));
+  --color-ink-dark: oklch(var(--lch-ink-dark));
+  --color-ink-darker: oklch(var(--lch-ink-darker));
+  --color-ink-darkest: oklch(var(--lch-ink-darkest));
+
+  --color-blue-lightest: oklch(var(--lch-blue-lightest));
+  --color-blue-lighter: oklch(var(--lch-blue-lighter));
+  --color-blue-light: oklch(var(--lch-blue-light));
+  --color-blue-medium: oklch(var(--lch-blue-medium));
+  --color-blue-dark: oklch(var(--lch-blue-dark));
+  --color-blue-darker: oklch(var(--lch-blue-darker));
+  --color-blue-darkest: oklch(var(--lch-blue-darkest));
+
+  --font-family-inter: 'Inter', sans-serif;
+  --font-family-scorekard: 'Scorekard', sans-serif;
+  --font-family-cartridge: 'Cartridge', sans-serif;
+
+  --font-size: clamp(1.5rem, 2.225vw, 2rem);
+  --font-size-xxxx-small: 50%;
+  --font-size-xxx-small: 60%;
+  --font-size-xx-small: 70%;
+  --font-size-x-small: 80%;
+  --font-size-small: 90%;
+  --font-size-medium: 100%;
+  --font-size-large: 115%;
+  --font-size-x-large: 130%;
+  --font-size-xx-large: 145%;
+  --font-size-xxx-large: 160%;
+
+  --letter-spacing: -0.01em;
+  --letter-spacing-tight: -0.015em;
+  --letter-spacing-tighter: -0.0175em;
+  --letter-spacing-loose: 0.005em;
+  --letter-spacing-looser: 0.0075em;
+
+  --line-height: 1.5;
+  --line-height-tight: 1.3;
+  --line-height-tighter: 1.2;
+  --line-height-tightest: 1.1;
+  --line-height-loose: 1.7;
+
+  --space-neutral: 1.5em;
+  --space-xxx-small: 0.2em;
+  --space-xx-small: 0.4em;
+  --space-x-small: 0.6em;
+  --space-small: 0.8em;
+  --space-medium: 1em;
+  --space-large: 2em;
+  --space-x-large: 3em;
+  --space-xx-large: 4em;
+  --space-xxx-large: 5em;
+
+  --transition: 0.125s cubic-bezier(0.37, 1, 0.74, 1);
+
+  --nav-height: 2.9125em;
+
+  --box-shadow:
+    0 0 0 1px oklch(var(--lch-black) / 0.075),
+    0 0.2em 0.1em -0.2em oklch(var(--lch-black) / 0.075),
+    0 0.4em 0.8em -0.4em oklch(var(--lch-black) / 0.075),
+    0 0.8em 1.6em -1.2em oklch(var(--lch-black) / 0.075)
+  ;
+  --box-shadow-cluster:
+    0 0 0 1px oklch(var(--lch-black) / 0.0875),
+    0 0.2em 1.6em -0.8em oklch(var(--lch-black) / 0.1),
+    0 0.4em 2.4em -1.0em oklch(var(--lch-black) / 0.2),
+    0 0.4em 0.8em -1.2em oklch(var(--lch-black) / 0.3),
+    0 0.8em 1.2em -1.6em oklch(var(--lch-black) / 0.4),
+    0 1.2em 1.6em -2.0em oklch(var(--lch-black) / 0.5)
+  ;
+  --box-shadow-pill:
+    0 0 0 1px oklch(var(--lch-black) / 0.0875),
+    0 0.1em 0.2em -0.1em oklch(var(--lch-black) / 0.05),
+    0 0.2em 0.4em -0.2em oklch(var(--lch-black) / 0.05),
+    0 0.3em 0.6em -0.3em oklch(var(--lch-black) / 0.05)
+  ;
+  --box-shadow-pill-hover:
+    0 0 0 1px oklch(var(--lch-black) / 0.125),
+    0 0.1em 0.2em -0.1em oklch(var(--lch-black) / 0.0875),
+    0 0.2em 0.4em -0.2em oklch(var(--lch-black) / 0.0875),
+    0 0.3em 0.6em -0.3em oklch(var(--lch-black) / 0.0875)
+  ;
+
+}
+
+
+
+@media(min-width: 48em) {
+
+  :root {
+    --font-size-large: 125%;
+    --font-size-x-large: 150%;
+    --font-size-xx-large: 175%;
+    --font-size-xxx-large: 200%;
+  }
+
+}
+
+
+
+@media(prefers-color-scheme: dark) {
+
+  :root {
+
+    --lch-target: 40% 0.094 260;
+
+    --lch-canvas: 20% 0.0195 232.58;
+    --lch-canvas-dark: 17% 0.0195 232.58;
+    --lch-canvas-light: 23% 0.0195 232.58;
+    --lch-canvas-light-inverted: 99.89% 0.0029 264.54;
+    --lch-canvas-light-hover: 25% 0.0195 232.58;
+
+    --lch-ink-darkest: 96.02% 0.0034 260;
+    --lch-ink-darker: 86% 0.0061 260;
+    --lch-ink-dark: 73.97% 0.009 260;
+    --lch-ink-medium: 62% 0.0122 260;
+    --lch-ink-light: 40% 0.0148 260;
+    --lch-ink-lighter: 30% 0.0178 260;
+    --lch-ink-lightest: 25% 0.0204 260;
+
+    --lch-red-darkest: 95.85% 0.0218 46;
+    --lch-red-darker: 86% 0.086 44;
+    --lch-red-dark: 73.95% 0.139 42;
+    --lch-red-medium: 62% 0.154 40;
+    --lch-red-light: 40% 0.088 38;
+    --lch-red-lighter: 30% 0.032 36;
+    --lch-red-lightest: 25% 0.011 34;
+
+    --lch-yellow-darkest: 96% 0.056 100;
+    --lch-yellow-darker: 86% 0.103 90;
+    --lch-yellow-dark: 74.06% 0.136 80;
+    --lch-yellow-medium: 62.1% 0.146 70;
+    --lch-yellow-light: 40% 0.0736 60;
+    --lch-yellow-lighter: 30% 0.026 50;
+    --lch-yellow-lightest: 25% 0.01 40;
+
+    --lch-lime-darkest: 96.04% 0.066 115;
+    --lch-lime-darker: 86% 0.098 114;
+    --lch-lime-dark: 73.97% 0.121 113;
+    --lch-lime-medium: 62% 0.128 112;
+    --lch-lime-light: 40% 0.0637 111;
+    --lch-lime-lighter: 30% 0.024 110;
+    --lch-lime-lightest: 25% 0.012 109;
+
+    --lch-aqua-darkest: 96.15% 0.0244 202;
+    --lch-aqua-darker: 86% 0.06 204;
+    --lch-aqua-dark: 73.92% 0.095 206;
+    --lch-aqua-medium: 62% 0.106 208;
+    --lch-aqua-light: 40% 0.0594 210;
+    --lch-aqua-lighter: 30% 0.028 212;
+    --lch-aqua-lightest: 25% 0.017 214;
+
+    --lch-blue-darkest: 95.93% 0.0217 252;
+    --lch-blue-darker: 86% 0.068 254;
+    --lch-blue-dark: 74% 0.1293 256;
+    --lch-blue-medium: 62% 0.159 258;
+    --lch-blue-light: 40% 0.094 260;
+    --lch-blue-lighter: 30% 0.0452 262;
+    --lch-blue-lightest: 25% 0.0318 264;
+    --lch-blue-hover: 66% 0.1293 256;
+
+    --lch-violet-darkest: 95.97% 0.019 280;
+    --lch-violet-darker: 86% 0.068 282;
+    --lch-violet-dark: 74.08% 0.142 284;
+    --lch-violet-medium: 62% 0.184 286;
+    --lch-violet-light: 40% 0.108 288;
+    --lch-violet-lighter: 30% 0.048 290;
+    --lch-violet-lightest: 25% 0.025 292;
+
+    --lch-purple-darkest: 95.99% 0.0217 302;
+    --lch-purple-darker: 86% 0.068 304;
+    --lch-purple-dark: 73.98% 0.141 306;
+    --lch-purple-medium: 62% 0.177 308;
+    --lch-purple-light: 40% 0.099 310;
+    --lch-purple-lighter: 30% 0.04 312;
+    --lch-purple-lightest: 25% 0.017 314;
+
+    --lch-pink-darkest: 95.84% 0.0308 336;
+    --lch-pink-darker: 86% 0.074 338;
+    --lch-pink-dark: 74.04% 0.1294 340;
+    --lch-pink-medium: 62% 0.166 342;
+    --lch-pink-light: 40% 0.085 344;
+    --lch-pink-lighter: 30% 0.03 346;
+    --lch-pink-lightest: 25% 0.011 348;
+
+  }
+
+}

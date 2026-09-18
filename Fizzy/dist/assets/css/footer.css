@@ -1,0 +1,448 @@
+.footer {
+  align-content: end;
+  display: grid;
+  position: relative;
+}
+
+.footer__container {
+  display: grid;
+  margin-inline: auto;
+  position: relative;
+  width: min(100%, 48em);
+}
+
+.footer__svg {
+  height: clamp(7rem, 15.5625vw, 7.475em);
+  overflow: clip;
+  position: relative;
+}
+
+.footer__svg figure {
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.footer__svg figure svg {
+  height: 100%;
+  max-height: 100%;
+  overflow: visible;
+  width: auto;
+}
+
+.footer__svg #track stop:first-child {
+  stop-color: oklch(var(--lch-ink-lightest));
+}
+
+.footer__svg #track stop:last-child {
+  stop-color: oklch(var(--lch-ink-lightest) / 0);
+}
+
+.footer__svg #path-01 stop:first-child,
+.footer__svg #path-02 stop:first-child,
+.footer__svg #path-03 stop:first-child,
+.footer__svg #path-04 stop:first-child,
+.footer__svg #path-05 stop:first-child,
+.footer__svg #path-06 stop:first-child,
+.footer__svg #path-07 stop:first-child,
+.footer__svg #path-08 stop:first-child,
+.footer__svg #path-09 stop:first-child,
+.footer__svg #path-10 stop:first-child,
+.footer__svg #path-11 stop:first-child,
+.footer__svg #path-12 stop:first-child,
+.footer__svg #path-13 stop:first-child,
+.footer__svg #path-14 stop:first-child,
+.footer__svg #path-15 stop:first-child,
+.footer__svg #path-16 stop:first-child,
+.footer__svg #path-17 stop:first-child,
+.footer__svg #path-18 stop:first-child,
+.footer__svg #path-19 stop:first-child,
+.footer__svg #path-20 stop:first-child,
+.footer__svg #path-21 stop:first-child,
+.footer__svg #path-22 stop:first-child,
+.footer__svg #path-23 stop:first-child,
+.footer__svg #path-24 stop:first-child,
+.footer__svg #path-25 stop:first-child,
+.footer__svg #path-26 stop:first-child,
+.footer__svg #path-27 stop:first-child,
+.footer__svg #path-28 stop:first-child,
+.footer__svg #path-29 stop:first-child,
+.footer__svg #path-30 stop:first-child,
+.footer__svg #path-31 stop:first-child,
+.footer__svg #path-32 stop:first-child,
+.footer__svg #path-33 stop:first-child,
+.footer__svg #path-34 stop:first-child,
+.footer__svg #path-35 stop:first-child,
+.footer__svg #path-36 stop:first-child,
+.footer__svg #path-37 stop:first-child,
+.footer__svg #path-38 stop:first-child,
+.footer__svg #path-39 stop:first-child,
+.footer__svg #path-40 stop:first-child,
+.footer__svg #path-41 stop:first-child,
+.footer__svg #path-42 stop:first-child,
+.footer__svg #path-43 stop:first-child,
+.footer__svg #path-44 stop:first-child,
+.footer__svg #path-45 stop:first-child,
+.footer__svg #path-46 stop:first-child,
+.footer__svg #path-47 stop:first-child,
+.footer__svg #path-48 stop:first-child,
+.footer__svg #path-49 stop:first-child,
+.footer__svg #path-50 stop:first-child {
+  stop-color: oklch(var(--lch-ink-lighter));
+}
+
+.footer__svg #path-01 stop:last-child,
+.footer__svg #path-02 stop:last-child,
+.footer__svg #path-03 stop:last-child,
+.footer__svg #path-04 stop:last-child,
+.footer__svg #path-05 stop:last-child,
+.footer__svg #path-06 stop:last-child,
+.footer__svg #path-07 stop:last-child,
+.footer__svg #path-08 stop:last-child,
+.footer__svg #path-09 stop:last-child,
+.footer__svg #path-10 stop:last-child,
+.footer__svg #path-11 stop:last-child,
+.footer__svg #path-12 stop:last-child,
+.footer__svg #path-13 stop:last-child,
+.footer__svg #path-14 stop:last-child,
+.footer__svg #path-15 stop:last-child,
+.footer__svg #path-16 stop:last-child,
+.footer__svg #path-17 stop:last-child,
+.footer__svg #path-18 stop:last-child,
+.footer__svg #path-19 stop:last-child,
+.footer__svg #path-20 stop:last-child,
+.footer__svg #path-21 stop:last-child,
+.footer__svg #path-22 stop:last-child,
+.footer__svg #path-23 stop:last-child,
+.footer__svg #path-24 stop:last-child,
+.footer__svg #path-25 stop:last-child,
+.footer__svg #path-26 stop:last-child,
+.footer__svg #path-27 stop:last-child,
+.footer__svg #path-28 stop:last-child,
+.footer__svg #path-29 stop:last-child,
+.footer__svg #path-30 stop:last-child,
+.footer__svg #path-31 stop:last-child,
+.footer__svg #path-32 stop:last-child,
+.footer__svg #path-33 stop:last-child,
+.footer__svg #path-34 stop:last-child,
+.footer__svg #path-35 stop:last-child,
+.footer__svg #path-36 stop:last-child,
+.footer__svg #path-37 stop:last-child,
+.footer__svg #path-38 stop:last-child,
+.footer__svg #path-39 stop:last-child,
+.footer__svg #path-40 stop:last-child,
+.footer__svg #path-41 stop:last-child,
+.footer__svg #path-42 stop:last-child,
+.footer__svg #path-43 stop:last-child,
+.footer__svg #path-44 stop:last-child,
+.footer__svg #path-45 stop:last-child,
+.footer__svg #path-46 stop:last-child,
+.footer__svg #path-47 stop:last-child,
+.footer__svg #path-48 stop:last-child,
+.footer__svg #path-49 stop:last-child,
+.footer__svg #path-50 stop:last-child {
+  stop-color: oklch(var(--lch-ink-lightest));
+}
+
+.footer__legal {
+  display: grid;
+  gap: var(--space-small);
+  padding: 0 var(--space-small) var(--space-medium) var(--space-small);
+}
+
+.footer__legal p,
+.footer__legal ul {
+  font-size: var(--font-size-xxxx-small);
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height-loose);
+  margin-bottom: -0.375em;
+  margin-top: -0.375em;
+}
+
+.footer__legal p .icon {
+  display: inline-block;
+}
+
+.footer__legal p .icon svg {
+  display: inline-block;
+  height: 1.15em;
+  max-height: 100%;
+  overflow: visible;
+  pointer-events: none;
+  vertical-align: -0.2125em;
+  width: auto;
+}
+
+.footer__legal p .icon strong {
+  display: inline-block;
+}
+
+.footer__legal p .icon.icon--37signals strong {
+  margin-left: -0.1375em;
+}
+
+.footer__legal p .icon.icon--basecamp strong {
+  margin-left: -0.1125em;
+}
+
+.footer__legal p .icon.icon--fizzy strong {
+  margin-left: -0.025em;
+}
+
+.footer__legal p .icon.icon--hey svg {
+  height: 1.2625em;
+  vertical-align: -0.2625em;
+}
+
+.footer__legal p .icon.icon--hey strong {
+  margin-left: -0.1375em;
+}
+
+.footer__legal ul {
+  display: flex;
+  gap: var(--space-medium);
+}
+
+.footer__legal a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+
+@media(hover: hover) {
+
+  .footer #path-01 stop,
+  .footer #path-02 stop,
+  .footer #path-03 stop,
+  .footer #path-04 stop,
+  .footer #path-05 stop,
+  .footer #path-06 stop,
+  .footer #path-07 stop,
+  .footer #path-08 stop,
+  .footer #path-09 stop,
+  .footer #path-10 stop,
+  .footer #path-11 stop,
+  .footer #path-12 stop,
+  .footer #path-13 stop,
+  .footer #path-14 stop,
+  .footer #path-15 stop,
+  .footer #path-16 stop,
+  .footer #path-17 stop,
+  .footer #path-18 stop,
+  .footer #path-19 stop,
+  .footer #path-20 stop,
+  .footer #path-21 stop,
+  .footer #path-22 stop,
+  .footer #path-23 stop,
+  .footer #path-24 stop,
+  .footer #path-25 stop,
+  .footer #path-26 stop,
+  .footer #path-27 stop,
+  .footer #path-28 stop,
+  .footer #path-29 stop,
+  .footer #path-30 stop,
+  .footer #path-31 stop,
+  .footer #path-32 stop,
+  .footer #path-33 stop,
+  .footer #path-34 stop,
+  .footer #path-35 stop,
+  .footer #path-36 stop,
+  .footer #path-37 stop,
+  .footer #path-38 stop,
+  .footer #path-39 stop,
+  .footer #path-40 stop,
+  .footer #path-41 stop,
+  .footer #path-42 stop,
+  .footer #path-43 stop,
+  .footer #path-44 stop,
+  .footer #path-45 stop,
+  .footer #path-46 stop,
+  .footer #path-47 stop,
+  .footer #path-48 stop,
+  .footer #path-49 stop,
+  .footer #path-50 stop {
+    transition: stop-color var(--transition);
+  }
+
+  .footer:has(.path-01:hover) #path-01 stop:first-child,
+  .footer:has(.path-09:hover) #path-09 stop:first-child,
+  .footer:has(.path-17:hover) #path-17 stop:first-child,
+  .footer:has(.path-25:hover) #path-25 stop:first-child,
+  .footer:has(.path-33:hover) #path-33 stop:first-child,
+  .footer:has(.path-41:hover) #path-41 stop:first-child,
+  .footer:has(.path-49:hover) #path-49 stop:first-child {
+    stop-color: oklch(var(--lch-lime-medium));
+  }
+
+  .footer:has(.path-01:hover) #path-01 stop:last-child,
+  .footer:has(.path-09:hover) #path-09 stop:last-child,
+  .footer:has(.path-17:hover) #path-17 stop:last-child,
+  .footer:has(.path-25:hover) #path-25 stop:last-child,
+  .footer:has(.path-33:hover) #path-33 stop:last-child,
+  .footer:has(.path-41:hover) #path-41 stop:last-child,
+  .footer:has(.path-49:hover) #path-49 stop:last-child {
+    stop-color: oklch(var(--lch-lime-light));
+  }
+
+  .footer:has(.path-02:hover) #path-02 stop:first-child,
+  .footer:has(.path-10:hover) #path-10 stop:first-child,
+  .footer:has(.path-18:hover) #path-18 stop:first-child,
+  .footer:has(.path-26:hover) #path-26 stop:first-child,
+  .footer:has(.path-34:hover) #path-34 stop:first-child,
+  .footer:has(.path-42:hover) #path-42 stop:first-child,
+  .footer:has(.path-50:hover) #path-50 stop:first-child {
+    stop-color: oklch(var(--lch-aqua-medium));
+  }
+
+  .footer:has(.path-02:hover) #path-02 stop:last-child,
+  .footer:has(.path-10:hover) #path-10 stop:last-child,
+  .footer:has(.path-18:hover) #path-18 stop:last-child,
+  .footer:has(.path-26:hover) #path-26 stop:last-child,
+  .footer:has(.path-34:hover) #path-34 stop:last-child,
+  .footer:has(.path-42:hover) #path-42 stop:last-child,
+  .footer:has(.path-50:hover) #path-50 stop:last-child {
+    stop-color: oklch(var(--lch-aqua-light));
+  }
+
+  .footer:has(.path-03:hover) #path-03 stop:first-child,
+  .footer:has(.path-11:hover) #path-11 stop:first-child,
+  .footer:has(.path-19:hover) #path-19 stop:first-child,
+  .footer:has(.path-27:hover) #path-27 stop:first-child,
+  .footer:has(.path-35:hover) #path-35 stop:first-child,
+  .footer:has(.path-43:hover) #path-43 stop:first-child {
+    stop-color: oklch(var(--lch-blue-medium));
+  }
+
+  .footer:has(.path-03:hover) #path-03 stop:last-child,
+  .footer:has(.path-11:hover) #path-11 stop:last-child,
+  .footer:has(.path-19:hover) #path-19 stop:last-child,
+  .footer:has(.path-27:hover) #path-27 stop:last-child,
+  .footer:has(.path-35:hover) #path-35 stop:last-child,
+  .footer:has(.path-43:hover) #path-43 stop:last-child {
+    stop-color: oklch(var(--lch-blue-light));
+  }
+
+  .footer:has(.path-04:hover) #path-04 stop:first-child,
+  .footer:has(.path-12:hover) #path-12 stop:first-child,
+  .footer:has(.path-20:hover) #path-20 stop:first-child,
+  .footer:has(.path-28:hover) #path-28 stop:first-child,
+  .footer:has(.path-36:hover) #path-36 stop:first-child,
+  .footer:has(.path-44:hover) #path-44 stop:first-child {
+    stop-color: oklch(var(--lch-purple-medium));
+  }
+
+  .footer:has(.path-04:hover) #path-04 stop:last-child,
+  .footer:has(.path-12:hover) #path-12 stop:last-child,
+  .footer:has(.path-20:hover) #path-20 stop:last-child,
+  .footer:has(.path-28:hover) #path-28 stop:last-child,
+  .footer:has(.path-36:hover) #path-36 stop:last-child,
+  .footer:has(.path-44:hover) #path-44 stop:last-child {
+    stop-color: oklch(var(--lch-purple-light));
+  }
+
+  .footer:has(.path-05:hover) #path-05 stop:first-child,
+  .footer:has(.path-13:hover) #path-13 stop:first-child,
+  .footer:has(.path-21:hover) #path-21 stop:first-child,
+  .footer:has(.path-29:hover) #path-29 stop:first-child,
+  .footer:has(.path-37:hover) #path-37 stop:first-child,
+  .footer:has(.path-45:hover) #path-45 stop:first-child {
+    stop-color: oklch(var(--lch-violet-medium));
+  }
+
+  .footer:has(.path-05:hover) #path-05 stop:last-child,
+  .footer:has(.path-13:hover) #path-13 stop:last-child,
+  .footer:has(.path-21:hover) #path-21 stop:last-child,
+  .footer:has(.path-29:hover) #path-29 stop:last-child,
+  .footer:has(.path-37:hover) #path-37 stop:last-child,
+  .footer:has(.path-45:hover) #path-45 stop:last-child {
+    stop-color: oklch(var(--lch-violet-light));
+  }
+
+  .footer:has(.path-06:hover) #path-06 stop:first-child,
+  .footer:has(.path-14:hover) #path-14 stop:first-child,
+  .footer:has(.path-22:hover) #path-22 stop:first-child,
+  .footer:has(.path-30:hover) #path-30 stop:first-child,
+  .footer:has(.path-38:hover) #path-38 stop:first-child,
+  .footer:has(.path-46:hover) #path-46 stop:first-child {
+    stop-color: oklch(var(--lch-pink-medium));
+  }
+
+  .footer:has(.path-06:hover) #path-06 stop:last-child,
+  .footer:has(.path-14:hover) #path-14 stop:last-child,
+  .footer:has(.path-22:hover) #path-22 stop:last-child,
+  .footer:has(.path-30:hover) #path-30 stop:last-child,
+  .footer:has(.path-38:hover) #path-38 stop:last-child,
+  .footer:has(.path-46:hover) #path-46 stop:last-child {
+    stop-color: oklch(var(--lch-pink-light));
+  }
+
+  .footer:has(.path-07:hover) #path-07 stop:first-child,
+  .footer:has(.path-15:hover) #path-15 stop:first-child,
+  .footer:has(.path-23:hover) #path-23 stop:first-child,
+  .footer:has(.path-31:hover) #path-31 stop:first-child,
+  .footer:has(.path-39:hover) #path-39 stop:first-child,
+  .footer:has(.path-47:hover) #path-47 stop:first-child {
+    stop-color: oklch(var(--lch-yellow-medium));
+  }
+
+  .footer:has(.path-07:hover) #path-07 stop:last-child,
+  .footer:has(.path-15:hover) #path-15 stop:last-child,
+  .footer:has(.path-23:hover) #path-23 stop:last-child,
+  .footer:has(.path-31:hover) #path-31 stop:last-child,
+  .footer:has(.path-39:hover) #path-39 stop:last-child,
+  .footer:has(.path-47:hover) #path-47 stop:last-child {
+    stop-color: oklch(var(--lch-yellow-light));
+  }
+
+  .footer:has(.path-08:hover) #path-08 stop:first-child,
+  .footer:has(.path-16:hover) #path-16 stop:first-child,
+  .footer:has(.path-24:hover) #path-24 stop:first-child,
+  .footer:has(.path-32:hover) #path-32 stop:first-child,
+  .footer:has(.path-40:hover) #path-40 stop:first-child,
+  .footer:has(.path-48:hover) #path-48 stop:first-child {
+    stop-color: oklch(var(--lch-red-medium));
+  }
+
+  .footer:has(.path-08:hover) #path-08 stop:last-child,
+  .footer:has(.path-16:hover) #path-16 stop:last-child,
+  .footer:has(.path-24:hover) #path-24 stop:last-child,
+  .footer:has(.path-32:hover) #path-32 stop:last-child,
+  .footer:has(.path-40:hover) #path-40 stop:last-child,
+  .footer:has(.path-48:hover) #path-48 stop:last-child {
+    stop-color: oklch(var(--lch-red-light));
+  }
+
+  .footer__legal p a strong,
+  .footer__legal p a strong,
+  .footer__legal ul a,
+  .footer__legal ul a {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-decoration-thickness: 0.0875em;
+    text-underline-offset: 0.1025em;
+    transition: text-decoration-color var(--transition);
+  }
+
+  .footer__legal p a:focus strong,
+  .footer__legal p a:hover strong,
+  .footer__legal ul a:focus,
+  .footer__legal ul a:hover {
+    text-decoration-color: inherit;
+  }
+
+}
+
+
+
+@media(min-width: 64em) {
+
+  .footer__legal {
+    display: flex;
+    gap: var(--space-medium);
+    justify-content: space-between;
+  }
+
+}

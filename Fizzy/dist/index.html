@@ -1,0 +1,507 @@
+<!doctype html>
+
+<html lang="en">
+
+
+<head>
+
+  <title>Fizzy — Kanban as it should be. Not as it has been.</title>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1, width=device-width">
+  <meta name="description" content="A refreshing take on cards, columns, and kanban.">
+  <meta name="robots" content="index, follow">
+
+  <meta property="og:site_name" content="Fizzy">
+  <meta property="og:title" content="Kanban as it should be. Not as it has been.">
+  <meta property="og:description" content="A refreshing take on cards, columns, and kanban.">
+  <meta property="og:image" content="/assets/images/opengraph.png">
+  <meta property="og:url" content="/">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:title" content="Kanban as it should be. Not as it has been.">
+  <meta name="twitter:description" content="A refreshing take on cards, columns, and kanban.">
+  <meta name="twitter:image" content="/assets/images/opengraph.png">
+  <meta name="twitter:image:alt" content="Fizzy">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@37signals">
+
+  <link rel="canonical" href="/">
+  <link rel="icon" href="/assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
+
+  <link rel="stylesheet" type="text/css" href="/assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/root.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/fonts.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/elements.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/common.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/space.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/button.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/buttons.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/cluster.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/columns.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/details.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/footer.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/graph.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/headline.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/modal.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/nav.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/roadblock.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/target.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/text.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/visual.css">
+
+  <script type="module" src="/assets/js/script.js"></script>
+
+</head>
+
+
+  <body>
+
+<nav class="nav">
+  <div class="nav__container">
+    <div class="nav__logo common-logo">
+      <a href="/" aria-label="Fizzy">
+        <svg height="30" viewBox="0 0 96 30" width="96" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g fill="currentColor"><path d="m33.9307 40.4062c.9199 0 1.5338.343 1.914.9072v-.6992h1.4717v5.9609c-.0001 1.7905-1.3371 2.7099-3.0664 2.71-.9936 0-1.9634-.2576-2.9814-.9199l.7734-1.1524c.883.5273 1.4599.7481 2.1836.7481.8583-.0002 1.5331-.4171 1.5332-1.5205v-.503c-.3925.4906-.9818.7969-1.8281.7969-1.5823 0-2.7597-1.2754-2.7598-3.1641 0-1.8765 1.1775-3.164 2.7598-3.164zm28.0351-3.8721c.7113-.7124 1.8686-.7118 2.5791.001.7057.7048.6912 1.8629-.001 2.5762-.5858.5866-.5858 1.5369 0 2.124.583.5814 1.5342.5699 2.1241 0 .7112-.7111 1.8725-.7114 2.583 0 .7071.7043.6932 1.8713 0 2.5849-.5858.586-.5862 1.5358 0 2.1231.7141.711.7143 1.8657 0 2.5771-.7102.7111-1.8717.7113-2.583 0-.7058-.7041-.6918-1.8642 0-2.5771.5867-.5871.5867-1.5369 0-2.1231-.5827-.5819-1.5338-.5703-2.1241 0-.7103.7101-1.8668.7102-2.5781 0-.7059-.705-.6918-1.8717 0-2.5849.5809-.5811.5695-1.5359 0-2.124-.7127-.7122-.7129-1.865 0-2.5772zm-56.87693 8.6797c.09518.2918.18601.5764.26074.8184.14945-.4911.34914-1.1315.53418-1.6866l.34863-1.039h.79688l-1.40235 4.0136c-.22775.6619-.52646.9395-1.16699.9395-.24182 0-.46944-.0355-.62598-.0781l.12793-.5908c.12798.0213.27017.0429.40528.0429.25622 0 .44875-.1002.58398-.5058l.02149-.0635-1.34571-3.7578h.82617zm9.97753-5.6914-2.4043 2.085c1.5575.0369 2.7225.9937 2.7227 2.5878 0 1.4104-1.0915 2.8944-3.2256 2.8946-1.153 0-2.0982-.2939-3.31252-1.128l.79785-1.165c.98097.613 1.65557.8827 2.46487.8828 1.018 0 1.6191-.5886 1.6191-1.4717 0-.8952-.6863-1.3982-1.7041-1.3984-.5397 0-.8595.0979-1.0312.1592l-.7237-.9932 2.8096-2.4287h-3.77832v-1.373h5.76562zm33.2295.8838c1.803 0 2.7227.9196 2.7227 2.2441v4.2315h-1.4346v-.6504c-.3803.5274-1.0554.8584-2.0244.8584-1.1897-.0001-2.244-.5148-2.2442-1.7901 0-1.4472 1.2881-1.9504 2.711-2.208l1.4716-.2695v-.1475c0-.6132-.454-.957-1.1777-.957-.8586 0-1.3001.3931-1.9502 1.0186l-1.0058-.92c.785-.9321 1.6927-1.4101 2.9316-1.4101zm-23.4678 0c1.0547 0 1.8153.2447 2.6983.9805l-.8584 1.0429c-.7605-.5887-1.2391-.7363-1.877-.7363-.6378 0-1.0547.258-1.0547.626.0002.3895.3754.4719 1.3448.6855l.1152.0254c1.7168.3802 2.4285.8342 2.4287 1.999 0 1.2019-.9817 2.0488-2.6865 2.0489-1.153 0-2.0122-.2819-3.0303-1.1895l.9199-1.0303c.9198.748 1.4108.9316 2.1465.9317.6255 0 1.0917-.233 1.0918-.6621 0-.4764-.5558-.5961-1.3476-.7666-.0643-.0139-.1301-.0283-.1973-.043-1.7663-.3925-2.3067-.8341-2.3067-1.9502.0001-1.067.9329-1.9619 2.6133-1.9619zm32.8526 0c1.0547 0 1.8152.2448 2.6982.9805l-.8584 1.0429c-.7605-.5887-1.2391-.7363-1.8769-.7363-.6377.0001-1.0547.2581-1.0547.626.0001.3895.3756.472 1.3447.6855l.1152.0254c1.7171.3802 2.4286.8342 2.4287 1.999 0 1.202-.9815 2.0489-2.6865 2.0489-1.1528-.0001-2.0114-.2822-3.0293-1.1895l.9199-1.0303c.9198.7479 1.4107.9317 2.1465.9317.6254-.0001 1.0917-.233 1.0918-.6621 0-.4764-.5567-.5961-1.3486-.7666-.0643-.0139-.1301-.0283-.1973-.043-1.7663-.3925-2.3056-.8341-2.3056-1.9502 0-1.067.9319-1.9619 2.6123-1.9619zm-56.897497 3.3271c.241987-.3345.612557-.5263 1.124997-.5263.91087.0001 1.58008.74 1.58008 1.8857-.00001 1.1458-.67688 1.8789-1.58789 1.8789-.54781-.0001-.931899-.2137-1.173828-.5908v.498h-.726562v-5.0527h.783203zm21.587897-4.3213c-1.4965 1.8398-2.8706 4.6611-3.2754 7.4698h-1.8516c.3558-2.6124 1.7537-5.3726 3.2256-7.335h-4.4521v-1.373h6.3535zm7.7998 7.4698h-1.5947v-6.2676h1.5947zm11.8252-6.4756c1.4596 0 2.2451.9071 2.2451 2.1826v4.293h-1.5947v-3.8145c0-.8217-.4047-1.288-1.1651-1.2881-.7359 0-1.2636.5403-1.2636 1.3252v3.7774h-1.5948v-6.2676h1.4844v.7109c.3925-.5639 1.0304-.9188 1.8887-.9189zm11.9492 6.4756h-1.5947v-8.708h1.5947zm-52.20116-3.0059c-.57646.0001-.996093.4553-.996093 1.2168.000013.7686.433873 1.2031.996093 1.2031.56226 0 .94628-.4701.94629-1.2031 0-.733-.36267-1.2168-.94629-1.2168zm46.69926.3076c-.9445.1963-1.5704.4172-1.5704 1.0059.0003.3923.3562.625.9571.625.8093-.0002 1.6677-.3924 1.6679-1.4834v-.3682zm-14.1573-2.416c-.9075.0002-1.5088.7236-1.5088 1.8027.0001 1.0791.6014 1.8153 1.5088 1.8155.8832 0 1.5215-.7362 1.5215-1.8155s-.6383-1.8027-1.5215-1.8027zm37.0821-.5312c.7119-.7149 1.8693-.7155 2.582-.001.7145.7141.7144 1.8699 0 2.584-.7129.7134-1.8703.7132-2.582 0-.7159-.7137-.7155-1.8693 0-2.583zm-41.9952-3.2344c.5273 0 .9441.4167.9444.9316 0 .5152-.4169.9326-.9444.9326-.5273 0-.9443-.4175-.9443-.9326.0002-.5149.4171-.9316.9443-.9316zm37.295-1.4658c.712-.7149 1.8703-.7147 2.583 0 .7143.714.7142 1.87 0 2.5839-.7129.7135-1.8713.7132-2.583 0-.7159-.7137-.7156-1.8702 0-2.5839z"/><path d="m95.2388 24.7076c0 15.4907-10.2411 15.8349-16.8247 14.7161-.8606-.1721-1.2479-.7315-1.1618-1.5921l.3873-3.7005c.086-1.0327.7315-1.2909 1.6781-.9467 4.3891 1.5921 9.1224-.4733 9.0793-4.7332 0-1.0757-.6024-1.2048-1.2478-.3873-.9037 1.0758-2.2806 2.1945-4.3891 2.1945-3.0551 0-8.2187-1.2048-8.2187-11.9621 0-2.6679-.0861-5.5078-.043-8.47685 0-.90362.5163-1.37695 1.42-1.33391 1.2048.04303 2.3666 0 3.5284-.04304.9036 0 1.42.47333 1.42 1.41998 0 3.22722-.0861 5.63682-.0861 6.45442 0 7.7023 1.7643 8.2186 3.7867 8.2617 2.1515.043 3.5715-1.5491 3.8296-5.2066v-.9897c0-4.6041.0861-6.2823-.043-8.47679-.0861-.90362.3442-1.41997 1.2479-1.46301l3.9587.08606c.9037.04303 1.377.47333 1.42 1.33392.1291 2.40962.0861 5.24962.1291 7.48712z"/><path d="m71.2343 8.31345c1.1188-.04303 1.5061.68847.9467 1.63512-1.8503 3.05513-5.3788 8.73503-8.3478 13.42523-.4734.7745-.1721 1.3339.7745 1.3339 2.1515.043 2.926.043 5.5939-.0861.9467-.043 1.42.4303 1.42 1.377-.043.8605 0 1.8502 0 2.7108 0 .9036-.4303 1.377-1.3339 1.377-3.9588.043-9.4236-.1722-15.6199-.0431-1.1618 0-1.5491-.6884-.9466-1.6351l8.3908-13.21c.4733-.7315.1721-1.377-.7315-1.377-2.4097-.043-4.9915.0431-6.8418.1291-.9036.043-1.42-.3873-1.42-1.2909-.043-.9036 0-1.9793 0-2.92598 0-.86059.7315-1.33391 2.0224-1.33391 6.1533.04303 12.1345-.04303 16.0932-.08606z"/><path d="m50.0981 8.31345c1.1188-.04303 1.506.68847.9466 1.63512-1.8502 3.05513-5.3787 8.73503-8.3478 13.42523-.4733.7745-.1721 1.3339.7746 1.3339 2.1515.043 2.926.043 5.5939-.0861.9466-.043 1.42.4303 1.42 1.377-.0431.8606 0 1.8502 0 2.7108 0 .9036-.4303 1.377-1.334 1.377-3.9587.043-9.4235-.1722-15.6198-.0431-1.1618 0-1.5491-.6884-.9467-1.6351l8.3909-13.21c.4733-.7315.1721-1.377-.7316-1.377-2.4096-.043-4.9914.0431-6.8417.1291-.9036.043-1.42-.3873-1.42-1.2909-.043-.9036 0-1.9793 0-2.92598 0-.86059.7315-1.33391 2.0224-1.33391 6.1533.04303 12.1344-.04303 16.0932-.08606z"/><path d="m29.3292 28.6234c.1291.9036-.3442 1.42-1.2478 1.463l-3.9157-.0861c-.8606-.043-1.377-.4733-1.42-1.3339-.1291-2.4096-.0861-5.2496-.1291-7.4871-.1291-5.5508-.0431-7.8744-.0861-11.2307-.043-.90362.4733-1.37695 1.42-1.37695 1.7212.08606 2.883.08606 3.9588 0 .9036-.04302 1.4199.38727 1.4199 1.24786.0431 1.50599 0 3.65749 0 12.39249 0 5.6799-.086 5.4217 0 6.4114zm-3.3993-22.11716c-2.6679 0-3.5715-1.37694-3.5715-3.09812 0-1.67815.9036-3.055093 3.5715-3.055093 2.6248 0 3.5284 1.376943 3.5284 3.055093 0 1.72118-.9036 3.09812-3.5284 3.09812z"/><path d="m6.02791.00866022c2.36665.04302888 4.77629 0 8.30479 0 1.2909 0 3.0551.04302888 4.6902 0 .7315 0 1.1188.38726578 1.1188 1.16179978-.043 1.463-.086 3.31326-.043 4.77627 0 .77453-.4303 1.11876-1.2048 1.0327-1.2909-.12909-3.3564-.25817-5.5079-.34423-2.0654-.12909-2.1945.04303-4.25993.04303-.8606 0-1.41999.43029-1.59211 1.20482v.04303c-.12909.64544-.12909 1.03271-.12909 1.67815v.51637c.04303.9036.51636 1.3339 1.37696 1.3769 2.40967.0431 5.46477 0 7.70237-.1291.7315-.043 1.1618.3012 1.1618 1.0758l-.0861 4.389c0 .7315-.4303 1.1187-1.1618 1.0757-2.2375-.043-4.7333-.043-7.3581-.086-.90362-.0431-1.37695.4733-1.41998 1.3339l-.17212 4.3459c0 2.6248.04303 4.0878.17212 5.2927.12909.7315-.25818 1.1618-.98969 1.1618l-5.29268.043c-.731505 0-1.075744-.3873-1.075744-1.1188 0-1.2478-.2151497-2.8399-.12909-5.7659.12909-5.766.08606-13.72642-.12908965-21.81596-.04302985-.774528.34423965-1.16179 1.07574365-1.16179 1.59211-.043032 3.70058-.1721187 4.94844-.12908978z"/></g>
+        </svg>
+      </a>
+    </div>
+    <div class="nav__content">
+      <p>From the makers of <a href="https://basecamp.com" target="_blank" rel="noopener noreferrer">Basecamp</a> and<br> <a href="https://www.hey.com" target="_blank" rel="noopener noreferrer">HEY</a> comes Fizzy. Free kanban for all.</p>
+    </div>
+    <div class="nav__buttons">
+      <a class="button button--outline" href="https://app.fizzy.do/session/new" target="_blank" rel="noopener noreferrer" aria-label="Sign in">
+        <span>Sign in</span>
+      </a>
+      <a class="button" href="https://app.fizzy.do/signup/new" target="_blank" rel="noopener noreferrer" aria-label="Sign up free">
+        <span>Sign up free</span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+
+    <main class="main">
+
+      <div class="visual visual--intro">
+        <div class="visual__container">
+          <figure>
+            <div>
+              <picture>
+                <source srcset="/assets/images/board.webp" type="image/webp">
+                <img src="/assets/images/board.png" alt="Screenshot of a Fizzy board">
+              </picture>
+            </div>
+          </figure>
+        </div>
+      </div>
+
+      <div class="headline space-top--large">
+        <div class="headline__header common-header">
+          <h1 id="intro"><a href="#intro"><strong>Kanban as it should be.</strong><br> Not as it has been.</a></h1>
+        </div>
+      </div>
+
+      <div class="columns space-top--large">
+        <div class="columns__container">
+          <div class="columns__content">
+            <section>
+              <p>Let's be honest: every issue and idea tracking tool you loved slowly morphed into boring, sluggish, corporate bloatware.</p>
+              <p>Trello put on 40 pounds of cruft. Jira started charging by the migraine. Asana tried to become everything to everyone. GitHub Issues slid into a steady state of decline.</p>
+              <p>Name one that got better last year. Exactly.</p>
+              <p><strong>It's time to turn the page.</strong></p>
+            </section>
+            <section>
+              <p><strong>Introducing Fizzy — a modern spin on kanban for tracking anything.</strong> Bugs, issues, ideas, small projects, it fits them all. And it's 100% free.</p>
+              <p>Fast, straightforward, and vibrant, it's a blast of fresh air in a shockingly stale category.</p>
+              <p>We invite you to poke around and <a href="https://app.fizzy.do/signup/new" target="_blank" rel="noopener noreferrer">sign up for free</a>. I'm glad you're here, and I'd love to hear what you think after you've used it for a bit.</p>
+              <div class="columns__signature">
+                <dl>
+                  <dt>Jason Fried, <a href="mailto:jason@37signals.com">jason@37signals.com</a></dt>
+                  <dd>Co-founder of 37signals, makers of Fizzy</dd>
+                </dl>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div class="headline space-top--xxx-large">
+        <div class="headline__header common-header">
+          <h2 id="videos"><a href="#videos">Your perpetual progress machine.</a></h2>
+        </div>
+        <div class="headline__content common-content">
+          <p>We put together a couple videos that show you how Fizzy works,<br> why it works the way it works, and how it could work for you.</p>
+        </div>
+      </div>
+
+      <div class="visual space-top--neutral">
+        <div class="visual__container">
+          <figure class="modal-trigger" data-type="video" data-src="https://videos.37signals.com/fizzy/assets/videos/walkthrough.mp4" data-poster="/assets/images/walkthrough.jpg">
+            <div>
+              <img src="/assets/images/walkthrough.jpg" alt="" role="presentation">
+              <button aria-label="Play Fizzy product walkthrough"></button>
+            </div>
+            <figcaption>Join Jason, our CEO, as he <strong>walks you through Fizzy</strong> in this 17-minute full-product video tour. It's the best way to get to know Fizzy.</figcaption>
+          </figure>
+          <figure class="modal-trigger" data-type="video" data-src="https://videos.37signals.com/fizzy/assets/videos/use-case.mp4" data-poster="/assets/images/use-case.jpg">
+            <div>
+              <img src="/assets/images/use-case.jpg" alt="" role="presentation">
+              <button aria-label="Play Fizzy use case example"></button>
+            </div>
+            <figcaption>Check out this 90-second video showing <strong>how a property manager outside Denver might use Fizzy</strong> to track issues across multiple properties.</figcaption>
+          </figure>
+        </div>
+      </div>
+
+      <div class="headline headline--content-wide space-top--xxx-large">
+        <div class="headline__header common-header">
+          <h2 id="features"><a href="#features">Little things, big difference.</a></h2>
+        </div>
+        <div class="headline__content common-content">
+          <p><strong>Auto close</strong> prunes old cards for you. <strong>Webhooks</strong> let you publish to Slack or Campfire. Your <strong>notifications stack</strong> fans open for easy access. Information <strong>bubbles up</strong> when cards are ignored. <strong>Make a board public</strong> so anyone can follow along. <strong>Stamps</strong> tell you who filed what when.</p>
+        </div>
+      </div>
+
+      <div class="cluster space-top--neutral">
+        <div class="cluster__container">
+          <figure style="left: 5.5%; top: 9.7%; width: 32.8%;">
+            <picture>
+              <source srcset="/assets/images/features-03.webp" type="image/webp">
+              <img src="/assets/images/features-03.png" alt="Webhooks">
+            </picture>
+          </figure>
+          <figure style="left: 62.2%; top: 8%; width: 31.8%;">
+            <picture>
+              <source srcset="/assets/images/features-04.webp" type="image/webp">
+              <img src="/assets/images/features-04.png" alt="Stamps">
+            </picture>
+          </figure>
+          <figure style="right: 0; top: 40.8%; width: 35.5%;">
+            <picture>
+              <source srcset="/assets/images/features-05.webp" type="image/webp">
+              <img src="/assets/images/features-05.png" alt="Public link">
+            </picture>
+          </figure>
+          <figure style="left: 30.4%; top: 0; width: 35.5%;">
+            <picture>
+              <source srcset="/assets/images/features-02.webp" type="image/webp">
+              <img src="/assets/images/features-02.png" alt="Auto close">
+            </picture>
+          </figure>
+          <figure style="left: 0; top: 37.4%; width: 24.1%;">
+            <picture>
+              <source srcset="/assets/images/features-06.webp" type="image/webp">
+              <img src="/assets/images/features-06.png" alt="Notifications">
+            </picture>
+          </figure>
+          <figure style="bottom: 0; left: 15.7%; width: 52.7%;">
+            <picture>
+              <source srcset="/assets/images/features-01.webp" type="image/webp">
+              <img src="/assets/images/features-01.png" alt="Cards">
+            </picture>
+          </figure>
+        </div>
+      </div>
+
+      <div class="graph space-top--xxx-large">
+        <div class="graph__container">
+          <div class="headline headline--full-width">
+            <div class="headline__header common-header">
+              <h2 id="open-source"><a href="#open-source">One more thing... <span class="fizzy" aria-hidden="true"></span> Fizzy is open source if you'd like to run it yourself.</a></h2>
+            </div>
+            <div class="headline__content common-content">
+              <p>If you want to customize Fizzy for your own use, or just see how it looks from the inside out, you can download it and run it yourself. <strong>Have a great idea?</strong> <a href="https://github.com/basecamp/fizzy/pulls" target="_blank" rel="noopener noreferrer">Submit a PR</a> to contribute and make it better. Our <a href="/license">software license</a> allows for flexible use with few restrictions.</p>
+            </div>
+            <div class="headline__footer">
+              <a class="button button--icon button--large" href="https://github.com/basecamp/fizzy" target="_blank" rel="noopener noreferrer" aria-label="View source">
+                <svg viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="m10 .25c-5.52455 0-10 4.47398-10 9.9967 0 4.4231 2.86273 8.1601 6.83727 9.4842.5.0872.68728-.2118.68728-.4744 0-.2381-.01182-1.0251-.01182-1.8621-2.51273.4625-3.16273-.6126-3.36273-1.1742-.11273-.2881-.6-1.1751-1.02455-1.4123-.35-.1881-.8509-.6497-.01272-.6625.78727-.0127 1.35.7243 1.53727 1.0252.9 1.5113 2.33727 1.0869 2.91273.8242.08727-.6498.35-1.0869.63727-1.3368-2.22545-.2499-4.55-1.1124-4.55-4.93657 0-1.08691.38727-1.98662 1.02545-2.68639-.1009-.24992-.4509-1.27412.1-2.64913 0 0 .83728-.26173 2.7491 1.02512.81406-.22579 1.65518-.33922 2.49995-.33716.851 0 1.701.11178 2.5.33716 1.9128-1.29957 2.75-1.02512 2.75-1.02512.55 1.37501.201 2.39921.101 2.64913.6372.69977 1.0245 1.58766 1.0245 2.68639 0 3.83697-2.3373 4.68667-4.5627 4.93657.3627.3126.6754.9124.6754 1.8494 0 1.3368-.0127 2.4119-.0127 2.7491 0 .2626.1873.5743.6873.4744 3.95-1.3241 6.8127-5.0729 6.8127-9.4842 0-5.52272-4.4745-9.9967-10-9.9967z" fill="currentColor"/></svg>
+                <span>View source</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="headline space-top--xxx-large">
+        <div class="headline__header common-header">
+          <h2 id="questions"><a href="#questions">Common questions.</a></h2>
+        </div>
+      </div>
+
+      <div class="details space-top--neutral">
+        <div class="details__entries">
+          <details>
+            <summary>
+              <span>Is Fizzy really free? Totally free?</span>
+            </summary>
+            <article>
+              <p>Yes, Fizzy is entirely free. It's fully subsidized by <a href="https://basecamp.com" target="_blank" rel="noopener noreferrer">Basecamp</a> and <a href="https://www.hey.com" target="_blank" rel="noopener noreferrer">HEY</a>, our two pay products. We do limit file space usage to 1 GB, but that should be plenty of space for just about anyone.</p>
+            </article>
+          </details>
+          <details>
+            <summary>
+              <span>Does Fizzy integrate with Basecamp, GitHub, Slack, or other tools?</span>
+            </summary>
+            <article>
+              <p>Fizzy can use Webhooks to send events (new card created, card assigned, card completed, etc) from Fizzy into a Campfire room, Slack channel, or any other tool that can receive data via Webhooks. In addition, <a href="https://github.com/basecamp/fizzy/blob/main/docs/api/README.md">Fizzy has an API</a> for custom integrations.</p>
+            </article>
+          </details>
+          <details>
+            <summary>
+              <span>Can we import data from other services into Fizzy?</span>
+            </summary>
+            <article>
+              <p>We don't currently offer importing data from other services (like Basecamp, Trello, GitHub Issues, Jira, etc) into Fizzy. We'd like to offer this down the road, but it's not part of the current release.</p>
+            </article>
+          </details>
+          <details>
+            <summary>
+              <span>Can we really install Fizzy on our own servers?</span>
+            </summary>
+            <article>
+              <p>Yes, Fizzy is Open Source and you can <a href="https://github.com/basecamp/fizzy" target="_blank" rel="noopener noreferrer">download the code from GitHub</a> and run the product on your own server (or another hosted server you pay for). Be sure to review the <a href="/license">Fizzy software license</a> if you'll be running or modifying it for your own use.</p>
+            </article>
+          </details>
+          <details>
+            <summary>
+              <span>Any AI features?</span>
+            </summary>
+            <article>
+              <p>We didn't add artificial intelligence, we just removed all the stupid from typical kanban implementations. No bloat, lots of speed, plenty of power, and a fun UI. <a href="https://app.fizzy.do/signup/new" target="_blank" rel="noopener noreferrer">Try it</a>.</p>
+            </article>
+          </details>
+       </div>
+      </div>
+
+      <div class="headline space-top--neutral">
+        <div class="headline__header common-header">
+          <h3>Need help? Check out <a href="https://help.fizzy.do/3/fizzy-help-guide" target="_blank" rel="noopener noreferrer">help.fizzy.do</a></h3>
+        </div>
+      </div>
+
+      <div class="headline space-top--xxx-large">
+        <div class="headline__header common-header">
+          <h2><a href="https://app.fizzy.do/signup/new" target="_blank" rel="noopener noreferrer">Yeah, why not, I'll try <span class="fizzy" aria-hidden="true"></span> Fizzy!</a></h2>
+        </div>
+        <div class="headline__footer">
+          <a class="button button--large" href="https://app.fizzy.do/signup/new" target="_blank" rel="noopener noreferrer" aria-label="Sign up now">
+            <span>Sign up now — it's totally free!</span>
+          </a>
+        </div>
+      </div>
+
+    </main>
+
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__svg">
+      <figure aria-hidden="true">
+        <svg class="svg" width="5980" height="964" viewBox="0 0 5980 964" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <g class="svg__tracks">
+            <path d="M60 964H40V548H60V964Z" fill="url(#track)"/>
+            <path d="M180 964H160V388H180V964Z" fill="url(#track)"/>
+            <path d="M300 964H280V508H300V964Z" fill="url(#track)"/>
+            <path d="M420 964H400V438H420V964Z" fill="url(#track)"/>
+            <path d="M540 964H520V578H540V964Z" fill="url(#track)"/>
+            <path d="M660 964H640V468H660V964Z" fill="url(#track)"/>
+            <path d="M780 964H760V528H780V964Z" fill="url(#track)"/>
+            <path d="M900 964H880V428H900V964Z" fill="url(#track)"/>
+            <path d="M1020 964H1000V508H1020V964Z" fill="url(#track)"/>
+            <path d="M1140 964H1120V388H1140V964Z" fill="url(#track)"/>
+            <path d="M1260 964H1240V508H1260V964Z" fill="url(#track)"/>
+            <path d="M1380 964H1360V438H1380V964Z" fill="url(#track)"/>
+            <path d="M1500 964H1480V558H1500V964Z" fill="url(#track)"/>
+            <path d="M1620 964H1600V488H1620V964Z" fill="url(#track)"/>
+            <path d="M1740 964H1720V528H1740V964Z" fill="url(#track)"/>
+            <path d="M1860 964H1840V428H1860V964Z" fill="url(#track)"/>
+            <path d="M1980 964H1960V478H1980V964Z" fill="url(#track)"/>
+            <path d="M2100 964H2080V588H2100V964Z" fill="url(#track)"/>
+            <path d="M2220 964H2200V518H2220V964Z" fill="url(#track)"/>
+            <path d="M2340 964H2320V408H2340V964Z" fill="url(#track)"/>
+            <path d="M2460 964H2440V478H2460V964Z" fill="url(#track)"/>
+            <path d="M2580 964H2560V548H2580V964Z" fill="url(#track)"/>
+            <path d="M2700 964H2680V438H2700V964Z" fill="url(#track)"/>
+            <path d="M2820 964H2800V578H2820V964Z" fill="url(#track)"/>
+            <path d="M2940 964H2920V398H2940V964Z" fill="url(#track)"/>
+            <path d="M3060 964H3040V478H3060V964Z" fill="url(#track)"/>
+            <path d="M3180 964H3160V518H3180V964Z" fill="url(#track)"/>
+            <path d="M3300 964H3280V388H3300V964Z" fill="url(#track)"/>
+            <path d="M3420 964H3400V508H3420V964Z" fill="url(#track)"/>
+            <path d="M3540 964H3520V578H3540V964Z" fill="url(#track)"/>
+            <path d="M3660 964H3640V458H3660V964Z" fill="url(#track)"/>
+            <path d="M3780 964H3760V548H3780V964Z" fill="url(#track)"/>
+            <path d="M3900 964H3880V398H3900V964Z" fill="url(#track)"/>
+            <path d="M4020 964H4000V478H4020V964Z" fill="url(#track)"/>
+            <path d="M4140 964H4120V568H4140V964Z" fill="url(#track)"/>
+            <path d="M4260 964H4240V378H4260V964Z" fill="url(#track)"/>
+            <path d="M4380 964H4360V478H4380V964Z" fill="url(#track)"/>
+            <path d="M4500 964H4480V548H4500V964Z" fill="url(#track)"/>
+            <path d="M4620 964H4600V388H4620V964Z" fill="url(#track)"/>
+            <path d="M4740 964H4720V508H4740V964Z" fill="url(#track)"/>
+            <path d="M4860 964H4840V438H4860V964Z" fill="url(#track)"/>
+            <path d="M4980 964H4960V578H4980V964Z" fill="url(#track)"/>
+            <path d="M5100 964H5080V468H5100V964Z" fill="url(#track)"/>
+            <path d="M5220 964H5200V528H5220V964Z" fill="url(#track)"/>
+            <path d="M5340 964H5320V428H5340V964Z" fill="url(#track)"/>
+            <path d="M5460 964H5440V508H5460V964Z" fill="url(#track)"/>
+            <path d="M5580 964H5560V388H5580V964Z" fill="url(#track)"/>
+            <path d="M5700 964H5680V508H5700V964Z" fill="url(#track)"/>
+            <path d="M5820 964H5800V438H5820V964Z" fill="url(#track)"/>
+            <path d="M5940 964H5920V558H5940V964Z" fill="url(#track)"/>
+          </g>
+          <g class="svg__paths">
+            <path class="path-01" d="M0 50C0 22.3858 22.3858 0 50 0C77.6142 0 100 22.3858 100 50V500C100 527.614 77.6142 550 50 550C22.3858 550 0 527.614 0 500V50Z" fill="url(#path-01)"/>
+            <path class="path-02" d="M120 50C120 22.3858 142.386 0 170 0C197.614 0 220 22.3858 220 50V340C220 367.614 197.614 390 170 390C142.386 390 120 367.614 120 340V50Z" fill="url(#path-02)"/>
+            <path class="path-03" d="M240 50C240 22.3858 262.386 0 290 0C317.614 0 340 22.3858 340 50V460C340 487.614 317.614 510 290 510C262.386 510 240 487.614 240 460V50Z" fill="url(#path-03)"/>
+            <path class="path-04" d="M360 50C360 22.3858 382.386 0 410 0C437.614 0 460 22.3858 460 50V390C460 417.614 437.614 440 410 440C382.386 440 360 417.614 360 390V50Z" fill="url(#path-04)"/>
+            <path class="path-05" d="M480 50C480 22.3858 502.386 0 530 0C557.614 0 580 22.3858 580 50V530C580 557.614 557.614 580 530 580C502.386 580 480 557.614 480 530V50Z" fill="url(#path-05)"/>
+            <path class="path-06" d="M600 50C600 22.3858 622.386 0 650 0C677.614 0 700 22.3858 700 50V420C700 447.614 677.614 470 650 470C622.386 470 600 447.614 600 420V50Z" fill="url(#path-06)"/>
+            <path class="path-07" d="M720 50C720 22.3858 742.386 0 770 0C797.614 0 820 22.3858 820 50V480C820 507.614 797.614 530 770 530C742.386 530 720 507.614 720 480V50Z" fill="url(#path-07)"/>
+            <path class="path-08" d="M840 50C840 22.3858 862.386 0 890 0C917.614 0 940 22.3858 940 50V380C940 407.614 917.614 430 890 430C862.386 430 840 407.614 840 380V50Z" fill="url(#path-08)"/>
+            <path class="path-09" d="M960 50C960 22.3858 982.386 0 1010 0C1037.61 0 1060 22.3858 1060 50V460C1060 487.614 1037.61 510 1010 510C982.386 510 960 487.614 960 460V50Z" fill="url(#path-09)"/>
+            <path class="path-10" d="M1080 50C1080 22.3858 1102.39 0 1130 0C1157.61 0 1180 22.3858 1180 50V340C1180 367.614 1157.61 390 1130 390C1102.39 390 1080 367.614 1080 340V50Z" fill="url(#path-10)"/>
+            <path class="path-11" d="M1200 50C1200 22.3858 1222.39 0 1250 0C1277.61 0 1300 22.3858 1300 50V460C1300 487.614 1277.61 510 1250 510C1222.39 510 1200 487.614 1200 460V50Z" fill="url(#path-11)"/>
+            <path class="path-12" d="M1320 50C1320 22.3858 1342.39 0 1370 0C1397.61 0 1420 22.3858 1420 50V390C1420 417.614 1397.61 440 1370 440C1342.39 440 1320 417.614 1320 390V50Z" fill="url(#path-12)"/>
+            <path class="path-13" d="M1440 50C1440 22.3858 1462.39 0 1490 0C1517.61 0 1540 22.3858 1540 50V510C1540 537.614 1517.61 560 1490 560C1462.39 560 1440 537.614 1440 510V50Z" fill="url(#path-13)"/>
+            <path class="path-14" d="M1560 50C1560 22.3858 1582.39 0 1610 0C1637.61 0 1660 22.3858 1660 50V440C1660 467.614 1637.61 490 1610 490C1582.39 490 1560 467.614 1560 440V50Z" fill="url(#path-14)"/>
+            <path class="path-15" d="M1680 50C1680 22.3858 1702.39 0 1730 0C1757.61 0 1780 22.3858 1780 50V480C1780 507.614 1757.61 530 1730 530C1702.39 530 1680 507.614 1680 480V50Z" fill="url(#path-15)"/>
+            <path class="path-16" d="M1800 50C1800 22.3858 1822.39 0 1850 0C1877.61 0 1900 22.3858 1900 50V380C1900 407.614 1877.61 430 1850 430C1822.39 430 1800 407.614 1800 380V50Z" fill="url(#path-16)"/>
+            <path class="path-17" d="M1920 50C1920 22.3858 1942.39 0 1970 0C1997.61 0 2020 22.3858 2020 50V430C2020 457.614 1997.61 480 1970 480C1942.39 480 1920 457.614 1920 430V50Z" fill="url(#path-17)"/>
+            <path class="path-18" d="M2040 50C2040 22.3858 2062.39 0 2090 0C2117.61 0 2140 22.3858 2140 50V540C2140 567.614 2117.61 590 2090 590C2062.39 590 2040 567.614 2040 540V50Z" fill="url(#path-18)"/>
+            <path class="path-19" d="M2160 50C2160 22.3858 2182.39 0 2210 0C2237.61 0 2260 22.3858 2260 50V470C2260 497.614 2237.61 520 2210 520C2182.39 520 2160 497.614 2160 470V50Z" fill="url(#path-19)"/>
+            <path class="path-20" d="M2280 50C2280 22.3858 2302.39 0 2330 0C2357.61 0 2380 22.3858 2380 50V360C2380 387.614 2357.61 410 2330 410C2302.39 410 2280 387.614 2280 360V50Z" fill="url(#path-20)"/>
+            <path class="path-21" d="M2400 50C2400 22.3858 2422.39 0 2450 0C2477.61 0 2500 22.3858 2500 50V430C2500 457.614 2477.61 480 2450 480C2422.39 480 2400 457.614 2400 430V50Z" fill="url(#path-21)"/>
+            <path class="path-22" d="M2520 50C2520 22.3858 2542.39 0 2570 0C2597.61 0 2620 22.3858 2620 50V500C2620 527.614 2597.61 550 2570 550C2542.39 550 2520 527.614 2520 500V50Z" fill="url(#path-22)"/>
+            <path class="path-23" d="M2640 50C2640 22.3858 2662.39 0 2690 0C2717.61 0 2740 22.3858 2740 50V390C2740 417.614 2717.61 440 2690 440C2662.39 440 2640 417.614 2640 390V50Z" fill="url(#path-23)"/>
+            <path class="path-24" d="M2760 50C2760 22.3858 2782.39 0 2810 0C2837.61 0 2860 22.3858 2860 50V530C2860 557.614 2837.61 580 2810 580C2782.39 580 2760 557.614 2760 530V50Z" fill="url(#path-24)"/>
+            <path class="path-25" d="M2880 50C2880 22.3858 2902.39 0 2930 0C2957.61 0 2980 22.3858 2980 50V350C2980 377.614 2957.61 400 2930 400C2902.39 400 2880 377.614 2880 350V50Z" fill="url(#path-25)"/>
+            <path class="path-26" d="M3000 50C3000 22.3858 3022.39 0 3050 0C3077.61 0 3100 22.3858 3100 50V430C3100 457.614 3077.61 480 3050 480C3022.39 480 3000 457.614 3000 430V50Z" fill="url(#path-26)"/>
+            <path class="path-27" d="M3120 50C3120 22.3858 3142.39 0 3170 0C3197.61 0 3220 22.3858 3220 50V470C3220 497.614 3197.61 520 3170 520C3142.39 520 3120 497.614 3120 470V50Z" fill="url(#path-27)"/>
+            <path class="path-28" d="M3240 50C3240 22.3858 3262.39 0 3290 0C3317.61 0 3340 22.3858 3340 50V340C3340 367.614 3317.61 390 3290 390C3262.39 390 3240 367.614 3240 340V50Z" fill="url(#path-28)"/>
+            <path class="path-29" d="M3360 50C3360 22.3858 3382.39 0 3410 0C3437.61 0 3460 22.3858 3460 50V460C3460 487.614 3437.61 510 3410 510C3382.39 510 3360 487.614 3360 460V50Z" fill="url(#path-29)"/>
+            <path class="path-30" d="M3480 50C3480 22.3858 3502.39 0 3530 0C3557.61 0 3580 22.3858 3580 50V530C3580 557.614 3557.61 580 3530 580C3502.39 580 3480 557.614 3480 530V50Z" fill="url(#path-30)"/>
+            <path class="path-31" d="M3600 50C3600 22.3858 3622.39 0 3650 0C3677.61 0 3700 22.3858 3700 50V410C3700 437.614 3677.61 460 3650 460C3622.39 460 3600 437.614 3600 410V50Z" fill="url(#path-31)"/>
+            <path class="path-32" d="M3720 50C3720 22.3858 3742.39 0 3770 0C3797.61 0 3820 22.3858 3820 50V500C3820 527.614 3797.61 550 3770 550C3742.39 550 3720 527.614 3720 500V50Z" fill="url(#path-32)"/>
+            <path class="path-33" d="M3840 50C3840 22.3858 3862.39 0 3890 0C3917.61 0 3940 22.3858 3940 50V350C3940 377.614 3917.61 400 3890 400C3862.39 400 3840 377.614 3840 350V50Z" fill="url(#path-33)"/>
+            <path class="path-34" d="M3960 50C3960 22.3858 3982.39 0 4010 0C4037.61 0 4060 22.3858 4060 50V430C4060 457.614 4037.61 480 4010 480C3982.39 480 3960 457.614 3960 430V50Z" fill="url(#path-34)"/>
+            <path class="path-35" d="M4080 50C4080 22.3858 4102.39 0 4130 0C4157.61 0 4180 22.3858 4180 50V520C4180 547.614 4157.61 570 4130 570C4102.39 570 4080 547.614 4080 520V50Z" fill="url(#path-35)"/>
+            <path class="path-36" d="M4200 50C4200 22.3858 4222.39 0 4250 0C4277.61 0 4300 22.3858 4300 50V330C4300 357.614 4277.61 380 4250 380C4222.39 380 4200 357.614 4200 330V50Z" fill="url(#path-36)"/>
+            <path class="path-37" d="M4320 50C4320 22.3858 4342.39 0 4370 0C4397.61 0 4420 22.3858 4420 50V430C4420 457.614 4397.61 480 4370 480C4342.39 480 4320 457.614 4320 430V50Z" fill="url(#path-37)"/>
+            <path class="path-38" d="M4440 50C4440 22.3858 4462.39 0 4490 0C4517.61 0 4540 22.3858 4540 50V500C4540 527.614 4517.61 550 4490 550C4462.39 550 4440 527.614 4440 500V50Z" fill="url(#path-38)"/>
+            <path class="path-39" d="M4560 50C4560 22.3858 4582.39 0 4610 0C4637.61 0 4660 22.3858 4660 50V340C4660 367.614 4637.61 390 4610 390C4582.39 390 4560 367.614 4560 340V50Z" fill="url(#path-39)"/>
+            <path class="path-40" d="M4680 50C4680 22.3858 4702.39 0 4730 0C4757.61 0 4780 22.3858 4780 50V460C4780 487.614 4757.61 510 4730 510C4702.39 510 4680 487.614 4680 460V50Z" fill="url(#path-40)"/>
+            <path class="path-41" d="M4800 50C4800 22.3858 4822.39 0 4850 0C4877.61 0 4900 22.3858 4900 50V390C4900 417.614 4877.61 440 4850 440C4822.39 440 4800 417.614 4800 390V50Z" fill="url(#path-41)"/>
+            <path class="path-42" d="M4920 50C4920 22.3858 4942.39 0 4970 0C4997.61 0 5020 22.3858 5020 50V530C5020 557.614 4997.61 580 4970 580C4942.39 580 4920 557.614 4920 530V50Z" fill="url(#path-42)"/>
+            <path class="path-43" d="M5040 50C5040 22.3858 5062.39 0 5090 0C5117.61 0 5140 22.3858 5140 50V420C5140 447.614 5117.61 470 5090 470C5062.39 470 5040 447.614 5040 420V50Z" fill="url(#path-43)"/>
+            <path class="path-44" d="M5160 50C5160 22.3858 5182.39 0 5210 0C5237.61 0 5260 22.3858 5260 50V480C5260 507.614 5237.61 530 5210 530C5182.39 530 5160 507.614 5160 480V50Z" fill="url(#path-44)"/>
+            <path class="path-45" d="M5280 50C5280 22.3858 5302.39 0 5330 0C5357.61 0 5380 22.3858 5380 50V380C5380 407.614 5357.61 430 5330 430C5302.39 430 5280 407.614 5280 380V50Z" fill="url(#path-45)"/>
+            <path class="path-46" d="M5400 50C5400 22.3858 5422.39 0 5450 0C5477.61 0 5500 22.3858 5500 50V460C5500 487.614 5477.61 510 5450 510C5422.39 510 5400 487.614 5400 460V50Z" fill="url(#path-46)"/>
+            <path class="path-47" d="M5520 50C5520 22.3858 5542.39 0 5570 0C5597.61 0 5620 22.3858 5620 50V340C5620 367.614 5597.61 390 5570 390C5542.39 390 5520 367.614 5520 340V50Z" fill="url(#path-47)"/>
+            <path class="path-48" d="M5640 50C5640 22.3858 5662.39 0 5690 0C5717.61 0 5740 22.3858 5740 50V460C5740 487.614 5717.61 510 5690 510C5662.39 510 5640 487.614 5640 460V50Z" fill="url(#path-48)"/>
+            <path class="path-49" d="M5760 50C5760 22.3858 5782.39 0 5810 0C5837.61 0 5860 22.3858 5860 50V390C5860 417.614 5837.61 440 5810 440C5782.39 440 5760 417.614 5760 390V50Z" fill="url(#path-49)"/>
+            <path class="path-50" d="M5880 50C5880 22.3858 5902.39 0 5930 0C5957.61 0 5980 22.3858 5980 50V510C5980 537.614 5957.61 560 5930 560C5902.39 560 5880 537.614 5880 510V50Z" fill="url(#path-50)"/>
+          </g>
+          <defs>
+            <linearGradient id="track" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+          </defs>
+          <defs>
+            <linearGradient id="path-01" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-02" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-03" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-04" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-05" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-06" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-07" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-08" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-09" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-10" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-11" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-12" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-13" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-14" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-15" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-16" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-17" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-18" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-19" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-20" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-21" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-22" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-23" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-24" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-25" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-26" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-27" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-28" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-29" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-30" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-31" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-32" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-33" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-34" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-35" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-36" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-37" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-38" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-39" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-40" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-41" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-42" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-43" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-44" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-45" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-46" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-47" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-48" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-49" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+            <linearGradient id="path-50" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%"/><stop offset="100%"/></linearGradient>
+          </defs>
+        </svg>
+      </figure>
+    </div>
+    <div class="footer__legal">
+      <p>
+        <a href="/" class="icon icon--fizzy" aria-label="Fizzy">
+          <svg viewBox="0 0 28 28" aria-hidden="true"><path d="m2 0c1.10457 0 2 .895431 2 2v17c0 .9763-.69986 1.7872-1.625 1.9629v6.6621c0 .2071-.16789.375-.375.375s-.375-.1679-.375-.375v-6.6621c-.92514-.1757-1.625-.9866-1.625-1.9629v-17c0-1.104569.895431-2 2-2zm6 0c1.10457 0 2 .895431 2 2v24c0 1.1046-.89543 2-2 2s-2-.8954-2-2v-24c0-1.104569.89543-2 2-2zm6 0c1.1046 0 2 .895431 2 2v20.5c0 .9763-.6999 1.7872-1.625 1.9629v3.1621c0 .2071-.1679.375-.375.375s-.375-.1679-.375-.375v-3.1621c-.9251-.1757-1.625-.9866-1.625-1.9629v-20.5c0-1.104569.8954-2 2-2zm6 0c1.1046 0 2 .895431 2 2v13.5c0 .9763-.6999 1.7872-1.625 1.9629v10.1621c0 .2071-.1679.375-.375.375s-.375-.1679-.375-.375v-10.1621c-.9251-.1757-1.625-.9866-1.625-1.9629v-13.5c0-1.104569.8954-2 2-2zm6 0c1.1046 0 2 .895431 2 2v17c0 .9763-.6999 1.7872-1.625 1.9629v6.6621c0 .2071-.1679.375-.375.375s-.375-.1679-.375-.375v-6.6621c-.9251-.1757-1.625-.9866-1.625-1.9629v-17c0-1.104569.8954-2 2-2z" fill="currentColor"/></svg>
+          <strong>Fizzy</strong><sup>&trade;</sup>
+        </a>
+        <span>is designed, built, and backed by</span>
+        <a href="https://37signals.com" class="icon icon--37signals" target="_blank" rel="noopener noreferrer" aria-label="37signals">
+          <svg viewBox="0 0 37 37" aria-hidden="true"><g fill="currentColor"><path d="m35.4812 22.164c2.0248-2.0239 2.0248-5.3007-.0003-7.3248-2.0198-2.0258-5.301-2.0258-7.319.0007-2.0281 2.0232-2.0292 5.3012 0 7.3241 2.017 2.0215 5.2989 2.0221 7.3193 0z"/><path d="m22.1611 8.84334c2.0249-2.02387 2.0249-5.30008-.0002-7.32415-2.0198-2.02571-5.301-2.025711-7.319.00075-2.0281 2.02309-2.0292 5.30112 0 7.32404 2.017 2.02152 5.2989 2.02152 7.3192-.00064z"/><path d="m14.8417 35.4878c-2.0004-1.9957-1.9608-5.2847 0-7.3054 1.6632-1.6643 1.6633-4.3568 0-6.0182-1.6514-1.6494-4.3462-1.6166-6.01902 0-2.01326 2.0137-5.29117 2.0138-7.30726 0-2.000628-1.9982-1.960613-5.3031.00011-7.3247 1.64664-1.6469 1.614-4.3531 0-6.02035-2.020627-2.01857-2.020787-5.2857 0-7.30443 2.01572-2.019741 5.29428-2.019741 7.30798.00069 2.00119 1.99779 1.96109 5.28187-.0009 7.30374-1.6608 1.66305-1.6608 4.35645.00061 6.02035 1.65198 1.6478 4.34698 1.6154 6.01848 0 2.0158-2.0162 5.3064-2.0167 7.3201 0 2.004 1.9963 1.9646 5.3019 0 7.3247-1.6606 1.661-1.6615 4.354 0 6.0188 2.0241 2.0154 2.0252 5.2892 0 7.3055-2.0128 2.0155-5.3039 2.0155-7.3201-.0007z"/></g></svg>
+          <strong>37signals</strong><sup>&trade;</sup>
+        </a>,
+        <span>the people behind</span>
+        <a href="https://basecamp.com" class="icon icon--basecamp" target="_blank" rel="noopener noreferrer" aria-label="Basecamp">
+          <svg viewBox="0 0 25 21" aria-hidden="true"><path clip-rule="evenodd" d="m12.5005 0c6.351 0 11.4126 7.57865 12.4363 14.5294.0565.3833.0847.575.0439.9423-.025.2243-.1727.7339-.2715.9368-.1619.3322-.2503.4349-.4271.6404-2.4491 2.8469-7.0342 3.9472-11.7816 3.9472-4.74773 0-9.3327-1.1003-11.782334-3.947-.176904-.2056-.265361-.3084-.427278-.6406-.098883-.2029-.2465927-.7126-.2715448-.9369-.0408566-.3674-.01261377-.5591.0438578-.9425 1.023859-6.95069 6.085899-14.52909515 12.437299-14.5291zm3.2375 4.98947c-1.0986 0-4.1697 5.44163-5.5786 5.44163-1.40909 0-2.14161-2.47648-3.87412-2.46686-1.71536.0098-3.48364 3.82686-4.32163 5.91136-.23503.5846-.35255.8769-.23729 1.4219.11527.545.27645.7017.59881 1.0153 1.24246 1.2084 4.09474 2.966 10.17513 2.966 6.0897 0 8.9411-1.7629 10.1803-2.9715.319-.3112.4786-.4667.5902-1.021s-.0076-.8358-.2459-1.3989c-.538-1.2713-1.4909-3.2521-2.8065-4.95014-1.4862-1.91791-3.3811-3.94777-4.4804-3.94779z" fill="currentColor" fill-rule="evenodd"/></svg>
+          <strong>Basecamp</strong><sup>&trade;</sup>
+        </a>
+        <span>and</span>
+        <a href="https://www.hey.com" class="icon icon--hey" target="_blank" rel="noopener noreferrer" aria-label="HEY">
+          <svg viewBox="0 0 34 37" aria-hidden="true"><path d="m16.932 0c.3437 0 .6833.077929.9932.226673.7035.296051 1.3945.951807 2.0493 1.817257.6572.86854 1.2905 1.96397 1.878 3.16083 1.1336 2.30928 2.1007 5.01294 2.7395 7.23324 1.0701-1.0382 2.3879-1.7857 3.8286-2.1718.7276-.2165 1.5015-.2226 2.2322-.0165.7319.2064 1.3903.6171 1.8993 1.1837 1.2048 1.3434 1.6425 3.5733 1.3697 6.6229-.2733 3.0558-1.2628 6.9686-2.9544 11.7154-.1105.3062-.338.5571-.6321.6955-.294.1382-.6307.1533-.9361.0426-.1524-.0523-.2933-.1345-.4133-.2422-.1208-.1084-.2187-.2403-.2875-.3875s-.1075-.3073-.1133-.4698c-.0057-.1619.0216-.3233.0794-.4746l.3862-1.0714c1.8517-5.2407 2.4956-8.6952 2.5856-10.9559.096-2.4117-.4389-3.448-.7918-3.8515-.2199-.2304-.503-.3911-.8131-.4611-.3123-.0704-.6386-.046-.9371.0698l-.0106.0039c-1.4717.4409-2.7558 1.3591-3.6505 2.6106.6827 2.7926 1.2701 5.7829 1.4685 8.3985.1 1.3181.1017 2.5454-.0339 3.6064-.1348 1.0557-.4079 1.958-.8654 2.6223-.2176.3533-.5142.6514-.8663.8698-.352.2183-.7495.3521-1.1617.3895-.3382.031-.6791-.0237-.9912-.1579-.3121-.1343-.586-.3442-.7967-.6113-.5102-.5901-.82-1.5541-.9903-2.6958-.1717-1.1514-.2052-2.509-.1471-3.9048.1161-2.7913.601-5.757 1.1103-7.5732.1319-.4754.3227-.932.5653-1.361l-.2856-1.0879c-.8475-3.1437-1.9843-5.94736-3.0367-7.97904-.5264-1.01623-1.0302-1.83569-1.4636-2.40719-.2169-.28603-.4132-.50661-.5837-.65774-.1429-.12666-.2555-.19285-.3369-.21892-.0606.051-.1383.1402-.2246.27898-.1087.17474-.2253.42016-.332.74686-.2134.65338-.3867 1.62544-.3921 2.99227-.0106 2.73358.6513 7.03528 2.9932 13.50448.1122.2974.1025.6277-.0262.9183-.1287.2904-.3659.5188-.6611.6345l-.001-.001c-.2897.1172-.6132.1199-.9041.0059-.2915-.1144-.5277-.3371-.6612-.621l-.001-.0009c-4.3727-9.5619-6.6825-13.08439-7.71125-14.30853-.15337 1.14582-.04162 2.97439.6418 5.54573.74695 2.8106 2.17255 6.499 4.66495 11.1351.1519.2752.1918.5993.1093.9028-.0825.3036-.2803.5629-.5508.7226l-.0009-.0009c-.2673.1654-.5879.2209-.8945.152-.3077-.0691-.5761-.2567-.7473-.5221-1.3668-2.0522-2.94227-4.4323-4.36966-6.5096-1.28751-1.8736-2.45029-3.4922-3.22837-4.4046-.01272 1.9126.81768 6.371 5.37153 13.2565.1868.2666.2601.5962.2053.9174-.0551.3222-.2354.6092-.50147.7982-.26615.1889-.59626.2644-.91769.2092-.32157-.0553-.60842-.2366-.79668-.5037l-.00388-.0049c-1.47917-2.2974-3.39994-4.2737-5.64842-5.815.69763 2.8769 2.08586 5.5376 4.04441 7.7485l.41625.4543.00677.0068.21975.2548c1.11738 1.2542 2.52111 2.2204 4.09276 2.815 1.675.6336 3.4842.8233 5.2535.5512.157-.0319.319-.0316.4763-.001.1579.0307.3082.0922.4424.1812.1341.089.2498.2034.3397.3371.0676.1003.1195.2102.1549.3254l.03.1173.001.0029c.0576.3213-.0129.6528-.1955.9231-.1826.2702-.4633.4578-.7822.5231l-.0019.001c-.7181.1399-1.4476.2134-2.1791.2189h-.0106c-2.2492-.1401-4.435-.8055-6.38316-1.9422-1.94611-1.1355-3.60164-2.7108-4.83529-4.6003l-.42883-.618c-.98631-1.4741-1.86106-3.1559-2.425871-4.6943-.322667-.8789-.546038-1.7162-.6292158-2.444-.0826903-.7236-.02965046-1.3599.2236138-1.8211l.000968-.002c.15171-.2694.368604-.4965.630184-.6606.261481-.1639.559551-.2602.867351-.279h.01258l.35043.0232c.63782.0691 1.24876.2873 1.78891.6316-.90747-2.23-1.39102-4.1153-1.56627-5.6164-.18693-1.6015-.02883-2.7843.34849-3.4728.12895-.2793.33247-.5178.58856-.6877.2584-.1714.55961-.2669.86929-.2751l.17231-.0029c.17264.0027.34503.0256.5266.0842.24087.0778.49002.2164.77539.4427.48397.3839 1.08731 1.032 1.9496 2.1001-1.34261-4.85282-.83573-7.37691-.42786-8.39558l.08325-.1918c.12333-.30459.33446-.56531.60598-.74977.24434-.16597.52767-.26283.82089-.28188l.02129-.00388h.08616l.00968.00194c.15091.00512.3388.02742.5721.12593.2823.11926.62242.34489 1.04547.76526.7828.77794 1.8672 2.24233 3.421 4.99359-.2947-2.47746-.2074-4.43971.1423-5.92837.3846-1.63712 1.0895-2.715995 1.9631-3.262543l.0136-.007749c.3121-.1512954.6543-.23048232 1.0009-.230548zm6.8575 20.0247c-.2391 1.7701-.3581 3.5942-.3581 5.1312 0 .8912.0403 1.683.12 2.3103.0398.3137.0888.5844.1471.804.0382.1438.0804.2615.123.3545.0311-.0268.0595-.0561.0803-.0872.3149-.4708.5418-1.4261.5373-2.9729-.0041-1.3783-.1937-3.2064-.6496-5.5399z" fill="currentColor"/></svg>
+          <strong>HEY</strong><sup>&trade;</sup>
+        </a>
+      </p>
+      <ul>
+        <li><a href="https://app.fizzy.do/session/new" target="_blank" rel="noopener noreferrer">Sign in</a></li>
+        <li><a href="https://help.fizzy.do/3/fizzy-help-guide" target="_blank" rel="noopener noreferrer">Help</a></li>
+        <li><a href="https://www.37status.com" target="_blank" rel="noopener noreferrer">Status</a></li>
+        <li><a href="https://37signals.com/policies" target="_blank" rel="noopener noreferrer">Policies</a></li>
+        <li>&copy; 37signals LLC</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+<dialog class="modal" aria-modal="true" aria-label="Media Viewer">
+  <div class="modal__backdrop" role="presentation"></div>
+  <div class="modal__container" role="document"></div>
+</dialog>
+
+
+  </body>
+
+</html>

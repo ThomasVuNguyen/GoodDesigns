@@ -1,0 +1,42 @@
+.graph {
+  display: grid;
+  overflow-x: clip;
+  padding-inline: var(--space-small);
+  position: relative;
+}
+
+.graph__container {
+  background: url('/assets/images/graph.svg') center center / 1.825em auto;
+  border-radius: 0.1em;
+  box-shadow: var(--box-shadow);
+  display: grid;
+  margin-inline: auto;
+  padding: var(--space-large) var(--space-neutral);
+  position: relative;
+  transform: rotate(1deg);
+  width: min(100%, 40em);
+}
+
+
+
+@media(min-width: 64em) {
+
+  .graph {
+    padding-inline: var(--space-neutral);
+  }
+
+  .graph__container {
+    padding: var(--space-x-large) var(--space-neutral);
+  }
+
+}
+
+
+
+@media(prefers-color-scheme: dark) {
+
+  .graph__container {
+    background-image: url('/assets/images/graph-dark.svg');
+  }
+
+}

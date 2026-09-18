@@ -1,0 +1,29 @@
+.cluster {
+  display: grid;
+  padding-inline: var(--space-small);
+  position: relative;
+}
+
+.cluster__container {
+  aspect-ratio: 16 / 8;
+  margin-inline: auto;
+  position: relative;
+  width: min(100%, 35em);
+}
+
+.cluster__container figure {
+  border-radius: var(--space-xx-small);
+  box-shadow: var(--box-shadow-cluster);
+  overflow: hidden;
+  position: absolute;
+}
+
+
+
+@media(min-width: 64em) {
+
+  .cluster {
+    padding-inline: var(--space-large);
+  }
+
+}

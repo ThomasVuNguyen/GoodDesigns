@@ -1,0 +1,70 @@
+html {
+  font-size: 16px;
+  scroll-padding-top: calc(var(--font-size) * 3.875);
+}
+
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-inter);
+  font-feature-settings: 'liga', 'dlig', 'ss03';
+  font-size: var(--font-size);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing);
+  line-height: var(--line-height);
+  min-height: 100vh;
+  min-height: 100dvh;
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: var(--color-blue);
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 0.0875em;
+  text-underline-offset: 0.1025em;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+i,
+em {
+  font-style: italic;
+}
+
+img,
+source,
+video {
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+
+
+@media(hover: hover) {
+
+  a {
+    transition: color var(--transition);
+  }
+
+  a:focus,
+  a:hover {
+    color: var(--color-blue-hover);
+  }
+
+}

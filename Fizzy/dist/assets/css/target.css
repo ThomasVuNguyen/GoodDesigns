@@ -1,0 +1,17 @@
+.target {
+  animation: target 1.6s 0.4s ease-out;
+}
+
+
+
+@keyframes target {
+
+  0% {
+    background-color: var(--color-target);
+  }
+
+  100% {
+    background-color: transparent;
+  }
+
+}

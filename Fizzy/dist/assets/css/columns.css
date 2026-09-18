@@ -1,0 +1,124 @@
+.columns {
+  --columns-padding: 2.375em;
+
+  display: grid;
+  overflow-x: clip;
+  padding-inline: var(--space-small);
+  position: relative;
+}
+
+.columns__container {
+  display: grid;
+  margin-inline: auto;
+  transform: rotate(-1deg);
+  width: min(100%, 37.5em);
+}
+
+.columns__content {
+  background: var(--color-canvas-light);
+  border-radius: 0.05em;
+  box-shadow: var(--box-shadow);
+  display: grid;
+  font-size: var(--font-size-xxx-small);
+  gap: 2.225em;
+  letter-spacing: var(--letter-spacing);
+  padding: var(--columns-padding);
+  position: relative;
+}
+
+.columns__content section {
+  display: grid;
+}
+
+.columns__content section > * + * {
+  padding-top: var(--spacing, 2.225em);
+}
+
+.columns__content section p {
+  margin-bottom: -0.375em;
+  margin-top: -0.3875em;
+}
+
+.columns__content:before,
+.columns__content:after {
+  background: linear-gradient(to bottom, transparent, oklch(var(--lch-ink-medium) / 0.0875) 98%, transparent);
+  content: '';
+  height: 33%;
+  inset: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+.columns__content:after {
+  top: 33%;
+}
+
+.columns__signature {
+  --spacing: 3.75em;
+
+  align-items: center;
+  background: url('/assets/images/jf-signature.svg') left top / auto 3.125em no-repeat;
+  display: flex;
+  font-size: var(--font-size-small);
+  gap: var(--space-x-small);
+  letter-spacing: var(--letter-spacing);
+  margin-top: 2.6375em;
+}
+
+.columns__signature dl dt {
+  font-weight: 700;
+}
+
+.columns__signature dl dd {
+  font-style: italic;
+}
+
+.columns__signature:before {
+  background: url('/assets/images/jf-avatar.jpg') center center / cover no-repeat;
+  border-radius: 50%;
+  content: '';
+  display: inline-flex;
+  height: 3em;
+  width: 3em;
+}
+
+
+
+@media(min-width: 48em) {
+
+  .columns {
+    --columns-padding: 4.125em;
+  }
+
+  .columns__content {
+    display: flex;
+    gap: calc(var(--columns-padding) * 2);
+  }
+
+  .columns__content section {
+    align-content: start;
+    flex: 1;
+  }
+
+  .columns__content:before {
+    background: linear-gradient(to right, transparent, oklch(var(--lch-ink-medium) / 0.0875) 98%, transparent);
+    height: auto;
+    width: 50%;
+  }
+
+  .columns__content:after {
+    display: none;
+  }
+
+}
+
+
+
+@media(prefers-color-scheme: dark) {
+
+  .columns__content {
+    background: var(--color-canvas-light-inverted);
+    color: var(--color-ink-inverted);
+  }
+
+}

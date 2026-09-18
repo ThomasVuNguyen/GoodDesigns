@@ -1,0 +1,197 @@
+.visual {
+  display: grid;
+  padding-inline: var(--space-small);
+  position: relative;
+}
+
+.visual__container {
+  display: grid;
+  gap: var(--space-neutral);
+  margin-inline: auto;
+  position: relative;
+  width: min(100%, 43em);
+}
+
+.visual figure {
+  align-content: start;
+  display: grid;
+  gap: var(--space-small);
+  margin-inline: auto;
+  position: relative;
+  width: min(100%, 34em);
+}
+
+.visual figure div {
+  background: var(--color-canvas-light);
+  border-radius: var(--space-xx-small);
+  box-shadow: var(--box-shadow);
+  display: grid;
+  overflow: clip;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.visual figure div button {
+  cursor: pointer;
+  inset: 0;
+  position: absolute;
+}
+
+.visual figure div button:after {
+  background: url('/assets/images/icon-play.svg') center center / 0.75em auto no-repeat var(--color-blue);
+  border: 1px solid var(--color-blue);
+  border-radius: 50%;
+  box-shadow: var(--box-shadow);
+  content: '';
+  height: 2.5em;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  translate: -50% -50%;
+  width: 2.5em;
+}
+
+.visual figure figcaption {
+  color: var(--color-ink-darker);
+  font-size: var(--font-size-xxxx-small);
+  letter-spacing: var(--letter-spacing);
+  margin: -0.375em var(--space-large);
+  text-align: center;
+}
+
+.visual__close {
+  background: url('/assets/images/icon-close.svg') center center / 0.475em auto no-repeat var(--color-blue);
+  border-radius: 50%;
+  cursor: pointer;
+  height: 1.3em;
+  position: absolute;
+  right: -0.65em;
+  top: -0.65em;
+  width: 1.3em;
+}
+
+
+
+.visual--modal-image,
+.visual--modal-video {
+  padding-inline: 0;
+}
+
+.visual--modal-image .visual__container,
+.visual--modal-video .visual__container,
+.visual--modal-image figure,
+.visual--modal-video figure {
+  margin-inline: initial;
+  width: auto;
+}
+
+.visual--intro {
+  mask: linear-gradient(
+    to bottom,
+    black,
+    black 50%,
+    transparent
+  );
+  padding-inline: 0;
+}
+
+.visual--intro .visual__container {
+  padding-inline: var(--space-small);
+  width: min(100%, 48em);
+}
+
+.visual--intro figure {
+  width: auto;
+}
+
+.visual--intro figure div {
+  border-radius: clamp(0.625rem, 2.3vw, 2.6rem);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: none;
+}
+
+.visual--video-playing figure div button {
+  display: none;
+}
+
+
+
+@media(hover: hover) {
+
+  .visual figure div button:after {
+    transition:
+      background-color var(--transition),
+      border-color var(--transition),
+      transform var(--transition)
+    ;
+    will-change: transform;
+  }
+
+  .visual figure div button:focus:after,
+  .visual figure div button:hover:after {
+    background-color: var(--color-blue-hover);
+    border-color: var(--color-blue-hover);
+    transform: scale(1.04);
+  }
+
+  .visual figure div button:active:after {
+    transform: scale(1) translateY(0.0125em);
+  }
+
+  .visual figure.modal-trigger div {
+    outline: 0.1em solid transparent;
+    outline-offset: -0.1em;
+    transition:
+      outline-color var(--transition),
+      outline-offset var(--transition)
+    ;
+  }
+
+  .visual figure.modal-trigger div:focus,
+  .visual figure.modal-trigger div:hover {
+    cursor: zoom-in;
+    outline-color: var(--color-blue-hover);
+    outline-offset: 0;
+  }
+
+  .visual__close {
+    transition:
+      background-color var(--transition),
+      transform var(--transition)
+    ;
+    will-change: transform;
+  }
+
+  .visual__close:focus,
+  .visual__close:hover {
+    background-color: var(--color-blue-hover);
+    transform: scale(1.03);
+  }
+
+  .visual__close:active {
+    transform: scale(0.97) translateY(0.0125em);
+  }
+
+  .visual--modal-image figure div:focus,
+  .visual--modal-image figure div:hover {
+    cursor: zoom-out;
+  }
+
+}
+
+
+
+@media(min-width: 64em) {
+
+  .visual {
+    padding-inline: var(--space-large);
+  }
+
+  .visual__container {
+    gap: var(--space-medium);
+    grid-auto-flow: column;
+  }
+
+}

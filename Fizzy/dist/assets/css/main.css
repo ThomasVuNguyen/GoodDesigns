@@ -1,0 +1,16 @@
+.main {
+  align-content: start;
+  display: grid;
+  flex: 1;
+  margin-bottom: var(--space-xxx-large);
+  margin-top: var(--nav-height);
+  position: relative;
+}
+
+
+
+.main--roadblock {
+  margin-bottom: var(--space-x-large);
+  margin-top: var(--space-x-large);
+  place-content: center;
+}

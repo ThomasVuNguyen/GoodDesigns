@@ -1,0 +1,134 @@
+.button {
+  align-items: center;
+  background: var(--color-blue);
+  border-radius: 2.2125em;
+  color: var(--color-white);
+  cursor: pointer;
+  display: flex;
+  font-family: var(--font-family-cartridge);
+  font-feature-settings: normal;
+  font-size: var(--font-size-xxx-small);
+  font-weight: 600;
+  justify-content: center;
+  letter-spacing: 0.025em;
+  line-height: 1.05em;
+  pointer-events: auto;
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-wrap: balance;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.button span {
+  margin-bottom: -0.1625em;
+  margin-top: -0.1875em;
+  padding: 0.7375em 1em;
+}
+
+
+
+.button--icon svg {
+  display: flex;
+  height: 1.15em;
+  margin-left: 0.5875em;
+  max-height: 100%;
+  overflow: visible;
+  width: auto;
+}
+
+.button--icon span {
+  padding-left: 0.325em;
+}
+
+.button--large {
+  font-size: var(--font-size-x-small);
+}
+
+.button--large span {
+  margin-bottom: -0.1125em;
+  margin-top: -0.2em;
+  padding: 0.8375em 1.1em;
+}
+
+.button--large.button--icon svg {
+  margin-left: 0.675em;
+}
+
+.button--large.button--icon span {
+  padding-left: 0.425em;
+}
+
+.button--outline {
+  background: var(--color-canvas-light);
+  box-shadow: var(--box-shadow-pill);
+  color: var(--color-ink);
+}
+
+.button--scorekard {
+  font-family: var(--font-family-scorekard);
+  letter-spacing: var(--letter-spacing-looser);
+  text-transform: none;
+}
+
+
+
+@media(hover: hover) {
+
+  .button {
+    transition:
+      background var(--transition),
+      box-shadow var(--transition),
+      color var(--transition),
+      transform var(--transition)
+    ;
+    will-change: transform;
+  }
+
+  .button:focus,
+  .button:hover {
+    background: var(--color-blue-hover);
+    color: var(--color-white);
+  }
+
+  .button:active {
+    transform: scale(0.98) translateY(0.0125em);
+  }
+
+  .button--outline:focus,
+  .button--outline:hover {
+    background: var(--color-canvas-light-hover);
+    box-shadow: var(--box-shadow-pill-hover);
+    color: var(--color-ink);
+  }
+
+}
+
+
+
+@media(prefers-color-scheme: dark) {
+
+  .button {
+    color: var(--color-ink-inverted);
+  }
+
+  .button--outline {
+    color: var(--color-ink);
+  }
+
+  @media(hover: hover) {
+
+    .button:focus,
+    .button:hover {
+      color: var(--color-ink-inverted);
+    }
+
+    .button--outline:focus,
+    .button--outline:hover {
+      color: var(--color-ink);
+    }
+
+  }
+
+}

@@ -1,0 +1,53 @@
+.modal {
+  align-items: center;
+  background: none;
+  border: none;
+  display: none;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  overflow: auto;
+  padding: var(--space-medium);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.modal[open] {
+  display: grid;
+}
+
+.modal:modal {
+  max-height: none;
+  max-width: none;
+}
+
+.modal::backdrop {
+  background: none;
+}
+
+.modal__backdrop {
+  backdrop-filter: blur(0.7em);
+  -webkit-backdrop-filter: blur(0.7em);
+  background: oklch(var(--lch-canvas-light) / 0.5);
+  inset: 0;
+  position: fixed;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.modal__container {
+  display: grid;
+  position: relative;
+}
+
+
+
+@media(min-width: 64em) {
+
+  .modal {
+    padding: var(--space-large);
+  }
+
+}

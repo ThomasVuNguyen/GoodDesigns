@@ -1,0 +1,34 @@
+.roadblock {
+  display: grid;
+  gap: var(--space-neutral);
+  padding-inline: var(--space-small);
+  position: relative;
+}
+
+.roadblock__logo,
+.roadblock__header,
+.roadblock__content {
+  display: grid;
+  justify-content: center;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.roadblock__header {
+  width: min(100%, 26em);
+}
+
+.roadblock__content {
+  gap: var(--space-small);
+  width: min(100%, 24em);
+}
+
+
+
+@media(min-width: 64em) {
+
+  .roadblock {
+    padding-inline: var(--space-large);
+  }
+
+}
