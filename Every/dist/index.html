@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Every</title>
+  <meta name="description" content="Every — The only subscription you need to stay at the edge of AI. Ideas, apps, and training from practitioners who build with AI daily." />
+  <link rel="icon" href="assets/favicon-dark.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app-shell" class="bg-black">
+    <!-- HEADER -->
+    <header id="main-header">
+      <nav id="nav-bar">
+        <div class="nav-left">
+          <button id="open-drawer" type="button" aria-label="Open menu">
+            <img src="assets/icons/burger.svg" alt="" />
+          </button>
+          <a class="nav-icon-link" aria-label="Search" href="#">
+            <img src="assets/icons/search.svg" alt="" />
+          </a>
+        </div>
+        <div class="nav-right">
+          <a href="#" class="nav-sign-in">Sign in</a>
+          <a href="#" class="nav-subscribe-btn">Subscribe</a>
+        </div>
+      </nav>
+      <a id="logo-item" href="#">
+        <img src="assets/every-logo-white.svg" alt="Every" />
+      </a>
+    </header>
+
+    <div id="main-content">
+      <!-- THESIS BANNER -->
+      <div class="container">
+        <section class="thesis-banner" aria-labelledby="homepage-thesis-title">
+          <div class="thesis-main-copy">
+            <h2 class="thesis-headline" id="homepage-thesis-title">What comes <em>After automation?</em></h2>
+            <p class="thesis-dek">Read 100 predictions on what happens to work <em>after automation</em>, then join us for Every's first annual conference, Thesis: 2027.</p>
+            <div class="thesis-actions">
+              <a class="thesis-btn thesis-btn-conference" href="#">
+                <span>Explore Thesis: 2027</span>
+                <svg aria-hidden="true" class="thesis-arrow" viewBox="0 0 14 14"><path d="M4 10 10 4M6 4h4v4"></path></svg>
+              </a>
+              <a class="thesis-btn thesis-btn-statements" href="#">
+                <span>Read Thesis Statements</span>
+                <svg aria-hidden="true" class="thesis-arrow" viewBox="0 0 14 14"><path d="M4 10 10 4M6 4h4v4"></path></svg>
+              </a>
+            </div>
+          </div>
+          <aside class="thesis-event-panel" aria-label="Thesis: 2027 event details">
+            <picture class="thesis-scene">
+              <source media="(max-width: 767px)" srcset="assets/thesis/hero-sky-mobile.jpg" />
+              <img src="assets/thesis/hero-sky.jpg" alt="" />
+            </picture>
+            <p class="thesis-details">
+              <span>Thursday, November 5, 2026</span>
+              <span>8:00AM to 9:00PM</span>
+              <span>Brooklyn, New York</span>
+            </p>
+          </aside>
+        </section>
+      </div>
+
+      <!-- MAIN CONTENT -->
+      <main class="container main-area">
+        <!-- HERO GRID -->
+        <section class="hero-grid">
+          <!-- LEFT RAIL (sidebar articles) -->
+          <div class="hero-left-rail">
+            <div class="sidebar-card">
+              <a class="card-image-link" href="#">
+                <div class="card-image aspect-16-9">
+                  <img src="assets/images/folders.jpg" alt="" loading="lazy" />
+                </div>
+              </a>
+              <div class="card-meta">
+                <span>Sep 16, 2026 IN</span>
+                <a href="#">Context Window</a>
+              </div>
+              <a href="#"><h3 class="card-title-sm">Show Us <span class="hand">Y</span>our Folders</h3></a>
+              <div class="card-author">
+                <a class="author-link" href="#">
+                  <img src="assets/images/katie-parrott.jpg" alt="" class="author-avatar" />
+                  Katie Parrott
+                </a>
+              </div>
+            </div>
+            <div class="sidebar-card">
+              <a class="card-image-link" href="#">
+                <div class="card-image aspect-16-9">
+                  <img src="assets/images/ai-writing.jpg" alt="" loading="lazy" />
+                </div>
+              </a>
+              <div class="card-meta">
+                <span>Sep 16, 2026 IN</span>
+                <a href="#">Also True for Humans</a>
+              </div>
+              <a href="#"><h3 class="card-title-sm">13 Beliefs About AI <span class="hand">W</span>riting</h3></a>
+              <div class="card-author">
+                <a class="author-link" href="#">
+                  <img src="assets/images/mike-taylor.png" alt="" class="author-avatar" />
+                  Mike Taylor
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- HERO (featured article) -->
+          <div class="hero-center">
+            <div class="hero-card">
+              <a class="card-image-link" href="#">
+                <div class="card-image aspect-4-3">
+                  <img src="assets/images/hero-token-math.jpg" alt="" />
+                </div>
+              </a>
+              <div class="card-meta center-meta">
+                <span>Sep 17, 2026 IN</span>
+                <a href="#">Context Window</a>
+              </div>
+              <a class="hero-title-link" href="#">
+                <h3 class="hero-title">Why You Should <span class="hand">B</span>urn More Tokens</h3>
+                <p class="hero-dek">When expensive experimentation is worth it and when to rein in your tokenmaxxing</p>
+              </a>
+              <div class="card-author hero-author">
+                <a class="author-link" href="#">
+                  <img src="assets/images/laura-entis.jpg" alt="" class="author-avatar" />
+                  Laura Entis
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT RAIL (recent essays) -->
+          <div class="hero-right-rail">
+            <a class="recent-header" href="#">
+              <h2 class="recent-title">RECENT ESSAYS</h2>
+              <img src="assets/icons/arrow-right.svg" alt="" width="16" height="16" class="recent-arrow" />
+            </a>
+            <div class="recent-list">
+              <div class="recent-item">
+                <a class="recent-thumb-link" href="#">
+                  <div class="recent-thumb">
+                    <img src="assets/images/mini-vibe-check.jpg" alt="" loading="lazy" />
+                  </div>
+                </a>
+                <div class="recent-info">
+                  <a href="#"><h3 class="recent-item-title">Mini-Vibe Check: TypeSafe's Jev <span class="hand">J</span>udged Everything I've Written in 0.7 Seconds</h3></a>
+                  <div class="recent-item-author"><a href="#">Mike Taylor</a></div>
+                </div>
+              </div>
+              <div class="recent-item">
+                <a class="recent-thumb-link" href="#">
+                  <div class="recent-thumb">
+                    <img src="assets/images/computer-use.jpg" alt="" loading="lazy" />
+                  </div>
+                </a>
+                <div class="recent-info">
+                  <a href="#"><h3 class="recent-item-title">You're Probably <span class="hand">S</span>leeping On Computer Use</h3></a>
+                  <div class="recent-item-author"><a href="#">Laura Entis</a></div>
+                </div>
+              </div>
+              <div class="recent-item">
+                <a class="recent-thumb-link" href="#">
+                  <div class="recent-thumb">
+                    <img src="assets/images/ai-work.jpg" alt="" loading="lazy" />
+                  </div>
+                </a>
+                <div class="recent-info">
+                  <a href="#"><h3 class="recent-item-title">What Playing With AI <span class="hand">T</span>aught Me About My Work</h3></a>
+                  <div class="recent-item-author"><a href="#">Katie Parrott</a></div>
+                </div>
+              </div>
+              <div class="recent-item">
+                <a class="recent-thumb-link" href="#">
+                  <div class="recent-thumb">
+                    <img src="assets/images/anthropic-warning.jpg" alt="" loading="lazy" />
+                  </div>
+                </a>
+                <div class="recent-info">
+                  <a href="#"><h3 class="recent-item-title">What to Make of the Anthropic <span class="hand">W</span>arning</h3></a>
+                  <div class="recent-item-author"><a href="#">Every Staff</a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- BUILT BY EVERY -->
+        <section class="built-by-every">
+          <a class="built-header" href="#">
+            <div class="built-header-text">
+              <h3 class="built-title">Built by Every</h3>
+              <p class="built-desc">Try out our AI-powered products.</p>
+            </div>
+            <img src="assets/icons/arrow-right.svg" alt="" class="built-arrow" />
+          </a>
+          <div class="products-grid">
+            <a href="#" class="product-card" style="background: #492711;">
+              <div class="product-cover">
+                <img src="assets/images/spiral-cover.png" alt="Spiral" loading="lazy" />
+                <div class="product-cover-gradient" style="background: linear-gradient(to top, #492711 0%, transparent 48%);"></div>
+              </div>
+              <div class="product-info">
+                <div class="product-name-row">
+                  <img src="assets/images/spiral-icon.png" alt="" class="product-icon" loading="lazy" />
+                  <h4 class="product-name">Spiral</h4>
+                </div>
+                <p class="product-tagline">A writing partner for you and your agent.</p>
+              </div>
+              <div class="product-cta" style="color: #ff6010;">Try it</div>
+            </a>
+            <a href="#" class="product-card" style="background: #313c41;">
+              <div class="product-cover">
+                <img src="assets/images/cora-cover.png" alt="Cora" loading="lazy" />
+                <div class="product-cover-gradient" style="background: linear-gradient(to top, #313c41 0%, transparent 48%);"></div>
+              </div>
+              <div class="product-info">
+                <div class="product-name-row">
+                  <img src="assets/images/cora-icon.png" alt="" class="product-icon" loading="lazy" />
+                  <h4 class="product-name">Cora</h4>
+                </div>
+                <p class="product-tagline">An AI assistant for your email—for $15/month.</p>
+              </div>
+              <div class="product-cta" style="color: #0393d6;">Try it</div>
+            </a>
+            <a href="#" class="product-card" style="background: #2c2c2c;">
+              <div class="product-cover">
+                <img src="assets/images/sparkle-cover.png" alt="Sparkle" loading="lazy" />
+                <div class="product-cover-gradient" style="background: linear-gradient(to top, #2c2c2c 0%, transparent 48%);"></div>
+              </div>
+              <div class="product-info">
+                <div class="product-name-row">
+                  <img src="assets/images/sparkle-icon.png" alt="" class="product-icon" loading="lazy" />
+                  <h4 class="product-name">Sparkle</h4>
+                </div>
+                <p class="product-tagline">Automatic file organization for Google Drive.</p>
+              </div>
+              <div class="product-cta" style="color: #ffd700;">Try it</div>
+            </a>
+          </div>
+        </section>
+
+        <!-- NEWSLETTER CTA -->
+        <section class="newsletter-cta">
+          <div class="newsletter-inner">
+            <h2 class="newsletter-heading">Stay at the edge of AI</h2>
+            <p class="newsletter-desc">Ideas, apps, and training from practitioners who build with AI daily.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault();">
+              <input type="email" placeholder="Enter your email" class="newsletter-input" />
+              <button type="submit" class="newsletter-submit">Subscribe</button>
+            </form>
+            <p class="newsletter-legal">Free · No spam · Unsubscribe anytime</p>
+          </div>
+        </section>
+
+        <!-- CONSULTANCY -->
+        <section class="consultancy">
+          <a class="consultancy-link" href="#">
+            <div class="consultancy-text">
+              <h3 class="consultancy-title">Every Consultancy</h3>
+              <p class="consultancy-desc">Bespoke AI strategy for enterprise teams.</p>
+            </div>
+            <img src="assets/handshake.png" alt="" class="consultancy-img" loading="lazy" />
+          </a>
+        </section>
+
+        <!-- PODCAST -->
+        <section class="podcast-section">
+          <div class="podcast-header">
+            <h3 class="podcast-title">AI & I Podcast</h3>
+            <p class="podcast-desc">Weekly conversations about AI with the people building and using it.</p>
+          </div>
+          <div class="podcast-links">
+            <a href="#" class="podcast-link">
+              <img src="assets/icons/youtube.svg" alt="YouTube" />
+              <span>YouTube</span>
+            </a>
+            <a href="#" class="podcast-link">
+              <img src="assets/icons/spotify.svg" alt="Spotify" />
+              <span>Spotify</span>
+            </a>
+            <a href="#" class="podcast-link">
+              <img src="assets/icons/apple-podcasts.svg" alt="Apple Podcasts" />
+              <span>Apple Podcasts</span>
+            </a>
+          </div>
+        </section>
+      </main>
+
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <div class="container footer-inner">
+          <div class="footer-top">
+            <div class="footer-logo">
+              <img src="assets/every-logo-white.svg" alt="Every" />
+            </div>
+            <div class="footer-columns">
+              <div class="footer-col">
+                <h4 class="footer-col-title">Publications</h4>
+                <ul>
+                  <li><a href="#">Context Window</a></li>
+                  <li><a href="#">Also True for Humans</a></li>
+                  <li><a href="#">Working Overtime</a></li>
+                  <li><a href="#">Thesis Statements</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4 class="footer-col-title">Products</h4>
+                <ul>
+                  <li><a href="#">Spiral</a></li>
+                  <li><a href="#">Cora</a></li>
+                  <li><a href="#">Sparkle</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4 class="footer-col-title">Company</h4>
+                <ul>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Careers</a></li>
+                  <li><a href="#">Consultancy</a></li>
+                  <li><a href="#">Advertise</a></li>
+                </ul>
+              </div>
+              <div class="footer-col">
+                <h4 class="footer-col-title">Legal</h4>
+                <ul>
+                  <li><a href="#">Terms</a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">FAQ</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p class="footer-copyright">© 2026 Every Media, Inc.</p>
+            <div class="footer-social">
+              <a href="#" aria-label="X / Twitter">𝕏</a>
+              <a href="#" aria-label="LinkedIn">in</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+
+  <!-- Mobile menu drawer -->
+  <div id="drawer-overlay" class="drawer-overlay" onclick="closeDrawer()"></div>
+  <aside id="drawer" class="drawer" aria-label="Navigation menu">
+    <div class="drawer-header">
+      <button type="button" class="drawer-close" onclick="closeDrawer()" aria-label="Close menu">✕</button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="#">Context Window</a>
+      <a href="#">Also True for Humans</a>
+      <a href="#">Working Overtime</a>
+      <a href="#">AI & I Podcast</a>
+      <a href="#">Built by Every</a>
+      <a href="#">About</a>
+      <a href="#">Thesis: 2027</a>
+    </nav>
+  </aside>
+
+  <script>
+    const drawer = document.getElementById('drawer');
+    const overlay = document.getElementById('drawer-overlay');
+    const openBtn = document.getElementById('open-drawer');
+
+    openBtn.addEventListener('click', () => {
+      drawer.classList.add('open');
+      overlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    });
+
+    function closeDrawer() {
+      drawer.classList.remove('open');
+      overlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeDrawer();
+    });
+  </script>
+</body>
+</html>
