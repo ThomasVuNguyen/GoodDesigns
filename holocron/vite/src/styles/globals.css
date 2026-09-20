@@ -1,0 +1,832 @@
+/* Explicit layer order: holocron is last so it beats all Tailwind layers.
+   Unlayered user CSS always beats all layers — no !important needed. */
+@layer theme, base, components, utilities, holocron;
+@import 'tailwindcss';
+@import '@fontsource-variable/inter';
+@import '@fontsource-variable/inter/wght-italic.css';
+@import '@fontsource-variable/jetbrains-mono';
+@import './editorial.css' layer(holocron);
+@import './editorial-prism.css' layer(holocron);
+/* Chat component classes (drawer shadow, input frame, suggestions, dropdown
+   animation). The chat drawer portals into document.body, so these custom
+   classes must live in the page stylesheet. Shared with the standalone
+   widget's shadow-DOM bundle via chat.css. */
+@import '../chat/chat-shared.css' layer(holocron);
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Scan holocron's own src/ for Tailwind class usage — without this,
+   Tailwind v4 skips node_modules and no utility classes get generated. */
+@source "..";
+
+@plugin "@tailwindcss/typography";
+
+/* =====================================================================
+   shadcn/ui v2 token layer — standard naming convention.
+   These are Holocron defaults, so they live in the low-priority theme
+   cascade layer. Unlayered user CSS can override these tokens regardless
+   of stylesheet load order.
+   ===================================================================== */
+
+@layer theme {
+:root {
+  --radius: 0.625rem;
+
+  /* shadcn/ui standard colors */
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.141 0.005 285.823);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.141 0.005 285.823);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.141 0.005 285.823);
+  --primary: var(--color-sky-600);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.967 0.001 286.375);
+  --secondary-foreground: oklch(0.21 0.006 285.885);
+  --muted: oklch(0.967 0.001 286.375);
+  --muted-foreground: rgba(0, 0, 0, 0.4);
+  --accent: rgba(0, 0, 0, 0.08);
+  --accent-foreground: oklch(0.21 0.006 285.885);
+  --destructive: oklch(0.637 0.237 25.331);
+  --border: oklch(0.94 0.004 286.32);
+  --input: oklch(0.871 0.006 286.286);
+  --ring: oklch(0.871 0.006 286.286);
+
+  /* shadcn/ui sidebar tokens */
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: rgba(0, 0, 0, 0.65);
+  --sidebar-primary: rgba(0, 0, 0, 0.9);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+
+  /* ===== Holocron extras (shadcn superset) ===== */
+
+  /* Colors that have no shadcn equivalent */
+  --text-tertiary: rgba(0, 0, 0, 0.25);
+  --border-subtle: rgba(0, 0, 0, 0.08);
+  --divider: rgba(0, 0, 0, 0.05);
+
+  /* Semantic color tokens — dark-mode-aware, used for callouts/badges.
+     Use `text-blue`, `bg-red/10`, `border-green/20` etc. in Tailwind.
+     These don't conflict with Tailwind's numbered palette (text-blue-500). */
+  --blue: #1d4ed8;
+  --green: #047857;
+  --yellow: #92400e;
+  --orange: #c2410c;
+  --red: #b91c1c;
+  --purple: #7e22ce;
+  --pink: #db2777;
+
+  /* Font stacks */
+  --font-sans:
+    'Inter Variable', 'Inter var', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
+  --font-code:
+    'JetBrainsMono NF Mono', 'JetBrains Mono', 'SF Mono', 'SFMono-Regular', 'Consolas', 'Liberation Mono', Menlo,
+    Courier, monospace;
+  --font-diagram:
+    Menlo, 'Cascadia Mono', 'Cascadia Code', Consolas, 'DejaVu Sans Mono', 'Liberation Mono', 'Courier New', Monaco,
+    monospace;
+
+  /* Typography weights & rhythm */
+  --weight-regular: 400;
+  --weight-prose: 475;
+  --weight-heading: 560;
+  --lh-heading: 1.4;
+  --lh-prose: 1.6;
+  --ls-prose: 0;
+
+  /* Body prose text — slightly softer than --foreground so bold words pop.
+     Full --foreground is reserved for headings + bold/strong. Mixing toward
+     --background keeps it theme-aware, so this single 80% definition works in
+     both light and dark mode (no dark override needed). */
+  --prose-text: color-mix(in oklch, var(--foreground) 80%, var(--background));
+
+  /* Mono text appears visually larger than sans at the same font-size.
+     Use this em-based scale factor on any font-mono / <code> element
+     sitting alongside sans text so it feels optically matched. */
+  --code-font-size: 0.9em;
+
+  /* Type scale */
+  --type-body-size: 14px;
+  --type-heading-1-size: 16px;
+  --type-heading-2-size: 16px;
+  --type-heading-3-size: 16px;
+  --type-small-size: 13px;
+  /* Relative to body size. calc() keeps it a resolved px value so nested
+     `font-size: var(--type-code-size)` on pre + code does not compound the
+     way an `em` value would. 0.857 ≈ 12px at 14px body — optically smaller
+     than sans at the same nominal size, matching the aside/code-card density. */
+  --type-code-size: calc(var(--type-body-size) * 0.857);
+  --type-nav-group-size: calc(12em / 14);
+
+  /* Code block frame — override these to wrap code blocks in a visible
+     container (background, border, rounded corners). Defaults are invisible
+     so code blocks blend into the page surface.
+     The copy button auto-aligns to the top-right of the padded frame. */
+  --code-block-background: transparent;
+  --code-block-border: none;
+  --code-block-shadow: none;
+  --code-block-radius: 0px;
+  --code-block-padding-x: 0px;
+  --code-block-padding-y: 0.5rem;
+
+  /* Blockquote — override border width/color/weight for `> quoted text`. */
+  --blockquote-border-width: 3px;
+  --blockquote-border-color: var(--border);
+  --blockquote-font-weight: inherit;
+
+  /* Card — override frame styling for <Card> / <CardGroup> link cards. */
+  --card-padding: 16px;
+  --card-border: 1px solid var(--border-subtle);
+  --card-shadow: none;
+
+  /* Table — override corner rounding for markdown tables. */
+  --table-radius: 0px;
+
+  /* Sidebar nav — spacing is em so it scales with --sidebar-font-size.
+     Each calc is the previous px amount over a 14px sidebar font.
+     Default is 13px; at xl (1280px+) the left sidebar grows to 14px.
+     Compact mode uses 12px at all breakpoints (higher specificity than
+     the xl bump). Override on :root to change globally. */
+  --sidebar-font-size: 13px;
+  --sidebar-group-margin-top: calc(12em / 14);
+  --sidebar-link-radius: calc(6em / 14);
+  /* Horizontal padding inside every sidebar row (page link, group toggle, TOC
+     heading) so the hover/active pill has breathing room around the text.
+     Rows cancel it with an equal negative inline margin, so text alignment is
+     unchanged.
+
+     The point is that the pill is painted INSIDE the row's border box. An
+     `overflow-y-auto` scroll container also clips horizontally (per spec the
+     other axis cannot stay `visible`), so anything painted OUTSIDE a row —
+     a `box-shadow` spread, the browser's focus ring — gets its rounded
+     corners sliced flat at the clip edge. Every clipping ancestor of a row
+     (the scroll `<nav>`, `ExpandableContainer`) reserves exactly this amount
+     so a row can sit flush with the clip edge and still render whole. */
+  --sidebar-row-padding-x: calc(8em / 14);
+  /* Vertical padding inside every sidebar row. Unlike the x padding this is
+     not cancelled: it is the pill's breathing room above and below the label. */
+  --sidebar-row-padding-y: calc(4em / 14);
+  /* Space between sidebar rows. Lower this if you raise row padding, so the
+     text-to-text rhythm stays tight. */
+  --sidebar-row-gap: calc(4em / 14);
+  --sidebar-icon-size: calc(12em / 14);
+  --sidebar-leading-gap: calc(6em / 14);
+  /* One nesting step = leading slot (icon + gap) so nested pages line up
+     under the group label. Changing icon size or leading gap updates indent. */
+  --sidebar-indent: calc(var(--sidebar-icon-size) + var(--sidebar-leading-gap));
+  /* Background pill behind the deepest active sidebar item: the active TOC
+     heading when the current page's TOC is expanded, otherwise the page link
+     itself. Transparent by default (active state is color-only); override to
+     get a highlighted pill, e.g. rgba(6, 122, 34, 0.1). */
+  --sidebar-active-background: transparent;
+  /* Hover background on sidebar links, group toggles, and TOC headings.
+     Defaults to the global accent; override to decouple sidebar hover from
+     the brand accent, e.g. a neutral rgba(0, 0, 0, 0.06). */
+  --sidebar-hover-background: var(--accent);
+  /* Search input rounding. Default is the pill look; lower it for a
+     compact rectangular input. */
+  --search-input-radius: var(--radius-xl);
+  @variant xl {
+    --sidebar-font-size: 14px;
+  }
+  &:has(.slot-page[data-page-mode="compact"]) {
+    --sidebar-font-size: 12px;
+  }
+
+  /* Bleed: mobile-first (0), enabled at lg where grid has room.
+     Code blocks (.bleed class) and images (<Bleed> wrapper) extend by
+     this amount. A `.no-bleed` ancestor zeros it (see editorial.css)
+     so card-like containers keep descendants inside the frame. */
+  --bleed: 0px;
+  @variant lg {
+    --bleed: 32px;
+  }
+
+  /* Header anatomy — all sticky/fade/spacer offsets derive from these.
+     Change --logo-height or --tab-bar-height and every dependent value updates.
+     --banner-height is set via inline style on .slot-page when a banner
+     is present (defaults to 0px). */
+  --banner-height: 0px;
+  --header-padding-y: 16px;
+  --logo-height: 30px;
+  --header-row-height: calc(2 * var(--header-padding-y) + var(--logo-height));
+  --tab-bar-height: 44px;
+  --header-height: calc(var(--header-row-height) + var(--tab-bar-height) + 2px);
+  --layout-gap: 36px;
+  --sticky-top: calc(var(--header-height) + var(--layout-gap));
+  /* Grid geometry — most `--grid-*` values are injected as inline style on
+     `.slot-page` by `buildGridTokenStyle()` in `lib/sidebar-widths.ts`.
+     `--grid-gap` lives in CSS so breakpoints can compact it. Page-level
+     frontmatter can still override it inline when needed. */
+  --mobile-padding: 1.25rem;
+
+  /* Decorative grid lines — offset between content edge and vertical lines */
+  --grid-line-offset: 32px;
+
+  /* Markdown vertical rhythm — all content spacing derives from pure flex/grid
+     gaps. No margin-top or padding-y on markdown elements. First and last
+     children automatically get zero spacing at the container edges. */
+  --prose-gap: 20px;    /* between elements inside one section (p, h2, list, code) */
+  --section-gap: 48px;  /* between sections (separates H1/## blocks) */
+  --list-gap: 8px;      /* between list items inside ul/ol */
+
+  /* Dark mode overrides */
+  @variant dark {
+    --background: oklch(0.16 0.006 285.885);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.19 0.006 285.885);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.21 0.006 285.885);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: var(--color-sky-200);
+    --primary-foreground: oklch(0.21 0.006 285.885);
+    --secondary: oklch(0.274 0.006 286.033);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.274 0.006 286.033);
+    --muted-foreground: rgba(255, 255, 255, 0.45);
+    --accent: rgba(255, 255, 255, 0.1);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: oklch(0.637 0.237 25.331);
+    --border: oklch(0.32 0.006 286.033);
+    --input: oklch(0.274 0.006 286.033);
+    --ring: oklch(0.442 0.017 285.786);
+
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: rgba(255, 255, 255, 0.65);
+    --sidebar-primary: rgba(255, 255, 255, 0.9);
+    --sidebar-primary-foreground: oklch(0.985 0 0);
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: oklch(0.556 0 0);
+
+    --text-tertiary: rgba(255, 255, 255, 0.25);
+    --border-subtle: rgba(255, 255, 255, 0.12);
+    --divider: rgba(255, 255, 255, 0.06);
+
+    --blue: #93c5fd;
+    --green: #6ee7b7;
+    --yellow: #fbbf24;
+    --orange: #fb923c;
+    --red: #fca5a5;
+    --purple: #c4b5fd;
+    --pink: #f9a8d4;
+  }
+}
+}
+
+
+
+@theme {
+  --breakpoint-lg: 1024px;
+}
+
+@theme inline {
+  /* shadcn/ui standard — full set */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* shadcn/ui sidebar */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Holocron extras */
+  --color-text-tertiary: var(--text-tertiary);
+  --color-border-subtle: var(--border-subtle);
+  --color-divider: var(--divider);
+  --color-blue: var(--blue);
+  --color-green: var(--green);
+  --color-yellow: var(--yellow);
+  --color-orange: var(--orange);
+  --color-red: var(--red);
+  --color-purple: var(--purple);
+
+  /* Radius scale derived from --radius */
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.4);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    scrollbar-width: thin;
+    scrollbar-color: --alpha(var(--foreground) / 12%) transparent;
+  }
+  html {
+    height: 100%;
+    scrollbar-gutter: stable;
+  }
+  body {
+    @apply bg-background text-foreground;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* =====================================================================
+   @layer holocron — all Holocron style rules live here. Declared AFTER
+   tailwindcss so it beats Tailwind's built-in layers (preflight reset,
+   base, utilities). User CSS (unlayered by default) still takes
+   precedence — no !important needed to override Holocron styles.
+
+   Layer order: theme < base < components < utilities < holocron < unlayered
+
+   What stays OUTSIDE this layer:
+   - @layer theme token defaults (low priority so user CSS wins even if
+     Holocron's stylesheet loads later)
+   - @theme / @theme inline blocks (Tailwind config, not style rules)
+   - @layer base block (Tailwind's own layer system)
+   ===================================================================== */
+
+@layer holocron {
+  /* Thin scrollbars with transparent tracks.
+      Firefox gets `scrollbar-width: thin` from the base `*` rule above;
+      webkit browsers use the 6px width here. Root `html` keeps a stable
+      gutter to prevent page-wide horizontal layout shift. */
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background: transparent;
+    border-radius: var(--radius-md);
+  }
+
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: --alpha(var(--foreground) / 12%);
+    border-radius: var(--radius-md);
+    border: none;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: --alpha(var(--foreground) / 22%);
+  }
+
+  /* Stable scrollbar gutter only for scroll containers whose content should not
+     shift when overflow appears, like the left navigation tree. */
+  .scrollbar-stable {
+    scrollbar-gutter: stable;
+  }
+
+  /* Hide scrollbars while keeping scroll functionality */
+  .scrollbar-none {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+
+  /* Sidebar rows sit flush with the nav's horizontal clip edge (see
+     --sidebar-row-padding-x), so the browser's default focus ring — painted
+     OUTSIDE the border box — would get its left corners sliced flat. Pull it
+     inside. It still follows --sidebar-link-radius, so a focused row reads as
+     the same rounded pill as a hovered one. */
+  .slot-sidebar-nav :focus-visible {
+    outline: none;
+    background: var(--sidebar-hover-background);
+  }
+  .slot-sidebar-nav :focus:not(:focus-visible) {
+    outline: none;
+  }
+
+  /* Search input border + focus ring */
+  .search-input {
+    border: 1px solid var(--border);
+    border-radius: var(--search-input-radius);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, opacity 0.1s ease;
+  }
+  .search-input:focus {
+    border-color: var(--ring);
+    box-shadow: 0 0 0 2px color-mix(in srgb, var(--ring) 25%, transparent);
+  }
+  .search-input-active {
+    border-color: var(--primary);
+  }
+  .search-input-active:focus {
+    border-color: var(--primary);
+  }
+
+  /* Layout slots — only important page entities use CSS classes.
+     Inner wrappers use Tailwind utilities directly in JSX. */
+
+  .slot-page {
+    --grid-gap: 60px;
+
+    @variant md {
+      --grid-gap: 45px;
+    }
+
+    @variant xl {
+      --grid-gap: 60px;
+    }
+  }
+
+  .slot-navbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--background);
+  }
+
+  .slot-logo {
+    color: var(--foreground);
+    text-decoration: none;
+  }
+
+  .slot-tabbar {
+    background: var(--background);
+    border-top: 1px var(--grid-line-style, solid) var(--border);
+    border-bottom: 1px var(--grid-line-style, solid) var(--border);
+    overflow: visible;  /* allow grid-dot ornaments to render outside the borders */
+  }
+
+  .slot-tab {
+    position: relative;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+
+  .slot-sidebar-left {
+    display: none;
+    @variant lg {
+      display: block;
+      grid-column: 1;
+      grid-row: 1 / -1;
+    }
+  }
+
+  .slot-main {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .slot-sidebar-right {
+    display: none;
+    @variant lg {
+      display: block;
+      grid-column: 3;
+    }
+  }
+
+  /* ── Decorative grid lines ─────────────────────────────────────────── */
+
+  /* Dot ornament at border intersections — Sigillo-style.
+     Outer circle (size-5) masks the border crossing with page bg.
+     Inner dot (2px) marks the vertex at 40% foreground opacity. */
+  .grid-dot {
+    position: absolute;
+    z-index: 20;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 9999px;
+    background: var(--background);
+    pointer-events: none;
+    /* display is controlled by Tailwind: hidden lg:flex (in grid-lines.tsx).
+       Do NOT set display here — it would override the hidden utility and
+       cause grid-dots to leak past the viewport on mobile, creating
+       horizontal scroll. */
+    align-items: center;
+    justify-content: center;
+  }
+  .grid-dot::after {
+    content: '';
+    display: block;
+    width: 2px;
+    height: 2px;
+    border-radius: 9999px;
+    background: --alpha(var(--foreground) / 40%);
+  }
+
+  /* Vertical decorative line — absolute, full-height of its relative parent.
+     z-index 10 ensures lines render above full-bleed hero content that
+     breaks out of the max-width container with w-screen. */
+  .grid-line-v {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    z-index: 10;
+    pointer-events: none;
+  }
+  .grid-line-v.solid {
+    border-left: 1px solid var(--border);
+  }
+  .grid-line-v.dashed {
+    border-left: 1px dashed var(--border);
+  }
+
+  /* Horizontal decorative line — absolute, full-width of its relative parent */
+  .grid-line-h {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 0;
+    z-index: 10;
+    pointer-events: none;
+  }
+  .grid-line-h.solid {
+    border-top: 1px solid var(--border);
+  }
+  .grid-line-h.dashed {
+    border-top: 1px dashed var(--border);
+  }
+}
+
+/* react-medium-image-zoom overrides — OUTSIDE @layer holocron because rmiz
+   imports its own CSS via JS (`import 'react-medium-image-zoom/dist/styles.css'`)
+   which is unlayered. Layered rules always lose to unlayered ones, so these
+   overrides must stay unlayered to beat rmiz's defaults. */
+.holocron-pixelated-image > [data-rmiz] {
+  grid-area: 1 / 1;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.holocron-pixelated-image > [data-rmiz] > [data-rmiz-content] {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Imageboard masonry grid — pure CSS multi-columns. `column-count` is set
+   inline from the tab config (max columns); the `column-width` floor lets
+   the browser drop columns automatically on narrow viewports. CSS columns
+   have no row-gap concept, so vertical rhythm between items uses
+   margin-bottom on children (the one place the gap-over-margin rule can't
+   apply). Children carry fixed aspect ratios, so lazy loading causes no
+   layout shift. */
+.holocron-imageboard {
+  column-width: 220px;
+  column-gap: var(--prose-gap);
+}
+.holocron-imageboard > * {
+  break-inside: avoid;
+  margin-bottom: var(--prose-gap);
+}
+
+/* Hide the rmiz unzoom button — the dialog already handles Escape and a
+   click anywhere on the modal/image to close. The library renders this
+   button into the portalled <dialog> (outside .holocron-pixelated-image),
+   so the selector is global. */
+[data-rmiz-btn-unzoom] {
+  display: none;
+}
+
+/* Theme the rmiz zoom modal overlay so it follows light/dark mode.
+   rmiz defaults to a hardcoded white overlay (`rgba(255, 255, 255, 1)`).
+   We swap it for `--background`, which resolves to white in light mode
+   and the dark token in dark mode. The hidden state must use the same
+   color with 0 alpha so the fade-in transition stays clean — otherwise
+   browsers interpolate between rgba(255,255,255,0) and oklch(dark) and
+   you see a brief whitish flash before it darkens.
+
+   We need higher specificity than rmiz's `[data-rmiz-modal-overlay="..."]`
+   selector because rmiz's CSS is bundled via the `Zoom` component import
+   and loads AFTER globals.css — so on a (0,1,0) specificity tie its rule
+   would win. Scoping by the `[data-rmiz-modal][open]` ancestor bumps us
+   to (0,2,0). */
+[data-rmiz-modal][open] [data-rmiz-modal-overlay="hidden"] {
+  background-color: --alpha(var(--background) / 0%);
+}
+[data-rmiz-modal][open] [data-rmiz-modal-overlay="visible"] {
+  background-color: var(--background);
+}
+
+/*
+ * Left navigation scroll fade mask.
+ *
+ * Fades the top and bottom edges of the scrollable sidebar nav so list items
+ * dissolve into the background instead of being hard-clipped at the scroll
+ * container edges. Driven by a scroll-progress timeline so the top fade only
+ * appears once scrolled away from the top and the bottom fade disappears once
+ * scrolled to the bottom — the first and last items are never hidden when
+ * they are at rest against an edge.
+ *
+ * Targets the actual scroll container (the `<nav>` with overflow-y-auto),
+ * not the sticky wrapper, so `scroll(self)` tracks real scrolling.
+ *
+ * --nav-mask-size controls the fade height. The mask is built from two
+ * variables (--nav-mask-top / --nav-mask-bottom) that the scroll-driven
+ * animation animates between 0px (no fade) and --nav-mask-size (full fade).
+ *
+ * The fade is soft (multi-stop ease curve) and never reaches full
+ * transparency — faded items settle at --nav-mask-min-alpha so they stay
+ * faintly readable instead of vanishing. The taller fade zone makes the
+ * gradient gentler than a single hard transparent→black step.
+ */
+.slot-sidebar-nav {
+    --nav-mask-size: 3.5rem;
+    /* Minimum mask alpha at the very edge — keeps faded rows faintly visible. */
+    --nav-mask-min-alpha: 0.12;
+    --nav-mask-top: 0px;
+    --nav-mask-bottom: 0px;
+    scroll-padding-block: var(--nav-mask-size);
+    -webkit-mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, var(--nav-mask-min-alpha)) 0,
+        rgba(0, 0, 0, 0.55) calc(var(--nav-mask-top) * 0.5),
+        black var(--nav-mask-top),
+        black calc(100% - var(--nav-mask-bottom)),
+        rgba(0, 0, 0, 0.55) calc(100% - var(--nav-mask-bottom) * 0.5),
+        rgba(0, 0, 0, var(--nav-mask-min-alpha)) 100%
+    );
+    mask-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, var(--nav-mask-min-alpha)) 0,
+        rgba(0, 0, 0, 0.55) calc(var(--nav-mask-top) * 0.5),
+        black var(--nav-mask-top),
+        black calc(100% - var(--nav-mask-bottom)),
+        rgba(0, 0, 0, 0.55) calc(100% - var(--nav-mask-bottom) * 0.5),
+        rgba(0, 0, 0, var(--nav-mask-min-alpha)) 100%
+    );
+}
+
+@supports (animation-timeline: scroll()) {
+    @property --nav-mask-top {
+        syntax: '<length>';
+        inherits: false;
+        initial-value: 0px;
+    }
+    @property --nav-mask-bottom {
+        syntax: '<length>';
+        inherits: false;
+        initial-value: 0px;
+    }
+
+    .slot-sidebar-nav {
+        animation: nav-scroll-fade linear both;
+        animation-timeline: scroll(self);
+    }
+
+    @keyframes nav-scroll-fade {
+        /* at top: no top fade, full bottom fade */
+        0% {
+            --nav-mask-top: 0px;
+            --nav-mask-bottom: var(--nav-mask-size);
+        }
+        /* tiny scroll in: top fade ramps up quickly */
+        5% {
+            --nav-mask-top: var(--nav-mask-size);
+            --nav-mask-bottom: var(--nav-mask-size);
+        }
+        /* near bottom: both fades present */
+        95% {
+            --nav-mask-top: var(--nav-mask-size);
+            --nav-mask-bottom: var(--nav-mask-size);
+        }
+        /* at bottom: bottom fade gone, top fade stays */
+        100% {
+            --nav-mask-top: var(--nav-mask-size);
+            --nav-mask-bottom: 0px;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .slot-sidebar-nav {
+        animation: none;
+    }
+}
+
+@supports (animation-timeline: scroll()) {
+    @property --nav-mask-top {
+        syntax: '<length>';
+        inherits: false;
+        initial-value: 0px;
+    }
+    @property --nav-mask-bottom {
+        syntax: '<length>';
+        inherits: false;
+        initial-value: 0px;
+    }
+
+    .slot-sidebar-left {
+        animation: nav-scroll-fade linear both;
+        animation-timeline: scroll(self);
+    }
+
+    @keyframes nav-scroll-fade {
+        /* at top: no top fade, full bottom fade */
+        0% {
+            --nav-mask-top: 0px;
+            --nav-mask-bottom: var(--nav-mask-size);
+        }
+        /* tiny scroll in: top fade ramps up quickly */
+        5% {
+            --nav-mask-top: var(--nav-mask-size);
+            --nav-mask-bottom: var(--nav-mask-size);
+        }
+        /* near bottom: both fades present */
+        95% {
+            --nav-mask-top: var(--nav-mask-size);
+            --nav-mask-bottom: var(--nav-mask-size);
+        }
+        /* at bottom: bottom fade gone, top fade stays */
+        100% {
+            --nav-mask-top: var(--nav-mask-size);
+            --nav-mask-bottom: 0px;
+        }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .slot-sidebar-left {
+        animation: none;
+    }
+}
+
+/*
+ * Floating Ask AI pill + its viewport frost — tablet and desktop only.
+ *
+ * Phones (< lg) never render the floating pill: touch viewports get no
+ * floating AI at all, no pill-clearance padding, and no backdrop-filter
+ * scroll cost. Everything below is therefore gated to `lg` and up.
+ *
+ * The frost band: the page scrolls on the window, not on `.slot-main`, so a
+ * `mask-image` opacity fade on the content column cannot be anchored to the
+ * viewport — it fades the element's own box, which scrolls away (verified:
+ * masking the scroll root erases the whole viewport once scrolled). A
+ * viewport-anchored fade must be a fixed overlay. Instead of painting
+ * `--background` on top (a white tint that looks wrong over images or
+ * colored blocks), this fixed band applies `backdrop-filter: blur()` masked
+ * by a gradient, so the frost ramps from sharp (top) to fully blurred
+ * (bottom). It only blurs the backdrop and never adds color, so it reads
+ * correctly over ANY content. Lives on `html` because `.slot-page` has
+ * `overflow-x: clip`, which would trap `position: fixed` descendants.
+ *
+ * Hidden while the pill is `[inert]` (drawer open). Extra padding lives
+ * on the footer so the powered-by row can scroll above the pill.
+ * `:has(.holocron-chat-pill)` covers older pages that render the pill
+ * without `data-assistant-display="floating"`.
+ */
+@media (width < 1024px) {
+    .holocron-chat-pill {
+        display: none;
+    }
+}
+
+@variant lg {
+    html:has(.slot-page[data-assistant-display='floating']),
+    html:has(.holocron-chat-pill) {
+        --assistant-fade-size: 60px;
+        scroll-padding-bottom: var(--assistant-fade-size);
+    }
+
+    .slot-page[data-assistant-display='floating'] footer,
+    .slot-page:has(.holocron-chat-pill) footer {
+        padding-bottom: var(--assistant-fade-size);
+    }
+
+    html:has(.slot-page[data-assistant-display='floating'] .holocron-chat-pill:not([inert]))::after,
+    html:has(.holocron-chat-pill:not([inert]))::after {
+        content: '';
+        position: fixed;
+        inset-inline: 0;
+        bottom: 0;
+        height: var(--assistant-fade-size);
+        pointer-events: none;
+        z-index: 150;
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        -webkit-mask-image: linear-gradient(to top, black 0, black 20px, transparent 100%);
+        mask-image: linear-gradient(to top, black 0, black 20px, transparent 100%);
+    }
+}

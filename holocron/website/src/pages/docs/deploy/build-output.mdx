@@ -1,0 +1,63 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the build output guide from @/vite/src/vite-plugin.ts.
+  Cover dist/rsc, dist/client, and holocron-cache.json.
+title: Build Output
+description: What vite build produces and how to serve it.
+icon: folder-output
+---
+
+# Build Output
+
+Running `npx vite build` produces a `dist/` directory with everything needed to serve your docs site.
+
+## Normal build directory structure
+
+```diagram
+dist/
+├── rsc/
+│   ├── index.js          # server entry
+│   └── ...
+├── client/               # browser assets, CSS, JS, public files
+└── holocron-cache.json   # Navigation cache for fast rebuilds
+```
+
+## Cache for fast rebuilds
+
+`dist/holocron-cache.json` contains the enriched navigation tree with git SHA hashes for each page. On subsequent builds, pages with unchanged SHAs are reused without re-parsing. Caching `dist/` between CI runs gives near-instant rebuilds.
+
+## Static assets
+
+Fonts, processed images, and bundled JavaScript are placed in the client output. These are fingerprinted with content hashes for long-term caching.
+
+## Deploy build output
+
+The `holocron deploy` CLI builds to `dist/.holocron/` before upload. It uploads `dist/.holocron/rsc` as Worker files and `dist/.holocron/client` as static assets.
+
+## Self-contained output
+
+The production output is self-contained. Navigation, frontmatter, image metadata, and cache data are prepared at build time. Page requests still parse and render the MDX source at runtime through React Server Components.
+
+## Build errors
+
+Production builds **fail** when content errors are detected. Holocron processes every page first, logs all errors to the terminal, then fails the build with a summary. This ensures you see every issue at once instead of fixing them one at a time.
+
+The build fails on:
+
+- **MDX parse errors** — syntax errors in your MDX files
+- **MDX component errors** — unknown component names, invalid props
+- **Broken internal links** — links pointing to pages that don't exist (see [Broken Link Detection](/docs/create/broken-links))
+- **Broken asset references** — images or media files that can't be found on disk
+
+In **dev mode**, these are shown as warnings without stopping the server, so you can iterate freely.
+
+### Skipping build errors
+
+If you need to deploy despite content errors, set the `HOLOCRON_SKIP_BUILD_ERRORS` environment variable:
+
+```bash
+HOLOCRON_SKIP_BUILD_ERRORS=true npx vite build
+```
+
+Pages with errors are excluded from the build output. They return a 404 instead of rendering broken content.

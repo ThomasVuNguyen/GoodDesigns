@@ -1,0 +1,170 @@
+/**
+ * Grid geometry tokens + sidebar-width helpers.
+ *
+ * This file is the SINGLE source of truth for the page grid geometry.
+ * `editorial-page.tsx` injects page-specific values as inline style on
+ * `.slot-page` by calling `buildGridTokenStyle()`. `globals.css` owns the
+ * default responsive `--grid-gap`; page frontmatter can override it inline.
+ *
+ * Content width is DERIVED, not configured. Compact pages remove the
+ * right-sidebar track and its adjacent gap from both formulas.
+ *
+ * This means changing `--grid-max-width` automatically grows the content
+ * column, while compact mode preserves that column and narrows the shell.
+ *
+ * It also computes the required right-sidebar width for a page by
+ * scanning aside mdast nodes for known components that need extra
+ * horizontal space (e.g. RequestExample / ResponseExample). At render
+ * time we walk every aside node, look up the name of each JSX element
+ * encountered, and take the max. Components not listed fall through to
+ * the default sidebar width. `<Aside width={N}>` sets an explicit pixel
+ * size. The scan takes the max across all asides on the page.
+ */
+
+import type { HolocronConfig } from '../config.ts'
+import type { HolocronCSSProperties } from './css-vars.ts'
+
+/**
+ * Default grid geometry tokens (px). Used as fallback when no config
+ * is provided. The `layout` field in docs.json can override these.
+ *
+ * Keys match the CSS custom-property names that get injected as inline
+ * style on `.slot-page`.
+ */
+const GRID_TOKENS = {
+  '--grid-nav-width': 230,
+  '--grid-sidebar-width': 230,
+  '--grid-gap': 60,
+  '--grid-max-width': 1200,
+} as const
+
+/** Default right-sidebar width (px). Matches `--grid-nav-width`. */
+export const DEFAULT_SIDEBAR_WIDTH: number = GRID_TOKENS['--grid-sidebar-width']
+
+/** Minimum right-sidebar width (px) required when an Aside contains the
+ *  given MDX component name. Components not listed fall through to the
+ *  DEFAULT_SIDEBAR_WIDTH. */
+export const COMPONENT_SIDEBAR_WIDTHS: Record<string, number> = {
+  RequestExample: 460,
+  ResponseExample: 460,
+}
+
+type JsxElement = Extract<import('mdast').RootContent, { type: 'mdxJsxFlowElement' | 'mdxJsxTextElement' }>
+type JsxAttribute = Extract<JsxElement['attributes'][number], { type: 'mdxJsxAttribute' }>
+
+function jsxAttr(node: JsxElement, name: string): JsxAttribute | undefined {
+  return node.attributes.find((attr): attr is JsxAttribute => {
+    return attr.type === 'mdxJsxAttribute' && attr.name === name
+  })
+}
+
+function estreeLiteral(attr: JsxAttribute): string | number | boolean | undefined {
+  if (!attr.value || typeof attr.value !== 'object') return undefined
+  const statement = attr.value.data?.estree?.body[0]
+  if (!statement || statement.type !== 'ExpressionStatement') return undefined
+  const expression = statement.expression
+  if (expression.type !== 'Literal') return undefined
+  const value = expression.value
+  if (typeof value === 'string' || typeof value === 'number' || typeof value === 'boolean') return value
+  return undefined
+}
+
+function parseCssPx(value: string): number | undefined {
+  const match = value.trim().match(/^(\d+(?:\.\d+)?)(?:px)?$/)
+  if (!match) return undefined
+  const parsed = Number(match[1])
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : undefined
+}
+
+function getNumericJsxAttr(node: JsxElement, name: string): number | undefined {
+  const attr = jsxAttr(node, name)
+  if (!attr) return undefined
+  if (typeof attr.value === 'string') return parseCssPx(attr.value)
+  const literal = estreeLiteral(attr)
+  if (typeof literal === 'number' && literal > 0) return literal
+  if (typeof literal === 'string') return parseCssPx(literal)
+  return undefined
+}
+
+/**
+ * Walk aside mdast nodes and return the page-level right-rail width.
+ * `width` sets a fixed pixel size. Known components like RequestExample
+ * still raise the minimum.
+ *
+ * Takes `visit` as a parameter so `unist-util-visit` is NOT a module-level
+ * import — this prevents it leaking into the client graph when
+ * `editorial-page.tsx` imports `buildGridTokenStyle` from this file.
+ */
+export function computeSidebarWidthFromAsideNodes(
+  nodes: import('mdast').RootContent[],
+  visit: typeof import('unist-util-visit').visit,
+): number {
+  let maxWidth = DEFAULT_SIDEBAR_WIDTH
+  const fakeRoot: import('mdast').Root = { type: 'root', children: nodes }
+  visit(fakeRoot, (node) => {
+    if (
+      node.type !== 'mdxJsxFlowElement' &&
+      node.type !== 'mdxJsxTextElement'
+    ) {
+      return
+    }
+    const name = node.name
+    if (!name) return
+    if (name === 'Aside') {
+      const authoredWidth = getNumericJsxAttr(node, 'width')
+      if (typeof authoredWidth === 'number' && authoredWidth > maxWidth) {
+        maxWidth = authoredWidth
+      }
+    }
+    const width = COMPONENT_SIDEBAR_WIDTHS[name]
+    if (typeof width === 'number' && width > maxWidth) {
+      maxWidth = width
+    }
+  })
+  return maxWidth
+}
+
+/**
+ * Build the inline-style CSS custom properties for the page grid.
+ *
+ * Emits all `--grid-*` tokens so `globals.css` does not need defaults.
+ * Content width is a CSS calc() derived from the visible grid tracks:
+ *
+ *   default: content = max-width - nav - sidebar - 2*gap
+ *   compact: content = max-width - nav - gap
+ *
+ * This keeps the page max-width constant regardless of sidebar width.
+ * Bump `--grid-max-width` and the content column grows automatically.
+ *
+ * When `configLayout` is provided, its values override the hardcoded
+ * GRID_TOKENS defaults.
+ */
+export function buildGridTokenStyle({
+  sidebarWidth,
+  gridGap,
+  configLayout,
+  compact = false,
+}: {
+  sidebarWidth: number
+  gridGap?: number
+  configLayout?: HolocronConfig['layout']
+  compact?: boolean
+}): HolocronCSSProperties {
+  const nav = configLayout?.sidebarWidth ?? GRID_TOKENS['--grid-nav-width']
+  const maxW = configLayout?.maxWidth ?? GRID_TOKENS['--grid-max-width']
+  const gap = gridGap ?? configLayout?.columnGap ?? GRID_TOKENS['--grid-gap']
+  const radius = configLayout?.radius
+  const shellMaxWidth = compact ? maxW - DEFAULT_SIDEBAR_WIDTH - gap : maxW
+  const contentWidth = compact
+    ? 'minmax(0, min(720px, calc(var(--grid-max-width) - var(--grid-nav-width) - var(--grid-gap))))'
+    : 'minmax(0, min(720px, calc(var(--grid-max-width) - var(--grid-nav-width) - var(--grid-sidebar-width) - 2 * var(--grid-gap))))'
+
+  return {
+    '--grid-nav-width': `${nav}px`,
+    '--grid-gap': `${gap}px`,
+    '--grid-sidebar-width': `${sidebarWidth}px`,
+    '--grid-max-width': `min(calc(100vw - 60px), ${shellMaxWidth}px)`,
+    '--grid-content-width': contentWidth,
+    ...(radius !== undefined && { '--radius': `${radius / 16}rem` }),
+  }
+}

@@ -1,0 +1,29 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the Expandable docs from @/vite/src/components/markdown/expandable.tsx.
+  Use @https://github.com/mintlify/components for Mintlify-compatible props.
+title: Expandables
+description: Hide nested details behind a disclosure block.
+icon: chevron-down-square
+---
+
+# Expandables
+
+Use `Expandable` when a page needs optional detail without creating a full accordion list.
+
+<Expandable title='Show advanced options' defaultOpen>
+  Expandables work well for secondary details, object internals, or long examples that should not dominate the page.
+
+  - Nested markdown is supported
+  - Code blocks are supported
+
+  ```json
+  { "advanced": true, "source": "holocron" }
+  ```
+</Expandable>
+
+## Holocron differences
+
+- Holocron currently supports `title`, `description`, `icon`, `iconType`, `iconLibrary`, `defaultOpen`, and `className`.
+- This is a simpler disclosure primitive than Mintlify's richer schema-documentation examples, but it covers the common authoring pattern.

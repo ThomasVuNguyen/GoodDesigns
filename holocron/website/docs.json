@@ -1,0 +1,221 @@
+{
+    "$schema": "https://holocron.so/docs.json",
+    "name": "Holocron",
+    "description": "Mintlify-compatible docs site generator as a Vite plugin.",
+    "favicon": "/favicon.ico",
+    "colors": {
+        "primary": "#5b7cff"
+    },
+    "appearance": {
+        "default": "dark"
+    },
+    "icons": { "library": "lucide" },
+    "assistant": { "enabled": true, "supportEmail": "tommy@holocron.so" },
+    "knownPaths": ["/dashboard", "/login", "/signup"],
+    "redirects": [
+        { "source": "/markdown-editor", "destination": "/", "permanent": true }
+    ],
+    "navbar": {
+        "links": [
+            {
+                "label": "Dashboard",
+                "href": "/dashboard"
+            },
+            {
+                "type": "github",
+                "href": "https://github.com/remorses/holocron"
+            }
+        ],
+        "primary": {
+            "type": "button",
+            "label": "Get Started",
+            "href": "/dashboard"
+        }
+    },
+    "navigation": {
+        "global": {
+            "anchors": [
+                {
+                    "anchor": "GitHub",
+                    "href": "https://github.com/remorses/holocron",
+                    "icon": "github",
+                    "placement": "sidebar"
+                }
+            ]
+        },
+        "tabs": [
+            {
+                "tab": "Docs",
+                "icon": "book-open",
+                "groups": [
+                    {
+                        "group": "Start",
+                        "icon": "sparkles",
+                        "pages": [
+                            "index",
+                            "docs/what-is-holocron",
+                            "docs/quickstart",
+                            "docs/migration",
+                            "docs/mintlify-open-source-alternative"
+                        ]
+                    },
+                    {
+                        "group": "Create",
+                        "icon": "pencil",
+                        "pages": [
+                            "docs/create/pages",
+                            "docs/create/mdx",
+                            "docs/create/code",
+                            "docs/create/images",
+                            "docs/create/local-imports",
+                            "docs/create/diagrams",
+                            "docs/create/redirects",
+                            "docs/create/broken-links"
+                        ]
+                    },
+                    {
+                        "group": "Organize",
+                        "icon": "folder-tree",
+                        "pages": [
+                            "docs/organize/docs-json",
+                            "docs/organize/navigation",
+                            "docs/organize/versions",
+                            "docs/organize/dropdowns",
+                            "docs/organize/hidden-pages",
+                            "docs/organize/imageboard",
+                            "docs/organize/pages-dir"
+                        ]
+                    },
+                    {
+                        "group": "Customize",
+                        "icon": "palette",
+                        "pages": [
+                            "docs/customize/theme",
+                            "docs/customize/fonts",
+                            "docs/customize/icons",
+                            "docs/customize/logo-and-favicon",
+                            "docs/customize/navbar-footer-banner",
+                            "docs/customize/custom-css",
+                            "docs/customize/layout",
+                            "docs/customize/bleed",
+                            "docs/custom-entry",
+                            "docs/spiceflow"
+                        ]
+                    },
+                    {
+                        "group": "API Docs",
+                        "icon": "braces",
+                        "pages": [
+                            "docs/api-docs/openapi",
+                            "docs/api-docs/generated-pages",
+                            "docs/api-docs/request-response-examples",
+                            "docs/api-docs/sdk-examples",
+                            "docs/api-docs/troubleshooting"
+                        ]
+                    },
+                    {
+                        "group": "Changelog",
+                        "icon": "history",
+                        "pages": ["docs/changelog-tab"]
+                    },
+                    {
+                        "group": "MCP",
+                        "icon": "cpu",
+                        "pages": ["docs/mcp-tools", "docs/mcp-export"]
+                    },
+                    {
+                    "group": "AI-Readable Docs",
+                    "icon": "bot",
+                    "pages": [
+                        "docs/ai/markdown-routes",
+                        "docs/ai/llms-txt",
+                        "docs/ai/docs-zip",
+                        "docs/ai/skill-discovery",
+                        "docs/ai/assistant",
+                        "docs/ai/chat-widget"
+                    ]
+                    },
+                    {
+                        "group": "Deploy",
+                        "icon": "cloud-upload",
+                        "pages": [
+                            "docs/deploy/holocron",
+                            "docs/deploy/node",
+                            "docs/deploy/cloudflare",
+                            "docs/deploy/build-output",
+                            "docs/deploy/base-path",
+                            "docs/deploy/multi-tenant"
+                        ]
+                    },
+                    {
+                        "group": "Components",
+                        "icon": "blocks",
+                        "pages": [
+                            "docs/components/index",
+                            "docs/components/accordions",
+                            "docs/components/aside",
+                            "docs/components/badge",
+                            "docs/components/banner",
+                            "docs/components/callouts",
+                            "docs/components/cards",
+                            "docs/components/code-groups",
+                            "docs/components/color",
+                            "docs/components/columns",
+                            "docs/components/examples",
+                            "docs/components/expandables",
+                            "docs/components/faq",
+                            "docs/components/fields",
+                            "docs/components/frames",
+                            "docs/components/icons",
+                            "docs/components/marquee",
+                            "docs/components/mermaid-diagrams",
+                            "docs/components/panel",
+                            "docs/components/prompt",
+                            "docs/components/responses",
+                            "docs/components/steps",
+                            "docs/components/table-of-contents",
+                            "docs/components/tabs",
+                            "docs/components/tiles",
+                            "docs/components/tooltips",
+                            "docs/components/tree",
+                            "docs/components/update",
+                            "docs/components/view",
+                            "docs/components/visibility"
+                        ]
+                    }
+                ]
+            },
+            {
+                "tab": "Maintain",
+                "icon": "book-check",
+                "groups": [
+                    {
+                        "group": "Maintain",
+                        "icon": "file-cog",
+                        "pages": [
+                            "maintain/index",
+                            "maintain/github-actions"
+                        ]
+                    }
+                ]
+            },
+            {
+                "tab": "Pricing",
+                "icon": "dollar-sign",
+                "pages": ["docs/pricing"]
+            },
+            {
+                "tab": "Changelog",
+                "icon": "newspaper",
+                "changelog": "https://github.com/remorses/holocron",
+                "initialContent": "changelog/intro"
+            },
+            {
+                "tab": "API",
+                "icon": "server",
+                "openapi": "openapi.json",
+                "pages": ["docs/api-docs/authentication", "..."]
+            }
+        ]
+    }
+}

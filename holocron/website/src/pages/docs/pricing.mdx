@@ -1,0 +1,81 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the pricing page from @/website/src/lib/credits.ts, @/website/src/deploy-api.ts, and @/website/src/maintain-api.ts.
+  Explain the Free and Pro plans, monthly and yearly prices, AI credits, deployments, custom domains, subpath hosting, and Holocron Maintain.
+title: Pricing
+description: Holocron is free to try and $99/month per site for the full AI assistant and unlimited preview deployments.
+icon: credit-card
+---
+
+# Pricing
+
+Holocron is **free to start**. Create a site, write your docs, and get a built-in **AI chat assistant** out of the box. When you need the full model and unlimited preview deployments, **Holocron Pro** has you covered. [Subscribe from your dashboard](/dashboard).
+
+## Plans
+
+<Aside>
+<Info>
+Subscriptions are **per site**. You only pay for sites you actively maintain.
+</Info>
+</Aside>
+
+|                                 | **Free**           | **Pro**                             |
+| ------------------------------- | ------------------ | ----------------------------------- |
+| Hosted AI chat                  | Trial only         | Full model, 50,000 credits / month  |
+| Holocron Maintain               | —                  | Source-aware documentation updates  |
+| Preview deployments             | 1 trial deployment | Unlimited, every branch and PR      |
+| Custom domains                  | —                  | Point your own domain at your docs  |
+| Subpath hosting (`--base-path`) | —                  | Host docs at `/docs` on your domain |
+| Analytics                       | —                  | Coming soon                         |
+| Price                           | $0                 | **$99 / month**                     |
+
+The **yearly plan** is **$990 / year**, two months free compared to paying monthly.
+
+## What Pro unlocks
+
+### Full AI chat assistant
+
+The built-in **AI assistant** answers questions about your docs using your content. Free sites include a trial so you can see the chat in action, but it uses a temporary model and shows an upgrade notice. **Pro** sites get the full model with no notice and **50,000 credits per month**. Credits are tracked per site, so one project hitting its limit never affects another.
+
+### Holocron Maintain
+
+**Holocron Maintain** reruns versioned page generation prompts when their referenced source files change. It can also run scheduled grammar, SEO, link, translation, and style reviews. GitHub Actions authenticates through OIDC, so CI workflows do not store a Holocron key.
+
+### Unlimited preview deployments
+
+On the **Free** plan you get a single trial deployment so you can see your site live. **Pro** removes the limit: every push to your default branch publishes a new version, and every branch or pull request gets its **own unique deployment URL** via GitHub Actions OIDC. Review docs changes in context before they reach production, the same way you review code.
+
+<Aside>
+<Tip>
+Deployments are authenticated via **GitHub Actions OIDC**, no API keys needed for CI.
+</Tip>
+</Aside>
+
+### Custom domains
+
+Serve your docs on **your own domain** like `docs.mycompany.com`. Add a CNAME record pointing to `cname.holocron.so`, register the domain in your dashboard settings, and Holocron handles SSL certificates automatically. Custom domains work alongside subpath hosting, so you can choose the URL structure that fits your brand.
+
+### Subpath hosting
+
+Deploy your docs at a **subpath on your own domain**, like `yoursite.com/docs`, instead of a separate subdomain. Google indexes the content under your main domain, which strengthens your site's overall SEO authority. Users stay on one domain with a seamless experience, and you keep full control over the URL structure.
+
+Deploy with a single flag:
+
+```bash
+npx -y "@holocron.so/cli" deploy --base-path /docs
+```
+
+Then add a [reverse proxy or rewrite](/docs/deploy/base-path) in your framework to forward `/docs/*` to the deployed URL. Guides are available for Next.js, Vercel, Cloudflare Workers, Nginx, and Express.
+
+## Subscribe
+
+Manage billing from the **Billing** tab of your project in the dashboard. Pick monthly or yearly, and switch or cancel any time through the Stripe billing portal.
+
+<Aside>
+<Note>
+Billing runs on **Stripe**. Update payment, download invoices, or cancel any time.
+</Note>
+</Aside>
+
+[Open the dashboard](/dashboard) to subscribe.

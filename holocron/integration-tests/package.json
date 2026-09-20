@@ -1,0 +1,36 @@
+{
+  "name": "integration-tests",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "fixtures:list": "tsx scripts/run-fixture.ts list",
+    "fixtures:dev": "tsx scripts/run-fixture.ts dev",
+    "fixtures:build": "tsx scripts/run-fixture.ts build",
+    "fixtures:start": "tsx scripts/run-fixture.ts start",
+    "update-realworld-polar": "tsx scripts/update-realworld-polar.ts",
+    "test-e2e": "playwright test",
+    "test-e2e-start": "tsx scripts/test-e2e-start.ts",
+    "test-deploy-preview": "pnpm --dir ../vite build && playwright test -c playwright.deploy-preview.config.ts"
+  },
+  "dependencies": {
+    "@cloudflare/vite-plugin": "^1.32.2",
+    "@holocron.so/vite": "workspace:^",
+    "@tailwindcss/vite": "^4.2.2",
+    "@types/node": "^25.9.2",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "ai": "^6.0.149",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "spiceflow": "1.26.0-rsc.18",
+    "tailwindcss": "^4.2.2",
+    "vite": "^8.1.4",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@ai-sdk/openai": "^4.0.8",
+    "@playwright/test": "^1.60.0",
+    "fflate": "^0.8.2",
+    "rollup-plugin-visualizer": "^7.0.1"
+  }
+}

@@ -1,0 +1,199 @@
+'use client'
+
+/**
+ * Chat input components extracted for reuse in both the holocron sidebar
+ * widget and the standalone ChatWidget.
+ *
+ * - ChatInput: textarea + send/stop button
+ * - NavTooltip: portal-based tooltip (used by chat message footer)
+ * - hideChildrenForSnapshot: helper for view transition snapshots
+ */
+
+import React, { useState, useEffect, useRef } from 'react'
+import { createPortal } from 'react-dom'
+import {
+  InfoCircleIcon,
+  ArrowUpIcon,
+  StopSquareIcon,
+} from './chat-icons.tsx'
+import { chatWidgetStore } from './chat-widget-store.ts'
+import { cn } from '../lib/css-vars.ts'
+
+// ── Reusable chat input (textarea + send/stop button) ────────────────
+//
+// Used by SidebarAssistant (in the right aside) and by the ChatDrawer
+// footer. Same visual: bg-background rounded card with textarea and
+// arrow-up send button that toggles to a square stop button during
+// generation.
+
+export type ChatInputProps = {
+  value: string
+  onChange: (value: string) => void
+  onSubmit: () => void
+  onStop?: () => void
+  onFocus?: () => void
+  isGenerating?: boolean
+  placeholder?: string
+  disabled?: boolean
+  autoFocus?: boolean
+  className?: string
+  textClassName?: string
+  textareaRef?: React.RefObject<HTMLTextAreaElement | null>
+}
+
+export function ChatInput({
+  value,
+  onChange,
+  onSubmit,
+  onStop,
+  onFocus,
+  isGenerating,
+  placeholder = 'How can I help?',
+  disabled,
+  autoFocus,
+  className,
+  textClassName,
+  textareaRef,
+}: ChatInputProps) {
+  const localRef = useRef<HTMLTextAreaElement>(null)
+  const inputRef = textareaRef || localRef
+
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === 'Enter' && !e.shiftKey) {
+      e.preventDefault()
+      if (isGenerating) {
+        onStop?.()
+      } else if (value.trim()) {
+        onSubmit()
+      }
+    }
+  }
+
+  const handleButtonClick = () => {
+    if (isGenerating) {
+      onStop?.()
+    } else {
+      onSubmit()
+    }
+  }
+
+  return (
+    // rounded-xl is a fallback; parents that nest this card inside a tinted
+    // frame pass a concentric radius via className (outer radius − gap) so
+    // the frame ring keeps uniform thickness around the corners.
+    <div className={cn('bg-background rounded-xl p-2 flex flex-col gap-1.5', className)}>
+      <textarea
+        ref={inputRef}
+        value={value}
+        onChange={(e) => onChange(e.target.value)}
+        onKeyDown={handleKeyDown}
+        onFocus={onFocus}
+        placeholder={placeholder}
+        disabled={disabled}
+        autoFocus={autoFocus}
+        rows={1}
+        className={`w-full resize-none border-0 bg-transparent leading-5 text-foreground placeholder:text-muted-foreground/75 outline-none [field-sizing:content] min-h-5 max-h-40 ${textClassName || 'text-sm'}`}
+      />
+      <div className='flex items-center justify-end' onClick={() => inputRef.current?.focus()}>
+        {isGenerating ? (
+          <button
+            type='button'
+            onClick={handleButtonClick}
+            className='flex items-center justify-center size-7 rounded-full transition-colors bg-muted text-muted-foreground'
+            aria-label='Stop generating'
+          >
+            <StopSquareIcon />
+          </button>
+        ) : (
+          <button
+            type='button'
+            onClick={handleButtonClick}
+            disabled={disabled || !value.trim()}
+            className={`flex items-center justify-center size-7 rounded-full transition-colors ${
+              value.trim()
+                ? 'bg-primary text-primary-foreground'
+                : 'bg-muted text-muted-foreground'
+            }`}
+            aria-label='Send message'
+          >
+            <ArrowUpIcon size={13} />
+          </button>
+        )}
+      </div>
+    </div>
+  )
+}
+
+// ── View transition snapshot helper ──────────────────────────────────
+
+/** Hide children so the VT snapshot is a solid-color rectangle. */
+export function hideChildrenForSnapshot(el: HTMLElement | null): (() => void) | void {
+  if (!el) return
+  const children = Array.from(el.children) as HTMLElement[]
+  for (const child of children) child.style.visibility = 'hidden'
+  return () => {
+    for (const child of children) child.style.visibility = ''
+  }
+}
+
+// ── NavTooltip ───────────────────────────────────────────────────────
+//
+// Portal-based tooltip used in chat message footers (copy/regenerate).
+// Portals into chatWidgetStore.portalTarget so the tooltip stays inside
+// the scoped CSS container (critical for the standalone ChatWidget where
+// holocron's Tailwind classes aren't available on document.body).
+// All positioning uses inline styles to avoid CSS scope issues.
+
+export function NavTooltip({ label, children, position = 'above', portalTarget }: { label: string; children: React.ReactNode; position?: 'above' | 'below'; portalTarget?: HTMLElement | null }) {
+  const [open, setOpen] = useState(false)
+  const triggerRef = useRef<HTMLSpanElement>(null)
+  const [pos, setPos] = useState({ top: 0, left: 0 })
+
+  useEffect(() => {
+    if (!open || !triggerRef.current) return
+    const rect = triggerRef.current.getBoundingClientRect()
+    setPos({
+      top: position === 'below'
+        ? rect.bottom + 6
+        : rect.top - 6,
+      left: rect.left + rect.width / 2,
+    })
+  }, [open, position])
+
+  const target = portalTarget ?? chatWidgetStore.getState().portalTarget ?? (typeof document !== 'undefined' ? document.body : null)
+
+  return (
+    <span
+      ref={triggerRef}
+      style={{ display: 'inline-flex' }}
+      onMouseEnter={() => setOpen(true)}
+      onMouseLeave={() => setOpen(false)}
+    >
+      {children}
+      {open && target && createPortal(
+        <span
+          role='tooltip'
+          style={{
+            position: 'fixed',
+            top: pos.top,
+            left: pos.left,
+            transform: `translateX(-50%)${position === 'above' ? ' translateY(-100%)' : ''}`,
+            whiteSpace: 'nowrap',
+            borderRadius: '6px',
+            border: '1px solid var(--border-subtle, var(--border))',
+            backgroundColor: 'var(--card, #fff)',
+            padding: '2px 8px',
+            fontSize: '11px',
+            color: 'var(--foreground)',
+            boxShadow: '0 1px 3px rgb(0 0 0 / 0.1), 0 1px 2px rgb(0 0 0 / 0.06)',
+            pointerEvents: 'none',
+            zIndex: 300,
+          }}
+        >
+          {label}
+        </span>,
+        target,
+      )}
+    </span>
+  )
+}

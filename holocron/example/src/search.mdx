@@ -1,0 +1,24 @@
+---
+title: Search
+description: Search across the sidebar tree and current page structure.
+---
+
+## Sidebar search
+
+The sidebar search indexes the rendered navigation tree rather than a separate bespoke search structure. That keeps filtering, expansion, and highlighting in sync.
+
+## Search behavior
+
+Matching pages and headings stay visible. Parent groups stay open so you can see where a hit lives. Sibling pages and sibling headings are hidden, so the filtered tree stays short.
+
+Words longer than 3 characters in the query are highlighted in matching titles and headings.
+
+When search is active, **Search with AI chat** sits at the top of the sidebar so you can send the query to the assistant without scrolling.
+
+## Keyboard support
+
+Arrow keys move through search results and `Enter` jumps to the highlighted item. Escape clears the current search query.
+
+## Group dimming
+
+Top-level group labels should dim too when an entire section has no visible matches, so the whole sidebar reflects the same search state.

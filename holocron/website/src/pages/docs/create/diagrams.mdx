@@ -1,0 +1,74 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the diagrams guide from @/cli/src/diagram-fix.ts.
+  Cover diagram fences and holocron diagrams fix.
+title: Diagrams
+description: Unicode box-drawing diagrams and the alignment fixer CLI.
+icon: box
+---
+
+# Diagrams
+
+Holocron renders fenced code blocks with the `diagram` language hint using special styling. Unicode box-drawing characters and arrows get syntax-colored differently from labels.
+
+````mdx
+```diagram
+┌───────────────┐          ┌───────────────┐
+│   Browser     │────────> │   Server      │
+└───────────────┘          └───────────────┘
+```
+````
+
+## Box-drawing characters
+
+Use Unicode box-drawing characters instead of ASCII `|`, `-`, `+`. They fill the entire terminal cell and render with no visual gaps.
+
+| ASCII | Unicode | Name            |
+| ----- | ------- | --------------- |
+| `\|`  | `│`     | Vertical line   |
+| `--`  | `──`    | Horizontal line |
+| `+`   | `┌┐└┘`  | Corners         |
+| `+`   | `├┤┬┴┼` | Junctions       |
+
+All four styles are supported: **light** (`┌─┐│`), **heavy** (`┏━┓┃`), **double** (`╔═╗║`), and **rounded** (`╭─╮╰─╯`).
+
+## Layout guidelines
+
+- Diagrams should cover the **full width of the content column**, roughly **94 characters**.
+- Never exceed 94 characters per line.
+- Use **directional arrows** (`>`, `<`, `v`, `^`, `>`, `<`) on all connections. Never use plain lines without arrowheads.
+- Mix plain text labels with boxes. Not everything needs to be inside a box.
+
+## Fixing alignment with the CLI
+
+LLMs frequently produce diagrams where vertical bars, corners, and bottom borders are misaligned by a few characters. The Holocron CLI includes a fixer that detects and repairs these issues automatically.
+
+```bash
+# Fix diagrams in a file (writes in-place)
+npx -y "@holocron.so/cli" diagrams fix docs/architecture.mdx
+
+# Preview changes without writing
+npx -y "@holocron.so/cli" diagrams fix docs/architecture.mdx --dry-run
+
+# Validate only (exits 1 if issues found)
+npx -y "@holocron.so/cli" diagrams fix docs/architecture.mdx --check
+
+# Custom max width (default: 94)
+npx -y "@holocron.so/cli" diagrams fix docs/architecture.mdx --max-width 120
+```
+
+The fixer processes only diagram content inside fenced code blocks. Prose text is never modified.
+
+### What it fixes
+
+- **Right border padding**: content lines where `│` is at the wrong column
+- **Bottom border width**: `└─┘` that doesn't match the top `┌─┐`
+- **Horizontal dividers**: `├────┤` padded with `─` instead of spaces
+- **Cross junctions**: `┼`, `╬`, `╋` preserved when rebuilding dividers
+- **Side-by-side boxes**: fixes one box without shifting adjacent boxes on the same row
+- **Nested boxes**: inner boxes fixed independently from outer boxes
+
+### What it reports (but cannot auto-fix)
+
+Lines exceeding the max width limit. These require manually shortening content. The CLI prints the line number and current width so you know exactly what to fix.

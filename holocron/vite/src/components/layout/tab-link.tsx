@@ -1,0 +1,68 @@
+'use client'
+
+/**
+ * TabLink — single tab rendered in the tab bar. Active tab gets a 2px
+ * bottom indicator (2px) + faux bold via text-shadow. Used by EditorialPage.
+ */
+
+import React from 'react'
+import { Link } from '../link.tsx'
+import type { TabItem } from '../../site-data.ts'
+import { Icon, resolveIconColor } from '../icon.tsx'
+
+export function TabLink({ tab, isActive }: { tab: TabItem; isActive: boolean }) {
+  const isExternal = tab.href.startsWith('http')
+  const tabClassName = 'slot-tab no-underline inline-flex items-center gap-1.5 font-[475] [font-family:var(--font-sans)] transition-colors duration-150'
+  const tabStyle = {
+    color: isActive ? 'var(--foreground)' : 'var(--muted-foreground)',
+  }
+  const handleMouseEnter = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!isActive) {
+      e.currentTarget.style.color = 'var(--foreground)'
+      const indicator = e.currentTarget.querySelector<HTMLElement>('[data-tab-indicator]')
+      if (indicator) {
+        indicator.style.backgroundColor = 'var(--muted-foreground)'
+      }
+    }
+  }
+  const handleMouseLeave = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (!isActive) {
+      e.currentTarget.style.color = 'var(--muted-foreground)'
+      const indicator = e.currentTarget.querySelector<HTMLElement>('[data-tab-indicator]')
+      if (indicator) {
+        indicator.style.backgroundColor = 'transparent'
+      }
+    }
+  }
+  const indicator = (
+    <div
+      data-tab-indicator
+      style={{
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        width: '100%',
+        height: '2px',
+        backgroundColor: isActive ? 'var(--foreground)' : 'transparent',
+        borderRadius: '1px',
+        transition: 'background-color 0.15s ease',
+      }}
+    />
+  )
+
+  return (
+    <Link
+      href={tab.href}
+      {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+      className={tabClassName}
+      style={tabStyle}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
+      <Icon icon={tab.icon} size={14} color={resolveIconColor(tab.iconColor)} />
+      {tab.label}
+      {isExternal && <span className='opacity-50'>↗</span>}
+      {indicator}
+    </Link>
+  )
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Update Fixture",
+  "icons": { "library": "lucide" },
+  "colors": {
+    "primary": "#0969da"
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Changelog",
+        "pages": [
+          "index"
+        ]
+      }
+    ]
+  }
+}

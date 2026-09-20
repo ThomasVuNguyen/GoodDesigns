@@ -1,0 +1,45 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the Visibility docs from @/vite/src/components/markdown/visibility.tsx.
+title: Visibility
+description: Show different content to humans on the web and AI agents in markdown output.
+icon: eye
+---
+
+# Visibility
+
+Show different content to humans reading your docs site versus AI agents processing markdown output (`.md` URLs and `docs.zip`).
+
+Content marked `for="humans"` renders on the web page but is stripped from agent markdown. Content marked `for="agents"` is hidden on the page but included in agent markdown.
+
+## Example
+
+```mdx
+<Visibility for="humans">
+Click the **Get started** button in the top-right corner to create your account.
+</Visibility>
+
+<Visibility for="agents">
+To create an account, call `POST /v1/accounts` with a valid email address.
+</Visibility>
+```
+
+On your published site, the first block renders and the second is hidden. When an AI agent fetches the `.md` version of the page, the opposite applies.
+
+## Props
+
+<ResponseField name="for" type='"humans" | "agents"'>
+Which audience sees the content. Defaults to `"humans"` if omitted.
+</ResponseField>
+
+## How it works
+
+Holocron already serves every page as raw markdown at `<page-url>.md` and redirects known AI agents automatically. The `Visibility` component hooks into this:
+
+- **Web rendering**: `for="agents"` returns nothing, `for="humans"` (or no prop) renders children normally.
+- **Markdown output**: `for="humans"` blocks are stripped, `for="agents"` blocks are unwrapped so only their inner content remains.
+
+<Tip>
+Use this to give AI agents API-oriented instructions (endpoints, code snippets) while showing humans UI-oriented instructions (screenshots, button locations).
+</Tip>

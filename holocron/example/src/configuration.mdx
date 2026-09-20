@@ -1,0 +1,202 @@
+---
+title: Configuration
+description: Configure Holocron with Mintlify-compatible `docs.json`.
+icon: settings
+iconColor: purple
+---
+
+<Aside full>
+  <TableOfContentsPanel />
+</Aside>
+
+## Supported config files
+
+Holocron examples use `docs.json` by default. `docs.jsonc` and `holocron.jsonc` are also supported when you want comments or trailing commas. Place the config file in your project root alongside `vite.config.ts`.
+
+### docs.json
+
+For teams migrating from Mintlify, Holocron reads `docs.json` directly. No conversion step needed; just drop in the plugin and your existing config works.
+
+```json
+{
+  "name": "My Docs",
+  "colors": { "primary": "#6366f1" }
+}
+```
+
+### docs.jsonc
+
+If you want comments inside the config file, Holocron also supports `docs.jsonc`. JSONC allows `//` and `/* */` comments without changing the schema.
+
+```json
+{
+  "name": "My Docs",
+  // Brand color used for links and accents
+  "colors": { "primary": "#6366f1" }
+}
+```
+
+## Navigation
+
+The `navigation` field defines the sidebar structure. It accepts an array of groups, each containing pages and optional nested groups.
+
+### Tabs
+
+Tabs appear in the top bar below the logo. Each tab switches the sidebar to a different set of groups.
+
+```json
+{
+  "navigation": [
+    {
+      "tab": "Guides",
+      "groups": [
+        {
+          "group": "Getting Started",
+          "pages": ["introduction", "quickstart"]
+        }
+      ]
+    },
+    {
+      "tab": "API Reference",
+      "groups": [
+        {
+          "group": "Endpoints",
+          "pages": ["api/users", "api/teams"]
+        }
+      ]
+    }
+  ]
+}
+```
+
+### Groups and pages
+
+Groups are collapsible sections in the sidebar. Pages are MDX files referenced by their slug (file path without extension).
+
+```json
+{
+  "group": "Authentication",
+  "pages": [
+    "auth/overview",
+    "auth/oauth",
+    "auth/api-keys",
+    {
+      "group": "Providers",
+      "pages": ["auth/github", "auth/google"]
+    }
+  ]
+}
+```
+
+### Anchors
+
+Anchors are external links that appear as tabs. Use them for GitHub, changelog, or community links.
+
+```json
+{
+  "navigation": {
+    "anchors": [
+      { "anchor": "GitHub", "href": "https://github.com/example/docs" },
+      { "anchor": "Discord", "href": "https://discord.gg/example" }
+    ]
+  }
+}
+```
+
+## Appearance
+
+### Logo
+
+Specify separate logos for light and dark themes. The logo appears in the top-left corner of the navbar.
+
+```json
+{
+  "logo": {
+    "light": "/logo-light.svg",
+    "dark": "/logo-dark.svg"
+  }
+}
+```
+
+A string shorthand sets the same logo for both themes:
+
+```json
+{
+  "logo": "/logo.svg"
+}
+```
+
+### Colors
+
+The `colors` object controls the primary accent color used for links, active states, and branded elements.
+
+```json
+{
+  "colors": {
+    "primary": "#6366f1",
+    "light": "#818cf8",
+    "dark": "#4f46e5"
+  }
+}
+```
+
+### Favicon
+
+```json
+{
+  "favicon": "/favicon.svg"
+}
+```
+
+## Redirects
+
+Redirects map old paths to new ones. Useful when restructuring your docs without breaking existing links.
+
+```json
+{
+  "redirects": [
+    { "source": "/old-page", "destination": "/new-page" },
+    { "source": "/guides/:slug", "destination": "/docs/:slug" }
+  ]
+}
+```
+
+## Footer
+
+### Social links
+
+Add social links to the footer. Holocron recognizes common platforms and renders appropriate icons.
+
+```json
+{
+  "footer": {
+    "socials": {
+      "github": "https://github.com/example",
+      "twitter": "https://twitter.com/example",
+      "discord": "https://discord.gg/example"
+    }
+  }
+}
+```
+
+## Normalization
+
+Holocron normalizes the schema into a predictable internal shape so the rest of the app does not have to branch across all the input unions from Mintlify's schema.
+
+### What gets normalized
+
+- **`logo`** — string shorthand expanded to `{ light, dark }` object
+- **`favicon`** — string shorthand expanded to `{ light, dark }` object
+- **`navigation`** — flat array wrapped into a default tab if no tabs are defined
+- **`colors`** — missing `light` / `dark` variants derived from `primary`
+
+### Schema validation
+
+The published JSON Schema for `docs.json`, `docs.jsonc`, and `holocron.jsonc` is available on unpkg. You can reference that URL in your editor for autocompletion:
+
+```json
+{
+  "$schema": "https://holocron.so/docs.json",
+  "name": "My Docs"
+}
+```

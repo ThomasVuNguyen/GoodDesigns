@@ -1,0 +1,556 @@
+'use client'
+
+/**
+ * Chat message UI components — user bubbles, assistant parts, tool call
+ * indicators with animated PieLoader, error previews, and loading dots.
+ *
+ * Text parts carry server-rendered JSX (no client markdown rendering).
+ * Tool parts carry plain data — rendered here with animated indicators.
+ *
+ * Follows fumabase / Claude Code tool-call chrome:
+ * - PieLoader (◔◑◕●) for pending tool calls
+ * - └ for completed tool calls (summary label only, no raw output)
+ * - └ gutter for tool errors
+ * - font-mono ToolPreviewContainer wrapper
+ *
+ * Tool call labels prefer the model-provided `description` input field
+ * (every tool schema injects one). Tools without a description fall back
+ * to the Claude-style `toolName(primary-arg)` title instead of raw JSON.
+ * All tool UI uses monospace font consistently.
+ */
+
+import React, { useState, useEffect, useMemo, useCallback } from 'react'
+import { cn } from '../lib/css-vars.ts'
+import type { ChatMessage, ChatPart } from './chat-store.ts'
+import { respondToApproval } from './chat-store.ts'
+import { ArrowRightIcon, CopyIcon, CheckIcon, RefreshIcon, HolocronLogo } from './chat-icons.tsx'
+import { NavTooltip } from './chat-input.tsx'
+import { Link } from '../components/link.tsx'
+
+// ── User message ─────────────────────────────────────────────────────
+
+function ChatUserMessage({ text }: { text: string }) {
+  return (
+    <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+      <div
+        style={{
+          maxWidth: '85%',
+          padding: '8px 14px',
+          borderRadius: '16px 16px 4px 16px',
+          backgroundColor: 'var(--muted)',
+          color: 'var(--foreground)',
+          lineHeight: '1.5',
+          whiteSpace: 'pre-wrap',
+          wordBreak: 'break-word',
+        }}
+      >
+        {text}
+      </div>
+    </div>
+  )
+}
+
+// ── Messages (AI SDK-like role + parts shape) ────────────────────────
+
+export function ChatMessages({
+  messages,
+  isGenerating,
+  onRegenerate,
+}: {
+  messages: ChatMessage[]
+  isGenerating?: boolean
+  onRegenerate?: (messageIndex: number) => void
+}) {
+  if (messages.length === 0) return null
+  // Standing content (`display: 'once'`, e.g. the Holocron promotion) is
+  // re-sent on every turn and render only the first time. Everything else —
+  // rate limits, credit limits, errors — is a per-turn outcome and must render
+  // every time, otherwise that turn looks like it silently hung.
+  const seenNoticeCodes = new Set<string>()
+  return (
+    <div className='flex flex-col gap-4 text-[14px]'>
+      {messages.map((message, i) => {
+        return (
+          <div key={i} data-message-id={`msg-${i}`} style={message.role === 'user' ? { scrollMarginTop: '8px' } : undefined}>
+            {message.role === 'user'
+              ? <ChatUserMessage text={message.parts.filter((part) => part.type === 'text').map((part) => part.text).join('\n')} />
+              : (
+                  <AssistantMessage
+                    parts={message.parts}
+                    isStreaming={!!(isGenerating && i === messages.length - 1)}
+                    onRegenerate={onRegenerate ? () => onRegenerate(i) : undefined}
+                    seenNoticeCodes={seenNoticeCodes}
+                  />
+                )}
+          </div>
+        )
+      })}
+    </div>
+  )
+}
+
+// ── Assistant message footer (copy + regenerate) ─────────────────────
+
+function ChatAssistantFooter({
+  parts,
+  onRegenerate,
+}: {
+  parts: ChatPart[]
+  onRegenerate?: () => void
+}) {
+  const [copied, setCopied] = useState(false)
+
+  const markdown = useMemo(
+    () =>
+      parts
+        .filter((part) => part.type === 'text')
+        .map((part) => part.text)
+        .join('\n')
+        .trim(),
+    [parts],
+  )
+
+  const handleCopy = useCallback(async () => {
+    if (!markdown) return
+    try {
+      await navigator.clipboard.writeText(markdown)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch (err) {
+      console.error('Failed to copy message:', err)
+    }
+  }, [markdown])
+
+  const buttonClass =
+    'inline-flex items-center justify-center size-7 rounded-md text-muted-foreground transition-colors hover:text-foreground hover:bg-accent cursor-pointer'
+
+  return (
+    <div className='flex items-center gap-1 -ml-1.5'>
+      <NavTooltip label={copied ? 'Copied' : 'Copy'}>
+        <button type='button' onClick={handleCopy} className={buttonClass} aria-label='Copy message'>
+          {copied ? <CheckIcon /> : <CopyIcon />}
+        </button>
+      </NavTooltip>
+      {onRegenerate && (
+        <NavTooltip label='Regenerate'>
+          <button type='button' onClick={onRegenerate} className={buttonClass} aria-label='Regenerate response'>
+            <RefreshIcon />
+          </button>
+        </NavTooltip>
+      )}
+    </div>
+  )
+}
+
+function AssistantMessage({
+  parts,
+  isStreaming,
+  onRegenerate,
+  seenNoticeCodes,
+}: {
+  parts: ChatPart[]
+  isStreaming: boolean
+  onRegenerate?: () => void
+  seenNoticeCodes: Set<string>
+}) {
+  const { content, promotions } = splitAssistantParts(parts, seenNoticeCodes)
+  return (
+    <div className='flex flex-col gap-4'>
+      {promotions.map(({ part, index }) => (
+        <ChatPromotion key={index} part={part} />
+      ))}
+      {groupContentParts(content).map((group, groupIndex) =>
+        group.kind === 'tools' ? (
+          <div key={`tools-${groupIndex}`} className='flex flex-col gap-0.5'>
+            {group.items.map(({ part, index }) => (
+              <ChatPartRenderer key={index} part={part} allParts={parts} />
+            ))}
+          </div>
+        ) : (
+          <ChatPartRenderer key={`part-${group.item.index}`} part={group.item.part} allParts={parts} />
+        ),
+      )}
+      {!isStreaming && content.length > 0 && (
+        <ChatAssistantFooter parts={parts} onRegenerate={onRegenerate} />
+      )}
+    </div>
+  )
+}
+
+function groupContentParts(
+  content: { part: ChatPart; index: number }[],
+): Array<
+  | { kind: 'single'; item: { part: ChatPart; index: number } }
+  | { kind: 'tools'; items: { part: ChatPart; index: number }[] }
+> {
+  const groups: Array<
+    | { kind: 'single'; item: { part: ChatPart; index: number } }
+    | { kind: 'tools'; items: { part: ChatPart; index: number }[] }
+  > = []
+  for (const item of content) {
+    if (item.part.type === 'tool-call' || item.part.type === 'tool-result') {
+      const last = groups[groups.length - 1]
+      if (last?.kind === 'tools') last.items.push(item)
+      else groups.push({ kind: 'tools', items: [item] })
+    } else {
+      groups.push({ kind: 'single', item })
+    }
+  }
+  return groups
+}
+
+function splitAssistantParts(
+  parts: ChatPart[],
+  seenNoticeCodes: Set<string>,
+): {
+  content: { part: ChatPart; index: number }[]
+  promotions: { part: Extract<ChatPart, { type: 'notice' }>; index: number }[]
+} {
+  const content: { part: ChatPart; index: number }[] = []
+  const promotions: { part: Extract<ChatPart, { type: 'notice' }>; index: number }[] = []
+  for (const [index, part] of parts.entries()) {
+    if (part.type === 'notice' && part.display === 'once') {
+      if (seenNoticeCodes.has(part.code)) continue
+      seenNoticeCodes.add(part.code)
+    }
+    if (part.type === 'notice' && part.severity === 'promotion') promotions.push({ part, index })
+    else content.push({ part, index })
+  }
+  return { content, promotions }
+}
+
+function ChatPartRenderer({
+  part,
+  allParts,
+}: {
+  part: ChatPart
+  allParts: ChatPart[]
+}) {
+  if (part.type === 'notice') {
+    return <ChatNotice part={part} />
+  }
+
+  if (part.type === 'text') {
+    return (
+      <div className='no-bleed flex min-w-0 flex-col gap-(--prose-gap) overflow-x-clip overflow-y-visible'>
+        {part.jsx ?? part.text}
+      </div>
+    )
+  }
+
+  if (part.type === 'tool-call') {
+    return <ToolCallStarted part={part} allParts={allParts} />
+  }
+
+  if (part.type === 'tool-result') {
+    return <ToolCallCompleted part={part} />
+  }
+
+  if (part.type === 'tool-approval-request') {
+    return <ToolApprovalRequest part={part} />
+  }
+
+  return null
+}
+
+// ── Tool approval request — Approve/Deny prompt before execution ─────
+
+function ToolApprovalRequest({
+  part,
+}: {
+  part: Extract<ChatPart, { type: 'tool-approval-request' }>
+}) {
+  const resolved = part.state !== 'pending'
+  const buttonClass =
+    'cursor-pointer rounded-md border border-border px-3 py-1 text-xs font-medium transition-colors'
+
+  return (
+    <div
+      data-approval-request={part.toolCallId}
+      data-approval-state={part.state}
+      className='no-bleed flex flex-col gap-2 rounded-lg border border-border bg-foreground/4 p-3'
+    >
+      <div className='text-xs font-semibold text-foreground'>
+        {part.message || 'The assistant wants to perform this action:'}
+      </div>
+      <div className='text-xs text-muted-foreground'>{part.description}</div>
+      {resolved ? (
+        <div className='text-xs text-muted-foreground'>
+          {part.state === 'approved' ? '✓ Approved' : '✗ Denied'}
+        </div>
+      ) : (
+        <div className='flex gap-2'>
+          <button
+            type='button'
+            onClick={() => respondToApproval(part.toolCallId, true)}
+            className={`${buttonClass} bg-foreground text-background hover:opacity-85`}
+          >
+            Approve
+          </button>
+          <button
+            type='button'
+            onClick={() => respondToApproval(part.toolCallId, false)}
+            className={`${buttonClass} text-foreground hover:bg-accent`}
+          >
+            Deny
+          </button>
+        </div>
+      )}
+    </div>
+  )
+}
+
+function ChatPromotion({
+  part,
+}: {
+  part: Extract<ChatPart, { type: 'notice' }>
+}) {
+  return (
+    <div
+      data-notice-code={part.code}
+      data-notice-severity='promotion'
+      className='no-bleed flex flex-col gap-3 rounded-lg bg-primary/5 px-3.5 py-3 text-foreground'
+    >
+      <div className='flex min-w-0 flex-col gap-4'>
+        <HolocronLogo className='h-[18px] w-auto shrink-0' />
+        <div className='min-w-0 text-[13px] font-medium leading-snug text-pretty'>
+          {part.title}
+        </div>
+      </div>
+      <div className='flex min-w-0 flex-col gap-2.5'>
+        {part.cta && (
+          <Link
+            href={part.cta.href}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='inline-flex w-fit items-center gap-1 text-xs font-medium text-primary no-underline hover:underline'
+          >
+            {part.cta.label}
+            <ArrowRightIcon />
+          </Link>
+        )}
+
+        {part.ownerNote && (
+          <div className='border-t border-primary/10 pt-2 text-[11px] leading-snug text-muted-foreground'>
+            <span>{part.ownerNote.text} </span>
+            <Link
+              href={part.ownerNote.href}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='underline decoration-foreground/20 underline-offset-2 transition-colors duration-150 ease-out hover:text-foreground'
+            >
+              {part.ownerNote.linkLabel}
+            </Link>
+          </div>
+        )}
+      </div>
+    </div>
+  )
+}
+
+function ChatNotice({ part }: { part: Extract<ChatPart, { type: 'notice' }> }) {
+  const isError = part.severity === 'error'
+  return (
+    <div
+      data-notice-code={part.code}
+      data-notice-severity={part.severity ?? 'info'}
+      className={cn(
+        'no-bleed flex items-start gap-2.5 rounded-lg p-2 text-foreground',
+        isError
+          ? 'bg-[color-mix(in_srgb,var(--background)_92%,var(--red))]'
+          : 'bg-[color-mix(in_srgb,var(--background)_93%,var(--yellow))]',
+      )}
+    >
+      <svg viewBox='0 0 16 16' width='16' height='16' fill='currentColor' aria-hidden='true' className={cn('mt-0.5 size-4 shrink-0', isError ? 'text-red' : 'text-yellow')}>
+        <path d='M6.457 1.047c.659-1.234 2.427-1.234 3.086 0l6.082 11.378A1.75 1.75 0 0 1 14.082 15H1.918a1.75 1.75 0 0 1-1.543-2.575L6.457 1.047ZM8 5a.75.75 0 0 0-.75.75v2.5a.75.75 0 0 0 1.5 0v-2.5A.75.75 0 0 0 8 5Zm1 7a1 1 0 1 0-2 0 1 1 0 0 0 2 0Z' />
+      </svg>
+      <div className='flex min-w-0 flex-1 flex-col gap-1.5'>
+        <div className='flex flex-col gap-0.5'>
+          <div className='text-xs font-semibold text-foreground'>
+            {part.title}
+          </div>
+          <div className='text-xs leading-[1.45] text-muted-foreground'>
+            {part.message}
+          </div>
+        </div>
+
+        {part.command && (
+          <code className='code-font-size block whitespace-pre-wrap rounded-md bg-foreground/6 px-2 py-1.5 font-mono text-foreground'>
+            {part.command}
+          </code>
+        )}
+      </div>
+    </div>
+  )
+}
+
+// ── Tool call started — animated PieLoader or static └ ──────────────
+
+/** Pick the primary argument to display for a tool call: the command for
+ *  bash, path/selector for browser tools, first string value otherwise. */
+function getToolPrimaryArg(args: Record<string, unknown> | undefined): string {
+  if (!args) return ''
+  for (const key of ['command', 'path', 'selector', 'value', 'text']) {
+    if (typeof args[key] === 'string' && args[key]) return args[key]
+  }
+  const firstString = Object.entries(args).find(
+    ([key, value]) => key !== 'description' && typeof value === 'string' && value,
+  )
+  if (firstString) return firstString[1] as string
+  const rest = Object.fromEntries(
+    Object.entries(args).filter(([key]) => key !== 'description'),
+  )
+  return Object.keys(rest).length > 0 ? JSON.stringify(rest) : ''
+}
+
+function truncate(text: string, max: number): string {
+  return text.length > max ? text.slice(0, max) + '…' : text
+}
+
+/** Claude-style `Tool(primary-arg)` fallback title when the model did not
+ *  provide a human readable description. */
+function formatToolTitle(toolName: string, args: Record<string, unknown> | undefined): string {
+  const primaryArg = getToolPrimaryArg(args)
+  return primaryArg ? `${toolName}(${truncate(primaryArg, 100)})` : `${toolName}()`
+}
+
+function ToolCallStarted({
+  part,
+  allParts,
+}: {
+  part: Extract<ChatPart, { type: 'tool-call' }>
+  allParts: ChatPart[]
+}) {
+  const hasResult = useMemo(
+    () =>
+      allParts.some(
+        (p) =>
+          p.type === 'tool-result' && p.toolCallId === part.toolCallId,
+      ),
+    [allParts, part.toolCallId],
+  )
+
+  // Human readable label: model-provided `description` input field when
+  // available, Claude-style `tool(primary-arg)` fallback otherwise.
+  const description =
+    typeof part.args?.description === 'string' && part.args.description
+      ? part.args.description
+      : ''
+  const label = description || formatToolTitle(part.toolName, part.args)
+
+  return (
+    <div
+      className='flex flex-col'
+      data-tool-call={part.toolName}
+      data-tool-state={hasResult ? 'completed' : 'running'}
+    >
+      <ToolPreviewContainer>
+        <span className='shrink-0 whitespace-pre'>
+          {hasResult ? '└ ' : <PieLoader />}
+        </span>
+        <span className='truncate'>{label}</span>
+      </ToolPreviewContainer>
+    </div>
+  )
+}
+
+// ── Tool call completed — errors only; success stays as the summary label ──
+
+function ToolCallCompleted({
+  part,
+}: {
+  part: Extract<ChatPart, { type: 'tool-result' }>
+}) {
+  if (part.error) {
+    return <ErrorPreview error={part.error} />
+  }
+
+  return null
+}
+
+// ── Shared primitives (mirrors fumabase chat-tool-previews.tsx) ──────
+
+function ToolPreviewContainer({
+  children,
+}: {
+  children: React.ReactNode
+}) {
+  return (
+    <div className='flex min-w-0 w-full items-center font-mono text-[11px] leading-snug text-muted-foreground'>
+      {children}
+    </div>
+  )
+}
+
+function Highlight({ children }: { children: React.ReactNode }) {
+  return (
+    <span className='text-purple-800 dark:text-purple-300'>{children}</span>
+  )
+}
+
+function ErrorPreview({ error }: { error: string }) {
+  const truncated = error.length > 600 ? error.slice(0, 600) + '…' : error
+  return (
+    <ToolPreviewContainer>
+      <div className='flex min-w-0 flex-row gap-2'>
+        <div className='shrink-0'>└</div>
+        <span>
+          Error:{' '}
+          <span className='text-orange-500/80 dark:text-orange-300/80 whitespace-pre-line'>
+            {truncated}
+          </span>
+        </span>
+      </div>
+    </ToolPreviewContainer>
+  )
+}
+
+/** Animated pie loader: ◔ → ◑ → ◕ → ● cycling every 160ms.
+ *  Matches fumabase's PieLoader in chat-tool-previews.tsx. */
+function PieLoader() {
+  const pies = ['◔', '◑', '◕', '●']
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((i) => (i + 1) % pies.length)
+    }, 160)
+    return () => clearInterval(interval)
+  }, [])
+
+  return <span className='inline-block'>{pies[index]} </span>
+}
+
+// ── Loading dots (shown before first part arrives) ───────────────────
+
+export function ChatLoadingDots() {
+  return (
+    <div
+      style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '4px',
+        padding: '8px 0',
+      }}
+    >
+      {[0, 1, 2].map((i) => (
+        <span
+          key={i}
+          style={{
+            width: '5px',
+            height: '5px',
+            borderRadius: '50%',
+            backgroundColor: 'var(--muted-foreground)',
+            animation: `holocron-chat-dot 1.2s ease-in-out ${i * 0.2}s infinite`,
+          }}
+        />
+      ))}
+      <style>{`
+        @keyframes holocron-chat-dot {
+          0%, 80%, 100% { opacity: 0.3; transform: scale(0.8); }
+          40% { opacity: 1; transform: scale(1); }
+        }
+      `}</style>
+    </div>
+  )
+}

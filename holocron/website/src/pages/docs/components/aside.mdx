@@ -1,0 +1,135 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the Aside docs from @/vite/src/components/markdown/markers.tsx and @/vite/src/lib/sidebar-widths.ts.
+  Cover full and width. Show how to match API reference pages with a fixed 460px rail.
+title: Place supporting content in the right sidebar
+sidebarTitle: Aside
+description: Place supporting content in the right sidebar. Set width to match API reference pages.
+icon: panel-right
+---
+
+# Aside
+
+`Aside` is a **positioning marker**. On desktop its children render in the right sidebar. On mobile they stack after the section. The marker itself has **no visual frame**, so wrap visible content in `Note`, `Tip`, `Panel`, or another framed component.
+
+```mdx
+<Aside>
+<Note>
+This note appears in the right sidebar on desktop.
+</Note>
+</Aside>
+```
+
+<Aside>
+<Note>
+This note appears in the right sidebar on desktop.
+</Note>
+</Aside>
+
+## Full height
+
+Use **`full`** so the aside spans every heading after it, until the next `<Aside full>` or the end of the page. Sticky content like a table of contents or API examples should use this.
+
+```mdx
+<Aside full>
+  <TableOfContentsPanel />
+</Aside>
+```
+
+## API reference layout
+
+API pages use a **fixed 460px** right rail. Holocron does that automatically when the aside contains **`RequestExample`** or **`ResponseExample`**. Put them in **`<Aside full>`** so the examples stay sticky while you scroll:
+
+````mdx
+<Aside full>
+<Panel>
+  <RequestExample>
+
+```bash
+curl https://api.example.com/v1/orders \
+  -H "authorization: Bearer $TOKEN"
+```
+
+  </RequestExample>
+
+  <ResponseExample>
+
+```json
+{ "ok": true }
+```
+
+  </ResponseExample>
+</Panel>
+</Aside>
+````
+
+<Aside full>
+
+<Panel>
+  <RequestExample>
+
+```bash
+curl https://api.example.com/v1/orders \
+  -H "authorization: Bearer $TOKEN"
+```
+
+  </RequestExample>
+
+  <ResponseExample>
+
+```json
+{ "ok": true }
+```
+
+  </ResponseExample>
+</Panel>
+
+</Aside>
+
+You do **not** need `width` for that. `RequestExample` and `ResponseExample` already bump `--grid-sidebar-width` to **460px**. The page cap stays **1200px**. Extra viewport width becomes **gap**, not a growing rail.
+
+## Change the right sidebar width
+
+Use **`width`** for an explicit pixel size. The scan takes the **max** across all asides on the page, so one `width={480}` sets the whole right rail:
+
+```mdx
+<Aside width={480}>
+<Note>
+This rail is 480px wide.
+</Note>
+</Aside>
+```
+
+To make an API-style page **wider than 460px**, set `width` on the same aside:
+
+````mdx
+<Aside full width={560}>
+<Panel>
+  <RequestExample>
+
+```bash
+curl https://api.example.com/v1/orders
+```
+
+  </RequestExample>
+</Panel>
+</Aside>
+````
+
+`width="480px"` also works. Percent values like `width="50%"` are ignored.
+
+## Props
+
+<ResponseField name="full" type="boolean">
+  Span every heading after this aside until the next `<Aside full>` or the end of the page.
+</ResponseField>
+
+<ResponseField name="width" type="number">
+  Sidebar width in pixels. The page uses the largest value from `width` and from known components like `RequestExample` (460px).
+</ResponseField>
+
+## Holocron differences
+
+- Mintlify's request and response examples use a fixed sidebar you cannot configure.
+- Holocron lets you set a **fixed** rail with `<Aside width={N}>`. `RequestExample` and `ResponseExample` already use **460px**.

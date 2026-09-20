@@ -1,0 +1,148 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the local imports guide from @/vite/src/lib/remark-inline-imports.ts.
+  Cover relative .md/.mdx inlining and .tsx component imports.
+title: Local Imports
+description: Import custom React components into MDX pages.
+icon: package
+---
+
+# Local Imports
+
+You can import `.tsx`, `.ts`, `.jsx`, `.js`, `.mdx`, or `.md` files directly in your MDX pages. This lets you use custom React components and shared Markdown snippets alongside the built-in MDX components.
+
+## Basic usage
+
+```mdx
+import { PricingTable } from '/components/pricing-table'
+
+# Pricing
+
+<PricingTable />
+```
+
+## Import resolution
+
+Prefer **relative imports** (`./` or `../`) over absolute imports. They are simpler, work
+consistently regardless of `pagesDir`, and match standard JavaScript conventions.
+
+### Relative imports (recommended)
+
+Relative paths resolve from the MDX file's directory:
+
+```mdx
+import { Badge } from '../components/badge'
+import Guide from './snippets/guide.md'
+```
+
+### Absolute imports (starting with `/`)
+
+`/` means the project root. Holocron probes the pages directory first, then the project root:
+
+```mdx
+import { Chart } from '/components/chart'
+```
+
+If your `pagesDir` is `./pages`, this looks for:
+1. `./pages/components/chart.tsx` (pages dir first)
+2. `./components/chart.tsx` (project root fallback)
+
+Absolute imports can be ambiguous when `pagesDir` is set. Prefer relative imports instead.
+
+## Importing a README that renders on GitHub too
+
+A popular pattern is importing a repo `README.md` as the docs index so the **same
+file renders on both GitHub and the Holocron site**. The README links to other
+docs, and those links must work in **both** places.
+
+The rule is simple: **always link to the real target file with a correct relative
+path, ending in `.md` or `.mdx`.** Do not reason about slugs, `pagesDir`, or where
+`/` ends up. Write the link the way you would for GitHub — a relative path to the
+actual file on disk — and Holocron does the rest.
+
+When it inlines the imported file, Holocron **recomputes every relative link to
+be correct relative to the importing page**, then **strips the `.md`/`.mdx`
+extension**. So a link to a real file lands on that file's page automatically.
+
+<Aside>
+<Tip>
+Because Holocron recomputes the path relative to the importing page, the **same**
+relative href works whether the README sits at the repo root and the page lives
+deep under `pagesDir`, or vice versa.
+</Tip>
+</Aside>
+
+### Rules
+
+1. **Link to the real file.** The target must be an actual `.md`/`.mdx` file on
+   disk at the relative path you write. That is what GitHub opens and what
+   Holocron rewrites. Missing file means a GitHub 404 and a Holocron warning.
+2. **Always use a relative path** (`./` or `../`), never absolute. The README
+   renders from different base directories on GitHub and Holocron, so an absolute
+   `/docs/x` or a guessed path breaks in one of them.
+3. **Keep the `.md`/`.mdx` extension.** GitHub needs it to open the file; Holocron
+   strips it so the link resolves to the rendered page.
+4. **The target file must be rendered by a page in the site.** If the file you
+   link to is itself a page (or is imported by one) and that page is in
+   `docs.json`, the link resolves. Otherwise the site 404s — add the page and put
+   it in navigation.
+
+```diagram
+   README.md   [pricing](./docs/pricing.md)   <── correct relative path to a real file
+        │
+        ├───────────────────────> GitHub opens ./docs/pricing.md
+        │
+        v  imported into the index page
+   Holocron recomputes the path ──> strips .md ──> lands on the page rendering pricing
+        │
+        v
+   /docs/pricing   <── resolves as long as a page renders that file and it is in docs.json
+```
+
+## How it works
+
+Import detection is **MDX-driven**, not folder-based. There are no magic `snippets/` or `components/` directories. Any local file can be imported from any location.
+
+At build time, Holocron:
+1. Parses each MDX file to extract import statements
+2. Resolves the imports against the filesystem
+3. Generates a virtual module map so the imports work at render time
+
+At dev time, adding or removing JS/TS importable files triggers HMR automatically. Markdown imports are resolved too, but edits to an MDX page are the most reliable way to refresh newly added Markdown snippets.
+
+## Supported extensions
+
+The following extensions are tried in order: `.tsx`, `.ts`, `.jsx`, `.js`, `.mdx`, `.md`. You do not need to include the extension in the import path.
+
+## Example: shared snippets
+
+A common pattern is a `snippets/` directory for reusable content:
+
+```diagram
+my-docs/
+├── snippets/
+│   └── install-command.tsx
+├── getting-started.mdx
+└── docs.json
+```
+
+```tsx
+// snippets/install-command.tsx
+export function InstallCommand() {
+  return (
+    <div>
+      <div>npm install @holocron.so/vite</div>
+      <div>pnpm add @holocron.so/vite</div>
+    </div>
+  )
+}
+```
+
+```mdx
+import { InstallCommand } from '/snippets/install-command'
+
+# Getting Started
+
+<InstallCommand />
+```

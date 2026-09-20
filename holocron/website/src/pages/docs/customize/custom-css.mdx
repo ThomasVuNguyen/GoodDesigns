@@ -1,0 +1,118 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the custom CSS guide from @/vite/src/vite-plugin.ts and @/vite/src/styles/globals.css.
+  Cover style.css auto-detect and CSS variable overrides.
+title: Custom CSS
+description: Override styles without breaking Holocron's Tailwind setup.
+icon: paintbrush
+---
+
+# Custom CSS
+
+Holocron includes Tailwind CSS automatically. You can add your own styles on top.
+
+## How to load your CSS
+
+### Default Holocron site
+
+Create `style.css` at your project root. Holocron auto-detects the first matching file and imports it after its own styles.
+
+```diagram
+my-docs/
+├── docs.json
+├── style.css
+└── index.mdx
+```
+
+### With custom entry and another filename
+
+If you use a [custom entry](/docs/custom-entry) and your CSS file has a different name, import it in your server file:
+
+```tsx
+// src/server.tsx
+import './style.css'
+```
+
+## Dark mode overrides
+
+Use `@variant dark` inside your CSS instead of Tailwind's `dark:` utility classes:
+
+```css
+/* style.css */
+@reference "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --card: #ffffff;
+  --card-foreground: #0a0a0a;
+
+  @variant dark {
+    --card: #1a1a1a;
+    --card-foreground: #fafafa;
+  }
+}
+```
+
+This keeps dark mode values colocated with their light mode counterparts in CSS variables. Holocron toggles dark mode with the `.dark` class on `<html>`, so any CSS file using `@variant dark` must define the same `@custom-variant dark` directive.
+
+## Responsive overrides
+
+You can also change variables by breakpoint:
+
+```css
+/* style.css */
+:root {
+  --bleed: 16px;
+
+  @variant lg {
+    --bleed: 32px;
+  }
+}
+```
+
+## Do not import Tailwind again
+
+Holocron already adds `@import 'tailwindcss'` internally. If your CSS also imports it, you get duplicate style layers that break layout and cascade order.
+
+Instead, use **`@reference`** to access Tailwind's theme variables, `@apply`, and `@variant` without emitting duplicate styles:
+
+```css
+/* style.css */
+@reference "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --primary: #e11d48;
+  --background: #fafafa;
+
+  @variant dark {
+    --background: #0a0a0a;
+    --primary: #fb7185;
+  }
+}
+```
+
+## Best practices
+
+**Prefer CSS variables over class selectors.** Holocron exposes CSS variables for colors, typography, spacing, code blocks, and layout. Override these in `:root` for clean, stable customization that survives Holocron updates. See [Theme](/docs/customize/theme) for the full list.
+
+```css
+/* Stable — uses documented CSS variables */
+:root {
+  --code-block-background: var(--muted);
+  --code-block-border: 1px solid var(--border-subtle);
+  --weight-heading: 700;
+}
+```
+
+**Avoid targeting internal class names and DOM structure.** Selectors like `.slot-sidebar-left nav > div:first-child > a` or `figure[class~='group/code'] button[aria-label='Copy code']` are coupled to Holocron's internal markup. These will break when Holocron refactors its components; there is no stability guarantee for internal class names, DOM nesting, or aria labels.
+
+If you do need a class-based override as a last resort, keep it isolated and add a comment noting it may break on upgrade:
+
+```css
+/* FRAGILE: targets internal sidebar DOM, may break on Holocron updates */
+.slot-sidebar-left nav a {
+  border-radius: var(--radius-sm);
+}
+```

@@ -1,0 +1,105 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the hidden pages guide from @/vite/src/lib/page-frontmatter.ts and @/vite/src/schema.ts.
+  Cover hidden pages, groups, and tabs.
+title: Hidden Pages
+description: Pages and groups that exist but are not visible in navigation.
+icon: eye-off
+---
+
+# Hidden Pages
+
+Sometimes you need a page to be accessible by URL but invisible in the sidebar. Holocron supports hiding at both the page and group level.
+
+## Hidden pages via frontmatter
+
+Set `hidden: true` in the page's frontmatter:
+
+```mdx
+---
+$schema: https://holocron.so/frontmatter.json
+title: Internal API Reference
+hidden: true
+---
+```
+
+The page is still rendered and accessible at its URL, but it does not appear in the sidebar navigation. Hidden pages are also excluded from the sitemap and emitted with `robots=noindex`.
+
+## Hidden groups
+
+Set `hidden: true` on a group in `docs.json`:
+
+```json
+{
+  "group": "Internal",
+  "hidden": true,
+  "pages": ["internal/debug", "internal/metrics"]
+}
+```
+
+All pages in the group are accessible by URL but the group is hidden from the sidebar.
+
+## Hidden tabs
+
+Tabs also support `hidden: true`:
+
+```json
+{
+  "tab": "Beta",
+  "hidden": true,
+  "groups": [
+    { "group": "Beta Features", "pages": ["beta/feature-x"] }
+  ]
+}
+```
+
+Hidden tabs behave differently from hidden pages:
+
+| Behavior           | Hidden page (`frontmatter`) | Hidden tab |
+| ------------------ | --------------------------- | ---------- |
+| Visible in sidebar | No                          | No         |
+| Visible in tab bar | N/A                         | No         |
+| Accessible by URL  | Yes                         | Yes        |
+| In sitemap.xml     | **No**                      | **Yes**    |
+| In llms.txt        | **No**                      | **Yes**    |
+| `robots: noindex`  | **Yes**                     | **No**     |
+
+Hidden **pages** are excluded from search engine indexing. Hidden **tabs** keep all their pages fully indexed; only the UI navigation is removed. This makes hidden tabs the right choice when you want content discoverable by search engines but not shown in the site navigation.
+
+### SEO-only content
+
+Use hidden tabs to publish SEO content that search engines can index without cluttering navigation. This is useful for programmatically generated pages, keyword-targeted landing pages, or AI-generated content:
+
+```json
+{
+  "navigation": {
+    "tabs": [
+      { "tab": "Docs", "groups": [...] },
+      {
+        "tab": "SEO",
+        "hidden": true,
+        "groups": [
+          {
+            "group": "Topics",
+            "pages": [
+              "seo/how-to-authenticate",
+              "seo/best-practices",
+              "seo/troubleshooting-errors"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+Pages in the hidden tab are rendered at their normal URLs, included in `sitemap.xml` and `llms.txt`, and indexed by search engines. Users who land on these pages via search can still navigate the site normally; the tab just does not appear in the tab bar or sidebar.
+
+## Use cases
+
+- **SEO content** that search engines should index but does not belong in the main navigation
+- **Internal pages** that are linked from external tools but should not clutter the sidebar
+- **Beta documentation** shared via direct link before it is publicly visible
+- **Legacy pages** kept alive for old bookmarks without promoting them in navigation

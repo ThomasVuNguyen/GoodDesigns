@@ -1,0 +1,157 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "holocron-website",
+  "main": "spiceflow/cloudflare-entrypoint",
+  "workers_dev": true,
+  "compatibility_date": "2026-04-14",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "placement": { "mode": "smart" },
+
+  // ── Production (top-level) ──────────────────────────────────────────
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "holocron-db",
+      "database_id": "1b6a43e2-2e03-408c-9199-291faa305fa4",
+      "migrations_dir": "../db/drizzle"
+    }
+  ],
+  // AI_LOGO_KV — cached AI-generated logo images.
+  //   "ai-logo:{name}"           → ArrayBuffer (JPEG bytes), TTL controlled by CACHE_TTL in ai-logo.ts
+  //
+  // SITES_KV — content-addressable store for deployed sites (shared with hosting worker).
+  //   "blob:{sha256hex}"      → raw bytes (ArrayBuffer)          — file content, keyed by SHA-256 hash. Shared across deployments.
+  //   "site-info:{subdomain}" → JSON { projectId, version, manifest: { [path]: { hash, contentType? } } } — site resolution + manifest in one read
+  "kv_namespaces": [
+    { "binding": "AI_LOGO_KV", "id": "10c43383c2f341f79155740ee8a74eb6" },
+    { "binding": "SITES_KV", "id": "b8814a26150b44b583854867c0bb9e53" }
+  ],
+  // USAGE_COUNTER — per-org AI chat usage tracking via Durable Object with SQLite.
+  // One instance per org (idFromName(orgId)). Tracks requests, tokens, model, page slug.
+  // CHAT_SESSION — persistent AI chat conversations. One instance per docs site
+  // (idFromName(siteKey)); each conversation is a row keyed by session id.
+  "durable_objects": {
+    "bindings": [
+      { "name": "USAGE_COUNTER", "class_name": "UsageCounter" },
+      { "name": "CONFIG_OVERRIDE", "class_name": "ConfigOverrideDO" },
+      { "name": "CHAT_SESSION", "class_name": "ChatSessionDO" }
+    ]
+  },
+  "migrations": [
+    { "tag": "v1", "new_sqlite_classes": ["UsageCounter"] },
+    { "tag": "v2", "new_sqlite_classes": ["ConfigOverrideDO"] },
+    { "tag": "v3", "new_sqlite_classes": ["ChatSessionDO"] }
+  ],
+  // CHAT_RATE_LIMITER — IP-based rate limiting for unauthenticated chat requests.
+  // 10 requests per 60 seconds per IP. Only applied when no HOLOCRON_KEY is present.
+  "ratelimits": [
+    {
+      "name": "CHAT_RATE_LIMITER",
+      "namespace_id": "1001",
+      "simple": {
+        "limit": 5,
+        "period": 60
+      }
+    }
+  ],
+  "ai": {
+    "binding": "AI"
+  },
+  "send_email": [
+    { "name": "EMAIL", "remote": true }
+  ],
+  "services": [
+    { "binding": "OG_WORKER", "service": "holocron-og" }
+  ],
+  "routes": [
+    { "pattern": "holocron.so/*", "zone_name": "holocron.so" }
+  ],
+  "secrets": {
+    "required": [
+      "BETTER_AUTH_SECRET",
+      "BETTER_AUTH_URL",
+      "GITHUB_CLIENT_ID",
+      "GITHUB_CLIENT_SECRET",
+      "STRADA_PROJECT_ID",
+      "STRADA_TOKEN",
+      "STRIPE_SECRET_KEY",
+      "STRIPE_WEBHOOK_SECRET",
+      "HOLOCRON_TOKEN",
+      "CLOUDFLARE_HOSTING_API_TOKEN",
+      "CLOUDFLARE_HOSTING_ZONE_ID",
+      "AI_GATEWAY_API_KEY"
+    ]
+  },
+
+  // ── Preview ─────────────────────────────────────────────────────────
+  // Bindings are NOT inherited — must duplicate everything here
+  "env": {
+    "preview": {
+      "name": "holocron-website-preview",
+      "workers_dev": true,
+      "placement": { "mode": "smart" },
+      "routes": [
+        { "pattern": "preview.holocron.so", "custom_domain": true }
+      ],
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "holocron-preview-db",
+          "database_id": "8c7b5000-0d42-4c55-9a0a-ecad450f1e3d",
+          "migrations_dir": "../db/drizzle"
+        }
+      ],
+      "kv_namespaces": [
+        { "binding": "AI_LOGO_KV", "id": "ad90e76eaa4a4af58b7ed22e4904fd51" },
+        { "binding": "SITES_KV", "id": "02e9e057c9b9430ca6a39194589d6ad1" }
+      ],
+      "durable_objects": {
+        "bindings": [
+          { "name": "USAGE_COUNTER", "class_name": "UsageCounter" },
+          { "name": "CONFIG_OVERRIDE", "class_name": "ConfigOverrideDO" },
+          { "name": "CHAT_SESSION", "class_name": "ChatSessionDO" }
+        ]
+      },
+      "migrations": [
+        { "tag": "v1", "new_sqlite_classes": ["UsageCounter"] },
+        { "tag": "v2", "new_sqlite_classes": ["ConfigOverrideDO"] },
+        { "tag": "v3", "new_sqlite_classes": ["ChatSessionDO"] }
+      ],
+      "ratelimits": [
+        {
+          "name": "CHAT_RATE_LIMITER",
+          "namespace_id": "1002",
+          "simple": {
+            "limit": 5,
+            "period": 60
+          }
+        }
+      ],
+      "ai": {
+        "binding": "AI"
+      },
+      "send_email": [
+        { "name": "EMAIL" }
+      ],
+      "services": [
+        { "binding": "OG_WORKER", "service": "holocron-og-preview" }
+      ],
+      "secrets": {
+        "required": [
+          "BETTER_AUTH_SECRET",
+          "BETTER_AUTH_URL",
+          "GITHUB_CLIENT_ID",
+          "GITHUB_CLIENT_SECRET",
+          "STRADA_PROJECT_ID",
+          "STRADA_TOKEN",
+          "STRIPE_SECRET_KEY",
+          "STRIPE_WEBHOOK_SECRET",
+          "HOLOCRON_TOKEN",
+          "CLOUDFLARE_HOSTING_API_TOKEN",
+          "CLOUDFLARE_HOSTING_ZONE_ID",
+          "AI_GATEWAY_API_KEY"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "name": "Custom CSS Test",
+  "icons": { "library": "lucide" },
+  "colors": {
+    "primary": "#0969da"
+  },
+  "navigation": {
+    "pages": ["index"]
+  }
+}

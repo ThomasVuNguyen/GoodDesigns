@@ -1,0 +1,926 @@
+# Holocron
+
+Drop-in Mintlify replacement as a Vite plugin. Users point their `vite.config.ts` at this plugin and get a full documentation site from MDX files + a `docs.json` (or `docs.jsonc` / `holocron.jsonc`) config file.
+
+Read the holocron skill (`skills/holocron/SKILL.md`) before editing example docs or MDX content. It covers writing style, navigation placement, Aside usage, and diagram conventions.
+
+Read the spiceflow skill before editing any code in this package. Run `playwriter skill` or load the spiceflow skill to get the latest API reference.
+
+Read the tailwind skill before adding JSX or updating JSX. Use Tailwind utilities for JSX styling by default instead of inline styles, unless the value must be dynamic at runtime.
+
+Read the Emil design-engineering skill before adding or changing animations/transitions in this package: https://raw.githubusercontent.com/emilkowalski/skill/refs/heads/main/skills/emil-design-eng/SKILL.md
+
+## Template submodule
+
+The `template/` folder is a **git submodule** pointing to [remorses/holocron-template](https://github.com/remorses/holocron-template). It's a separate repo so GitHub's "Use this template" button works (GitHub templates must be standalone repos, not subfolders). The holocron monorepo references it as a submodule so the CLI `create` command and the copy-template build script can still read the template files locally.
+
+When editing template files, make changes inside the `template/` submodule, commit and push there first, then commit the updated submodule pointer in the monorepo.
+
+## Config
+
+Supports three config file names (first found wins):
+
+- `docs.json` (preferred)
+- `docs.jsonc`
+- `holocron.jsonc`
+
+both follow the same schema.
+
+## CLI package name
+
+The `holocron` binary is published by the scoped package `@holocron.so/cli`.
+When writing one-off command examples, use `npx -y "@holocron.so/cli" <command>`
+instead of `npx holocron <command>`. The unscoped `holocron` package is not the
+Holocron CLI.
+
+## Public docs wording
+
+Never mention `preview.holocron.so`, `*-site-preview.holocron.so`, preview
+environments, or preview deployment mechanics in public MDX docs or README files.
+Those are internal hosting details. Public docs should only describe the user
+visible deploy command and the returned deployment URL.
+
+**Schema**: the source of truth is `vite/src/schema.ts` — Zod schemas that describe the supported input shape. The JSON Schema at `vite/schema.json` is GENERATED from it via `pnpm -F @holocron.so/vite generate-schema` (runs automatically on build). Do not hand-edit `schema.json` — edit `src/schema.ts` and regenerate.
+
+The schema follows the Mintlify docs.json shape (https://mintlify.com/docs.json) for the subset Holocron consumes. Unknown Mintlify fields pass through `.passthrough()` so users can paste a full docs.json without validation errors.
+
+The Holocron docs.json schema is at https://holocron.so/docs.json
+
+## Mintlify
+
+To read mintlify docs curl `https://www.mintlify.com/docs/llms-full.txt` into a file and grep it. notice this file is very large. this is useful to find out specific mintlify behaviour, supported components, etc
+
+Fetch those docs every time we need to find out some info about Mintlify
+
+The open-source Mintlify component implementations live at https://github.com/mintlify/components. Use that repo as the canonical reference for component props and behavior when adding or adjusting Mintlify-compatible MDX components.
+
+### Component compatibility with Mintlify
+
+When touching any MDX component in `vite/src/components/markdown/` (accordion, card, tabs, expandable, steps, fields, badge, etc.), always use `opensrc` to fetch and read the Mintlify source code from https://github.com/mintlify/components first:
+
+```bash
+bunx opensrc path mintlify/components
+```
+
+Then read the relevant component file to understand its prop types and implementation. Holocron must remain a **drop-in replacement** for Mintlify, meaning all Mintlify prop interfaces must be supported. Feel free to extend components and add more props for custom Holocron-specific use cases, but never remove or break existing Mintlify-compatible props.
+
+
+### How config maps to UI
+
+- **`navbar.links`** → simple text links in the logo bar (top-right, next to logo)
+- **`navigation.global.anchors`** → rendered as tabs in the tab bar (can be external URLs like GitHub, Changelog)
+- **`navigation.tabs`** → also rendered as tabs; clicking switches the sidebar content
+- **`navigation.versions`** → native `<select>` dropdown in the header (right of logo). Each version wraps its own inner navigation (tabs/groups/pages). Selecting a version navigates to its first page; sidebar updates to show that version's groups. The version marked `default: true` determines the `/` redirect target.
+- **`navigation.dropdowns`** → native `<select>` dropdown in the header (next to version select). Same as versions but can also be link-only (`href` without content → opens external URL). `navigation.products` is normalized into dropdowns at config time.
+- **`navigation` groups** → sidebar sections with collapsible pages
+
+### Switcher architecture (versions/dropdowns)
+
+All version/dropdown inner tabs are flattened into the main `navigation.tabs` array so every page gets a route. But `buildTabItems()` in `data.ts` must **exclude** switcher-owned tabs from the header tab bar — the `<select>` dropdowns replace that role. Only anchors (global links) appear in the tab bar when switchers are active. The `switchers` metadata (enriched inner nav trees) is serialized alongside `config` and `navigation` in the `virtual:holocron-config` module.
+
+## Navigation tree as cache
+
+The navigation tree is the central data structure. It mirrors the docs.json shape exactly (tabs → groups → pages) but enriches page slug strings into `NavPage` objects with parsed metadata (title, headings, gitSha).
+
+This enriched tree is written to `dist/holocron-cache.json` after each sync. On the next build, the cache is read back and pages with matching `gitSha` are reused without re-parsing. This makes builds as fast as possible — only changed MDX files get processed. On CI, caching `dist/` between runs gives near-instant rebuilds.
+
+Types are intentionally kept close to docs.json to minimize transformations. Utility functions (`getTabs`, `getActiveGroups`, `findPage`, `buildSidebarTree`) take the tree directly as input.
+
+### Sidebar nav items must never cause horizontal scroll
+
+The left sidebar (`SideNav` / `nav-tree.tsx`) must never overflow horizontally. When a `NavPageLink` has a badge (API method, deprecated, custom tag), the title `<span>` gets `truncate min-w-0` so it ellipsizes instead of pushing the sidebar wider. Without a badge, the title wraps normally. Never remove this truncation guard; it prevents the sidebar from scrolling horizontally on long titles with badges.
+
+### Nested group rows are page rows
+
+A collapsible nested group (`NavGroupNode` at `depth > 0`) must render with the **same type and rhythm as a page link**: inherited font-size, `font-medium`, `--sidebar-leading-gap` leading slot, and the standard `--sidebar-row-gap` row spacing (including matching `pt` on its children container). The chevron occupies the same `--sidebar-icon-size` slot a page icon would, so group labels land in the same column as sibling page labels. Never give a nested group its own `font-size` — `--type-nav-group-size` is only for the uppercase top-level section label.
+
+`--sidebar-indent` is `calc(var(--sidebar-icon-size) + var(--sidebar-leading-gap))` so one nesting step equals the leading slot. Nested pages line up under the group label. Sidebar spacing tokens are `em` relative to `--sidebar-font-size` (13px default, 14px at `xl`, 12px in compact mode). Compact sets the token on `:root:has(.slot-page[data-page-mode="compact"])` so the portaled mobile drawer inherits it and unlayered user `:root` overrides still win. Changing icon size or leading gap updates indent. The `fixtures/deep-nesting/` fixture exercises both cases: the Documentation tab has an icon on every page, the No Icons tab has none.
+
+### Sidebar highlights must be painted INSIDE the row's border box
+
+Never use a `box-shadow` spread (or anything else painted outside the border box) for a sidebar row's hover, active, or search highlight. The scroll `<nav>` is `overflow-y-auto`, which per spec also clips horizontally, and every `ExpandableContainer` between the nav and a nested row is `overflow: hidden`. Anything drawn outside a row gets its left rounded corners sliced flat against that clip edge.
+
+Instead, every row (page link, group toggle, TOC heading, sidebar anchor, "Search with AI chat") carries `rowSpacing()` from `nav-tree.tsx`: `padding-inline: var(--sidebar-row-padding-x)` cancelled by an equal negative `margin-inline`, plus `border-radius: var(--sidebar-link-radius)`. The highlight is then just `background`, which can never be clipped. Every clipping ancestor reserves the same `--sidebar-row-padding-x`. The browser's focus ring is also painted outside, so `.slot-sidebar-nav :focus-visible` sets `outline-offset: -2px` to pull it inside.
+
+## Styling
+
+### CSS variable convention — shadcn superset
+
+Holocron's CSS variables follow the **standard shadcn/ui v2 naming convention**. This means users who already have a shadcn theme can port it directly — just override `--foreground`, `--primary`, `--border`, `--muted-foreground`, etc. in their own CSS and holocron adapts.
+
+The full shadcn token set is defined in `globals.css` `:root` with editorial defaults, and registered in `@theme inline` for Tailwind utility generation (`text-foreground`, `bg-primary`, `border-border`, etc.).
+
+**Three layers of variables:**
+
+1. **shadcn standard** — `--background`, `--foreground`, `--primary`, `--muted-foreground`, `--border`, `--accent`, `--sidebar-foreground`, `--sidebar-primary`, etc. Users override these to theme holocron.
+2. **Holocron extras** — `--text-tertiary`, `--border-subtle`, `--divider`, `--prose-text`. Things shadcn doesn't cover. No prefix, same naming style. `--prose-text` is the body paragraph color: intentionally a bit softer than `--foreground` (derived via `color-mix` toward `--background`) so bold/`strong` words and headings — which keep full `--foreground` — stand out. `.editorial-prose` uses `--prose-text`; `.editorial-prose strong/b` reset to `--foreground`.
+3. **Semantic colors** — `--blue`, `--green`, `--yellow`, `--orange`, `--red`, `--purple`. Dark-mode-aware color tokens for callouts/badges. Use as `text-blue`, `bg-red/10`, `border-green/20` in Tailwind. Don't conflict with Tailwind's numbered palette (`text-blue-500`).
+
+**Do NOT introduce prefixed variable namespaces** (no `--hc-*`, no `--fd-*`, no `--editorial-*`). Keep everything in the flat shadcn naming style. If a new variable is needed, pick a descriptive name that could plausibly be a shadcn extension.
+
+### Monospaced text sizing — always slightly smaller than surrounding sans
+
+Monospaced fonts (code, `font-mono`) appear visually larger than sans-serif at the same `font-size` because their characters are wider. When monospaced text sits alongside sans text (property names, type annotations, inline code in UI chrome), always set it to `~0.875em` so it feels optically matched. The CSS variable `--code-font-size` in `globals.css` is the single source of truth for this value. The `.inline-code` class in `editorial.css` uses it. For Tailwind contexts use `text-(length:--code-font-size)` on the `font-mono` element. Never leave `font-mono` at the same size as the surrounding sans text.
+
+Note: Tailwind arbitrary value classes like `text-[length:var(--code-font-size)]` won't work in components compiled to `dist/` because Tailwind's JIT scanner doesn't see the source. For package components (OpenAPI renderer, etc.), use the plain CSS class `.code-font-size` defined in `editorial.css` instead.
+
+### Spacing — prefer gap over margin/padding
+
+Always use flexbox/grid `gap` classes for spacing between sibling elements. Never use `margin-top`, `margin-bottom`, `padding-top`, or `padding-bottom` to create space between items in a list or stack. Gap is simpler (no first/last-child overrides), composes better, and avoids margin collapse bugs. Use `py-*` only for internal padding within a single element (e.g. padding inside a card), not for spacing between siblings.
+
+Never use Tailwind Typography's `prose` classes to style Holocron MDX content or embedded Mintlify-compatible components. `prose` pollutes descendants with broad selectors, margins, font sizes, and element-specific overrides that make nested components unpredictable. Instead, each safe-mdx-rendered element owns its own styles directly (`P`, `List`, `Li`, headings, tables, code, etc.), and containers use flexbox/grid plus `gap-(--prose-gap)` for rhythm. This keeps arbitrary embedded components stable because they do not have to fight inherited prose styles.
+
+Any container-like MDX component (`Callout`, `Accordion`, `Expandable`, `Panel`, `Card`, `Frame`, `Prompt`, `Steps`, `Step`, lists, API fields/examples, tiles, tree wrappers, etc.) must own its inner vertical rhythm with `flex flex-col gap-(--prose-gap)` on the container body, using the `--prose-gap` CSS variable defined in `globals.css`. This keeps all containers aligned with the page's overall vertical rhythm. Do not use hardcoded gap values like `gap-3` or `gap-4` — always use `gap-(--prose-gap)` so spacing stays consistent when the token changes. Do not rely on paragraph margins inside containers — many editorial nodes render with margins stripped, so raw MDX children will visually collapse unless the container explicitly provides gap spacing.
+
+When a container can receive arbitrary MDX children, also add `no-bleed` on that container/body so nested code blocks, lists, and images do not leak outside the card frame.
+
+### CSS variables — add only if they deduplicate values
+
+A CSS variable is only justified if it is **used in many places** and serves to deduplicate an otherwise-repeated hardcoded value. If a variable is referenced only once (or never), inline the value directly and delete the variable.
+
+Rules:
+
+- **Many call sites** → define a CSS var (e.g. `--foreground` used in dozens of components, `--sticky-top` shared by sidebar + aside).
+- **Single call site** → inline the value. A `--fade-top: 81px` that's only read by one `::before` rule should just be `top: 81px`.
+- **Zero call sites** → delete immediately. Dead variables clutter `globals.css` and mislead future readers into thinking a token layer exists.
+
+When auditing, grep the repo for `var(--name)` references plus Tailwind arbitrary-value patterns (`gap-(--name)`, `text-(color:--name)`, `[var(--name)]`). Remember that refs inside `/* ... */` CSS comments look live but aren't. See MEMORY.md ("CSS variable audit") for the grep commands and the last full audit.
+
+CSS variables can also be used to change a color in dark/light mode. or change the value in desktop or mobile. for example we do this for negative margins in bleed images/code line numbers/lists. this use case is justified and desired.
+
+## CSS variables and colors principles
+
+if possible add as few hard coded colors & values as possible. instead use opacity to create variations of colors for example to add a background to a callout you would only define the fg color and derive the bg and border from the fg one using opacity
+
+you can change alpha with `<div class="bg-sky-500/10"></div>`
+
+or in css with --alpha
+
+```css
+:root {
+    --new-variable: --alpha(var(--color-gray-950) / 10%);
+}
+```
+
+derive colors from existing tokens with `color-mix()` instead of hardcoding new shades:
+
+```css
+:root {
+    /* 90% neutral-500 mixed with black → slightly darker muted text */
+    --muted-foreground: color-mix(in srgb, var(--color-neutral-500) 90%, var(--color-black));
+
+    /* 64% foreground mixed with sidebar bg → sidebar text that adapts to surface */
+    --sidebar-foreground: color-mix(in srgb, var(--foreground) 64%, var(--sidebar));
+
+    /* 98% background mixed with white → slightly lighter card surface */
+    --card: color-mix(in srgb, var(--background) 98%, var(--color-white));
+}
+```
+
+`--alpha()` and `color-mix()` both produce computed colors that auto-adapt in dark mode when their input tokens change. Prefer these over hardcoded hex/oklch values — one definition works for both modes.
+
+prefer our own CSS variables over Tailwind's `dark:` variant. dark mode values should be changed using CSS variables instead of `dark:`
+
+using something like
+
+```css
+@variant dark {
+    /* shadcn/ui dark */
+    --background: oklch(0.21 0.006 285.885);
+}
+```
+
+you can also change variables based on breakpoints with
+
+```css
+@variant lg {
+    --bleed: 32px;
+}
+```
+
+### `currentColor` inside data-URI SVGs is always black
+
+SVG icons rendered **inline** (as `<svg>` elements in the DOM) inherit `currentColor` from the parent's CSS `color` property — this is how our `<Icon>` component works and why icons respond to dark mode. But SVG used as a CSS `background-image` data URI (`url("data:image/svg+xml,...")`) does **NOT** inherit `currentColor`. The data-URI SVG is not part of the document tree, so `currentColor` resolves to black regardless of the parent's color. Always use inline SVG elements (not background-image) for icons or decorations that need to adapt to light/dark mode.
+
+## Architecture
+
+- **Vite plugin** (`vite-plugin.ts`) — wraps spiceflowPlugin, tailwind, tsconfig-paths. Generates two virtual modules: `virtual:holocron-pages` (import.meta.glob for lazy MDX loading) and `virtual:holocron-config` (serialized config + navigation tree).
+- **App entry** (`app.tsx`) — Spiceflow app that imports from virtual modules. Rendering logic is in `app-factory.tsx`.
+- **Sync engine** (`lib/sync.ts`) — walks the config navigation, computes git blob SHAs, diffs against cache, parses only changed files.
+- **Components** (`components/`) — editorial UI copied from `website/src/components/`. Same styles, same design tokens.
+
+### Vite plugin logs
+
+Use `logger` and the formatting helpers from `vite/src/lib/logger.ts` for Holocron build/plugin logs. Do not call `console.log`, `console.warn`, or `console.error` directly in the Vite plugin or its build-time helpers.
+
+## Dev HMR — `rsc:update` and background tasks
+
+`rsc:update` is a **spiceflow convention**. Spiceflow's browser client (`entry.client.tsx`) registers a HMR listener for this custom event. When it fires, the client calls `router.refresh()` which re-fetches the RSC flight payload from the server and reconciles the new React tree into the existing DOM without a full page reload. The call is debounced at 80ms to coalesce rapid saves. Spiceflow only listens for `rsc:update`; it never sends it. Plugins like holocron send it via `server.environments.client?.hot.send({ type: 'custom', event: 'rsc:update', data: { file } })`.
+
+### How holocron triggers updates
+
+The `hotUpdate` hook in `vite-plugin.ts` handles all file changes (MDX, config, images, provider specs, CSS, importable `.tsx/.ts` files). It returns `[]` in all environments to suppress Vite's default HMR, then manually invalidates virtual modules and sends `rsc:update`. This is necessary because `ctx.modules` contains raw `.mdx/.jsonc` entries that the RSC plugin would try to transform as JS and fail.
+
+**Two waves of `rsc:update` per change:**
+
+1. **Immediate** — after `syncNavigation()` completes. Content and images are ready.
+2. **Deferred** — when background provider processing finishes, virtual modules are invalidated and another `rsc:update` fires so provider pages appear.
+
+### Sync-blocking providers
+
+These run inside `syncNavigation()` via `processVirtualTabs()` and block the sync until done. They run in parallel with each other (`Promise.all`) but the sync waits for all of them before building the navigation tree.
+
+1. **OpenAPI spec processing** — parses the spec, generates one virtual MDX page per endpoint. The spec file is watched for edits.
+2. **Changelog (GitHub releases)** — fetches releases from GitHub API, generates a changelog page with `<Update>` entries. 5s timeout, never throws.
+3. **MCP (Model Context Protocol)** — loads MCP definitions from local JSON or remote server, generates pages for tools and resources.
+
+### Background tasks in dev
+
+1. **Virtual tab providers** — runs after every sync with `deferProviders: true`. OpenAPI, changelog, and MCP providers run via `processDeferredProviders()` in the background. During the initial fast sync, provider-claimed tabs have their groups emptied (authored groups are snapshotted first). When the background task finishes, it restores the groups, enriches virtual pages, rebuilds the navigation tree, and sends `rsc:update`. This means provider pages appear a moment after the dev server starts instead of blocking startup.
+2. **GitHub star counts** — fetched at request time during navbar rendering, not during sync. 3-layer cache (in-memory 1h → Cloudflare Cache API 1h → GitHub API fallback). Never blocks rendering.
+
+Syncs are serialized via a `pendingSync` Promise chain.
+
+## Important CSS variables — grid geometry
+
+Source of truth: `vite/src/lib/sidebar-widths.ts` (`GRID_TOKENS` + `buildGridTokenStyle()`).
+
+These 4 independent tokens control the 3-column page grid. They're injected as inline styles on `.slot-page` by `editorial-page.tsx`:
+
+- **`--grid-max-width`** (1100px) — overall page cap, clamped to `100vw - 60px`
+- **`--grid-nav-width`** (230px) — left TOC sidebar column
+- **`--grid-sidebar-width`** (230px, 396px for OpenAPI) — right aside column
+- **`--grid-gap`** (50px) — gap between the three columns
+
+**Content width is derived, not configured.** It's emitted as a CSS `calc()`:
+
+```
+--grid-content-width = --grid-max-width - --grid-nav-width - --grid-sidebar-width - 2 * --grid-gap
+```
+
+This means bumping `--grid-max-width` automatically grows the content column, and widening `--grid-sidebar-width` (e.g. for OpenAPI pages with `RequestExample`/`ResponseExample`) shrinks content by the same amount. The page never jumps width when navigating between docs and API reference.
+
+## Page layout — grid hierarchy
+
+The editorial page layout is built from a minimal set of CSS Grids. Understand these before touching `EditorialPage` in `components/markdown.tsx`.
+
+### Hierarchy diagram
+
+```
+slot-page (flex flex-col gap-(--layout-gap))
+├── slot-navbar (logo + tab bar)
+├── Above mini-grid (3-col, only when above prop is set)
+│   └── above content (col 2, aligned with page grid's content col)
+└── Page grid — the ONLY explicit 3-col grid
+    grid-template-columns: 210px 520px 210px (toc, content, sidebar)
+    gap-x: 50px, gap-y: 48px (--section-gap between rows)
+    justify-between (distributes extra width)
+    ├── .slot-sidebar-left         (col 1, row 1/span 100, sticky TOC)
+    ├── Inner per-section wrapper  (subgrid, col-[2/-1], grid-row: 1)
+    │   ├── slot-main              (col 1 = content, H1 + paragraphs + …)
+    │   └── per-section aside      (col 2 = sidebar, sticky-scoped to wrapper)
+    ├── Inner per-section wrapper  (subgrid, col-[2/-1], grid-row: 2)
+    │   ├── slot-main
+    │   └── per-section aside
+    ├── Shared full aside          (col 3, grid-row: N / span M via CSS var)
+    ├── Inner per-section wrapper  (subgrid, col-[2/-1], grid-row: 3)
+    │   └── slot-main
+    └── .slot-sidebar-right        (col 3, flat-layout only)
+```
+
+### Grids used and why
+
+**1. Page grid** (`markdown.tsx` EditorialPage) — the only explicit 3-col grid. Defines column widths and is the single source of truth. Every other grid inherits from it.
+
+- Column widths live only here: `--grid-nav-width` (210), `--grid-content-width` (520), `--grid-sidebar-width` (210), `--grid-gap` (50).
+- `justify-between` distributes extra width up to `--grid-max-width` (1100px), so actual column gaps are `50px + distributed`.
+- `gap-y-(--section-gap)` (48px) gives uniform rhythm between section rows.
+- On mobile: collapses to `grid-cols-1`, sidebars go `display: none`, everything stacks.
+
+**2. Inner per-section wrapper** (subgrid, `lg:col-[2/-1]`, one per section) — pairs content with its per-section aside.
+
+- Spans both page-grid cols 2-3 via subgrid inheritance → content in inner-col 1 (page col 2), aside in inner-col 2 (page col 3).
+- **Key responsibility: sticky scoping.** Per-section asides inside this wrapper have a containing block = this wrapper = one section's bounds. Scrolling past the section unsticks its aside before the next section's aside sticks. No overlap between asides.
+- On mobile: becomes `flex flex-col gap-y-(--prose-gap)` → content + aside stack tightly (20px gap).
+
+**3. Above mini-grid** (only when `above` prop is set) — replicates the page grid's 3-col definition explicitly to align above content with the page grid's content column. Not a subgrid because above lives OUTSIDE the page grid in DOM (sibling in the flex flow).
+
+### Aside and Section Processing (`mdx-sections.ts`)
+
+The markdown document is parsed into an AST and split into sections (`MdastSection`) at every heading level. This split dictates the CSS grid rows in the main content area.
+
+There are three ways content can exist in the right sidebar:
+1.  **Per-section `<Aside>`**: Sticky only for the bounds of its specific section (the content between two headings). Handled via CSS subgrid row spanning.
+2.  **Shared `<Aside full>`**: Spans multiple sections. It is sticky for the section it is placed in, and all subsequent sections until the next `<Aside full>` or the end of the document. Handled by calculating the grid row span across multiple sub-sections.
+3. **AI Widget (`<SidebarAssistant>` via `HolocronAIAssistantWidget`)**: Injected during AST processing (`buildSections`) with the page navigation row. If later sections have **no asides** (no asides at all, or asides only in the intro), chrome is a synthetic `<Aside full>` so the widget stays sticky from the top of the page. Intro callouts are collected into that full aside. If the page has **exactly one authored `<Aside full>`**, chrome is prepended into that aside and the aside is moved to the top (after any leading `<FullWidth>`). If later headings have their own asides, chrome is a regular first-section `<Aside>` so those later asides stay on their own section rows (`asideNodes`) next to their headings. If the first section already has an authored `<Aside full>` among other asides, the widget is prepended into that explicit full aside.
+
+### How the grids interact
+
+**Column alignment contract.** Every grid in this page uses the same 3 column widths defined via CSS vars. Subgrids inherit tracks through `grid-cols-subgrid`. The hero mini-grid redeclares the column template explicitly.
+
+**Gap inheritance chain** (column-gap, through subgrid):
+
+```
+Page grid:          50px (explicit --grid-gap)
+  → Inner subgrid:  normal → inherits from page grid → 50px
+```
+
+Axis rule: use `gap-y-(--token)` on subgrid wrappers (not `gap-(--token)`) so the column-gap inherits and isn't clobbered.
+
+**Row placement**. Each inner wrapper gets an explicit `style={{ gridRow: i + 1 }}`. Shared `<Aside full>` gets `style={{ '--shared-row': '${start} / span ${N}' }}` plus class `lg:[grid-row:var(--shared-row)]` — grid-row is ONLY read at lg, so on mobile the aside gets `grid-row: auto` and auto-places at the end of its range instead of forcing an implicit second column in grid-cols-1.
+
+**Sticky scoping via containing blocks**. `position: sticky` is bounded by its grid cell:
+
+- TOC sidebar → page grid cell at col 1, row 1/span 100 (whole page).
+- Per-section aside → inner subgrid cell (one section).
+- Shared `<Aside full>` → multi-row grid area via `grid-row: start / span N` (its range of sections).
+
+**NEVER use `display: contents`** on a wrapper whose children need sticky scoping — it removes the wrapper from layout, so descendants inherit the grand-parent as their containing block, collapsing all sticky scopes together. This was the cause of a multi-aside overlap bug (see MEMORY.md).
+
+### Responsive behavior
+
+- **Mobile** (< lg / 1080px): page grid is `grid-cols-1`. All items stack in DOM order. Inner wrappers become flex-col (20px prose-gap between content + aside). Sidebars hidden. Shared aside auto-places at end of its range.
+- **Desktop** (≥ lg): full 3-col grid. Subgrids inherit columns. Sticky asides scoped by containing block.
+
+### Key design rules
+
+1. **Page grid owns column widths.** No other grid re-declares them (except the hero mini-grid, deliberately).
+2. **Use `gap-y-...` on subgrids**, never `gap-(--token)` (breaks column-gap inheritance).
+3. **Never `display: contents` around sticky-scoped children.**
+4. **Inline `gridRow` style applies at ALL breakpoints** — if you only want it at lg, use a CSS custom property + `lg:[grid-row:var(--x)]` class.
+5. **Axis ownership**: page grid owns horizontal (via `--grid-*`); section rhythm owns vertical (via `--section-gap`, `--prose-gap`).
+
+## MDX component imports
+
+Users can import `.tsx/.ts/.jsx/.js` components in MDX files:
+
+```mdx
+import { Greeting } from '/snippets/greeting'
+import { Badge } from '../components/badge'
+```
+
+Import detection is **MDX-driven**, not folder-based. There are no magic `snippets/` or `components/` directories. Any local file can be imported from any location; the system discovers imports by parsing the MDX AST.
+
+### How it works (two-step resolution)
+
+**Build time** (`sync.ts`): during `syncNavigation`, `processMdx` extracts raw import source strings from each MDX file using `safe-mdx`'s `extractImports()`. The raw sources (e.g. `/snippets/greeting`, `../components/badge`) are cached in `holocron-mdx.json` as `pageImportSources`. On every sync, even cache hits, these sources are re-resolved against the filesystem to produce `{ moduleKey, absPath }` tuples. This means newly-created files are picked up without re-parsing MDX.
+
+**Render time** (`app-factory.tsx`): `safe-mdx`'s `resolveModules()` parses the same MDX, extracts imports, normalizes them to module keys, and looks them up in the `virtual:holocron-modules` lazy glob map. The keys in that map must exactly match what safe-mdx produces.
+
+### What `/` means in imports
+
+`/` always means project root from safe-mdx's perspective. It normalizes `/x` to `./x`. On the filesystem, we probe `pagesDir` first, then `projectRoot`:
+
+- `pagesDir = root` (default): `/snippets/greeting` finds `./snippets/greeting.tsx`
+- `pagesDir = ./pages/`: `/snippets/greeting` finds `./pages/snippets/greeting.tsx` first, falls back to `./snippets/greeting.tsx`
+
+The module key is always `./snippets/greeting.tsx` regardless of `pagesDir`.
+
+### Key constraint: module keys must match
+
+The build-time resolver and safe-mdx's render-time resolver must produce identical keys. Absolute imports are normalized as `'.' + source + ext`. Relative imports are resolved from `pagesDirPrefix + slugDir`. If the keys diverge, the import silently fails at render time. See `resolveImportSources()` in `sync.ts` for the exact logic.
+
+### HMR behavior
+
+- MDX file edited (new import added): `syncNavigation` re-runs, discovers new import sources, `virtual:holocron-modules` is invalidated and rebuilt with the new entry.
+- Importable file added/removed: HMR triggers re-sync so previously-unresolvable imports can now resolve (or vice versa).
+- Importable file edited (content change): normal Vite HMR, the `import()` in the lazy map already points to it.
+
+### Caching
+
+Raw import source strings are cached in `holocron-mdx.json` alongside `pageIconRefs`. Resolution to actual file paths happens fresh on every sync (just `fs.existsSync` probing, very cheap). This avoids stale cache when files are created or deleted between builds.
+
+## Adding new MDX components
+
+When adding a new component that users can use directly in MDX (no import needed), follow these steps:
+
+**1. Create the component file** in `vite/src/components/markdown/<name>.tsx`
+
+- Mark it `'use client'` if it uses hooks, state, or browser events.
+- Use Holocron's `cn()` from `../../lib/css-vars.ts` for className composition.
+- Use shadcn/Holocron CSS tokens for colors (`--foreground`, `--muted-foreground`, `--border`, `--primary`, etc.) and spacing (`--prose-gap`, `--section-gap`). Never hardcode colors; derive from existing tokens with opacity (`bg-primary/10`, `text-muted-foreground`). See `globals.css` for the full token set.
+- Use Tailwind utilities for layout and styling. Prefer `gap` over margin for spacing between siblings.
+- If the component needs scoped CSS (animations, keyframes), use `React.useId()` to generate unique names so multiple instances on one page don't collide.
+- No external dependencies. Port from source and adapt to Holocron's conventions.
+
+**2. Register the component** in three files (TypeScript will error if any is missing):
+
+- `vite/src/lib/mdx-component-names.ts` — add the name to `SAFE_MDX_COMPONENT_NAMES` array
+- `vite/src/components/markdown/index.tsx` — add the barrel export (only for `'use client'` components; see warning below)
+- `vite/src/lib/mdx-components-map.tsx` — import from barrel, add to `mdxComponents` object
+
+**Never re-export server-only components through `markdown/index.tsx`.** That barrel has `'use client'` at the top. Any module re-exported through it becomes part of the client bundle. Components that import `safe-mdx`, `safe-mdx/parse`, remark plugins, or mdast utilities (like `render-schema.tsx`, `render-openapi.tsx`, `render-mcp.tsx`) must stay server-only. Import them directly in `mdx-components-map.tsx` instead of going through the barrel. This is the same pattern used for `OpenAPIEndpoint`, `MCPTool`, and `MCPResource`.
+
+**3. Add a usage example** to `example/src/index.mdx` (or another example page) so the component is exercised in the dev fixture.
+
+**4. Document it** in `website/src/pages/docs/components/<name>.mdx`:
+
+- Frontmatter with `title`, `description`, `icon`.
+- Live rendered examples with matching code blocks showing the MDX source.
+- Props section using `<ResponseField>` components.
+- Add the page slug to `website/docs.json` under the "MDX Components" tab's `pages` array, in alphabetical order.
+
+**5. Build and verify** — run `pnpm --dir vite build` to confirm the component compiles. The build will fail if the component name list and runtime map are out of sync.
+
+## Inline .md/.mdx imports
+
+When a page has `import Guide from './snippets/guide.md'` and uses `<Guide />`, the imported file's content is **spliced directly into the page's mdast at build time**. No runtime component, no separate processing pipeline. The import declaration stays as dead code for HMR.
+
+This means headings from imported files appear in the TOC automatically, images go through the normal build-time processor, and all remark plugins (callouts, code groups, mermaid, etc.) apply to the inlined content.
+
+### Architecture
+
+```
+┌─ enrichPageUncached (sync.ts) ──────────────────────────────────────────┐
+│                                                                          │
+│  page.mdx content                                                        │
+│       │                                                                  │
+│       ▼                                                                  │
+│  regex /\.mdx?['"]/ ── no match ──► skip to processMdx (most pages)      │
+│       │ match                                                            │
+│       ▼                                                                  │
+│  resolveInlineImports                                                    │
+│    quickMdxParser(page) ──► extractImports                               │
+│    for each .md/.mdx default import:                                     │
+│      read file, quickMdxParser (ONE parse), reuse mdast for:             │
+│        ├──► extractImports (nested discovery)                            │
+│        ├──► collectImageDeps (HMR + cache key)                           │
+│        └──► buildSplicedNodes (strip yaml, rewrite URLs)                 │
+│      store as InlineImportEntry { content, absPath, parsedNodes }        │
+│      recurse into nested .md/.mdx via scanMdast (same parsed tree)       │
+│       │                                                                  │
+│       ▼                                                                  │
+│  combined SHA = hash(page + imported files + image deps)                 │
+│       │                                                                  │
+│       ├── cache hit ──► return cached                                    │
+│       │                                                                  │
+│       ▼  cache miss                                                      │
+│  processMdx ──► normalizeMdx                                             │
+│    remarkInlineImports (PREPENDED, runs first):                          │
+│      fixed-point loop: clone pre-built parsedNodes, splice in place      │
+│      of <Guide />, next round handles nested <Inner /> from outer.mdx   │
+│    then: remarkHeadings, remarkCodeGroup, remarkCallouts, ...            │
+│       │                                                                  │
+│       ▼                                                                  │
+│  headings, images, links extracted from unified mdast                    │
+│  image processing (sharp dimensions, placeholders)                       │
+│  serialize to MDX string ──► mdxContent[slug]                            │
+└──────────────────────────────────────────────────────────────────────────┘
+         │
+         ▼  at request time
+  /<slug>      ──► safe-mdx renders (inlined content included)
+  /<slug>.md   ──► serves raw MDX string
+  /docs.zip    ──► zips all MDX strings
+```
+
+### Parse count
+
+- **No .md imports** (most pages): 1 regex + 1 normalizeMdx + 1 safe-mdx render = **2 parses**
+- **N .md imports**: 1 page quickParse + N import quickParses + 1 normalizeMdx + 1 render = **N + 3 parses**
+
+Each imported file is parsed exactly once. The mdast is reused for import extraction, image dep collection, and pre-building spliced nodes. The remark plugin does zero parsing; it clones pre-built nodes.
+
+### Cache key
+
+Combined SHA covers page content + all imported file contents (recursive) + all image files referenced by imported content. Any change invalidates the cache.
+
+### HMR
+
+- Imported .md changes → watcher detects → re-sync → combined SHA differs → cache miss → all per-page MDX modules invalidated → rsc:update
+- Image referenced by imported .md changes → same flow via `importedImageDepPaths` tracking
+- Import declarations kept as dead code ensure Vite's module graph tracks .md files
+
+### Key files
+
+- `vite/src/lib/remark-inline-imports.ts` — remark plugin + `buildSplicedNodes`
+- `vite/src/lib/sync.ts` — `resolveInlineImports`, cache key, `scanFile`/`scanMdast`
+- `vite/src/lib/mdx-processor.ts` — `ProcessMdxOptions` for prepend plugins
+- `vite/src/lib/normalize-mdx.ts` — `NormalizeMdxOptions` with `prependPlugins`
+
+### Rules
+
+- .md/.mdx imports **must include the file extension** (extensionless imports are not resolved for inlining)
+- The regex fast path `/\.mdx?['"]/` skips the full AST parse for pages without .md imports
+- `buildSplicedNodes` strips frontmatter and rewrites relative URLs/import sources so paths resolve correctly from the page's directory
+- Recursive inlining uses a visited set (by absPath) to prevent import cycles
+- The fixed-point loop in the remark plugin tracks processed `source:local` bindings and only marks them after actual JSX replacement happens
+
+## MDX content loading
+
+MDX files are loaded lazily via `import.meta.glob('?raw')`. Content stays on disk until a page is requested. At request time, the MDX is parsed with `safe-mdx`, split into sections, and rendered with the editorial components.
+
+## Link component — always use `vite/src/components/link.tsx`, never `spiceflow/react`
+
+**Never import `Link` from `spiceflow/react` in holocron components.** Always use the holocron wrapper at `vite/src/components/link.tsx` instead.
+
+Spiceflow's built-in `Link` has a `hasBasePrefix` check that gives false positives when the Vite `base` path collides with a page slug prefix. For example, with `base: '/docs'` and a page slug `docs/quickstart`, the href `/docs/quickstart` looks like the base is already applied, but the actual route is `/docs/docs/quickstart`. Spiceflow skips prepending the base, producing a broken link.
+
+The holocron `Link` wrapper bypasses this by reading `import.meta.env.BASE_URL` and unconditionally prepending it to root-relative hrefs, then passing `rawHref` to spiceflow's Link so it doesn't double-apply.
+
+```tsx
+import { Link } from '../link.tsx'       // from layout/ or markdown/
+import { Link } from './link.tsx'        // from components/
+```
+
+If you need `router` or `useRouterState` from spiceflow, import those separately from `spiceflow/react` but always get `Link` from the holocron wrapper.
+
+## `useSyncExternalStore` — all callbacks must be stable references
+
+Every argument passed to `useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot)` **must be a stable function reference**. If any callback is an inline arrow or a new closure on every render, React re-subscribes on every render — causing performance bugs and potential infinite loops.
+
+**Rules:**
+- Module-level functions are always stable (preferred for global stores like theme, first-paint guard).
+- Inside hooks, wrap callbacks with `useCallback`. If the callback closes over a prop (like a selector), stash it in a `useRef` and read the ref inside a `useCallback(fn, [])` — this keeps the function identity stable while the selector stays fresh.
+- **Never** pass inline arrows like `() => selector(store.getState())` or `() => 'light'` directly to `useSyncExternalStore`.
+
+### Dark mode detection — hydration-safe pattern
+
+Never use `useState` + `useEffect` + `MutationObserver` to track `<html class="dark">`. That pattern causes hydration mismatches because `useState(() => document.documentElement.classList.contains('dark'))` runs during SSR where `document` doesn't exist, and the initial client value may differ from the server.
+
+Instead, use `useSyncExternalStore` with module-level stable callbacks:
+
+```tsx
+// Module-level — stable references, no re-subscription
+function getIsDark(): boolean {
+  return document.documentElement.classList.contains('dark')
+}
+const getServerIsDark = () => false
+
+function subscribeTheme(cb: () => void) {
+  const observer = new MutationObserver(cb)
+  observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] })
+  return () => observer.disconnect()
+}
+
+// Inside component
+const isDark = useSyncExternalStore(subscribeTheme, getIsDark, getServerIsDark)
+```
+
+Server always returns `false` (light). React handles the mismatch gracefully during hydration. The MutationObserver fires `cb` on class changes, triggering a synchronous re-render.
+
+## HTML element nesting rules
+
+**Never use `<p>` tags in components other than the `P` component itself** (the MDX `p` mapping in `app-factory.tsx`). In the editorial component system, `safe-mdx` wraps text children in paragraph nodes that map to `P`. If any other component (e.g. `Caption`, `Above`, custom wrappers) also renders a `<p>`, the text inside it will get wrapped in another `P` → `<p>`, creating invalid `<p>` inside `<p>` nesting. This violates the HTML spec and causes React hydration mismatches.
+
+Use `<div>` instead of `<p>` in all editorial components. Style it identically with inline styles — the visual output is the same, and `<div>` can nest any element without spec violations.
+
+This rule is **not a concern** for container components that receive `{children}` from MDX (like `Callout`, `Accordion`, `Expandable`, `Panel`, `Card`, `Frame`, `Prompt`, `Badge`, `Steps`, `Update`, `View`, `Tile`, etc.). Those containers render `{children}` directly and `safe-mdx` handles wrapping text into `P` nodes. The rule only applies when a component **explicitly renders** a `<p>` tag in its own JSX — that `<p>` would nest inside the `P` that `safe-mdx` wraps around the component call, producing `<P><p>…</p></P>`. As long as all text in your component JSX uses `<div>` or `<span>` (never `<p>`), you're safe.
+
+## Hydration debugging
+
+When a page renders but client behavior is dead (tree rows do not collapse, search input does nothing, title does not update on navigation), debug hydration in this order:
+
+1. **Check whether the client tree hydrated at all**
+    - Use Playwriter in a wide viewport.
+    - Inspect TOC DOM nodes for React markers like `__reactFiber*` / `__reactProps*`.
+    - If they are missing, the issue is not the TOC logic; the client boundary never mounted.
+
+2. **Check the browser resource graph**
+    - Compare Holocron against a known-good Spiceflow app (the `playwriter/website` project is a good reference).
+    - If the page never requests a `virtual:vite-rsc/client-package-proxy/...` module for Holocron components, the package client boundary is not being treated as package source.
+
+3. **Common root causes for missing hydration in Holocron**
+    - **Package externalization**: `@vitejs/plugin-rsc` must keep `@holocron.so/vite/...` subpaths inside the RSC transform pipeline.
+        - Symptom: no React markers on the TOC DOM.
+        - Fix area: `vite/src/vite-plugin.ts` client/ssr/rsc config, especially `resolve.noExternal`.
+    - **Symlink resolution escaping `node_modules`**: when workspace symlinks are real-pathed, `@vitejs/plugin-rsc` may stop treating Holocron imports as package sources.
+        - Symptom: server rendering works, but interactive collapse regresses.
+        - Fix area: `resolve.preserveSymlinks`.
+    - **Browser entry failing before startup**: if `spiceflow`'s browser entry never reaches `hydrateRoot`, the whole page stays static.
+        - Symptom: no React markers, no client behavior, often with browser `unhandledrejection` errors.
+        - Fix area: dep optimization for wrapper-package transitive deps.
+
+4. **Specific error messages and likely causes**
+    - `SyntaxError: ... prism.js does not provide an export named 'default'`
+        - Cause: browser package client chunk imported `prismjs` with default-import interop that only worked on the server side.
+        - Fix area: `vite/src/components/markdown.tsx` Prism import shape.
+    - `Error: Calling require for "scheduler" in an environment that doesn't expose the require function`
+        - Cause: the browser dep optimizer left a raw `require("scheduler")` path in the React DOM client graph.
+        - Fix area: wrapper-package client optimize deps and resolution/aliasing for `scheduler`.
+    - `ReferenceError: module is not defined` from `@vitejs/plugin-rsc/dist/vendor/react-server-dom/...`
+        - Cause: the vendored browser client path is reaching the browser as raw CommonJS instead of going through the correct optimized package chain.
+        - Fix area: ensure the browser client dep graph is optimized through the wrapper package path, not only from the app root.
+    - `Failed to resolve dependency: @holocron.so/vite > spiceflow > @vitejs/plugin-rsc/vendor/react-server-dom/client.browser`
+        - Cause: Vite cannot resolve that exact nested include from the app root even though the runtime graph may still work.
+        - Treat as a signal while debugging, not automatically as the root bug.
+
+5. **Title debugging**
+    - If `document.title` is empty but server markup looks correct, inspect the serialized flight payload and confirm `root.head` contains a real `<title>` tag.
+    - The stable fix was to derive `head` and `title` from the actual page/layout tree (`getHeadSnapshot`) on the server, then sync `document.title` from that payload on the client.
+
+6. **Best comparison target**
+    - The extracted editorial UI originally worked in `playwriter/website`.
+    - When Hydration breaks in Holocron, compare:
+        - loaded browser resources
+        - presence of `client-package-proxy` requests
+        - React markers on TOC DOM
+        - startup browser errors / unhandled rejections
+
+## Dev servers
+
+The user-facing apps wrap their dev server with `tuistory --` in `package.json`. Just run `pnpm dev` from the package folder (e.g. `pnpm --dir example dev`) — agents get a background session, humans get auto-attached, and a running session is reused instead of fighting over ports. Inspect or control a session with `tuistory read -s x`, `tuistory -s x wait "/local/i"`, `tuistory -s x restart`. Never stop a session started by someone else unless asked.
+
+The `integration-tests` fixtures do NOT use tuistory — their e2e harness spawns Vite directly (detached process groups + log-file piping) and tuistory would interfere with teardown.
+
+## Subscriptions
+
+Holocron Pro is a per-site subscription ($99/month or $990/year). It unlocks the full AI chat model, unlimited preview deployments, and subpath hosting (`--base-path`). Free sites get one trial deployment and a limited AI model. See https://holocron.so/docs/pricing for details.
+
+Subscribe a project from the CLI:
+
+```bash
+# Interactive (prompts for project and interval)
+holocron subscribe
+
+# Non-interactive
+holocron subscribe --project <projectId> --interval yearly
+```
+
+Check subscription status (works with both session auth and `HOLOCRON_KEY`):
+
+```bash
+holocron subscription status --project <projectId>
+```
+
+The `subscribe` command creates a Stripe Checkout session via `POST /api/v0/subscriptions/checkout` and opens it in the browser. If the project already has an active subscription, it opens the Stripe billing portal instead.
+
+## Deployments
+
+**Never deploy unless the user explicitly asks to deploy.** Do not deploy after making changes, fixing bugs, or finishing a task. Wait for the user to say "deploy" or similar.
+
+**Exception: always deploy after an npm release.** When publishing a new version of `@holocron.so/vite` or `@holocron.so/cli` via the `/changepub` workflow, deploy preview and production immediately after the npm publish + git tag + GitHub release steps. The website must always run the latest published version.
+
+When deploying, **always deploy preview first, then production.** Never go straight to production.
+
+```bash
+# 1. Deploy preview (runs migration + build + deploy)
+pnpm --dir website deployment
+
+# 2. Verify preview works (load the page, check logs)
+
+# 3. Deploy production (runs migration + build + deploy)
+pnpm --dir website deployment:prod
+```
+
+If the preview migration or deploy fails, **stop**. Do not continue to production.
+
+The `deployment` and `deployment:prod` scripts run the D1 migration before building and deploying. If migration fails, the `&&` chain stops and the deploy never happens.
+
+## Deploy security — githubOwner/githubRepo are OIDC-only
+
+The `project.githubOwner` and `project.githubRepo` columns **must only be set from verified GitHub Actions OIDC JWT claims** (the `repository` claim in `verifyGitHubOidc`). These fields derive the hosting subdomain (`{repo}-{owner}-site.holocron.so`), so accepting them from unverified sources (request body, query params, user input) would let anyone hijack another project's URL.
+
+Never add API endpoints, CLI flags, or project-update routes that accept `githubOwner`/`githubRepo` from the caller. The only write path is `upsertProjectForOidc` in `api.ts`, which gets owner/repo from the verified JWT's `repository` claim. If a future feature needs to change these fields (e.g. repo transfer), it must re-verify ownership via a fresh OIDC token or equivalent proof.
+
+## Secrets management — always use sigillo
+
+All secrets must be managed through **sigillo**. Never hardcode secrets, never read `.env` files directly. Load the `sigillo` skill before any secrets-related work. Run apps with `sigillo run -- pnpm dev` to inject secrets as env vars. Never read secret values into agent context.
+
+## spiceflow
+
+holocron docs website generator uses spiceflow deeply. I am also the author of spiceflow so if there is any issues there and we need to change code there clearly say so and create a plan and present it to me. the spiceflow source code can be downloaded with chamber to be read, then you can use the kimaki cli to find the source code to modify after plan is approved
+
+## Always build after changes
+
+After ANY change to `vite/src/`, always run `pnpm --dir vite build` before verifying the result. The example app, chat-widget-example, integration tests, and all consumers import from `dist/`, not from source. If you skip the build, your changes won't be visible.
+
+```bash
+pnpm --dir vite build
+```
+
+### integration-tests fixture architecture
+
+The `integration-tests/` package is organized as a set of **fixtures**, one per configuration shape. Each fixture is a self-contained mini-site with its own `docs.json`, `docs.jsonc`, or `holocron.jsonc` + `pages/`, and its own matching test directory. Each fixture exercises a different permutation of Holocron config fields so we can cover every config shape a user might actually write.
+
+```
+integration-tests/
+├── fixtures/
+│   ├── basic/                # navigation: [{group, pages}] shorthand
+│   │   ├── holocron.jsonc
+│   │   └── pages/*.mdx
+│   ├── tabs/                 # navigation.tabs with groups + external link tabs
+│   │   ├── holocron.jsonc
+│   │   └── pages/*.mdx
+│   └── <name>/               # one folder per config variation
+├── e2e/
+│   ├── basic/                # tests for the basic fixture
+│   │   ├── basic.test.ts
+│   │   └── config-hmr.test.ts
+│   └── tabs/                 # tests for the tabs fixture
+│       └── tabs.test.ts
+├── scripts/
+│   ├── fixtures.ts           # discovers fixtures/* subdirs with a config file
+│   └── build-fixtures.ts     # runs `vite build` once per fixture
+├── vite.config.ts            # shared by every fixture
+└── playwright.config.ts      # one webServer + one project per fixture
+```
+
+**How it works**: `scripts/fixtures.ts` walks `fixtures/` and returns every subdirectory containing `docs.json`, `docs.jsonc`, or `holocron.jsonc`. `playwright.config.ts` allocates one free port per fixture (persisted via `E2E_PORT_<NAME>` env vars so re-imports get stable ports), then spawns one webServer per fixture (via `vite <fixtureRoot> --config vite.config.ts --port <N>` in dev, or `node <fixtureRoot>/dist/rsc/index.js` in build mode) and one Playwright project per fixture with `testDir: e2e/<name>` and `use.baseURL: http://localhost:<N>`.
+
+Tests use Playwright's `request` fixture (not raw `fetch()`) so per-project `baseURL` is picked up automatically.
+
+Do not add brittle tests that hardcode visual constants like pixel gaps, widths, heights, or exact layout token values. They test implementation details, add maintenance noise, and make harmless design tweaks harder. Prefer tests that validate user-visible behavior or real regressions.
+
+**When you hit a config bug — add a fixture**: if a user reports that some combination of `navigation`, `navbar`, `anchors`, `redirects`, `footer.socials`, `logo`, or any other config fields misbehaves, add a new fixture under `fixtures/<descriptive-name>/` with the minimal reproduction config + MDX pages, add a matching `e2e/<name>/<name>.test.ts`, reproduce the bug as a failing test, then fix the bug in `vite/src/`.
+
+**Adding a fixture, step by step**:
+
+1. Create `fixtures/<name>/docs.json` (or `docs.jsonc` / `holocron.jsonc`)
+2. Create `fixtures/<name>/pages/*.mdx` with whatever pages the config references
+3. Create `e2e/<name>/<name>.test.ts` with assertions on the rendered output
+4. Done — `playwright.config.ts` discovers the fixture automatically. No other changes needed.
+
+**Running tests**:
+
+**Always run a single fixture** to save time. Running all fixtures spins up many Vite servers and is slow. Only run the full suite before merging or when asked.
+
+```bash
+# Run one fixture (preferred — fast, focused)
+pnpm --dir integration-tests test-e2e --project=basic
+
+# Other examples
+pnpm --dir integration-tests test-e2e --project=tabs
+pnpm --dir integration-tests test-e2e --project=realworld-polar
+```
+
+- `pnpm test-e2e` — runs every fixture in dev mode (one Vite server per fixture)
+- `pnpm test-e2e-start` — builds every fixture, runs every fixture in prod mode
+- `pnpm test-e2e --project=<name>` — runs one specific fixture
+- `HOLOCRON_DEPLOY_E2E=1 HOLOCRON_PREVIEW_KEY=holo_xxx pnpm test-deploy-preview` from `integration-tests/` — deploys the basic fixture to `preview.holocron.so` and verifies the real preview hosting worker. This is a live external-service test, so it is skipped unless the env vars are set. It must cover page load, successful CSS network requests, and client-side navigation on the deployed `*-site-preview.holocron.so` URL.
+
+**Checking bundle sizes**:
+
+Run a fixture build with visualizer enabled, then sum JS files in each build output:
+
+```bash
+pnpm --dir vite build
+ANALYZE_BUNDLE=1 pnpm --dir integration-tests fixtures:build realworld-polar
+RUN=integration-tests/fixtures/realworld-polar/.e2e-dist/<latest-run>
+node --input-type=module -e "import fs from 'node:fs';import path from 'node:path';function walk(d,a=[]){for(const e of fs.readdirSync(d,{withFileTypes:true})){const p=path.join(d,e.name);e.isDirectory()?walk(p,a):a.push(p)}return a}for(const env of ['rsc','ssr','client']){const files=walk(path.join(process.env.RUN,env)).filter(p=>/\.(mjs|js)$/.test(p));const size=files.reduce((n,p)=>n+fs.statSync(p).size,0);console.log(env,(size/1024/1024).toFixed(2),'MiB',files.length,'js files')}"
+```
+
+Example output:
+
+```txt
+rsc 7.56 MiB 301 js files
+ssr 2.17 MiB 9 js files
+client 3.82 MiB 18 js files
+```
+
+**Playwright waits**: avoid fixed sleeps like `page.waitForTimeout(2000)` in integration tests. Prefer condition-based waits such as `expect(...).toBeVisible()`, `page.waitForLoadState('networkidle')`, `expect.poll(...)`, or a concrete DOM/state change tied to the behavior under test.
+
+## takumi
+
+takumi is the library used to generate images for example for og images
+
+if needed read docs with `curl https://takumi.kane.tw/llms-full.txt`
+
+
+## diagram-fix tests — `'\n' +` prefix for inline snapshots
+
+`cli/src/diagram-fix.test.ts` requires all `.toMatchInlineSnapshot()` calls to use the `'\n' + ` prefix so multiline diagram snapshots start on a fresh line and stay visually aligned with the box-drawing characters. See the comment at the top of the file.
+
+**Every test must use `.toMatchInlineSnapshot()` on the full fixed output.** Never use assertion-style checks like `expect(fixed[1]).not.toBe(input[1])` or `expect(issues).toEqual([])` alone. The inline snapshot is the primary assertion; it lets you see the actual corrected diagram at a glance. Additional assertions (like `issues.toEqual([])`) are fine as supplementary checks alongside the snapshot.
+
+**vitest -u breaks this convention.** When you run `vitest -u` to update snapshots, it replaces the `'\n' + \`` format with a bare backtick. You must write the snapshot content manually with the `'\n' + \`` prefix. Never use `vitest -u` on this file; instead, run tests once to see the expected output in the diff, then manually write the snapshot with the correct format.
+
+```ts
+// correct format
+expect(fixed.join('\n')).toMatchInlineSnapshot('\n' + `
+  "┌──────┐
+  │ text │
+  └──────┘"
+`)
+```
+
+## testing remark plugins
+
+remark plugins are very useful to change the AST of the mdx, for example to convert <img> tags into our own image component with support for placeholder and static non layout shift size props.
+
+another use case is to add a compat layer to support Mintlify patterns
+
+to test remark plugins use vitest tests with inline snapshots, input is mdx string and output should be mdx string too. see existing tests for examples
+
+## mdxJsxFlowElement vs mdxJsxTextElement (remark plugin pitfall)
+
+MDX has two JSX node types in the mdast tree:
+
+- **`mdxJsxFlowElement`** — block-level. The MDX parser wraps bare text children in `<p>` nodes. Use for containers (AccordionGroup, Tabs, Aside, …).
+- **`mdxJsxTextElement`** — inline/phrasing-level. Text children stay inline with no `<p>` wrapping. Use for leaf wrappers whose children are purely inline (Heading, Badge, …).
+
+**Problem with flow elements for headings:** safe-mdx's P component adds `editorial-prose` class to paragraph children. If a heading is a flow element, its text gets wrapped in P, making heading text look like body text.
+
+**Solution — three-part fix:**
+
+1. **Remark plugin** (`remark-headings.ts`): emit `<Heading>` as `mdxJsxTextElement` via `createElement({ type: 'text' })`. This keeps heading text inline in the AST.
+
+2. **Serialization** (`normalize-mdx.ts`): text elements at root level get serialized inline (no newlines), which breaks re-parsing when adjacent to flow siblings. Add `remarkMarkAndUnravel` (from safe-mdx) + `remarkPromoteRootTextElements` to the normalize pipeline. These promote standalone text elements to flow BEFORE serialization, so the output has proper block-level formatting.
+
+3. **Rendering** (`mdx-components-map.tsx`): even after promotion to flow, the MDX parser wraps flow element text in paragraph nodes (`[paragraph → [text]]`). The `renderNode` callback intercepts `<Heading>` flow elements and **unwraps** paragraph children before passing them to `SectionHeading`.
+
+**Key insight:** `remarkMarkAndUnravel` (from `safe-mdx/parse`) promotes `mdxJsxTextElement` nodes to `mdxJsxFlowElement` when they're alone in a paragraph. It only changes the node `type` — it does NOT wrap the phrasing children in a paragraph node. This means single-line `<Note>text</Note>` ends up with bare phrasing children `[text]` while multi-line `<Note>\ntext\n</Note>` gets `[paragraph → [text]]` from the parser. The two forms render differently.
+
+**Important:** in `normalizeMdx`, `remarkMarkAndUnravel` runs AFTER serialization — the serialized string keeps text elements inline (avoiding `mdxToMarkdown`'s blank-line corruption), while the returned mdast tree has promoted flow elements for heading extraction and section splitting.
+
+**Flow elements always get `<p>` wrappers on their text children.** The MDX parser wraps bare text inside any `mdxJsxFlowElement` in paragraph nodes — this is part of the content model, not a bug. So even after `remarkMarkAndUnravel` promotes a text element to flow, the text inside `<Heading>Getting Started</Heading>` becomes `[paragraph → [text "Getting Started"]]` in the parsed tree. `remarkMarkAndUnravel` only removes paragraphs that **wrap** JSX text elements (paragraph → [mdxJsxTextElement]) — it does NOT touch paragraphs **inside** a flow element's children (those contain plain `text` nodes, not JSX elements). Any `renderNode` handler for a flow element whose children should be inline must unwrap these paragraphs manually.
+
+### MDX authoring rule: always use multi-line form for container components
+
+When writing MDX content inside container components (Callout, Note, Warning, Info, Tip, Check, Danger, Aside, Accordion, Steps, Card, Expandable, Panel, Frame, Prompt, etc.), **always put content on its own line** with a newline after the opening tag and before the closing tag:
+
+```mdx
+<!-- ✅ CORRECT — parser creates proper paragraph children -->
+<Note>
+Use `Note` for neutral supporting information.
+</Note>
+
+<!-- ❌ WRONG — phrasing children without paragraph wrapper -->
+<Note>Use `Note` for neutral supporting information.</Note>
+```
+
+Single-line form produces bare phrasing children (no `<P>` wrapper, no `editorial-prose` styling). Multi-line form gets proper paragraph wrapping from the MDX parser. This is a parser-level limitation — the two forms produce different ASTs.
+
+### Aside must always contain a component
+
+`<Aside>` is positioning-only with no visual frame. Always wrap content in `<Note>`, `<Tip>`, `<Info>`, `<Warning>`, `<Callout>`, or another framed component. Bare text in an Aside looks like random floating text. Exception: `<Aside full>` with `<TableOfContentsPanel />`.
+
+### New MDX pages must be added to docs.json navigation
+
+After creating a new `.mdx` file, add its slug to `docs.json` (or `docs.jsonc` / `holocron.jsonc`) navigation. Pages not in the navigation tree won't appear in the sidebar. Read the existing structure and pick the best tab, group, and position within reading order.
+
+## AI chat architecture
+
+The AI chat runs entirely via the **Vercel AI SDK** (`ai` package) + **Cloudflare Workers AI** (Kimi K2.5). There is no separate agent service; the gateway route handles everything.
+
+### How the chat flows
+
+1. Browser sends `{ message, modelMessages, currentSlug }` to `/holocron-api/chat`
+2. `app-factory.tsx` proxy builds a system prompt with docs context (site name, current page, page index) and forwards to `holocron.so/api/chat`
+3. Gateway (`website/src/gateway.ts`) validates the optional `holo_xxx` API key, checks per-org usage via the `UsageCounter` Durable Object, fetches docs from `docs.zip`, creates the bash tool via `createChatBashTool()`, and calls `streamText()` from the `ai` package against Cloudflare Workers AI
+4. AI SDK chunks (`text-delta`, `tool-call`, `tool-result`) are streamed back as typed `HolocronChatChunk` SSE events
+5. Text parts are RSC-rendered via `safe-mdx` (`ChatRenderNodes`)
+
+### Key files
+
+| Layer | File | Purpose |
+|-------|------|---------|
+| **Widget** | `vite/src/chat/chat-widget.tsx` | Top-level component + shadow DOM host (Motion layout morph) |
+| **Widget** | `vite/src/chat/use-chat-widget.ts` | Control hook (open/close/clear) |
+| **State** | `vite/src/chat/chat-store.ts` | Zustand: messages, UI state, abort controller |
+| **State** | `vite/src/chat/chat-widget-store.ts` | Config: API URL, current slug, portal target |
+| **Network** | `vite/src/chat/chat-submit.ts` | Fetch + RSC stream decoding |
+| **UI** | `vite/src/chat/chat-drawer.tsx` | Slide-in panel, message list, input |
+| **UI** | `vite/src/chat/chat-message.tsx` | Message/part rendering, tool previews |
+| **Integration** | `vite/src/components/holocron-chat-bridge.tsx` | Connects to holocron's app data |
+| **Rendering** | `vite/src/lib/chat-render.tsx` | mdast to JSX via editorial components |
+| **Stream** | `vite/src/lib/chat-stream.ts` | UIMessageChunks → ChatParts, error/abort handling, turn outcome |
+| **Gateway** | `website/src/gateway.ts` | Main chat route: auth, rate limit, AI SDK streaming |
+| **Tool** | `website/src/chat-bash-tool.ts` | Creates bash tool + skill filesystem |
+| **Proxy** | `vite/src/app-factory.tsx` (lines ~1515-1710) | Holocron's `/holocron-api/chat` endpoint |
+| **Persistence** | `website/src/chat-session-do.ts` | ChatSessionDO: one DO per site, one row per conversation |
+| **Restore** | `vite/src/lib/chat-restore.tsx` | Stored ModelMessages → ChatMessages with server-rendered JSX |
+
+### Stream conversion — never lose an answer
+
+`vite/src/lib/chat-stream.ts` converts the gateway's UIMessageChunk stream into ChatParts. It is deliberately defensive because every failure here looks identical to the user: an empty assistant bubble.
+
+- **Text is buffered** and rendered as one markdown block, so it MUST be flushed on every exit path (normal end of stream and the catch). A stream that ends without `text-end` used to discard the whole answer. It cannot be flushed in the `finally`: once a consumer calls `return()` the generator can no longer yield, which is also why a real Stop button cannot be rescued.
+- **The AI SDK never throws on provider failures.** `toUIMessageStream()` converts them into `{ type: 'error', errorText }` chunks and masks the message as "An error occurred." unless you pass `onError`. Ignoring unknown chunk types therefore swallowed every provider error.
+- **Notices carry `severity` AND `display`, and they are independent.** `severity` is visual treatment only (`error` red, `info` yellow, `promotion` primary). `display` is the repetition policy: `once` is for standing content re-sent every turn (the Holocron promotion) and de-duplicates by code; `always` (the default) is for per-turn outcomes — rate limits, credit limits, errors — which must render every time or that turn looks like it hung. Never de-duplicate by severity: the promotion could then hide real failures.
+- **A TERMINAL notice counts as output, a standing advisory does not.** A rate-limited or credit-limited turn answers with a notice and nothing else, so treating that as "empty" appends a bogus "AI model unavailable" error on top of it. The `display: 'once'` advisory is different: the gateway re-sends it every turn for free sites, so counting it would mark every empty turn as answered — and since the widget renders it once, the second empty turn would show nothing at all.
+- **Reasoning is never shown.** Deltas are counted for logs only. A reasoning-only turn is treated as no answer.
+- **Scratchpad tags models emit (`<think>`, `<thinking>`, …) are registered as null-rendering components** in `chat-render.tsx` (`DROPPED_CHAT_TAGS`); answer wrappers (`<answer>`, `<response>`, …) are registered as passthroughs (`PASSTHROUGH_CHAT_TAGS`) because they are not valid HTML and safe-mdx would drop them. Never strip either from the text with regexes: MDX already parses them, so components need no code-fence carve-outs and cannot eat a real answer. When the whole text renders to nothing, `renderMarkdownTextPart` returns `null` and the turn is reported as having no answer.
+- **That "no answer" notice is UI-only and never persisted**, so `modelMessagesToChatMessages` recreates it. Without that, reloading a conversation whose last turn rendered nothing drops the assistant message entirely and leaves a question with no reply.
+- Each turn logs `[holocron:chat] turn …` with `textChars`, `sawTextEnd`, tool counts and timings. `textChars=0` is the signature of a lost answer.
+
+On the gateway side (`website/src/gateway.ts`) every turn emits one Strada product event `chat.turn` via `trackProduct()` from an outer `finally` (so browser disconnects — the turns worth seeing — are logged and billed too), and a turn with nothing renderable calls `captureException`. Never attach the prompt. Raw provider messages go to Strada only; the browser gets curated text from `safeProviderMessage()`. Query lost answers with:
+
+```sql
+SELECT Timestamp, LogAttributes['custom.model'], LogAttributes['custom.finishReason']
+FROM otel_logs
+WHERE LogAttributes['event.name'] = 'chat.turn'
+  AND LogAttributes['custom.renderable'] = 'false'
+ORDER BY Timestamp DESC LIMIT 50
+```
+
+### Bash tool
+
+The gateway creates a single `bash` tool via `createChatBashTool()`. It runs commands in an in-memory virtual filesystem containing all the site's documentation files (fetched from `docs.zip`). The model uses `grep`, `cat`, etc. to search docs and answer questions. Skills can be loaded as remote `SKILL.md` files into the filesystem.
+
+### Persistent chat sessions
+
+Conversations survive page refreshes. The vite proxy mints a session id (`chs_` + 43 base64url chars, 256-bit CSPRNG bearer token) on the first chat POST and stores it in a first-party cookie (`holocron_chat`, JS-readable, not httpOnly) so the client can detect an existing session on page load. Cross-origin `ChatWidget` embeds get the id via a `{ type: 'session' }` stream chunk, keep it in localStorage, and send it back as the `x-holocron-chat-session` header.
+
+The gateway persists a **snapshot** of the full ModelMessage history (system prompt excluded) after each turn into `ChatSessionDO` — **one DO per docs site** (`idFromName(siteKey)`, where siteKey is `project:{projectId}` when authenticated or `host:{docsHost}` otherwise), one SQLite row per conversation. Per-site DO enables session caps (500, oldest evicted), a single daily prune alarm (30-day TTL), and structural cross-site isolation: a leaked session id can never be resolved through another site's DO.
+
+Restore is eager: `HolocronChatBridge` calls `ensureSessionRestored()` on mount when `hasExistingSession()` returns true (cookie or localStorage has a session id). The singleton promise in `chat-submit.ts` is also **awaited inside `submitChat`** — never remove that await, or a submit right after refresh would snapshot only the new turn and wipe the stored history. The restore endpoint (`GET /holocron-api/chat/session`) re-renders stored messages server-side via `modelMessagesToChatMessages()` and returns them as a federation payload, so restored messages carry the same JSX as live-streamed ones. `POST /holocron-api/chat/session/clear` deletes the conversation and expires the cookie (kept for explicit deletion; the drawer's "New chat" button does NOT call it — it only rotates the session id locally via `startNewChat()` so the old conversation stays reachable).
+
+The DO RPC methods exchange the messages as a **JSON string** (`modelMessagesJson`) — workerd RPC type mapping rejects `unknown[]` returns (non-Serializable), collapsing the stub return type to `never`.
+
+### Session list + titles
+
+The drawer top bar hosts a session select (`chat/chat-session-select.tsx`, Radix select) listing past sessions. The list is **client-only metadata** in localStorage (`chat/chat-sessions.ts`, keyed per site by host + chat API path, capped at 30, mirrored into `chatWidgetStore.sessions` for reactivity); the server keeps only the ModelMessage snapshots. On the first turn of a session the gateway runs a one-shot `generateText` on the cheapest model and yields a `{ type: 'title' }` chunk after the stream; until it arrives the select shows a truncated first-message preview. Switching sessions (`switchChatSession`) aborts generation, points the id (store + cookie/localStorage), and re-runs the restore; `startNewChat` disables restore with a resolved promise.
+
+## Changesets
+
+This repo uses changesets for versioning. Load the `changesets` skill and add a `.changeset/*.md` file for every user-facing change (new feature or fix) to a public package. See `.changeset/readme.md` for conventions.

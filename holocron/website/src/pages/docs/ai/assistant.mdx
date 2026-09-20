@@ -1,0 +1,127 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the AI assistant guide from @/vite/src/schema.ts, @/vite/src/components/sidebar-assistant.tsx, @/vite/src/components/holocron-chat-bridge.tsx, and @/vite/src/app-factory.tsx.
+title: AI Assistant
+description: Built-in chat assistant for your docs site.
+icon: message-circle
+---
+
+# AI Assistant
+
+Holocron includes a built-in AI chat assistant. Users can ask questions about your documentation and get answers based on the docs content. By default it appears as a **sidebar widget**. Set `assistant.display` to `floating` to show a bottom pill instead.
+
+To embed the chat on an **external website** (outside your docs site), see the [Chat Widget](./chat-widget.mdx) page.
+
+## Enabling and disabling
+
+The assistant is enabled by default. To disable it:
+
+```json
+{
+  "assistant": {
+    "enabled": false
+  }
+}
+```
+
+When disabled, the sidebar widget, chat drawer, and mobile "Ask AI" button are hidden. The chat route still exists and returns `404 Assistant is disabled`.
+
+## Display location
+
+By default the assistant sits in the **right sidebar**. Set `assistant.display` to `floating` to use the same bottom pill as the [embeddable ChatWidget](./chat-widget.mdx) instead:
+
+```json
+{
+  "assistant": {
+    "display": "floating"
+  }
+}
+```
+
+| Value      | Trigger                                                      |
+| ---------- | ------------------------------------------------------------ |
+| `sidebar`  | Ask AI widget in the right aside (default)                   |
+| `floating` | Bottom-center textarea pill that morphs into the chat drawer |
+
+Floating mode hides the sidebar widget and the mobile "Ask AI" button. The pill is the trigger on every screen size.
+
+[Compact layout](../customize/layout.mdx) in `docs.json` defaults to **floating** unless you set `assistant.display` yourself. Compact removes the right aside, so the sidebar widget cannot show.
+
+## Suggested prompts
+
+The empty chat screen shows a short pitch and up to three **suggestion links**. Clicking a suggestion submits it as a prompt. Customize them with `assistant.suggestions`:
+
+```json
+{
+  "assistant": {
+    "suggestions": [
+      "What is Acme?",
+      "Show me the quickstart",
+      "Search the docs for ..."
+    ]
+  }
+}
+```
+
+A suggestion ending with `...` is treated as **open-ended**: clicking it fills the chat input with the text (dots removed) and focuses it, so the user can complete the query before sending.
+
+When `suggestions` is omitted, three defaults based on the site name are shown:
+
+- `What is {site name}?`
+- `Guide me through the pages I should read first`
+- `Search the docs for ...`
+
+## Support email
+
+Set **`assistant.supportEmail`** so the assistant can send people to a human when the docs are not enough:
+
+```json
+{
+  "assistant": {
+    "supportEmail": "support@example.com"
+  }
+}
+```
+
+When this is set, the chat system prompt tells the model to share that address if the user wants to **talk to a human**, or if the question cannot be answered from the docs. The assistant answers from the docs first and does not invent other support channels.
+
+This address is also present in the page HTML, so use an inbox with spam filtering.
+
+<Aside>
+<Tip>
+Use a real inbox that your team reads. The assistant will quote this address in chat replies.
+</Tip>
+</Aside>
+
+## How it works
+
+The assistant uses the hosted Holocron AI gateway to process questions. When deployed, the docs app sends the current page plus either inline docs in local development or a `docs.zip` URL in production, then streams the answer back into the chat UI.
+
+Hosted chat uses Cloudflare Workers AI. Authenticated sites send `HOLOCRON_KEY`; unauthenticated requests use a temporary fallback with stricter IP rate limits. The default model is GLM 4.7 Flash.
+
+## Table of contents in the sidebar
+
+With `display: "sidebar"` (the default), the AI assistant widget occupies the right sidebar. If you prefer a traditional **table of contents** instead (or alongside the widget), add the `TableOfContentsPanel` component to your page:
+
+```mdx
+<Aside full>
+  <TableOfContentsPanel />
+</Aside>
+```
+
+This renders a sticky "On this page" panel with heading links and active-state highlighting as the user scrolls. When the sidebar AI widget is enabled, it appears above the TOC panel automatically. With `display: "floating"` or `enabled: false`, the TOC panel takes the full sidebar.
+
+See the [Table of Contents component page](/docs/components/table-of-contents) for all props and usage patterns.
+
+## What gets disabled
+
+Setting `enabled: false` removes:
+- The sidebar chat widget
+- The chat drawer overlay
+- The mobile "Ask AI" floating button
+- Useful responses from `/holocron-api/chat`; the endpoint returns 404 while disabled
+
+## Skill loading
+
+The hosted gateway can accept remote skill URLs, but the built-in docs assistant does not expose a `docs.json` setting for them yet. Today it answers from the current docs content and the docs zip payload.

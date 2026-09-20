@@ -1,0 +1,139 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the pages and frontmatter guide from @/vite/src/lib/page-frontmatter.ts and @/vite/src/frontmatter-schema.json.
+  Cover slugs, title, sidebarTitle, prompt, description, icon, local SVG page icons, mode, and OG fields.
+title: Pages
+description: Frontmatter fields, page slugs, sidebar titles, icons, tags, and metadata options for MDX documentation pages.
+icon: file-text
+---
+
+# Pages
+
+Every page in a Holocron site is an **MDX file** (.mdx or .md). Pages are discovered through the navigation config in `docs.json`, not by convention.
+
+## Page slugs
+
+The slug of a page is its file path relative to the pages directory, without the extension:
+
+| File path             | Slug              |
+| --------------------- | ----------------- |
+| `index.mdx`           | `index`           |
+| `getting-started.mdx` | `getting-started` |
+| `guides/auth.mdx`     | `guides/auth`     |
+| `api/users.mdx`       | `api/users`       |
+
+Reference these slugs in your `docs.json` navigation:
+
+```json
+{
+  "navigation": [
+    {
+      "group": "Guides",
+      "pages": ["getting-started", "guides/auth"]
+    }
+  ]
+}
+```
+
+## Frontmatter
+
+Every page can have YAML frontmatter at the top. Add `$schema` for editor
+autocompletion and validation:
+
+```mdx
+---
+$schema: https://holocron.so/frontmatter.json
+title: Authentication
+description: How to set up auth in your app.
+icon: lucide:lock
+sidebarTitle: Auth
+tag: New
+prompt: |
+  Write the authentication guide from @/src/auth/.
+---
+```
+
+### Supported fields
+
+| Field                 | Type      | Description                                                                                                                                                                                                                     |
+| --------------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `$schema`             | string    | JSON Schema URL. Use `https://holocron.so/frontmatter.json` for editor validation                                                                                                                                               |
+| `title`               | string    | Page title, used in sidebar and `<title>` tag                                                                                                                                                                                   |
+| `prompt`              | string    | Original generation recipe for [Holocron Maintain](/maintain). Use `@/path` and `@https://` references                                                                                                                          |
+| `description`         | string    | SEO description and subtitle                                                                                                                                                                                                    |
+| `icon`                | string    | Sidebar icon. Library name, prefixed name (`lucide:lock`), emoji, remote URL, or root-absolute SVG path (`/icons/vercel.svg`)                                                                                                   |
+| `iconColor`           | string    | Color for the sidebar icon. Named colors (`green`, `blue`, `red`, `purple`, `orange`, `yellow`, `pink`) or any CSS color string                                                                                                 |
+| `sidebarTitle`        | string    | Short label for the sidebar, letting `title` be longer for SEO                                                                                                                                                                  |
+| `sidebarToc`          | boolean   | Show or hide the page's section headings under its sidebar entry. Defaults to shown, unless the page renders a [`TableOfContentsPanel`](/docs/components/table-of-contents)                                                     |
+| `tag`                 | string    | Badge label next to the page title in sidebar                                                                                                                                                                                   |
+| `mode`                | string    | Page layout mode: `"default"`, `"compact"`, `"center"`, or `"custom"`. Compact hides the sidebar assistant. Site-level compact in `docs.json` defaults `assistant.display` to `floating`. See [Layout](../customize/layout.mdx) |
+| `maxWidth`            | number    | Maximum content width in pixels. Useful with `mode: "custom"`                                                                                                                                                                   |
+| `deprecated`          | boolean   | Marks the page as deprecated                                                                                                                                                                                                    |
+| `api`                 | string    | Mintlify API page label like `GET /users`                                                                                                                                                                                       |
+| `hidden`              | boolean   | Hides the page from navigation and adds `noindex`                                                                                                                                                                               |
+| `noindex`             | boolean   | Keeps the page visible but adds robots `noindex`                                                                                                                                                                                |
+| `cache-control`       | string    | Custom response cache header                                                                                                                                                                                                    |
+| `keywords`            | string\[] | Additional keywords for search                                                                                                                                                                                                  |
+| `robots`              | string    | Custom robots meta value                                                                                                                                                                                                        |
+| `og:title`            | string    | Open Graph title override                                                                                                                                                                                                       |
+| `og:description`      | string    | Open Graph description                                                                                                                                                                                                          |
+| `og:image`            | string    | Open Graph image URL                                                                                                                                                                                                            |
+| `twitter:title`       | string    | Twitter card title                                                                                                                                                                                                              |
+| `twitter:description` | string    | Twitter card description                                                                                                                                                                                                        |
+| `twitter:image`       | string    | Twitter card image                                                                                                                                                                                                              |
+
+## Open Graph image
+
+By default, Holocron **auto-generates an OG image** for every page using the page title, description, and site favicon. This works out of the box with no configuration needed.
+
+To use a **custom image** instead, set `og:image` in the page frontmatter. Both absolute URLs and relative paths work; relative paths are resolved to absolute URLs automatically.
+
+```mdx
+---
+$schema: https://holocron.so/frontmatter.json
+title: Getting Started
+"og:image": /images/getting-started-og.png
+"og:image:width": 1200
+"og:image:height": 630
+---
+```
+
+Place the image file in your `public/` folder (e.g. `public/images/getting-started-og.png`). The recommended size is **1200x630** pixels.
+
+You can also override the Twitter card image separately with `twitter:image`. If not set, it falls back to `og:image`.
+
+## Sidebar title
+
+Use `sidebarTitle` to show a **shorter label** in the sidebar while keeping a longer, more descriptive `title` for SEO and browser tabs.
+
+The `title` field controls the `<title>` tag, which is what Google shows in search results. Longer, keyword-rich titles rank better. But long titles make the sidebar hard to scan, so `sidebarTitle` lets you decouple the two.
+
+```mdx
+---
+$schema: https://holocron.so/frontmatter.json
+title: Authentication — Setting Up OAuth and API Keys
+sidebarTitle: Authentication
+---
+```
+
+In this example, Google sees "Authentication — Setting Up OAuth and API Keys" but the sidebar just shows "Authentication".
+
+## Local SVG page icon
+
+Library names, prefixed names, and emoji all work in `icon`. For a **brand mark**, put an SVG in `public/` and point `icon` at the **root-absolute** path:
+
+```mdx
+---
+$schema: https://holocron.so/frontmatter.json
+title: Vercel deployments
+sidebarTitle: Vercel
+icon: /icons/vercel.svg
+---
+```
+
+Place the file at `public/icons/vercel.svg`. Use **`currentColor`** for `fill` and `stroke` so the mark matches Lucide icons in the sidebar. See [Icons](../customize/icons.mdx) for the full reference.
+
+## The index page
+
+The page with slug `index` renders at `/`. Every other slug maps directly to a URL path (e.g. `guides/auth` renders at `/guides/auth`).

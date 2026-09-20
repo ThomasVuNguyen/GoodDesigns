@@ -1,0 +1,705 @@
+---
+title: Playwriter
+description: CLI & MCP for agent browser automation
+icon: home
+---
+
+<Above className='my-16'>
+
+<h1 className='text-2xl my-3 font-semibold text-center'>playwriter</h1>
+
+<p className='text-center'>CLI & MCP for agent browser automation</p>
+
+</Above>
+
+<Aside>
+
+<Tip>
+If you like **Playwriter** please
+[star on GitHub](https://github.com/remorses/playwriter). It helps give more visibility to the project!
+</Tip>
+
+</Aside>
+
+A Chrome extension that let your agents control **your actual browser** — with
+logins, extensions, and cookies already there. No headless instance, no bot detection, no extra memory.
+
+
+<Bleed>
+<img
+  src='/screenshot@2x.png'
+  alt='Playwriter controlling Chrome with accessibility labels overlay'
+  width={1280}
+  height={800}
+/>
+</Bleed>
+
+*Your existing Chrome session. Extensions, logins, cookies — all there.*
+
+Other browser MCPs either **spawn a fresh Chrome** or give agents a fixed set of tools. New Chrome
+means no logins, no extensions, instant bot detection, and double the memory. Fixed tools mean the agent
+can't profile performance, can't set breakpoints, can't intercept network requests — it can
+only do what someone decided to expose.
+
+Playwriter gives agents the **full Playwright API** through a single `execute` tool. One
+tool, any Playwright code, no wrappers. Low context usage because there's no schema bloat from dozens of
+tool definitions. And it runs in your existing browser, so **nothing extra gets spawned**.
+
+## Trusted by developers everywhere
+
+Marquee with logo images (SVG):
+
+<Marquee duration={20} slowOnHover gap={24}>
+  <img src="/logos/acme.svg" alt="ACME" height="32" className="dark:invert" />
+  <img src="/logos/globex.svg" alt="Globex" height="32" className="dark:invert" />
+  <img src="/logos/nexus.png" alt="Nexus" height="32" />
+  <img src="/logos/initech.svg" alt="Initech" height="32" className="dark:invert" />
+  <img src="/logos/stark.svg" alt="Stark" height="32" className="dark:invert" />
+  <img src="/logos/umbrella.svg" alt="Umbrella" height="32" className="dark:invert" />
+  <img src="/logos/wayne.svg" alt="Wayne" height="32" className="dark:invert" />
+</Marquee>
+
+Marquee with icons:
+
+<Marquee duration={15} slowOnHover gap={48}>
+  <Icon icon="lucide:chrome" size={32} color="var(--muted-foreground)" />
+  <Icon icon="lucide:terminal" size={32} color="var(--muted-foreground)" />
+  <Icon icon="lucide:code" size={32} color="var(--muted-foreground)" />
+  <Icon icon="lucide:zap" size={32} color="var(--muted-foreground)" />
+  <Icon icon="lucide:shield" size={32} color="var(--muted-foreground)" />
+  <Icon icon="lucide:monitor" size={32} color="var(--muted-foreground)" />
+  <Icon icon="lucide:globe" size={32} color="var(--muted-foreground)" />
+  <Icon icon="lucide:database" size={32} color="var(--muted-foreground)" />
+</Marquee>
+
+## Blockquote
+
+> Playwriter changed the way I think about browser automation. It's not just a tool,
+> it's a paradigm shift for how agents interact with the web.
+
+## The `execute` tool
+
+One tool to rule them all. Pass any Playwright code and it runs in your browser.
+
+```ts title="automate.ts"
+import { chromium } from 'playwright'
+
+async function automateWorkflow() {
+  const browser = await chromium.connectOverCDP('http://localhost:9222')
+  const context = browser.contexts()[0]
+  const page = context.pages()[0]
+
+  // Navigate and wait for network idle
+  await page.goto('https://app.example.com/dashboard', {
+    waitUntil: 'networkidle',
+  })
+
+  // Fill in the search form
+  const searchInput = page.locator('[data-testid="search-input"]')
+  await searchInput.fill('quarterly report')
+  await searchInput.press('Enter')
+
+  // Wait for results and extract data
+  await page.waitForSelector('.results-table tbody tr')
+  const rows = await page.$$eval('.results-table tbody tr', (trs) =>
+    trs.map((tr) => ({
+      title: tr.querySelector('td:nth-child(1)')?.textContent?.trim(),
+      date: tr.querySelector('td:nth-child(2)')?.textContent?.trim(),
+      status: tr.querySelector('td:nth-child(3)')?.textContent?.trim(),
+    })),
+  )
+
+  console.log(`Found ${rows.length} results`)
+  for (const row of rows) {
+    console.log(`  ${row.title} — ${row.date} — ${row.status}`)
+  }
+
+  // Click the first result and download
+  await page.locator('.results-table tbody tr:first-child a').click()
+  const [download] = await Promise.all([
+    page.waitForEvent('download'),
+    page.locator('button:has-text("Export PDF")').click(),
+  ])
+
+  const path = await download.path()
+  console.log(`Downloaded to: ${path}`)
+}
+
+automateWorkflow()
+```
+
+Here's another example without full bleed (default `bleed-right`):
+
+```ts title="scraper.ts"
+import { chromium } from 'playwright'
+
+async function scrapeData() {
+  const browser = await chromium.connectOverCDP('http://localhost:9222')
+  const context = browser.contexts()[0]
+  const page = context.pages()[0]
+
+  await page.goto('https://news.example.com')
+  const articles = await page.$$eval('article', (els) =>
+    els.map((el) => ({
+      title: el.querySelector('h2')?.textContent,
+      link: el.querySelector('a')?.href,
+      summary: el.querySelector('p')?.textContent,
+    })),
+  )
+
+  return articles.filter((a) => a.title)
+}
+
+scrapeData().then(console.log)
+```
+
+## Getting started
+
+**Four steps** and your agent is browsing.
+
+<Aside>
+
+<Info>
+**Requirements:** Chrome or Chromium installed, Node.js 18+, and a Playwriter-compatible agent (OpenCode, Cursor, Claude Code, etc).
+</Info>
+
+</Aside>
+
+### Install the extension
+
+1. Install the [Chrome extension](https://chromewebstore.google.com/detail/playwriter-mcp/jfeammnjpkecdekppnclgkkffahnhfhe)
+2. Click the extension icon on a tab — it turns green
+
+
+
+### Install CLI + skill
+
+Install the CLI, then add the skill so your agent knows the good Playwriter workflows.
+
+```bash bleed=true 
+npm i -g playwriter
+```
+
+Then install the **skill** — it teaches your agent how to use Playwriter: which
+selectors to use, how to avoid timeouts, how to read snapshots, and all available utilities.
+
+```bash bleed=true 
+npx -y skills add remorses/playwriter
+```
+
+#### First commands
+
+The extension connects your browser to a **local WebSocket relay** on
+`localhost:19988`. The CLI sends Playwright code through the relay. No remote servers, no
+accounts, nothing leaves your machine.
+
+```bash
+playwriter session new              # new sandbox, outputs id (e.g. 1)
+playwriter -e "page.goto('https://example.com')"
+playwriter -e "snapshot({ page })"
+playwriter -e "page.locator('aria-ref=e5').click()"
+```
+
+*Extension icon green = connected. Gray = not attached to this tab.*
+
+```text Wrapped prompt wrap
+Use the Playwriter skill. I have a remote browser session open at --session remote-debug and I want you to snapshot the page, test selectors, and execute code against the live browser without restarting the workflow.
+```
+
+## Using `chrome.debugger` API
+
+Click the extension icon on a tab — it attaches via `chrome.debugger` and opens a
+WebSocket to a local relay. Your agent (CLI, MCP, or a Playwright script) connects to the same relay.
+**CDP commands flow through**; the extension forwards them to Chrome and sends responses back. No
+Chrome restart, no flags, no special setup.
+
+```diagram
+┌───────────────────────┐       WebSocket       ┌──────────────────────┐
+│ Chrome tab            │<─────────────────────>│ Local relay :19988   │
+│ extension enabled     │                       │ /extension + /cdp/id │
+└───────────┬───────────┘                       └──────────┬───────────┘
+            │ chrome.debugger                              │ Playwright CDP
+            v                                              v
+      Page DOM, network, JS                         CLI, MCP, agents
+```
+
+The relay **multiplexes sessions**, so multiple agents or CLI instances can work with the same
+browser at the same time.
+
+## Collaboration
+
+Because the agent works in **your browser**, you can collaborate. You see everything it does in
+real time. When it hits a captcha, **you solve it**. When a consent wall appears, you click
+through it. When the agent gets stuck, you disable the extension on that tab, fix things manually, re-enable
+it, and the agent picks up where it left off.
+
+You're not watching a remote screen or reading logs after the fact. You're
+**sharing a browser** — the agent does the repetitive work, you step in when it needs
+a human.
+
+## Accessibility snapshots
+
+<Aside>
+
+<Note>
+Snapshots are the **primary way** agents read pages. Only use screenshots when spatial layout matters (grids, dashboards, maps).
+</Note>
+
+</Aside>
+
+Your agent needs to **see the page** before it can act. Accessibility snapshots return every
+interactive element as text, with Playwright locators attached.
+**5–20KB instead of 100KB+** for a screenshot — cheaper, faster, and the
+agent can parse them without vision.
+
+```bash
+playwriter -e "snapshot({ page })"
+
+# Output:
+# - banner:
+#     - link "Home" [id="nav-home"]
+#     - navigation:
+#         - link "Docs" [data-testid="docs-link"]
+#         - link "Blog" role=link[name="Blog"]
+```
+
+### Search and diff
+
+Each line ends with a **locator** you can pass directly to `page.locator()`.
+Subsequent calls return a **diff**, so you only see what changed. Use `search` to
+filter large pages.
+
+```bash
+# Search for specific elements
+playwriter -e "snapshot({ page, search: /button|submit/i })"
+
+# Always print URL first, then snapshot — pages can redirect
+playwriter -e "console.log('URL:', page.url()); snapshot({ page }).then(console.log)"
+```
+
+Use snapshots as the **primary way to read pages**. Only reach for screenshots when spatial
+layout matters — grids, dashboards, maps.
+
+## Visual labels
+
+When the agent needs to understand **where things are on screen**,
+`screenshotWithAccessibilityLabels` overlays **Vimium-style labels** on every
+interactive element. The agent sees the screenshot, reads the labels, and clicks by reference.
+
+```bash
+playwriter -e "screenshotWithAccessibilityLabels({ page })"
+# Returns screenshot + accessibility snapshot with aria-ref selectors
+
+playwriter -e "page.locator('aria-ref=e5').click()"
+```
+
+Labels are **color-coded by element type**: yellow for links, orange for buttons, coral for
+inputs, pink for checkboxes, peach for sliders, salmon for menus, amber for tabs. The ref system is shared
+with `snapshot()`, so you can switch between text and visual modes freely.
+
+*Vimium-style labels. Screenshot + snapshot in one call.*
+
+## Sessions
+
+### Isolated state
+
+Run **multiple agents at once** without them stepping on each other. Each session is an
+isolated sandbox with its own `state` object. Variables, pages, and listeners persist between
+calls. Browser tabs are shared, but state is not.
+
+```bash
+playwriter session new    # => 1
+playwriter session new    # => 2
+playwriter session list   # shows sessions + state keys
+
+# Session 1 stores data
+playwriter -s 1 -e "state.users = page.$$eval('.user', els => els.map(e => e.textContent))"
+
+# Session 2 can't see it
+playwriter -s 2 -e "console.log(state.users)"  # undefined
+```
+
+### Dedicated pages
+
+Create your own page to **avoid interference** from other agents. Reuse an existing
+`about:blank` tab or create a fresh one, and store it in `state`.
+
+```bash
+playwriter -s 1 -e "state.myPage = context.pages().find(p => p.url() === 'about:blank') ?? context.newPage(); state.myPage.goto('https://example.com')"
+
+# All subsequent calls use state.myPage
+playwriter -s 1 -e "state.myPage.title()"
+```
+
+## Debugger & editor
+
+Things no other browser MCP can do. **Set breakpoints**, step through code, inspect variables at
+runtime. **Live-edit page scripts and CSS** without reloading. Full Chrome DevTools Protocol
+access, not a watered-down subset.
+
+```bash
+# Set breakpoints and debug
+playwriter -e "state.cdp = getCDPSession({ page }); state.dbg = createDebugger({ cdp: state.cdp }); state.dbg.enable()"
+playwriter -e "state.scripts = state.dbg.listScripts({ search: 'app' }); state.scripts.map(s => s.url)"
+playwriter -e "state.dbg.setBreakpoint({ file: state.scripts[0].url, line: 42 })"
+
+# Live edit page code
+playwriter -e "state.editor = createEditor({ cdp: state.cdp }); state.editor.enable()"
+playwriter -e "state.editor.edit({ url: 'https://example.com/app.js', oldString: 'const DEBUG = false', newString: 'const DEBUG = true' })"
+```
+
+Edits are **in-memory** and persist until the page reloads. Useful for toggling debug flags,
+patching broken code, or testing quick fixes without touching source files. The editor also supports
+`grep` across all loaded scripts.
+
+*Breakpoints, stepping, variable inspection — from the CLI.*
+
+## Network interception
+
+Let the agent **watch network traffic** to reverse-engineer APIs, scrape data behind JavaScript
+rendering, or debug failing requests. Captured data lives in `state` and persists across calls.
+
+```bash
+# Start intercepting
+playwriter -e "state.responses = []; page.on('response', async res => { if (res.url().includes('/api/')) { try { state.responses.push({ url: res.url(), status: res.status(), body: await res.json() }); } catch {} } })"
+
+# Trigger actions, then analyze
+playwriter -e "page.click('button.load-more')"
+playwriter -e "console.log('Captured', state.responses.length, 'API calls'); state.responses.forEach(r => console.log(r.status, r.url.slice(0, 80)))"
+
+# Replay an API call directly
+playwriter -e "page.evaluate(async (url) => { const res = await fetch(url); return res.json(); }, state.responses[0].url)"
+```
+
+**Faster than scraping the DOM.** The agent captures the real API calls, inspects their schemas,
+and replays them with different parameters. Works for pagination, authenticated endpoints, and anything behind
+client-side rendering.
+
+## Screen recording
+
+Have the agent **record what it's doing** as MP4 video. The recording uses
+`chrome.tabCapture` and runs in the extension context, so it
+**survives page navigation**.
+
+```bash
+# Start recording
+playwriter -e "startRecording({ page, outputPath: './recording.mp4', frameRate: 30 })"
+
+# Navigate, interact — recording continues
+playwriter -e "page.click('a'); page.waitForLoadState('domcontentloaded')"
+playwriter -e "page.goBack()"
+
+# Stop and save
+playwriter -e "stopRecording({ page })"
+```
+
+Unlike `getDisplayMedia`, this approach
+**persists across navigations** because the extension holds the `MediaRecorder`, not
+the page. You can also check recording status with `isRecording` or cancel without saving with
+`cancelRecording`.
+
+*Native tab capture. 30–60fps. Survives navigation.*
+
+## Comparison
+
+Why use this over the alternatives.
+
+### vs Playwright MCP
+
+| Feature       | Playwright MCP    | Playwriter           |
+| ------------- | ----------------- | -------------------- |
+| Browser       | Spawns new Chrome | Uses your Chrome     |
+| Extensions    | None              | Your existing ones   |
+| Login state   | Fresh             | Already logged in    |
+| Bot detection | Always detected   | Can bypass           |
+| Collaboration | Separate window   | Same browser as user |
+
+### vs Playwright CLI
+
+| Feature         | Playwright CLI      | Playwriter                    |
+| --------------- | ------------------- | ----------------------------- |
+| Browser         | Spawns new browser  | Uses your Chrome              |
+| Login state     | Fresh               | Already logged in             |
+| Extensions      | None                | Your existing ones            |
+| Captchas        | Always blocked      | Bypass (disconnect extension) |
+| Collaboration   | Separate window     | Same browser as user          |
+| Capabilities    | Limited command set | Anything Playwright can do    |
+| Raw CDP access  | No                  | Yes                           |
+| Video recording | File-based tracing  | Native tab capture (30–60fps) |
+
+### vs BrowserMCP
+
+| Feature       | BrowserMCP          | Playwriter               |
+| ------------- | ------------------- | ------------------------ |
+| Tools         | 12+ dedicated tools | 1 execute tool           |
+| API           | Limited actions     | Full Playwright          |
+| Context usage | High (tool schemas) | Low                      |
+| LLM knowledge | Must learn tools    | Already knows Playwright |
+
+### vs Claude Browser Extension
+
+| Feature              | Claude Extension     | Playwriter              |
+| -------------------- | -------------------- | ----------------------- |
+| Agent support        | Claude only          | Any MCP client          |
+| Windows WSL          | No                   | Yes                     |
+| Context method       | Screenshots (100KB+) | A11y snapshots (5–20KB) |
+| Playwright API       | No                   | Full                    |
+| Debugger             | No                   | Yes                     |
+| Live code editing    | No                   | Yes                     |
+| Network interception | Limited              | Full                    |
+| Raw CDP access       | No                   | Yes                     |
+
+### vs Built-in Chrome CDP (`--remote-debugging-port`)
+
+| Feature             | Built-in CDP                            | Playwriter                |
+| ------------------- | --------------------------------------- | ------------------------- |
+| Setup               | Restart Chrome with special flags       | Click extension icon      |
+| Confirmation dialog | Automation infobar agents can't dismiss | No blocking dialog        |
+| Autonomous agents   | Interrupted by debug banners            | Fully autonomous          |
+| User disruption     | Banners appear mid-workflow             | Silent — no interruption  |
+| Existing session    | Must relaunch Chrome (lose state)       | Uses your running browser |
+
+## Remote access
+
+### Tunnel
+
+Control Chrome on a **remote machine** — a headless Mac mini, a cloud VM, a
+devcontainer. A [traforo](https://traforo.dev) tunnel exposes the relay through Cloudflare.
+**No VPN, no firewall rules, no port forwarding.**
+
+```bash
+# On the host machine — start relay with tunnel
+npx -y traforo -p 19988 -t my-machine -- npx -y playwriter serve --token <secret>
+
+# From anywhere — set env vars and use normally
+export PLAYWRITER_HOST=https://my-machine-tunnel.traforo.dev
+export PLAYWRITER_TOKEN=<secret>
+playwriter -e "page.goto('https://example.com')"
+```
+
+
+### LAN
+
+Also works on a **LAN without tunnels** — just set
+`PLAYWRITER_HOST=192.168.1.10`. Works for MCP too — set `PLAYWRITER_HOST` and
+`PLAYWRITER_TOKEN` in your MCP client env config. Use cases: headless Mac mini, remote user
+support, multi-machine automation, dev from a VM or devcontainer.
+
+## Security
+
+Everything runs **on your machine**. The relay binds to `localhost:19988` and only
+accepts connections from the extension. No remote server, no account, no telemetry.
+
+- **Local only** — WebSocket server binds to localhost. Nothing leaves your machine.
+- **Origin validation** — only the Playwriter extension origin is accepted. Browsers cannot spoof the Origin header, so malicious websites cannot connect.
+- **Explicit consent** — only tabs where you clicked the extension icon are controlled. No background access.
+- **Visible automation** — Chrome shows an automation banner on controlled tabs.
+
+## Authentication flows
+
+Playwriter excels at automating login flows because it uses your real browser with existing cookies and sessions. When an agent needs to interact with authenticated pages, it simply inherits whatever login state already exists in Chrome.
+
+For multi-account workflows, create separate Chrome profiles and connect each to a different Playwriter session. The extension manages CDP connections per-profile.
+
+```ts
+// already logged into GitHub in this Chrome profile
+await page.goto('https://github.com/settings/profile')
+const name = await page.locator('#user_profile_name').inputValue()
+console.log('Logged in as:', name)
+```
+
+## Form filling
+
+Playwriter handles all HTML form elements: text inputs, selects, checkboxes, radio buttons, file uploads, date pickers, and rich text editors.
+
+```ts
+await page.locator('#name').fill('Jane Doe')
+await page.locator('select#country').selectOption('US')
+await page.locator('input[type=checkbox]#terms').check()
+await page.locator('input[type=file]').setInputFiles('/tmp/resume.pdf')
+```
+
+For date pickers implemented as custom widgets (not native `<input type="date">`), use the calendar UI through click sequences or inject the value directly.
+
+## Keyboard shortcuts
+
+Send keyboard shortcuts to trigger app actions that have no clickable button.
+
+```ts
+await page.keyboard.press('Control+Shift+P') // open command palette
+await page.keyboard.type('format document')
+await page.keyboard.press('Enter')
+```
+
+Modifier keys: `Control`, `Shift`, `Alt`, `Meta` (Cmd on macOS).
+
+## Mouse interactions
+
+Beyond clicks, Playwriter supports hover, drag-and-drop, and scroll gestures.
+
+```ts
+// hover to reveal a tooltip
+await page.locator('.info-icon').hover()
+
+// drag and drop
+await page.locator('#item-3').dragTo(page.locator('#dropzone'))
+
+// scroll to bottom
+await page.mouse.wheel(0, 10000)
+```
+
+## File downloads
+
+Intercept and save file downloads triggered by clicking export buttons or download links.
+
+```ts
+const downloadPromise = page.waitForEvent('download')
+await page.locator('text=Export CSV').click()
+const download = await downloadPromise
+await download.saveAs('/tmp/report.csv')
+console.log('Downloaded:', download.suggestedFilename())
+```
+
+## Popup and dialog handling
+
+Handle `alert()`, `confirm()`, and `prompt()` dialogs automatically.
+
+```ts
+page.on('dialog', async (dialog) => {
+  console.log('Dialog:', dialog.type(), dialog.message())
+  if (dialog.type() === 'confirm') {
+    await dialog.accept()
+  } else {
+    await dialog.dismiss()
+  }
+})
+```
+
+New tabs opened by `window.open()` are captured as new pages in the same context.
+
+## Multi-tab workflows
+
+Some workflows span multiple tabs — OAuth flows, payment redirects, or "open in new tab" links.
+
+```ts
+const [newPage] = await Promise.all([
+  context.waitForEvent('page'),
+  page.locator('text=Open settings').click(), // opens new tab
+])
+await newPage.waitForLoadState()
+console.log('New tab URL:', newPage.url())
+```
+
+## Geolocation and permissions
+
+Override browser geolocation and permissions for testing location-aware features.
+
+```ts
+await context.setGeolocation({ latitude: 37.7749, longitude: -122.4194 })
+await context.grantPermissions(['geolocation'])
+await page.goto('https://maps.example.com')
+```
+
+## Mobile emulation
+
+Emulate mobile devices for responsive testing.
+
+```ts
+await page.setViewportSize({ width: 375, height: 812 }) // iPhone X
+await page.emulateMedia({ colorScheme: 'dark' })
+```
+
+## Performance metrics
+
+Collect Web Vitals and other performance metrics during automation.
+
+```ts
+const metrics = await page.evaluate(() => {
+  const entries = performance.getEntriesByType('navigation')
+  const nav = entries[0]
+  return {
+    domContentLoaded: nav.domContentLoadedEventEnd,
+    loadComplete: nav.loadEventEnd,
+    transferSize: nav.transferSize,
+  }
+})
+console.log('Page load metrics:', metrics)
+```
+
+## Cookie management
+
+Read, set, and clear cookies for session management.
+
+```ts
+// read all cookies
+const cookies = await context.cookies()
+console.log(cookies.map(c => `${c.name}=${c.value}`).join('; '))
+
+// set a cookie
+await context.addCookies([{
+  name: 'session', value: 'abc123',
+  domain: '.example.com', path: '/',
+}])
+
+// clear all cookies
+await context.clearCookies()
+```
+
+## Local storage
+
+Access and modify localStorage for debugging or test setup.
+
+```ts
+// read
+const token = await page.evaluate(() => localStorage.getItem('auth_token'))
+
+// write
+await page.evaluate(() => localStorage.setItem('feature_flag', 'true'))
+
+// clear
+await page.evaluate(() => localStorage.clear())
+```
+
+## Error recovery
+
+Build resilient automations that recover from transient failures.
+
+```ts
+async function withRetry(fn, maxAttempts = 3) {
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    try {
+      return await fn()
+    } catch (err) {
+      if (attempt === maxAttempts) throw err
+      console.log(`Attempt ${attempt} failed, retrying...`)
+      await page.waitForTimeout(1000 * attempt)
+    }
+  }
+}
+
+await withRetry(async () => {
+  await page.locator('text=Submit').click()
+  await page.waitForResponse('**/api/submit')
+})
+```
+
+## Questions
+
+<FAQ askPlaceholder="Ask anything about Playwriter...">
+  <FAQ.Item question="What is Playwriter?">
+    Playwriter is a CLI and MCP server that drives your own Chrome through a browser extension. Agents write Playwright code and it runs against your logged-in tabs.
+  </FAQ.Item>
+  <FAQ.Item question="Which Playwright versions are supported?">
+    Any recent Playwright release works. The `page` object you get is a real Playwright `Page`, so the full API is available:
+
+    - `page.goto()`, `page.click()`, `page.fill()`
+    - `page.screenshot()` and `page.pdf()`
+    - `page.route()` for network interception
+  </FAQ.Item>
+  <FAQ.Item question="Can I self-host the relay?">
+    Yes. Start the relay on the host machine with a tunnel and point `PLAYWRITER_RELAY_URL` at it from anywhere. See [Remote access](#remote-access).
+  </FAQ.Item>
+  <FAQ.Item question="Where are my sessions stored?">
+    Sessions live in memory on the relay. Nothing is written to disk unless you save a recording or a screenshot.
+  </FAQ.Item>
+</FAQ>

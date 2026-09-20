@@ -1,0 +1,480 @@
+import { describe, test, expect } from 'vitest'
+import {
+  isNavPage,
+  isNavGroup,
+  getActiveTab,
+  getActiveGroups,
+  findPage,
+  collectAllPages,
+  collectAllPageHrefs,
+  buildPageIndex,
+  hasVisibleSidebarEntries,
+  slugToHref,
+  type NavTab,
+  type NavGroup,
+  type NavPage,
+  type Navigation,
+} from './navigation.ts'
+import { parsePageFrontmatter } from './lib/page-frontmatter.ts'
+import { buildTabItems, buildVisibleSiteData, collectAncestorGroupKeys, collectDefaultExpandedKeys, findActiveTab, findActiveVersion, resolveActiveNavigationTabs, resolveActiveVersionHref, tabDisablesCompact, type HolocronSiteData } from './site-data.ts'
+
+/* ── Test fixtures ───────────────────────────────────────────────────── */
+
+function makePage(slug: string, overrides?: Partial<NavPage>): NavPage {
+  return {
+    slug,
+    href: `/${slug}`,
+    title: slug.charAt(0).toUpperCase() + slug.slice(1),
+    gitSha: 'abc123',
+    headings: [],
+    frontmatter: {},
+    ...overrides,
+  }
+}
+
+function makeGroup(name: string, pages: NavPage[]): NavGroup {
+  return { group: name, pages }
+}
+
+function makeNav(tabs: NavTab[]): Navigation {
+  return tabs
+}
+
+/* ── Simple two-tab navigation used by many tests ────────────────────── */
+
+const docsTab: NavTab = {
+  tab: 'Docs',
+  groups: [
+    makeGroup('Getting Started', [
+      makePage('introduction'),
+      makePage('quickstart'),
+    ]),
+    makeGroup('API', [
+      makePage('api/overview'),
+      makePage('api/endpoints'),
+    ]),
+  ],
+}
+
+const guidesTab: NavTab = {
+  tab: 'Guides',
+  groups: [
+    makeGroup('Tutorials', [
+      makePage('guides/first-app'),
+      makePage('guides/deployment'),
+    ]),
+  ],
+}
+
+describe('version-owned navigation', () => {
+  const v1Tab: NavTab = { tab: 'Guides', groups: [makeGroup('V1', [makePage('v1/intro')])] }
+  const v2Tab: NavTab = { tab: 'Guides', groups: [makeGroup('V2', [makePage('v2/intro')])] }
+  const dropdownTab: NavTab = { tab: 'API', groups: [makeGroup('API', [makePage('v1/api')])] }
+  const site = {
+    navigation: [v1Tab, v2Tab],
+    switchers: {
+      versions: [
+        { version: 'English', lang: 'en', pageHrefs: ['/v1/intro'], navigation: { tabs: [v1Tab], anchors: [] } },
+        { version: 'Nederlands', lang: 'nl', pageHrefs: ['/v2/intro', '/hidden'], navigation: { tabs: [v2Tab], anchors: [] } },
+      ],
+      dropdowns: [
+        { dropdown: 'API', navigation: { tabs: [dropdownTab], anchors: [] } },
+      ],
+    },
+    config: { navigation: { anchors: [] } },
+  } as unknown as HolocronSiteData
+
+  test('tab bar only includes tabs owned by the active version', () => {
+    expect(buildTabItems(site, '/v2/intro').map((item) => item.label)).toEqual(['Guides'])
+    expect(buildTabItems(site, '/v2/intro')[0]?.pageHrefs).toEqual(['/v2/intro'])
+  })
+
+  test('finds the active version and its language', () => {
+    expect(findActiveVersion(site, '/v2/intro')?.lang).toBe('nl')
+    expect(findActiveVersion(site, '/hidden')?.lang).toBe('nl')
+  })
+
+  test('does not claim a dropdown page that shares a version path prefix', () => {
+    expect(findActiveVersion(site, '/v1/api')).toBeUndefined()
+    expect(resolveActiveVersionHref(site, '/v1/api')).toBeUndefined()
+    expect(resolveActiveNavigationTabs(site, '/v1/api')).toEqual([dropdownTab])
+  })
+})
+
+describe('folder-index group.root', () => {
+  const deRoot = makePage('de/features')
+  const deChild = makePage('de/features/message-center')
+  const deFeatures: NavGroup = {
+    group: 'Features',
+    root: '/de/features',
+    rootPage: deRoot,
+    pages: [deChild],
+  }
+  const deTab: NavTab = { tab: '', groups: [deFeatures] }
+  const enTab: NavTab = {
+    tab: '',
+    groups: [{ group: '', pages: [makePage('index', { href: '/' })] }],
+  }
+  const site = {
+    navigation: [enTab, deTab],
+    switchers: {
+      versions: [
+        { version: 'English', lang: 'en', pageHrefs: collectAllPageHrefs([enTab]), navigation: { tabs: [enTab], anchors: [] } },
+        { version: 'Deutsch', lang: 'de', pageHrefs: collectAllPageHrefs([deTab]), navigation: { tabs: [deTab], anchors: [] } },
+      ],
+      dropdowns: [],
+    },
+    config: { navigation: { anchors: [] } },
+  } as unknown as HolocronSiteData
+
+  test('collects the folder root as a full page', () => {
+    expect(collectAllPageHrefs([deTab])).toEqual(['/de/features', '/de/features/message-center'])
+    expect(collectAllPages([deTab]).map((page) => page.href)).toEqual(['/de/features', '/de/features/message-center'])
+    expect(findPage([deTab], 'de/features')).toBe(deRoot)
+    expect(buildPageIndex([deTab]).get('de/features')).toBe(deRoot)
+  })
+
+  test('finds the version that owns a folder-index href', () => {
+    expect(findActiveVersion(site, '/de/features')?.version).toBe('Deutsch')
+    expect(resolveActiveNavigationTabs(site, '/de/features')).toEqual([deTab])
+  })
+
+  test('matches folder-index hrefs even when baked pageHrefs omit group.root', () => {
+    const stale = {
+      ...site,
+      switchers: {
+        ...site.switchers,
+        versions: [
+          { version: 'English', lang: 'en', pageHrefs: ['/'], navigation: { tabs: [enTab], anchors: [] } },
+          { version: 'Deutsch', lang: 'de', pageHrefs: ['/de/features/message-center'], navigation: { tabs: [deTab], anchors: [] } },
+        ],
+      },
+    } as unknown as HolocronSiteData
+    expect(findActiveVersion(stale, '/de/features')?.version).toBe('Deutsch')
+    expect(resolveActiveNavigationTabs(stale, '/de/features')).toEqual([deTab])
+  })
+
+  test('opens rooted top-level groups by default but respects expanded false', () => {
+    expect(collectDefaultExpandedKeys([deFeatures])).toEqual(['Features'])
+    expect(collectDefaultExpandedKeys([{ ...deFeatures, expanded: false }])).toEqual([])
+    expect(collectDefaultExpandedKeys([{
+      group: 'Parent',
+      pages: [{ ...deFeatures, group: 'Nested' }],
+    }])).toEqual([])
+  })
+
+  test('lets the current folder page control its own expanded state', () => {
+    expect(collectAncestorGroupKeys(site, '/de/features')).toEqual([])
+  })
+
+  test('removes a hidden folder root link but keeps visible children', () => {
+    const hiddenRoot = makePage('de/features', { frontmatter: { hidden: true } })
+    const hiddenRootSite = {
+      ...site,
+      navigation: [{ ...deTab, groups: [{ ...deFeatures, rootPage: hiddenRoot }] }],
+    } as HolocronSiteData
+    const visibleGroup = buildVisibleSiteData(hiddenRootSite).navigation[0]?.groups[0]
+    expect(visibleGroup?.root).toBeUndefined()
+    expect(visibleGroup?.rootPage).toBeUndefined()
+    expect(visibleGroup?.pages).toEqual([deChild])
+
+    const hiddenRootOnlySite = {
+      ...site,
+      navigation: [{ ...deTab, groups: [{ ...deFeatures, rootPage: hiddenRoot, pages: [] }] }],
+    } as HolocronSiteData
+    expect(buildVisibleSiteData(hiddenRootOnlySite).navigation[0]?.groups).toEqual([])
+
+    const legacyRootSite = {
+      ...site,
+      navigation: [{ ...deTab, groups: [{ ...deFeatures, rootPage: undefined }] }],
+    } as HolocronSiteData
+    expect(buildVisibleSiteData(legacyRootSite).navigation[0]?.groups[0]?.root).toBe('/de/features')
+  })
+})
+
+describe('API and MCP tabs disable compact', () => {
+  test('finds the tab that owns a page and disables compact for openapi and mcp tabs', () => {
+    const apiTab: NavTab = {
+      tab: 'API',
+      openapi: 'api.yaml',
+      groups: [makeGroup('Guides', [makePage('guide/overview')])],
+    }
+    const mcpTab: NavTab = {
+      tab: 'MCP',
+      mcp: 'mcp-tools.json',
+      groups: [makeGroup('Start', [makePage('docs/mcp/index')])],
+    }
+    const site = {
+      navigation: [docsTab, apiTab, mcpTab],
+      switchers: { versions: [], dropdowns: [] },
+    } as HolocronSiteData
+
+    expect(tabDisablesCompact(findActiveTab(site, '/guide/overview'))).toBe(true)
+    expect(tabDisablesCompact(findActiveTab(site, '/docs/mcp/index'))).toBe(true)
+    expect(tabDisablesCompact(findActiveTab(site, '/introduction'))).toBe(false)
+  })
+})
+
+const twoTabNav = makeNav([docsTab, guidesTab])
+
+/* ── isNavPage / isNavGroup ──────────────────────────────────────────── */
+
+describe('type guards', () => {
+  test('isNavPage returns true for NavPage', () => {
+    expect(isNavPage(makePage('intro'))).toBe(true)
+  })
+
+  test('isNavPage returns false for NavGroup', () => {
+    expect(isNavPage(makeGroup('Group', []))).toBe(false)
+  })
+
+  test('isNavGroup returns true for NavGroup', () => {
+    expect(isNavGroup(makeGroup('Group', []))).toBe(true)
+  })
+
+  test('isNavGroup returns false for NavPage', () => {
+    expect(isNavGroup(makePage('page'))).toBe(false)
+  })
+})
+
+/* ── getActiveTab ────────────────────────────────────────────────────── */
+
+describe('getActiveTab', () => {
+  test('single tab always returns that tab', () => {
+    const nav = makeNav([docsTab])
+    expect(getActiveTab(nav, '/anything').tab).toBe('Docs')
+  })
+
+  test('matches by URL prefix for multi-tab nav', () => {
+    const result = getActiveTab(twoTabNav, '/guides/first-app')
+    expect(result.tab).toBe('Guides')
+  })
+
+  test('root path matches first tab (docs)', () => {
+    const result = getActiveTab(twoTabNav, '/introduction')
+    expect(result.tab).toBe('Docs')
+  })
+
+  test('returns first tab as fallback for unknown paths', () => {
+    const result = getActiveTab(twoTabNav, '/unknown/path')
+    expect(result.tab).toBe('Docs')
+  })
+
+  test('empty nav returns empty tab', () => {
+    const result = getActiveTab([], '/')
+    expect(result).toMatchInlineSnapshot(`
+      {
+        "groups": [],
+        "tab": "",
+      }
+    `)
+  })
+})
+
+/* ── getActiveGroups ─────────────────────────────────────────────────── */
+
+describe('getActiveGroups', () => {
+  test('returns groups for the matched tab', () => {
+    const groups = getActiveGroups(twoTabNav, '/guides/deployment')
+    expect(groups.length).toBe(1)
+    expect(groups[0]!.group).toBe('Tutorials')
+  })
+})
+
+/* ── findPage ────────────────────────────────────────────────────────── */
+
+describe('findPage', () => {
+  test('finds page by slug', () => {
+    const page = findPage(twoTabNav, 'quickstart')
+    expect(page).toBeDefined()
+    expect(page!.title).toBe('Quickstart')
+  })
+
+  test('finds page in second tab', () => {
+    const page = findPage(twoTabNav, 'guides/first-app')
+    expect(page).toBeDefined()
+    expect(page!.href).toBe('/guides/first-app')
+  })
+
+  test('returns undefined for missing slug', () => {
+    expect(findPage(twoTabNav, 'nonexistent')).toBeUndefined()
+  })
+
+  test('finds page inside nested group', () => {
+    const nestedGroup: NavGroup = {
+      group: 'Advanced',
+      pages: [
+        {
+          group: 'Internals',
+          pages: [makePage('internals/core')],
+        },
+      ],
+    }
+    const nav: Navigation = [{ tab: 'Docs', groups: [nestedGroup] }]
+    const page = findPage(nav, 'internals/core')
+    expect(page).toBeDefined()
+    expect(page!.slug).toBe('internals/core')
+  })
+})
+
+/** Test-local replica of the server-only findPageBySlug (lives in app-factory.tsx). */
+async function findPageBySlug({ nav, slug, getMdxSource }: { nav: Navigation; slug: string; getMdxSource: (s: string) => Promise<string | undefined> }): Promise<NavPage | undefined> {
+  const navPage = findPage(nav, slug)
+  if (navPage) return navPage
+  const mdx = await getMdxSource(slug)
+  if (!mdx) return undefined
+  const frontmatter = parsePageFrontmatter(mdx)
+  const headingMatch = mdx.match(/^#\s+(.+)/m)
+  return { slug, href: slugToHref(slug), title: frontmatter.title ?? headingMatch?.[1]?.trim() ?? 'Untitled', description: frontmatter.description, gitSha: '', headings: [], icon: frontmatter.icon, frontmatter }
+}
+
+describe('findPageBySlug fallback', () => {
+  test('parses YAML frontmatter for pages that are not in navigation', async () => {
+    const page = await findPageBySlug({ nav: [], slug: 'orphan-page', getMdxSource: async (slug) => {
+      if (slug !== 'orphan-page') return undefined
+      return `---
+title: Orphan Page
+description: Routed without nav config.
+noindex: true
+keywords:
+  - orphan
+  - setup
+"og:image:width": 1400
+---
+
+# Orphan Page`
+    } })
+
+    expect(page).toMatchObject({
+      title: 'Orphan Page',
+      description: 'Routed without nav config.',
+      frontmatter: {
+        noindex: true,
+        keywords: ['orphan', 'setup'],
+        'og:image:width': '1400',
+      },
+    })
+  })
+})
+
+/* ── collectAllPages ─────────────────────────────────────────────────── */
+
+describe('collectAllPages', () => {
+  test('collects all pages from all tabs', () => {
+    const pages = collectAllPages(twoTabNav)
+    expect(pages.length).toBe(6)
+    expect(pages.map((p) => p.slug)).toMatchInlineSnapshot(`
+      [
+        "introduction",
+        "quickstart",
+        "api/overview",
+        "api/endpoints",
+        "guides/first-app",
+        "guides/deployment",
+      ]
+    `)
+  })
+
+  test('empty nav returns empty array', () => {
+    expect(collectAllPages([])).toMatchInlineSnapshot(`[]`)
+  })
+})
+
+/* ── buildPageIndex ──────────────────────────────────────────────────── */
+
+describe('buildPageIndex', () => {
+  test('builds map keyed by slug', () => {
+    const index = buildPageIndex(twoTabNav)
+    expect(index.size).toBe(6)
+    expect(index.get('quickstart')?.title).toBe('Quickstart')
+    expect(index.get('guides/deployment')?.href).toBe('/guides/deployment')
+  })
+
+  test('missing slug returns undefined', () => {
+    const index = buildPageIndex(twoTabNav)
+    expect(index.get('nope')).toBeUndefined()
+  })
+})
+
+/* ── hasVisibleSidebarEntries ────────────────────────────────────────── */
+
+describe('hasVisibleSidebarEntries', () => {
+  test('group with one visible page → true', () => {
+    const g: NavGroup = {
+      group: 'G',
+      pages: [makePage('a')],
+    }
+    expect(hasVisibleSidebarEntries(g)).toBe(true)
+  })
+
+  test('hidden group → false (regardless of children)', () => {
+    const g: NavGroup = {
+      group: 'G',
+      hidden: true,
+      pages: [makePage('a')],
+    }
+    expect(hasVisibleSidebarEntries(g)).toBe(false)
+  })
+
+  test('group with zero pages → true (intentional section divider)', () => {
+    const g: NavGroup = { group: 'G', pages: [] }
+    expect(hasVisibleSidebarEntries(g)).toBe(true)
+  })
+
+  test('wrapper with only a hidden-group child → false', () => {
+    const hiddenChild: NavGroup = {
+      group: 'Hidden',
+      hidden: true,
+      pages: [makePage('secret')],
+    }
+    const wrapper: NavGroup = {
+      group: 'Wrapper',
+      pages: [hiddenChild],
+    }
+    expect(hasVisibleSidebarEntries(wrapper)).toBe(false)
+  })
+
+  test('wrapper with a visible-group child (containing pages) → true', () => {
+    const visibleChild: NavGroup = {
+      group: 'Visible',
+      pages: [makePage('p')],
+    }
+    const wrapper: NavGroup = {
+      group: 'Wrapper',
+      pages: [visibleChild],
+    }
+    expect(hasVisibleSidebarEntries(wrapper)).toBe(true)
+  })
+
+  test('deeply-nested hidden-only chain collapses to false', () => {
+    // wrapper > middle > hidden-leaf (all nested groups have pages but
+    // the leaf is hidden). The whole chain should be pruned.
+    const hiddenLeaf: NavGroup = {
+      group: 'Leaf',
+      hidden: true,
+      pages: [makePage('x')],
+    }
+    const middle: NavGroup = {
+      group: 'Middle',
+      pages: [hiddenLeaf],
+    }
+    const wrapper: NavGroup = {
+      group: 'Wrapper',
+      pages: [middle],
+    }
+    expect(hasVisibleSidebarEntries(wrapper)).toBe(false)
+  })
+
+  test('group with both hidden and visible children → true', () => {
+    const hiddenChild: NavGroup = {
+      group: 'Hidden',
+      hidden: true,
+      pages: [makePage('a')],
+    }
+    const wrapper: NavGroup = {
+      group: 'Wrapper',
+      pages: [hiddenChild, makePage('b')],
+    }
+    expect(hasVisibleSidebarEntries(wrapper)).toBe(true)
+  })
+})

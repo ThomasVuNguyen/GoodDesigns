@@ -1,0 +1,712 @@
+import { expect, test } from "../helpers/test.ts";
+import fs from "node:fs";
+import path from "node:path";
+import { spawn, type ChildProcess } from "node:child_process";
+
+test.describe("home page", () => {
+  test("renders page title and MDX content", async ({ page }) => {
+    await page.goto("/", { waitUntil: "domcontentloaded" });
+    // Title from frontmatter should be in the document title
+    await expect(page).toHaveTitle(/Test Docs/);
+    // MDX heading should be rendered
+    await expect(page.getByRole("heading", { name: "Overview" })).toBeVisible();
+    // MDX paragraph content should be rendered
+    await expect(
+      page.getByText("home page content for integration testing"),
+    ).toBeVisible();
+  });
+
+  test("HTML response contains rendered content", async ({ request }) => {
+    const response = await request.get("/", {
+      headers: { "sec-fetch-dest": "document" },
+    });
+    expect(response.status()).toBe(200);
+    const html = await response.text();
+    expect(html).toContain("Welcome to Test Docs");
+    expect(html).toContain("Overview");
+    expect(html).toContain("</html>");
+  });
+
+  test("renders markdown tables with the editorial wrapper", async ({ page }) => {
+    await page.goto("/", { waitUntil: "domcontentloaded" });
+
+    const table = page.getByRole("table");
+    await expect(table).toBeVisible();
+    await expect(page.locator('[data-slot="table-container"]')).toBeVisible();
+    await expect(table.getByText("Feature")).toBeVisible();
+    await expect(table.getByText("Native tables")).toBeVisible();
+    await expect(table.getByText("Styled with editorial tokens")).toBeVisible();
+  });
+
+  test("does not enable the right TOC by default", async ({ page }) => {
+    await page.setViewportSize({ width: 1600, height: 1200 });
+    await page.goto("/", { waitUntil: "domcontentloaded" });
+
+    await expect(page.getByRole("navigation", { name: "On this page" })).toHaveCount(0);
+    const leftNav = page.getByRole("navigation", { name: "Navigation" });
+    await expect(leftNav.locator('a[href^="/#"]')).toHaveCount(3);
+  });
+});
+
+test.describe("page heading semantics", () => {
+  test("renders one frontmatter h1 before callout-first content", async ({ page }) => {
+    await page.goto("/questions-(what's-new)", { waitUntil: "domcontentloaded" });
+
+    await expect(page.locator("h1")).toHaveCount(1);
+    await expect(page.getByRole("heading", { level: 1, name: "What's new" })).toBeVisible();
+    await expect(page.getByRole("heading", { level: 2, name: "Recent changes" })).toBeVisible();
+  });
+
+  test("injects the frontmatter title as an h1 even when the body starts with a heading", async ({ page }) => {
+    await page.goto("/getting-started", { waitUntil: "domcontentloaded" });
+
+    await expect(page.locator("h1")).toHaveCount(1);
+    await expect(page.getByRole("heading", { level: 1, name: "Getting Started" })).toBeVisible();
+    await expect(page.getByRole("heading", { level: 2, name: "Installation" })).toBeVisible();
+  });
+});
+
+test.describe("page navigation", () => {
+  test("keeps page names in arrow tooltips and accessible labels", async ({ page }) => {
+    await page.setViewportSize({ width: 1600, height: 1200 });
+    await page.goto("/getting-started", { waitUntil: "domcontentloaded" });
+    await page.waitForLoadState("networkidle");
+
+    const footer = page.locator("footer");
+    const previous = footer.getByRole("link", { name: /Previous: Welcome to Test Docs/ });
+    const next = footer.getByRole("link", { name: /Next: Markdown Page/ });
+    await expect(previous).toBeVisible();
+    await expect(next).toBeVisible();
+    await expect(previous).toContainText("Prev Page");
+    await expect(next).toContainText("Next Page");
+    await previous.hover();
+    await expect(page.getByRole("tooltip", { name: "Welcome to Test Docs" })).toBeVisible();
+    await expect(page.getByRole("button", { name: /Copy page as Markdown/ })).toBeVisible();
+  });
+});
+
+test.describe("HTML comments", () => {
+  test("HTML comments are stripped from rendered output", async ({ request }) => {
+    const response = await request.get("/", {
+      headers: { "sec-fetch-dest": "document" },
+    });
+    const html = await response.text();
+    // The fixture has <!-- This HTML comment should be stripped ... -->
+    expect(html).not.toContain("This HTML comment should be stripped");
+    // Content around the comment should still render
+    expect(html).toContain("Overview");
+  });
+
+  test("HTML comments are stripped from getting-started page", async ({ request }) => {
+    const response = await request.get("/getting-started", {
+      headers: { "sec-fetch-dest": "document" },
+    });
+    const html = await response.text();
+    expect(html).not.toContain("TODO: update this section");
+    expect(html).toContain("Installation");
+  });
+});
+
+test.describe("syntax highlight", () => {
+  test("getting-started HTML includes server-highlighted tokens", async ({ request }) => {
+    const response = await request.get("/getting-started", {
+      headers: { "sec-fetch-dest": "document" },
+    });
+    expect(response.status()).toBe(200);
+    const html = await response.text();
+    expect(html).toContain("token keyword");
+    expect(html).toContain("language-ts");
+  });
+});
+
+test.describe("index path redirects", () => {
+  test("GET /github redirects when no authored page exists", async ({ request }) => {
+    const response = await request.get("/github", { maxRedirects: 0 });
+    expect(response.status()).toBe(302);
+    expect(response.headers().location).toBe("https://github.com/example/basic");
+  });
+
+  test("GET /index redirects to /", async ({ request }) => {
+    const response = await request.get("/index", { maxRedirects: 0 });
+    expect(response.status()).toBe(308);
+    expect(new URL(response.headers()["location"]!).pathname).toBe("/");
+  });
+
+  test("GET /getting-started/index redirects to /getting-started", async ({ request }) => {
+    const response = await request.get("/getting-started/index", { maxRedirects: 0 });
+    expect(response.status()).toBe(308);
+    expect(new URL(response.headers()["location"]!).pathname).toBe("/getting-started");
+  });
+
+  test("index redirect preserves the query string", async ({ request }) => {
+    const response = await request.get("/getting-started/index?foo=bar", { maxRedirects: 0 });
+    expect(response.status()).toBe(308);
+    const location = new URL(response.headers()["location"]!);
+    expect(location.pathname).toBe("/getting-started");
+    expect(location.search).toBe("?foo=bar");
+  });
+
+  test("browser navigation to /index lands on the home page", async ({ page }) => {
+    await page.goto("/index", { waitUntil: "domcontentloaded" });
+    await expect(page).toHaveURL(/\/$/);
+    await expect(page.getByRole("heading", { name: "Overview" })).toBeVisible();
+  });
+});
+
+test.describe("getting-started page", () => {
+  test("renders page title and headings", async ({ page }) => {
+    await page.goto("/getting-started", { waitUntil: "domcontentloaded" });
+    await expect(page).toHaveTitle(/Getting Started/);
+    await expect(page.getByRole("heading", { name: "Installation" })).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Configuration" })).toBeVisible();
+  });
+
+  test("shows the active page and its TOC headings in the sidebar", async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 1600, height: 1200 });
+    await page.goto("/getting-started", { waitUntil: "domcontentloaded" });
+
+    const nav = page.getByRole("navigation", { name: "Navigation" });
+
+    // Active page link should be visible
+    await expect(nav.getByRole("link", { name: "Getting Started" })).toBeVisible();
+    // TOC headings should be expanded under active page
+    await expect(nav.getByRole("link", { name: "Installation" })).toBeVisible();
+    await expect(nav.getByRole("link", { name: "Configuration" })).toBeVisible();
+  });
+
+  test("TOC headings are indented relative to the page link", async ({ page }) => {
+    await page.setViewportSize({ width: 1600, height: 1200 });
+    await page.goto("/getting-started", { waitUntil: "domcontentloaded" });
+
+    const nav = page.getByRole("navigation", { name: "Navigation" });
+    const pageLink = nav.getByRole("link", { name: "Getting Started" });
+    const headingLink = nav.getByRole("link", { name: "Installation" });
+
+    // The heading TOC list has padding-left, making it indented vs the page link
+    const pageLinkLeft = await pageLink.evaluate((node) => node.getBoundingClientRect().left);
+    const headingLinkLeft = await headingLink.evaluate((node) => node.getBoundingClientRect().left);
+
+    expect(headingLinkLeft).toBeGreaterThan(pageLinkLeft);
+  });
+
+  test("shows an explicit no-results state when search has no matches", async ({ page }) => {
+    await page.setViewportSize({ width: 1600, height: 1200 });
+    await page.goto("/getting-started", { waitUntil: "domcontentloaded" });
+
+    const searchInput = page.getByPlaceholder("search...");
+    await expect(searchInput).toBeVisible({ timeout: 10000 });
+
+    // The first dev visit can trigger Vite's optimize-deps reload. Reload once
+    // after the page is interactive so the actual search assertion runs against
+    // the settled module graph instead of racing the dev-server refresh.
+    await page.reload();
+    await expect(searchInput).toBeVisible({ timeout: 10000 });
+
+    const nav = page.getByRole("navigation", { name: "Navigation" });
+    const noResults = nav.getByText("No results for", { exact: false });
+
+    await expect.poll(async () => {
+      const activeInput = page.getByPlaceholder("search...");
+      await expect(activeInput).toBeVisible({ timeout: 10000 });
+      await activeInput.click();
+      await activeInput.fill(`zzzz-no-match-${Date.now()}`);
+      return noResults.isVisible();
+    }, { timeout: 10000 }).toBe(true);
+
+    await expect(noResults).toBeVisible();
+    await expect(nav.getByRole("link", { name: "Welcome to Test Docs" })).not.toBeVisible();
+    await expect(nav.getByRole("button", { name: /Search with AI chat/ })).toBeVisible();
+  });
+
+  test("renders code blocks", async ({ page }) => {
+    await page.goto("/getting-started", { waitUntil: "domcontentloaded" });
+    // The code block with the install command should be visible
+    await expect(
+      page.getByText("npm install @holocron.so/vite"),
+    ).toBeVisible();
+  });
+
+  test("HTML response contains rendered content", async ({ request }) => {
+    const response = await request.get("/getting-started", {
+      headers: { "sec-fetch-dest": "document" },
+    });
+    expect(response.status()).toBe(200);
+    const html = await response.text();
+    expect(html).toContain("Getting Started");
+    expect(html).toContain("Installation");
+    expect(html).toContain("Configuration");
+  });
+});
+
+test.describe("navigation", () => {
+  test("loads one Spiceflow client runtime", async ({ page }) => {
+    await page.goto("/", { waitUntil: "networkidle" });
+
+    const loadCount = await page.evaluate(() =>
+      Reflect.get(globalThis, "__SPICEFLOW_CLIENT_LOAD_COUNT__")
+    );
+    expect(loadCount).toBe(1);
+  });
+
+  test("internal docs links navigate to the destination page", async ({ page }) => {
+    await page.setViewportSize({ width: 1600, height: 1200 });
+    await page.goto("/", { waitUntil: "networkidle" });
+
+    const nav = page.getByRole("navigation", { name: "Navigation" });
+    await nav.getByRole("link", { name: "Getting Started" }).click();
+
+    await expect(page).toHaveURL(/\/getting-started$/);
+    await expect(page.getByRole("heading", { name: "Installation" })).toBeVisible();
+    await expect(page.locator("code.language-ts .token.keyword").first()).toBeVisible();
+  });
+
+  test("sidebar contains links to all pages", async ({ request }) => {
+    const response = await request.get("/", {
+      headers: { "sec-fetch-dest": "document" },
+    });
+    const html = await response.text();
+    // Sidebar should contain nav items for MDX and plain markdown pages
+    expect(html).toContain("Welcome to Test Docs");
+    expect(html).toContain("Getting Started");
+    expect(html).toContain("Markdown Page");
+    // Should have the nav group name
+    expect(html).toContain("Guides");
+  });
+
+  test("getting-started page sets the document title", async ({ page }) => {
+    await page.setViewportSize({ width: 1600, height: 1200 });
+    await page.goto("/getting-started", { waitUntil: "domcontentloaded" });
+
+    await expect(page).toHaveTitle(/Getting Started/);
+  });
+});
+
+test.describe("plain markdown page", () => {
+  test("renders .md pages from the navigation", async ({ page }) => {
+    await page.goto("/markdown-page", { waitUntil: "domcontentloaded" });
+
+    await expect(page).toHaveTitle(/Markdown Page/);
+    await expect(page.getByRole("heading", { name: "Markdown HTML Block" })).toBeVisible();
+    await expect(page.getByText("Simple HTML in plain Markdown should render.")).toBeVisible();
+    await expect(page.getByRole("heading", { name: "Plain Markdown" })).toBeVisible();
+    await expect(page.getByText("same pipeline as MDX pages")).toBeVisible();
+    await expect(page.getByText("const extension = '.md'")).toBeVisible();
+  });
+
+  test("appears in sidebar navigation", async ({ page }) => {
+    await page.setViewportSize({ width: 1600, height: 1200 });
+    await page.goto("/markdown-page", { waitUntil: "domcontentloaded" });
+
+    const nav = page.getByRole("navigation", { name: "Navigation" });
+    await expect(nav.getByRole("link", { name: "Markdown Page" })).toBeVisible();
+    await expect(nav.getByRole("link", { name: "Plain Markdown" })).toBeVisible();
+    await expect(nav.getByRole("link", { name: "Markdown Features" })).toBeVisible();
+  });
+
+  test("HTML response contains rendered .md content", async ({ request }) => {
+    const response = await request.get("/markdown-page", {
+      headers: { "sec-fetch-dest": "document" },
+    });
+
+    expect(response.status()).toBe(200);
+    const html = await response.text();
+    expect(html).toContain("Markdown Page");
+    expect(html).toContain("Markdown HTML Block");
+    expect(html).toContain("Simple HTML in plain Markdown should render.");
+    expect(html).toContain("Plain Markdown");
+    expect(html).toContain("same pipeline as MDX pages");
+  });
+});
+
+test.describe("agent-facing docs", () => {
+  test("serves llms.txt with docs.zip first and markdown page links", async ({ request }) => {
+    const response = await request.get("/llms.txt");
+
+    expect(response.status()).toBe(200);
+    expect(response.headers()["content-type"]).toContain("text/markdown");
+
+    const text = await response.text();
+    expect(text).toContain("# Test Docs");
+    expect(text).toContain("> Documentation and usage guide for Test Docs.");
+    expect(text.indexOf("## Best way to inspect these docs")).toBeLessThan(text.indexOf("## Page index"));
+    expect(text).toContain("curl -L http://localhost:");
+    expect(text).toContain("/docs.zip -o docs.zip");
+    expect(text).toContain('grep -R "search term" docs/');
+    expect(text).toContain("[Welcome to Test Docs](http://localhost:");
+    expect(text).toContain("/index.md)");
+    expect(text).toContain("[Getting Started](http://localhost:");
+    expect(text).toContain("/getting-started.md)");
+    expect(text).toContain("/markdown-page.md)");
+  });
+
+  test("serves llms-full.txt with full page content separated by frontmatter", async ({ request }) => {
+    const response = await request.get("/llms-full.txt");
+
+    expect(response.status()).toBe(200);
+    expect(response.headers()["content-type"]).toContain("text/markdown");
+
+    const text = await response.text();
+    // Header
+    expect(text).toContain("# Test Docs");
+    expect(text).toContain("llms.txt");
+    expect(text).toContain("docs.zip");
+
+    // Pages are separated by frontmatter blocks with title and url
+    // URLs are YAML-quoted since they contain colons
+    expect(text).toContain("title: Welcome to Test Docs");
+    expect(text).toContain("title: Getting Started");
+    expect(text).toMatch(/url: "http:\/\/localhost:/);
+
+    // Full page content is included (not just links)
+    expect(text).toContain("## Overview");
+  });
+
+  test("points HTML and markdown pages back to llms.txt and llms-full.txt", async ({ request }) => {
+    const htmlResponse = await request.get("/getting-started", {
+      headers: { "sec-fetch-dest": "document" },
+    });
+    const html = await htmlResponse.text();
+    expect(html).toContain("Agent-readable docs index: /llms.txt");
+    expect(html).toContain("llms-full.txt");
+
+    const mdResponse = await request.get("/getting-started.md");
+    const md = await mdResponse.text();
+    expect(md).toContain("Agent-readable docs index: /llms.txt");
+    expect(md).toContain("llms-full.txt");
+  });
+});
+
+test.describe("hydration", () => {
+  function isIgnorableDevReloadError(message: string): boolean {
+    return message.includes("Failed to fetch dynamically imported module:");
+  }
+
+  function isHydrationError(msg: { type(): string; text(): string }): boolean {
+    const text = msg.text().toLowerCase();
+    const type = msg.type();
+    // React hydration errors (console.error with "hydrat")
+    if (type === "error" && text.includes("hydrat")) return true;
+    // React HTML nesting warnings that cause hydration mismatches
+    // e.g. "In HTML, <p> cannot be a descendant of <p>"
+    if (text.includes("cannot be a descendant")) return true;
+    if (text.includes("did not match")) return true;
+    return false;
+  }
+
+  test("no hydration errors on home page", async ({ page }) => {
+    const errors: string[] = [];
+    page.on("console", (msg) => {
+      if (isHydrationError(msg)) errors.push(msg.text());
+    });
+    page.on("pageerror", (err) => {
+      if (isIgnorableDevReloadError(err.message)) return;
+      errors.push(err.message);
+    });
+
+    await page.goto("/", { waitUntil: "domcontentloaded" });
+    await page.waitForLoadState("networkidle");
+    expect(errors, `Hydration errors found:\n${errors.join("\n")}`).toHaveLength(0);
+  });
+
+  test("dev server prebundles plugin-rsc browser client @dev", async ({ page }) => {
+    const errors: string[] = [];
+    const pluginRscBrowserClientRequests: string[] = [];
+
+    page.on("request", (request) => {
+      const url = request.url();
+      if (url.includes("react-server-dom") && url.includes("browser")) {
+        pluginRscBrowserClientRequests.push(url);
+      }
+    });
+    page.on("pageerror", (err) => {
+      if (isIgnorableDevReloadError(err.message)) return;
+      errors.push(err.message);
+    });
+
+    await page.goto("/", { waitUntil: "domcontentloaded" });
+    await page.waitForLoadState("networkidle");
+
+    expect(errors, `Browser errors found:\n${errors.join("\n")}`).toHaveLength(0);
+    expect(pluginRscBrowserClientRequests).toEqual(
+      expect.arrayContaining([expect.stringMatching(/\/node_modules\/\.vite\/.*\/deps\//)]),
+    );
+    expect(pluginRscBrowserClientRequests).not.toEqual(
+      expect.arrayContaining([expect.stringContaining("/@fs/")]),
+    );
+  });
+
+  test("no hydration errors on getting-started page", async ({ page }) => {
+    const errors: string[] = [];
+    page.on("console", (msg) => {
+      if (isHydrationError(msg)) errors.push(msg.text());
+    });
+    page.on("pageerror", (err) => {
+      if (isIgnorableDevReloadError(err.message)) return;
+      errors.push(err.message);
+    });
+
+    await page.setViewportSize({ width: 1600, height: 1200 });
+    await page.goto("/getting-started", { waitUntil: "domcontentloaded" });
+    await page.waitForLoadState("networkidle");
+    expect(errors, `Hydration errors found:\n${errors.join("\n")}`).toHaveLength(0);
+  });
+
+  test("no invalid HTML nesting (p inside p, div inside p)", async ({
+    request,
+  }) => {
+    // Fetch raw server-rendered HTML and check for nesting violations
+    // that would cause hydration mismatches
+    const response = await request.get("/", {
+      headers: { "sec-fetch-dest": "document" },
+    });
+    const html = await response.text();
+    // Check that <p> tags don't contain block elements
+    const pInsideP = /<p\b[^>]*>\s*<p\b[^>]*>/i.test(html);
+    expect(pInsideP, "Found <p> nested inside <p>").toBe(false);
+  });
+});
+
+test.describe("not found", () => {
+  test("returns 404 status for unknown page", async ({ request }) => {
+    const response = await request.get("/does-not-exist", {
+      headers: { "sec-fetch-dest": "document" },
+    });
+    expect(response.status()).toBe(404);
+  });
+
+  test("renders the full editorial layout on 404", async ({ request }) => {
+    const response = await request.get("/does-not-exist", {
+      headers: { "sec-fetch-dest": "document" },
+    });
+    const html = await response.text();
+    // Navbar slot and sidebar slot are both present
+    expect(html).toContain("slot-navbar");
+    expect(html).toContain("slot-sidebar-left");
+    // Known sidebar page link is rendered (from the test fixture docs.json)
+    expect(html).toMatch(/href="\/getting-started"/);
+  });
+
+  test("shows the missing path and a link back home", async ({ request }) => {
+    const response = await request.get("/does-not-exist", {
+      headers: { "sec-fetch-dest": "document" },
+    });
+    const html = await response.text();
+    expect(html).toContain("404");
+    expect(html).toContain("Page not found");
+    expect(html).toContain("/does-not-exist");
+    expect(html).toContain("Back to documentation");
+  });
+
+  test("uses site name in the 404 page title and sets noindex", async ({
+    request,
+  }) => {
+    const response = await request.get("/does-not-exist", {
+      headers: { "sec-fetch-dest": "document" },
+    });
+    const html = await response.text();
+    expect(html).toMatch(/<title[^>]*>Page not found - /);
+    expect(html).toMatch(/<meta[^>]*name="robots"[^>]*content="noindex"/);
+  });
+
+  test("renders 404 for nested paths", async ({ request }) => {
+    const response = await request.get("/foo/bar/baz", {
+      headers: { "sec-fetch-dest": "document" },
+    });
+    expect(response.status()).toBe(404);
+    const html = await response.text();
+    expect(html).toContain("/foo/bar/baz");
+  });
+});
+
+// @build — only runs against the built output (skipped in dev mode).
+// Verifies that the listen() guard is physically in the RSC entry file
+// (index.js) and not moved to a dependency chunk by code splitting.
+// If the guard ends up in a chunk, import.meta.url resolves to the chunk
+// path instead of the entry, and the server never starts.
+test("@build RSC entry contains listen() guard", () => {
+  const runId = process.env["E2E_RUN_ID"];
+  if (!runId) return; // dev mode — nothing to check
+  const fixtureRoot = path.resolve(import.meta.dirname, "../../fixtures/basic");
+  const sanitized = runId.replaceAll(/[^a-zA-Z0-9._-]/g, "_");
+  const entryPath = path.join(fixtureRoot, ".e2e-dist", sanitized, "rsc/index.js");
+  if (!fs.existsSync(entryPath)) return; // no build output yet (dev mode)
+  const code = fs.readFileSync(entryPath, "utf-8");
+  expect(code).toContain(".listen(");
+  expect(code).toContain("import.meta.main");
+});
+
+// @build — verifies that virtual modules are emitted as separate,
+// deterministically-named chunks in the RSC build output. This enables
+// multi-tenant deployments by swapping these files post-build.
+test.describe("@build deterministic RSC chunk names", () => {
+  function getRscAssetsDir(): string | null {
+    const runId = process.env["E2E_RUN_ID"];
+    if (!runId) return null;
+    const fixtureRoot = path.resolve(import.meta.dirname, "../../fixtures/basic");
+    const sanitized = runId.replaceAll(/[^a-zA-Z0-9._-]/g, "_");
+    const assetsDir = path.join(fixtureRoot, ".e2e-dist", sanitized, "rsc/assets");
+    return fs.existsSync(assetsDir) ? assetsDir : null;
+  }
+
+  test("emits holocron-data.js with no content hash", () => {
+    const assetsDir = getRscAssetsDir();
+    if (!assetsDir) return; // dev mode
+    expect(fs.existsSync(path.join(assetsDir, "holocron-data.js"))).toBe(true);
+  });
+
+  test("holocron-data.js contains config, navigation, and MDX loader", () => {
+    const assetsDir = getRscAssetsDir();
+    if (!assetsDir) return;
+    const code = fs.readFileSync(path.join(assetsDir, "holocron-data.js"), "utf-8");
+    // Config: getConfig function
+    expect(code).toContain("getConfig");
+    // Navigation: getNavigationData with enriched page objects
+    expect(code).toContain("getNavigationData");
+    expect(code).toContain("Getting Started");
+    // MDX loader: slug list and lazy import map
+    expect(code).toContain("getMdxSlugs");
+    expect(code).toContain("getMdxSource");
+    // Modules map
+    expect(code).toContain("getModules");
+  });
+
+  test("emits per-page MDX chunks with deterministic slug-based names", () => {
+    const assetsDir = getRscAssetsDir();
+    if (!assetsDir) return;
+    const files = fs.readdirSync(assetsDir);
+    // Each page chunk is named holocron-page-{slug}-{hash8}.js
+    const pageChunks = files.filter((f) => f.startsWith("holocron-page-")).sort();
+    expect(pageChunks).toHaveLength(5);
+    expect(pageChunks).toEqual(expect.arrayContaining([
+      expect.stringMatching(/^holocron-page-café-&-guide-[0-9a-f]{8}\.js$/),
+      expect.stringMatching(/^holocron-page-getting-started-[0-9a-f]{8}\.js$/),
+      expect.stringMatching(/^holocron-page-index-[0-9a-f]{8}\.js$/),
+      expect.stringMatching(/^holocron-page-markdown-page-[0-9a-f]{8}\.js$/),
+      expect.stringMatching(/^holocron-page-questions-\(what's-new\)-[0-9a-f]{8}\.js$/),
+    ]));
+  });
+
+  test("holocron-data.js imports page chunks by deterministic name", () => {
+    const assetsDir = getRscAssetsDir();
+    if (!assetsDir) return;
+    const code = fs.readFileSync(path.join(assetsDir, "holocron-data.js"), "utf-8");
+    expect(code).toMatch(/holocron-page-getting-started-[0-9a-f]{8}\.js/);
+    expect(code).toMatch(/holocron-page-index-[0-9a-f]{8}\.js/);
+    expect(code).toMatch(/holocron-page-markdown-page-[0-9a-f]{8}\.js/);
+  });
+
+  test("page chunk contains the raw MDX content for that page", () => {
+    const assetsDir = getRscAssetsDir();
+    if (!assetsDir) return;
+    const files = fs.readdirSync(assetsDir);
+    const gsChunk = files.find((f) => f.startsWith("holocron-page-getting-started-"));
+    expect(gsChunk).toBeTruthy();
+    const code = fs.readFileSync(path.join(assetsDir, gsChunk!), "utf-8");
+    expect(code).toContain("Getting Started");
+    expect(code).toContain("npm install @holocron.so/vite");
+  });
+
+  test("stable chunk does not contain virtual module data", () => {
+    const assetsDir = getRscAssetsDir();
+    if (!assetsDir) return;
+    const files = fs.readdirSync(assetsDir);
+    const stableChunk = files.find((f) => f.startsWith("holocron-stable-") && f.endsWith(".js"));
+    if (!stableChunk) return;
+    const code = fs.readFileSync(path.join(assetsDir, stableChunk), "utf-8");
+    // Virtual module markers should NOT be in the stable chunk
+    expect(code).not.toContain("virtual:holocron-config");
+    expect(code).not.toContain("virtual:holocron-navigation");
+    expect(code).not.toContain("virtual:holocron-mdx\n");
+  });
+});
+
+// @build — verifies the multi-tenant workflow: copy build output, swap
+// holocron-data.js + page chunks via generateHolocronData, start the
+// server, and confirm the updated content is served.
+test("@build generateHolocronData produces a working deployment", async () => {
+  const runId = process.env["E2E_RUN_ID"];
+  if (!runId) return; // dev mode — nothing to check
+
+  const fixtureRoot = path.resolve(import.meta.dirname, "../../fixtures/basic");
+  const sanitized = runId.replaceAll(/[^a-zA-Z0-9._-]/g, "_");
+  const buildDir = path.join(fixtureRoot, ".e2e-dist", sanitized);
+  if (!fs.existsSync(path.join(buildDir, "rsc/index.js"))) return;
+
+  // Copy build output to a temp dir
+  const tmpDir = path.join(fixtureRoot, ".e2e-dist", `${sanitized}-multitenant`);
+  fs.cpSync(buildDir, tmpDir, { recursive: true });
+
+  try {
+    const assetsDir = path.join(tmpDir, "rsc/assets");
+
+    // Remove existing data + page chunks
+    for (const f of fs.readdirSync(assetsDir)) {
+      if (f === "holocron-data.js" || f.startsWith("holocron-page-")) {
+        fs.unlinkSync(path.join(assetsDir, f));
+      }
+    }
+
+    // Generate new data with modified content via generateHolocronData
+    const { normalizeConfig, generateHolocronData } = await import("@holocron.so/vite");
+    const config = normalizeConfig({
+      name: "Multi-Tenant Test",
+      icons: { library: "lucide" },
+      navigation: {
+        groups: [{ group: "Guides", pages: ["index"] }],
+      },
+    });
+
+    const result = await generateHolocronData({
+      config,
+      getMdxSource: async (slug) => {
+        if (slug === "index") return "---\ntitle: Tenant Alpha Home\n---\n\n## Welcome to Tenant Alpha\n\nThis content was generated by generateHolocronData.\n";
+        throw new Error(`Unknown slug: ${slug}`);
+      },
+      slugs: ["index"],
+    });
+
+    // Write new data chunk + page chunks
+    fs.writeFileSync(path.join(assetsDir, "holocron-data.js"), result.dataChunkSource);
+    for (const [, chunk] of result.pageChunks) {
+      fs.writeFileSync(path.join(assetsDir, chunk.filename), chunk.source);
+    }
+
+    // Start server from the modified build
+    const port = 19876;
+    const child: ChildProcess = spawn("node", [path.join(tmpDir, "rsc/index.js")], {
+      env: { ...process.env, PORT: String(port) },
+      stdio: "pipe",
+    });
+
+    try {
+      // Wait for server to be ready
+      const deadline = Date.now() + 15_000;
+      while (Date.now() <= deadline) {
+        try {
+          await fetch(`http://localhost:${port}/`, { redirect: "manual" });
+          break;
+        } catch {
+          await new Promise((r) => setTimeout(r, 200));
+        }
+      }
+
+      // Verify the swapped content is served
+      const res = await fetch(`http://localhost:${port}/`, {
+        headers: { "sec-fetch-dest": "document" },
+      });
+      expect(res.status).toBe(200);
+      const html = await res.text();
+      expect(html).toContain("Tenant Alpha Home");
+      expect(html).toContain("Welcome to Tenant Alpha");
+      expect(html).toContain("generateHolocronData");
+      // Original content should NOT be present
+      expect(html).not.toContain("Welcome to Test Docs");
+    } finally {
+      child.kill();
+    }
+  } finally {
+    fs.rmSync(tmpDir, { recursive: true, force: true });
+  }
+});

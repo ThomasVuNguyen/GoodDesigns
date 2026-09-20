@@ -1,0 +1,469 @@
+/*
+ * Prism.js light theme — more saturated, brighter variant of GitHub Light.
+ *
+ * Color palette:
+ * - Keywords (import, function, return): #d1242f (vivid red)
+ * - Strings: #0550ae (rich blue)
+ * - Functions/components: #7c3aed (vivid purple)
+ * - Parameters/properties: #b45309 (warm amber)
+ * - HTML tags: #16a34a (bright green)
+ * - Attributes/numbers: #2563eb (bright blue)
+ * - Punctuation/text: #1e293b (slate)
+ */
+
+/* Base code style - override Prism defaults */
+code[class*='language-'],
+pre[class*='language-'] {
+  color: #1e293b;
+  background: none;
+  text-shadow: none;
+  font-family: var(--font-code, 'SF Mono', 'SFMono-Regular', 'Consolas', 'Liberation Mono', Menlo, Courier, monospace);
+  font-size: var(--type-code-size);
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.6;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  tab-size: 2;
+  hyphens: none;
+}
+
+/* Keywords: import, from, function, return, const, let, var, export, default */
+.token.keyword,
+.token.module,
+.token.imports,
+.token.control-flow,
+.token.instruction,
+.token.directive,
+.token.important,
+.token.selector,
+.token.rule,
+.token.pseudo-class,
+.token.class,
+.token.delimiter,
+.token.decorator,
+.token.annotation,
+.token.this,
+.token.title {
+  color: #d1242f;
+}
+
+/* Strings and template literals */
+.token.string,
+.token.template-string,
+.token.attr-value,
+.token.interpolation,
+.token.string-interpolation,
+.token.value,
+.token.single-quoted-string,
+.token.double-quoted-string,
+.token.scalar,
+.token.url,
+.token.header-value,
+.token.char {
+  color: #0550ae;
+}
+
+/* Function names */
+.token.function,
+.token.class-name,
+.token.method,
+.token.maybe-class-name,
+.token.function-variable,
+.token.function-definition,
+.token.class-name-definition,
+.token.known-class-name,
+.token.generic-function,
+.token.generic,
+.token.return-type,
+.token.class-name-fully-qualified {
+  color: #7c3aed;
+}
+
+/* Object properties, parameters, YAML/TOML keys, CSS @rules */
+.token.property,
+.token.parameter,
+.token.key,
+.token.atrule,
+.token.property-access,
+.token.literal-property,
+.token.variable,
+.token.environment,
+.token.section,
+.token.section-name,
+.token.table,
+.token.assign-left,
+.token.string-property,
+.token.argument-name,
+.token.header,
+.token.header-name {
+  color: #b45309;
+}
+
+/* HTML/JSX tag names */
+.token.tag,
+.token.tag .token.tag {
+  color: #16a34a;
+}
+
+/* Also color component names (PascalCase tags) in JSX */
+.token.tag .token.class-name {
+  color: #16a34a;
+}
+
+/* Attributes in JSX/HTML */
+.token.tag .token.attr-name,
+.token.attr-name {
+  color: #2563eb;
+}
+
+/* Numbers */
+.token.number,
+.token.hexcode,
+.token.color,
+.token.unit {
+  color: #2563eb;
+}
+
+/* Operators: =, ===, =>, +, - */
+.token.operator,
+.token.arrow,
+.token.attr-equals,
+.token.entity {
+  color: #d1242f;
+}
+
+/* Punctuation: brackets, parens, commas, semicolons */
+.token.punctuation {
+  color: #1e293b;
+}
+
+/* Booleans, null, undefined */
+.token.boolean,
+.token.constant,
+.token.builtin,
+.token.null,
+.token.console,
+.token.dom,
+.token.symbol {
+  color: #2563eb;
+}
+
+/* Comments */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata,
+.token.doc-comment {
+  color: #6b7280;
+  font-style: italic;
+}
+
+/* JSX specific: tag punctuation < > / */
+.token.tag .token.punctuation {
+  color: #1e293b;
+}
+
+/* Spread operator, rest */
+.token.spread {
+  color: #d1242f;
+}
+
+/* Plain text inside tags */
+.token.plain-text {
+  color: #1e293b;
+}
+
+/* Regex */
+.token.regex,
+.token.escape {
+  color: #0550ae;
+}
+
+/* Diff */
+.token.inserted {
+  color: #16a34a;
+}
+
+.token.deleted {
+  color: #d1242f;
+}
+
+/* Official Prism standard tokens: weight/style, not color */
+.token.bold {
+  font-weight: 700;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+.token.namespace {
+  opacity: 0.7;
+}
+
+/* Shell/bash specific */
+.language-bash .token.function {
+  color: #2563eb;
+}
+
+/* Diagram language: neutral box-drawing, colored text labels */
+code.language-diagram {
+  font-family: var(--font-diagram, Menlo, 'Courier New', Monaco, monospace);
+  font-weight: 400;
+  letter-spacing: normal;
+}
+
+.language-diagram .token.box-drawing {
+  color: #999;
+}
+
+.language-diagram .token.line-char {
+  color: #999;
+}
+
+.language-diagram .token.label {
+  color: var(--primary);
+}
+
+/* No text shadow on any token */
+.token {
+  text-shadow: none;
+}
+
+/* ======================================================================
+   Dark mode - GitHub Dark inspired palette.
+   @variant dark works here because globals.css imports this file via
+   CSS @import (part of Tailwind compilation chain). Dark colors are
+   defined as CSS variables on :root, then referenced in selectors.
+   ====================================================================== */
+
+:root {
+  @variant dark {
+    --prism-fg: #e6edf3;
+    --prism-keyword: #ff7b72;
+    --prism-string: #a5d6ff;
+    --prism-function: #d2a8ff;
+    --prism-property: #ffa657;
+    --prism-tag: #7ee787;
+    --prism-attr: #79c0ff;
+    --prism-number: #79c0ff;
+    --prism-operator: #ff7b72;
+    --prism-punctuation: #e6edf3;
+    --prism-builtin: #79c0ff;
+    --prism-comment: #8b949e;
+    --prism-spread: #ff7b72;
+    --prism-regex: #a5d6ff;
+    --prism-bash-fn: #79c0ff;
+    --prism-diagram-structure: #666;
+  }
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+  @variant dark {
+    color: var(--prism-fg);
+  }
+}
+
+.token.keyword,
+.token.module,
+.token.imports,
+.token.control-flow,
+.token.instruction,
+.token.directive,
+.token.important,
+.token.selector,
+.token.rule,
+.token.pseudo-class,
+.token.class,
+.token.delimiter,
+.token.decorator,
+.token.annotation,
+.token.this,
+.token.title {
+  @variant dark {
+    color: var(--prism-keyword);
+  }
+}
+
+.token.string,
+.token.template-string,
+.token.attr-value,
+.token.interpolation,
+.token.string-interpolation,
+.token.value,
+.token.single-quoted-string,
+.token.double-quoted-string,
+.token.scalar,
+.token.url,
+.token.header-value,
+.token.char {
+  @variant dark {
+    color: var(--prism-string);
+  }
+}
+
+.token.function,
+.token.class-name,
+.token.method,
+.token.maybe-class-name,
+.token.function-variable,
+.token.function-definition,
+.token.class-name-definition,
+.token.known-class-name,
+.token.generic-function,
+.token.generic,
+.token.return-type,
+.token.class-name-fully-qualified {
+  @variant dark {
+    color: var(--prism-function);
+  }
+}
+
+.token.property,
+.token.parameter,
+.token.key,
+.token.atrule,
+.token.property-access,
+.token.literal-property,
+.token.variable,
+.token.environment,
+.token.section,
+.token.section-name,
+.token.table,
+.token.assign-left,
+.token.string-property,
+.token.argument-name,
+.token.header,
+.token.header-name {
+  @variant dark {
+    color: var(--prism-property);
+  }
+}
+
+.token.tag,
+.token.tag .token.tag {
+  @variant dark {
+    color: var(--prism-tag);
+  }
+}
+
+.token.tag .token.class-name {
+  @variant dark {
+    color: var(--prism-tag);
+  }
+}
+
+.token.tag .token.attr-name,
+.token.attr-name {
+  @variant dark {
+    color: var(--prism-attr);
+  }
+}
+
+.token.number,
+.token.hexcode,
+.token.color,
+.token.unit {
+  @variant dark {
+    color: var(--prism-number);
+  }
+}
+
+.token.operator,
+.token.arrow,
+.token.attr-equals,
+.token.entity {
+  @variant dark {
+    color: var(--prism-operator);
+  }
+}
+
+.token.punctuation {
+  @variant dark {
+    color: var(--prism-punctuation);
+  }
+}
+
+.token.boolean,
+.token.constant,
+.token.builtin,
+.token.null,
+.token.console,
+.token.dom,
+.token.symbol {
+  @variant dark {
+    color: var(--prism-builtin);
+  }
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata,
+.token.doc-comment {
+  @variant dark {
+    color: var(--prism-comment);
+    font-style: italic;
+  }
+}
+
+.token.tag .token.punctuation {
+  @variant dark {
+    color: var(--prism-punctuation);
+  }
+}
+
+.token.spread {
+  @variant dark {
+    color: var(--prism-spread);
+  }
+}
+
+.token.plain-text {
+  @variant dark {
+    color: var(--prism-fg);
+  }
+}
+
+.token.regex,
+.token.escape {
+  @variant dark {
+    color: var(--prism-regex);
+  }
+}
+
+.token.inserted {
+  @variant dark {
+    color: var(--prism-tag);
+  }
+}
+
+.token.deleted {
+  @variant dark {
+    color: var(--prism-keyword);
+  }
+}
+
+.language-bash .token.function {
+  @variant dark {
+    color: var(--prism-bash-fn);
+  }
+}
+
+.language-diagram .token.box-drawing,
+.language-diagram .token.line-char {
+  @variant dark {
+    color: var(--prism-diagram-structure);
+  }
+}
+
+.language-diagram .token.label {
+  @variant dark {
+    color: var(--primary);
+  }
+}

@@ -1,0 +1,73 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the fonts guide from @/vite/src/schema.ts.
+  Use @https://fonts.google.com for Google Fonts family names.
+title: Fonts
+description: Custom fonts for headings and body text.
+icon: type
+---
+
+# Fonts
+
+Holocron uses Inter by default. The default Inter files are bundled with the site and served from the same origin, so a fresh site does not make third-party font requests.
+
+Use the `fonts` field in `docs.json` when you want a different typeface. Family names without `source` load from Google Fonts. Add `source` when you want to self-host a custom font from `public/`.
+
+## Using Google Fonts
+
+Set the `family` field to any [Google Fonts](https://fonts.google.com) family name. Holocron automatically generates the stylesheet link and preconnect tags for you.
+
+```json docs.json
+{
+  "fonts": {
+    "family": "DM Sans"
+  }
+}
+```
+
+This applies **DM Sans** to all text on the site, including headings, body, sidebar, and navigation.
+
+## Separate heading and body fonts
+
+Use the `heading` and `body` fields to set different fonts for each. For example, a serif font for headings with a clean sans-serif for body text:
+
+```json docs.json
+{
+  "fonts": {
+    "heading": { "family": "Fraunces", "weight": 700 },
+    "body": { "family": "DM Sans", "weight": 400 }
+  }
+}
+```
+
+The top-level `family` sets the base font for everything. `heading` and `body` override it for their respective contexts. If you only set `heading`, body text still uses the base font.
+
+## Self-hosted fonts
+
+Place your font file in `public/` and reference it with `source`:
+
+```json docs.json
+{
+  "fonts": {
+    "family": "My Custom Font",
+    "source": "/fonts/custom-font.woff2",
+    "format": "woff2"
+  }
+}
+```
+
+Self-hosted fonts skip Google Fonts entirely. No third-party requests are made.
+
+## Font fields
+
+| Field     | Type                  | Description                                             |
+| --------- | --------------------- | ------------------------------------------------------- |
+| `family`  | string                | Font family name. Google Fonts names load automatically |
+| `weight`  | number                | Font weight (e.g. 400, 700)                             |
+| `source`  | string                | URL or local path to a font file                        |
+| `format`  | `"woff"` \| `"woff2"` | Font file format. Required when using a local `source`  |
+| `heading` | object                | Override font for headings only                         |
+| `body`    | object                | Override font for body text only                        |
+
+The `heading` and `body` fields accept the same properties: `family`, `weight`, `source`, and `format`.

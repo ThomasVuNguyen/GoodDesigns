@@ -1,0 +1,184 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the layout and page modes guide from @/vite/src/lib/page-frontmatter.ts,
+  @/vite/src/lib/sidebar-widths.ts, @/vite/src/lib/mcp/provider.ts, and
+  @/vite/src/lib/openapi/provider.ts.
+  Cover default, compact, center, custom, and maxWidth.
+  Note that generated MCP and OpenAPI pages force mode default so compact
+  sites still show the request example rail.
+title: Layout
+description: Control the page layout, grid width, and page modes.
+icon: arrow-left-right
+---
+
+## Page modes
+
+Every page can set a **mode** in its frontmatter to control how much of the editorial layout is rendered.
+
+| Mode      | Left sidebar | Right aside | Editorial grid | Use case                         |
+| --------- | ------------ | ----------- | -------------- | -------------------------------- |
+| `default` | Yes          | Yes         | Yes            | Standard docs pages              |
+| `compact` | Yes          | No          | Yes (2-column) | Focused docs with a narrow frame |
+| `center`  | No           | Yes         | Yes (2-column) | Focused content without nav      |
+| `custom`  | No           | No          | No             | Landing pages, custom layouts    |
+
+`wide` and `frame` are accepted for Mintlify compatibility and alias to `default`.
+
+### Compact mode
+
+Use **`compact`** to keep the left navigation while removing the optional right aside. The content column keeps its normal reading width, so the full page frame becomes narrower and the header aligns with the content on the right. Compact also sets **`--sidebar-font-size`** to **12px** (the default is 13px, 14px at `xl`). Override that token on `:root` if you want a different size.
+
+```yaml
+---
+$schema: https://holocron.so/frontmatter.json
+mode: "compact"
+---
+```
+
+Set the same mode in **`docs.json`** to make it the default for the full site. Compact mode removes the right aside, so Holocron defaults **`assistant.display`** to **`floating`**. Ask AI stays available as a bottom pill. Set `display` to `sidebar` if you do not want the pill.
+
+```json
+{
+  "layout": {
+    "mode": "compact"
+  }
+}
+```
+
+See [AI Assistant](../ai/assistant.mdx) for the floating pill. Page frontmatter overrides the site default. Use `mode: "default"` on a specific page to restore the full three-column layout.
+
+Compact **never** opens a right rail on authored docs pages. Every page in an **MCP** or **OpenAPI** tab uses `mode: "default"`, including authored overview pages that have no example rail. That keeps the tab frame consistent. Generated request examples stay in the right aside. Authored asides and table-of-contents panels on compact docs pages still render in the **main column**. The sidebar Ask AI widget stays hidden.
+
+With the default geometry, compact mode derives a **910px frame** from the existing layout values:
+
+```text
+1200px max width - 230px right aside - 60px column gap = 910px
+```
+
+There is no separate compact width setting. Changes to `layout.maxWidth` or `layout.columnGap` update the compact frame automatically.
+
+### Custom mode
+
+Set `mode: "custom"` to strip the editorial layout entirely. Only the **navbar**, **tab bar**, **footer**, and **mobile navigation** are rendered. The content area is a plain container where you control everything with your own HTML and Tailwind classes.
+
+```yaml
+---
+$schema: https://holocron.so/frontmatter.json
+mode: "custom"
+---
+```
+
+This is useful for landing pages, pricing pages, or any page where you want full control over the layout. Standard MDX components like code blocks, callouts, and icons still work inside custom pages.
+
+### `maxWidth`
+
+Use the `maxWidth` frontmatter field to constrain the content container width in pixels. The navbar stays full-width; only the content area is narrowed and centered.
+
+```yaml
+---
+$schema: https://holocron.so/frontmatter.json
+mode: "custom"
+maxWidth: 700
+---
+```
+
+### Example landing page
+
+````mdx
+---
+mode: "custom"
+maxWidth: 800
+---
+
+<div className="flex flex-col items-center py-24 gap-6 text-center">
+
+<h1 className="text-5xl font-bold tracking-tight">
+  Your Product Name
+</h1>
+
+<p className="text-lg text-muted-foreground max-w-xl">
+  A short description of what your product does and why it matters.
+</p>
+
+<a href="./quickstart" className="no-underline rounded-lg bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground">
+  Get Started
+</a>
+
+</div>
+````
+
+## Full-width layout
+
+By default Holocron caps the page grid at **1200px**. The left sidebar, content column, and right sidebar all live inside that constraint.
+
+You can make the layout span the full viewport by overriding a single CSS variable.
+
+## Override `--grid-max-width`
+
+In your `style.css` file (see [Custom CSS](/docs/customize/custom-css)):
+
+```css
+/* style.css */
+:root {
+  --grid-max-width: 2600px;
+}
+```
+
+This pushes the left and right sidebars toward the screen edges. The content column grows to fill the extra space, up to its **720px** cap. Any remaining width is distributed as gap between the three columns.
+
+```diagram
+Default (1200px max)
+┌────────────────────────────────────────────────────────────────────────────┐
+│              ┌───────┐    ┌──────────────┐    ┌───────┐                    │
+│              │  nav  │    │   content    │    │ aside │                    │
+│              └───────┘    └──────────────┘    └───────┘                    │
+└────────────────────────────────────────────────────────────────────────────┘
+
+Full-width (2600px max)
+┌────────────────────────────────────────────────────────────────────────────┐
+│ ┌───────┐              ┌──────────────┐              ┌───────┐             │
+│ │  nav  │              │   content    │              │ aside │             │
+│ └───────┘              └──────────────┘              └───────┘             │
+└────────────────────────────────────────────────────────────────────────────┘
+```
+
+## How the grid works
+
+Holocron's page grid is controlled by four CSS variables:
+
+| Variable               | Default  | Description                      |
+| ---------------------- | -------- | -------------------------------- |
+| `--grid-max-width`     | `1200px` | Overall page cap                 |
+| `--grid-nav-width`     | `230px`  | Left sidebar (table of contents) |
+| `--grid-sidebar-width` | `230px`  | Right sidebar (aside content)    |
+| `--grid-gap`           | `60px`   | Gap between columns              |
+
+The **content column width** is derived automatically:
+
+```
+content = min(720px, max-width - nav - sidebar - 2 × gap)
+```
+
+This means increasing `--grid-max-width` does not make the content column infinitely wide. It grows until it hits the 720px cap, then the extra space becomes gap.
+
+API pages bump `--grid-sidebar-width` to **460px** when the aside contains `RequestExample` or `ResponseExample`. Use `<Aside width={N}>` for any other fixed size. See [Aside](../components/aside.mdx).
+
+## Aside height and section spacing
+
+A non-full `<Aside>` shares its vertical space with the section it belongs to (the content between two headings). The section row expands to fit whichever is taller: the main content or the aside. If the aside callout is taller than the section text, you will see extra whitespace below the main content.
+
+To avoid this, keep aside callouts **short** and only place them in sections with enough body text to match or exceed the aside height.
+
+## True edge-to-edge
+
+If you want the grid to always fill the viewport regardless of screen size, use `100vw`:
+
+```css
+/* style.css */
+:root {
+  --grid-max-width: 100vw;
+}
+```
+
+This removes the max-width constraint entirely. The grid stretches on every screen.

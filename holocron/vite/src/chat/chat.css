@@ -1,0 +1,186 @@
+/**
+ * Chat widget CSS — standalone-widget entry only.
+ *
+ * Fed to the Tailwind CLI by scripts/bundle-chat-css.ts to produce the
+ * self-contained CSS bundle (chat-css-bundle.ts) that ChatShadowHost
+ * injects into the shadow root.
+ *
+ * Component classes shared with the embedded holocron path (drawer shadow,
+ * input frame, suggestions, dropdown animation, pill) live in
+ * chat-shared.css, which is imported both here AND by styles/globals.css.
+ * This file only adds the shadow-DOM-specific parts: Tailwind directives,
+ * token defaults, --tw-* fallbacks, and scrollbar styling.
+ *
+ * Pill ↔ drawer morph uses Motion layoutId (JS), so shadow isolation is fine.
+ */
+
+/* ── Tailwind directives (for standalone widget CSS generation) ───────
+ * @source "." scans only chat/ files. */
+@import "tailwindcss/preflight" layer(base);
+@import "tailwindcss/theme" layer(theme);
+@import "tailwindcss/utilities" layer(utilities);
+@import "./chat-shared.css";
+
+@source ".";
+
+/* Map CSS custom properties to Tailwind theme tokens */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-card: var(--card);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-border-subtle: var(--border-subtle);
+  --color-yellow: var(--yellow);
+
+  --radius-sm: var(--radius-sm);
+  --radius-md: 8px;
+  --radius-lg: 10px;
+  --radius-xl: 14px;
+  --radius-2xl: 18px;
+  --radius-3xl: var(--radius-3xl);
+
+  --font-code: var(--font-code);
+}
+
+/* Shadow DOM: `:host(.dark) &` lets dark: utilities match when the host
+ * element has .dark. Regular `.dark &` path kept for the non-shadow
+ * holocron integration where globals.css handles it. */
+@custom-variant dark (:host(.dark) &, &:where(.dark, .dark *));
+
+/* ── Tailwind --tw-* defaults for shadow DOM ──────────────────────────
+ * Tailwind v4 utilities (border, shadow-*, ring-*, transforms) read --tw-*
+ * custom properties whose defaults come from @property rules. @property is
+ * document-global and IGNORED when the stylesheet lives inside a shadow
+ * root, so those utilities silently break in the standalone widget (border
+ * width computes to 0, box-shadow to none). Tailwind's own fallback block
+ * (@layer properties) is @supports-guarded to old browsers only, so modern
+ * Chrome never applies it. Replicate the defaults unguarded, scoped to the
+ * widget, in @layer base so utilities (in @layer utilities) still win. */
+@layer base {
+  :host, :host *, :host ::before, :host ::after,
+  :where(.holocron-chat), :where(.holocron-chat) *,
+  :where(.holocron-chat) ::before, :where(.holocron-chat) ::after {
+    --tw-translate-x: 0;
+    --tw-translate-y: 0;
+    --tw-translate-z: 0;
+    --tw-border-style: solid;
+    --tw-shadow: 0 0 #0000;
+    --tw-shadow-color: initial;
+    --tw-shadow-alpha: 100%;
+    --tw-inset-shadow: 0 0 #0000;
+    --tw-inset-shadow-color: initial;
+    --tw-inset-shadow-alpha: 100%;
+    --tw-ring-color: initial;
+    --tw-ring-shadow: 0 0 #0000;
+    --tw-inset-ring-color: initial;
+    --tw-inset-ring-shadow: 0 0 #0000;
+    --tw-ring-inset: initial;
+    --tw-ring-offset-width: 0px;
+    --tw-ring-offset-color: #fff;
+    --tw-ring-offset-shadow: 0 0 #0000;
+    --tw-outline-style: solid;
+    --tw-duration: initial;
+    --tw-ease: initial;
+  }
+}
+
+/* ── Thin scrollbars ─────────────────────────────────────────────────── */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--foreground) 12%, transparent) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track,
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--foreground) 12%, transparent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--foreground) 22%, transparent);
+}
+
+/* ── Custom utility classes (from editorial.css, needed in shadow DOM) ── */
+.no-bleed {
+  --bleed: 0px;
+}
+
+.code-font-size {
+  font-size: var(--code-font-size, 0.875em);
+}
+
+/* Softened body text for MDX/RSC message content rendered inside the widget.
+ * Own the token so host-page dark --prose-text cannot leak through inheritance
+ * when styles are shared; inside shadow, page editorial.css never applies. */
+.editorial-prose {
+  color: var(--prose-text, var(--foreground));
+}
+
+/* ── Default CSS variable values for standalone widget ────────────────
+ * :host applies inside shadow DOM; :where(.holocron-chat) covers the
+ * non-shadow host element wrapper. Both use zero specificity so
+ * host/user overrides always win. */
+:host,
+:where(.holocron-chat) {
+  color: var(--foreground);
+  background-color: var(--background);
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --primary: #0284c7;
+  --primary-foreground: #ffffff;
+  --muted: #f5f5f5;
+  --muted-foreground: #737373;
+  --accent: #f5f5f5;
+  --card: #ffffff;
+  --border: #e5e5e5;
+  --border-subtle: #e5e5e5;
+  --destructive: #ef4444;
+  --radius-sm: 6px;
+  --radius-3xl: 24px;
+  --font-code: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+  --code-font-size: 0.9em;
+  --prose-gap: 16px;
+  --prose-text: color-mix(in oklch, var(--foreground) 80%, var(--background));
+  --chat-highlight: #6b21a8;
+  --chat-error: #f97316;
+  --yellow: #eab308;
+}
+
+/* Dark mode via .dark class on the shadow host element.
+ * ChatShadowHost applies .dark based on the theme prop:
+ * 'dark' → always, 'system' → follows prefers-color-scheme,
+ * 'light' → never. */
+:host(.dark),
+:where(.holocron-chat.dark) {
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --primary: #bae6fd;
+  --primary-foreground: #0a0a0a;
+  --muted: #262626;
+  --muted-foreground: #a3a3a3;
+  --accent: #262626;
+  --card: #0a0a0a;
+  --border: #262626;
+  --border-subtle: #262626;
+  --destructive: #f87171;
+  --chat-highlight: #d8b4fe;
+  --chat-error: #fdba74;
+  --yellow: #facc15;
+  --prose-text: color-mix(in oklch, var(--foreground) 80%, var(--background));
+}

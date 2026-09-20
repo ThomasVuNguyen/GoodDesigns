@@ -1,0 +1,236 @@
+import { expect, test, type APIRequestContext, type Page } from "../helpers/test.ts";
+
+/**
+ * Fixture: fixtures/tabs/
+ * Config shape: `navigation.tabs` with internal groups + external link-only tabs.
+ */
+
+test.describe("tabs fixture — navigation.tabs with external link tabs", () => {
+  async function openTabsHome(page: Page, request: APIRequestContext) {
+    const response = await request.get("/", {
+      headers: { "sec-fetch-dest": "document" },
+    });
+    expect(response.status()).toBe(200);
+    await page.goto("/", { waitUntil: "domcontentloaded" });
+    await expect(page.getByRole("navigation", { name: "Navigation" })).toBeVisible({
+      timeout: 10000,
+    });
+  }
+
+  test("renders the Docs tab with its groups and pages", async ({ page, request }) => {
+    await page.setViewportSize({ width: 1600, height: 1200 });
+    await openTabsHome(page, request);
+
+    await expect(page).toHaveTitle(/Tabs Docs/);
+
+    const nav = page.getByRole("navigation", { name: "Navigation" });
+
+    // The two groups inside the "Docs" tab should appear in the sidebar
+    await expect(nav.getByText("Overview")).toBeVisible();
+    await expect(nav.getByText("Guides")).toBeVisible();
+
+    // Pages from the groups should be visible
+    await expect(nav.getByRole("link", { name: "Tabs Home" })).toBeVisible();
+    await expect(nav.getByRole("link", { name: "Quickstart" })).toBeVisible();
+    await expect(nav.getByRole("link", { name: "Theming" })).toBeVisible();
+  });
+
+  test("renders external link-only tabs (GitHub, Changelog)", async ({ page, request }) => {
+    await page.setViewportSize({ width: 1600, height: 1200 });
+    await openTabsHome(page, request);
+
+    // Link-only tabs render as anchors inside the tab bar
+    const tabBar = page.locator(".slot-tabbar");
+    const githubLink = tabBar.getByRole("link", { name: /GitHub/ });
+    const changelogLink = tabBar.getByRole("link", { name: /Changelog/ });
+
+    await expect(githubLink).toHaveAttribute(
+      "href",
+      "https://github.com/remorses/holocron",
+    );
+    await expect(changelogLink).toHaveAttribute(
+      "href",
+      "https://github.com/remorses/holocron/releases",
+    );
+  });
+
+  test("HTML response contains tab labels", async ({ request }) => {
+    const response = await request.get("/", {
+      headers: { "sec-fetch-dest": "document" },
+    });
+    expect(response.status()).toBe(200);
+    const html = await response.text();
+    // Tab names are present in the server-rendered HTML
+    expect(html).toContain("Docs");
+    expect(html).toContain("GitHub");
+    expect(html).toContain("Changelog");
+  });
+
+  test("pages inside tab groups are routed correctly", async ({ page }) => {
+    await page.goto("/quickstart", { waitUntil: "domcontentloaded" });
+    await expect(page.getByRole("heading", { name: "Installation" })).toBeVisible();
+    await expect(page).toHaveTitle(/Quickstart/);
+
+    await page.goto("/theming", { waitUntil: "domcontentloaded" });
+    await expect(page.getByRole("heading", { name: "Colors" })).toBeVisible();
+    await expect(page).toHaveTitle(/Theming/);
+  });
+
+  test("renders banner with dismiss button", async ({ page, request }) => {
+    await page.setViewportSize({ width: 1600, height: 1200 });
+    await openTabsHome(page, request);
+    const banner = page.locator(".slot-banner");
+    await expect(banner).toBeVisible();
+    await expect(banner).toContainText("We just launched v2!");
+    // Banner contains a markdown link
+    const link = banner.getByRole("link", { name: "Read the announcement" });
+    await expect(link).toHaveAttribute("href", "https://example.com/blog/v2");
+    // Dismiss button is present (dismissible: true)
+    await expect(banner.getByRole("button", { name: "Dismiss banner" })).toBeVisible();
+  });
+
+  test("banner content inherits the banner contrast color in light and dark mode", async ({
+    context,
+    request,
+  }) => {
+    for (const colorScheme of ["light", "dark"] as const) {
+      const page = await context.newPage();
+      await page.setViewportSize({ width: 1600, height: 1200 });
+      await page.emulateMedia({ colorScheme });
+      await openTabsHome(page, request);
+
+      const banner = page.locator(".slot-banner");
+      await expect(banner).toBeVisible();
+
+      const snapshot = await banner.evaluate((node) => {
+        const bannerColor = getComputedStyle(node).color;
+        const textColors = Array.from(node.querySelectorAll("*"))
+          .filter((el) => {
+            if (el instanceof HTMLButtonElement) return false;
+            if (el.closest("button")) return false;
+            return (el.textContent ?? "").trim().length > 0;
+          })
+          .map((el) => getComputedStyle(el).color);
+
+        return {
+          bannerColor,
+          uniqueTextColors: [...new Set(textColors)].sort(),
+        };
+      });
+
+      expect(snapshot.uniqueTextColors).toEqual([snapshot.bannerColor]);
+      await page.close();
+    }
+  });
+
+  test("renders footer with socials and link columns", async ({ page, request }) => {
+    await page.setViewportSize({ width: 1600, height: 1200 });
+    await openTabsHome(page, request);
+    const footer = page.locator("footer");
+    await expect(footer).toBeVisible();
+    // Social links
+    await expect(footer.getByRole("link", { name: "X", exact: true })).toHaveAttribute(
+      "href",
+      "https://x.com/example",
+    );
+    await expect(footer.getByRole("link", { name: "github" })).toHaveAttribute(
+      "href",
+      "https://github.com/example",
+    );
+    // Link columns
+    await expect(footer.getByText("Resources")).toBeVisible();
+    await expect(footer.getByRole("link", { name: "Blog" })).toBeVisible();
+    await expect(footer.getByText("Company")).toBeVisible();
+    await expect(footer.getByRole("link", { name: "Careers" })).toBeVisible();
+  });
+
+  test("renders theme toggle button", async ({ page, request }) => {
+    await page.setViewportSize({ width: 1600, height: 1200 });
+    await openTabsHome(page, request);
+    const toggle = page.getByRole("button", { name: /Switch to (dark|light) mode/ });
+    await expect(toggle).toBeVisible();
+  });
+
+  test("renders primary CTA button in navbar", async ({ page, request }) => {
+    await page.setViewportSize({ width: 1600, height: 1200 });
+    await openTabsHome(page, request);
+    const cta = page.getByRole("link", { name: "Get Started" });
+    await expect(cta).toBeVisible();
+    await expect(cta).toHaveAttribute("href", "https://example.com/signup");
+  });
+
+  test("SSR HTML includes description metatag from config", async ({ request }) => {
+    const response = await request.get("/", {
+      headers: { "sec-fetch-dest": "document" },
+    });
+    const html = await response.text();
+    // The site description flows through the config and should appear
+    // somewhere in the rendered output (may be in RSC flight payload)
+    expect(html).toContain("A documentation site with tabs");
+  });
+
+  test("injects brand-primary color from config", async ({ page, request }) => {
+    await page.setViewportSize({ width: 1600, height: 1200 });
+    await openTabsHome(page, request);
+    // The banner uses bg-(color:--brand-primary) so if colors work, the
+    // banner is visible with the brand color
+    const banner = page.locator(".slot-banner");
+    await expect(banner).toBeVisible();
+  });
+
+  test("search input has custom placeholder", async ({ page, request }) => {
+    await page.setViewportSize({ width: 1600, height: 1200 });
+    await openTabsHome(page, request);
+    const searchInput = page.getByPlaceholder("Search the docs...");
+    await expect(searchInput).toBeVisible();
+  });
+
+  test("no hydration errors on tabs home page", async ({ page, request }) => {
+    await page.setViewportSize({ width: 1600, height: 1200 });
+    const errors: string[] = [];
+    function isIgnorableDevReloadError(message: string): boolean {
+      return message.includes("Failed to fetch dynamically imported module:");
+    }
+    page.on("console", (msg) => {
+      const text = msg.text().toLowerCase();
+      const type = msg.type();
+      if (type === "error" && text.includes("hydrat")) errors.push(msg.text());
+      if (text.includes("cannot be a descendant")) errors.push(msg.text());
+      if (text.includes("did not match")) errors.push(msg.text());
+    });
+    page.on("pageerror", (err) => {
+      if (isIgnorableDevReloadError(err.message)) return;
+      errors.push(err.message);
+    });
+
+    await openTabsHome(page, request);
+    await page.waitForLoadState("networkidle");
+    expect(
+      errors,
+      `Hydration errors found:\n${errors.join("\n")}`,
+    ).toHaveLength(0);
+  });
+
+  test("no hydration errors on non-default tab page", async ({ page }) => {
+    await page.setViewportSize({ width: 1600, height: 1200 });
+    const errors: string[] = [];
+    page.on("console", (msg) => {
+      const text = msg.text().toLowerCase();
+      const type = msg.type();
+      if (type === "error" && text.includes("hydrat")) errors.push(msg.text());
+      if (text.includes("cannot be a descendant")) errors.push(msg.text());
+      if (text.includes("did not match")) errors.push(msg.text());
+    });
+    page.on("pageerror", (err) => {
+      if (err.message.includes("Failed to fetch dynamically imported module:")) return;
+      errors.push(err.message);
+    });
+
+    await page.goto("/theming", { waitUntil: "domcontentloaded" });
+    await page.waitForLoadState("networkidle");
+    expect(
+      errors,
+      `Hydration errors found:\n${errors.join("\n")}`,
+    ).toHaveLength(0);
+  });
+});

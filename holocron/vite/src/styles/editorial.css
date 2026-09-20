@@ -1,0 +1,254 @@
+/*
+ * Editorial page styles.
+ *
+ * Key design decisions:
+ * - Inter variable font at weight 460 (between normal and medium)
+ * - Near-black text (#111) not pure black, with 40% opacity for secondary
+ * - Narrow 550px content column for optimal reading
+ * - Negative letter-spacing on headings for tight, refined feel
+ * - 7-layer box shadows for realistic depth
+ * - Display P3 accent colors (wider gamut than sRGB)
+ * - Staggered entrance animations with subtle translateY
+ * - Custom cubic-bezier easings with slight overshoot ("snappy", "swift")
+ * - Fading header gradient pseudo-element
+ * - Small font sizes (14px body) for editorial/compact aesthetic
+ *
+ * Design tokens are defined in globals.css :root (no prefix).
+ * Uses shadcn/ui standard token names (--foreground, --muted-foreground,
+ * --border, --primary, etc.) plus holocron extras (--text-tertiary,
+ * --border-subtle, --divider).
+ */
+
+/* ========================================================================
+   Selection
+   ======================================================================== */
+
+.slot-page {
+  font-optical-sizing: auto;
+  font-feature-settings:
+    'liga' 1,
+    'calt' 1;
+}
+
+::selection,
+mark.search-match {
+  background: color-mix(in srgb, var(--primary) 25%, transparent);
+}
+
+mark.search-match {
+  color: inherit;
+  border-radius: 2px;
+}
+
+/* ========================================================================
+   Editorial typography — heading & prose base classes.
+   Replaces JS style objects (WEIGHT, LINE_HEIGHT, headingStyleByLevel, etc.)
+   with CSS classes so components use className instead of inline style spreads.
+   ======================================================================== */
+
+.editorial-prose {
+  font-family: var(--font-body, var(--font-sans));
+  font-weight: var(--weight-prose);
+  line-height: var(--lh-prose);
+  letter-spacing: var(--ls-prose);
+  color: var(--prose-text);
+  margin: 0;
+}
+
+/* Bold/strong gets full-contrast --foreground (and the heading weight) so
+   emphasized words stand out against the softened --prose-text body color. */
+.editorial-prose strong,
+.editorial-prose b {
+  color: var(--foreground);
+  font-weight: var(--weight-heading);
+}
+
+
+
+.editorial-heading {
+  font-family: var(--font-heading, var(--font-body, var(--font-sans)));
+  font-weight: var(--weight-heading);
+  line-height: var(--lh-heading);
+  letter-spacing: var(--ls-prose);
+  color: var(--foreground);
+  margin: 0;
+  padding: 0;
+  scroll-margin-top: var(--sticky-top);
+}
+
+/* Headings carry NO vertical padding — all vertical rhythm comes from
+   flex/grid gaps on parent containers (--prose-gap inside a section,
+   --section-gap between sections). First and last children of a flex
+   container automatically get zero edge spacing, so we never need a
+   `:first-child` reset. */
+.editorial-h1 {
+  font-size: var(--type-heading-1-size);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.editorial-h2 {
+  font-size: var(--type-heading-2-size);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.editorial-h3 {
+  font-size: var(--type-heading-3-size);
+}
+
+/* Inline code inside headings should match the heading's font size and weight,
+   not shrink to --code-font-size. Keep the mono font-family and remove the
+   pill background so it looks like a natural part of the heading. */
+.editorial-heading .inline-code {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  display: inline;
+  padding: 2px 6px;
+  color: var(--foreground);
+  background: var(--accent);
+  border-radius: var(--radius-sm);
+
+  @variant dark {
+    color: var(--foreground);
+  }
+}
+
+/* ========================================================================
+   Stagger-in animation
+   ======================================================================== */
+
+@keyframes stagger-in {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*
+.editorial-article > * {
+  animation: stagger-in 0.5s ease both;
+}
+
+.editorial-article > :nth-child(1) { animation-delay: 0s; }
+.editorial-article > :nth-child(2) { animation-delay: 0.05s; }
+.editorial-article > :nth-child(3) { animation-delay: 0.1s; }
+.editorial-article > :nth-child(4) { animation-delay: 0.15s; }
+.editorial-article > :nth-child(5) { animation-delay: 0.2s; }
+.editorial-article > :nth-child(6) { animation-delay: 0.25s; }
+.editorial-article > :nth-child(7) { animation-delay: 0.3s; }
+.editorial-article > :nth-child(8) { animation-delay: 0.35s; }
+.editorial-article > :nth-child(n + 9) { animation-delay: 0.4s; }
+*/
+
+/* Force all children of bleed to respect container width */
+.slot-main .bleed > *,
+.slot-main .bleed-right > * {
+  max-width: 100% !important;
+}
+
+.slot-main .bleed,
+.slot-main .bleed-right {
+  overflow: hidden;
+}
+
+/* Tables keep right-edge bleed but must scroll, not clip. The rules above
+   set overflow:hidden and cap children at 100%, which would trap wide tables. */
+.slot-main [data-slot='table-container'].bleed-right {
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.slot-main [data-slot='table-container'].bleed-right > * {
+  max-width: none !important;
+}
+
+/* ========================================================================
+   Bleed — code blocks, tables, and images extend beyond the prose column.
+   Code text (after line numbers) and table first-column text align with the
+   prose left edge. Tables use bleed-right only.
+   ======================================================================== */
+
+/* Cap bleed so it cannot fill the column gap. Do not assign `--bleed` to
+   `min(var(--bleed), …)` on the same element: that is a custom-property cycle. */
+.bleed,
+.bleed-right {
+  --bleed-inset: min(var(--bleed), max(0px, calc(var(--grid-gap, 60px) - 16px)));
+}
+
+.bleed {
+  margin-left: calc(-1 * var(--bleed-inset));
+  margin-right: calc(-1 * var(--bleed-inset));
+}
+
+.bleed-right {
+  margin-right: calc(-1 * var(--bleed-inset));
+}
+
+/* Scope-based bleed disable. Any descendant reading --bleed picks up 0
+   through the custom-property cascade. Applied to card-like containers
+   so code/images inside stay inside the frame. */
+.no-bleed {
+  --bleed: 0px;
+}
+
+/* ========================================================================
+   Code card — RequestExample / ResponseExample code is denser: tighter
+   letter-spacing. Font size comes from the global --type-code-size (~12px).
+   Line numbers are disabled via meta flags in the OpenAPI provider.
+   ======================================================================== */
+
+.code-card-body figure {
+  letter-spacing: -0.01em;
+}
+
+/* ========================================================================
+   Code-sized text — applies --code-font-size to any monospaced element
+   sitting alongside sans text. Used by OpenAPI renderer and anywhere
+   font-mono needs optical size matching without the inline-code pill.
+   ======================================================================== */
+
+.code-font-size {
+  font-size: var(--code-font-size, 0.875em);
+}
+
+/* Markdown parsers can emit header cells as <td> inside <thead>, so scope
+   the muted header treatment to the rendered table section instead of the tag. */
+[data-slot='table-header'] [data-slot='table-head'],
+[data-slot='table-header'] [data-slot='table-cell'] {
+  color: var(--muted-foreground);
+  font-weight: 500;
+}
+
+/* ========================================================================
+   Inline code — GitHub-style subtle background pill. Em-based padding keeps
+   the pill proportional to the (slightly smaller) mono font-size; weight 400
+   and zero letter-spacing match the surrounding sans body for readability.
+   ======================================================================== */
+
+.inline-code {
+  font-family: var(--font-code);
+  font-size: var(--code-font-size, 0.875em);
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 0.15em 0.35em;
+  border-radius: var(--radius-sm);
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--foreground);
+  white-space: break-spaces;
+  /* Baseline tuning: nudge the pill up slightly so the code optically sits a
+     touch higher than the surrounding sans text. Using vertical-align (not
+     margin/translate) keeps the line-box height unchanged. */
+  vertical-align: 0.05em;
+
+  @variant dark {
+    background: rgba(255, 255, 255, 0.1);
+  }
+}

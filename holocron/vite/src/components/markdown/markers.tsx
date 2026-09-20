@@ -1,0 +1,52 @@
+'use client'
+
+/**
+ * MDX marker components — parsed at build time, consumed by the section
+ * splitter in lib/mdx-sections.ts. They render as pass-throughs at runtime.
+ */
+
+import React from 'react'
+
+/** Aside is a marker component for MDX. On desktop, its children are extracted
+ *  by the section grouping logic and rendered in the right sidebar slot.
+ *  On mobile, it stacks inline after its section's content.
+ *  The component itself is a pass-through.
+ *
+ *  Use `<Aside full>` to make the aside span every heading-introduced
+ *  sub-section after it (until the next `<Aside full>`, or end of page)
+ *  and collect later asides in that range. The synthetic Ask AI aside is
+ *  also `<Aside full>` but does not collect: later asides stay on their
+ *  own section rows.
+ *
+ *  Use `width={N}` to set a fixed right-rail width in pixels. Known
+ *  components like RequestExample already bump the rail to 460px. */
+export function Aside({
+  children,
+  full,
+  width,
+}: {
+  children: React.ReactNode
+  full?: boolean
+  width?: number
+}) {
+  void full
+  void width
+  return <>{children}</>
+}
+
+/** FullWidth is a marker component for MDX. Its children become a section that
+ *  spans both the content and aside columns in the grid layout. */
+export function FullWidth({ children }: { children: React.ReactNode }) {
+  return <>{children}</>
+}
+
+/** Above — page-level content rendered above the docs grid (landing-page style).
+ *  Extracted at parse time (like <Aside>) and rendered above the 3-column grid,
+ *  spanning the full grid width (sidebars included). Scrolls away naturally.
+ *  Accepts arbitrary props from MDX. Also exported as `Hero` for back-compat. */
+export function Above({ children, ...props }: { children: React.ReactNode } & React.ComponentPropsWithoutRef<'div'>) {
+  return <div {...props}>{children}</div>
+}
+
+/** @deprecated Use `<Above>` instead. Kept for backwards compatibility. */
+export const Hero = Above

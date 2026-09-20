@@ -1,0 +1,22 @@
+{
+  "name": "example",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tuistory -- vite dev",
+    "build": "vite build",
+    "start": "node dist/rsc/index.js"
+  },
+  "dependencies": {
+    "@holocron.so/vite": "workspace:^",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "vite": "^8.1.4"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "rollup-plugin-visualizer": "^7.0.1",
+    "typescript": "^5.9.3"
+  }
+}

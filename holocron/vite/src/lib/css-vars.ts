@@ -1,0 +1,63 @@
+/**
+ * Unified CSS custom-property (CSS variable) type for the Holocron UI,
+ * plus the shared `cn()` utility for className composition (shadcn convention).
+ *
+ * Every component that writes a `--my-var` inline style should type its
+ * style object as `HolocronCSSProperties` (or spread a helper into it)
+ * rather than reaching for ad-hoc `React.CSSProperties & { '--my-var' }`
+ * intersections. This keeps the full inventory of custom properties
+ * visible in one place and makes it easy to grep for consumers of a
+ * given var.
+ *
+ * All properties are optional strings, because CSS custom properties
+ * inherit and components typically only set the ones they need.
+ *
+ * IMPORTANT: this is NOT `Record<string, string>`. Known variable names
+ * are spelled out explicitly so call sites are type-checked and adding
+ * a new var requires editing this file — that's the whole point of
+ * having a unified type.
+ */
+
+import type { CSSProperties } from 'react'
+import { clsx, type ClassValue } from 'clsx'
+import { twMerge } from 'tailwind-merge'
+
+/** Merge class names with Tailwind conflict resolution (shadcn convention). */
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
+}
+
+export interface HolocronCSSProperties extends CSSProperties {
+  /* ---------------------------------------------------------------- *
+   * Grid geometry — injected on `.slot-page` by editorial-page.tsx.  *
+   * Source of truth: `lib/sidebar-widths.ts` (GRID_TOKENS object +   *
+   * `buildGridTokenStyle` helper) plus responsive defaults in         *
+   * `styles/globals.css` for `--grid-gap`.                            *
+   * ---------------------------------------------------------------- */
+  '--grid-nav-width'?: string
+  '--grid-content-width'?: string
+  '--grid-gap'?: string
+  '--grid-sidebar-width'?: string
+  '--grid-max-width'?: string
+
+  /* ---------------------------------------------------------------- *
+   * Page shell — miscellaneous per-page vars set inline on slot-page *
+   * or on individual section cells.                                  *
+   * ---------------------------------------------------------------- */
+  /** Base border radius — derived from `layout.radius` in docs.json. */
+  '--radius'?: string
+
+  /** Height of the top banner (0px when there's no banner). */
+  '--banner-height'?: string
+  /** Border style for decorative grid lines — `solid` or `dashed`. */
+  '--grid-line-style'?: string
+  /** `grid-row: <start> / span <N>` for a shared `<Aside full>` cell. */
+  '--shared-row'?: string
+  /* ---------------------------------------------------------------- *
+   * Typography — font size overrides from `fonts` config.            *
+   * ---------------------------------------------------------------- */
+  '--type-body-size'?: string
+  '--type-heading-1-size'?: string
+  '--type-heading-2-size'?: string
+  '--type-heading-3-size'?: string
+}

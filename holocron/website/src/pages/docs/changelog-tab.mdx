@@ -1,0 +1,106 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the changelog tab guide from @/vite/src/lib/changelog/provider.ts and @/vite/src/lib/changelog/parse-source.ts.
+title: Changelog Tab
+description: Generate a changelog page from a GitHub repository's releases.
+icon: history
+---
+
+# Changelog Tab
+
+Holocron can generate a **changelog page** from a GitHub repository's releases. Point a tab at the repository URL and Holocron fetches the published releases, rendering one entry per release.
+
+## Basic setup
+
+Add a changelog tab to your `docs.json` navigation. The `changelog` field is the full URL of the repository:
+
+```json
+{
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [{ "group": "Getting Started", "pages": ["index"] }]
+      },
+      {
+        "tab": "Changelog",
+        "changelog": "https://github.com/owner/repo"
+      }
+    ]
+  }
+}
+```
+
+The generated page is served at `/changelog`. Each release becomes an entry showing its tag, publish date, and release notes (rendered as Markdown). Prereleases are included; draft releases are skipped.
+
+## Page layout
+
+The changelog page hides the **left navigation sidebar** so the release notes get the full content width. A notice in the right column explains the page is generated from the GitHub releases page.
+
+## Custom slug
+
+By default the page is served at `/changelog`. Change it with `base`:
+
+```json
+{
+  "tab": "Releases",
+  "changelog": "https://github.com/owner/repo",
+  "base": "/releases"
+}
+```
+
+Now the page is served at `/releases`. A **leading slash is optional**: `"/releases"` and `"releases"` behave the same.
+
+## Custom intro content
+
+Use `initialContent` to prepend custom MDX content above the release entries. Point it at an MDX file (resolved from your pages directory):
+
+```json
+{
+  "tab": "Changelog",
+  "changelog": "https://github.com/owner/repo",
+  "initialContent": "changelog/intro"
+}
+```
+
+The referenced file's body (everything after the frontmatter) is spliced into the top of the generated changelog page. This is useful for adding an `<Above>` hero section, an introduction paragraph, or any custom component before the release entries start.
+
+## Private repositories
+
+Holocron supports **private GitHub repositories** out of the box. At build time, it tries the [GitHub CLI](https://cli.github.com/) (`gh`) first, then falls back to a direct HTTP request.
+
+### Using the `gh` CLI (recommended)
+
+If the `gh` CLI is installed and you've run `gh auth login`, Holocron calls `gh api` under the hood. This picks up your stored credentials automatically, so private repos just work with no extra configuration.
+
+```bash
+# One-time setup
+gh auth login
+```
+
+### Using an environment variable
+
+If `gh` is not available (Docker builds, minimal CI images), set a **`GITHUB_TOKEN`** or **`GH_TOKEN`** environment variable with read access to the repository. Holocron sends it as a bearer token.
+
+```bash
+GITHUB_TOKEN=ghp_xxxx npx vite build
+```
+
+### GitHub Actions
+
+GitHub Actions comes with `gh` pre-installed and a default `GITHUB_TOKEN`. To make it available during the build, pass it as an environment variable in your deploy step:
+
+```yaml
+- name: Deploy
+  run: bunx holocron deploy
+  env:
+    HOLOCRON_KEY: ${{ secrets.HOLOCRON_KEY }}
+    GITHUB_TOKEN: ${{ github.token }}
+```
+
+The default Actions token has read access to the **current repository**. If your changelog points to a different private repo in the same organization, use a [fine-grained personal access token](https://github.com/settings/tokens?type=beta) with `contents: read` scope on the target repo, stored as a repository secret.
+
+## Rate limits
+
+Unauthenticated requests to the GitHub releases API are limited to **60 per hour**. Authenticating via `gh` or a token raises this to 5,000 per hour. If you see a "Could not load releases" warning during builds, rate limiting is the most likely cause.

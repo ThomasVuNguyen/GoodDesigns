@@ -1,0 +1,45 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the OpenAPI troubleshooting guide from @/vite/src/lib/openapi/provider.ts and @/vite/src/lib/openapi/process.ts.
+title: OpenAPI Troubleshooting
+description: Common issues with OpenAPI spec rendering.
+icon: circle-help
+---
+
+# OpenAPI Troubleshooting
+
+## Spec not found
+
+If Holocron cannot find your spec file, the dev server or build fails and prints the paths it checked. Check:
+
+- The path in `docs.json` is relative to `pagesDir` first, then the project root
+- The file extension matches (`.json` or `.yaml`)
+- The file exists and is valid JSON/YAML
+
+## No pages generated
+
+If the API Reference tab is empty:
+
+- Make sure your spec has `paths` with at least one operation
+- Untagged operations are grouped under **Default**, so missing tags do not prevent page generation
+
+## Schema rendering issues
+
+- **References**: Holocron dereferences `$ref` values and limits deeply nested schema expansion to keep pages readable
+- **`allOf`/`oneOf`/`anyOf`**: Union fields are preserved and rendered in the schema view
+- **Missing descriptions**: Operations without a `summary` or `description` show the operationId as the title
+
+## Wrong URL prefix
+
+If pages appear at `/api/...` but you want a different prefix, set `base` on the tab:
+
+```json
+{
+  "tab": "API Reference",
+  "openapi": "openapi.json",
+  "base": "reference"
+}
+```
+
+Set to `""` for no prefix at all.

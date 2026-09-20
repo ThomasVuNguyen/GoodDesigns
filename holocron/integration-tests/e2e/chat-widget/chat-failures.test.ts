@@ -1,0 +1,93 @@
+/**
+ * Chat failure-mode integration tests.
+ *
+ * Regression coverage for "the AI answer never arrives": every case here
+ * used to render an empty assistant bubble with no error at all.
+ *
+ * The mock gateway (fixtures/chat-widget/mock-chat-server.ts) emits canned
+ * chunk streams when a message starts with `SCRIPT:<name>`, so these run
+ * without an OpenAI key and stay deterministic.
+ */
+
+import { test, expect, type Page } from "../helpers/test.ts";
+
+async function askScripted(page: Page, script: string) {
+  await page.setViewportSize({ width: 1280, height: 800 });
+  await page.goto("/");
+  await page.waitForLoadState("networkidle");
+
+  const chatInput = page.locator("textarea").first();
+  await chatInput.fill(`SCRIPT:${script}`);
+  await chatInput.press("Enter");
+
+  // Drawer opened
+  await expect(page.locator("button[aria-label='New chat']")).toBeVisible({ timeout: 10000 });
+  return page.locator("[data-message-id='msg-1']");
+}
+
+test("stream cut before text-end still renders the buffered answer", async ({ page }) => {
+  const assistant = await askScripted(page, "truncated");
+  await expect(assistant).toContainText("Truncated answer body", { timeout: 30000 });
+});
+
+test("provider error chunk renders an error notice", async ({ page }) => {
+  const assistant = await askScripted(page, "error");
+  // Partial text is kept…
+  await expect(assistant).toContainText("Partial answer", { timeout: 30000 });
+  // …and the failure is explained instead of silently swallowed.
+  const notice = assistant.locator("[data-notice-severity='error']");
+  await expect(notice).toBeVisible();
+  await expect(notice).toContainText("upstream provider exploded");
+});
+
+test("think tag contents are dropped and the answer around them survives", async ({ page }) => {
+  const assistant = await askScripted(page, "think");
+  await expect(assistant).toContainText("Think tag answer body", { timeout: 30000 });
+  await expect(assistant).not.toContainText("grep the docs first");
+});
+
+test("turn with no output shows an error notice, never an empty bubble", async ({ page }) => {
+  const assistant = await askScripted(page, "empty");
+  const notice = assistant.locator("[data-notice-severity='error']");
+  await expect(notice).toBeVisible({ timeout: 30000 });
+  await expect(notice).toContainText("did not return a response");
+});
+
+test("a notice-only turn is the answer, with no error stacked on top", async ({ page }) => {
+  const assistant = await askScripted(page, "limit");
+  await expect(
+    assistant.locator("[data-notice-code='HOLOCRON_RATE_LIMIT_REACHED']"),
+  ).toBeVisible({ timeout: 30000 });
+  await expect(assistant.locator("[data-notice-severity='error']")).toHaveCount(0);
+});
+
+test("an empty turn still reports itself when the upgrade advisory is present", async ({ page }) => {
+  const assistant = await askScripted(page, "promotionThenEmpty");
+  const promotion = assistant.locator("[data-notice-code='HOLOCRON_PROMOTION']");
+  await expect(promotion).toBeVisible({ timeout: 30000 });
+  await expect(promotion).toContainText("delightful docs");
+  await expect(promotion).toContainText("for humans & agents");
+  await expect(promotion.getByRole("link", { name: "Start a Holocron site" })).toHaveAttribute(
+    "href",
+    "https://holocron.so/",
+  );
+  await expect(promotion.getByText("For site owner.", { exact: true })).toBeVisible();
+  await expect(promotion.getByRole("link", { name: "Upgrade to remove this." })).toHaveAttribute(
+    "href",
+    "https://holocron.so/docs/pricing",
+  );
+  await expect(assistant.locator("[data-notice-severity='error']")).toBeVisible();
+  const promoBox = await promotion.boundingBox();
+  const userBox = await page.locator("[data-message-id='msg-0']").boundingBox();
+  const errorBox = await assistant.locator("[data-notice-severity='error']").boundingBox();
+  expect(promoBox?.y).toBeGreaterThan(userBox?.y ?? 0);
+  expect(promoBox?.y).toBeLessThan(errorBox?.y ?? Number.POSITIVE_INFINITY);
+});
+
+test("the standing upgrade advisory does not hide the error that follows it", async ({ page }) => {
+  const assistant = await askScripted(page, "promotionThenError");
+  await expect(
+    assistant.locator("[data-notice-code='HOLOCRON_PROMOTION']"),
+  ).toBeVisible({ timeout: 30000 });
+  await expect(assistant.locator("[data-notice-severity='error']")).toBeVisible();
+});

@@ -1,0 +1,25 @@
+{
+  "name": "example-cloudflare",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tuistory -- vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deployment": "vite build && wrangler deploy"
+  },
+  "dependencies": {
+    "@holocron.so/vite": "workspace:^",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "vite": "^8.1.4"
+  },
+  "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.8.0",
+    "@cloudflare/workers-types": "^4.20260408.0",
+    "@types/react": "^19.2.17",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^5.9.3",
+    "wrangler": "^4.90.0"
+  }
+}

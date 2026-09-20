@@ -1,0 +1,84 @@
+'use client'
+
+/** Mintlify-compatible changelog Update component. */
+
+import React from 'react'
+import { Link } from '../link.tsx'
+import { slug } from 'github-slugger'
+import { Badge } from './badge.tsx'
+
+export function Update({
+  id: idProp,
+  label,
+  description,
+  tags,
+  rss: _rss,
+  children,
+}: {
+  /** Explicit anchor id. Defaults to a slug of `label`. Pass this when the
+   *  label is not a stable identifier (e.g. a date) so the anchor stays
+   *  stable and unique. Mirrors Mintlify's `id` prop. */
+  id?: string
+  label: string
+  description?: string
+  tags?: string[]
+  /** Accepted for Mintlify compat — Holocron does not render RSS-only metadata. */
+  rss?: { title?: string; description?: string }
+  children: React.ReactNode
+}) {
+  // Mintlify-style two-column changelog row:
+  //   - left rail (sticky on lg+): label pill + description + tags
+  //   - right column: MDX children (headings, frames, code blocks, lists…)
+  //
+  // Holocron content column is ~520px, so the rail is 110px (not 160px like
+  // Mintlify) to leave enough room for code blocks / Frames in children.
+  // `min-w-0` on the content wrapper is required so flexbox can actually
+  // shrink the content below its intrinsic size and avoid horizontal bleed.
+  // `no-bleed` prevents nested code blocks / lists from escaping the column.
+  //
+  // `first:pt-0 last:pb-0`: the row padding (`py-8`) acts as spacing BETWEEN
+  // consecutive updates. Without zeroing the first row's top padding, the
+  // first Update sits ~32px below the page content top, misaligning it with
+  // a sticky `<Aside full>` (e.g. the AI widget) that starts at the top.
+  const id = idProp ? slug(idProp) : slug(label)
+  return (
+    <div
+      id={id}
+      data-component-part='update'
+      className='flex w-full flex-col items-start gap-3 py-6 first:pt-0 last:pb-0 lg:flex-row lg:gap-5 lg:py-8'
+    >
+      <div className='flex w-full flex-col items-start gap-3 lg:sticky lg:top-(--sticky-top) lg:w-[110px] lg:flex-shrink-0'>
+        <Link
+          href={`#${id}`}
+          data-component-part='update-label'
+          className='inline-flex items-center rounded-lg bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary no-underline'
+        >
+          {label}
+        </Link>
+        {description && (
+          <div
+            data-component-part='update-description'
+            className='text-xs break-words text-muted-foreground lg:max-w-[110px]'
+          >
+            {description}
+          </div>
+        )}
+        {tags && tags.length > 0 && (
+          <div className='flex flex-wrap gap-1'>
+            {tags.map((tag) => (
+              <Badge key={tag} color='gray' size='xs'>
+                {tag}
+              </Badge>
+            ))}
+          </div>
+        )}
+      </div>
+      <div
+        data-component-part='update-content'
+        className='no-bleed flex min-w-0 flex-1 flex-col gap-(--prose-gap)'
+      >
+        {children}
+      </div>
+    </div>
+  )
+}

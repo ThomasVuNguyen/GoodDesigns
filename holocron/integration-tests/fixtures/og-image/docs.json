@@ -1,0 +1,22 @@
+{
+  "name": "OG Test Docs",
+  "icons": { "library": "lucide" },
+  "description": "Integration fixture for Open Graph image generation",
+  "logo": "/logo.svg",
+  "colors": {
+    "primary": "#7c3aed"
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Guides",
+        "pages": [
+          "index",
+          "getting-started",
+          "custom-og-public",
+          "custom-og-relative"
+        ]
+      }
+    ]
+  }
+}

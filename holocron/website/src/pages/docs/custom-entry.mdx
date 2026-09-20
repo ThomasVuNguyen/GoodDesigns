@@ -1,0 +1,335 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the custom entry guide from @/website/src/server.tsx and @/website/vite.config.ts.
+  Use @https://github.com/remorses/holocron/tree/main/website as the live example.
+title: Custom Entry
+description: Mount Holocron docs alongside your own API routes, pages, and middleware in a single Spiceflow app.
+icon: puzzle
+---
+
+# Custom Entry
+
+Holocron can be mounted as a **child app** inside your existing Spiceflow project. This lets you ship docs, API routes, auth, webhooks, and custom pages all from a single server.
+
+## When to use this
+
+- You already have a Spiceflow app and want to add a `/docs` section
+- You need middleware (auth, logging, headers) to wrap both your routes and the docs
+- You want API routes like `/api/chat` living next to your documentation
+
+## Keep docs in a subfolder
+
+When mounting Holocron alongside your own app, **always put MDX files inside a subfolder** like `docs/`. This way all documentation lives under `/docs/*` and won't collide with your app routes like `/api`, `/login`, `/dashboard`, or `/pricing`.
+
+Without a subfolder, a page like `configuration.mdx` maps to `/configuration`, which could easily conflict with a current or future app route. With a `docs/` prefix it becomes `/docs/configuration` and stays cleanly isolated. As your app grows you never have to worry about a new feature route clashing with a docs page.
+
+```diagram
+my-project/
+├── docs/               ← all MDX pages live here
+│   ├── getting-started.mdx
+│   └── configuration.mdx
+├── docs.json
+├── server.tsx
+├── vite.config.ts
+└── package.json
+```
+
+Reference pages in `docs.json` with the `docs/` prefix:
+
+```json
+{
+  "navigation": [
+    {
+      "group": "Guides",
+      "pages": ["docs/getting-started", "docs/configuration"]
+    }
+  ]
+}
+```
+
+Page slugs map directly to file paths. `docs/getting-started` resolves to `docs/getting-started.mdx` and is served at `/docs/getting-started`.
+
+## Set a `docs/` base for OpenAPI and Changelog tabs
+
+OpenAPI and Changelog tabs generate their pages from a **`base`** slug prefix, not from files on disk. The defaults put them at the **root** of your domain: OpenAPI endpoints land at `/api/*` and the changelog lands at `/changelog`.
+
+In a standalone docs site that is fine. **In a custom entry app it is a problem**, because those generated pages now sit at the root of your real product domain right next to `/api`, `/login`, and `/dashboard`. The OpenAPI default is the most dangerous one: `base: "api"` means the generated reference pages collide directly with your actual API routes like `/api/users`.
+
+Always prefix these `base` values with `docs/` so the generated pages stay under your docs namespace:
+
+```jsonc
+{
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "API Reference",
+        "openapi": "openapi.json",
+        // ✅ generates /docs/api/* instead of /api/* (which collides with your real API)
+        "base": "/docs/api"
+      },
+      {
+        "tab": "Changelog",
+        "changelog": "https://github.com/acme/acme",
+        // ✅ generates /docs/changelog instead of /changelog
+        "base": "/docs/changelog"
+      }
+    ]
+  }
+}
+```
+
+<Aside>
+<Warning>
+The OpenAPI **`base` defaults to `"api"`**, so without an override your generated reference pages are served at `/api/*` and will collide with your real API routes. Always set `base: "/docs/api"` (or another `docs/`-prefixed slug) in a custom entry app.
+</Warning>
+</Aside>
+
+This keeps every part of the docs, MDX pages, OpenAPI reference, and the changelog, under one predictable `/docs/*` namespace, leaving your app's root free for product routes.
+
+## Setup
+
+Pass `entry` to the holocron plugin pointing to your Spiceflow server file:
+
+```ts
+// vite.config.ts
+import { defineConfig } from 'vite'
+import { holocron } from '@holocron.so/vite'
+
+export default defineConfig({
+  plugins: [
+    holocron({ entry: './src/server.tsx' }),
+  ],
+})
+```
+
+Then in your server file, import the holocron app and mount it with `.use()`:
+
+```tsx
+// src/server.tsx
+import { Spiceflow } from 'spiceflow'
+import { app as holocronApp } from '@holocron.so/vite/app'
+
+export const app = new Spiceflow()
+  // your middleware runs on every request, including docs pages
+  .use(async ({ request }, next) => {
+    const res = await next()
+    if (res) res.headers.set('x-custom-header', 'yes')
+    return res
+  })
+  // your own API routes
+  .get('/api/hello', () => ({ hello: 'world' }))
+  .get('/api/echo/:name', ({ params }) => ({ name: params.name }))
+  // your own pages with your own layouts
+  .layout('/dashboard', ({ children }) => (
+    <html lang='en'>
+      <head><title>Dashboard</title></head>
+      <body>{children}</body>
+    </html>
+  ))
+  .page('/dashboard', () => <h1>My Dashboard</h1>)
+  // mount holocron last — it handles all docs pages
+  .use(holocronApp)
+
+void app.listen(3000)
+```
+
+Holocron registers routes for every page in your `docs.json` navigation. Your own routes take priority because they're registered first.
+
+## Middleware
+
+Middleware registered with `.use()` before `.use(holocronApp)` runs on **every request**, including doc pages. This is useful for auth checks, analytics headers, or request logging.
+
+```tsx
+export const app = new Spiceflow()
+  .use(async ({ request }, next) => {
+    console.log(request.method, request.url)
+    return next()
+  })
+  .use(holocronApp)
+```
+
+## Testing with Vitest
+
+Your custom entry imports `@holocron.so/vite/app`. The `holocron()` plugin **aliases** that import to its source app and provides the `virtual:holocron-config`, `virtual:holocron-navigation`, `virtual:holocron-mdx`, and `virtual:holocron-modules` modules. In normal `dev` and `build` the plugin is always present, so this just works.
+
+In tests it is easy to drop the plugin by accident. If you build a separate Vitest config without `holocron()`, importing your server file fails at module load:
+
+```bash
+Error: Cannot find package 'virtual:holocron-config'
+```
+
+The fix is to **keep `holocron()` in your test Vite config** so the alias and virtual modules exist there too. Point its `entry` at the same server file you ship.
+
+```ts
+// vite.config.ts
+import { defineConfig } from 'vite'
+import { holocron } from '@holocron.so/vite'
+
+export default defineConfig({
+  plugins: [
+    holocron({ entry: './src/server.tsx' }),
+  ],
+  test: {
+    // your Vitest options
+  },
+})
+```
+
+### Cloudflare Workers tests
+
+When testing a Workers custom entry with `@cloudflare/vitest-pool-workers`, the pool wants the raw `react` and `spiceflow` plugins so it can run your app inside `workerd`, while `cloudflare()` must be **off** in tests (the pool manages `workerd` itself). You still need `holocron()` for the alias and virtual modules.
+
+These coexist. The `holocron()` plugin **detects** an already-installed React, Spiceflow, Tailwind, or Cloudflare plugin and skips adding its own duplicate, so listing them yourself is safe.
+
+```ts
+// vite.config.ts
+import { defineConfig } from 'vite'
+import { cloudflareTest } from '@cloudflare/vitest-pool-workers'
+import react from '@vitejs/plugin-react'
+import { spiceflowPlugin } from 'spiceflow/vite'
+import { holocron } from '@holocron.so/vite'
+
+const isTest = !!process.env.VITEST
+
+export default defineConfig({
+  plugins: [
+    isTest ? cloudflareTest({ wrangler: { configPath: './wrangler.test.jsonc' } }) : null,
+    // In tests: raw react + spiceflow so the pool can run the app, plus holocron
+    // for the `@holocron.so/vite/app` alias and `virtual:*` modules. holocron
+    // sees the raw plugins and skips re-adding them.
+    react(),
+    spiceflowPlugin({ entry: './src/server.tsx' }),
+    holocron({ entry: './src/server.tsx' }),
+  ],
+})
+```
+
+<Aside>
+<Warning>
+Do not load `cloudflare()` (the deploy plugin) in test mode. Both it and the Workers test pool manage `workerd`, and running them together conflicts. Keep `cloudflare()` for `dev`/`build` only and use `cloudflareTest()` for tests.
+</Warning>
+</Aside>
+
+## Custom CSS
+
+Holocron includes Tailwind CSS automatically. **Do not add `@import 'tailwindcss'` in your own CSS files.** A second import creates duplicate style layers that break layout, spacing, and cascade order.
+
+## Tailwind references
+
+Use **`@reference`** instead of `@import`. It gives your CSS access to Tailwind's theme variables, `@apply`, and `@variant` without emitting duplicate styles:
+
+```css
+/* src/globals.css */
+@reference "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --primary: #e11d48;
+  --background: #fafafa;
+
+  @variant dark {
+    --background: #0a0a0a;
+    --primary: #fb7185;
+  }
+}
+```
+
+## Dark mode variant limitation
+
+`@custom-variant dark` must be repeated in every Tailwind-processed CSS file that uses `@variant dark`. This is a Tailwind limitation: `@custom-variant` is a **compile-time directive**, not a runtime CSS variable or inherited browser setting.
+
+Holocron defines the dark variant in its own stylesheet, but that only affects CSS compiled in Holocron's Tailwind processing context. Your custom entry CSS is processed as a separate stylesheet, so Tailwind does not automatically know that Holocron uses class-based dark mode.
+
+## Required dark variant
+
+If you omit this line:
+
+```css
+@custom-variant dark (&:where(.dark, .dark *));
+```
+
+then `@variant dark` in your CSS can compile to Tailwind's default dark behavior, which may follow the browser system media query. That makes your app theme disagree with Holocron's persisted toggle, because Holocron stores the selected theme by adding or removing `.dark` on `<html>`.
+
+## Shared theme cookie
+
+Holocron persists the selected mode in the **`color-theme`** cookie and mirrors it on `<html class="dark">`. If your app has its own theme toggle outside the docs layout, use the same cookie so both your pages and Holocron pages share one persisted state:
+
+```tsx
+'use client'
+
+function setTheme(theme: 'light' | 'dark') {
+  document.documentElement.classList.toggle('dark', theme === 'dark')
+  document.cookie = `color-theme=${theme}; Path=/; Max-Age=31536000; SameSite=Lax`
+}
+
+export function ThemeToggle() {
+  function toggle() {
+    const isDark = document.documentElement.classList.contains('dark')
+    setTheme(isDark ? 'light' : 'dark')
+  }
+
+  return <button onClick={toggle}>Toggle theme</button>
+}
+```
+
+## Server-rendered theme class
+
+If your custom pages render their own `<html>` shell, read the **same cookie** on the server and set the initial class before the page paints:
+
+```tsx
+function getInitialThemeClass(request: Request) {
+  const cookie = request.headers.get('cookie') ?? ''
+  return /(?:^|;\s*)color-theme=dark(?:;|$)/.test(cookie) ? 'dark' : undefined
+}
+
+export const app = new Spiceflow()
+  .layout('/dashboard/*', ({ children, request }) => (
+    <html lang='en' className={getInitialThemeClass(request)} suppressHydrationWarning>
+      <body>{children}</body>
+    </html>
+  ))
+```
+
+## Importing custom CSS
+
+If your CSS file is not named **`global.css`** or **`style.css`** at the project root, import it normally in your server entry:
+
+```tsx
+import './globals.css'
+```
+
+Your custom properties override Holocron's defaults because Holocron puts its default tokens in a low-priority cascade layer. Normal unlayered app CSS wins regardless of stylesheet load order.
+
+## Custom homepage
+
+With docs nested in `docs/`, your `/` route stays free for a custom homepage. Holocron will not redirect `/` to the first doc page when a parent route already handles it.
+
+```tsx
+// server.tsx
+import { Spiceflow } from 'spiceflow'
+import { app as holocronApp } from '@holocron.so/vite/app'
+
+export const app = new Spiceflow()
+  .page('/', () => (
+    <html lang='en'>
+      <head><title>My Product</title></head>
+      <body>
+        <h1>Welcome to My Product</h1>
+        <a href='/docs/getting-started'>Read the docs</a>
+      </body>
+    </html>
+  ))
+  .get('/api/hello', () => ({ hello: 'world' }))
+  .use(holocronApp)
+
+export default {
+  fetch(request: Request) {
+    return app.handle(request)
+  },
+}
+```
+
+## Real-world example
+
+The [holocron.so website](https://github.com/remorses/holocron/tree/main/website) uses this pattern. It mounts holocron docs alongside auth routes (better-auth with Google login), an AI gateway proxy, and a device authorization flow.

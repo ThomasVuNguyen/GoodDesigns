@@ -1,0 +1,272 @@
+/**
+ * Enriched navigation tree types + utility functions.
+ *
+ * The enriched tree has the same shape as the normalized config, but page
+ * slug strings are replaced with NavPage objects containing parsed metadata
+ * (title, headings, gitSha for cache invalidation).
+ *
+ * Navigation is always NavTab[] — normalization happens in readConfig(),
+ * so these functions never deal with union discrimination.
+ */
+
+import type {
+  ConfigIcon,
+  ConfigNavGroup,
+  ConfigVersionItem,
+  ConfigDropdownItem,
+  NavTabBase,
+} from './config.ts'
+import type { PageFrontmatter } from './lib/page-frontmatter.ts'
+
+/* ── Enriched navigation types ──────────────────────────────────────── */
+
+/** An icon in the enriched tree. Same shape as the config-layer icon —
+ *  renderers decide how to display each variant (string path → `<img>` or
+ *  library icon; object → library/style aware lookup). */
+export type NavIcon = ConfigIcon
+
+/** An enriched tab — reuses the schema-derived base (tab/icon/hidden/align)
+ *  and swaps in enriched groups. */
+export type NavTab = NavTabBase & {
+  groups: NavGroup[]
+  openapi?: string | string[]
+  mcp?: string
+}
+
+/** An enriched group — reuses the schema-derived group shape and swaps
+ *  in `NavPageEntry[]` for the `pages` field (page slugs become NavPage
+ *  objects). The `root` slug is resolved to an href at enrich time. */
+export type NavGroup = Omit<ConfigNavGroup, 'pages'> & {
+  /** Enriched page referenced by `root`. It renders when the folder label is clicked. */
+  rootPage?: NavPage
+  pages: NavPageEntry[]
+}
+
+/** Either an enriched page or a nested group */
+export type NavPageEntry = NavPage | NavGroup
+
+/** A fully enriched page with parsed metadata + cache SHA.
+ *  `icon` is extracted from MDX frontmatter (Mintlify convention:
+ *  `icon: rocket` in YAML front matter). */
+export type NavPage = {
+  slug: string
+  href: string
+  title: string
+  description?: string
+  gitSha: string
+  headings: NavHeading[]
+  icon?: NavIcon
+  frontmatter: PageFrontmatter
+  /** True when the page renders `<TableOfContentsPanel />` — the left sidebar
+   *  skips the inline heading list since the TOC is already in the right aside.
+   *  Omitted (not false) in the common case to keep the serialized tree slim. */
+  hasTocPanel?: true
+}
+
+/** A heading extracted from the MDX content */
+export type NavHeading = {
+  depth: number // 2-6
+  text: string
+  slug: string // anchor id
+}
+
+export type NavVersionItem = Omit<ConfigVersionItem, 'navigation'> & {
+  pageHrefs: string[]
+  navigation: { tabs: NavTab[]; anchors: ConfigVersionItem['navigation']['anchors'] }
+}
+
+export type NavDropdownItem = Omit<ConfigDropdownItem, 'navigation'> & {
+  navigation?: { tabs: NavTab[]; anchors: NonNullable<ConfigDropdownItem['navigation']>['anchors'] }
+}
+
+export type Navigation = NavTab[]
+
+export type NavigationWithSwitchers = {
+  tabs: NavTab[]
+  versions: NavVersionItem[]
+  dropdowns: NavDropdownItem[]
+}
+
+/* ── Type guards ─────────────────────────────────────────────────────── */
+
+export function isNavPage(entry: NavPageEntry): entry is NavPage {
+  return Object.hasOwn(entry, 'slug')
+}
+
+export function isNavGroup(entry: NavPageEntry): entry is NavGroup {
+  return Object.hasOwn(entry, 'group')
+}
+
+/** Whether a group should appear in the sidebar after `hidden` filtering.
+ *
+ *  Rules:
+ *  - Hidden groups (`group.hidden === true`) always return `false`.
+ *  - Groups with ZERO defined pages return `true` — treat them as
+ *    intentional section-label dividers the user wrote explicitly.
+ *  - Groups that have defined children but ALL of them are hidden (or
+ *    recursively contain no visible pages) return `false`.
+ *  - Otherwise `true`. */
+export function hasVisibleSidebarEntries(group: NavGroup): boolean {
+  if (group.hidden) return false
+  if (group.rootPage && isVisibleNavPage(group.rootPage)) return true
+  if (group.rootPage && group.pages.length === 0) return false
+  if (group.pages.length === 0) return true
+  for (const entry of group.pages) {
+    if (isNavPage(entry) && entry.frontmatter?.hidden !== true) return true
+    if (isNavGroup(entry) && hasVisibleSidebarEntries(entry)) return true
+  }
+  return false
+}
+
+export function isVisibleNavPage(page: NavPage): boolean {
+  return page.frontmatter?.hidden !== true
+}
+
+/* ── Utility functions ──────────────────────────────────────────────── */
+
+function groupsContainHref(groups: NavGroup[], href: string): boolean {
+  for (const group of groups) {
+    if (group.rootPage?.href === href) return true
+    for (const entry of group.pages) {
+      if (isNavPage(entry) && entry.href === href) return true
+      if (isNavGroup(entry) && groupsContainHref([entry], href)) return true
+    }
+  }
+  return false
+}
+
+/** Find the active tab by exact page-membership matching. */
+export function getActiveTab(nav: Navigation, pathname: string): NavTab {
+  if (nav.length <= 1) {
+    return nav[0] ?? { tab: '', groups: [] }
+  }
+
+  const exact = nav.find((tab) => groupsContainHref(tab.groups, pathname))
+  return exact ?? nav[0] ?? { tab: '', groups: [] }
+}
+
+/**
+ * Get the sidebar groups for the active tab based on current URL path.
+ */
+export function getActiveGroups(nav: Navigation, pathname: string): NavGroup[] {
+  return getActiveTab(nav, pathname).groups
+}
+
+/**
+ * Find a page by slug anywhere in the navigation tree.
+ */
+export function findPage(nav: Navigation, slug: string): NavPage | undefined {
+  for (const tab of nav) {
+    const found = findPageInGroups(tab.groups, slug)
+    if (found) {
+      return found
+    }
+  }
+  return undefined
+}
+
+function findPageInGroups(groups: NavGroup[], slug: string): NavPage | undefined {
+  for (const group of groups) {
+    if (group.rootPage?.slug === slug) return group.rootPage
+    for (const entry of group.pages) {
+      if (isNavPage(entry)) {
+        if (entry.slug === slug) {
+          return entry
+        }
+      } else if (isNavGroup(entry)) {
+        const found = findPageInGroups([entry], slug)
+        if (found) {
+          return found
+        }
+      }
+    }
+  }
+  return undefined
+}
+
+/**
+ * Collect all NavPage objects from the navigation tree.
+ */
+export function collectAllPages(nav: Navigation): NavPage[] {
+  const pages: NavPage[] = []
+  for (const tab of nav) {
+    collectPagesFromGroups(tab.groups, pages)
+  }
+  return pages
+}
+
+function collectPagesFromGroups(groups: NavGroup[], out: NavPage[]): void {
+  for (const group of groups) {
+    if (group.rootPage) out.push(group.rootPage)
+    for (const entry of group.pages) {
+      if (isNavPage(entry)) {
+        out.push(entry)
+      } else if (isNavGroup(entry)) {
+        collectPagesFromGroups([entry], out)
+      }
+    }
+  }
+}
+
+/**
+ * All hrefs in a nav tree, including folder-index pages that only appear as
+ * `group.root`. Version/tab matching MUST use this, not collectAllPages, or
+ * every folder page belongs to no version and the sidebar falls back to the
+ * merged all-versions navigation.
+ */
+export function collectAllPageHrefs(nav: Navigation): string[] {
+  const hrefs: string[] = []
+  const walkGroup = (group: NavGroup) => {
+    if (group.rootPage) hrefs.push(group.rootPage.href)
+    else if (group.root) hrefs.push(group.root)
+    for (const entry of group.pages) {
+      if (isNavPage(entry)) hrefs.push(entry.href)
+      else if (isNavGroup(entry)) walkGroup(entry)
+    }
+  }
+  for (const tab of nav) {
+    for (const group of tab.groups) {
+      walkGroup(group)
+    }
+  }
+  return hrefs
+}
+
+/**
+ * Build a Map<slug, NavPage> from the cached navigation tree.
+ */
+export function buildPageIndex(nav: Navigation): Map<string, NavPage> {
+  const pages = collectAllPages(nav)
+  return new Map(pages.map((p) => {
+    return [p.slug, p]
+  }))
+}
+
+/* ── Href ↔ slug mapping ─────────────────────────────────────────────── */
+
+/**
+ * Canonical slug → href normalization.
+ * Same logic as sync.ts `slugToHref()` — duplicated here to avoid
+ * importing the sync module (which pulls in heavy build-time deps).
+ *
+ *   `"index"`           → `"/"`
+ *   `"guide/index"`     → `"/guide"`
+ *   `"getting-started"` → `"/getting-started"`
+ */
+export function slugToHref(slug: string): string {
+  if (slug === 'index') return '/'
+  return `/${slug.replace(/\/index$/, '')}`.normalize('NFC')
+}
+
+/**
+ * Build a bidirectional href → slug map from the known slug list.
+ * Uses `slugToHref()` for normalization so the mapping is consistent
+ * everywhere (raw markdown middleware, page pipeline, sitemap).
+ */
+export function buildHrefToSlugMap(slugs: string[]): Map<string, string> {
+  const map = new Map<string, string>()
+  for (const slug of slugs) {
+    map.set(slugToHref(slug), slug)
+  }
+  return map
+}

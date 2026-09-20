@@ -1,0 +1,185 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the Maintain overview from @/cli/src/maintain.ts, @/cli/src/maintain-discovery.ts, and @/website/src/maintain-api.ts. Follow the Holocron authoring rules in @/skills/holocron/SKILL.md.
+  Explain that every page with prompt frontmatter is maintained from its path and URL references. Explain that the Holocron skill adds generation prompts to new MDX pages by default.
+  Cover two run modes: the normal parent-agent flow (Maintain only edits MDX; the parent opens the PR) and GitHub Actions (no-args maintain reads before/after from the push event and OpenCode opens the PR). Cover routine prompts, paid Holocron-hosted models as the default, --model for hosted ids or OpenCode provider/model BYOK, and the command flags. Include a complete MDX example. Use the shared homepage hero from @/website/src/components/hero-section.tsx with a Maintain heading.
+title: Maintain documentation from source changes
+sidebarTitle: Overview
+description: Rerun page generation prompts when sources change. Run it from a parent agent, or let GitHub Actions open the pull request.
+icon: lucide:book-open-check
+---
+
+import { HeroSection } from '../../components/hero-section.tsx'
+
+<Above>
+
+<HeroSection lines={['docs that maintain', 'themselves']} />
+
+</Above>
+
+Holocron Maintain watches every documentation page that includes a **`prompt` field in its frontmatter**. The prompt records how the page was generated and identifies its source files, folders, and URLs.
+
+When a referenced source changes, Maintain gives the **current page, its generation prompt, and the relevant source changes** to OpenCode. The page remains unchanged when the source change does not affect its content.
+
+There are **two ways to run** it. Maintain never opens a pull request outside GitHub Actions.
+
+```diagram
+                         holocron maintain
+                                │
+                 ┌──────────────┴──────────────┐
+                 v                             v
+          parent agent                   GitHub Actions
+          --since origin/main            no args on push
+                 │                             │
+                 v                             v
+          edit MDX only                  edit MDX, then PR
+          parent opens the PR            holocron/maintain-<timestamp>
+```
+
+Use the **parent-agent** path in a coding session or custom CI. Use **GitHub Actions** when you want Maintain to open the pull request itself. See [GitHub Actions](./github-actions.mdx) for the no-args push workflow.
+
+## Generate a maintainable page
+
+The page-level **`prompt`** is the original instruction used to generate the page. Use **`@/path`** for files and folders from the **repository root**. Use `@./path` or `@../path` when the source sits next to the MDX page. Prefix remote sources with **`@https://`**. Bare URLs in prose are not references.
+
+```mdx
+---
+$schema: https://holocron.so/frontmatter.json
+title: Authenticate API requests
+sidebarTitle: Authentication
+description: Authenticate requests with sessions, API keys, and GitHub Actions OIDC.
+prompt: |
+  Write the authentication guide from @/src/auth/ and
+  @/src/middleware/session.ts.
+  Use @https://github.com/example/project/releases for recent behavior changes.
+  Explain sessions, API keys, and GitHub Actions OIDC authentication.
+  Include a complete TypeScript example for every method.
+---
+
+# Authentication
+
+Use a session or API key to authenticate API requests.
+```
+
+```diagram
+  repository root
+       │
+       ├── src/auth/                         <── @/src/auth/
+       ├── src/middleware/session.ts         <── @/src/middleware/session.ts
+       └── website/src/pages/docs/auth.mdx
+                   │
+                   └── @./setup.mdx            relative to this page
+```
+
+**`@/`** always starts at the git repository root, so the path stays valid if you move the MDX file. **`@./`** and **`@../`** start at the MDX file. **`@https://`** marks a remote source. A file reference selects the page when that file changes. A folder reference selects it when any tracked file inside that folder changes, including files inside a git submodule. Use the parent-root path for submodule sources, for example `@/template/src/index.mdx`. GitHub release events and explicit routine runs can select matching `@https://` URL references.
+
+The **Holocron skill adds this field by default** when an AI coding agent creates a new MDX page. It records the real sources used to produce the page, so future agents can reproduce and update the content instead of guessing its intent. See [skill discovery](../docs/ai/skill-discovery.mdx) for agent setup.
+
+## Parent agent flow
+
+Run Maintain from a **parent agent** that already owns git and GitHub. The command only updates selected MDX files. It does not create a branch, commit, or pull request. The parent agent reviews the working tree and opens a PR with whatever process that repo already uses.
+
+```bash
+npx -y "@holocron.so/cli" maintain --since origin/main
+```
+
+`--since` compares the **merge base** of that ref with `HEAD`. Pages whose `@/` sources sit in that range are selected.
+
+With **no flags**, Maintain diffs the working tree against `HEAD`. That is useful when the parent already changed source files in the same session.
+
+Use **`--dry-run`** to inspect the selection without authentication or a model call.
+
+```bash
+npx -y "@holocron.so/cli" maintain --since origin/main --dry-run
+```
+
+<Aside>
+<Tip>
+Keep git write tools on the **parent**. Maintain's OpenCode session can only edit the selected MDX pages.
+</Tip>
+</Aside>
+
+## Run a routine review
+
+Use **`--all` with a run prompt** for work that is not tied to one changed source, such as grammar, SEO, links, or style checks.
+
+```bash
+npx -y "@holocron.so/cli" maintain --all \
+  --prompt "Audit every page for weak titles and descriptions."
+```
+
+Long instructions can live in a versioned Markdown file.
+
+```bash
+npx -y "@holocron.so/cli" maintain --all \
+  --prompt-file .holocron/prompts/weekly-review.md
+```
+
+The run prompt is **temporary**. It does not replace page generation prompts.
+
+## OpenCode execution
+
+Maintain uses **one OpenCode session** for the complete run. The main agent groups independent pages by source and delegates those groups as parallel tasks. Holocron then validates every changed MDX file.
+
+**GitHub Actions** adds publish instructions to the session prompt, not the system prompt, so tasks never try to open a pull request. The parent session creates `holocron/maintain-<timestamp>` and runs `gh pr create` only when MDX files changed. The [GitHub Actions](./github-actions.mdx) page covers the no-args push range.
+
+**Parent-agent** runs omit that prompt block. Git commit, push, and `gh` stay denied. The parent continues with its own PR setup after the command exits.
+
+## Models
+
+By default Maintain uses a **Holocron-hosted model**. That call goes through Holocron and is **billed to the site's Pro subscription**. You do not set an Anthropic or OpenAI key for this path.
+
+| Hosted id           | Notes    |
+| ------------------- | -------- |
+| `deepseek-v4-flash` | Default  |
+| `glm-5.3-flash`     | Cheapest |
+
+```bash
+npx -y "@holocron.so/cli" maintain --since origin/main
+npx -y "@holocron.so/cli" maintain --model glm-5.3-flash
+```
+
+Pass **`--model provider/model`** to use your own OpenCode provider instead. Holocron does not create a run, does not bill credits, and does not need Pro. OpenCode reads the provider key from the environment, or from `opencode auth login` (`/connect` inside the OpenCode TUI).
+
+```bash
+npx -y "@holocron.so/cli" maintain --model anthropic/claude-sonnet-4-5
+```
+
+```diagram
+  holocron maintain
+         │
+         ├── no --model / glm-5.3-flash ──> Holocron-hosted model (Pro bill)
+         │
+         └── --model anthropic/claude-sonnet-4-5
+                   │
+                   └──> OpenCode provider + your ANTHROPIC_API_KEY
+```
+
+<Aside>
+<Info>
+See the OpenCode **[providers](https://opencode.ai/docs/providers/)** page for the env vars each backend accepts (`ANTHROPIC_API_KEY`, `OPENAI_API_KEY`, AWS keys, and the rest). Model ids use the **`provider/model`** form from the OpenCode **[models](https://opencode.ai/docs/models/)** page.
+</Info>
+</Aside>
+
+## Authentication and billing
+
+**Holocron-hosted models** need **Holocron Pro**. GitHub Actions authenticates through OIDC with `id-token: write`, so the workflow does not need a stored Holocron key.
+
+Other CI systems can set **`HOLOCRON_KEY`**. Local runs use the existing `holocron login` session. Pass `--project` only when the local account has multiple projects.
+
+**`--model provider/model`** skips Holocron auth. Set the provider key from the [OpenCode providers](https://opencode.ai/docs/providers/) docs instead.
+
+## Options
+
+| Option                 | Purpose                                                                |
+| ---------------------- | ---------------------------------------------------------------------- |
+| `--all`                | Review all prompted pages, or every page when used with a run prompt.  |
+| `--since <ref>`        | Detect source changes between the ref merge base and `HEAD`.           |
+| `--prompt <text>`      | Add temporary instructions for this run.                               |
+| `--prompt-file <path>` | Read temporary instructions from a Markdown file.                      |
+| `--dry-run`            | Report selected pages without a model call.                            |
+| `--model <id>`         | Holocron-hosted model, or `provider/model` for your own OpenCode keys. |
+| `--project <id>`       | Select a project for a local session with multiple projects.           |
+
+See [GitHub Actions](./github-actions.mdx) for the no-args push range and the workflow that opens the pull request.

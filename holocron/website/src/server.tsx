@@ -1,0 +1,326 @@
+// Custom entry: mounts holocron as a child of a user Spiceflow app.
+// Auth middleware (better-auth) runs first, then gateway routes (AI proxy),
+// then holocron docs. The /docs.json route serves the Holocron JSON Schema.
+// Cloudflare Workers fetch handler is provided by spiceflow/cloudflare-entrypoint.
+
+export { UsageCounter } from './usage-counter-do.ts'
+export { ConfigOverrideDO } from './config-override-do.ts'
+export { ChatSessionDO } from './chat-session-do.ts'
+
+import './strada-ssr.ts'
+import { trace, captureException, SpanStatusCode } from '@strada.sh/sdk'
+import { json, Spiceflow, redirect } from 'spiceflow'
+import { router } from 'spiceflow/react'
+import { z } from 'zod'
+import { env } from 'cloudflare:workers'
+import { app as holocronApp } from '@holocron.so/vite/app'
+import { apiApp } from './api.ts'
+import { aiLogoApp } from './ai-logo.ts'
+import { configOverrideApp } from './config-override-api.ts'
+import { dashboardApp } from './dashboard.tsx'
+import { stripeWebhookApp } from './lib/stripe-webhook.ts'
+import { approveDevice, denyDevice } from './actions.tsx'
+import { getAuth, getSession, requireSession } from './db.ts'
+import { AuthPage, HolocronLogo } from './components/auth-page.tsx'
+import { Button } from './components/ui/button.tsx'
+import { SignInButton } from './components/sign-out-button.tsx'
+import { DeviceActionButtons } from './components/device-action-buttons.tsx'
+// Auth pages use AuthPage — a minimal centered layout with no cards or shadows.
+import { normalizeAuthRedirectPath } from './auth-redirect.ts'
+import schema from '@holocron.so/vite/src/schema.json' with { type: 'json' }
+import frontmatterSchema from '@holocron.so/vite/src/frontmatter-schema.json' with { type: 'json' }
+// Generated at build time by scripts/generate-icon-schemas.ts — contains only
+// icon name strings (no SVG bodies), keeping the Worker bundle small.
+import lucideIconsSchema from './generated/lucide-icons-schema.json' with { type: 'json' }
+import fontawesomeIconsSchema from './generated/fontawesome-icons-schema.json' with { type: 'json' }
+import './globals.css'
+
+const loginQuerySchema = z.object({ callbackURL: z.string().optional() })
+
+const devicePageQuerySchema = z.object({
+  user_code: z.string().optional(),
+  status: z.enum(['approved', 'denied']).optional(),
+})
+
+async function createGitHubSignInRedirect(request: Pick<Request, 'headers'>, callbackURL: string) {
+  const auth = getAuth()
+  const { response, headers } = await auth.api.signInSocial({
+    body: { provider: 'github', callbackURL },
+    headers: request.headers,
+    returnHeaders: true,
+  })
+  if (!response?.url) {
+    throw json({ error: 'failed to start github sign-in' }, { status: 500 })
+  }
+
+  const redirectResponse = new Response(null, {
+    status: 302,
+    headers: { Location: response.url },
+  })
+  for (const cookie of headers.getSetCookie()) {
+    redirectResponse.headers.append('Set-Cookie', cookie)
+  }
+  return redirectResponse
+}
+
+const corsJson = (data: unknown) =>
+  Response.json(data, { headers: { 'access-control-allow-origin': '*' } })
+
+const schemaApp = new Spiceflow()
+  .get('/docs.json', () => corsJson(schema))
+  .get('/frontmatter.json', () => corsJson(frontmatterSchema))
+  .get('/schemas/lucide-icons.json', () => corsJson(lucideIconsSchema))
+  .get('/schemas/fontawesome-icons.json', () => corsJson(fontawesomeIconsSchema))
+
+// ── Auth app: middleware + login + device pages ─────────────────────
+
+const authApp = new Spiceflow()
+
+  // Login page
+  .page({
+    path: '/login',
+    query: loginQuerySchema,
+    handler: async ({ request, query }) => {
+      const session = await getSession(request)
+      if (session) throw redirect('/dashboard')
+      const callbackURL = normalizeAuthRedirectPath(query.callbackURL)
+      return (
+        <AuthPage
+          title="Holocron"
+          visualTitle={<HolocronLogo imageClassName="h-9" />}
+          headTitle="Sign in"
+          description="Sign in to manage your account."
+          footer={
+            <SignInButton href={router.href('/login/github', { callbackURL })}>Sign in with GitHub</SignInButton>
+          }
+        />
+      )
+    },
+  })
+
+  // GitHub sign-in redirect (creates OAuth redirect with cookies forwarded)
+  .route({
+    method: 'GET',
+    path: '/login/github',
+    query: loginQuerySchema,
+    async handler({ request, query }) {
+      return createGitHubSignInRedirect(request, normalizeAuthRedirectPath(query.callbackURL))
+    },
+  })
+
+  // /signup is the same GitHub OAuth flow as /login. Social sign-in creates
+  // the account automatically, so a dedicated form is unnecessary.
+  .route({
+    method: 'GET',
+    path: '/signup',
+    query: loginQuerySchema,
+    handler({ query }) {
+      const raw = query.callbackURL
+      if (!raw || !raw.startsWith('/') || raw.startsWith('//')) {
+        throw redirect('/login')
+      }
+      const callbackURL = normalizeAuthRedirectPath(raw)
+      throw redirect(`/login?callbackURL=${encodeURIComponent(callbackURL)}`)
+    },
+  })
+
+  // Device flow verification page
+  .page({
+    path: '/device',
+    query: devicePageQuerySchema,
+    handler: async ({ request, query }) => {
+      const userCode = query.user_code ?? ''
+      const status = query.status
+
+      if (!userCode) {
+        return (
+          <AuthPage
+            title="CLI Login"
+            description="Open this page from the CLI login flow with a valid device code."
+          />
+        )
+      }
+
+      const auth = getAuth()
+      // Pass request headers so better-auth can claim the device code for the
+      // authenticated session. Without headers, the subsequent approve/deny call
+      // fails with "Device code has not been claimed by a verifying session".
+      const device = await auth.api.deviceVerify({ query: { user_code: userCode }, headers: request.headers }).catch(() => null)
+      if (!device) {
+        return (
+          <AuthPage
+            title="Invalid Device Code"
+            description="That device code is invalid or expired. Start the CLI login flow again."
+          />
+        )
+      }
+
+      if (status === 'approved') {
+        return (
+          <AuthPage
+            title="CLI Approved"
+            description="You can close this page and return to the terminal."
+          />
+        )
+      }
+
+      if (status === 'denied') {
+        return (
+          <AuthPage
+            title="CLI Denied"
+            description="You can close this page and start the login flow again."
+          />
+        )
+      }
+
+      const session = await getSession(request)
+      if (!session) {
+        throw redirect(
+          router.href('/login', {
+            callbackURL: normalizeAuthRedirectPath(`${request.parsedUrl.pathname}${request.parsedUrl.search}`),
+          }),
+        )
+      }
+
+      return (
+        <AuthPage
+          title="CLI Login"
+          description="A CLI is requesting access to your account."
+          footer={
+            <DeviceActionButtons approveAction={approveDevice} denyAction={denyDevice} userCode={userCode} />
+          }
+        >
+          <div className="font-mono text-2xl tracking-widest text-foreground">
+            {userCode}
+          </div>
+        </AuthPage>
+      )
+    },
+  })
+
+// ── Preview routes (dev only) — renders each auth page state ────────
+
+const previewApp = new Spiceflow()
+
+  .page('/preview', () => (
+    <main className="flex min-h-screen flex-col items-center gap-4 px-6 py-16">
+      <h1 className="text-2xl font-semibold">Page Previews</h1>
+      <nav className="flex flex-col gap-2 text-sm">
+        <a href="/preview/login" className="text-primary underline underline-offset-4">Login</a>
+        <a href="/preview/device-empty" className="text-primary underline underline-offset-4">Device — no code</a>
+        <a href="/preview/device-invalid" className="text-primary underline underline-offset-4">Device — invalid code</a>
+        <a href="/preview/device-pending" className="text-primary underline underline-offset-4">Device — pending approval</a>
+        <a href="/preview/device-approved" className="text-primary underline underline-offset-4">Device — approved</a>
+        <a href="/preview/device-denied" className="text-primary underline underline-offset-4">Device — denied</a>
+      </nav>
+    </main>
+  ))
+
+  .page('/preview/login', () => (
+    <AuthPage
+      title="Holocron"
+      visualTitle={<HolocronLogo imageClassName="h-9" />}
+      headTitle="Sign in"
+      description="Sign in to manage your account."
+      footer={
+        <SignInButton href="#">Sign in with GitHub</SignInButton>
+      }
+    />
+  ))
+
+  .page('/preview/device-empty', () => (
+    <AuthPage
+      title="CLI Login"
+      description="Open this page from the CLI login flow with a valid device code."
+    />
+  ))
+
+  .page('/preview/device-invalid', () => (
+    <AuthPage
+      title="Invalid Device Code"
+      description="That device code is invalid or expired. Start the CLI login flow again."
+    />
+  ))
+
+  .page('/preview/device-pending', () => (
+    <AuthPage
+      title="CLI Login"
+      description="A CLI is requesting access to your account."
+      footer={
+        <div className="flex w-full flex-col gap-3 sm:flex-row">
+          <Button className="flex-1" type="button">Approve CLI</Button>
+          <Button className="flex-1" type="button" variant="outline">Deny</Button>
+        </div>
+      }
+    >
+      <div className="font-mono text-2xl tracking-widest text-foreground">
+        ABCD-1234
+      </div>
+    </AuthPage>
+  ))
+
+  .page('/preview/device-approved', () => (
+    <AuthPage
+      title="CLI Approved"
+      description="You can close this page and return to the terminal."
+    />
+  ))
+
+  .page('/preview/device-denied', () => (
+    <AuthPage
+      title="CLI Denied"
+      description="You can close this page and start the login flow again."
+    />
+  ))
+
+// BetterAuth middleware — must be on the root app so it intercepts /api/auth/*
+// before holocron can render a 404 page. Child app middleware only runs for
+// routes that child app owns.
+const CONFIG_OVERRIDE_CORS = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type',
+}
+
+export const app = new Spiceflow({ tracer: trace.getTracer('holocron') })
+  .onError(({ error, path, span }) => {
+    captureException(error, { tags: { path } })
+    span.recordException(error instanceof Error ? error : new Error(String(error)))
+    span.setStatus({ code: SpanStatusCode.ERROR })
+  })
+  .use(async ({ request }, next) => {
+    // CORS preflight for config override API (cross-origin from docs sites)
+    if (request.method === 'OPTIONS' && request.parsedUrl.pathname.startsWith('/api/config-override')) {
+      return new Response(null, { status: 204, headers: CONFIG_OVERRIDE_CORS })
+    }
+    if (request.parsedUrl.pathname.startsWith('/api/auth')) {
+      const auth = getAuth()
+      const res = await auth.handler(request)
+      if (res.status !== 404) return res
+    }
+    return next()
+  })
+  .use(previewApp)
+  .use(authApp)
+  .use(dashboardApp)
+  .use(apiApp)
+  .use(stripeWebhookApp)
+  .use(aiLogoApp)
+  .use(configOverrideApp)
+  .get('/api/og', ({ request }: { request: Request }) => env.OG_WORKER.fetch(request))
+  .use(schemaApp)
+  .use(holocronApp)
+
+export type App = typeof app
+
+declare module 'spiceflow/react' {
+  interface SpiceflowRegister {
+    app: typeof app
+  }
+}
+
+export default {
+  async fetch(request: Request): Promise<Response> {
+    return app.handle(request)
+  },
+} satisfies ExportedHandler

@@ -1,0 +1,1381 @@
+// Markdown diagram + table fixer.
+//
+// Diagrams: detects and fixes misaligned Unicode box-drawing characters in
+// fenced code blocks. The top border (┌─┐) is the source of truth for box
+// width; content lines and bottom borders are adjusted to match. Handles
+// East Asian wide characters (CJK) that occupy 2 display columns.
+//
+// Tables: finds GFM table nodes via mdast, stringifies each table with
+// mdast-util-gfm (padded columns, aligned pipes), and splices only that
+// source range back into the original file. Never re-serializes the full
+// MDX document, so unrelated formatting is left alone. Also normalizes a
+// blank line above and below each table.
+
+import fs from 'node:fs'
+import path from 'node:path'
+import type { Root, Table } from 'mdast'
+import { frontmatterToMarkdown } from 'mdast-util-frontmatter'
+import { gfmToMarkdown } from 'mdast-util-gfm'
+import { mdxToMarkdown } from 'mdast-util-mdx'
+import { toMarkdown } from 'mdast-util-to-markdown'
+import { remark } from 'remark'
+import remarkFrontmatter from 'remark-frontmatter'
+import remarkGfm from 'remark-gfm'
+import remarkMdx from 'remark-mdx'
+import { visit } from 'unist-util-visit'
+import { goke } from 'goke'
+import { logger, colors as c } from './logger.ts'
+
+// ─────────────────────────────────────────────────────────────
+// Display width — East Asian Width lookup
+// ─────────────────────────────────────────────────────────────
+
+// Characters that render as 2 cells on many Windows monospaced fonts (Consolas,
+// Lucida Console, etc.) but 1 cell on macOS/Linux, breaking diagram alignment.
+//
+// Two categories of replacements:
+// 1. Unicode Ambiguous (category A in EastAsianWidth.txt) — genuinely ambiguous
+// 2. Portability normalization — not Ambiguous per spec, but commonly confused
+//    with similar-looking Ambiguous chars and safer as ASCII in diagrams
+//
+// Safe replacements use only ASCII characters.
+
+const AMBIGUOUS_REPLACEMENTS: Record<string, string> = {
+  // Unicode Ambiguous (category A) — these genuinely render as 2 cells on Windows
+  '▶': '>', // BLACK RIGHT-POINTING TRIANGLE (U+25B6, A)
+  '◀': '<', // BLACK LEFT-POINTING TRIANGLE (U+25C0, A)
+  '▲': '^', // BLACK UP-POINTING TRIANGLE (U+25B2, A)
+  '▼': 'v', // BLACK DOWN-POINTING TRIANGLE (U+25BC, A)
+  '★': '*', // BLACK STAR (U+2605, A)
+  '☆': '*', // WHITE STAR (U+2606, A)
+  '●': '*', // BLACK CIRCLE (U+25CF, A)
+  '○': 'o', // WHITE CIRCLE (U+25CB, A)
+  '◆': '*', // BLACK DIAMOND (U+25C6, A)
+  '◇': 'o', // WHITE DIAMOND (U+25C7, A)
+  '■': '#', // BLACK SQUARE (U+25A0, A)
+  '□': '#', // WHITE SQUARE (U+25A1, A)
+
+  // Portability normalization — these are Neutral (N) per Unicode spec but are
+  // visually similar to Ambiguous chars and look better as ASCII in diagrams.
+  // Not flagged by isAmbiguousWidth(), only replaced by replaceAmbiguousChars().
+  '►': '>', // BLACK RIGHT-POINTING POINTER (U+25BA, N)
+  '◄': '<', // BLACK LEFT-POINTING POINTER (U+25C4, N)
+  '▸': '>', // BLACK RIGHT-POINTING SMALL TRIANGLE (U+25B8, N)
+  '◂': '<', // BLACK LEFT-POINTING SMALL TRIANGLE (U+25C2, N)
+  '▴': '^', // BLACK UP-POINTING SMALL TRIANGLE (U+25B4, N)
+  '▾': 'v', // BLACK DOWN-POINTING SMALL TRIANGLE (U+25BE, N)
+}
+
+// Exact Unicode East Asian Width "Ambiguous" (category A) subranges from
+// Unicode 15.1 EastAsianWidth.txt. Only includes ranges for characters that
+// commonly appear in diagrams.
+//
+// Box-drawing characters (U+2500-U+257F) are intentionally excluded — they
+// are the foundation of diagram fixer and render as 1 cell everywhere.
+// Standard arrows (→←↑↓, U+2190-U+2199) are also excluded — they render
+// correctly on all major Windows monospaced fonts.
+const AMBIGUOUS_RANGES: [number, number][] = [
+  [0x2580, 0x258f], // UPPER HALF BLOCK .. LEFT ONE EIGHTH BLOCK
+  [0x2592, 0x2595], // MEDIUM SHADE .. RIGHT ONE EIGHTH BLOCK
+  // Geometric Shapes — exact A subranges, not the full U+25A0-25FF block
+  [0x25a0, 0x25a1], // BLACK SQUARE .. WHITE SQUARE
+  [0x25a3, 0x25a9], // WHITE SQUARE WITH HORIZONTAL FILL .. SQUARE WITH DIAGONAL CROSSHATCH FILL
+  [0x25b2, 0x25b3], // BLACK UP-POINTING TRIANGLE .. WHITE UP-POINTING TRIANGLE
+  [0x25b6, 0x25b7], // BLACK RIGHT-POINTING TRIANGLE .. WHITE RIGHT-POINTING TRIANGLE
+  [0x25bc, 0x25bd], // BLACK DOWN-POINTING TRIANGLE .. WHITE DOWN-POINTING TRIANGLE
+  [0x25c0, 0x25c1], // BLACK LEFT-POINTING TRIANGLE .. WHITE LEFT-POINTING TRIANGLE
+  [0x25c6, 0x25c8], // BLACK DIAMOND .. WHITE DIAMOND CONTAINING BLACK SMALL DIAMOND
+  [0x25cb, 0x25cb], // WHITE CIRCLE
+  [0x25ce, 0x25d1], // BULLSEYE .. CIRCLE WITH RIGHT HALF BLACK
+  [0x25e2, 0x25e5], // BLACK LOWER RIGHT TRIANGLE .. BLACK UPPER RIGHT TRIANGLE
+  [0x25ef, 0x25ef], // LARGE CIRCLE
+  // Stars and misc symbols
+  [0x2605, 0x2606], // BLACK STAR .. WHITE STAR
+  [0x2609, 0x2609], // SUN
+  [0x260e, 0x260f], // BLACK TELEPHONE .. WHITE TELEPHONE
+  [0x2614, 0x2615], // UMBRELLA WITH RAIN DROPS .. HOT BEVERAGE
+  // Card suits — exact A subranges
+  [0x2660, 0x2661], // BLACK SPADE SUIT .. WHITE HEART SUIT
+  [0x2663, 0x2665], // BLACK CLUB SUIT .. BLACK HEART SUIT
+  [0x2667, 0x266a], // WHITE CLUB SUIT .. EIGHTH NOTE
+  [0x266c, 0x266d], // BEAMED SIXTEENTH NOTES .. MUSIC FLAT SIGN
+  [0x266f, 0x266f], // MUSIC SHARP SIGN
+  [0x2776, 0x277f], // DINGBAT NEGATIVE CIRCLED DIGIT ONE .. TEN
+]
+
+function isAmbiguousCodepoint(cp: number): boolean {
+  for (const [lo, hi] of AMBIGUOUS_RANGES) {
+    if (cp >= lo && cp <= hi) return true
+  }
+  return false
+}
+
+// Ranges where a codepoint occupies 2 terminal columns (East Asian Fullwidth/Wide).
+// Derived from Unicode 15.1 EastAsianWidth.txt (categories W and F).
+const WIDE_RANGES: [number, number][] = [
+  [0x1100, 0x115f], // Hangul Jamo
+  [0x2329, 0x232a], // Angle brackets
+  [0x2e80, 0x303e], // CJK Radicals, Kangxi, Ideographic, CJK Symbols
+  [0x3040, 0x33bf], // Hiragana, Katakana, Bopomofo, Hangul Compat, Kanbun, CJK Compat
+  [0x33c0, 0x33ff], // CJK Compat cont.
+  [0x3400, 0x4dbf], // CJK Unified Ext A
+  [0x4e00, 0x9fff], // CJK Unified Ideographs
+  [0xa000, 0xa4cf], // Yi
+  [0xac00, 0xd7af], // Hangul Syllables
+  [0xf900, 0xfaff], // CJK Compat Ideographs
+  [0xfe10, 0xfe19], // Vertical forms
+  [0xfe30, 0xfe6f], // CJK Compat Forms + Small Form Variants
+  [0xff01, 0xff60], // Fullwidth ASCII + Halfwidth Katakana start
+  [0xffe0, 0xffe6], // Fullwidth signs
+  [0x1f300, 0x1f9ff], // Miscellaneous Symbols and Pictographs + Emoticons + etc
+  [0x20000, 0x2fffd], // CJK Unified Ext B+
+  [0x30000, 0x3fffd], // CJK Unified Ext G+
+]
+
+function isWideCodepoint(cp: number): boolean {
+  for (const [lo, hi] of WIDE_RANGES) {
+    if (cp >= lo && cp <= hi) return true
+  }
+  return false
+}
+
+/** Check if a character has ambiguous East Asian width. */
+export function isAmbiguousWidth(char: string): boolean {
+  const cp = char.codePointAt(0)!
+  return isAmbiguousCodepoint(cp)
+}
+
+/**
+ * Replace ambiguous-width characters with safe 1-cell ASCII equivalents.
+ * Only replaces characters that have a known safe mapping. Returns the
+ * modified string and a list of replacements made (for reporting).
+ */
+export function replaceAmbiguousChars(
+  line: string,
+): { result: string; replacements: Array<{ col: number; from: string; to: string }> } {
+  const replacements: Array<{ col: number; from: string; to: string }> = []
+  let result = ''
+  let col = 0
+  for (const char of line) {
+    const replacement = AMBIGUOUS_REPLACEMENTS[char]
+    if (replacement) {
+      replacements.push({ col, from: char, to: replacement })
+      result += replacement
+    } else {
+      result += char
+    }
+    col += charDisplayWidth(char)
+  }
+  return { result, replacements }
+}
+
+/**
+ * Find ambiguous-width characters that have NO auto-replacement.
+ * These need manual intervention.
+ */
+export function findUnreplaceableAmbiguous(
+  line: string,
+): Array<{ col: number; char: string; codepoint: string }> {
+  const found: Array<{ col: number; char: string; codepoint: string }> = []
+  let col = 0
+  for (const char of line) {
+    const cp = char.codePointAt(0)!
+    if (isAmbiguousCodepoint(cp) && AMBIGUOUS_REPLACEMENTS[char] === undefined) {
+      found.push({ col, char, codepoint: `U+${cp.toString(16).toUpperCase().padStart(4, '0')}` })
+    }
+    col += charDisplayWidth(char)
+  }
+  return found
+}
+
+/** Display width of a single character (1 or 2 columns). */
+export function charDisplayWidth(char: string): number {
+  const cp = char.codePointAt(0)!
+  if (isWideCodepoint(cp)) return 2
+  // Control chars and zero-width joiners
+  if (cp < 32 || (cp >= 0x200b && cp <= 0x200f) || cp === 0xfeff) return 0
+  return 1
+}
+
+/** Total display width of a string in monospace columns. */
+export function stringDisplayWidth(str: string): number {
+  let width = 0
+  for (const char of str) {
+    width += charDisplayWidth(char)
+  }
+  return width
+}
+
+// ─────────────────────────────────────────────────────────────
+// Character grid — maps chars to display columns
+// ─────────────────────────────────────────────────────────────
+
+interface Cell {
+  char: string
+  displayCol: number
+  displayWidth: number
+  /** Index into the [...str] char array */
+  charIndex: number
+}
+
+function charGrid(line: string): Cell[] {
+  const cells: Cell[] = []
+  let col = 0
+  let idx = 0
+  for (const char of line) {
+    const w = charDisplayWidth(char)
+    cells.push({ char, displayCol: col, displayWidth: w, charIndex: idx })
+    col += w
+    idx++
+  }
+  return cells
+}
+
+function charAtDisplayCol(line: string, targetCol: number): Cell | undefined {
+  let col = 0
+  let idx = 0
+  for (const char of line) {
+    const w = charDisplayWidth(char)
+    if (col === targetCol) return { char, displayCol: col, displayWidth: w, charIndex: idx }
+    if (col > targetCol) return undefined
+    col += w
+    idx++
+  }
+  return undefined
+}
+
+// ─────────────────────────────────────────────────────────────
+// Box-drawing character classification
+// ─────────────────────────────────────────────────────────────
+
+const H_BORDER = new Set('─━═')
+const V_BORDER = new Set('│┃║')
+// Mixed single/double corners (╒╓╕╖╘╙╛╜) are valid Unicode box-drawing chars
+// that appear when one border is single-line and the adjacent is double-line.
+const TL_CORNER = new Set('┌┏╔╭╒╓')
+const TR_CORNER = new Set('┐┓╗╮╕╖')
+const BL_CORNER = new Set('└┗╚╰╘╙')
+const BR_CORNER = new Set('┘┛╝╯╛╜')
+const TOP_BORDER_JUNCTIONS = new Set('┬┳╦╤╥')
+const BOTTOM_BORDER_JUNCTIONS = new Set('┴┻╩╧╨')
+const LEFT_BORDER_JUNCTIONS = new Set('├┣╠╞╟')
+const RIGHT_BORDER_JUNCTIONS = new Set('┤┫╣╡╢')
+/** Cross junctions — used in border scans and divider detection. */
+const CROSS_JUNCTIONS = new Set('┼╬╋╪╫')
+
+function isHBorder(ch: string) {
+  return H_BORDER.has(ch) || TOP_BORDER_JUNCTIONS.has(ch) || BOTTOM_BORDER_JUNCTIONS.has(ch) || CROSS_JUNCTIONS.has(ch)
+}
+function isLeftBorder(ch: string) {
+  return V_BORDER.has(ch) || LEFT_BORDER_JUNCTIONS.has(ch) || CROSS_JUNCTIONS.has(ch)
+}
+
+// ─────────────────────────────────────────────────────────────
+// Box detection
+// ─────────────────────────────────────────────────────────────
+
+interface Box {
+  topRow: number
+  bottomRow: number
+  /** Display column of ┌ (source of truth for left edge) */
+  leftCol: number
+  /** Display column of ┐ (source of truth for right edge and box width) */
+  rightCol: number
+  hChar: string
+  vChar: string
+  corners: [string, string, string, string]
+}
+
+/**
+ * Find all boxes. The top border (┌─┐) defines the box.
+ * The bottom border (└─┘) is found by scanning down from ┌ for └ at the
+ * same leftCol, then scanning right from └ for ┘. The ┘ doesn't need to
+ * match rightCol — it will be fixed.
+ */
+export function findBoxes(lines: string[]): Box[] {
+  const boxes: Box[] = []
+
+  for (let row = 0; row < lines.length; row++) {
+    const grid = charGrid(lines[row]!)
+
+    for (let ci = 0; ci < grid.length; ci++) {
+      const cell = grid[ci]!
+      if (!TL_CORNER.has(cell.char)) continue
+
+      const leftCol = cell.displayCol
+      const tlChar = cell.char
+
+      // Scan right for ┐
+      let trChar: string | undefined
+      let rightCol = -1
+      for (let cj = ci + 1; cj < grid.length; cj++) {
+        const ch = grid[cj]!.char
+        if (TR_CORNER.has(ch)) {
+          trChar = ch
+          rightCol = grid[cj]!.displayCol
+          break
+        }
+        if (!isHBorder(ch)) break
+      }
+      if (!trChar || rightCol < 0) continue
+
+      // Scan down from ┌ for └ at same leftCol.
+      // Allow │, ├, or any left-border char on the way down.
+      // Also search ±3 cols to tolerate displaced left borders in
+      // side-by-side box layouts where agents miscount spacing.
+      let blChar: string | undefined
+      let bottomRow = -1
+      for (let r = row + 1; r < lines.length; r++) {
+        let foundBorder = false
+        for (let off = 0; off <= 3; off++) {
+          const cols = off === 0 ? [leftCol] : [leftCol + off, leftCol - off]
+          for (const col of cols) {
+            if (col < 0) continue
+            const hit = charAtDisplayCol(lines[r]!, col)
+            if (!hit) continue
+            if (BL_CORNER.has(hit.char)) {
+              blChar = hit.char
+              bottomRow = r
+              foundBorder = true
+              break
+            }
+            if (isLeftBorder(hit.char)) {
+              foundBorder = true
+              break
+            }
+          }
+          if (foundBorder) break
+        }
+        if (blChar) break
+        if (!foundBorder) break
+      }
+      if (!blChar || bottomRow < 0) continue
+
+      // Find ┘ on the bottom row by scanning right from └.
+      // It might be at the wrong column (misaligned), that's fine.
+      // Search ±3 cols for └ to tolerate displaced bottom-left corners.
+      const bottomGrid = charGrid(lines[bottomRow]!)
+      let blCellIdx = bottomGrid.findIndex((c) => c.displayCol === leftCol && BL_CORNER.has(c.char))
+      if (blCellIdx < 0) {
+        for (let off = 1; off <= 3; off++) {
+          for (const col of [leftCol + off, leftCol - off]) {
+            const idx = bottomGrid.findIndex((c) => c.displayCol === col && BL_CORNER.has(c.char))
+            if (idx >= 0) { blCellIdx = idx; break }
+          }
+          if (blCellIdx >= 0) break
+        }
+      }
+      if (blCellIdx < 0) blCellIdx = bottomGrid.findIndex((c) => c.displayCol === leftCol)
+      let brChar: string | undefined
+      for (let bj = blCellIdx + 1; bj < bottomGrid.length; bj++) {
+        const ch = bottomGrid[bj]!.char
+        if (BR_CORNER.has(ch)) {
+          brChar = ch
+          break
+        }
+        if (!isHBorder(ch)) break
+      }
+      if (!brChar) continue
+
+      // Detect border chars
+      const hChar = grid[ci + 1]?.char || '─'
+      let vChar = '│'
+      if (row + 1 < lines.length && row + 1 < bottomRow) {
+        // Search ±3 cols for the vertical border char on the first content line
+        for (let off = 0; off <= 3; off++) {
+          const cols = off === 0 ? [leftCol] : [leftCol + off, leftCol - off]
+          let found = false
+          for (const col of cols) {
+            if (col < 0) continue
+            const firstContent = charAtDisplayCol(lines[row + 1]!, col)
+            if (firstContent && V_BORDER.has(firstContent.char)) { vChar = firstContent.char; found = true; break }
+          }
+          if (found) break
+        }
+      }
+
+      boxes.push({
+        topRow: row,
+        bottomRow,
+        leftCol,
+        rightCol,
+        hChar: H_BORDER.has(hChar) ? hChar : '─',
+        vChar,
+        corners: [tlChar, trChar, blChar, brChar],
+      })
+    }
+  }
+
+  return boxes
+}
+
+// ─────────────────────────────────────────────────────────────
+// Column-level splice — replace only the display columns owned by a box
+// ─────────────────────────────────────────────────────────────
+
+/**
+ * Replace a range of display columns in a line with new content.
+ * Everything before `startCol` and after `endCol` (inclusive) is kept as-is.
+ * The `replacement` string is placed at `startCol`; it must be exactly
+ * `endCol - startCol + 1` display columns wide.
+ */
+function spliceLine(args: {
+  line: string
+  startCol: number
+  endCol: number
+  replacement: string
+}): string {
+  const { line, startCol, endCol, replacement } = args
+  const chars = [...line]
+  const grid = charGrid(line)
+
+  // Find char indices for the splice boundaries
+  let startCharIdx = chars.length
+  let endCharIdx = chars.length
+  for (const cell of grid) {
+    if (cell.displayCol === startCol) startCharIdx = cell.charIndex
+    // endCol is inclusive: the char at endCol is replaced.
+    // The char AFTER endCol starts the suffix.
+    if (cell.displayCol === endCol) endCharIdx = cell.charIndex + 1
+    if (cell.displayCol > endCol && endCharIdx === chars.length) {
+      endCharIdx = cell.charIndex
+    }
+  }
+
+  const prefix = chars.slice(0, startCharIdx).join('')
+  const suffix = chars.slice(endCharIdx).join('')
+  return prefix + replacement + suffix
+}
+
+/**
+ * For a content line inside a box, extract the text between the left border
+ * at `leftCol` and the right border closest to `expectedRightCol`.
+ *
+ * `expectedRightCol` comes from the top border ┐ position. We search outward
+ * from that column (±1, ±2, ...) to find the actual right-border char. This
+ * prevents an outer box's │ from being mistaken for an inner box's border.
+ */
+function extractBoxContent(args: {
+  line: string
+  leftCol: number
+  expectedRightCol: number
+}): { leftBorder: string; content: string; rightBorder: string; rightCol: number; leftCol: number } | undefined {
+  const { line, leftCol, expectedRightCol } = args
+  const grid = charGrid(line)
+
+  // Find the left-border char closest to leftCol, searching outward.
+  // Use a small max offset (±3) to avoid grabbing a │ from an adjacent box.
+  // Prefer RIGHT (content shifted inward) before LEFT at each offset,
+  // because LLM diagrams typically add extra spacing between side-by-side boxes.
+  let leftCell: Cell | undefined
+  const maxLeftOffset = 3
+  for (let offset = 0; offset <= maxLeftOffset; offset++) {
+    const candidates = offset === 0
+      ? [leftCol]
+      : [leftCol + offset, leftCol - offset]
+    for (const col of candidates) {
+      if (col < 0) continue
+      const cell = grid.find((c) => c.displayCol === col && isLeftBorder(c.char))
+      if (cell) {
+        leftCell = cell
+        break
+      }
+    }
+    if (leftCell) break
+  }
+  if (!leftCell) return undefined
+
+  // Find the right-border char closest to expectedRightCol, searching outward.
+  // Prefer LEFT (shorter content) before RIGHT (wider content) at each offset,
+  // because LLM diagrams typically have missing padding, not extra content.
+  let rightCell: Cell | undefined
+  const maxOffset = Math.max(expectedRightCol, grid.length)
+  for (let offset = 0; offset <= maxOffset; offset++) {
+    const candidates = offset === 0
+      ? [expectedRightCol]
+      : [expectedRightCol - offset, expectedRightCol + offset]
+    for (const col of candidates) {
+      if (col <= leftCell.displayCol) continue
+      const cell = grid.find((c) =>
+        c.displayCol === col
+        && (V_BORDER.has(c.char) || RIGHT_BORDER_JUNCTIONS.has(c.char) || CROSS_JUNCTIONS.has(c.char)),
+      )
+      if (cell) {
+        rightCell = cell
+        break
+      }
+    }
+    if (rightCell) break
+  }
+  if (!rightCell) return undefined
+
+  const chars = [...line]
+  const content = chars.slice(leftCell.charIndex + 1, rightCell.charIndex).join('')
+  return {
+    leftBorder: leftCell.char,
+    content,
+    rightBorder: rightCell.char,
+    rightCol: rightCell.displayCol,
+    leftCol: leftCell.displayCol,
+  }
+}
+
+/**
+ * Collect junction chars from a border line between leftCol and rightCol.
+ * Returns a Map from display-column-offset-from-leftCol to junction char.
+ */
+function collectJunctions(args: {
+  line: string
+  leftCol: number
+  rightCol: number
+}): Map<number, string> {
+  const { line, leftCol, rightCol } = args
+  const junctions = new Map<number, string>()
+  const grid = charGrid(line)
+  for (const cell of grid) {
+    if (cell.displayCol <= leftCol || cell.displayCol >= rightCol) continue
+    if (TOP_BORDER_JUNCTIONS.has(cell.char) || BOTTOM_BORDER_JUNCTIONS.has(cell.char) || CROSS_JUNCTIONS.has(cell.char)) {
+      junctions.set(cell.displayCol - leftCol, cell.char)
+    }
+  }
+  return junctions
+}
+
+// ─────────────────────────────────────────────────────────────
+// Fixing
+// ─────────────────────────────────────────────────────────────
+
+/**
+ * Build a border segment: corner + hChars + corner.
+ * Returns a string that is exactly `innerWidth + 2` display columns wide.
+ */
+function buildBorderSegment(args: {
+  leftCorner: string
+  rightCorner: string
+  hChar: string
+  innerWidth: number
+  junctions?: Map<number, string>
+}): string {
+  const { leftCorner, rightCorner, hChar, innerWidth, junctions } = args
+  let border = leftCorner
+  for (let i = 1; i <= innerWidth; i++) {
+    const j = junctions?.get(i)
+    border += j || hChar
+  }
+  border += rightCorner
+  return border
+}
+
+/**
+ * Fix alignment of all boxes in a diagram. The top border (┌─┐) defines
+ * the target width. Content lines and bottom border are spliced at the
+ * box's column range so side-by-side boxes on the same rows don't clobber
+ * each other.
+ */
+export function fixDiagramLines(inputLines: string[]): string[] {
+  // First pass: replace ambiguous-width characters with safe 1-cell equivalents.
+  // This must happen before box detection so column positions are stable.
+  const lines = inputLines.map((line) => replaceAmbiguousChars(line).result)
+  const boxes = findBoxes(lines)
+
+  // Sort: innermost (smallest area) first so inner box fixes land before
+  // outer boxes process the same lines.
+  boxes.sort((a, b) => {
+    const areaA = (a.bottomRow - a.topRow) * (a.rightCol - a.leftCol)
+    const areaB = (b.bottomRow - b.topRow) * (b.rightCol - b.leftCol)
+    return areaA - areaB
+  })
+
+  for (const box of boxes) {
+    const { topRow, bottomRow, leftCol, rightCol, hChar, corners } = box
+    const innerWidth = rightCol - leftCol - 1
+
+    // Fix bottom border — splice only this box's column range.
+    // Search ±3 cols for └ to tolerate displaced bottom-left corners.
+    const bottomGrid = charGrid(lines[bottomRow]!)
+    let blCell = bottomGrid.find((c) => c.displayCol === leftCol && BL_CORNER.has(c.char))
+    if (!blCell) {
+      for (let off = 1; off <= 3; off++) {
+        for (const col of [leftCol + off, leftCol - off]) {
+          const cell = bottomGrid.find((c) => c.displayCol === col && BL_CORNER.has(c.char))
+          if (cell) { blCell = cell; break }
+        }
+        if (blCell) break
+      }
+    }
+    if (blCell) {
+      // Find the actual ┘ by scanning right from └
+      let actualBrCol = -1
+      for (let i = blCell.charIndex + 1; i < bottomGrid.length; i++) {
+        if (BR_CORNER.has(bottomGrid[i]!.char)) {
+          actualBrCol = bottomGrid[i]!.displayCol
+          break
+        }
+        if (!isHBorder(bottomGrid[i]!.char)) break
+      }
+      if (actualBrCol >= 0) {
+        const junctions = collectJunctions({
+          line: lines[bottomRow]!,
+          leftCol: blCell.displayCol,
+          rightCol: actualBrCol,
+        })
+        const segment = buildBorderSegment({
+          leftCorner: corners[2],
+          rightCorner: corners[3],
+          hChar,
+          innerWidth,
+          junctions,
+        })
+        // Splice from the leftmost of expected vs actual position to the
+        // rightmost of actual vs expected, padding both sides.
+        const spliceStart = Math.min(leftCol, blCell.displayCol)
+        const spliceEnd = Math.max(actualBrCol, rightCol)
+        const prefixGap = leftCol > spliceStart ? ' '.repeat(leftCol - spliceStart) : ''
+        const extraGap = spliceEnd > rightCol ? ' '.repeat(spliceEnd - rightCol) : ''
+        lines[bottomRow] = spliceLine({
+          line: lines[bottomRow]!,
+          startCol: spliceStart,
+          endCol: spliceEnd,
+          replacement: prefixGap + segment + extraGap,
+        })
+      }
+    }
+
+    // Fix content lines — splice only the box's column range
+    for (let r = topRow + 1; r < bottomRow; r++) {
+      const extracted = extractBoxContent({
+        line: lines[r]!,
+        leftCol,
+        expectedRightCol: rightCol,
+      })
+      if (!extracted) continue
+
+      // Detect horizontal divider rows (├────┤, ├──┼──┤, etc.)
+      const isDivider =
+        LEFT_BORDER_JUNCTIONS.has(extracted.leftBorder) &&
+        RIGHT_BORDER_JUNCTIONS.has(extracted.rightBorder) &&
+        [...extracted.content.replace(/ /g, '')].every((ch) => isHBorder(ch) || CROSS_JUNCTIONS.has(ch))
+
+      let segment: string
+      if (isDivider) {
+        const dividerLine = extracted.leftBorder + extracted.content + extracted.rightBorder
+        const dividerJunctions = collectJunctions({
+          line: dividerLine,
+          leftCol: 0,
+          rightCol: stringDisplayWidth(dividerLine) - 1,
+        })
+        segment = buildBorderSegment({
+          leftCorner: extracted.leftBorder,
+          rightCorner: extracted.rightBorder,
+          hChar,
+          innerWidth,
+          junctions: dividerJunctions,
+        })
+      } else {
+        const trimmedContent = extracted.content.replace(/ +$/, '')
+        const contentWidth = stringDisplayWidth(trimmedContent)
+        const padding = Math.max(0, innerWidth - contentWidth)
+        segment = extracted.leftBorder + trimmedContent + ' '.repeat(padding) + extracted.rightBorder
+      }
+
+      // Splice from the leftmost of expected vs actual left border to the
+      // rightmost of actual vs expected right border. This ensures displaced
+      // left borders (common in side-by-side boxes) get consumed by the splice.
+      // Extra spaces pad both sides to preserve suffix positions.
+      const spliceStart = Math.min(leftCol, extracted.leftCol)
+      const spliceEnd = Math.max(extracted.rightCol, rightCol)
+      const prefixGap = leftCol > spliceStart ? ' '.repeat(leftCol - spliceStart) : ''
+      const extraGap = spliceEnd > rightCol ? ' '.repeat(spliceEnd - rightCol) : ''
+      lines[r] = spliceLine({
+        line: lines[r]!,
+        startCol: spliceStart,
+        endCol: spliceEnd,
+        replacement: prefixGap + segment + extraGap,
+      })
+    }
+  }
+
+  // Strip trailing whitespace left by extraGap padding when there's
+  // no real suffix content after the splice point.
+  return lines.map((line) => line.trimEnd())
+}
+
+// ─────────────────────────────────────────────────────────────
+// Validation
+// ─────────────────────────────────────────────────────────────
+
+interface DiagramIssue {
+  line: number
+  col: number
+  message: string
+}
+
+/** Default max display width for diagram lines (matches AGENTS.md convention). */
+export const DEFAULT_MAX_WIDTH = 94
+
+export function validateDiagram(text: string, opts?: { maxWidth?: number }): DiagramIssue[] {
+  const lines = text.split('\n')
+  const boxes = findBoxes(lines)
+  const issues: DiagramIssue[] = []
+  const maxWidth = opts?.maxWidth ?? DEFAULT_MAX_WIDTH
+
+  // Check line width limits for every line in the diagram.
+  for (let r = 0; r < lines.length; r++) {
+    const width = stringDisplayWidth(lines[r]!)
+    if (width > maxWidth) {
+      issues.push({
+        line: r + 1,
+        col: width,
+        message: `Line is ${width} cols wide, exceeds max ${maxWidth}`,
+      })
+    }
+  }
+
+  // Check for replaceable ambiguous characters (would be auto-fixed by fixDiagramLines).
+  // This makes --check fail on files that fix mode would change.
+  for (let r = 0; r < lines.length; r++) {
+    const { replacements } = replaceAmbiguousChars(lines[r]!)
+    for (const rep of replacements) {
+      issues.push({
+        line: r + 1,
+        col: rep.col + 1,
+        message: `Ambiguous-width character '${rep.from}' should be replaced with '${rep.to}' for cross-platform compatibility`,
+      })
+    }
+  }
+
+  // Check for ambiguous-width characters that have no auto-replacement.
+  // These render as 1 or 2 cells depending on the platform/font and will
+  // cause alignment issues on Windows.
+  for (let r = 0; r < lines.length; r++) {
+    const ambiguous = findUnreplaceableAmbiguous(lines[r]!)
+    for (const a of ambiguous) {
+      issues.push({
+        line: r + 1,
+        col: a.col + 1,
+        message: `Ambiguous-width character '${a.char}' (${a.codepoint}) may render as 2 cells on Windows. Replace with an ASCII alternative`,
+      })
+    }
+  }
+
+  for (const box of boxes) {
+    const { topRow, bottomRow, leftCol, rightCol } = box
+
+    // Check bottom border: find └ near leftCol (±3 tolerance), scan right for ┘.
+    // Report if └ is displaced or ┘ is not at rightCol.
+    const bottomGrid = charGrid(lines[bottomRow]!)
+    let blCell = bottomGrid.find((c) => c.displayCol === leftCol && BL_CORNER.has(c.char))
+    if (!blCell) {
+      for (let off = 1; off <= 3; off++) {
+        for (const col of [leftCol + off, leftCol - off]) {
+          const cell = bottomGrid.find((c) => c.displayCol === col && BL_CORNER.has(c.char))
+          if (cell) { blCell = cell; break }
+        }
+        if (blCell) break
+      }
+    }
+    if (blCell) {
+      if (blCell.displayCol !== leftCol) {
+        issues.push({
+          line: bottomRow + 1,
+          col: blCell.displayCol + 1,
+          message: `Bottom └ at col ${blCell.displayCol}, expected ${leftCol} (matching ┌)`,
+        })
+      }
+      let brCol = -1
+      for (let i = blCell.charIndex + 1; i < bottomGrid.length; i++) {
+        if (BR_CORNER.has(bottomGrid[i]!.char)) {
+          brCol = bottomGrid[i]!.displayCol
+          break
+        }
+        if (!isHBorder(bottomGrid[i]!.char)) break
+      }
+      if (brCol >= 0 && brCol !== rightCol) {
+        issues.push({
+          line: bottomRow + 1,
+          col: brCol + 1,
+          message: `Bottom ┘ at col ${brCol}, expected ${rightCol} (matching ┐)`,
+        })
+      }
+    } else {
+      issues.push({
+        line: bottomRow + 1,
+        col: leftCol + 1,
+        message: `Missing bottom └ near col ${leftCol}`,
+      })
+    }
+
+    // Check content lines: left border at leftCol, right border at rightCol.
+    for (let r = topRow + 1; r < bottomRow; r++) {
+      const extracted = extractBoxContent({
+        line: lines[r]!,
+        leftCol,
+        expectedRightCol: rightCol,
+      })
+      if (!extracted) continue
+      if (extracted.leftCol !== leftCol) {
+        issues.push({
+          line: r + 1,
+          col: extracted.leftCol + 1,
+          message: `Left │ at col ${extracted.leftCol}, expected ${leftCol}`,
+        })
+      }
+      if (extracted.rightCol !== rightCol) {
+        issues.push({
+          line: r + 1,
+          col: extracted.rightCol + 1,
+          message: `Right │ at col ${extracted.rightCol}, expected ${rightCol}`,
+        })
+      }
+    }
+  }
+
+  return issues
+}
+
+/**
+ * Markdown-aware validation. Only checks diagram code blocks (or the whole
+ * text if it looks like a bare diagram). Prose lines are ignored.
+ * Line numbers in returned issues are relative to the full markdown file.
+ */
+export function validateDiagramsInText(text: string, opts?: { maxWidth?: number }): DiagramIssue[] {
+  const lines = text.split('\n')
+  const blocks = findCodeBlocks(lines).filter((b) => BOX_CHARS.test(b.contentLines.join('\n')))
+
+  let issues: DiagramIssue[]
+  if (blocks.length === 0) {
+    issues = BOX_CHARS.test(text) ? validateDiagram(text, opts) : []
+  } else {
+    issues = blocks.flatMap((block) =>
+      validateDiagram(block.contentLines.join('\n'), opts).map((issue) => ({
+        ...issue,
+        line: issue.line + block.startLine, // offset to file-level line number
+      })),
+    )
+  }
+
+  // Unformatted tables count as issues so --check fails until diagrams fix runs.
+  for (const range of collectTableRanges(text)) {
+    if (spliceFormattedTable(text, range) === text) continue
+    const line = text.slice(0, range.start).split('\n').length
+    issues.push({
+      line,
+      col: 1,
+      message: 'Table needs formatting (column padding and/or blank-line spacing)',
+    })
+  }
+
+  return issues
+}
+
+// ─────────────────────────────────────────────────────────────
+// Markdown code block extraction
+// ─────────────────────────────────────────────────────────────
+
+const BOX_CHARS = /[┌┐└┘┬┴├┤┼─│━┃═╔╗╚╝╦╩╠╣╬║╭╮╯╰┏┓┗┛┣┫┳┻╋]/
+
+interface CodeBlock {
+  startLine: number
+  endLine: number
+  contentLines: string[]
+}
+
+function findTopLevelCodeBlocks(markdownLines: string[]): CodeBlock[] {
+  // CommonMark: a closing fence must use the same char and be at least as
+  // long as the opening fence. Shorter inner fences (``` inside ````mdx)
+  // stay content, not closers.
+  const blocks: CodeBlock[] = []
+  let inBlock = false
+  let fenceChar = ''
+  let fenceLen = 0
+  let fenceIndent = 0
+  let startLine = 0
+  let contentLines: string[] = []
+
+  for (let i = 0; i < markdownLines.length; i++) {
+    const line = markdownLines[i]!
+    const trimmed = line.trimStart()
+    const indent = line.length - trimmed.length
+
+    if (!inBlock) {
+      const match = trimmed.match(/^(`{3,}|~{3,})/)
+      if (match) {
+        inBlock = true
+        fenceChar = match[1]![0]!
+        fenceLen = match[1]!.length
+        fenceIndent = indent
+        startLine = i
+        contentLines = []
+      }
+    } else {
+      const closingMatch = trimmed.match(/^(`{3,}|~{3,})\s*$/)
+      if (
+        closingMatch &&
+        closingMatch[1]![0] === fenceChar &&
+        closingMatch[1]!.length >= fenceLen &&
+        indent <= fenceIndent
+      ) {
+        blocks.push({ startLine, endLine: i, contentLines })
+        inBlock = false
+      } else {
+        contentLines.push(line)
+      }
+    }
+  }
+
+  return blocks
+}
+
+function findCodeBlocks(markdownLines: string[], lineOffset = 0): CodeBlock[] {
+  const result: CodeBlock[] = []
+  for (const block of findTopLevelCodeBlocks(markdownLines)) {
+    const nested = findCodeBlocks(block.contentLines, lineOffset + block.startLine + 1)
+    if (nested.length > 0) {
+      result.push(...nested)
+      continue
+    }
+    result.push({
+      ...block,
+      startLine: block.startLine + lineOffset,
+      endLine: block.endLine + lineOffset,
+    })
+  }
+  return result
+}
+
+/**
+ * Process full text (markdown or plain diagram). Fixes alignment in
+ * diagram code blocks, or treats the whole text as a diagram if no
+ * code fences are found. Then formats GFM tables in place.
+ */
+export function fixDiagramsInText(text: string): string {
+  return fixTablesInText(fixDiagramBlocksInText(text))
+}
+
+/** Fix only diagram code blocks (no table formatting). */
+export function fixDiagramBlocksInText(text: string): string {
+  const lines = text.split('\n')
+  const codeBlocks = findCodeBlocks(lines)
+
+  const diagramBlocks = codeBlocks.filter((b) => BOX_CHARS.test(b.contentLines.join('\n')))
+
+  if (diagramBlocks.length === 0 && BOX_CHARS.test(text)) {
+    return fixDiagramLines(lines).join('\n')
+  }
+
+  if (diagramBlocks.length === 0) {
+    return text
+  }
+
+  const result = [...lines]
+  for (let i = diagramBlocks.length - 1; i >= 0; i--) {
+    const block = diagramBlocks[i]!
+    const fixed = fixDiagramLines(block.contentLines)
+    result.splice(block.startLine + 1, block.contentLines.length, ...fixed)
+  }
+
+  return result.join('\n')
+}
+
+// ─────────────────────────────────────────────────────────────
+// GFM table formatting — splice only table ranges into the source
+// ─────────────────────────────────────────────────────────────
+
+interface TableRange {
+  /** Inclusive start offset of the original table source (pipe lines only). */
+  start: number
+  /** Exclusive end offset of the original table source (pipe lines only). */
+  end: number
+  /** Formatted table markdown without a trailing newline. */
+  formatted: string
+}
+
+/**
+ * Format GFM pipe tables in markdown/MDX text.
+ *
+ * Parses with remark + GFM (+ MDX/frontmatter so docs files parse cleanly),
+ * finds each `table` node, stringifies it with `mdast-util-gfm` (same path
+ * as the holocron `.md` / `.mdx` handlers), and replaces only that slice of
+ * the original string. Surrounding prose, JSX, and code fences are untouched.
+ *
+ * Also ensures a blank line above and below each table (except at BOF/EOF).
+ * Trailing source lines that GFM absorbed into the table but lack `|` are
+ * peeled back out so following prose is not turned into a fake table row
+ * (intentional docs-authoring behavior; GFM technically allows pipe-less rows).
+ *
+ * Only root-level tables (column 1) are formatted. Nested tables inside lists
+ * or blockquotes keep their container indentation and are left alone.
+ */
+export function fixTablesInText(text: string): string {
+  const ranges = collectTableRanges(text)
+  if (ranges.length === 0) return text
+
+  // Apply from the end so earlier offsets stay valid.
+  let result = text
+  for (let i = ranges.length - 1; i >= 0; i--) {
+    result = spliceFormattedTable(result, ranges[i]!)
+  }
+  return result
+}
+
+function detectEol(text: string): '\n' | '\r\n' {
+  return text.includes('\r\n') ? '\r\n' : '\n'
+}
+
+/** Length of an EOL sequence starting at `i`, or 0. */
+function eolLenAt(text: string, i: number): number {
+  if (i < 0 || i >= text.length) return 0
+  if (text[i] === '\r' && text[i + 1] === '\n') return 2
+  if (text[i] === '\n' || text[i] === '\r') return 1
+  return 0
+}
+
+/** Length of an EOL sequence ending just before `i`, or 0. */
+function eolLenBefore(text: string, i: number): number {
+  if (i >= 2 && text[i - 2] === '\r' && text[i - 1] === '\n') return 2
+  if (i >= 1 && (text[i - 1] === '\n' || text[i - 1] === '\r')) return 1
+  return 0
+}
+
+function parseDocsMarkdown(text: string): Root | undefined {
+  // Holocron docs are usually MDX. Fall back to plain MD so HTML comments
+  // and other MD-only constructs still get table formatting.
+  try {
+    const processor = remark()
+      .use(remarkFrontmatter, ['yaml', 'toml'])
+      .use(remarkMdx)
+      .use(remarkGfm)
+    const tree = processor.parse(text)
+    processor.runSync(tree)
+    return tree
+  } catch {
+    try {
+      const processor = remark()
+        .use(remarkFrontmatter, ['yaml', 'toml'])
+        .use(remarkGfm)
+      const tree = processor.parse(text)
+      processor.runSync(tree)
+      return tree
+    } catch {
+      return undefined
+    }
+  }
+}
+
+function parseTableFragment(tableSource: string): Table | undefined {
+  try {
+    const processor = remark().use(remarkMdx).use(remarkGfm)
+    const mini = processor.parse(tableSource)
+    processor.runSync(mini)
+    const child = mini.children.find((c) => c.type === 'table')
+    return child?.type === 'table' ? child : undefined
+  } catch {
+    try {
+      const processor = remark().use(remarkGfm)
+      const mini = processor.parse(tableSource)
+      processor.runSync(mini)
+      const child = mini.children.find((c) => c.type === 'table')
+      return child?.type === 'table' ? child : undefined
+    } catch {
+      return undefined
+    }
+  }
+}
+
+function stringifyTable(tableNode: Table, eol: '\n' | '\r\n'): string {
+  return toMarkdown(tableNode, {
+    extensions: [
+      gfmToMarkdown(),
+      mdxToMarkdown(),
+      frontmatterToMarkdown(['yaml', 'toml']),
+    ],
+  })
+    .replace(/\n$/, '')
+    .replace(/\n/g, eol)
+}
+
+function collectTableRanges(text: string): TableRange[] {
+  const tree = parseDocsMarkdown(text)
+  if (!tree) return []
+
+  const eol = detectEol(text)
+  const ranges: TableRange[] = []
+
+  visit(tree, 'table', (node: Table) => {
+    const pos = node.position
+    if (pos?.start?.offset == null || pos.end?.offset == null) return
+    // Nested tables (lists, blockquotes, indented blocks) start after column 1.
+    // Reformatting them would strip container prefixes — skip safely.
+    if (pos.start.column !== 1) return
+
+    const start = pos.start.offset
+    const end = pos.end.offset
+    if (end <= start) return
+
+    const { tableSource, tableEnd, peeled } = trimAbsorbedNonPipeTail({
+      text,
+      absoluteStart: start,
+      absoluteEnd: end,
+    })
+    if (!tableSource.includes('|')) return
+
+    // Prefer the original AST node when nothing was peeled so MDX expressions
+    // in cells stay as expression nodes. Re-parse only when rows were removed.
+    const tableNode = peeled ? parseTableFragment(tableSource) : node
+    if (!tableNode) return
+
+    ranges.push({
+      start,
+      end: tableEnd,
+      formatted: stringifyTable(tableNode, eol),
+    })
+  })
+
+  return ranges
+}
+
+interface SourceLine {
+  /** Offset of first content char. */
+  start: number
+  /** Offset after last content char (before EOL). */
+  contentEnd: number
+  /** Offset after EOL (or contentEnd if no EOL). */
+  eolEnd: number
+  content: string
+}
+
+function iterSourceLines(args: {
+  text: string
+  from: number
+  to: number
+}): SourceLine[] {
+  const { text, from, to } = args
+  const lines: SourceLine[] = []
+  let i = from
+  while (i < to) {
+    let j = i
+    while (j < to && text[j] !== '\n' && text[j] !== '\r') j++
+    const contentEnd = j
+    const nl = eolLenAt(text, j)
+    const eolEnd = nl > 0 && j + nl <= to ? j + nl : contentEnd
+    lines.push({
+      start: i,
+      contentEnd,
+      eolEnd,
+      content: text.slice(i, contentEnd),
+    })
+    if (eolEnd === contentEnd) break
+    i = eolEnd
+  }
+  return lines
+}
+
+/**
+ * GFM can absorb a following prose line into the table when there is no blank
+ * line after the last row. Those lines have no `|` in source — peel them off.
+ *
+ * Opinionated: GFM allows pipe-less rows, but in docs that almost always means
+ * missing blank-line spacing before the next paragraph.
+ */
+function trimAbsorbedNonPipeTail(args: {
+  text: string
+  absoluteStart: number
+  absoluteEnd: number
+}): { tableSource: string; tableEnd: number; peeled: boolean } {
+  const { text, absoluteStart, absoluteEnd } = args
+  const lines = iterSourceLines({ text, from: absoluteStart, to: absoluteEnd })
+  let keep = lines.length
+  while (keep > 0 && !lines[keep - 1]!.content.includes('|')) {
+    keep--
+  }
+  if (keep === 0) {
+    return {
+      tableSource: text.slice(absoluteStart, absoluteEnd),
+      tableEnd: absoluteEnd,
+      peeled: false,
+    }
+  }
+  const kept = lines.slice(0, keep)
+  const last = kept[kept.length - 1]!
+  // tableEnd is after the last pipe-line's content (exclude its trailing EOL
+  // so spacing logic owns blank lines around the table).
+  return {
+    tableSource: kept.map((l) => l.content).join('\n'),
+    tableEnd: last.contentEnd,
+    peeled: keep < lines.length,
+  }
+}
+
+/**
+ * Replace one table range and normalize blank-line spacing around it.
+ * Expansion eats adjacent EOL runs (LF or CRLF) so we never stack extra blanks.
+ */
+function spliceFormattedTable(text: string, range: TableRange): string {
+  const { start, end, formatted } = range
+  const eol = detectEol(text)
+
+  // Expand backward over contiguous EOLs before the table.
+  let replaceStart = start
+  for (;;) {
+    const len = eolLenBefore(text, replaceStart)
+    if (len === 0) break
+    replaceStart -= len
+  }
+  const atBof = replaceStart === 0
+
+  // Expand forward over contiguous EOLs after the table.
+  let replaceEnd = end
+  for (;;) {
+    const len = eolLenAt(text, replaceEnd)
+    if (len === 0) break
+    replaceEnd += len
+  }
+  const atEof = replaceEnd === text.length
+  const fileEndsWithEol = eolLenBefore(text, text.length) > 0
+
+  // BOF: no leading blank. Otherwise exactly one blank line before.
+  // EOF: preserve whether the file was newline-terminated.
+  // Otherwise exactly one blank line after.
+  let prefix = ''
+  let suffix = ''
+  if (atBof && atEof) {
+    suffix = fileEndsWithEol ? eol : ''
+  } else if (atBof) {
+    prefix = ''
+    suffix = eol + eol
+  } else if (atEof) {
+    prefix = eol + eol
+    suffix = fileEndsWithEol ? eol : ''
+  } else {
+    prefix = eol + eol
+    suffix = eol + eol
+  }
+
+  return text.slice(0, replaceStart) + prefix + formatted + suffix + text.slice(replaceEnd)
+}
+
+// ─────────────────────────────────────────────────────────────
+// CLI command
+// ─────────────────────────────────────────────────────────────
+
+/** Count how many lines differ between two strings. */
+function countChangedLines(before: string, after: string): number {
+  const a = before.split('\n')
+  const b = after.split('\n')
+  let changed = 0
+  const len = Math.max(a.length, b.length)
+  for (let i = 0; i < len; i++) {
+    if ((a[i] ?? '') !== (b[i] ?? '')) changed++
+  }
+  return changed
+}
+
+export const diagramsCli = goke()
+
+diagramsCli
+  .command(
+    'diagrams fix [...files]',
+    'Fix box-drawing diagrams and format GFM tables (padding, aligned pipes, blank-line spacing) in markdown/MDX files',
+  )
+  .option('--check', 'Validate only (exit 1 if issues found, no changes)')
+  .option('--dry-run', 'Print fixed output to stdout instead of writing files')
+  .option('--max-width [cols]', `Max display columns per line (default: ${DEFAULT_MAX_WIDTH})`)
+  .action(async (files: string[], options, { console: output, process: proc }) => {
+    const cwd = proc.cwd
+    const maxWidth = options.maxWidth ? Number(options.maxWidth) : DEFAULT_MAX_WIDTH
+
+    /** Print issues and return the count. */
+    function reportIssues(issues: DiagramIssue[], label?: string) {
+      if (issues.length === 0) return 0
+      const widthIssues = issues.filter((i) => i.message.includes('exceeds max'))
+      const alignIssues = issues.filter((i) => !i.message.includes('exceeds max'))
+      if (label) output.log(logger.warn(`${label}: ${issues.length} issue(s)`))
+      for (const issue of alignIssues) {
+        output.log(`  line ${issue.line}, col ${issue.col}: ${issue.message}`)
+      }
+      for (const issue of widthIssues) {
+        output.error(`  ${c.red('line ' + issue.line)}: ${issue.message}`)
+      }
+      return issues.length
+    }
+
+    if (files.length === 0) {
+      const chunks: Buffer[] = []
+      for await (const chunk of process.stdin) {
+        chunks.push(chunk)
+      }
+      const input = Buffer.concat(chunks).toString('utf-8')
+
+      if (options.check) {
+        const issues = validateDiagramsInText(input, { maxWidth })
+        if (issues.length > 0) {
+          reportIssues(issues)
+          output.error(logger.error(`Found ${issues.length} issue(s)`))
+          return proc.exit(1)
+        }
+        output.log(logger.success('No issues found'))
+        return
+      }
+
+      const fixed = fixDiagramsInText(input)
+      // After fixing, check for any remaining issues (width violations,
+      // overflow content that couldn't be shrunk, etc.)
+      const remainingIssues = validateDiagramsInText(fixed, { maxWidth })
+      output.log(fixed)
+      if (remainingIssues.length > 0) {
+        output.error('')
+        reportIssues(remainingIssues)
+        output.error(logger.error(`${remainingIssues.length} issue(s) remaining after fix. Manual intervention needed.`))
+        return proc.exit(1)
+      }
+      return
+    }
+
+    let totalIssues = 0
+
+    for (const file of files) {
+      const filePath = path.resolve(cwd, file)
+
+      if (!fs.existsSync(filePath)) {
+        output.error(logger.error(`File not found: ${file}`))
+        return proc.exit(1)
+      }
+
+      const content = fs.readFileSync(filePath, 'utf-8')
+
+      if (options.check) {
+        const issues = validateDiagramsInText(content, { maxWidth })
+        if (issues.length > 0) {
+          totalIssues += reportIssues(issues, file)
+        } else {
+          output.log(logger.success(`${file}: OK`))
+        }
+        continue
+      }
+
+      const fixed = fixDiagramsInText(content)
+      if (options.dryRun) {
+        output.log(fixed)
+      } else if (fixed !== content) {
+        const changedLines = countChangedLines(content, fixed)
+        fs.writeFileSync(filePath, fixed, 'utf-8')
+        output.log(logger.success(`Fixed: ${file} (${changedLines} line${changedLines === 1 ? '' : 's'} changed)`))
+      } else {
+        output.log(logger.info(`No changes: ${file}`))
+      }
+
+      // After fixing, report any remaining issues (width, alignment, overflow)
+      const remainingIssues = validateDiagramsInText(fixed, { maxWidth })
+      if (remainingIssues.length > 0) {
+        totalIssues += reportIssues(remainingIssues, file)
+      }
+    }
+
+    if (totalIssues > 0) {
+      output.error(logger.error(`${totalIssues} issue(s) remaining after fix. Manual intervention needed.`))
+      return proc.exit(1)
+    }
+    if (options.check) {
+      output.log(logger.success('All files OK'))
+    }
+  })

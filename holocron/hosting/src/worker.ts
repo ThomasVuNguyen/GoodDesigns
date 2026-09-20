@@ -1,0 +1,336 @@
+// Holocron hosting worker — routes requests for *-site.holocron.so (production)
+// and *-site-preview.holocron.so (preview) to deployed docs sites via Dynamic Workers.
+//
+// Content-addressable storage: file content is stored at "blob:{sha256hex}" keys.
+// Site resolution + manifest is a single KV read at "site-info:{subdomain}".
+// The manifest maps file paths to content hashes so the worker can resolve them.
+//
+// Request flow:
+//   1. Extract subdomain from hostname
+//   2. Read site-info (includes manifest) from KV — single read per request
+//   3. Try serving static assets from blob:{hash} keys
+//   4. Forward non-asset requests to a Dynamic Worker loaded from blob:{hash} keys
+//
+// Performance: site-info uses KV (globally replicated, ~1-5ms reads) with 30s
+// cacheTtl. Blob reads use 86400s cacheTtl since content hashes are immutable.
+// Dynamic Workers are cached by env.LOADER.get(workerId) across requests.
+
+import { env } from 'cloudflare:workers'
+
+const SITE_SUFFIX = '-site.holocron.so'
+const PREVIEW_SITE_SUFFIX = '-site-preview.holocron.so'
+
+/** Manifest maps file paths to content hashes (+ contentType for assets).
+ *  Embedded in site-info so the hosting worker needs only one KV read. */
+type Manifest = Record<string, { hash: string; contentType?: string }>
+
+type SiteInfo = {
+  projectId: string
+  version: string
+  subdomain: string
+  manifest: Manifest
+  /** Base path prefix for subpath deploys (e.g. "/docs/"). When set, asset
+   *  lookups strip this prefix from the URL pathname before consulting the
+   *  manifest. Null/undefined for root deploys. */
+  basePath?: string
+}
+
+/** Extract the subdomain from the request hostname.
+ *  Matches both *-site.holocron.so and *-site-preview.holocron.so.
+ *  Returns undefined for custom domains (caller handles KV lookup). */
+function extractSubdomain(hostname: string): string | undefined {
+  // Check preview first (longer suffix, more specific)
+  if (hostname.endsWith(PREVIEW_SITE_SUFFIX)) {
+    return hostname.slice(0, -PREVIEW_SITE_SUFFIX.length) || undefined
+  }
+  if (hostname.endsWith(SITE_SUFFIX)) {
+    return hostname.slice(0, -SITE_SUFFIX.length) || undefined
+  }
+  return undefined
+}
+
+/** Check if a hostname belongs to holocron's own infrastructure. */
+function isHolocronHostname(hostname: string): boolean {
+  return hostname === 'holocron.so'
+    || hostname.endsWith('.holocron.so')
+    || hostname === 'holocron.live'
+    || hostname.endsWith('.holocron.live')
+    || hostname === 'holocronsites.com'
+    || hostname.endsWith('.holocronsites.com')
+}
+
+/** Resolve a custom domain to a project subdomain via KV.
+ *  KV key: "custom-domain:{hostname}" → subdomain string.
+ *  Written by the domain API when a custom domain becomes active,
+ *  updated by deploy finalize, and lazily repaired by resolveCustomDomainFromD1
+ *  on first routed request if KV is missing (e.g. Cloudflare validated the
+ *  hostname before the status endpoint was polled). */
+async function resolveCustomDomain(hostname: string): Promise<string | null> {
+  const subdomain = await env.SITES_KV.get(
+    `custom-domain:${hostname}`,
+    { type: 'text', cacheTtl: 60 },
+  )
+  return subdomain || null
+}
+
+/** D1 fallback for custom domain resolution when KV has no entry.
+ *  If the request reached this worker through Cloudflare SSL for SaaS,
+ *  Cloudflare already validated DNS ownership. We just need the project
+ *  subdomain to serve the site. Writes KV so subsequent requests are fast. */
+async function resolveCustomDomainFromD1(hostname: string): Promise<string | null> {
+  const row = await env.DB.prepare(`
+    SELECT p.subdomain AS subdomain
+    FROM domain d
+    INNER JOIN project p ON p.project_id = d.project_id
+    WHERE d.hostname = ?
+      AND p.subdomain IS NOT NULL
+    LIMIT 1
+  `).bind(hostname).first<{ subdomain: string }>()
+
+  if (!row?.subdomain) return null
+
+  // Write KV so subsequent requests skip the D1 query
+  await env.SITES_KV.put(`custom-domain:${hostname}`, row.subdomain)
+  return row.subdomain
+}
+
+/** Resolve site info from KV. Written at deploy finalize time.
+ *  KV reads are ~1-5ms globally (replicated to all datacenters).
+ *  Uses raw SQL to keep the hosting worker lean (no drizzle-orm dependency). */
+async function resolveSite(
+  subdomain: string,
+): Promise<SiteInfo | null> {
+  // KV cacheTtl minimum is 30 seconds (Cloudflare enforced).
+  const kvData = await env.SITES_KV.get(`site-info:${subdomain}`, { type: 'text', cacheTtl: 30 })
+  if (!kvData) return null
+
+  try {
+    const parsed = JSON.parse(kvData) as { projectId: string; version: string; manifest: Manifest; basePath?: string }
+    return { projectId: parsed.projectId, version: parsed.version, subdomain, manifest: parsed.manifest, basePath: parsed.basePath }
+  } catch {
+    return null
+  }
+}
+
+/** Try to serve a static asset (CSS, JS, images) from KV.
+ *  Resolves file paths via the manifest → content-addressed blob:{hash} keys.
+ *  Returns a Response on hit, null on miss. */
+async function serveAsset(
+  kv: KVNamespace,
+  site: SiteInfo,
+  request: Request,
+): Promise<Response | null> {
+  const url = new URL(request.url)
+  let pathname = url.pathname
+
+  // Strip base path prefix so asset lookups match manifest keys.
+  // e.g. base="/docs/", request="/docs/assets/style.css" → pathname="/assets/style.css"
+  if (site.basePath && pathname.startsWith(site.basePath)) {
+    pathname = '/' + pathname.slice(site.basePath.length)
+  }
+
+  // The manifest maps "assets/..." paths. Browser requests "/assets/style.css",
+  // the manifest key is "assets/assets/style.css" (CLI prefix convention).
+  const manifestKey = `assets${pathname}`
+  const entry = site.manifest[manifestKey]
+  if (!entry || !entry.contentType) return null
+
+  // Content-addressed: load from blob:{hash}
+  const content = await kv.get(`blob:${entry.hash}`, { type: 'arrayBuffer', cacheTtl: 86400 })
+  if (!content) return null
+
+  // Content-hashed filenames (e.g. style-abc123.css) are immutable.
+  // Stable paths (favicon.ico, robots.txt, logo.svg) get short TTLs
+  // so redeployments are picked up without a year-long browser cache.
+  const isHashed = /\.[a-f0-9]{6,}\./i.test(pathname)
+
+  return new Response(content, {
+    headers: {
+      'Content-Type': entry.contentType,
+      'Cache-Control': isHashed
+        ? 'public, max-age=31536000, immutable'
+        : 'public, max-age=60, s-maxage=300',
+    },
+  })
+}
+
+/** Load all worker modules from KV via manifest → blob:{hash} lookups.
+ *  Only loads JS files under the worker/ prefix. */
+async function loadWorkerModules(
+  kv: KVNamespace,
+  site: SiteInfo,
+): Promise<Record<string, string>> {
+  // Dynamic Workers only accept .js and .py modules. Filter out CSS, JSON, and
+  // other non-JS files that end up in the worker/ directory from the Vite build.
+  const workerEntries = Object.entries(site.manifest).filter(
+    ([path]) => path.startsWith('worker/') && (path.endsWith('.js') || path.endsWith('.mjs')),
+  )
+
+  // Deduplicate blob reads: multiple file paths can share the same content
+  // hash (e.g. empty shim modules). Read each unique hash once.
+  const uniqueHashes = [...new Set(workerEntries.map(([, e]) => e.hash))]
+  const blobMap = new Map<string, string>()
+  await Promise.all(
+    uniqueHashes.map(async (hash) => {
+      const content = await kv.get(`blob:${hash}`, { type: 'text', cacheTtl: 86400 })
+      if (content !== null) blobMap.set(hash, content)
+    }),
+  )
+
+  const modules: Record<string, string> = {}
+  for (const [filePath, entry] of workerEntries) {
+    const moduleName = filePath.slice('worker/'.length)
+    const content = blobMap.get(entry.hash)
+    if (content !== undefined && moduleName) {
+      modules[moduleName] = content
+    }
+  }
+
+  return modules
+}
+
+// Hostnames that belong to the holocron website worker, not the hosting
+// worker. The */* catch-all route on the holocron.so zone intercepts
+// these before the website worker's custom_domain can handle them,
+// so we forward them manually via the .workers.dev URL.
+const WEBSITE_WORKER_HOSTNAMES: Record<string, string> = {
+  'preview.holocron.so': 'holocron-website-preview.remorses.workers.dev',
+}
+
+export default {
+  async fetch(request: Request, env: Env): Promise<Response> {
+    try {
+      const url = new URL(request.url)
+
+      // Forward requests for holocron website hostnames that the */*
+      // catch-all route accidentally intercepts before the website
+      // worker's custom_domain route can handle them.
+      const workersDev = WEBSITE_WORKER_HOSTNAMES[url.hostname]
+      if (workersDev) {
+        const target = new URL(request.url)
+        target.hostname = workersDev
+        target.port = ''
+        return fetch(new Request(target, request))
+      }
+
+      let subdomain = extractSubdomain(url.hostname)
+
+      // Custom domain: look up hostname in KV to resolve the project subdomain.
+      // Custom domains CNAME to cname.holocron.so; Cloudflare SSL for SaaS
+      // routes them to this worker via the fallback origin.
+      // KV is the fast path; D1 is the fallback for first-request after
+      // Cloudflare validates the hostname (before the status endpoint is polled).
+      if (!subdomain && !isHolocronHostname(url.hostname)) {
+        subdomain = await resolveCustomDomain(url.hostname) ?? undefined
+
+        if (!subdomain) {
+          subdomain = await resolveCustomDomainFromD1(url.hostname) ?? undefined
+        }
+      }
+
+      if (!subdomain) {
+        return new Response('Not found', { status: 404 })
+      }
+
+      // 1. Resolve site from KV (fast, D1 fallback for legacy)
+      const site = await resolveSite(subdomain)
+      if (!site) {
+        return new Response(
+          `Site "${subdomain}" not found. Deploy with \`holocron deploy\`.`,
+          { status: 404, headers: { 'Content-Type': 'text/plain' } },
+        )
+      }
+
+      // 2. Try static asset first (fast path, no Dynamic Worker needed)
+      const assetResponse = await serveAsset(env.SITES_KV, site, request)
+      if (assetResponse) return assetResponse
+
+      // 3. Forward to Dynamic Worker
+      //
+      // Use the SSR entrypoint for hosted docs. The RSC root module is still
+      // uploaded because SSR imports it while rendering, but making SSR the
+      // main Dynamic Worker module avoids running Node-only app.listen guards
+      // from the RSC entry during worker startup.
+      const workerId = `${site.projectId}:v${site.version}`
+
+      const worker = env.LOADER.get(workerId, async () => {
+        const modules = await loadWorkerModules(env.SITES_KV, site)
+
+        if (!modules['ssr/index.js']) {
+          throw new Error(`No ssr/index.js found for site ${site.subdomain} v${site.version}`)
+        }
+
+        // Polyfill `caches` with a no-op implementation. Dynamic Workers don't
+        // support the Cache API — calling any method on it throws
+        // "Cache API is not yet supported for dynamically-loaded workers."
+        // Older holocron builds call `caches.open()` / `caches.default` without
+        // try/catch, so we stub it here to prevent 500s on deployed sites.
+        const wrapperJs = [
+          `var noopCache = {`,
+          `  match() { return Promise.resolve(undefined); },`,
+          `  put() { return Promise.resolve(); },`,
+          `  delete() { return Promise.resolve(false); },`,
+          `  keys() { return Promise.resolve([]); },`,
+          `};`,
+          `globalThis.caches = {`,
+          `  open() { return Promise.resolve(noopCache); },`,
+          `  get default() { return noopCache; },`,
+          `};`,
+          `import { fetchHandler } from "./ssr/index.js";`,
+          `export default {`,
+          `  async fetch(request, env, ctx) {`,
+          `    try {`,
+          `      return await fetchHandler(request, env, ctx);`,
+          `    } catch (err) {`,
+          `      const msg = err instanceof Error ? err.stack || err.message : String(err);`,
+          `      console.error("Dynamic Worker uncaught error:", msg);`,
+          `      return new Response("DW error: " + msg, { status: 500 });`,
+          `    }`,
+          `  }`,
+          `};`,
+        ].join('\n')
+
+        // TODO: add sandbox limits to prevent billing abuse and outbound DDoS:
+        //   globalOutbound: null,  // or a controlled Fetcher that rate-limits
+        //   limits: { cpuMs: 50, subRequests: 20 },
+        // Currently left at defaults because docs sites need outbound fetches
+        // (Google Fonts, remote images, OG images, AI chat proxy).
+        return {
+          compatibilityDate: '2026-05-11',
+          // global_fetch_strictly_public: routes the Dynamic Worker's fetch()
+          // calls through Cloudflare's public edge instead of treating them as
+          // same-zone subrequests. Without this, fetch('https://holocron.so/...')
+          // returns 520 because the hosting worker and holocron-website are on
+          // the same zone and Cloudflare blocks the cross-worker subrequest.
+          compatibilityFlags: ['nodejs_compat', 'global_fetch_strictly_public'],
+          mainModule: '__dw_entry.js',
+          modules: {
+            '__dw_entry.js': wrapperJs,
+            ...modules,
+          },
+        }
+      })
+
+      const response = await worker.getEntrypoint().fetch(request)
+
+      if (!response.ok && response.status >= 500) {
+        const [logStream, returnStream] = response.body ? response.body.tee() : [null, null]
+        const errorBody = logStream ? await new Response(logStream).text() : ''
+        console.error(`Dynamic Worker returned ${response.status} for ${request.url}`, errorBody.slice(0, 2000))
+        return new Response(returnStream, {
+          status: response.status,
+          headers: response.headers,
+        })
+      }
+
+      return response
+    } catch (err) {
+      const message = err instanceof Error ? err.message : String(err)
+      const stack = err instanceof Error ? err.stack : ''
+      return new Response(`Internal error: ${message}\n\n${stack}`, {
+        status: 500,
+        headers: { 'Content-Type': 'text/plain' },
+      })
+    }
+  },
+} satisfies ExportedHandler<Env>

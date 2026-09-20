@@ -1,0 +1,21 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the Tooltip docs from @/vite/src/components/markdown/tooltip.tsx.
+title: Tooltips
+description: Add compact inline explanations without interrupting the page flow.
+icon: message-circle-question
+---
+
+# Tooltips
+
+Tooltips are useful for glossary-like inline explanations.
+
+Hover over this term: <Tooltip tip='A prebuilt MDX component surface with cards, callouts, code blocks, and more.'>component library</Tooltip>.
+
+Tooltips can also include a small headline and a call to action: <Tooltip tip='Browse all available components in this docs site.' headline='Holocron docs workflow' cta='View components' href='/docs/components'>component index</Tooltip>.
+
+## Holocron differences
+
+- Holocron supports inline tooltip content plus optional headline and CTA link.
+- This is a hover-driven implementation; broader interaction patterns documented by Mintlify are not all mirrored yet.

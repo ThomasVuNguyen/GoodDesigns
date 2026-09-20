@@ -1,0 +1,239 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the code blocks guide from @/vite/src/components/markdown/code-block.tsx.
+  Cover fences, titles, line highlighting, and bleed.
+title: Code Blocks
+description: Syntax highlighting, code groups, and inline code.
+icon: code
+---
+
+# Code Blocks
+
+Holocron highlights fenced code on the **server**. First paint already has token colors, and in-site navigation keeps them. Token classes match the usual Prism theme names (`token keyword`, `token string`, and so on).
+
+## Basic code block
+
+```ts
+const greeting = 'Hello, world!'
+console.log(greeting)
+```
+
+Line numbers are shown by default. Format:
+
+````mdx
+```ts
+const greeting = 'Hello, world!'
+console.log(greeting)
+```
+````
+
+## Meta options
+
+Add options after the language identifier to customize code blocks. Options use `key=value` syntax. Bare words (without `=`) become the **title**.
+
+### Title
+
+The first bare word(s) after the language become the title, useful for showing filenames:
+
+```ts vite.config.ts
+export default defineConfig({
+  plugins: [holocron()],
+})
+```
+
+````mdx
+```ts vite.config.ts
+export default defineConfig({
+  plugins: [holocron()],
+})
+```
+````
+
+You can also set the title explicitly with `title="..."` for titles with special characters:
+
+````mdx
+```ts title="src/vite.config.ts"
+export default defineConfig({
+  plugins: [holocron()],
+})
+```
+````
+
+### Line numbers
+
+Line numbers are **on by default**. Disable them with `lines=false`:
+
+```bash lines=false
+npm install @holocron.so/vite
+```
+
+````mdx
+```bash lines=false
+npm install @holocron.so/vite
+```
+````
+
+### Wrap
+
+Long lines scroll horizontally by default. Add the bare `wrap` flag (Mintlify-compatible) to soft-wrap them instead — useful for prose-like content such as prompts:
+
+```text Example prompt wrap
+Use the Holocron skill. I have a docs site with a broken sidebar link and I want you to find the page, fix the slug in docs.json, and verify the navigation renders correctly.
+```
+
+````mdx
+```text Example prompt wrap
+Use the Holocron skill. I have a docs site with a broken sidebar link and ...
+```
+````
+
+Wrapped blocks always hide line numbers and ignore `highlight`: a wrapped logical line can span several visual rows, so a per-line number gutter or highlight overlay would misalign.
+
+### Bleed
+
+Fenced code blocks bleed into the **right** margin by default so the code text lines up with the prose left edge. Set `bleed=true` (or `bleed=both`) to extend into both margins, or `bleed=none` (or `bleed=false`) to keep the block fully inside the content column:
+
+```ts bleed=true
+import { defineConfig } from 'vite'
+import { holocron } from '@holocron.so/vite'
+
+export default defineConfig({
+  plugins: [holocron()],
+})
+```
+
+````mdx
+```ts bleed=true
+import { defineConfig } from 'vite'
+...
+```
+````
+
+The `bleed` meta accepts `true`/`both`, `right` (the fenced-block default), or `false`/`none`.
+
+### Highlight lines
+
+Dim all lines except the ones you want to focus on. Pass a comma-separated list of line numbers or ranges to `highlight`:
+
+```ts highlight="1,4-5"
+import { defineConfig } from 'vite'
+import { holocron } from '@holocron.so/vite'
+
+export default defineConfig({
+  plugins: [holocron()],
+})
+```
+
+````mdx
+```ts highlight="1,4-5"
+import { defineConfig } from 'vite'
+import { holocron } from '@holocron.so/vite'
+
+export default defineConfig({
+  plugins: [holocron()],
+})
+```
+````
+
+### Combining options
+
+Options can be combined freely:
+
+```ts vite.config.ts highlight="3" bleed=true
+import { defineConfig } from 'vite'
+import { holocron } from '@holocron.so/vite'
+
+export default defineConfig({
+  plugins: [holocron()],
+})
+```
+
+````mdx
+```ts vite.config.ts highlight="3" bleed=true
+import { defineConfig } from 'vite'
+...
+```
+````
+
+## Code groups
+
+Group related code blocks into tabs with the `CodeGroup` component. The bare word after the language becomes the tab label:
+
+<CodeGroup>
+
+```bash npm
+npm install @holocron.so/vite
+```
+
+```bash pnpm
+pnpm add @holocron.so/vite
+```
+
+```bash yarn
+yarn add @holocron.so/vite
+```
+
+</CodeGroup>
+
+````mdx
+<CodeGroup>
+
+```bash npm
+npm install @holocron.so/vite
+```
+
+```bash pnpm
+pnpm add @holocron.so/vite
+```
+
+```bash yarn
+yarn add @holocron.so/vite
+```
+
+</CodeGroup>
+````
+
+See [Code Groups](/docs/components/code-groups) for more options.
+
+## Inline code
+
+Use backticks for inline code: `` `variable` `` renders as `variable`.
+
+## Rendering the CodeBlock component directly
+
+If you want the exact same code block UI that MDX renders (copy button, line numbers, line highlighting), import the `CodeBlock` component from `@holocron.so/vite/mdx`. This is handy for rendering code outside of docs, for example in a **dashboard** or settings page.
+
+```tsx Dashboard.tsx
+import { CodeBlock } from '@holocron.so/vite/mdx'
+
+const CLI_EXAMPLES = `npx "@holocron.so/cli" build
+npx "@holocron.so/cli" dev`
+
+export function CliHelp() {
+  return (
+    <CodeBlock lang='bash' showLineNumbers={false}>
+      {CLI_EXAMPLES}
+    </CodeBlock>
+  )
+}
+```
+
+MDX fences highlight on the server. Used on its own, `CodeBlock` shows the raw `children` string.
+
+The `bleed` prop controls how far the block extends past its content column. The component **defaults to no bleed**, so it stays fully inside its parent, which is what you want in a dashboard, modal, or card. Opt into bleed only when you render inside the docs prose column:
+
+| `bleed` value      | Behavior                                          |
+| ------------------ | ------------------------------------------------- |
+| `'both'` / `true`  | extends into both left and right margins          |
+| `'right'`          | extends into the right margin only                |
+| `'none'` / `false` | no bleed, stays fully inside its parent (default) |
+
+| Prop              | Type      | Description                                            |
+| ----------------- | --------- | ------------------------------------------------------ |
+| `children`        | `string`  | The raw code to render and copy.                       |
+| `lang`            | `string`  | Language id, defaults to `jsx`.                        |
+| `showLineNumbers` | `boolean` | Line numbers on the left, on by default.               |
+| `title`           | `string`  | Filename or label shown above the block.               |
+| `highlight`       | `string`  | Comma-separated lines/ranges to focus, e.g. `"1-3,7"`. |
+| `bleed`           | `boolean` | Extend into the page margins, off by default.          |

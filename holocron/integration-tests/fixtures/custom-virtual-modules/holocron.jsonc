@@ -1,0 +1,17 @@
+{
+  "name": "Local Disk Config",
+  "icons": { "library": "lucide" },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Local Docs",
+        "groups": [
+          {
+            "group": "Local Guides",
+            "pages": ["index"]
+          }
+        ]
+      }
+    ]
+  }
+}

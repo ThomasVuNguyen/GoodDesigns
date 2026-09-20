@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  ci:
+    timeout-minutes: 45
+    runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: recursive
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.12.1
+          run_install: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+          registry-url: https://registry.npmjs.org/
+      - name: Install dependencies
+        run: pnpm install --no-frozen-lockfile
+      - name: Install Playwright Chromium
+        run: pnpm --filter integration-tests exec playwright install --with-deps chromium
+      - name: Generate website icon schemas
+        run: pnpm --filter website generate-icon-schemas
+      - name: Build workspace
+        run: pnpm --filter @holocron.so/cli build && pnpm --filter @holocron.so/vite build && pnpm -r --filter '!notaku-shell' build
+      - name: Run vite tests
+        run: pnpm --filter @holocron.so/vite test
+      - name: Run integration tests
+        run: pnpm --filter integration-tests test-e2e-start

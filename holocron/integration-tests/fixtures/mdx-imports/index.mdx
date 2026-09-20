@@ -1,0 +1,38 @@
+---
+title: Import Test
+---
+
+import { Greeting } from '/snippets/greeting'
+import { CustomBadge } from '/components/custom-badge'
+import Alert from '/snippets/alert'
+import MarkdownSnippet from '/snippets/plain-markdown.md'
+import RootReadme from '../../../README.md'
+import OutsideSnippet from '../outside-pagesdir-snippet.md'
+import AsideSnippet from '/snippets/aside-snippet.md'
+import pyCode from '/snippets/example-code.py?raw'
+
+<Above>
+
+<Greeting name="Above" />
+
+</Above>
+
+# Import Test Page
+
+This page tests MDX import resolution.
+
+<Greeting name="World" />
+
+<CustomBadge label="imported" />
+
+<Alert message="default-import-works" />
+
+<MarkdownSnippet />
+
+<RootReadme />
+
+<OutsideSnippet />
+
+<AsideSnippet />
+
+<pre data-testid="raw-import">{pyCode}</pre>

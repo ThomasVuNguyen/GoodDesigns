@@ -1,0 +1,367 @@
+import { expect, test } from "../helpers/test.ts";
+
+test.describe("raw markdown via .md path suffix", () => {
+  test("encoded apostrophes and parentheses resolve to the canonical page", async ({ request }) => {
+    const encoded = "/questions-(what%27s-new)";
+    const redirect = await request.get(encoded, { maxRedirects: 0 });
+    expect(redirect.status()).toBe(308);
+    expect(redirect.headers().location).toContain("/questions-(what's-new)");
+
+    const html = await request.get(encoded);
+    expect(html.status()).toBe(200);
+    expect(await html.text()).toContain("What's new");
+
+    const markdown = await request.get(`${encoded}.md`);
+    expect(markdown.status()).toBe(200);
+    expect(markdown.headers()["content-type"]).toContain("text/markdown");
+  });
+
+  test("an explicit encoded redirect wins over canonical path normalization", async ({ request }) => {
+    const response = await request.get("/questions-%28what%27s-new%29", { maxRedirects: 0 });
+
+    expect(response.status()).toBe(302);
+    expect(response.headers().location).toBe("/markdown-page");
+  });
+
+  test("GET /index.md returns raw markdown (no redirect)", async ({ request }) => {
+    // Must serve markdown directly, NOT be intercepted by the `/index`
+    // extensionless redirect alias.
+    const res = await request.get("/index.md", { maxRedirects: 0 });
+    expect(res.status()).toBe(200);
+    expect(res.headers()["content-type"]).toContain("text/markdown");
+    const body = await res.text();
+    expect(body).toContain("## Overview");
+    expect(body).toContain("home page content for integration testing");
+  });
+
+  test("GET /getting-started.md returns raw markdown", async ({ request }) => {
+    const res = await request.get("/getting-started.md");
+    expect(res.status()).toBe(200);
+    expect(res.headers()["content-type"]).toContain("text/markdown");
+    const body = await res.text();
+    expect(body).toContain("## Installation");
+    expect(body).toContain("## Configuration");
+  });
+
+  test("GET /getting-started.mdx returns raw markdown (same as .md) @build", async ({
+    request,
+  }) => {
+    const res = await request.get("/getting-started.mdx");
+    expect(res.status()).toBe(200);
+    expect(res.headers()["content-type"]).toContain("text/markdown");
+    const body = await res.text();
+    expect(body).toContain("## Installation");
+    expect(body).toContain("## Configuration");
+  });
+
+  test("GET /index.mdx returns raw markdown (no redirect) @build", async ({ request }) => {
+    // Must serve markdown directly, NOT be intercepted by the `/index`
+    // extensionless redirect alias.
+    const res = await request.get("/index.mdx", { maxRedirects: 0 });
+    expect(res.status()).toBe(200);
+    expect(res.headers()["content-type"]).toContain("text/markdown");
+    const body = await res.text();
+    expect(body).toContain("## Overview");
+  });
+
+  test("GET /nonexistent.md returns 404", async ({ request }) => {
+    const res = await request.get("/nonexistent.md");
+    expect(res.status()).toBe(404);
+  });
+
+  test("raw markdown includes cache-control header", async ({ request }) => {
+    const res = await request.get("/index.md");
+    expect(res.status()).toBe(200);
+    const cacheControl = res.headers()["cache-control"] || "";
+    expect(cacheControl).toContain("s-maxage=300");
+  });
+
+});
+
+test.describe("agent detection redirects to .md URL", () => {
+  // Playwright's request fixture follows redirects by default, so
+  // the final response is the .md content. We verify the redirect
+  // happened by checking the final URL ends with .md AND the content
+  // is raw markdown (not HTML).
+
+  test("Accept: text/markdown redirects and serves markdown", async ({
+    request,
+  }) => {
+    const res = await request.get("/getting-started", {
+      headers: { accept: "text/markdown" },
+    });
+    expect(res.status()).toBe(200);
+    expect(res.headers()["content-type"]).toContain("text/markdown");
+    expect(res.url()).toContain("/getting-started.md");
+    const body = await res.text();
+    expect(body).toContain("## Installation");
+  });
+
+  test("mixed-case Accept: Text/Markdown also redirects", async ({
+    request,
+  }) => {
+    const res = await request.get("/getting-started", {
+      headers: { accept: "Text/Markdown" },
+    });
+    expect(res.status()).toBe(200);
+    expect(res.headers()["content-type"]).toContain("text/markdown");
+    expect(res.url()).toContain("/getting-started.md");
+  });
+
+  test("Accept: text/markdown on root redirects to /index.md", async ({
+    request,
+  }) => {
+    const res = await request.get("/", {
+      headers: { accept: "text/markdown" },
+    });
+    expect(res.status()).toBe(200);
+    expect(res.headers()["content-type"]).toContain("text/markdown");
+    expect(res.url()).toContain("/index.md");
+    const body = await res.text();
+    expect(body).toContain("## Overview");
+  });
+
+  // Agent detection was simplified (commit cb1e69c2): the redirect now only
+  // triggers on `Accept: text/markdown`. User-Agent sniffing was removed
+  // because it caused false positives for SEO crawlers (Googlebot, AhrefsBot)
+  // that ended up 302-redirected to markdown instead of HTML.
+
+  test("agent user-agent WITHOUT Accept: text/markdown gets HTML (no UA sniffing)", async ({
+    request,
+  }) => {
+    const res = await request.get("/getting-started", {
+      headers: {
+        "user-agent":
+          "Mozilla/5.0 (compatible; ClaudeBot/1.0; +claudebot@anthropic.com)",
+      },
+    });
+    expect(res.status()).toBe(200);
+    expect(res.url()).not.toContain(".md");
+    expect(res.headers()["content-type"]).toContain("text/html");
+  });
+
+  test("agent UA combined with Accept: text/markdown redirects and serves markdown", async ({
+    request,
+  }) => {
+    const res = await request.get("/getting-started", {
+      headers: { "user-agent": "claude-code/1.2.3", accept: "text/markdown" },
+    });
+    expect(res.status()).toBe(200);
+    expect(res.url()).toContain("/getting-started.md");
+    expect(res.headers()["content-type"]).toContain("text/markdown");
+    const body = await res.text();
+    expect(body).toContain("## Installation");
+  });
+
+  test("agent requesting .mdx directly is NOT redirected (served inline) @build", async ({
+    request,
+  }) => {
+    const res = await request.get("/getting-started.mdx", {
+      headers: { "user-agent": "claude-code/1.0" },
+    });
+    expect(res.status()).toBe(200);
+    expect(res.headers()["content-type"]).toContain("text/markdown");
+    // Should NOT have been redirected to .md — served directly at .mdx
+    expect(res.url()).toContain("/getting-started.mdx");
+  });
+
+  test("agent on nonexistent page falls through to 404", async ({
+    request,
+  }) => {
+    const res = await request.get("/nonexistent", {
+      headers: { "user-agent": "claude-code/1.0" },
+    });
+    expect(res.status()).toBe(404);
+  });
+});
+
+test.describe("sitemap.xml", () => {
+  test("GET /sitemap.xml returns valid XML with encoded locations", async ({ page, request }) => {
+    const res = await request.get("/sitemap.xml");
+    expect(res.status()).toBe(200);
+    expect(res.headers()["content-type"]).toContain("application/xml");
+    const body = await res.text();
+    expect(body).toContain('<?xml version="1.0"');
+    expect(body).toContain("<urlset");
+    expect(body).toContain("</urlset>");
+    const parsed = await page.evaluate((xml) => {
+      const document = new DOMParser().parseFromString(xml, "application/xml");
+      return {
+        errors: [...document.querySelectorAll("parsererror")].map((node) => node.textContent),
+        locations: [...document.querySelectorAll("loc")].map((node) => node.textContent),
+      };
+    }, body);
+    expect(parsed.errors).toEqual([]);
+    expect(parsed.locations.some((location) => location?.includes("/caf%C3%A9-&-guide"))).toBe(true);
+    expect(body).toContain("/caf%C3%A9-&amp;-guide</loc>");
+  });
+
+  test("sitemap contains all page URLs", async ({ request }) => {
+    const res = await request.get("/sitemap.xml");
+    const body = await res.text();
+    // The basic fixture has index + getting-started pages
+    expect(body).toContain("<loc>");
+    expect(body).toMatch(/\/getting-started<\/loc>/);
+  });
+
+  test("sitemap includes .md hint comment", async ({ request }) => {
+    const res = await request.get("/sitemap.xml");
+    const body = await res.text();
+    expect(body).toContain("append .md to the URL");
+    expect(body).toContain(".md -->");
+  });
+
+  test("sitemap has cache-control header", async ({ request }) => {
+    const res = await request.get("/sitemap.xml");
+    const cacheControl = res.headers()["cache-control"] || "";
+    expect(cacheControl).toContain("s-maxage=3600");
+  });
+
+  test("every sitemap page has matching HTML and markdown routes", async ({ page, request }) => {
+    const sitemap = await (await request.get("/sitemap.xml")).text();
+    const locations = await page.evaluate((xml) => {
+      const document = new DOMParser().parseFromString(xml, "application/xml");
+      return [...document.querySelectorAll("loc")].map((node) => node.textContent).filter(Boolean) as string[];
+    }, sitemap);
+    const paths = locations.map((location) => new URL(location).pathname);
+
+    for (const path of paths) {
+      expect((await request.get(path)).status(), `${path} HTML`).toBe(200);
+      const markdownPath = path === "/" ? "/index.md" : `${path}.md`;
+      expect((await request.get(markdownPath)).status(), `${path} markdown`).toBe(200);
+    }
+  });
+});
+
+test.describe("raw markdown does not interfere with normal requests", () => {
+  test("normal browser request returns HTML", async ({ request }) => {
+    const res = await request.get("/getting-started", {
+      headers: {
+        accept: "text/html",
+        "user-agent": "Mozilla/5.0 Chrome/120",
+      },
+    });
+    expect(res.status()).toBe(200);
+    const contentType = res.headers()["content-type"] || "";
+    expect(contentType).not.toContain("text/markdown");
+  });
+
+  test("POST request with .md suffix is ignored", async ({ request }) => {
+    const res = await request.post("/index.md");
+    const contentType = res.headers()["content-type"] || "";
+    expect(contentType).not.toContain("text/markdown");
+  });
+});
+
+test.describe("well-known agent-skills discovery", () => {
+  test("GET /.well-known/agent-skills/index.json returns v0.2.0 index", async ({
+    request,
+  }) => {
+    const res = await request.get("/.well-known/agent-skills/index.json");
+    expect(res.status()).toBe(200);
+    expect(res.headers()["content-type"]).toContain("application/json");
+    const body = await res.json();
+    expect(body.$schema).toBe(
+      "https://schemas.agentskills.io/discovery/0.2.0/schema.json"
+    );
+    expect(body.skills).toHaveLength(1);
+    expect(body.skills[0].name).toBe("test-docs");
+    expect(body.skills[0].type).toBe("skill-md");
+    expect(body.skills[0].url).toBe("test-docs/SKILL.md");
+    expect(body.skills[0].digest).toMatch(/^sha256:[a-f0-9]{64}$/);
+  });
+
+  test("GET /.well-known/skills/index.json returns legacy index", async ({
+    request,
+  }) => {
+    const res = await request.get("/.well-known/skills/index.json");
+    expect(res.status()).toBe(200);
+    expect(res.headers()["content-type"]).toContain("application/json");
+    const body = await res.json();
+    expect(body.skills).toHaveLength(1);
+    expect(body.skills[0].name).toBe("test-docs");
+    expect(body.skills[0].files).toEqual(["SKILL.md"]);
+    // Legacy format should NOT have $schema
+    expect(body.$schema).toBeUndefined();
+  });
+
+  test("GET /.well-known/agent-skills/test-docs/SKILL.md returns skill markdown", async ({
+    request,
+  }) => {
+    const res = await request.get(
+      "/.well-known/agent-skills/test-docs/SKILL.md"
+    );
+    expect(res.status()).toBe(200);
+    expect(res.headers()["content-type"]).toContain("text/markdown");
+    const body = await res.text();
+    expect(body).toContain("name: test-docs");
+    expect(body).toContain("# Test Docs");
+    expect(body).toContain("sitemap.xml");
+    expect(body).toContain("docs.zip");
+    expect(body).toContain(".md");
+  });
+
+  test("GET /.well-known/skills/test-docs/SKILL.md returns same skill", async ({
+    request,
+  }) => {
+    const res = await request.get("/.well-known/skills/test-docs/SKILL.md");
+    expect(res.status()).toBe(200);
+    expect(res.headers()["content-type"]).toContain("text/markdown");
+    const body = await res.text();
+    expect(body).toContain("name: test-docs");
+    expect(body).toContain("sitemap.xml");
+  });
+
+  test("well-known endpoints have cache-control headers", async ({
+    request,
+  }) => {
+    const res = await request.get("/.well-known/agent-skills/index.json");
+    expect(res.headers()["cache-control"]).toContain("s-maxage=3600");
+  });
+
+  test("agent redirect does not intercept well-known paths", async ({
+    request,
+  }) => {
+    const res = await request.get("/.well-known/agent-skills/index.json", {
+      headers: { "user-agent": "claude-code/1.0" },
+    });
+    expect(res.status()).toBe(200);
+    expect(res.headers()["content-type"]).toContain("application/json");
+  });
+});
+
+test.describe("docs.zip", () => {
+  test("GET /docs.zip returns a zip file", async ({ request }) => {
+    const res = await request.get("/docs.zip");
+    expect(res.status()).toBe(200);
+    expect(res.headers()["content-type"]).toContain("application/zip");
+    expect(res.headers()["content-disposition"]).toContain("docs.zip");
+  });
+
+  test("zip contains markdown files for each page", async ({ request }) => {
+    const { unzipSync } = await import("fflate");
+    const res = await request.get("/docs.zip");
+    const buffer = await res.body();
+    const files = unzipSync(new Uint8Array(buffer));
+    const filenames = Object.keys(files).sort();
+    expect(filenames).toContain("index.md");
+    expect(filenames).toContain("getting-started.md");
+  });
+
+  test("zip file contents include page markdown", async ({ request }) => {
+    const { unzipSync, strFromU8 } = await import("fflate");
+    const res = await request.get("/docs.zip");
+    const buffer = await res.body();
+    const files = unzipSync(new Uint8Array(buffer));
+    const indexMd = strFromU8(files["index.md"]!);
+    expect(indexMd).toContain("Agent-readable docs index: /llms.txt");
+    expect(indexMd).toContain("llms-full.txt");
+    expect(indexMd).toContain("## Overview");
+  });
+
+  test("zip has cache-control and nosniff headers", async ({ request }) => {
+    const res = await request.get("/docs.zip");
+    expect(res.headers()["cache-control"]).toContain("s-maxage=300");
+    expect(res.headers()["x-content-type-options"]).toBe("nosniff");
+  });
+});

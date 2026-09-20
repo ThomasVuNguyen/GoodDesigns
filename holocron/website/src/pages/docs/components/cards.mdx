@@ -1,0 +1,37 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the Card docs from @/vite/src/components/markdown/card.tsx.
+  Use @https://github.com/mintlify/components for Mintlify-compatible props.
+title: Cards
+description: Use cards for linked navigation, grouped highlights, and compact summaries.
+icon: square-stack
+---
+
+# Cards
+
+`Card` works well for docs homepages, section hubs, and grouped calls to action.
+
+<Columns cols={2}>
+  <Card title='Basic linked card' icon='arrow-right' href='/docs/components/code-groups'>
+    Use a card as a navigational block inside a docs page.
+  </Card>
+  <Card title='Horizontal card' icon='panel-left' horizontal href='/docs/components/columns' cta='Open page'>
+    Horizontal layout works for denser landing pages.
+  </Card>
+</Columns>
+
+<Card
+  title='Image card'
+  icon='image'
+  href='/docs/components/cards'
+  img='https://placehold.co/1200x600/101828/ffffff?text=Holocron+Card+Preview'
+  arrow
+>
+  Cards support an optional `img` prop for a header image. The `arrow` prop adds a directional indicator.
+</Card>
+
+## Holocron differences
+
+- Holocron supports `title`, `icon`, `iconType`, icon `color`, `href`, `horizontal`, `img`, `cta`, and `arrow`.
+- The layout is intentionally simple and does not try to replicate Mintlify pixel-for-pixel.

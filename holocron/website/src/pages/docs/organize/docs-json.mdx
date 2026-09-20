@@ -1,0 +1,160 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the docs.json guide from @/vite/src/schema.ts, @/website/docs.json,
+  @/vite/src/lib/mcp/provider.ts, and @/vite/src/lib/openapi/provider.ts.
+title: docs.json
+description: The central config file for navigation, theming, logo, footer, redirects, and site metadata. Compatible with Mintlify's schema.
+icon: file-json
+---
+
+# docs.json
+
+Every Holocron site needs a config file at the project root. Holocron supports three filenames (first found wins):
+
+1. **`docs.json`** (preferred)
+2. **`docs.jsonc`** (supports `//` comments)
+3. **`holocron.jsonc`** (legacy Holocron name, also supports comments)
+
+All three follow the same schema, which is compatible with Mintlify's `docs.json` for the fields Holocron consumes.
+
+## Minimal config
+
+```json
+{
+  "name": "My Docs",
+  "navigation": [
+    {
+      "group": "Getting Started",
+      "pages": ["index", "quickstart"]
+    }
+  ]
+}
+```
+
+## Full config reference
+
+```json
+{
+  "$schema": "https://holocron.so/docs.json",
+  "name": "My Docs",
+  "description": "Documentation for my project",
+  "colors": { "primary": "#6366f1" },
+  "logo": {
+    "light": "/logo-light.svg",
+    "dark": "/logo-dark.svg"
+  },
+  "favicon": "/favicon.svg",
+  "appearance": { "default": "system" },
+  "fonts": { "family": "Inter" },
+  "icons": { "library": "lucide" },
+  "navbar": {
+    "links": [
+      { "type": "github", "href": "https://github.com/example/docs" }
+    ]
+  },
+  "banner": {
+    "content": "New: [v2.0 is out](/changelog)",
+    "dismissible": true
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          { "group": "Getting Started", "pages": ["index", "quickstart"] }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "openapi": "openapi.json"
+      }
+    ]
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/example",
+      "x": "https://x.com/example",
+      "discord": "https://discord.gg/example"
+    }
+  },
+  "redirects": [
+    { "source": "/old", "destination": "/new" }
+  ],
+  "knownPaths": ["/api/*", "/dashboard"],
+  "search": { "prompt": "Search docs..." },
+  "seo": {
+    "metatags": { "author": "My Company" }
+  },
+  "assistant": { "enabled": true, "display": "floating", "supportEmail": "support@example.com" },
+  "layout": {
+    "mode": "compact",
+    "maxWidth": 1200,
+    "sidebarWidth": 230,
+    "columnGap": 60,
+    "radius": 10
+  }
+}
+```
+
+## Schema autocomplete
+
+Point your editor at the JSON Schema for autocomplete and validation:
+
+```json
+{
+  "$schema": "https://holocron.so/docs.json"
+}
+```
+
+The schema is generated from the Zod definitions in `vite/src/schema.ts`.
+
+## Default page mode
+
+Set **`layout.mode`** to choose the default layout for every page:
+
+```json
+{
+  "layout": {
+    "mode": "compact"
+  }
+}
+```
+
+`compact` keeps the left navigation and removes the right aside. Holocron then defaults **`assistant.display`** to **`floating`** so Ask AI stays available as a bottom pill. Set `display` to `sidebar` to opt out. A page can override the layout with its frontmatter `mode` field. Compact never opens a right rail on authored docs pages. Every page in an MCP or OpenAPI tab uses `mode: "default"`, including authored pages in that tab.
+
+## Passthrough behavior
+
+Holocron's schema accepts unknown fields. Any Mintlify-specific fields that Holocron does not consume, like `api.playground`, are accepted without errors and silently ignored. This means you can use a Mintlify `docs.json` without stripping unknown fields.
+
+## Config normalization
+
+Holocron normalizes shorthand forms into a consistent internal shape:
+
+- **`logo`**: `"/logo.svg"` becomes `{ light: "/logo.svg" }` and is rendered for both modes unless `dark` is provided
+- **`favicon`**: `"/favicon.svg"` becomes `{ light: "/favicon.svg", dark: "/favicon.svg" }`
+- **`navigation`**: a flat array of groups is wrapped in a default tab
+- **`colors`**: missing light or dark values fall back from `primary` when styles are generated
+- **`products`**: normalized into `dropdowns` at config time
+
+## Broken link detection
+
+Holocron automatically checks all internal links in your MDX files during build and dev. If a link points to a page that does not exist in the navigation tree, a warning is printed:
+
+```
+▲ holocron broken link /quickstart:12 → /missing-page (no matching page found)
+```
+
+Links to **redirect sources** and **static files** (paths with file extensions like `.json`, `.pdf`) are not flagged.
+
+### Known paths
+
+When mounting docs alongside other routes (API endpoints, dashboards, external apps), use `knownPaths` to suppress warnings for paths that exist outside of Holocron:
+
+```json
+{
+  "knownPaths": ["/api/*", "/dashboard", "/blog/*"]
+}
+```
+
+Supports **exact paths** (`"/dashboard"`) and **prefix patterns** with trailing wildcards (`"/api/*"`).

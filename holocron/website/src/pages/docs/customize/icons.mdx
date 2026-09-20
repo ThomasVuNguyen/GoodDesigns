@@ -1,0 +1,219 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the icons guide from @/vite/src/lib/resolve-icons.ts and @/vite/src/lib/collect-icons.ts.
+  Cover lucide, fontawesome, prefixed icon names, and local SVG file icons.
+title: Icons
+description: Configure the icon library for your docs site.
+icon: shapes
+---
+
+# Icons
+
+Icons appear in the sidebar (next to pages and groups), in components like Cards, and in the navbar.
+
+## Setting the icon library
+
+```json
+{
+  "icons": { "library": "lucide" }
+}
+```
+
+Supported libraries:
+
+| Library       | Description                     |
+| ------------- | ------------------------------- |
+| `fontawesome` | Font Awesome free set (default) |
+| `lucide`      | Clean, consistent icons         |
+
+## Prefixed icon names
+
+Use **prefixed icon names** so the source library is explicit. This also lets you mix icons
+from different libraries in the same project:
+
+```jsonc
+// Lucide icons (recommended)
+"icon": "lucide:rocket"
+"icon": "lucide:shield"
+
+// Font Awesome icons
+"icon": "fontawesome:brands:github"
+"icon": "fontawesome:solid:compass"
+
+// Plain names resolve against the configured library
+"icon": "rocket"  // resolves to lucide:rocket if "icons.library": "lucide"
+```
+
+## Using icons in frontmatter
+
+Set an icon on any page via frontmatter:
+
+```mdx
+---
+$schema: https://holocron.so/frontmatter.json
+title: Authentication
+icon: lucide:lock
+---
+```
+
+The icon name is resolved against the configured library if no prefix is given.
+
+## Local SVG files
+
+Put an **SVG** in `public/` and set `icon` on the **page** to a root-absolute path (`/icons/vercel.svg`). Holocron looks in `public/`, then the project root. Relative paths like `./icons/vercel.svg` resolve from those same directories, not from the MDX file. A `../` path is rejected and fails the production build. Holocron inlines the SVG into the same atlas as Lucide, so it inherits **`currentColor`** and sidebar size. A missing file also fails the production build.
+
+```
+public/
+  icons/
+    vercel.svg
+```
+
+```mdx
+---
+$schema: https://holocron.so/frontmatter.json
+title: Vercel deployments
+sidebarTitle: Vercel
+icon: /icons/vercel.svg
+---
+
+Connect Vercel and check the latest production deploy.
+```
+
+<Card title='Vercel' icon='/icons/vercel.svg'>
+`icon: /icons/vercel.svg`
+</Card>
+
+The SVG should use **`currentColor`** for `fill` and `stroke`. Remote `https://` icons still render as images.
+
+You can also set a local SVG on a **group** in `docs.json`:
+
+```json
+{
+  "group": "Integrations",
+  "icon": "/icons/slack.svg",
+  "pages": ["integrations/slack"]
+}
+```
+
+## Using icons in navigation
+
+Groups and anchors accept an `icon` field:
+
+```json
+{
+  "group": "Security",
+  "icon": "lucide:shield",
+  "pages": ["security/overview"]
+}
+```
+
+## Icon object form
+
+For more control, use the object form to specify a library or style per icon. Font Awesome currently resolves the `solid`, `regular`, and `brands` styles:
+
+```json
+{
+  "icon": {
+    "name": "github",
+    "library": "fontawesome",
+    "style": "brands"
+  }
+}
+```
+
+## Finding icon names
+
+To browse all available icon names, fetch the schema JSONs:
+
+```bash
+# All lucide icon names
+curl -s https://holocron.so/schemas/lucide-icons.json | jq '.enum[:10]'
+
+# All fontawesome icon names
+curl -s https://holocron.so/schemas/fontawesome-icons.json | jq '.enum[:10]'
+```
+
+## Icon colors
+
+Add `iconColor` to give icons a distinct color. This works everywhere icons are supported: page frontmatter, groups, tabs, anchors, navbar links, and dropdowns.
+
+**Named colors** use the built-in editorial palette, which adapts to light and dark mode automatically:
+
+| Color    | Example                 |
+| -------- | ----------------------- |
+| `green`  | `"iconColor": "green"`  |
+| `blue`   | `"iconColor": "blue"`   |
+| `red`    | `"iconColor": "red"`    |
+| `purple` | `"iconColor": "purple"` |
+| `orange` | `"iconColor": "orange"` |
+| `yellow` | `"iconColor": "yellow"` |
+| `pink`   | `"iconColor": "pink"`   |
+
+You can also pass any **CSS color string** directly (hex, rgb, hsl):
+
+```json
+{ "iconColor": "#e11d48" }
+```
+
+### In frontmatter
+
+```mdx
+---
+$schema: https://holocron.so/frontmatter.json
+title: Authentication
+icon: lock
+iconColor: green
+---
+```
+
+### In docs.json
+
+Works on groups, tabs, anchors, navbar links, and dropdowns:
+
+```json
+{
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "API Reference",
+        "icon": "code",
+        "iconColor": "blue",
+        "groups": [...]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Discord",
+          "href": "https://discord.gg/example",
+          "icon": "message-circle",
+          "iconColor": "purple"
+        }
+      ]
+    }
+  }
+}
+```
+
+### Desaturation
+
+Sidebar page icons with a color are **desaturated 30%** by default. They go to full saturation when the page is **active** or on **hover**. This keeps the sidebar visually clean while still showing color.
+
+## Icon consistency
+
+When adding icons, apply them **consistently across all siblings** at the same level. Inconsistent
+icon usage looks unfinished and breaks visual rhythm.
+
+- **Tabs**: if one tab has an icon, every tab must have an icon.
+- **Groups**: if one sidebar group has an icon, every sibling group in the same tab should too.
+- **Anchors**: if one anchor has an icon, all anchors must.
+- **Pages**: if one page in a group has a frontmatter `icon`, all pages in that group should.
+- **Cards**: if one `<Card>` in a `<CardGroup>` has an `icon` prop, every card in that group must.
+
+If a group has an icon, avoid using the **same icon** on the first page in that group. It looks
+like a duplicate in the navigation tree.
+
+## Build-time atlas
+
+Holocron collects all referenced icon names at build time and generates an atlas. Only the icons you actually use are included in the client bundle.

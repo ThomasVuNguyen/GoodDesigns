@@ -1,0 +1,25 @@
+{
+  "name": "MDX Imports Test",
+  "icons": { "library": "lucide" },
+  "knownPaths": [
+    "/docs/deploy/holocron",
+    "/docs/deploy/cloudflare",
+    "/docs/quickstart",
+    "/docs/organize/navigation",
+    "/docs/customize/theme",
+    "/docs/api-docs/openapi",
+    "/docs/components",
+    "/docs/deploy/node"
+  ],
+  "navigation": {
+    "groups": [
+      {
+        "group": "Guides",
+        "pages": [
+          "index",
+          "guides/relative-imports"
+        ]
+      }
+    ]
+  }
+}

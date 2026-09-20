@@ -1,0 +1,22 @@
+{
+  "name": "Chat Test Docs",
+  "colors": {
+    "primary": "#0969da"
+  },
+  "assistant": {
+    "enabled": true,
+    "suggestions": [
+      "What is Chat Test Docs?",
+      "Show me the getting started guide",
+      "Search the docs for ..."
+    ]
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Guides",
+        "pages": ["index", "getting-started", "approval"]
+      }
+    ]
+  }
+}

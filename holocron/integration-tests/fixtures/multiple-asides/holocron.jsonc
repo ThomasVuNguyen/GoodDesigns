@@ -1,0 +1,16 @@
+// Fixture for verifying how multiple Aside elements behave in one section.
+{
+  "name": "Multiple Asides Fixture",
+  "icons": { "library": "lucide" },
+  "colors": {
+    "primary": "#0969da"
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Guides",
+        "pages": ["index", "toc-panel", "sidebar-toc-false"]
+      }
+    ]
+  }
+}

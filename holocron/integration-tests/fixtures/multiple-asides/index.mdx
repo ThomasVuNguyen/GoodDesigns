@@ -1,0 +1,61 @@
+---
+title: Multiple Asides
+description: Verifies how repeated Aside blocks render inside one section.
+gridGap: 32
+---
+
+{/* Fixture page for debugging how multiple Aside elements render in one section. */}
+
+Intro content before the repeated aside section.
+
+```ts
+import { createPiBrowserTools } from "libretto-browser-tools/pi";
+```
+
+<Aside>
+
+<Note>
+The assistant and this note share the first-section aside stack.
+</Note>
+
+</Aside>
+
+## Combined Aside Section
+
+Main section content for the repeated aside test.
+
+<Aside>
+<Callout>
+First aside block
+</Callout>
+</Aside>
+
+<Aside>
+<Callout type="tip">
+Second aside block
+</Callout>
+</Aside>
+
+## API Examples Section
+
+Main section content for request and response examples.
+
+<RequestExample>
+
+```bash Request
+curl https://example.com/api
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{ "status": "ok" }
+```
+
+</ResponseExample>
+
+## After
+
+Trailing content after the repeated aside section.

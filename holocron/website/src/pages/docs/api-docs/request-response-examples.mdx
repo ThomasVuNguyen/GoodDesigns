@@ -1,0 +1,57 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the request and response examples guide from @/vite/src/components/markdown/code-card.tsx and @/vite/src/lib/remark-sidebar-components.ts.
+title: Request and Response Examples
+description: How request and response schemas are displayed on API pages.
+icon: arrow-left-right
+---
+
+# Request and Response Examples
+
+Generated OpenAPI pages render request and response information based on your spec's schemas.
+
+## Request parameters
+
+Query parameters, path parameters, and headers are listed with their type, description, and required/optional status.
+
+## Request body
+
+If an operation has a `requestBody`, Holocron renders the schema as a structured field list. JSON Schema properties become rows with name, type, and description.
+
+## Response schemas
+
+Each response status code (200, 201, 400, etc.) is rendered with its schema. Multiple response codes are shown in separate sections.
+
+## Examples in the spec
+
+Holocron renders a generated **cURL** request in the right-side aside, plus:
+
+- **`x-codeSamples`** on the operation (SDK / CLI snippets) as extra Request example tabs. See [SDK examples](./sdk-examples.mdx).
+- Named request-body and response **`example` / `examples`** as JSON tabs.
+
+Schema and parameter examples are still useful context in the field list, but they are not separate aside code blocks.
+
+```yaml
+paths:
+  /users:
+    get:
+      responses:
+        '200':
+          description: List of users
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+              example:
+                - id: 1
+                  name: Alice
+                - id: 2
+                  name: Bob
+```
+
+## Two-column layout
+
+On desktop, the request/response examples appear in the right aside column next to the parameter descriptions. On mobile, they stack below the parameters.

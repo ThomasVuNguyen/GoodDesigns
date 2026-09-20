@@ -1,0 +1,174 @@
+{
+  "$schema": "https://holocron.so/docs.json?sdfsd",
+  "name": "Playwriter",
+
+  "logo": "/playwriter-logo.svg",
+  "favicon": "/favicon-32.png",
+  "colors": {
+    "primary": "#3e9fff"
+  },
+  "icons": {
+    "library": "lucide"
+  },
+  "sidebar": {
+    "animate": true
+  },
+  "navbar": {
+    "links": [
+      { "type": "github", "href": "https://github.com/remorses/playwriter" },
+      { "label": "Blog", "icon": "rss", "iconColor": "orange", "href": "https://example.com/blog" }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Get Started",
+      "href": "/introduction"
+    }
+  },
+  "navigation": {
+    "versions": [
+      {
+        "version": "v2",
+        "default": true,
+        "tag": "Latest",
+        "tabs": [
+          {
+            "tab": "Documentation",
+            "groups": [
+              {
+                "group": "Overview",
+                "icon": "fontawesome:solid:compass",
+                "pages": ["index", "landing"]
+              },
+              {
+                "group": "Getting Started",
+                "icon": "rocket",
+                "pages": ["introduction", "quickstart"]
+              },
+              {
+                "group": "Guides",
+                "icon": "map",
+                "root": "navigation",
+                "pages": [
+                  {
+                    "group": "Authoring",
+                    "root": "theming",
+                    "pages": ["search", "selectors", "snapshots"]
+                  },
+                  "sessions",
+                  "network",
+                  "screenshots",
+                  "images",
+                  "collaboration",
+                  {
+                    "group": "Automation",
+                    "pages": ["debugging", "ci-integration"]
+                  }
+                ]
+              },
+              {
+                "group": "Reference",
+                "icon": "book",
+                "pages": ["configuration", "frontmatter", "deployment", "custom-virtual-modules"]
+              }
+            ]
+          },
+          {
+            "tab": "API Reference",
+            "icon": "code",
+            "iconColor": "blue",
+            "openapi": "api.yaml",
+            "pages": ["api-authentication", "..."]
+          },
+          {
+            "tab": "Blog",
+            "icon": "rss",
+            "iconColor": "orange",
+            "groups": [
+              {
+                "group": "Posts",
+                "pages": ["blog/launching-playwriter"]
+              }
+            ]
+          },
+          {
+            "tab": "MCP",
+            "icon": "cpu",
+            "mcp": "mcp-tools.json"
+          },
+          {
+            "tab": "Changelog",
+            "icon": "newspaper",
+            "iconColor": "green",
+            "changelog": "https://github.com/remorses/playwriter"
+          },
+          {
+            "tab": "Guides",
+            "icon": "book-open",
+            "provider": "./providers/mock-guides.ts",
+            "base": "guides"
+          },
+          {
+            "tab": "Moodboard",
+            "icon": "images",
+            "iconColor": "purple",
+            "imageboard": "./public/images",
+            "base": "moodboard",
+            "columns": 3
+          }
+        ]
+      },
+      {
+        "version": "v1",
+        "tag": "Legacy",
+        "groups": [
+          {
+            "group": "Overview",
+            "pages": ["v1/overview"]
+          },
+          {
+            "group": "Getting Started",
+            "pages": ["v1/getting-started"]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        { "anchor": "GitHub", "href": "https://github.com/remorses/playwriter", "icon": "github", "iconColor": "green", "placement": "sidebar" },
+        { "anchor": "Discord", "href": "https://discord.gg/example", "icon": "message-circle", "iconColor": "purple", "placement": "sidebar" },
+        { "anchor": "npm", "href": "https://www.npmjs.com/package/playwriter", "icon": "package", "iconColor": "red", "placement": "tabs" }
+      ]
+    }
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/remorses/playwriter",
+      "x": "https://x.com/__morse"
+    },
+    "links": [
+      {
+        "header": "Product",
+        "items": [
+          { "label": "Features", "href": "https://example.com/features" },
+          { "label": "Pricing", "href": "https://example.com/pricing" },
+          { "label": "Docs", "href": "https://example.com/docs" }
+        ]
+      },
+      {
+        "header": "Legal",
+        "items": [
+          { "label": "Terms", "href": "https://example.com/terms" },
+          { "label": "Privacy", "href": "https://example.com/privacy" }
+        ]
+      },
+      {
+        "header": "Company",
+        "items": [
+          { "label": "About", "href": "https://example.com/about" },
+          { "label": "Blog", "href": "https://example.com/blog" },
+          { "label": "Careers", "href": "https://example.com/careers" }
+        ]
+      }
+    ]
+  }
+}

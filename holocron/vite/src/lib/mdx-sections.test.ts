@@ -1,0 +1,1538 @@
+import { describe, expect, test } from 'vitest'
+
+import type { Root } from 'mdast'
+import { mdxParse } from 'safe-mdx/parse'
+import remarkFrontmatter from 'remark-frontmatter'
+import remarkGfm from 'remark-gfm'
+import remarkMdx from 'remark-mdx'
+import { remark } from 'remark'
+import {
+  buildSections,
+  demoteBodyH1s,
+  isAsideNode,
+  resolveCompactLayout,
+  shouldInjectPageTitle,
+  unwrapAsides,
+} from './mdx-sections.ts'
+import { remarkInlineImports, type InlineImportEntry } from './remark-inline-imports.ts'
+import { formatSectionsToMdx } from './test-mdx-util.ts'
+
+function parseAndBuild(mdx: string, options?: Parameters<typeof buildSections>[1]) {
+  const root: Root = mdxParse(mdx)
+  return buildSections(root, options)
+}
+
+function parseInlineAndBuild(pageMdx: string, imports: Map<string, InlineImportEntry>) {
+  const processor = remark()
+    .use(remarkMdx)
+    .use(remarkFrontmatter, ['yaml'])
+    .use(remarkGfm)
+    .use(remarkInlineImports, { resolvedImports: imports })
+  const parsed = processor.parse(pageMdx)
+  const transformed = processor.runSync(parsed) as Root
+  return buildSections(transformed)
+}
+
+describe('compact asides', () => {
+  test('unwrapAsides moves callouts into the main flow', () => {
+    const root = mdxParse(`Intro
+
+<Aside>
+<Warning>
+Personal use only.
+</Warning>
+</Aside>
+`)
+    expect(formatSectionsToMdx(buildSections(
+      { type: 'root', children: unwrapAsides(root.children) },
+      { includePageChrome: false },
+    ))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      Intro
+
+      <Warning>
+        Personal use only.
+      </Warning>"
+    `)
+  })
+
+  test('unwrapAsides moves RequestExample asides into the main flow', () => {
+    const root = mdxParse(`Intro
+
+<Aside>
+<RequestExample>
+\`\`\`bash
+curl
+\`\`\`
+</RequestExample>
+</Aside>
+`)
+    expect(formatSectionsToMdx(buildSections(
+      { type: 'root', children: unwrapAsides(root.children) },
+      { includePageChrome: false },
+    ))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      Intro
+
+      <RequestExample>
+        \`\`\`bash
+        curl
+        \`\`\`
+      </RequestExample>"
+    `)
+  })
+
+  test('compact layout stays compact for callout asides and hides the assistant', () => {
+    const root = mdxParse(`Intro
+
+<Aside>
+<Warning>
+Personal use only.
+</Warning>
+</Aside>
+`)
+    const layout = resolveCompactLayout({
+      configuredPageMode: 'compact',
+      nodes: root.children,
+    })
+    expect(layout.pageMode).toBe('compact')
+    expect(layout.hideSidebarAssistant).toBe(true)
+    expect(layout.nodes.some(isAsideNode)).toBe(false)
+  })
+
+  test('compact layout stays compact for RequestExample asides', () => {
+    const root = mdxParse(`Intro
+
+<Aside>
+<RequestExample>
+\`\`\`bash
+curl
+\`\`\`
+</RequestExample>
+</Aside>
+`)
+    const layout = resolveCompactLayout({
+      configuredPageMode: 'compact',
+      nodes: root.children,
+    })
+    expect(layout.pageMode).toBe('compact')
+    expect(layout.hideSidebarAssistant).toBe(true)
+    expect(layout.nodes.some(isAsideNode)).toBe(false)
+  })
+})
+
+describe('buildSections', () => {
+  test('does not inject page chrome when the right aside is disabled', () => {
+    const mdx = `Intro
+
+## Section
+
+Body
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx, { includePageChrome: false }))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      Intro
+
+      --- SECTION 1 ---
+
+      [CONTENT]
+      ## Section
+
+      Body"
+    `)
+  })
+
+  test('skips HolocronAIAssistantWidget when assistant is disabled', () => {
+    const mdx = `Intro
+
+## Section
+
+Body
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx, { enableAssistant: false }))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      Intro
+
+      --- SECTION 1 ---
+      asideRowSpan: 2
+
+      [CONTENT]
+      ## Section
+
+      Body
+
+      [SHARED ASIDE]
+      <Aside full>
+        <HolocronPageNavRow />
+      </Aside>"
+    `)
+  })
+
+  test('splits on markdown headings', () => {
+    const mdx = `Intro
+
+## Section
+
+Body
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      Intro
+
+      --- SECTION 1 ---
+      asideRowSpan: 2
+
+      [CONTENT]
+      ## Section
+
+      Body
+
+      [SHARED ASIDE]
+      <Aside full>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+      </Aside>"
+    `)
+  })
+
+  test('splits on Heading components', () => {
+    const mdx = `Intro
+
+<Heading level="2">Section</Heading>
+
+Body
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      Intro
+
+      --- SECTION 1 ---
+      asideRowSpan: 2
+
+      [CONTENT]
+      <Heading level="2">
+        Section
+      </Heading>
+
+      Body
+
+      [SHARED ASIDE]
+      <Aside full>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+      </Aside>"
+    `)
+  })
+
+  test('splits on JSX native headings', () => {
+    const mdx = `Intro
+
+<h2>Section</h2>
+
+Body
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      Intro
+
+      --- SECTION 1 ---
+      asideRowSpan: 2
+
+      [CONTENT]
+      <h2>
+        Section
+      </h2>
+
+      Body
+
+      [SHARED ASIDE]
+      <Aside full>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+      </Aside>"
+    `)
+  })
+
+  test('adds the AI widget beside an authored first-section Aside', () => {
+    const mdx = `Intro
+
+<Aside>
+My aside
+</Aside>
+
+## Section
+
+Body
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      Intro
+
+      --- SECTION 1 ---
+      asideRowSpan: 2
+
+      [CONTENT]
+      ## Section
+
+      Body
+
+      [SHARED ASIDE]
+      <Aside full>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+
+        <Aside>
+          My aside
+        </Aside>
+      </Aside>"
+    `)
+  })
+
+  test('injects HolocronAIAssistantWidget and handles complex full aside', () => {
+    const mdx = `Intro text.
+
+<Aside full>
+This is a full aside.
+</Aside>
+
+## Part 1
+
+Part 1 content
+
+## Part 2
+
+Part 2 content
+
+<Aside full>
+Second full aside.
+</Aside>
+
+## Part 3
+
+Part 3 content
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      Intro text.
+
+      --- SECTION 1 ---
+
+      [CONTENT]
+      ## Part 1
+
+      Part 1 content
+
+      --- SECTION 2 ---
+      asideRowSpan: 2
+
+      [CONTENT]
+      ## Part 2
+
+      Part 2 content
+
+      [SHARED ASIDE]
+      <Aside full>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+
+        This is a full aside.
+      </Aside>
+
+      --- SECTION 3 ---
+      asideRowSpan: 1
+
+      [CONTENT]
+      ## Part 3
+
+      Part 3 content
+
+      [SHARED ASIDE]
+      <Aside full>
+        Second full aside.
+      </Aside>"
+    `)
+  })
+
+  test('groups multiple Aside nodes into the same section sidebar', () => {
+    const mdx = `Intro
+
+<Aside>
+Intro aside
+</Aside>
+
+## API Section
+
+Body
+
+<Aside>
+Request body
+</Aside>
+
+<Aside>
+Response body
+</Aside>
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      Intro
+
+      [ASIDE]
+      <Aside>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+      </Aside>
+
+      <Aside>
+        Intro aside
+      </Aside>
+
+      --- SECTION 1 ---
+
+      [CONTENT]
+      ## API Section
+
+      Body
+
+      [ASIDE]
+      <Aside>
+        Request body
+      </Aside>
+
+      <Aside>
+        Response body
+      </Aside>"
+    `)
+  })
+
+  test('keeps additional Aside nodes inside a shared full Aside range', () => {
+    const mdx = `Intro
+
+<Aside>
+Intro aside
+</Aside>
+
+<Aside full>
+Shared aside
+</Aside>
+
+## API A
+
+Body A
+
+<Aside>
+Request body
+</Aside>
+
+## API B
+
+Body B
+
+<Aside>
+Response body
+</Aside>
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      Intro
+
+      [ASIDE]
+      <Aside>
+        Intro aside
+      </Aside>
+
+      --- SECTION 1 ---
+
+      [CONTENT]
+      ## API A
+
+      Body A
+
+      --- SECTION 2 ---
+      asideRowSpan: 2
+
+      [CONTENT]
+      ## API B
+
+      Body B
+
+      [SHARED ASIDE]
+      <Aside full>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+
+        Shared aside
+      </Aside>
+
+      <Aside>
+        Request body
+      </Aside>
+
+      <Aside>
+        Response body
+      </Aside>"
+    `)
+  })
+
+  test('page starting with a heading keeps per-section asides scoped (pricing page repro)', () => {
+    // Heading-first page with an intro <Aside> + two per-section asides.
+    // Each aside must stay in its own section, not collapse into one shared sidebar.
+    const mdx = `# Pricing
+
+Holocron is free to start.
+
+<Aside>
+<Info>
+Subscriptions are per site.
+</Info>
+</Aside>
+
+## Plans
+
+Plans table.
+
+## What Pro unlocks
+
+### Preview deployments
+
+Every branch gets a preview URL.
+
+<Aside>
+<Tip>
+Preview deployments are automatic.
+</Tip>
+</Aside>
+
+## Subscribe
+
+Manage billing from the dashboard.
+
+<Aside>
+<Note>
+Billing runs on Stripe.
+</Note>
+</Aside>
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      # Pricing
+
+      Holocron is free to start.
+
+      [ASIDE]
+      <Aside>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+      </Aside>
+
+      <Aside>
+        <Info>
+          Subscriptions are per site.
+        </Info>
+      </Aside>
+
+      --- SECTION 1 ---
+
+      [CONTENT]
+      ## Plans
+
+      Plans table.
+
+      --- SECTION 2 ---
+
+      [CONTENT]
+      ## What Pro unlocks
+
+      --- SECTION 3 ---
+
+      [CONTENT]
+      ### Preview deployments
+
+      Every branch gets a preview URL.
+
+      [ASIDE]
+      <Aside>
+        <Tip>
+          Preview deployments are automatic.
+        </Tip>
+      </Aside>
+
+      --- SECTION 4 ---
+
+      [CONTENT]
+      ## Subscribe
+
+      Manage billing from the dashboard.
+
+      [ASIDE]
+      <Aside>
+        <Note>
+          Billing runs on Stripe.
+        </Note>
+      </Aside>"
+    `)
+  })
+
+  test('heading-first page with NO intro aside keeps per-section asides in their own sections', () => {
+    // First section has no authored aside, later sections do. Chrome stays a
+    // regular first-section aside, so later asides stay on their own rows.
+    const mdx = `# Pricing
+
+Holocron is free to start.
+
+## Plans
+
+<Aside>
+<Info>
+Subscriptions are per site.
+</Info>
+</Aside>
+
+Plans table.
+
+## What Pro unlocks
+
+### Preview deployments
+
+Every branch gets a preview URL.
+
+<Aside>
+<Tip>
+Preview deployments are automatic.
+</Tip>
+</Aside>
+
+## Subscribe
+
+Manage billing from the dashboard.
+
+<Aside>
+<Note>
+Billing runs on Stripe.
+</Note>
+</Aside>
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      # Pricing
+
+      Holocron is free to start.
+
+      [ASIDE]
+      <Aside>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+      </Aside>
+
+      --- SECTION 1 ---
+
+      [CONTENT]
+      ## Plans
+
+      Plans table.
+
+      [ASIDE]
+      <Aside>
+        <Info>
+          Subscriptions are per site.
+        </Info>
+      </Aside>
+
+      --- SECTION 2 ---
+
+      [CONTENT]
+      ## What Pro unlocks
+
+      --- SECTION 3 ---
+
+      [CONTENT]
+      ### Preview deployments
+
+      Every branch gets a preview URL.
+
+      [ASIDE]
+      <Aside>
+        <Tip>
+          Preview deployments are automatic.
+        </Tip>
+      </Aside>
+
+      --- SECTION 4 ---
+
+      [CONTENT]
+      ## Subscribe
+
+      Manage billing from the dashboard.
+
+      [ASIDE]
+      <Aside>
+        <Note>
+          Billing runs on Stripe.
+        </Note>
+      </Aside>"
+    `)
+  })
+
+  test('heading-only first section keeps later asides with their own sections', () => {
+    // h1 then h2 with no body between them. The AI stays with h1, and later
+    // asides remain in the sections that contain them.
+    const mdx = `# Quickstart
+
+## Install
+
+Install instructions.
+
+## Authenticate
+
+Auth instructions.
+
+<Aside>
+<Info>
+Run \`egaki login --show\` to see providers.
+</Info>
+</Aside>
+
+## Generate
+
+Generate instructions.
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      # Quickstart
+
+      [ASIDE]
+      <Aside>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+      </Aside>
+
+      --- SECTION 1 ---
+
+      [CONTENT]
+      ## Install
+
+      Install instructions.
+
+      --- SECTION 2 ---
+
+      [CONTENT]
+      ## Authenticate
+
+      Auth instructions.
+
+      [ASIDE]
+      <Aside>
+        <Info>
+          Run \`egaki login --show\` to see providers.
+        </Info>
+      </Aside>
+
+      --- SECTION 3 ---
+
+      [CONTENT]
+      ## Generate
+
+      Generate instructions."
+    `)
+  })
+
+  test('heading-only first section still spans the AI widget across the page', () => {
+    const mdx = `# Quickstart
+
+## Install
+
+Install instructions.
+
+## Generate
+
+Generate instructions.
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      # Quickstart
+
+      --- SECTION 1 ---
+
+      [CONTENT]
+      ## Install
+
+      Install instructions.
+
+      --- SECTION 2 ---
+      asideRowSpan: 3
+
+      [CONTENT]
+      ## Generate
+
+      Generate instructions.
+
+      [SHARED ASIDE]
+      <Aside full>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+      </Aside>"
+    `)
+  })
+
+  test('intro content + sub-headings spans the AI widget across the page', () => {
+    // Regression test: pages like debugging-workflows.mdx that have intro
+    // content (blockquote + paragraph) followed by ### sub-headings but no
+    // authored <Aside>. Chrome becomes <Aside full> so the AI widget stays
+    // at the top of the sidebar across every section.
+    const mdx = `> Reproduce failures and fix broken automations.
+
+There are two common debugging scenarios.
+
+### Remote debugging
+
+When a workflow fails remotely, connect directly.
+
+### Local debugging
+
+Reproduce from error logs locally.
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      > Reproduce failures and fix broken automations.
+
+      There are two common debugging scenarios.
+
+      --- SECTION 1 ---
+
+      [CONTENT]
+      ### Remote debugging
+
+      When a workflow fails remotely, connect directly.
+
+      --- SECTION 2 ---
+      asideRowSpan: 3
+
+      [CONTENT]
+      ### Local debugging
+
+      Reproduce from error logs locally.
+
+      [SHARED ASIDE]
+      <Aside full>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+      </Aside>"
+    `)
+  })
+
+  test('intro with no first-section aside keeps later asides next to their headings', () => {
+    // Traforo homepage shape: intro paragraphs, then ## sections each with
+    // their own <Aside>. Ask AI stays with the intro; later asides stay on
+    // their own section rows instead of merging into it.
+    const mdx = `HTTP tunnel via Cloudflare Durable Objects.
+
+## Usage
+
+Expose a local server.
+
+<Aside>
+<Tip>
+When you pass a command after \`--\`, traforo auto-detects the port.
+</Tip>
+</Aside>
+
+## Auto Port Detection
+
+Detects the local port from process output.
+
+<Aside>
+<Note>
+If you also pass \`-p\`, traforo uses that explicit port.
+</Note>
+</Aside>
+
+## Edge Caching
+
+Responses can be cached at the Cloudflare edge.
+
+<Aside>
+<Info>
+The \`X-Traforo-Cache\` response header shows HIT, MISS, or BYPASS.
+</Info>
+</Aside>
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      HTTP tunnel via Cloudflare Durable Objects.
+
+      [ASIDE]
+      <Aside>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+      </Aside>
+
+      --- SECTION 1 ---
+
+      [CONTENT]
+      ## Usage
+
+      Expose a local server.
+
+      [ASIDE]
+      <Aside>
+        <Tip>
+          When you pass a command after \`--\`, traforo auto-detects the port.
+        </Tip>
+      </Aside>
+
+      --- SECTION 2 ---
+
+      [CONTENT]
+      ## Auto Port Detection
+
+      Detects the local port from process output.
+
+      [ASIDE]
+      <Aside>
+        <Note>
+          If you also pass \`-p\`, traforo uses that explicit port.
+        </Note>
+      </Aside>
+
+      --- SECTION 3 ---
+
+      [CONTENT]
+      ## Edge Caching
+
+      Responses can be cached at the Cloudflare edge.
+
+      [ASIDE]
+      <Aside>
+        <Info>
+          The \`X-Traforo-Cache\` response header shows HIT, MISS, or BYPASS.
+        </Info>
+      </Aside>"
+    `)
+  })
+
+  test('asides inside an imported markdown file stay with their own sections', () => {
+    // index.mdx that only renders <Readme />. After inlining, headings from
+    // the imported file must still own the asides that sit under them.
+    const imports = new Map<string, InlineImportEntry>([
+      ['../../README.md', {
+        content: `HTTP tunnel via Cloudflare Durable Objects.
+
+## Usage
+
+Expose a local server.
+
+<Aside>
+<Tip>
+When you pass a command after \`--\`, traforo auto-detects the port.
+</Tip>
+</Aside>
+
+## Auto Port Detection
+
+Detects the local port from process output.
+
+<Aside>
+<Note>
+If you also pass \`-p\`, traforo uses that explicit port.
+</Note>
+</Aside>
+
+## Edge Caching
+
+Responses can be cached at the Cloudflare edge.
+
+<Aside>
+<Info>
+The \`X-Traforo-Cache\` response header shows HIT, MISS, or BYPASS.
+</Info>
+</Aside>
+`,
+        absPath: '/project/README.md',
+        relativeDir: '../../',
+      }],
+    ])
+
+    const pageMdx = `---
+title: Traforo
+---
+
+import Readme from '../../README.md'
+
+<Readme />
+`
+    expect(formatSectionsToMdx(parseInlineAndBuild(pageMdx, imports))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      HTTP tunnel via Cloudflare Durable Objects.
+
+      [ASIDE]
+      <Aside>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+      </Aside>
+
+      --- SECTION 1 ---
+
+      [CONTENT]
+      ## Usage
+
+      Expose a local server.
+
+      [ASIDE]
+      <Aside>
+        <Tip>
+          When you pass a command after \`--\`, traforo auto-detects the port.
+        </Tip>
+      </Aside>
+
+      --- SECTION 2 ---
+
+      [CONTENT]
+      ## Auto Port Detection
+
+      Detects the local port from process output.
+
+      [ASIDE]
+      <Aside>
+        <Note>
+          If you also pass \`-p\`, traforo uses that explicit port.
+        </Note>
+      </Aside>
+
+      --- SECTION 3 ---
+
+      [CONTENT]
+      ## Edge Caching
+
+      Responses can be cached at the Cloudflare edge.
+
+      [ASIDE]
+      <Aside>
+        <Info>
+          The \`X-Traforo-Cache\` response header shows HIT, MISS, or BYPASS.
+        </Info>
+      </Aside>"
+    `)
+  })
+
+  test('a later authored full aside keeps its range separate from the AI aside', () => {
+    const mdx = `Intro
+
+## Part one
+
+Body one.
+
+<Aside full>
+<Note>
+Shared note.
+</Note>
+</Aside>
+
+## Part two
+
+Body two.
+
+<Aside>
+<Tip>
+Collected tip.
+</Tip>
+</Aside>
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      Intro
+
+      [ASIDE]
+      <Aside>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+      </Aside>
+
+      --- SECTION 1 ---
+
+      [CONTENT]
+      ## Part one
+
+      Body one.
+
+      --- SECTION 2 ---
+      asideRowSpan: 1
+
+      [CONTENT]
+      ## Part two
+
+      Body two.
+
+      [SHARED ASIDE]
+      <Aside full>
+        <Note>
+          Shared note.
+        </Note>
+      </Aside>
+
+      <Aside>
+        <Tip>
+          Collected tip.
+        </Tip>
+      </Aside>"
+    `)
+  })
+
+  test('handles FullWidth nodes', () => {
+    const mdx = `<FullWidth>
+This should be full width.
+</FullWidth>
+
+## Following Section
+
+Content
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+      fullWidth: true
+
+      [CONTENT]
+      This should be full width.
+
+      --- SECTION 1 ---
+      asideRowSpan: 1
+
+      [CONTENT]
+      ## Following Section
+
+      Content
+
+      [SHARED ASIDE]
+      <Aside full>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+      </Aside>"
+    `)
+  })
+
+  test('places the full AI aside after a leading FullWidth block', () => {
+    const mdx = `<FullWidth>
+Hero
+</FullWidth>
+
+Intro
+
+## Section
+
+Body
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+      fullWidth: true
+
+      [CONTENT]
+      Hero
+
+      --- SECTION 1 ---
+
+      [CONTENT]
+      Intro
+
+      --- SECTION 2 ---
+      asideRowSpan: 2
+
+      [CONTENT]
+      ## Section
+
+      Body
+
+      [SHARED ASIDE]
+      <Aside full>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+      </Aside>"
+    `)
+  })
+
+  test('leading FullWidth still spans intro-only asides', () => {
+    const mdx = `<FullWidth>
+Hero
+</FullWidth>
+
+Intro
+
+<Aside>
+<Tip>
+Only intro
+</Tip>
+</Aside>
+
+## Later
+
+Body
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+      fullWidth: true
+
+      [CONTENT]
+      Hero
+
+      --- SECTION 1 ---
+
+      [CONTENT]
+      Intro
+
+      --- SECTION 2 ---
+      asideRowSpan: 2
+
+      [CONTENT]
+      ## Later
+
+      Body
+
+      [SHARED ASIDE]
+      <Aside full>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+
+        <Aside>
+          <Tip>
+            Only intro
+          </Tip>
+        </Aside>
+      </Aside>"
+    `)
+  })
+
+  test('intro-only asides still span the AI widget across the page', () => {
+    // Collabute-style pages: one <Aside> in the intro, later headings with
+    // no asides. Chrome must still be <Aside full> so Ask AI and the intro
+    // callout stay sticky for the whole page, not only the first section.
+    const mdx = `These docs are for users who need to install Collabute.
+
+<Aside>
+<Tip>
+Start with Installation, then Getting Started.
+</Tip>
+</Aside>
+
+## Documentation map
+
+Cards.
+
+## Access model
+
+Roles.
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      These docs are for users who need to install Collabute.
+
+      --- SECTION 1 ---
+
+      [CONTENT]
+      ## Documentation map
+
+      Cards.
+
+      --- SECTION 2 ---
+      asideRowSpan: 3
+
+      [CONTENT]
+      ## Access model
+
+      Roles.
+
+      [SHARED ASIDE]
+      <Aside full>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+
+        <Aside>
+          <Tip>
+            Start with Installation, then Getting Started.
+          </Tip>
+        </Aside>
+      </Aside>"
+    `)
+  })
+
+  test('creates a full aside for the AI widget when the page has no asides', () => {
+    const mdx = `Intro
+
+## Section
+
+Body
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      Intro
+
+      --- SECTION 1 ---
+      asideRowSpan: 2
+
+      [CONTENT]
+      ## Section
+
+      Body
+
+      [SHARED ASIDE]
+      <Aside full>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+      </Aside>"
+    `)
+  })
+
+  test('merges the AI widget into the only authored full aside', () => {
+    const mdx = `Intro
+
+## Section
+
+Body
+
+<Aside full>
+<Note>
+Shared note.
+</Note>
+</Aside>
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      Intro
+
+      --- SECTION 1 ---
+      asideRowSpan: 2
+
+      [CONTENT]
+      ## Section
+
+      Body
+
+      [SHARED ASIDE]
+      <Aside full>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+
+        <Note>
+          Shared note.
+        </Note>
+      </Aside>"
+    `)
+  })
+
+  test('merges the AI widget into a first-section full aside when it is the only aside', () => {
+    const mdx = `Intro
+
+<Aside full>
+<Note>
+Page note.
+</Note>
+</Aside>
+
+## Section
+
+Body
+`
+    expect(formatSectionsToMdx(parseAndBuild(mdx))).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      Intro
+
+      --- SECTION 1 ---
+      asideRowSpan: 2
+
+      [CONTENT]
+      ## Section
+
+      Body
+
+      [SHARED ASIDE]
+      <Aside full>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+
+        <Note>
+          Page note.
+        </Note>
+      </Aside>"
+    `)
+  })
+
+  test('AI widget behaves like a regular first-section aside', () => {
+    const mdx = `Intro
+
+## Usage
+
+Body
+
+<Aside>
+<Tip>
+Tip
+</Tip>
+</Aside>
+`
+    const sections = parseAndBuild(mdx)
+    expect(formatSectionsToMdx(sections)).toMatchInlineSnapshot(`
+      "--- SECTION 0 ---
+
+      [CONTENT]
+      Intro
+
+      [ASIDE]
+      <Aside>
+        <HolocronAIAssistantWidget />
+
+        <HolocronPageNavRow />
+      </Aside>
+
+      --- SECTION 1 ---
+
+      [CONTENT]
+      ## Usage
+
+      Body
+
+      [ASIDE]
+      <Aside>
+        <Tip>
+          Tip
+        </Tip>
+      </Aside>"
+    `)
+  })
+})
+
+describe('shouldInjectPageTitle', () => {
+  test('skips the injected title when the page has Above', () => {
+    const root = mdxParse(`<Above>
+
+Hero
+
+</Above>
+
+## Quick Start
+`)
+    expect(shouldInjectPageTitle({
+      nodes: root.children,
+      hideTitle: false,
+      pageTitle: 'Kimaki: AI coding agents from Discord',
+    })).toBe(false)
+  })
+
+  test('skips the injected title when hideTitle is true', () => {
+    const root = mdxParse('## Quick Start')
+    expect(shouldInjectPageTitle({
+      nodes: root.children,
+      hideTitle: true,
+      pageTitle: 'Kimaki',
+    })).toBe(false)
+  })
+
+  test('injects the title when there is no Above and the body does not start with a heading', () => {
+    const root = mdxParse('Intro paragraph.\n\n## Usage')
+    expect(shouldInjectPageTitle({
+      nodes: root.children,
+      hideTitle: false,
+      pageTitle: 'Kimaki',
+    })).toBe(true)
+  })
+
+  test('injects the title when the body starts with a markdown heading', () => {
+    const root = mdxParse('## Relay server logs\n\nBody')
+    expect(shouldInjectPageTitle({
+      nodes: root.children,
+      hideTitle: false,
+      pageTitle: 'Troubleshooting',
+    })).toBe(true)
+  })
+})
+
+describe('demoteBodyH1s', () => {
+  test('keeps the first H1 and demotes later markdown H1s to H2', () => {
+    const root = mdxParse(`# Brand
+
+# Quick Start
+`)
+    demoteBodyH1s(root.children)
+    const depths = root.children
+      .filter((node) => node.type === 'heading')
+      .map((node) => node.type === 'heading' ? node.depth : null)
+    expect(depths).toEqual([1, 2])
+  })
+
+  test('does not count H1s inside Above as extra body H1s', () => {
+    const root = mdxParse(`<Above>
+
+<h1>Brand</h1>
+
+</Above>
+
+# Quick Start
+`)
+    demoteBodyH1s(root.children)
+    const bodyHeading = root.children.find((node) => node.type === 'heading')
+    expect(bodyHeading && bodyHeading.type === 'heading' ? bodyHeading.depth : null).toBe(2)
+  })
+})

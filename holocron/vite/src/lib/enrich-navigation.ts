@@ -1,0 +1,174 @@
+/**
+ * Shared navigation-tree enrichment for build-time and runtime Holocron paths.
+ *
+ * The caller supplies page-level enrichment; this module owns the common tree
+ * walking for tabs, groups, versions, dropdowns, and icon serialization.
+ */
+
+import type {
+  HolocronConfig,
+  ConfigNavPageEntry,
+  ConfigNavGroup,
+  ConfigNavTab,
+  ConfigVersionItem,
+  ConfigDropdownItem,
+} from '../config.ts'
+import {
+  type Navigation,
+  type NavPage,
+  type NavPageEntry,
+  type NavGroup,
+  type NavTab,
+  type NavVersionItem,
+  type NavDropdownItem,
+  type NavIcon,
+  collectAllPageHrefs,
+  isNavPage,
+  slugToHref,
+} from '../navigation.ts'
+import { formatHolocronWarning, logger } from './logger.ts'
+
+const SUPPORTED_ICON_LIBRARIES = new Set(['lucide', 'fontawesome'])
+
+export type EnrichedNavigationData = {
+  navigation: Navigation
+  switchers: { versions: NavVersionItem[]; dropdowns: NavDropdownItem[] }
+}
+
+function serializeIcon({
+  icon,
+  defaultLibrary,
+  context,
+}: {
+  icon: ConfigNavGroup['icon']
+  defaultLibrary: HolocronConfig['icons']['library']
+  context?: string
+}): NavIcon | undefined {
+  if (!icon) return undefined
+  if (typeof icon === 'string') return icon
+  const library = icon.library ?? defaultLibrary
+  if (!SUPPORTED_ICON_LIBRARIES.has(library)) {
+    logger.warn(formatHolocronWarning(
+      `icon library "${library}" is not supported (supported: lucide, fontawesome). ` +
+      `Icon "${icon.name}"${context ? ` in ${context}` : ''} will be ignored.`,
+    ))
+    return undefined
+  }
+  return {
+    name: icon.name,
+    ...(icon.library !== undefined && { library: icon.library }),
+    ...(icon.style !== undefined && { style: icon.style }),
+  }
+}
+
+export async function buildEnrichedNavigation({
+  config,
+  enrichPage,
+}: {
+  config: HolocronConfig
+  enrichPage(slug: string): Promise<NavPage>
+}): Promise<EnrichedNavigationData> {
+  async function enrichPageEntry(entry: ConfigNavPageEntry): Promise<NavPageEntry> {
+    if (typeof entry === 'string') {
+      return enrichPage(entry)
+    }
+    return enrichGroup(entry)
+  }
+
+  async function enrichGroup(configGroup: ConfigNavGroup): Promise<NavGroup> {
+    const [rootPage, pages] = await Promise.all([
+      configGroup.root ? enrichPage(configGroup.root) : undefined,
+      Promise.all(configGroup.pages.map(enrichPageEntry)),
+    ])
+    return {
+      group: configGroup.group,
+      icon: serializeIcon({
+        icon: configGroup.icon,
+        defaultLibrary: config.icons.library,
+        context: `group "${configGroup.group}"`,
+      }),
+      iconColor: configGroup.iconColor,
+      hidden: configGroup.hidden,
+      root: configGroup.root ? slugToHref(configGroup.root) : undefined,
+      rootPage,
+      tag: configGroup.tag,
+      expanded: configGroup.expanded,
+      pages: rootPage
+        ? pages.filter((entry) => !isNavPage(entry) || entry.href !== rootPage.href)
+        : pages,
+    }
+  }
+
+  async function enrichTab(configTab: ConfigNavTab): Promise<NavTab> {
+    return {
+      tab: configTab.tab,
+      icon: serializeIcon({
+        icon: configTab.icon,
+        defaultLibrary: config.icons.library,
+        context: `tab "${configTab.tab}"`,
+      }),
+      iconColor: configTab.iconColor,
+      hidden: configTab.hidden,
+      align: configTab.align,
+      groups: await Promise.all(configTab.groups.map(enrichGroup)),
+      ...(configTab.openapi !== undefined && { openapi: configTab.openapi }),
+      ...(configTab.mcp !== undefined && { mcp: configTab.mcp }),
+    }
+  }
+
+  async function enrichVersionItem(version: ConfigVersionItem): Promise<NavVersionItem> {
+    const innerTabs = await Promise.all(version.navigation.tabs.map(enrichTab))
+    return {
+      version: version.version,
+      ...(version.lang !== undefined && { lang: version.lang }),
+      ...(version.default !== undefined && { default: version.default }),
+      ...(version.tag !== undefined && { tag: version.tag }),
+      ...(version.hidden !== undefined && { hidden: version.hidden }),
+      pageHrefs: collectAllPageHrefs(innerTabs),
+      navigation: { tabs: innerTabs, anchors: version.navigation.anchors },
+    }
+  }
+
+  async function enrichDropdownItem(dropdown: ConfigDropdownItem): Promise<NavDropdownItem> {
+    if (!dropdown.navigation) {
+      return {
+        dropdown: dropdown.dropdown,
+        ...(dropdown.icon !== undefined && {
+          icon: serializeIcon({
+            icon: dropdown.icon,
+            defaultLibrary: config.icons.library,
+            context: `dropdown "${dropdown.dropdown}"`,
+          }),
+        }),
+        ...(dropdown.iconColor !== undefined && { iconColor: dropdown.iconColor }),
+        ...(dropdown.hidden !== undefined && { hidden: dropdown.hidden }),
+        ...(dropdown.href !== undefined && { href: dropdown.href }),
+      }
+    }
+
+    const innerTabs = await Promise.all(dropdown.navigation.tabs.map(enrichTab))
+    return {
+      dropdown: dropdown.dropdown,
+      ...(dropdown.icon !== undefined && {
+        icon: serializeIcon({
+          icon: dropdown.icon,
+          defaultLibrary: config.icons.library,
+          context: `dropdown "${dropdown.dropdown}"`,
+        }),
+      }),
+      ...(dropdown.iconColor !== undefined && { iconColor: dropdown.iconColor }),
+      ...(dropdown.hidden !== undefined && { hidden: dropdown.hidden }),
+      ...(dropdown.href !== undefined && { href: dropdown.href }),
+      navigation: { tabs: innerTabs, anchors: dropdown.navigation.anchors },
+    }
+  }
+
+  const navigation = await Promise.all(config.navigation.tabs.map(enrichTab))
+  const versions = await Promise.all(config.navigation.versions.map(enrichVersionItem))
+  const dropdowns = await Promise.all(config.navigation.dropdowns.map(enrichDropdownItem))
+
+  return {
+    navigation,
+    switchers: { versions, dropdowns },
+  }
+}

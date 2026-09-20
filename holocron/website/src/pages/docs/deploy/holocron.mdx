@@ -1,0 +1,127 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the Holocron deploy guide from @/cli/src/deploy.ts.
+  Cover CLI deploy, auth, and GitHub Actions OIDC.
+title: Holocron Deploy
+description: Deploy to a hosted holocron.so subdomain with the built-in CLI.
+icon: cloud-upload
+---
+
+{/* Built-in hosted deployment docs for the Holocron CLI deploy command. */}
+
+# Holocron Deploy
+
+`holocron deploy` builds your docs site and uploads it to Holocron hosting. It is
+the fastest way to publish a site without managing your own server or Cloudflare
+Worker.
+
+```bash
+npx -y "@holocron.so/cli" deploy
+```
+
+The command runs your build, uploads only changed files, finalizes the deployment,
+and prints the live URL.
+
+## Deployment URLs
+
+The URL format depends on how you deploy.
+
+**From GitHub Actions (OIDC)**: the subdomain is derived from your GitHub **repo
+name** and **owner**, verified from the OIDC token. Pushing to the default branch
+(usually `main`) deploys to:
+
+```txt
+https://<repo>-<owner>-site.holocron.so
+```
+
+For example, `remorses/my-docs` on `main` → `https://my-docs-remorses-site.holocron.so`.
+
+Pushes to non-default branches or pull request events produce a unique preview URL
+that includes the branch name. The deploy command prints the URL after each deploy,
+and sets it as a GitHub Actions step output (`holocron_url`).
+
+**From local or API key**: the subdomain uses the project ID instead of the GitHub
+repo name, since there is no verified GitHub context:
+
+```txt
+https://<projectId>-site.holocron.so
+```
+
+Custom domains are not supported yet. Use [Cloudflare Workers](/docs/deploy/cloudflare)
+or [Node.js](/docs/deploy/node) if you need your own domain today.
+
+## Authentication
+
+**Auth priority** (first match wins):
+
+1. **`HOLOCRON_KEY`** env var — API key scoped to a specific project. The server resolves the org and project from the key. No flags needed.
+2. **Session token** from `npx -y "@holocron.so/cli" login` — if the account has multiple projects, pass `--project prj_xxx` or the CLI prompts interactively.
+3. **GitHub Actions OIDC** — automatic when running in GitHub Actions with `permissions: id-token: write`. No API key or login needed if the repo owner matches the Holocron account.
+
+For local deploys, log in once:
+
+```bash
+npx -y "@holocron.so/cli" login
+npx -y "@holocron.so/cli" deploy
+```
+
+For CI deploys, use a project API key:
+
+```bash
+HOLOCRON_KEY=holo_xxx npx -y "@holocron.so/cli" deploy
+```
+
+No project ID is saved locally on disk. It is either derived from the API key,
+passed via `--project`, or selected interactively at deploy time.
+
+### GitHub Actions OIDC (keyless deploys)
+
+The deploy command does not need an API key when run inside GitHub Actions and
+the user signed in to holocron.so with the same GitHub account that owns the
+repo. Holocron verifies the GitHub OIDC token to authenticate. The workflow needs:
+
+```yaml
+permissions:
+  id-token: write
+```
+
+**How branch detection works:**
+
+- **Pull requests**: uses the `head_ref` OIDC claim (the PR source branch). Marked as preview automatically.
+- **Pushes**: uses the `ref` claim stripped to branch name (`refs/heads/main` → `main`). Compared against the project's default branch to decide production vs preview.
+- **Explicit override**: `--branch <name>` CLI flag.
+
+### Organizations and project resolution
+
+Each user gets a **personal org** auto-created on first login. All projects and
+API keys are scoped to an org. Run `npx -y "@holocron.so/cli" whoami` to see all orgs
+and projects.
+
+When a user belongs to multiple orgs, `projects create` prompts which org to
+use. Pass `--org <orgId>` to skip the prompt:
+
+```bash
+npx -y "@holocron.so/cli" projects create --name "My Docs" --org <orgId>
+```
+
+The deploy command resolves the org from the project itself, so `--org` is not
+needed for deploys.
+
+## GitHub Actions outputs
+
+The deploy command sets GitHub Actions step outputs when `GITHUB_OUTPUT` is
+available:
+
+```txt
+holocron_url=https://...
+holocron_deployment_id=dep_...
+```
+
+## Build output
+
+`holocron deploy` uses the special deploy build output at `dist/.holocron/`.
+The server bundle is uploaded as Worker files and the client bundle is uploaded
+as static assets.
+
+See [Build Output](/docs/deploy/build-output) for the directory structure.

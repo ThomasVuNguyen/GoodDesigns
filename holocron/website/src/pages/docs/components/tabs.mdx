@@ -1,0 +1,83 @@
+---
+$schema: https://holocron.so/frontmatter.json
+prompt: |
+  Write the Tabs docs from @/vite/src/components/markdown/tabs.tsx.
+  Use @https://github.com/mintlify/components for Mintlify-compatible props.
+title: Tabs
+description: Split related content into tabbed panels.
+icon: folder-kanban
+---
+
+# Tabs
+
+Use `Tabs` and `Tab` when multiple variants of the same content should share one footprint.
+
+<Tabs>
+  <Tab title='npm' icon='package'>
+
+```bash
+npm install @holocron.so/vite react react-dom vite
+```
+
+  </Tab>
+  <Tab title='pnpm' icon='package-check'>
+
+```bash
+pnpm add @holocron.so/vite react react-dom vite
+```
+
+  </Tab>
+</Tabs>
+
+<Tabs defaultTabIndex={1}>
+  <Tab title='Overview'>
+    Tabs can hold prose and nested components.
+  </Tab>
+  <Tab title='Examples'>
+    <CardGroup cols={2}>
+      <Card title='Cards inside tabs' icon='square-stack'>
+        Useful for docs landing pages.
+      </Card>
+      <Card title='Mixed content' icon='wrap-text'>
+        Holocron handles nested MDX blocks here too.
+      </Card>
+    </CardGroup>
+  </Tab>
+</Tabs>
+
+## Supported props
+
+- `Tabs` supports `defaultTabIndex`, `sync`, and nested `Tab` children.
+- `Tab` supports `title`, `value`, and `icon`.
+
+### Default tab
+
+```mdx
+<Tabs defaultTabIndex={1}>
+  <Tab title='First'>...</Tab>
+  <Tab title='Second'>Opens by default.</Tab>
+</Tabs>
+```
+
+### Sync by title
+
+When **`sync`** is true, selecting a tab publishes its **title**. Other synced
+`<Tabs>` on the site that include the same title switch to it. The choice is
+stored in `localStorage` so it survives navigation.
+
+```mdx
+<Tabs sync>
+  <Tab title='TypeScript'>...</Tab>
+  <Tab title='Python'>...</Tab>
+</Tabs>
+```
+
+OpenAPI **Request example** panels enable `sync` by default, so picking
+TypeScript on one endpoint keeps TypeScript on the next. Use `sync={false}` to
+opt out of a single group.
+
+## Holocron differences
+
+- Sync matches by **tab title** (exact, then case-insensitive), same idea as Mintlify.
+- Preference is hydration-safe: the server always renders `defaultTabIndex`; the
+  stored title applies after the client hydrates.

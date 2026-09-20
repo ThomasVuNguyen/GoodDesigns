@@ -1,0 +1,115 @@
+/**
+ * Pure functions for building TocTreeNode[] from mdast headings.
+ * Server-safe — no 'use client', no hooks, no browser APIs.
+ * Used by the build pipeline (sync.ts) and server component (app-factory.tsx).
+ */
+
+import type { Root, Heading, PhrasingContent, RootContent } from 'mdast'
+import GithubSlugger, { slug } from 'github-slugger'
+
+/* ── TOC tree types ──────────────────────────────────────────────────── */
+
+export type TocNodeType = 'page' | `h${1 | 2 | 3 | 4 | 5 | 6}`
+
+/** Recursive tree node — the source-of-truth structure before flattening.
+ *  Heading depth is encoded in the type field (h2, h3, h4...) so skipped
+ *  markdown levels render at the correct visual depth. */
+export type TocTreeNode = {
+  label: string
+  href: string
+  type: TocNodeType
+  children: TocTreeNode[]
+}
+
+/* ── Helper functions ────────────────────────────────────────────────── */
+
+export function getAssignedHeadingId(node: Heading): string | undefined {
+  const props = node.data?.hProperties
+  if (!props || typeof props !== 'object') return undefined
+  const id = Reflect.get(props, 'id')
+  return typeof id === 'string' ? id : undefined
+}
+
+/** GithubSlugger suffixes for duplicate titles (accounts, accounts-1). Mutates heading.data. */
+export function assignUniqueHeadingIds(nodes: RootContent[]): void {
+  const slugger = new GithubSlugger()
+  walk(nodes)
+
+  function walk(list: readonly RootContent[]) {
+    for (const node of list) {
+      if (node.type === 'heading') {
+        const text = extractText(node.children)
+        const existing = getAssignedHeadingId(node)
+        if (existing) {
+          slugger.slug(existing)
+        } else if (text) {
+          const prev = node.data?.hProperties
+          const hProperties = prev && typeof prev === 'object' ? { ...prev, id: slugger.slug(text) } : { id: slugger.slug(text) }
+          node.data = { ...node.data, hProperties }
+        }
+      }
+      const children = Reflect.get(node, 'children')
+      if (Array.isArray(children)) walk(children)
+    }
+  }
+}
+
+/** Extract plain text from mdast phrasing content */
+export function extractText(children: PhrasingContent[]): string {
+  return children
+    .map((child) => {
+      if (child.type === 'text' || child.type === 'inlineCode') {
+        return (child as { value: string }).value
+      }
+      if ('children' in child) {
+        return extractText(child.children)
+      }
+      return ''
+    })
+    .join('')
+}
+
+/** Build a nested TocTreeNode[] from mdast headings. Headings at lower
+ *  depth become children of headings at higher depth, forming a tree
+ *  that matches the document outline (## → ### → ####). The heading
+ *  level is encoded in the type field (h2, h3, h4) so skipped levels
+ *  render at the correct visual depth. */
+export function generateTocTree(mdast: Root): TocTreeNode[] {
+  const headings = mdast.children
+    .filter((node): node is Heading => {
+      return node.type === 'heading'
+    })
+    .map((heading) => {
+      const text = extractText(heading.children)
+      const id = slug(text)
+      return { label: text, href: `#${id}`, depth: heading.depth }
+    })
+
+  const result: TocTreeNode[] = []
+  const stack: { node: TocTreeNode; depth: number }[] = []
+
+  for (const h of headings) {
+    const node: TocTreeNode = {
+      label: h.label,
+      href: h.href,
+      type: `h${h.depth}` as TocNodeType,
+      children: [],
+    }
+
+    /* Pop stack until we find a parent with lower depth */
+    while (stack.length > 0 && (stack.at(-1)?.depth ?? 0) >= h.depth) {
+      stack.pop()
+    }
+
+    const parent = stack.at(-1)
+    if (!parent) {
+      result.push(node)
+    } else {
+      parent.node.children.push(node)
+    }
+
+    stack.push({ node, depth: h.depth })
+  }
+
+  return result
+}

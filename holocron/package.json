@@ -1,0 +1,25 @@
+{
+    "name": "root",
+    "private": true,
+    "scripts": {
+        "watch": "pnpm -r watch",
+        "build": "pnpm -r build"
+    },
+    "devDependencies": {
+        "spiceflow": "1.26.0-rsc.18",
+        "tsx": "^4.21.0",
+        "tuistory": "^0.10.0",
+        "typescript": "^6.0.2",
+        "vite": "^8.1.4",
+        "vitest": "^4.1.4"
+    },
+    "repository": "https://github.com/remorses/",
+    "author": "remorses <beats.by.morse@gmail.com>",
+    "license": "MIT",
+    "pnpm": {
+        "onlyBuiltDependencies": [
+            "opencode-ai",
+            "sharp"
+        ]
+    }
+}

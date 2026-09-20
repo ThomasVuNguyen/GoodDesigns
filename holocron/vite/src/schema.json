@@ -1,0 +1,1960 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "$schema": {
+      "description": "The URL of the schema file",
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The name of the project, organization, or product"
+    },
+    "description": {
+      "description": "Optional description used for SEO and LLM indexing",
+      "type": "string"
+    },
+    "logo": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/logoSchema"
+        }
+      ]
+    },
+    "favicon": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/faviconSchema"
+        }
+      ]
+    },
+    "colors": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/colorsSchema"
+        }
+      ]
+    },
+    "appearance": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/appearanceSchema"
+        }
+      ]
+    },
+    "fonts": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/fontsSchema"
+        }
+      ]
+    },
+    "icons": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/iconsSchema"
+        }
+      ]
+    },
+    "navigation": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/navigationSchema"
+        }
+      ]
+    },
+    "navbar": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/navbarSchema"
+        }
+      ]
+    },
+    "banner": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/bannerSchema"
+        }
+      ]
+    },
+    "footer": {
+      "type": "object",
+      "properties": {
+        "socials": {
+          "description": "An object in which each key is the name of a social media\nplatform and each value is the URL to your profile.\nFor example: { \"x\": \"https://x.com/mintlify\" }",
+          "type": "object",
+          "propertyNames": {
+            "type": "string",
+            "enum": [
+              "x",
+              "website",
+              "facebook",
+              "youtube",
+              "discord",
+              "slack",
+              "github",
+              "linkedin",
+              "instagram",
+              "hacker-news",
+              "medium",
+              "telegram",
+              "twitter",
+              "x-twitter",
+              "earth-americas",
+              "bluesky",
+              "threads",
+              "reddit",
+              "podcast"
+            ]
+          },
+          "additionalProperties": {
+            "type": "string"
+          }
+        },
+        "links": {
+          "description": "Link columns displayed in the footer. Maximum 4 columns",
+          "maxItems": 4,
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "header": {
+                "description": "Column header title",
+                "type": "string"
+              },
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "label": {
+                      "type": "string",
+                      "minLength": 1,
+                      "description": "Link text"
+                    },
+                    "href": {
+                      "type": "string",
+                      "description": "Link destination URL"
+                    }
+                  },
+                  "required": [
+                    "label",
+                    "href"
+                  ],
+                  "additionalProperties": false
+                },
+                "description": "Links in the column"
+              }
+            },
+            "required": [
+              "items"
+            ],
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "redirects": {
+      "description": "URL redirect rules applied before routing",
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/redirectSchema"
+      }
+    },
+    "knownPaths": {
+      "description": "Paths that should not trigger broken-link warnings even if they\ndon't correspond to an MDX page. Useful when mounting the docs\napp alongside other routes (API endpoints, custom pages, external\napps). Supports exact paths and prefix patterns with trailing\nwildcards. Example: `[\"/api/*\", \"/dashboard\", \"/blog/*\"]`",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "search": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/searchSchema"
+        }
+      ]
+    },
+    "seo": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/seoSchema"
+        }
+      ]
+    },
+    "assistant": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/assistantSchema"
+        }
+      ]
+    },
+    "decorativeLines": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/decorativeLinesSchema"
+        }
+      ]
+    },
+    "sidebar": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/sidebarSchema"
+        }
+      ]
+    },
+    "layout": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/layoutSchema"
+        }
+      ]
+    },
+    "integrations": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/integrationsSchema"
+        }
+      ]
+    },
+    "customCss": {
+      "description": "Raw CSS string injected as a <style> tag at runtime. Useful for multi-tenant sites where users cannot provide CSS files at build time.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "name"
+  ],
+  "additionalProperties": {},
+  "description": "Holocron site configuration. Compatible with Mintlify docs.json — any additional Mintlify fields outside this schema are accepted and ignored at runtime",
+  "definitions": {
+    "logoSchema": {
+      "anyOf": [
+        {
+          "type": "string",
+          "minLength": 3,
+          "description": "The logo (for both light and dark mode)"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "light": {
+              "type": "string",
+              "description": "Path pointing to the light logo file to use in dark mode,\nincluding the file extension. Example: `/logo.png`"
+            },
+            "dark": {
+              "type": "string",
+              "description": "Path pointing to the dark logo file to use in light mode,\nincluding the file extension. Example: `/logo-dark.png`"
+            },
+            "href": {
+              "description": "The URL to redirect to when clicking the logo. If not provided,\nthe logo will link to the homepage. Example: `https://example.com`",
+              "type": "string"
+            },
+            "text": {
+              "description": "Text to display next to the logo image, typically the site or\nproduct name. Example: `\"Libretto\"`",
+              "type": "string"
+            }
+          },
+          "required": [
+            "light",
+            "dark"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "The logo configuration. Can be a single image path for both light and\ndark mode, or separate paths for each mode with an optional click\ntarget URL"
+    },
+    "faviconSchema": {
+      "anyOf": [
+        {
+          "type": "string",
+          "description": "Path pointing to the favicon file in your docs folder, including\nthe file extension. The favicon will automatically be resized to\nthe appropriate sizes"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "light": {
+              "type": "string",
+              "description": "Path pointing to the light favicon file to use in dark mode,\nincluding the file extension. Example: `/favicon.png`"
+            },
+            "dark": {
+              "type": "string",
+              "description": "Path pointing to the dark favicon file to use in light mode,\nincluding the file extension. Example: `/favicon-dark.png`"
+            }
+          },
+          "required": [
+            "light",
+            "dark"
+          ],
+          "additionalProperties": false,
+          "description": "The path to the favicon. Can be a single file or a pair for\nlight and dark mode. Example: `/favicon.png`"
+        }
+      ]
+    },
+    "colorsSchema": {
+      "type": "object",
+      "properties": {
+        "primary": {
+          "type": "string",
+          "pattern": "^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$",
+          "description": "The primary color of the theme"
+        },
+        "light": {
+          "description": "A lighter shade of the primary color, displayed in dark mode. The name describes the color tone, not the mode it appears in. Mintlify convention.",
+          "type": "string",
+          "pattern": "^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$"
+        },
+        "dark": {
+          "description": "A darker shade of the primary color, displayed in light mode. The name describes the color tone, not the mode it appears in. Mintlify convention.",
+          "type": "string",
+          "pattern": "^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$"
+        }
+      },
+      "required": [
+        "primary"
+      ],
+      "additionalProperties": false,
+      "description": "The colors to use in your documentation. At the very least, you must\ndefine the primary color. For example:\n{ \"colors\": { \"primary\": \"#ff0000\" } }"
+    },
+    "appearanceSchema": {
+      "type": "object",
+      "properties": {
+        "default": {
+          "description": "Default color mode. Choose `system` to match the user's OS\nsetting, or `light` or `dark` to force a specific mode.\nDefaults to `system`",
+          "type": "string",
+          "enum": [
+            "system",
+            "light",
+            "dark"
+          ]
+        },
+        "strict": {
+          "description": "When `true`, hides the light/dark mode toggle so users\ncannot switch modes. Defaults to `false`",
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false,
+      "description": "Light/dark mode settings"
+    },
+    "fontsSchema": {
+      "type": "object",
+      "properties": {
+        "family": {
+          "description": "Font family name. Google Fonts family names load automatically",
+          "type": "string"
+        },
+        "weight": {
+          "description": "Font weight",
+          "type": "number"
+        },
+        "source": {
+          "description": "URL to a hosted font or path to a local font file. Local files\nmust be placed in the `public/` directory (e.g. `public/fonts/my-font.woff2`)\nand referenced as `/fonts/my-font.woff2`",
+          "type": "string"
+        },
+        "format": {
+          "description": "Font file format. Required when using a local source file",
+          "type": "string",
+          "enum": [
+            "woff",
+            "woff2"
+          ]
+        },
+        "fontSize": {
+          "description": "Body text font size in pixels. Defaults to `14`",
+          "type": "number"
+        },
+        "heading": {
+          "description": "Override font settings for headings",
+          "type": "object",
+          "properties": {
+            "family": {
+              "type": "string",
+              "description": "Font family name (e.g. \"Inter\", \"Open Sans\")"
+            },
+            "weight": {
+              "description": "Font weight (e.g. 400, 700)",
+              "type": "number"
+            },
+            "source": {
+              "description": "URL to a hosted font or path to a local font file. Local files\nmust be placed in the `public/` directory and referenced with\nan absolute path (e.g. `/fonts/my-font.woff2`)",
+              "type": "string"
+            },
+            "format": {
+              "description": "Font file format. Required when using a local source file",
+              "type": "string",
+              "enum": [
+                "woff",
+                "woff2"
+              ]
+            },
+            "fontSize": {
+              "description": "Font size in pixels for this font role. For heading fonts,\nthis sets the size of all heading levels (h1, h2, h3).\nDefaults to `16` for headings",
+              "type": "number"
+            }
+          },
+          "required": [
+            "family"
+          ],
+          "additionalProperties": false
+        },
+        "body": {
+          "description": "Override font settings for body text",
+          "type": "object",
+          "properties": {
+            "family": {
+              "type": "string",
+              "description": "Font family name (e.g. \"Inter\", \"Open Sans\")"
+            },
+            "weight": {
+              "description": "Font weight (e.g. 400, 700)",
+              "type": "number"
+            },
+            "source": {
+              "description": "URL to a hosted font or path to a local font file. Local files\nmust be placed in the `public/` directory and referenced with\nan absolute path (e.g. `/fonts/my-font.woff2`)",
+              "type": "string"
+            },
+            "format": {
+              "description": "Font file format. Required when using a local source file",
+              "type": "string",
+              "enum": [
+                "woff",
+                "woff2"
+              ]
+            },
+            "fontSize": {
+              "description": "Font size in pixels for this font role. For heading fonts,\nthis sets the size of all heading levels (h1, h2, h3).\nDefaults to `16` for headings",
+              "type": "number"
+            }
+          },
+          "required": [
+            "family"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false,
+      "description": "Custom fonts for your documentation"
+    },
+    "iconsSchema": {
+      "type": "object",
+      "properties": {
+        "library": {
+          "description": "Project-wide icon library used for plain icon strings",
+          "type": "string",
+          "enum": [
+            "fontawesome",
+            "lucide"
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "description": "Icon library settings"
+    },
+    "navigationSchema": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "tabs": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/tabSchema"
+              },
+              "description": "The tabs rendered in the tab bar. Order tabs following progressive\ndisclosure: documentation and guides first, then API reference, then\nchangelog. Tabs that link out to external URLs (`href`) go last.\nThis keeps the navigation looking clean and guides the reader from\nconcepts to reference"
+            },
+            "global": {
+              "type": "object",
+              "properties": {
+                "anchors": {
+                  "description": "Anchors displayed across all tabs. Useful for external links like\na GitHub repo or a changelog that should always be visible",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/anchorSchema"
+                  }
+                }
+              },
+              "additionalProperties": false,
+              "description": "Navigation items rendered globally across all tabs and pages"
+            },
+            "anchors": {
+              "description": "Anchors displayed across all tabs. Alternative to `global.anchors`",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/anchorSchema"
+              }
+            }
+          },
+          "required": [
+            "tabs"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "groups": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/groupSchema"
+              },
+              "description": "Root sidebar groups (rendered without a tab wrapper)"
+            },
+            "global": {
+              "type": "object",
+              "properties": {
+                "anchors": {
+                  "description": "Anchors displayed across all tabs. Useful for external links like\na GitHub repo or a changelog that should always be visible",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/anchorSchema"
+                  }
+                }
+              },
+              "additionalProperties": false,
+              "description": "Navigation items rendered globally across all tabs and pages"
+            },
+            "anchors": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/anchorSchema"
+              }
+            }
+          },
+          "required": [
+            "groups"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "pages": {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "$ref": "#/definitions/groupSchema"
+                  }
+                ]
+              },
+              "description": "Root pages (rendered without a tab or group wrapper). Each entry\nis a string slug or a nested group"
+            },
+            "global": {
+              "type": "object",
+              "properties": {
+                "anchors": {
+                  "description": "Anchors displayed across all tabs. Useful for external links like\na GitHub repo or a changelog that should always be visible",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/anchorSchema"
+                  }
+                }
+              },
+              "additionalProperties": false,
+              "description": "Navigation items rendered globally across all tabs and pages"
+            },
+            "anchors": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/anchorSchema"
+              }
+            }
+          },
+          "required": [
+            "pages"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "versions": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/versionSchema"
+              },
+              "description": "Version entries for the version switcher"
+            },
+            "global": {
+              "type": "object",
+              "properties": {
+                "anchors": {
+                  "description": "Anchors displayed across all tabs. Useful for external links like\na GitHub repo or a changelog that should always be visible",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/anchorSchema"
+                  }
+                }
+              },
+              "additionalProperties": false,
+              "description": "Navigation items rendered globally across all tabs and pages"
+            },
+            "anchors": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/anchorSchema"
+              }
+            }
+          },
+          "required": [
+            "versions"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "dropdowns": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/dropdownSchema"
+              },
+              "description": "Dropdown entries for the dropdown switcher"
+            },
+            "global": {
+              "type": "object",
+              "properties": {
+                "anchors": {
+                  "description": "Anchors displayed across all tabs. Useful for external links like\na GitHub repo or a changelog that should always be visible",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/anchorSchema"
+                  }
+                }
+              },
+              "additionalProperties": false,
+              "description": "Navigation items rendered globally across all tabs and pages"
+            },
+            "anchors": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/anchorSchema"
+              }
+            }
+          },
+          "required": [
+            "dropdowns"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "products": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/productSchema"
+              },
+              "description": "Product entries for the product switcher"
+            },
+            "global": {
+              "type": "object",
+              "properties": {
+                "anchors": {
+                  "description": "Anchors displayed across all tabs. Useful for external links like\na GitHub repo or a changelog that should always be visible",
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/anchorSchema"
+                  }
+                }
+              },
+              "additionalProperties": false,
+              "description": "Navigation items rendered globally across all tabs and pages"
+            },
+            "anchors": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/anchorSchema"
+              }
+            }
+          },
+          "required": [
+            "products"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tabSchema"
+          },
+          "description": "A shorthand array of tabs"
+        },
+        {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/groupSchema"
+          },
+          "description": "A shorthand array of root groups"
+        }
+      ],
+      "description": "The site navigation. Can be an object with `tabs`, `groups`,\n`pages`, `versions`, `dropdowns`, or `products`, or a\nshorthand array of tabs or groups"
+    },
+    "tabSchema": {
+      "anyOf": [
+        {
+          "type": "object",
+          "properties": {
+            "tab": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The name of the tab"
+            },
+            "icon": {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/iconSchema"
+                }
+              ]
+            },
+            "iconColor": {
+              "$ref": "#/definitions/iconColorSchema"
+            },
+            "hidden": {
+              "description": "Whether the tab is hidden by default",
+              "type": "boolean"
+            },
+            "align": {
+              "description": "Tab alignment in the navigation",
+              "type": "string",
+              "enum": [
+                "start",
+                "end"
+              ]
+            },
+            "groups": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/groupSchema"
+              },
+              "description": "The sidebar groups inside the tab"
+            }
+          },
+          "required": [
+            "tab",
+            "groups"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "tab": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The name of the tab"
+            },
+            "icon": {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/iconSchema"
+                }
+              ]
+            },
+            "iconColor": {
+              "$ref": "#/definitions/iconColorSchema"
+            },
+            "hidden": {
+              "description": "Whether the tab is hidden by default",
+              "type": "boolean"
+            },
+            "align": {
+              "description": "Tab alignment in the navigation",
+              "type": "string",
+              "enum": [
+                "start",
+                "end"
+              ]
+            },
+            "pages": {
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "$ref": "#/definitions/groupSchema"
+                  }
+                ]
+              },
+              "description": "The pages of the tab, flat (no groups wrapper). Each entry is a\nstring slug or a nested group"
+            }
+          },
+          "required": [
+            "tab",
+            "pages"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "tab": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The name of the tab"
+            },
+            "icon": {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/iconSchema"
+                }
+              ]
+            },
+            "iconColor": {
+              "$ref": "#/definitions/iconColorSchema"
+            },
+            "hidden": {
+              "description": "Whether the tab is hidden by default",
+              "type": "boolean"
+            },
+            "align": {
+              "description": "Tab alignment in the navigation",
+              "type": "string",
+              "enum": [
+                "start",
+                "end"
+              ]
+            },
+            "href": {
+              "type": "string",
+              "description": "A URL for a link-only tab. When set, this tab behaves as an anchor\npointing at an external URL"
+            }
+          },
+          "required": [
+            "tab",
+            "href"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "tab": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The name of the tab"
+            },
+            "icon": {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/iconSchema"
+                }
+              ]
+            },
+            "iconColor": {
+              "$ref": "#/definitions/iconColorSchema"
+            },
+            "hidden": {
+              "description": "Whether the tab is hidden by default",
+              "type": "boolean"
+            },
+            "align": {
+              "description": "Tab alignment in the navigation",
+              "type": "string",
+              "enum": [
+                "start",
+                "end"
+              ]
+            },
+            "openapi": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              ],
+              "description": "Path to an OpenAPI specification file (JSON or YAML), or an array\nof paths. Endpoints from the spec are auto-generated as pages\ngrouped by tag. Example: `\"openapi.json\"` or\n`[\"openapi/v1.json\", \"openapi/v2.json\"]`"
+            },
+            "base": {
+              "description": "Slug prefix for generated OpenAPI pages. Defaults to `\"api\"`.\nSet to `\"\"` for no prefix. A leading slash is allowed and ignored,\nso `\"/docs/api\"` behaves the same as `\"docs/api\"`. Example: with\n`\"reference\"`, endpoints are generated at `/reference/get-users`\ninstead of `/api/get-users`",
+              "type": "string"
+            },
+            "groups": {
+              "description": "Optional sidebar groups for \"selective endpoints\" mode. When set,\nendpoints are NOT auto-grouped by tag. Instead, list page entries\nexplicitly: normal slugs render MDX pages, while entries matching\n`METHOD /path` (e.g. `\"GET /users\"`) render the auto-generated\nendpoint page from the spec. This lets you interleave guides (auth,\nAPI keys, overview) with endpoint pages. Use the special `\"...\"`\nentry to expand all remaining (unlisted) endpoints, auto-grouped by\ntag, at that position",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/groupSchema"
+              }
+            },
+            "pages": {
+              "description": "Optional flat page list for \"selective endpoints\" mode. Same rules\nas `groups` but without a group wrapper. Mix MDX slugs with\n`METHOD /path` endpoint references to control ordering. Add a\n`\"...\"` entry to auto-include all remaining endpoints (grouped by\ntag) after your intro pages",
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "$ref": "#/definitions/groupSchema"
+                  }
+                ]
+              }
+            }
+          },
+          "required": [
+            "tab",
+            "openapi"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "tab": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The name of the tab"
+            },
+            "icon": {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/iconSchema"
+                }
+              ]
+            },
+            "iconColor": {
+              "$ref": "#/definitions/iconColorSchema"
+            },
+            "hidden": {
+              "description": "Whether the tab is hidden by default",
+              "type": "boolean"
+            },
+            "align": {
+              "description": "Tab alignment in the navigation",
+              "type": "string",
+              "enum": [
+                "start",
+                "end"
+              ]
+            },
+            "changelog": {
+              "type": "string",
+              "description": "URL of a releases page to generate a changelog tab from. Currently\nonly GitHub is supported, e.g.\n`\"https://github.com/owner/repo\"`. Holocron fetches the\nrepository's published releases and renders one changelog page with\nan entry per release. The left navigation sidebar is hidden on this\npage"
+            },
+            "base": {
+              "description": "Slug for the generated changelog page. Defaults to `\"changelog\"`,\nso the page is served at `/changelog`. A leading slash is allowed\nand ignored, so `\"/docs/changelog\"` behaves the same as\n`\"docs/changelog\"`",
+              "type": "string"
+            },
+            "initialContent": {
+              "description": "Path to an MDX file whose content is prepended above the\nauto-generated changelog entries. Use this to add a custom hero\nsection, introduction, or `<Above>` block at the top of the\nchangelog page. The path is resolved relative to pagesDir (or\nproject root), e.g. `\"changelog/intro\"`",
+              "type": "string"
+            }
+          },
+          "required": [
+            "tab",
+            "changelog"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "tab": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The name of the tab"
+            },
+            "icon": {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/iconSchema"
+                }
+              ]
+            },
+            "iconColor": {
+              "$ref": "#/definitions/iconColorSchema"
+            },
+            "hidden": {
+              "description": "Whether the tab is hidden by default",
+              "type": "boolean"
+            },
+            "align": {
+              "description": "Tab alignment in the navigation",
+              "type": "string",
+              "enum": [
+                "start",
+                "end"
+              ]
+            },
+            "mcp": {
+              "type": "string",
+              "description": "Path to a local MCP definition JSON file, or URL of a Streamable\nHTTP MCP server endpoint. When a local file, the JSON must contain\n`tools`, `resources`, and/or `prompts` arrays matching the\nMCP specification shapes. Each tool becomes a generated page with\nits input schema rendered as a parameter list. Example:\n`\"mcp-tools.json\"` or `\"https://api.example.com/mcp\"`"
+            },
+            "base": {
+              "description": "Slug prefix for generated MCP pages. Defaults to `\"mcp\"`. Set to\n`\"\"` for no prefix. A leading slash is allowed and ignored, so\n`\"/tools\"` behaves the same as `\"tools\"`",
+              "type": "string"
+            },
+            "groups": {
+              "description": "Optional sidebar groups for selective mode. When set, tools are\nNOT auto-grouped. List page entries explicitly: normal slugs\nrender MDX pages, while tool names render the auto-generated tool\npage. Use the special `\"...\"` entry to expand all remaining\ntools/resources at that position",
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/groupSchema"
+              }
+            },
+            "pages": {
+              "description": "Optional flat page list for selective mode. Same rules as\n`groups` but without a group wrapper. Mix MDX slugs with\ntool names. Add a `\"...\"` entry to auto-include all remaining\ntools and resources after your intro pages",
+              "type": "array",
+              "items": {
+                "anyOf": [
+                  {
+                    "type": "string"
+                  },
+                  {
+                    "$ref": "#/definitions/groupSchema"
+                  }
+                ]
+              }
+            }
+          },
+          "required": [
+            "tab",
+            "mcp"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "tab": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The name of the tab"
+            },
+            "icon": {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/iconSchema"
+                }
+              ]
+            },
+            "iconColor": {
+              "$ref": "#/definitions/iconColorSchema"
+            },
+            "hidden": {
+              "description": "Whether the tab is hidden by default",
+              "type": "boolean"
+            },
+            "align": {
+              "description": "Tab alignment in the navigation",
+              "type": "string",
+              "enum": [
+                "start",
+                "end"
+              ]
+            },
+            "imageboard": {
+              "type": "string",
+              "description": "Path to a folder of images and videos, relative to the project\nroot. The folder is walked recursively and every image and video\nfound is rendered in a masonry grid, sorted by last edit time\n(newest first). Edit times come from git commit history so the\norder is stable across clones and CI deployments. Examples:\n`\"./public/moodboard\"` or `\"./inspiration\"`. Files outside\n`public/` are copied into the build automatically"
+            },
+            "base": {
+              "description": "Slug for the generated imageboard page. Defaults to the folder\nname, e.g. `\"./public/moodboard\"` is served at `/moodboard`.\nA leading slash is allowed and ignored",
+              "type": "string"
+            },
+            "columns": {
+              "description": "Maximum number of masonry columns on wide viewports. Defaults to\n`3`. Fewer columns are used automatically on narrow viewports",
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 8
+            }
+          },
+          "required": [
+            "tab",
+            "imageboard"
+          ],
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "properties": {
+            "tab": {
+              "type": "string",
+              "minLength": 1,
+              "description": "The name of the tab"
+            },
+            "icon": {
+              "allOf": [
+                {
+                  "$ref": "#/definitions/iconSchema"
+                }
+              ]
+            },
+            "iconColor": {
+              "$ref": "#/definitions/iconColorSchema"
+            },
+            "hidden": {
+              "description": "Whether the tab is hidden by default",
+              "type": "boolean"
+            },
+            "align": {
+              "description": "Tab alignment in the navigation",
+              "type": "string",
+              "enum": [
+                "start",
+                "end"
+              ]
+            },
+            "provider": {
+              "type": "string",
+              "description": "Path to a file that default-exports a CustomTabProvider object.\nThe provider's generate() function produces navigation groups and\nMDX page content from an external source. Example:\n`\"./providers/blog.ts\"`"
+            },
+            "base": {
+              "description": "Slug prefix for generated pages. Defaults to the provider's name.\nA leading slash is allowed and ignored",
+              "type": "string"
+            },
+            "static": {
+              "description": "When true, the provider runs at build time (like OpenAPI/changelog).\nContent goes through the full enrichment pipeline. When false\n(default), the provider runs at request time and the result is\ncached. Runtime mode skips build-time image optimization but\nserves fresh content without rebuilds",
+              "type": "boolean"
+            }
+          },
+          "required": [
+            "tab",
+            "provider"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "A top-level tab in the navigation. Either contains sidebar groups, a\nflat list of pages, a link-only tab, an OpenAPI spec for\nauto-generated API reference pages, a changelog generated from a\nGitHub releases page, an MCP server definition for auto-generated\ntool and resource documentation pages, an imageboard folder rendered\nas a masonry image grid, or a custom provider file that generates\npages from an external source"
+    },
+    "iconSchema": {
+      "anyOf": [
+        {
+          "type": "string",
+          "$ref": "https://holocron.so/schemas/lucide-icons.json"
+        },
+        {
+          "type": "string",
+          "$ref": "https://holocron.so/schemas/fontawesome-icons.json"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "description": "The name of the icon"
+            },
+            "style": {
+              "description": "The Font Awesome icon style variant",
+              "type": "string",
+              "enum": [
+                "brands",
+                "duotone",
+                "light",
+                "regular",
+                "sharp-duotone-solid",
+                "sharp-light",
+                "sharp-regular",
+                "sharp-solid",
+                "sharp-thin",
+                "solid",
+                "thin"
+              ]
+            },
+            "library": {
+              "description": "The icon library to resolve the icon name from",
+              "type": "string",
+              "enum": [
+                "fontawesome",
+                "lucide"
+              ]
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "additionalProperties": false
+        }
+      ],
+      "description": "The icon to be displayed in the section"
+    },
+    "iconColorSchema": {
+      "description": "Color for the icon. Accepts named colors (green, blue, red, purple, orange, yellow, pink) or any CSS color string (hex, rgb, etc.). Sidebar page icons with a color are desaturated by default and become fully saturated on hover or when the page is active.",
+      "type": "string"
+    },
+    "groupSchema": {
+      "type": "object",
+      "properties": {
+        "group": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The name of the group"
+        },
+        "icon": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/iconSchema"
+            }
+          ]
+        },
+        "iconColor": {
+          "$ref": "#/definitions/iconColorSchema"
+        },
+        "hidden": {
+          "description": "Whether the group is hidden by default",
+          "type": "boolean"
+        },
+        "root": {
+          "description": "A page in the navigation referenced by its path. Example:\n`path/to/page`",
+          "type": "string",
+          "minLength": 1
+        },
+        "tag": {
+          "description": "Tag for the group",
+          "type": "string"
+        },
+        "expanded": {
+          "description": "Whether the group is expanded by default",
+          "type": "boolean"
+        },
+        "pages": {
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "$ref": "#/definitions/groupSchema"
+              }
+            ]
+          },
+          "description": "The pages in the group. Each entry is either a string slug\npointing at an MDX file, or a nested group object. Order pages\nfollowing progressive disclosure: start with introductory\ncontent, then core concepts, then advanced topics"
+        }
+      },
+      "required": [
+        "group",
+        "pages"
+      ],
+      "additionalProperties": false,
+      "description": "A sidebar group containing pages and/or nested groups. Order groups\nfollowing progressive disclosure: introductory groups first (getting\nstarted, quickstart), then core concept groups, then advanced or\nreference groups last. Readers should be able to read top-to-bottom\nwithout needing to jump ahead"
+    },
+    "anchorSchema": {
+      "type": "object",
+      "properties": {
+        "anchor": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The name of the anchor"
+        },
+        "href": {
+          "type": "string",
+          "description": "A valid path or external link"
+        },
+        "icon": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/iconSchema"
+            }
+          ]
+        },
+        "iconColor": {
+          "$ref": "#/definitions/iconColorSchema"
+        },
+        "hidden": {
+          "description": "Whether the anchor is hidden by default",
+          "type": "boolean"
+        },
+        "placement": {
+          "description": "Where to render this anchor. \"sidebar\" (default) shows it in the left navigation sidebar, \"tabs\" shows it in the header tab bar",
+          "type": "string",
+          "enum": [
+            "tabs",
+            "sidebar"
+          ]
+        }
+      },
+      "required": [
+        "anchor",
+        "href"
+      ],
+      "additionalProperties": false,
+      "description": "A persistent link rendered in the tab bar or sidebar"
+    },
+    "versionSchema": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Display name of the version"
+        },
+        "lang": {
+          "description": "BCP 47 language tag used for pages in this version",
+          "type": "string",
+          "minLength": 2
+        },
+        "default": {
+          "description": "Whether this is the default version",
+          "type": "boolean"
+        },
+        "tag": {
+          "description": "Badge label displayed next to the version in the selector.\nUse to highlight versions such as \"Latest\", \"Beta\", \"Deprecated\"",
+          "type": "string"
+        },
+        "hidden": {
+          "description": "Whether this version is hidden from the selector",
+          "type": "boolean"
+        },
+        "tabs": {
+          "description": "Tabs within this item",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tabSchema"
+          }
+        },
+        "groups": {
+          "description": "Sidebar groups within this item",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/groupSchema"
+          }
+        },
+        "pages": {
+          "description": "Pages within this item (flat, no groups wrapper)",
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "$ref": "#/definitions/groupSchema"
+              }
+            ]
+          }
+        },
+        "anchors": {
+          "description": "Anchors within this item",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/anchorSchema"
+          }
+        }
+      },
+      "required": [
+        "version"
+      ],
+      "additionalProperties": false,
+      "description": "A version entry for the version switcher dropdown"
+    },
+    "dropdownSchema": {
+      "type": "object",
+      "properties": {
+        "dropdown": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Display name of the dropdown item"
+        },
+        "icon": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/iconSchema"
+            }
+          ]
+        },
+        "iconColor": {
+          "$ref": "#/definitions/iconColorSchema"
+        },
+        "hidden": {
+          "description": "Whether this dropdown item is hidden",
+          "type": "boolean"
+        },
+        "href": {
+          "description": "A URL for a link-only dropdown item. When set, selecting this\nitem navigates to the URL instead of switching sidebar content",
+          "type": "string"
+        },
+        "tabs": {
+          "description": "Tabs within this item",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tabSchema"
+          }
+        },
+        "groups": {
+          "description": "Sidebar groups within this item",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/groupSchema"
+          }
+        },
+        "pages": {
+          "description": "Pages within this item (flat, no groups wrapper)",
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "$ref": "#/definitions/groupSchema"
+              }
+            ]
+          }
+        },
+        "anchors": {
+          "description": "Anchors within this item",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/anchorSchema"
+          }
+        }
+      },
+      "required": [
+        "dropdown"
+      ],
+      "additionalProperties": false,
+      "description": "A dropdown navigation item, either with content or a link"
+    },
+    "productSchema": {
+      "type": "object",
+      "properties": {
+        "product": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Display name of the product"
+        },
+        "description": {
+          "description": "Description of the product",
+          "type": "string"
+        },
+        "icon": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/iconSchema"
+            }
+          ]
+        },
+        "iconColor": {
+          "$ref": "#/definitions/iconColorSchema"
+        },
+        "href": {
+          "description": "A URL for a link-only product entry",
+          "type": "string"
+        },
+        "tabs": {
+          "description": "Tabs within this item",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/tabSchema"
+          }
+        },
+        "groups": {
+          "description": "Sidebar groups within this item",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/groupSchema"
+          }
+        },
+        "pages": {
+          "description": "Pages within this item (flat, no groups wrapper)",
+          "type": "array",
+          "items": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "$ref": "#/definitions/groupSchema"
+              }
+            ]
+          }
+        },
+        "anchors": {
+          "description": "Anchors within this item",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/anchorSchema"
+          }
+        }
+      },
+      "required": [
+        "product"
+      ],
+      "additionalProperties": false,
+      "description": "A product entry for the product switcher. Normalized into a\ndropdown item at runtime"
+    },
+    "navbarSchema": {
+      "type": "object",
+      "properties": {
+        "links": {
+          "description": "Links in the navbar",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/navbarLinkSchema"
+          }
+        },
+        "primary": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/navbarPrimarySchema"
+            }
+          ]
+        }
+      },
+      "additionalProperties": false,
+      "description": "Navbar content and settings"
+    },
+    "navbarLinkSchema": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "description": "The text label of the link. If omitted, it is derived from\n`type` (e.g. `github` → \"GitHub\")",
+          "type": "string"
+        },
+        "type": {
+          "description": "The kind of link. Known values: `github`, `discord`,\n`slack`, `button`, `link`. Controls the default icon and\nlabel",
+          "type": "string"
+        },
+        "href": {
+          "description": "The URL of the link",
+          "type": "string"
+        },
+        "url": {
+          "description": "Alias for `href` for Mintlify compatibility",
+          "type": "string"
+        },
+        "icon": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/iconSchema"
+            }
+          ]
+        },
+        "iconColor": {
+          "$ref": "#/definitions/iconColorSchema"
+        }
+      },
+      "additionalProperties": false,
+      "description": "A link rendered in the top navbar"
+    },
+    "navbarPrimarySchema": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "description": "The button label",
+          "type": "string"
+        },
+        "type": {
+          "description": "The kind of primary button. Known values: `button`, `github`.\nControls the default styling",
+          "type": "string"
+        },
+        "href": {
+          "description": "The URL the primary button navigates to",
+          "type": "string"
+        },
+        "url": {
+          "description": "Alias for `href` for Mintlify compatibility",
+          "type": "string"
+        },
+        "icon": {
+          "allOf": [
+            {
+              "$ref": "#/definitions/iconSchema"
+            }
+          ]
+        },
+        "iconColor": {
+          "$ref": "#/definitions/iconColorSchema"
+        }
+      },
+      "additionalProperties": false,
+      "description": "The primary CTA button rendered at the right of the navbar"
+    },
+    "bannerSchema": {
+      "type": "object",
+      "properties": {
+        "content": {
+          "type": "string",
+          "minLength": 1,
+          "description": "The text content displayed in the banner. Supports basic\nmarkdown links like `[text](url)`"
+        },
+        "dismissible": {
+          "description": "Whether to show a dismiss button. Defaults to `false`",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "content"
+      ],
+      "additionalProperties": false,
+      "description": "A site-wide banner displayed at the top of every page"
+    },
+    "redirectSchema": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string",
+          "description": "The source path pattern to match"
+        },
+        "destination": {
+          "type": "string",
+          "description": "The destination path to redirect to"
+        },
+        "permanent": {
+          "description": "Whether the redirect is permanent (301) or temporary (302).\nDefaults to `false`",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "source",
+        "destination"
+      ],
+      "additionalProperties": false,
+      "description": "A single URL redirect rule"
+    },
+    "searchSchema": {
+      "type": "object",
+      "properties": {
+        "prompt": {
+          "description": "Placeholder text displayed in the search bar when empty",
+          "type": "string"
+        }
+      },
+      "additionalProperties": false,
+      "description": "Search bar display settings"
+    },
+    "seoSchema": {
+      "type": "object",
+      "properties": {
+        "indexing": {
+          "description": "Which pages search engines should index. `navigable` indexes\nonly pages in navigation, `all` indexes every page",
+          "type": "string",
+          "enum": [
+            "navigable",
+            "all"
+          ]
+        },
+        "metatags": {
+          "description": "Custom meta tags added to every page. Each key is a meta tag\nname and the value is its content",
+          "type": "object",
+          "propertyNames": {
+            "type": "string"
+          },
+          "additionalProperties": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false,
+      "description": "Search engine optimization settings"
+    },
+    "assistantSchema": {
+      "type": "object",
+      "properties": {
+        "enabled": {
+          "description": "Whether to show the AI chat assistant. When `false`, the sidebar\nwidget, chat drawer, mobile \"Ask AI\" button, and the chat API\nendpoint are all disabled. Defaults to `true`",
+          "type": "boolean"
+        },
+        "suggestions": {
+          "description": "Suggested prompts shown on the empty chat screen. Each string is\nused as both the link label and the submitted prompt. Suggestions\nending with \"...\" fill the input instead of submitting, letting\nthe user complete the query. When omitted, three defaults based\non the site name are shown",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "display": {
+          "description": "Where the AI chat trigger appears. `sidebar` shows the Ask AI\nwidget in the right aside. `floating` uses the same bottom pill\nas the embeddable ChatWidget instead, and hides the sidebar\nwidget. Defaults to `sidebar`, or to `floating` when\n`layout.mode` is `compact`",
+          "type": "string",
+          "enum": [
+            "sidebar",
+            "floating"
+          ]
+        },
+        "supportEmail": {
+          "description": "Support email the assistant should share when a user wants to\ntalk to a human. When set, the chat system prompt tells the\nmodel to point people to this address for human support",
+          "type": "string",
+          "format": "email",
+          "pattern": "^(?!\\.)(?!.*\\.\\.)([A-Za-z0-9_'+\\-\\.]*)[A-Za-z0-9_+-]@([A-Za-z0-9][A-Za-z0-9\\-]*\\.)+[A-Za-z]{2,}$"
+        }
+      },
+      "additionalProperties": false,
+      "description": "AI chat assistant settings"
+    },
+    "decorativeLinesSchema": {
+      "type": "string",
+      "enum": [
+        "none",
+        "lines",
+        "dashed",
+        "lines-with-dots"
+      ],
+      "description": "Decorative border lines framing the page layout at grid boundaries.\n`none` disables all decorative lines.\n`lines` renders solid 1px lines at the page edges and content column boundaries.\n`dashed` renders segmented (dashed) lines.\n`lines-with-dots` renders solid lines with dot ornaments at vertices.\nDefaults to `lines-with-dots`"
+    },
+    "sidebarSchema": {
+      "type": "object",
+      "properties": {
+        "animate": {
+          "description": "Enable expand/collapse and hover transitions in the left\nnavigation sidebar. Defaults to `false`",
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false,
+      "description": "Left navigation sidebar behavior and appearance"
+    },
+    "layoutSchema": {
+      "type": "object",
+      "properties": {
+        "mode": {
+          "description": "Default page layout mode. Individual pages can override this with\nthe `mode` frontmatter field. `compact` keeps the left navigation\nand removes the right aside, which also hides the default sidebar\nassistant. Compact defaults `assistant.display` to `floating`\nunless you set it. Compact never opens a right rail. Authored\nasides and API examples render in the main column. Defaults to\n`default`",
+          "type": "string",
+          "enum": [
+            "default",
+            "compact",
+            "wide",
+            "custom",
+            "frame",
+            "center"
+          ]
+        },
+        "maxWidth": {
+          "description": "Maximum page width in pixels. The page grid is capped at this\nvalue. Content, sidebars, and gaps all live inside this\nconstraint. Defaults to `1200`",
+          "type": "number"
+        },
+        "sidebarWidth": {
+          "description": "Width of the left sidebar (table of contents) in pixels.\nDefaults to `230`",
+          "type": "number"
+        },
+        "columnGap": {
+          "description": "Gap between the three grid columns (left sidebar, content,\nright sidebar) in pixels. Defaults to `60`",
+          "type": "number"
+        },
+        "radius": {
+          "description": "Base border radius in pixels. All rounded corners in the UI\nderive from this value. Defaults to `10`",
+          "type": "number"
+        }
+      },
+      "additionalProperties": false,
+      "description": "Page grid layout and geometry. The content column width is derived\nautomatically: content = maxWidth - sidebarWidth - rightSidebar - 2 × columnGap.\nCompact mode removes the right sidebar and one column gap from maxWidth,\nwhich preserves the content width in a narrower page frame.\nIncreasing maxWidth grows the content column up to its 720px cap,\nthen extra space becomes gap"
+    },
+    "integrationsSchema": {
+      "type": "object",
+      "properties": {
+        "fathom": {
+          "description": "Fathom Analytics — privacy-first website analytics",
+          "type": "object",
+          "properties": {
+            "siteId": {
+              "type": "string",
+              "description": "Your Fathom site ID"
+            }
+          },
+          "required": [
+            "siteId"
+          ],
+          "additionalProperties": false
+        },
+        "ga4": {
+          "description": "Google Analytics 4",
+          "type": "object",
+          "properties": {
+            "measurementId": {
+              "type": "string",
+              "description": "Google Analytics 4 measurement ID (starts with G-)"
+            }
+          },
+          "required": [
+            "measurementId"
+          ],
+          "additionalProperties": false
+        },
+        "gtm": {
+          "description": "Google Tag Manager",
+          "type": "object",
+          "properties": {
+            "tagId": {
+              "type": "string",
+              "description": "Google Tag Manager container ID (starts with GTM-)"
+            }
+          },
+          "required": [
+            "tagId"
+          ],
+          "additionalProperties": false
+        },
+        "posthog": {
+          "description": "PostHog product analytics",
+          "type": "object",
+          "properties": {
+            "apiKey": {
+              "type": "string",
+              "description": "PostHog project API key (starts with phc_)"
+            },
+            "apiHost": {
+              "description": "PostHog API host. Defaults to https://us.i.posthog.com",
+              "type": "string"
+            }
+          },
+          "required": [
+            "apiKey"
+          ],
+          "additionalProperties": false
+        },
+        "plausible": {
+          "description": "Plausible Analytics — lightweight, privacy-friendly analytics",
+          "type": "object",
+          "properties": {
+            "domain": {
+              "type": "string",
+              "description": "Your domain as registered in Plausible"
+            },
+            "server": {
+              "description": "Custom Plausible server hostname for self-hosted instances (e.g. \"plausible.example.com\")",
+              "type": "string"
+            }
+          },
+          "required": [
+            "domain"
+          ],
+          "additionalProperties": false
+        },
+        "mixpanel": {
+          "description": "Mixpanel product analytics",
+          "type": "object",
+          "properties": {
+            "projectToken": {
+              "type": "string",
+              "description": "Mixpanel project token"
+            }
+          },
+          "required": [
+            "projectToken"
+          ],
+          "additionalProperties": false
+        },
+        "amplitude": {
+          "description": "Amplitude analytics",
+          "type": "object",
+          "properties": {
+            "apiKey": {
+              "type": "string",
+              "description": "Amplitude project API key"
+            }
+          },
+          "required": [
+            "apiKey"
+          ],
+          "additionalProperties": false
+        },
+        "hotjar": {
+          "description": "Hotjar behavior analytics (heatmaps, recordings)",
+          "type": "object",
+          "properties": {
+            "hjid": {
+              "type": "string",
+              "description": "Hotjar Site ID"
+            },
+            "hjsv": {
+              "type": "string",
+              "description": "Hotjar Snippet Version"
+            }
+          },
+          "required": [
+            "hjid",
+            "hjsv"
+          ],
+          "additionalProperties": false
+        },
+        "pirsch": {
+          "description": "Pirsch Analytics — cookie-free web analytics",
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "description": "Pirsch identification code"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "additionalProperties": false
+        },
+        "heap": {
+          "description": "Heap product analytics (auto-capture)",
+          "type": "object",
+          "properties": {
+            "appId": {
+              "type": "string",
+              "description": "Heap application ID"
+            }
+          },
+          "required": [
+            "appId"
+          ],
+          "additionalProperties": false
+        },
+        "segment": {
+          "description": "Segment analytics data platform",
+          "type": "object",
+          "properties": {
+            "key": {
+              "type": "string",
+              "description": "Segment write key"
+            }
+          },
+          "required": [
+            "key"
+          ],
+          "additionalProperties": false
+        },
+        "clarity": {
+          "description": "Microsoft Clarity — free heatmaps and session recordings",
+          "type": "object",
+          "properties": {
+            "projectId": {
+              "type": "string",
+              "description": "Microsoft Clarity project ID"
+            }
+          },
+          "required": [
+            "projectId"
+          ],
+          "additionalProperties": false
+        },
+        "logrocket": {
+          "description": "LogRocket session replay and error tracking",
+          "type": "object",
+          "properties": {
+            "appId": {
+              "type": "string",
+              "description": "LogRocket application ID"
+            }
+          },
+          "required": [
+            "appId"
+          ],
+          "additionalProperties": false
+        },
+        "clearbit": {
+          "description": "Clearbit visitor identification",
+          "type": "object",
+          "properties": {
+            "publicApiKey": {
+              "type": "string",
+              "description": "Clearbit public API key"
+            }
+          },
+          "required": [
+            "publicApiKey"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": {},
+      "description": "Third-party analytics integrations. Add your provider credentials\nhere and the corresponding tracking scripts are injected automatically.\nOnly public API keys are needed — never include private/secret keys"
+    }
+  }
+}
