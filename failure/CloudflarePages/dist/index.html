@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloudflare Pages - Serverless Full-Stack Platform</title>
+  <meta name="description" content="Build, deploy, and deliver full-stack applications quickly with Cloudflare Pages. A serverless platform for frontend developers.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ BACKGROUND PATTERN ============ -->
+<div class="bg-pattern" aria-hidden="true">
+  <div class="bg-pattern-center">
+    <div class="bg-pattern-line bg-pattern-line-left"></div>
+    <div class="bg-pattern-line bg-pattern-line-right"></div>
+  </div>
+  <div class="bg-pattern-inner">
+    <div class="bg-pattern-line bg-pattern-line-left"></div>
+    <div class="bg-pattern-line bg-pattern-line-right"></div>
+  </div>
+</div>
+
+<!-- ============ NAVIGATION ============ -->
+<nav class="nav" id="main-nav">
+  <div class="nav-inner">
+    <!-- Logo -->
+    <a href="/" class="nav-logo" aria-label="Cloudflare home">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 341 156" fill="none">
+        <path d="M275.125 68.25C311.507 68.25 341 97.9335 341 134.55C341 141.077 340.063 147.385 338.317 153.343C337.848 154.943 336.363 156 334.706 156H243.056C241.697 156 240.76 154.628 241.247 153.351L242.999 148.76C248.595 134.03 264.56 121.963 279.331 121.256L307.33 119.813C308.826 119.736 310 118.492 310 116.985C310 115.485 308.838 114.245 307.351 114.157L281.059 112.601C266.924 111.877 260.018 99.2932 263.82 86.179L268.195 71.0866C268.64 69.5514 269.971 68.4343 271.557 68.3476C272.738 68.2831 273.928 68.25 275.125 68.25Z" fill="#FF9910"/>
+        <path d="M184.062 0C222 0 253.868 26.1297 262.882 61.4824C263.26 62.967 263.142 64.5333 262.601 65.9662L255.383 85.0897C249.787 99.8196 235.406 112.593 219.134 112.593L93.7928 114.043C92.2801 114.061 91.063 115.3 91.0625 116.823C91.0625 118.344 92.2776 119.585 93.789 119.605L217.365 121.248C231.531 121.248 238.406 134.556 234.606 147.671L233.011 153.189C232.53 154.855 231.014 156 229.291 156H3.90889C1.98075 156 0.330745 154.574 0.17634 152.64C0.0594555 151.175 0 149.695 0 148.2C0 119.723 21.6617 96.3403 49.306 93.8266C48.7387 91.2419 48.4375 88.5564 48.4375 85.8C48.4375 65.3379 64.919 48.75 85.25 48.75C93.3413 48.75 100.822 51.3789 106.897 55.8321C117.716 23.3806 148.176 0 184.062 0Z" fill="#FF5F08"/>
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 719 59" fill="none" class="nav-wordmark" aria-label="Cloudflare">
+        <path d="M77.1016 1.09961H92.7015V43.5996H119.802V57.1996H77.1016V1.09961Z" fill="currentColor"/>
+        <path d="M135.898 29.3V29.2C135.898 13.1 148.898 0 166.198 0C183.498 0 196.298 12.9 196.298 29V29.2C196.298 45.3 183.298 58.4 165.998 58.4C148.798 58.3 135.898 45.4 135.898 29.3ZM180.498 29.3V29.2C180.498 21.1 174.698 14.1 166.098 14.1C157.598 14.1 151.898 21 151.898 29.1V29.3C151.898 37.4 157.698 44.4 166.198 44.4C174.798 44.3 180.498 37.4 180.498 29.3Z" fill="currentColor"/>
+        <path d="M215.398 32.5996V1.09961H231.198V32.2996C231.198 40.3996 235.298 44.1996 241.498 44.1996C247.698 44.1996 251.798 40.4996 251.798 32.6996V1.09961H267.598V32.1996C267.598 50.2996 257.298 58.1996 241.298 58.1996C225.398 58.2996 215.398 50.1996 215.398 32.5996Z" fill="currentColor"/>
+        <path d="M291.398 1.09961H313.098C333.098 1.09961 344.798 12.5996 344.798 28.7996V28.9996C344.798 45.1996 332.998 57.1996 312.798 57.1996H291.498L291.398 1.09961ZM313.298 43.3996C322.598 43.3996 328.798 38.2996 328.798 29.1996V28.9996C328.798 19.9996 322.598 14.7996 313.298 14.7996H306.998V43.2996L313.298 43.3996Z" fill="currentColor"/>
+        <path d="M367.297 1.09961H412.197V14.7996H382.797V24.2996H409.397V37.1996H382.797V57.1996H367.297V1.09961Z" fill="currentColor"/>
+        <path d="M433.797 1.09961H449.297V43.5996H476.497V57.1996H433.797V1.09961Z" fill="currentColor"/>
+        <path d="M517.097 0.699219H532.097L555.997 57.1992H539.297L535.197 47.1992H513.597L509.597 57.1992H493.297L517.097 0.699219ZM530.797 35.0992L524.597 19.1992L518.297 35.0992H530.797Z" fill="currentColor"/>
+        <path d="M576 1.09961H602.5C611.1 1.09961 617 3.29962 620.8 7.19962C624.1 10.3996 625.8 14.6996 625.8 20.2996V20.4996C625.8 29.0996 621.2 34.7996 614.3 37.6996L627.7 57.2996H609.7L598.4 40.2996H591.6V57.2996H576.1L576 1.09961ZM601.8 28.0996C607.1 28.0996 610.1 25.4996 610.1 21.4996V21.1996C610.1 16.7996 606.9 14.5996 601.7 14.5996H591.5V28.0996H601.8Z" fill="currentColor"/>
+        <path d="M648.203 1.09961H693.303V14.3996H663.603V22.7996H690.503V35.0996H663.603V43.9996H693.703V57.1996H648.203V1.09961Z" fill="currentColor"/>
+        <path d="M43.1 35.9C40.9 40.8 36.3 44.3 30.3 44.3C21.8 44.3 16 37.2 16 29.2V29C16 20.9 21.7 14 30.2 14C36.6 14 41.5 17.9 43.5 23.3H59.9C57.3 9.9 45.5 0 30.3 0C13 0 0 13.1 0 29.2V29.4C0 45.5 12.8 58.4 30.1 58.4C44.9 58.4 56.5 48.8 59.5 36L43.1 35.9Z" fill="currentColor"/>
+      </svg>
+    </a>
+
+    <!-- Nav Links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a class="nav-link" href="#">Products <svg class="nav-link-chevron" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+      <li><a class="nav-link" href="#">Solutions <svg class="nav-link-chevron" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+      <li><a class="nav-link" href="#">Resources <svg class="nav-link-chevron" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a></li>
+      <li><a class="nav-link" href="#">Pricing</a></li>
+    </ul>
+
+    <!-- Actions -->
+    <div class="nav-actions">
+      <a href="#" class="btn btn-outline">Dashboard</a>
+      <a href="#" class="btn btn-outline">Contact sales</a>
+      <button class="btn-icon" aria-label="Search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO SECTION ============ -->
+<section class="hero" id="hero">
+  <div class="container">
+    <div class="hero-badge fade-in-up">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      Cloudflare Pages
+    </div>
+    <h1 class="fade-in-up stagger-1">Build and deploy full-stack applications instantly</h1>
+    <p class="hero-subtitle fade-in-up stagger-2">Cloudflare Pages is a serverless platform that lets you build, collaborate, test, and deploy applications quickly. Developers, designers, and product teams can work together with minimal configuration needed.</p>
+    <div class="hero-actions fade-in-up stagger-3">
+      <a href="#" class="btn btn-primary btn-lg">Start building for free</a>
+      <a href="#" class="btn btn-outline btn-lg">View docs</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES GRID ============ -->
+<section class="container" id="features">
+  <div class="features-grid fade-in-up">
+    <div class="feature-card">
+      <svg class="feature-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-6.219-8.56"/><path d="M21 3v5h-5"/></svg>
+      <h3>Rapid Deployment</h3>
+      <p>Deploy full-stack applications quickly with Cloudflare Pages. A serverless platform for building and delivering trusted applications.</p>
+    </div>
+    <div class="feature-card">
+      <svg class="feature-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+      <h3>Effortless Collaboration</h3>
+      <p>Share projects using unique, protected links with designers and developers to iterate quickly. All plans come with unlimited sites, seats, requests, and bandwidth.</p>
+    </div>
+    <div class="feature-card">
+      <svg class="feature-card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M7.5 4.21l4.5 2.6 4.5-2.6"/><path d="M7.5 19.79V14.6L3 12"/><path d="M21 12l-4.5 2.6v5.19"/><path d="M3.27 6.96L12 12.01l8.73-5.05"/><path d="M12 22.08V12"/></svg>
+      <h3>Global Performance</h3>
+      <p>The Cloudflare network delivers content mere milliseconds from users. Pages also supports HTTP/3, QUIC, image compression, and SSL out of the box.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FULL-STACK SECTION ============ -->
+<section class="fullstack-section" id="fullstack">
+  <div class="container">
+    <h2 class="fade-in-up">Full-stack application development with Cloudflare Pages</h2>
+    <p class="subtitle fade-in-up">Build, collaborate, test, and deploy full-stack applications quickly</p>
+
+    <div class="globe-container fade-in-up">
+      <div class="globe-illustration">
+        <!-- Globe SVG illustration -->
+        <svg class="globe-svg" viewBox="0 0 600 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Globe wireframe -->
+          <ellipse cx="320" cy="220" rx="180" ry="180" stroke="#d4c4b0" stroke-width="0.5" fill="none" opacity="0.4"/>
+          <ellipse cx="320" cy="220" rx="180" ry="60" stroke="#d4c4b0" stroke-width="0.5" fill="none" opacity="0.4"/>
+          <ellipse cx="320" cy="220" rx="60" ry="180" stroke="#d4c4b0" stroke-width="0.5" fill="none" opacity="0.4"/>
+          <ellipse cx="320" cy="220" rx="120" ry="180" stroke="#d4c4b0" stroke-width="0.5" fill="none" opacity="0.4"/>
+          <line x1="140" y1="220" x2="500" y2="220" stroke="#d4c4b0" stroke-width="0.5" opacity="0.4"/>
+          <line x1="320" y1="40" x2="320" y2="400" stroke="#d4c4b0" stroke-width="0.5" opacity="0.4"/>
+
+          <!-- Dotted landmass approximation -->
+          <g fill="#e8632b" opacity="0.6">
+            <!-- Americas dots -->
+            <circle cx="220" cy="140" r="2"/><circle cx="225" cy="145" r="2"/><circle cx="215" cy="150" r="2"/>
+            <circle cx="210" cy="155" r="2"/><circle cx="220" cy="160" r="2"/><circle cx="230" cy="150" r="2"/>
+            <circle cx="205" cy="165" r="2"/><circle cx="215" cy="170" r="2"/><circle cx="225" cy="165" r="2"/>
+            <circle cx="200" cy="175" r="2"/><circle cx="210" cy="180" r="2"/><circle cx="220" cy="175" r="2"/>
+            <circle cx="195" cy="185" r="2"/><circle cx="205" cy="190" r="2"/><circle cx="215" cy="185" r="2"/>
+            <circle cx="230" cy="155" r="2"/><circle cx="235" cy="145" r="2"/><circle cx="240" cy="140" r="2"/>
+            <circle cx="245" cy="150" r="2"/><circle cx="250" cy="155" r="2"/>
+            <!-- South America dots -->
+            <circle cx="250" cy="240" r="2"/><circle cx="255" cy="250" r="2"/><circle cx="260" cy="260" r="2"/>
+            <circle cx="255" cy="270" r="2"/><circle cx="250" cy="280" r="2"/><circle cx="245" cy="290" r="2"/>
+            <circle cx="248" cy="300" r="2"/><circle cx="252" cy="310" r="2"/><circle cx="256" cy="320" r="2"/>
+            <circle cx="260" cy="245" r="2"/><circle cx="265" cy="255" r="2"/><circle cx="270" cy="250" r="2"/>
+            <!-- Europe/Africa dots -->
+            <circle cx="340" cy="130" r="2"/><circle cx="345" cy="135" r="2"/><circle cx="350" cy="140" r="2"/>
+            <circle cx="355" cy="130" r="2"/><circle cx="360" cy="135" r="2"/><circle cx="365" cy="145" r="2"/>
+            <circle cx="340" cy="150" r="2"/><circle cx="345" cy="155" r="2"/><circle cx="350" cy="160" r="2"/>
+            <circle cx="355" cy="165" r="2"/><circle cx="350" cy="175" r="2"/><circle cx="345" cy="185" r="2"/>
+            <circle cx="340" cy="195" r="2"/><circle cx="345" cy="200" r="2"/><circle cx="350" cy="210" r="2"/>
+            <circle cx="355" cy="220" r="2"/><circle cx="350" cy="230" r="2"/>
+            <!-- Asia dots -->
+            <circle cx="380" cy="130" r="2"/><circle cx="390" cy="125" r="2"/><circle cx="400" cy="130" r="2"/>
+            <circle cx="410" cy="135" r="2"/><circle cx="420" cy="140" r="2"/><circle cx="430" cy="145" r="2"/>
+            <circle cx="440" cy="150" r="2"/><circle cx="450" cy="155" r="2"/><circle cx="385" cy="140" r="2"/>
+            <circle cx="395" cy="145" r="2"/><circle cx="405" cy="150" r="2"/><circle cx="415" cy="155" r="2"/>
+            <circle cx="425" cy="160" r="2"/><circle cx="435" cy="165" r="2"/><circle cx="445" cy="160" r="2"/>
+            <circle cx="455" cy="165" r="2"/><circle cx="390" cy="155" r="2"/><circle cx="400" cy="160" r="2"/>
+          </g>
+
+          <!-- Connection lines -->
+          <path d="M220 160 Q280 120 340 150" stroke="#e8632b" stroke-width="1.5" fill="none" stroke-dasharray="4 3"/>
+          <path d="M340 150 Q400 130 430 145" stroke="#e8632b" stroke-width="1.5" fill="none"/>
+          <path d="M250 260 Q300 200 340 195" stroke="#e8632b" stroke-width="1.5" fill="none" stroke-dasharray="4 3"/>
+
+          <!-- Node: User -->
+          <circle cx="230" cy="230" r="18" fill="none" stroke="#e8632b" stroke-width="1.5"/>
+          <circle cx="230" cy="224" r="5" fill="none" stroke="#e8632b" stroke-width="1.2"/>
+          <path d="M220 238 Q225 232 230 232 Q235 232 240 238" fill="none" stroke="#e8632b" stroke-width="1.2"/>
+          <rect x="195" y="240" width="40" height="18" rx="4" fill="white" stroke="#e8632b" stroke-width="1"/>
+          <text x="215" y="253" text-anchor="middle" font-family="monospace" font-size="10" fill="#e8632b">User</text>
+
+          <!-- Node: Edge -->
+          <circle cx="400" cy="180" r="22" fill="#e8632b"/>
+          <path d="M392 176l8-4 8 4v8l-8 4-8-4z" fill="none" stroke="white" stroke-width="1.2"/>
+          <rect x="410" y="186" width="40" height="18" rx="4" fill="white" stroke="#e8632b" stroke-width="1"/>
+          <text x="430" y="199" text-anchor="middle" font-family="monospace" font-size="10" fill="#e8632b">Edge</text>
+
+          <!-- Node: Storage -->
+          <circle cx="340" cy="300" r="18" fill="#e8632b"/>
+          <rect x="330" y="292" width="20" height="16" rx="2" fill="none" stroke="white" stroke-width="1.2"/>
+          <line x1="330" y1="296" x2="350" y2="296" stroke="white" stroke-width="1"/>
+          <line x1="330" y1="300" x2="350" y2="300" stroke="white" stroke-width="1"/>
+          <line x1="330" y1="304" x2="350" y2="304" stroke="white" stroke-width="1"/>
+          <rect x="310" y="310" width="60" height="18" rx="4" fill="white" stroke="#e8632b" stroke-width="1"/>
+          <text x="340" y="323" text-anchor="middle" font-family="monospace" font-size="10" fill="#e8632b">Storage</text>
+
+          <!-- Small signal node top -->
+          <circle cx="310" cy="90" r="10" fill="none" stroke="#e8632b" stroke-width="1"/>
+          <path d="M306 86 Q310 82 314 86" fill="none" stroke="#e8632b" stroke-width="1"/>
+          <path d="M308 90 Q310 88 312 90" fill="none" stroke="#e8632b" stroke-width="1"/>
+        </svg>
+
+        <!-- Legend -->
+        <div class="globe-legend">
+          <div class="globe-legend-item">
+            <div class="globe-legend-line-solid"></div>
+            <span>Faster</span>
+          </div>
+          <div class="globe-legend-item">
+            <div class="globe-legend-line-dashed"></div>
+            <span>Slower</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ USE CASES SECTION ============ -->
+<section class="use-cases-section" id="use-cases">
+  <div class="container">
+    <div class="use-cases-grid fade-in-up">
+      <!-- Header column -->
+      <div class="use-case-header">
+        <div class="badge">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          Cloudflare Pages
+        </div>
+        <h2>Popular Use Cases for Cloudflare Pages</h2>
+        <p>Discover how Cloudflare Pages simplifies development and deployment</p>
+        <a href="#" class="learn-link">Learn how to build applications with Cloudflare Pages</a>
+      </div>
+
+      <!-- Use case 1 -->
+      <div class="use-case-item">
+        <div class="use-case-illustration">
+          <div class="illust-deployment">
+            <div class="illust-icon-circle">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="illust-connector"></div>
+            <div class="illust-icon-circle">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="use-case-content">
+          <h3>Instant Full-Stack Deployment</h3>
+          <p>Deploy full-stack applications instantly with Cloudflare Pages. Use popular web frameworks to build full-stack applications or migrate existing projects.</p>
+        </div>
+      </div>
+
+      <!-- Use case 2 -->
+      <div class="use-case-item">
+        <div class="use-case-illustration">
+          <div class="illust-github">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <rect x="4" y="4" width="40" height="40" rx="8" stroke="#e8632b" stroke-width="1.5" fill="none"/>
+              <path d="M14 14h20M14 24h12M14 34h16" stroke="#e8632b" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+            <div style="display:flex;gap:8px;align-items:center;">
+              <div style="width:32px;height:2px;background:#ddd;"></div>
+              <div style="width:8px;height:8px;border:1px solid #ddd;border-radius:2px;"></div>
+              <div style="width:32px;height:2px;background:#ddd;"></div>
+            </div>
+            <div class="illust-browser-frame">
+              <div class="illust-browser-dots">
+                <span class="illust-browser-dot"></span>
+                <span class="illust-browser-dot"></span>
+                <span class="illust-browser-dot"></span>
+              </div>
+              <div class="illust-browser-body">
+                <div class="illust-browser-line"></div>
+                <div class="illust-browser-line"></div>
+                <div class="illust-browser-line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="use-case-content">
+          <h3>Streamlined GitHub Integration</h3>
+          <p>Simplify development with seamless GitHub integration and built-in builds. Deploy single applications and monorepos quickly.</p>
+        </div>
+      </div>
+
+      <!-- Use case 3 -->
+      <div class="use-case-item">
+        <div class="use-case-illustration">
+          <div class="illust-collaboration">
+            <div class="illust-cursor">
+              <div class="illust-cursor-box">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8632b" stroke-width="1.5"><polygon points="5 3 19 12 12 12 8 21 5 3"/></svg>
+              </div>
+              <span class="illust-cursor-label">PLAYER 1</span>
+            </div>
+            <div class="illust-cursor" style="margin-left: 40px;">
+              <div class="illust-cursor-box filled">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#e8632b" stroke-width="1.5"><polygon points="5 3 19 12 12 12 8 21 5 3"/></svg>
+              </div>
+              <span class="illust-cursor-label">PLAYER 2</span>
+            </div>
+          </div>
+        </div>
+        <div class="use-case-content">
+          <h3>Collaborative Project Sharing</h3>
+          <p>Share projects using unique, protected links with designers and developers to iterate quickly.</p>
+        </div>
+      </div>
+
+      <!-- Use case 4 -->
+      <div class="use-case-item">
+        <div class="use-case-illustration">
+          <div class="illust-scaling">
+            <div class="illust-server">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            </div>
+            <div class="illust-server">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            </div>
+            <div class="illust-server">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><line x1="6" y1="6" x2="6.01" y2="6"/><line x1="6" y1="18" x2="6.01" y2="18"/></svg>
+            </div>
+          </div>
+        </div>
+        <div class="use-case-content">
+          <h3>Automatic Scaling</h3>
+          <p>Deploy apps instantly and scale automatically with Cloudflare Pages. The Cloudflare network handles huge traffic spikes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CODE EXAMPLES SECTION ============ -->
+<section class="code-section" id="code-examples">
+  <div class="container">
+    <h2 class="fade-in-up">Code Examples for Cloudflare Pages</h2>
+    <p class="subtitle fade-in-up">Explore code examples for building and deploying full-stack applications</p>
+
+    <div class="code-layout fade-in-up">
+      <!-- Code Editor -->
+      <div class="code-editor">
+        <div class="code-tabs" role="tablist">
+          <button class="code-tab active" role="tab" data-tab="nextjs" id="tab-nextjs">nextjs-pages.js</button>
+          <button class="code-tab" role="tab" data-tab="flask" id="tab-flask">flask-pages.py</button>
+          <button class="code-tab" role="tab" data-tab="deploy" id="tab-deploy">deploy-pages.sh</button>
+          <button class="code-tab" role="tab" data-tab="html" id="tab-html">index.html</button>
+        </div>
+        <div class="code-content" id="code-display">
+          <div class="code-panel" data-panel="nextjs">
+            <div class="code-line"><span class="code-line-num">1</span><span class="code-line-text"><span class="code-keyword">import</span> { <span class="code-component">NextPage</span> } <span class="code-keyword">from</span> <span class="code-string">'next'</span>;</span></div>
+            <div class="code-line"><span class="code-line-num">2</span><span class="code-line-text"><span class="code-keyword">export default function</span> <span class="code-component">HomePage</span>() {</span></div>
+            <div class="code-line"><span class="code-line-num">3</span><span class="code-line-text">    <span class="code-keyword">return</span> <span class="code-tag">&lt;div&gt;</span><span class="code-text-content">Welcome to my Pages site!</span><span class="code-tag">&lt;/div&gt;</span>;</span></div>
+            <div class="code-line"><span class="code-line-num">4</span><span class="code-line-text">}</span></div>
+          </div>
+          <div class="code-panel" data-panel="flask" style="display:none;">
+            <div class="code-line"><span class="code-line-num">1</span><span class="code-line-text"><span class="code-keyword">from</span> flask <span class="code-keyword">import</span> Flask</span></div>
+            <div class="code-line"><span class="code-line-num">2</span><span class="code-line-text">app = Flask(__name__)</span></div>
+            <div class="code-line"><span class="code-line-num">3</span><span class="code-line-text"></span></div>
+            <div class="code-line"><span class="code-line-num">4</span><span class="code-line-text"><span class="code-keyword">@app.route</span>(<span class="code-string">'/'</span>)</span></div>
+            <div class="code-line"><span class="code-line-num">5</span><span class="code-line-text"><span class="code-keyword">def</span> <span class="code-component">home</span>():</span></div>
+            <div class="code-line"><span class="code-line-num">6</span><span class="code-line-text">    <span class="code-keyword">return</span> <span class="code-string">"Hello from Pages!"</span></span></div>
+          </div>
+          <div class="code-panel" data-panel="deploy" style="display:none;">
+            <div class="code-line"><span class="code-line-num">1</span><span class="code-line-text"><span class="code-keyword">#!/bin/bash</span></span></div>
+            <div class="code-line"><span class="code-line-num">2</span><span class="code-line-text">npx wrangler pages deploy ./dist</span></div>
+          </div>
+          <div class="code-panel" data-panel="html" style="display:none;">
+            <div class="code-line"><span class="code-line-num">1</span><span class="code-line-text"><span class="code-tag">&lt;!DOCTYPE html&gt;</span></span></div>
+            <div class="code-line"><span class="code-line-num">2</span><span class="code-line-text"><span class="code-tag">&lt;html&gt;</span></span></div>
+            <div class="code-line"><span class="code-line-num">3</span><span class="code-line-text">  <span class="code-tag">&lt;body&gt;</span></span></div>
+            <div class="code-line"><span class="code-line-num">4</span><span class="code-line-text">    <span class="code-tag">&lt;h1&gt;</span>My Pages Site<span class="code-tag">&lt;/h1&gt;</span></span></div>
+            <div class="code-line"><span class="code-line-num">5</span><span class="code-line-text">  <span class="code-tag">&lt;/body&gt;</span></span></div>
+            <div class="code-line"><span class="code-line-num">6</span><span class="code-line-text"><span class="code-tag">&lt;/html&gt;</span></span></div>
+          </div>
+          <button class="code-copy-btn" aria-label="Copy code">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Examples List -->
+      <div class="code-examples-list">
+        <div class="code-example-item active" data-example="nextjs" id="example-nextjs">
+          <h4>Deploy a Static Site with Next.js</h4>
+          <p>Use Cloudflare Pages to deploy a static site with Next.js or React.</p>
+        </div>
+        <div class="code-example-item" data-example="flask" id="example-flask">
+          <h4>Build a Serverless API with Flask</h4>
+          <p>Use Cloudflare Pages to build a serverless API with Flask.</p>
+        </div>
+        <div class="code-example-item" data-example="deploy" id="example-deploy">
+          <h4>Deploy with GitHub Integration</h4>
+          <p>Use Cloudflare Pages to deploy a site with GitHub integration.</p>
+        </div>
+        <div class="code-example-item" data-example="html" id="example-html">
+          <h4>Add Web Analytics</h4>
+          <p>Use Cloudflare Pages to add web analytics to your site.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIAL SECTION ============ -->
+<section class="testimonial-section" id="testimonial">
+  <div class="testimonial-inner">
+    <div>
+      <p class="testimonial-quote">"Choosing Cloudflare as our serverless provider was a no-brainer. Workers KV took just 15 minutes to get up and running. The ability to quickly spin up a Worker, deploy it to production, and scale effortlessly has been invaluable."</p>
+      <div class="testimonial-author">
+        <span>Sammi Sinno</span>
+        <span>CEO</span>
+      </div>
+    </div>
+    <div class="testimonial-logo">
+      <img src="assets/images/leagued-logo.jpg" alt="Leagued logo" width="120" height="120">
+      <span class="testimonial-logo-name">Leagued</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRIMITIVES SECTION ============ -->
+<section class="primitives-section" id="primitives">
+  <div class="container">
+    <h2 class="fade-in-up">Powerful primitives, seamlessly integrated</h2>
+    <p class="subtitle fade-in-up">Built on systems powering 20% of the Internet, Cloudflare Pages run on the same infrastructure Cloudflare uses to build Cloudflare. Enterprise-grade reliability, security, and performance are standard.</p>
+
+    <div class="primitives-grid fade-in-up">
+      <!-- Compute -->
+      <div class="primitives-category">
+        <div class="primitives-category-title">Compute</div>
+        <a href="#" class="primitive-item">
+          <svg class="primitive-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <div class="primitive-info"><h4>Browser Run</h4><p>Automated browsers</p></div>
+        </a>
+        <a href="#" class="primitive-item">
+          <svg class="primitive-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+          <div class="primitive-info"><h4>Containers</h4><p>Any language, anywhere</p></div>
+        </a>
+        <a href="#" class="primitive-item">
+          <svg class="primitive-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          <div class="primitive-info"><h4>Durable Objects</h4><p>Stateful compute</p></div>
+        </a>
+        <a href="#" class="primitive-item">
+          <svg class="primitive-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <div class="primitive-info"><h4>Sandboxes</h4><p>Secure code execution</p></div>
+        </a>
+        <a href="#" class="primitive-item">
+          <svg class="primitive-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          <div class="primitive-info"><h4>Workers</h4><p>Global serverless functions</p></div>
+        </a>
+        <a href="#" class="primitive-item">
+          <svg class="primitive-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          <div class="primitive-info"><h4>Workers for Platforms</h4><p>Programmable Platform Solutions</p></div>
+        </a>
+        <a href="#" class="primitive-item">
+          <svg class="primitive-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+          <div class="primitive-info"><h4>Workflows</h4><p>Reliable task orchestration</p></div>
+        </a>
+      </div>
+
+      <!-- Storage -->
+      <div class="primitives-category">
+        <div class="primitives-category-title">Storage</div>
+        <a href="#" class="primitive-item">
+          <svg class="primitive-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          <div class="primitive-info"><h4>Artifacts</h4><p>Git-native versioned storage</p></div>
+        </a>
+        <a href="#" class="primitive-item">
+          <svg class="primitive-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          <div class="primitive-info"><h4>D1</h4><p>Serverless SQL</p></div>
+        </a>
+        <a href="#" class="primitive-item">
+          <svg class="primitive-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+          <div class="primitive-info"><h4>Data Platform</h4><p>Ingest, Catalog & Query</p></div>
+        </a>
+        <a href="#" class="primitive-item">
+          <svg class="primitive-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+          <div class="primitive-info"><h4>Hyperdrive</h4><p>Global databases</p></div>
+        </a>
+        <a href="#" class="primitive-item">
+          <svg class="primitive-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+          <div class="primitive-info"><h4>Queues</h4><p>Message processing</p></div>
+        </a>
+        <a href="#" class="primitive-item">
+          <svg class="primitive-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          <div class="primitive-info"><h4>R2</h4><p>Egress-free storage</p></div>
+        </a>
+        <a href="#" class="primitive-item">
+          <svg class="primitive-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          <div class="primitive-info"><h4>KV</h4><p>Global key-value store</p></div>
+        </a>
+      </div>
+
+      <!-- AI -->
+      <div class="primitives-category">
+        <div class="primitives-category-title">AI</div>
+        <a href="#" class="primitive-item">
+          <svg class="primitive-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          <div class="primitive-info"><h4>Agents</h4><p>Build stateful AI agents</p></div>
+        </a>
+        <a href="#" class="primitive-item">
+          <svg class="primitive-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          <div class="primitive-info"><h4>AI Gateway</h4><p>AI observability</p></div>
+        </a>
+        <a href="#" class="primitive-item">
+          <svg class="primitive-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <div class="primitive-info"><h4>AI Search</h4><p>Instant retrieval</p></div>
+        </a>
+        <a href="#" class="primitive-item">
+          <svg class="primitive-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+          <div class="primitive-info"><h4>Vectorize</h4><p>Vector database</p></div>
+        </a>
+        <a href="#" class="primitive-item">
+          <svg class="primitive-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <div class="primitive-info"><h4>Workers AI</h4><p>Edge AI models</p></div>
+        </a>
+      </div>
+
+      <!-- Security row (additional items visible in reference) -->
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BANNER ============ -->
+<section class="cta-section" id="cta">
+  <div class="cta-banner fade-in-up">
+    <!-- Floating icons -->
+    <div class="cta-icons">
+      <div class="cta-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </div>
+      <div class="cta-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      </div>
+      <div class="cta-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+      </div>
+      <div class="cta-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <div class="cta-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
+      </div>
+      <div class="cta-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </div>
+    </div>
+    <h2>Build without boundaries</h2>
+    <p class="subtitle">Join thousands of developers who've eliminated infrastructure complexity and deployed globally with Cloudflare. Start building for free — no credit card required.</p>
+    <div class="cta-actions">
+      <a href="#" class="btn btn-white btn-lg">Start building for free</a>
+      <a href="#" class="btn btn-white-outline btn-lg">View docs</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee-section" aria-hidden="true">
+  <div class="marquee-track" id="marquee-track">
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Mitigates the Internet's biggest DDoS attacks
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+      Predictable pricing without surprises
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Identity-aware Zero Trust access that retires your VPN
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+      Battle-tested infrastructure powering millions
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      CDN, WAF, and DNS faster than the public Internet
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      No cold starts or region complexity
+    </div>
+    <!-- Duplicate for seamless loop -->
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Mitigates the Internet's biggest DDoS attacks
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+      Predictable pricing without surprises
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Identity-aware Zero Trust access that retires your VPN
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+      Battle-tested infrastructure powering millions
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      CDN, WAF, and DNS faster than the public Internet
+    </div>
+    <div class="marquee-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      No cold starts or region complexity
+    </div>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer" id="footer">
+  <div class="footer-top">
+    <div class="footer-wordmark">CLOUDFLARE</div>
+
+    <!-- Footer Links Row 1 -->
+    <div class="footer-links-grid">
+      <div class="footer-column">
+        <h4>Getting started</h4>
+        <ul>
+          <li><a href="#">Plans</a></li>
+          <li><a href="#">Contact sales</a></li>
+          <li><a href="#">Partners</a></li>
+          <li><a href="#">Find a partner</a></li>
+          <li><a href="#">Startups</a></li>
+          <li><a href="#">Under attack?</a></li>
+          <li><a href="#">Domain name search</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Public interest</h4>
+        <ul>
+          <li><a href="#">Project Galileo</a></li>
+          <li><a href="#">Athenian Project</a></li>
+          <li><a href="#">Cloudflare for Campaigns</a></li>
+          <li><a href="#">Project Fairshot</a></li>
+          <li><a href="#">Impact/ESG</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#">App innovation report</a></li>
+          <li><a href="#">Cloudflare Radar</a></li>
+          <li><a href="#">Case studies</a></li>
+          <li><a href="#">Status</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Solutions</h4>
+        <ul>
+          <li><a href="#">SSE and SASE platform</a></li>
+          <li><a href="#">Cloudflare AI Cloud</a></li>
+          <li><a href="#">AI Security</a></li>
+          <li><a href="#">Frontend Development Platform</a></li>
+          <li><a href="#">Multi-Tenant Platform Development</a></li>
+          <li><a href="#">Web Security Platform</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Footer Links Row 2 -->
+    <div class="footer-links-grid-2">
+      <div class="footer-column">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Investors</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Press kit</a></li>
+          <li><a href="#">Global network</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Compliance</h4>
+        <ul>
+          <li><a href="#">Compliance resources</a></li>
+          <li><a href="#">Trust Hub</a></li>
+          <li><a href="#">Data Protection</a></li>
+          <li><a href="#">Responsible AI</a></li>
+          <li><a href="#">Transparency report</a></li>
+          <li><a href="#">Report abuse</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4>Developers</h4>
+        <ul>
+          <li><a href="#">Documentation</a></li>
+          <li><a href="#">Learning center</a></li>
+          <li><a href="#">Community</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-legal">
+      <span>© 2026 Cloudflare, Inc.</span>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Use</a>
+      <a href="#">Cookie Preferences</a>
+    </div>
+    <div class="footer-social">
+      <a href="#" aria-label="Twitter">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="#" aria-label="LinkedIn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <a href="#" aria-label="GitHub">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ JAVASCRIPT ============ -->
+<script>
+  // Code tabs functionality
+  document.querySelectorAll('.code-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+      const target = tab.dataset.tab;
+
+      // Update active tab
+      document.querySelectorAll('.code-tab').forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      // Update active panel
+      document.querySelectorAll('.code-panel').forEach(p => p.style.display = 'none');
+      document.querySelector(`.code-panel[data-panel="${target}"]`).style.display = 'block';
+
+      // Update active example
+      document.querySelectorAll('.code-example-item').forEach(e => e.classList.remove('active'));
+      document.querySelector(`.code-example-item[data-example="${target}"]`)?.classList.add('active');
+    });
+  });
+
+  // Code example items click
+  document.querySelectorAll('.code-example-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const target = item.dataset.example;
+      document.querySelector(`.code-tab[data-tab="${target}"]`)?.click();
+    });
+  });
+
+  // Copy button
+  document.querySelector('.code-copy-btn')?.addEventListener('click', function() {
+    const activePanel = document.querySelector('.code-panel[style*="block"], .code-panel:not([style*="none"])');
+    if (activePanel) {
+      const text = activePanel.innerText.replace(/^\d+\s*/gm, '');
+      navigator.clipboard.writeText(text).then(() => {
+        this.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>';
+        setTimeout(() => {
+          this.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>';
+        }, 2000);
+      });
+    }
+  });
+
+  // Intersection Observer for fade-in animations
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.animationPlayState = 'running';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in-up').forEach(el => {
+      el.style.animationPlayState = 'paused';
+      observer.observe(el);
+    });
+  }
+</script>
+
+</body>
+</html>
