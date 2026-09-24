@@ -1,0 +1,1 @@
+import{r as t}from"./index.Bvt71uJM.js";import{u as n,a as r,M as u}from"./proxy.DbB8impi.js";globalThis.process??={};globalThis.process.env??={};function f(o){const s=n(()=>r(o)),{isStatic:e}=t.useContext(u);if(e){const[,a]=t.useState(o);t.useEffect(()=>s.on("change",a),[])}return s}export{f as u};

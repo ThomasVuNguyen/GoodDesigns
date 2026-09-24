@@ -1,0 +1,65 @@
+/* Reveal elements whose original client runtime would animate into view. */
+header[style*="opacity:0"], main [style*="opacity:0"]:not([style*="grid-template-rows:0fr"]) {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+header nav[style*="height:0"] { opacity: 0 !important; }
+.dialog-shade { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: 24px; background: rgba(0,0,0,.58); }
+.dialog-card { position: relative; width: min(920px, 100%); overflow: hidden; border-radius: 18px; background: #f8f6ef; }
+.dialog-card img { display: block; width: 100%; }
+.dialog-close { position: absolute; z-index: 1; top: 12px; right: 12px; display: grid; width: 40px; height: 40px; place-items: center; border: 1px solid rgba(0,0,0,.12); border-radius: 50%; background: white; color: black; font: inherit; cursor: pointer; }
+body.dialog-open { overflow: hidden; }
+main[style*="opacity:0"] { opacity: 1 !important; }
+#top > div[style*="opacity:0"] { opacity: 1 !important; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+}
+main .origin-bottom[style*="transform:scale(0.97)"] { transform: none !important; }
+header button[aria-controls="mobile-navigation-menu"] { position: relative; z-index: 20; }
+header #mobile-navigation-menu { position: relative; z-index: 10; }
+header .absolute.top-0.right-24 { z-index: 30; }
+header #mobile-navigation-menu[style*="height: auto"] { margin-top: 52px !important; }
+header button[aria-controls="mobile-navigation-menu"] svg { display: none; }
+header button[aria-controls="mobile-navigation-menu"]::before,
+header button[aria-controls="mobile-navigation-menu"]::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 16px;
+  height: 1.5px;
+  border-radius: 2px;
+  background: rgba(0,0,0,.85);
+  transition: transform .2s ease;
+}
+header button[aria-controls="mobile-navigation-menu"]::after { transform: rotate(90deg); }
+header button[aria-controls="mobile-navigation-menu"].is-open::before { transform: rotate(45deg); }
+header button[aria-controls="mobile-navigation-menu"].is-open::after { transform: rotate(-45deg); }
+header button[aria-controls="mobile-navigation-menu"]::before { content: none !important; }
+header button[aria-controls="mobile-navigation-menu"]::after {
+  content: "+";
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 0;
+  background: transparent;
+  color: rgba(0,0,0,.85);
+  font: 24px/16px Arial, sans-serif;
+  text-align: center;
+  transform: none;
+}
+header button[aria-controls="mobile-navigation-menu"].is-open::after { content: "×"; font-size: 25px; }
+
+header button[aria-controls="mobile-navigation-menu"]::before,
+header button[aria-controls="mobile-navigation-menu"]::after { content: none !important; }
+header button[aria-controls="mobile-navigation-menu"] .local-menu-glyph {
+  display: block;
+  width: 16px;
+  height: 16px;
+  color: #151515;
+  font: 24px/16px Arial, sans-serif;
+  text-align: center;
+}
+header [style*="opacity:0"] { opacity: 1 !important; }

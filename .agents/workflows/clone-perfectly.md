@@ -32,6 +32,8 @@ The result is complete only when all of these are true:
 
 A page-shaped approximation is not done. A single screenshot used as the page is not reusable and is not done.
 
+Treat “perfect” as a visual claim: make it only after fresh desktop and mobile screenshots have been compared. If the available browser cannot capture or inspect either page, finish the useful implementation work, mark visual QA as blocked, and say exactly what could not be checked.
+
 ## 1. Establish a clean baseline
 
 1. Inspect the repository status and existing folders. Preserve unrelated user work.
@@ -88,15 +90,31 @@ Completion criterion: every visible section, asset, breakpoint behavior, and int
 
 ## 3. Collect assets deliberately
 
+### Choose the implementation path
+
+Inspect the delivered page before rebuilding it. If its initial HTML already contains the complete visible page and the original styles and assets can be saved, use that rendered structure as the first local pass. It usually preserves geometry and copy better than re-creating a complex page from one screenshot. If the page is client-rendered, its styles depend on a runtime you cannot reproduce locally, or the saved markup is incomplete, rebuild the page in the project's existing stack instead.
+
+For a rendered-page capture:
+
+1. Save the page markup and the stylesheets that actually style it. Keep the page's visible structure and copy intact.
+2. Before removing any scripts, finish the interaction inventory and identify which controls depend on them. Preserve the required runtime where it can run locally; otherwise implement each inventoried interaction in local code.
+3. Remove analytics, tracking pixels, and unrelated third-party widgets. Keep essential page behavior.
+4. Search the markup, stylesheets, and inline styles for every `src`, `srcset`, `poster`, preload, icon, font, and CSS `url(...)`. Save required files under `dist/assets/` and rewrite their references to local paths. Remove framework-only preload hints whose files are not included.
+5. Inspect all assets after scripts are removed. Reveal content that was meant to animate into view but is left hidden by inline styles such as `opacity: 0`; check menus, tabs, and other controls for dead states.
+6. Choose deliberately for every internal link: point to a matching local route, an in-page anchor, or the original public destination. Do not leave accidental broken local routes.
+
+Completion criterion: the build path matches the inspected page, captured-page dependencies are identified, and script changes account for every inventoried interaction.
+
 1. Save only the assets used by the scoped page into `dist/assets/`.
 2. Give authored assets meaningful names when practical. If source hashes must be retained, add `assets/manifest.json` mapping each file to its role and source URL.
 3. Download the actual font files and define local `@font-face` rules when licensing permits.
 4. Preserve image aspect ratios. Match the reference's `object-fit`, crop, and focal point in CSS.
 5. Prefer inline SVG for small geometric icons whose exact stroke and bounds matter.
+6. Check CSS `url(...)` references as well as HTML image tags; backgrounds and font files are easy to miss. Confirm each saved asset returns successfully from localhost.
 
 For public or commercial reuse, replace third-party trademarks, customer logos, photos, copy, and other protected assets with materials the user is allowed to publish. Document that boundary in the README.
 
-Completion criterion: every local asset opens successfully, its purpose is known, and disabling network access to the reference domain does not change the page.
+Completion criterion: every local asset opens successfully, its purpose is known, the captured page loads its visible design from local files, and disabling network access to the reference domain does not change the page.
 
 ## 4. Build from large geometry to fine detail
 
@@ -140,6 +158,8 @@ Fix mismatches in this priority order:
 7. Motion timing and hover polish
 
 Do not use screenshots from before the latest code change as evidence. Visual QA is a red/green loop: the current screenshot either matches closely enough or it exposes the next correction.
+
+Use the browser to capture both the live reference and localhost at the same viewport and scroll position. DOM inspection, copied HTML, and an HTTP 200 are useful evidence, but none substitute for seeing the rendered comparison. If browser capture is unavailable, keep the clone marked visually unverified instead of inferring a match from source code.
 
 Completion criterion: a fresh side-by-side review reveals no obvious mismatch at either target viewport, and every remaining intentional difference is documented.
 
@@ -212,4 +232,4 @@ Before reporting completion:
 4. Inspect repository status and stage only this website's files.
 5. Report the localhost URL, output folder, tested viewports, check results, and any intentional differences.
 
-If any completion criterion is still false, continue the loop or state the specific blocker. Do not describe the clone as complete based only on successful file creation or an HTTP 200 response.
+If any completion criterion is still false, continue the loop or state the specific blocker. Separate checks that passed from checks that could not be run. Do not describe the clone as perfect or complete based only on successful file creation, copied source markup, or an HTTP 200 response.

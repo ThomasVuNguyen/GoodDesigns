@@ -1,0 +1,1 @@
+globalThis.process??={};globalThis.process.env??={};const e=[{title:"Global Network",href:"/network"},{title:"Domain Registration",href:"/domains"},{title:"1.1.1.1",href:"https://one.one.one.one/"}];export{e as P};

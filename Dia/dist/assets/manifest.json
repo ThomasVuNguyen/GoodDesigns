@@ -1,0 +1,312 @@
+{
+  "reference": "https://www.diabrowser.com/",
+  "captured": "2026-09-24",
+  "assets": [
+    {
+      "file": "assets/favicon-96x96.png",
+      "source": "https://www.diabrowser.com/favicon-96x96.png",
+      "bytes": 3591,
+      "content_type": "image/png"
+    },
+    {
+      "file": "assets/favicon.svg",
+      "source": "https://www.diabrowser.com/favicon.svg",
+      "bytes": 10290,
+      "content_type": "image/svg+xml"
+    },
+    {
+      "file": "assets/favicon.ico",
+      "source": "https://www.diabrowser.com/favicon.ico",
+      "bytes": 15086,
+      "content_type": "image/vnd.microsoft.icon"
+    },
+    {
+      "file": "assets/apple-touch-icon.png",
+      "source": "https://www.diabrowser.com/apple-touch-icon.png",
+      "bytes": 7439,
+      "content_type": "image/png"
+    },
+    {
+      "file": "assets/leaf-shadows.webp",
+      "source": "https://www.diabrowser.com/_next/static/media/leaf-shadows-tinted.14cab7a3.webp",
+      "bytes": 16318,
+      "content_type": "image/webp"
+    },
+    {
+      "file": "assets/thumbnail.webp",
+      "source": "https://image.mux.com/AfVIo00zNCeCXbiFeHQ7RuHZUfzl3agTCOno01XBF01lRs/thumbnail.webp?width=1920&fit_mode=preserve&time=0",
+      "bytes": 27500,
+      "content_type": "image/webp"
+    },
+    {
+      "file": "assets/dia-reads-01.47a110ff.png",
+      "source": "https://www.diabrowser.com/_next/static/media/dia-reads-01.47a110ff.png?auto=format&q=100&w=800&dpr=2",
+      "bytes": 1539486,
+      "content_type": "image/png"
+    },
+    {
+      "file": "assets/dia-reads-02.48ca63dd.png",
+      "source": "https://www.diabrowser.com/_next/static/media/dia-reads-02.48ca63dd.png?auto=format&q=100&w=800&dpr=2",
+      "bytes": 293071,
+      "content_type": "image/png"
+    },
+    {
+      "file": "assets/dia-reads-03.aff7fb54.png",
+      "source": "https://www.diabrowser.com/_next/static/media/dia-reads-03.aff7fb54.png?auto=format&q=100&w=800&dpr=2",
+      "bytes": 369322,
+      "content_type": "image/png"
+    },
+    {
+      "file": "assets/product-a7d00e4699171e3827f316d9b89642504154c443.png",
+      "source": "https://cdn.sanity.io/images/e5fj2khm/production/a7d00e4699171e3827f316d9b89642504154c443-1096x711.png?auto=format&q=100&w=800&dpr=2",
+      "bytes": 163934,
+      "content_type": "image/webp"
+    },
+    {
+      "file": "assets/thumbnail.webp",
+      "source": "https://image.mux.com/I88MBGecyQVKRzo6NFuq02xLgXhqBB00enYJ2O02AGKYKs/thumbnail.webp?width=1920&fit_mode=preserve",
+      "bytes": 70584,
+      "content_type": "image/webp"
+    },
+    {
+      "file": "assets/thumbnail.webp",
+      "source": "https://image.mux.com/E5RJTOXaiqwYHPNO8IFYspUiOrViAiq9XCWbkz1D9j4/thumbnail.webp?width=1920&fit_mode=preserve",
+      "bytes": 58776,
+      "content_type": "image/webp"
+    },
+    {
+      "file": "assets/thumbnail.webp",
+      "source": "https://image.mux.com/zqOwkkAS9zCeLJq016siCak1olCG0202BGJXtLq2xxNEHI/thumbnail.webp?width=1920&fit_mode=preserve",
+      "bytes": 95138,
+      "content_type": "image/webp"
+    },
+    {
+      "file": "assets/product-686bbe82168ca24ae80bd375a54dcd5d84cec1e4.png",
+      "source": "https://cdn.sanity.io/images/e5fj2khm/production/686bbe82168ca24ae80bd375a54dcd5d84cec1e4-1744x1191.png?auto=format&q=100&w=800&dpr=2",
+      "bytes": 345766,
+      "content_type": "image/webp"
+    },
+    {
+      "file": "assets/product-6a5875cc562b7e888f7c487610bfd17ee40ed969.png",
+      "source": "https://cdn.sanity.io/images/e5fj2khm/production/6a5875cc562b7e888f7c487610bfd17ee40ed969-774x975.png?auto=format&q=100&w=800&dpr=2",
+      "bytes": 238754,
+      "content_type": "image/webp"
+    },
+    {
+      "file": "assets/fonts/ABCOracle-Light.woff2",
+      "source": "https://www.diabrowser.com/fonts/ABCOracle-Light.woff2",
+      "bytes": 49820,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/ABCOracle-Book.woff2",
+      "source": "https://www.diabrowser.com/fonts/ABCOracle-Book.woff2",
+      "bytes": 49716,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/ABCOracle-Regular.woff2",
+      "source": "https://www.diabrowser.com/fonts/ABCOracle-Regular.woff2",
+      "bytes": 44704,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/ABCOracle-Medium.woff2",
+      "source": "https://www.diabrowser.com/fonts/ABCOracle-Medium.woff2",
+      "bytes": 50148,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/ABCOracle-Bold.woff2",
+      "source": "https://www.diabrowser.com/fonts/ABCOracle-Bold.woff2",
+      "bytes": 49076,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/ABCFavoritMono-Regular.woff2",
+      "source": "https://www.diabrowser.com/fonts/ABCFavoritMono-Regular.woff2",
+      "bytes": 27952,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/ABCFavoritMono-Medium.woff2",
+      "source": "https://www.diabrowser.com/fonts/ABCFavoritMono-Medium.woff2",
+      "bytes": 28416,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/ABCFavoritMono-Bold.woff2",
+      "source": "https://www.diabrowser.com/fonts/ABCFavoritMono-Bold.woff2",
+      "bytes": 27764,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[+100].woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[+100].woff2",
+      "bytes": 68076,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[+90].woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[+90].woff2",
+      "bytes": 70512,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[+80].woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[+80].woff2",
+      "bytes": 70708,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[+70].woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[+70].woff2",
+      "bytes": 70872,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[+60].woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[+60].woff2",
+      "bytes": 70928,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[+50].woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[+50].woff2",
+      "bytes": 72372,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[+40].woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[+40].woff2",
+      "bytes": 72944,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[+30].woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[+30].woff2",
+      "bytes": 72652,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[+20].woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[+20].woff2",
+      "bytes": 72484,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[+10].woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[+10].woff2",
+      "bytes": 71940,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[0].woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[0].woff2",
+      "bytes": 68676,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[-10].woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[-10].woff2",
+      "bytes": 77292,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[-10]-Italic.woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[-10]-Italic.woff2",
+      "bytes": 20656,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[-20].woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[-20].woff2",
+      "bytes": 79052,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[-30].woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[-30].woff2",
+      "bytes": 80252,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[-40].woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[-40].woff2",
+      "bytes": 82740,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[-50].woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[-50].woff2",
+      "bytes": 85176,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[-60].woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[-60].woff2",
+      "bytes": 86580,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[-70].woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[-70].woff2",
+      "bytes": 86868,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[-80].woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[-80].woff2",
+      "bytes": 85696,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[-90].woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[-90].woff2",
+      "bytes": 84208,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-[-100].woff2",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-[-100].woff2",
+      "bytes": 82736,
+      "content_type": "font/woff2"
+    },
+    {
+      "file": "assets/dark-background.png",
+      "source": "https://www.diabrowser.com/images/dark-background.png",
+      "bytes": 2905689,
+      "content_type": "image/png"
+    },
+    {
+      "file": "assets/pill-background.png",
+      "source": "https://www.diabrowser.com/images/pill-background.png",
+      "bytes": 43588,
+      "content_type": "image/png"
+    },
+    {
+      "file": "assets/poster-hero.webp",
+      "source": "https://image.mux.com/AfVIo00zNCeCXbiFeHQ7RuHZUfzl3agTCOno01XBF01lRs/thumbnail.webp?width=1920&fit_mode=preserve&time=15",
+      "bytes": 82122,
+      "content_type": "image/webp; captured at 15 seconds for the first viewport"
+    },
+    {
+      "file": "assets/poster-profiles.webp",
+      "source": "https://image.mux.com/I88MBGecyQVKRzo6NFuq02xLgXhqBB00enYJ2O02AGKYKs/thumbnail.webp?width=1920&fit_mode=preserve",
+      "bytes": 70584,
+      "content_type": "image/webp"
+    },
+    {
+      "file": "assets/poster-meetings.webp",
+      "source": "https://image.mux.com/E5RJTOXaiqwYHPNO8IFYspUiOrViAiq9XCWbkz1D9j4/thumbnail.webp?width=1920&fit_mode=preserve",
+      "bytes": 58776,
+      "content_type": "image/webp"
+    },
+    {
+      "file": "assets/poster-splits.webp",
+      "source": "https://image.mux.com/zqOwkkAS9zCeLJq016siCak1olCG0202BGJXtLq2xxNEHI/thumbnail.webp?width=1920&fit_mode=preserve",
+      "bytes": 95138,
+      "content_type": "image/webp"
+    }
+  ]
+}

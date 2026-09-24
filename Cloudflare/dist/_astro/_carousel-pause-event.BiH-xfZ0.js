@@ -1,0 +1,1 @@
+globalThis.process??={};globalThis.process.env??={};const s="customer-carousel-pause-change";function n(){return typeof window>"u"?!1:!!window.__customerCarouselPaused}function t(e){if(typeof window>"u")return;const o=window;o.__customerCarouselPaused=e,window.dispatchEvent(new CustomEvent(s,{detail:{paused:e}}))}export{s as C,t as d,n as r};

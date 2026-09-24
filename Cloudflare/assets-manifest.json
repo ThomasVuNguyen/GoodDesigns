@@ -1,0 +1,662 @@
+{
+  "reference": "https://www.cloudflare.com/",
+  "captured": "2026-09-24",
+  "assets": [
+    {
+      "url": "https://www.cloudflare.com/_astro/DomainSearchApp.8QsXXcEv.css",
+      "local": "/_astro/DomainSearchApp.8QsXXcEv.css"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/SearchSm.bdLnsP1t.js",
+      "local": "/_astro/SearchSm.bdLnsP1t.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_agentation-toolbar.BJT9CkVp.js",
+      "local": "/_astro/_agentation-toolbar.BJT9CkVp.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_agents.BS9tinsc.js",
+      "local": "/_astro/_agents.BS9tinsc.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_ai-search-modal.astro_astro_type_script_index_0_lang.B0TZFBn6.js",
+      "local": "/_astro/_ai-search-modal.astro_astro_type_script_index_0_lang.B0TZFBn6.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_browser.DicmJ60f.js",
+      "local": "/_astro/_browser.DicmJ60f.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_button.C6gEI5Hw.js",
+      "local": "/_astro/_button.C6gEI5Hw.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_carousel-pause-event.BiH-xfZ0.js",
+      "local": "/_astro/_carousel-pause-event.BiH-xfZ0.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_container.ypgohhA1.js",
+      "local": "/_astro/_container.ypgohhA1.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_control-slider.yyQXdleT.js",
+      "local": "/_astro/_control-slider.yyQXdleT.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_corner-lines.D56o6jc1.js",
+      "local": "/_astro/_corner-lines.D56o6jc1.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_corner-squares.DiqxCxro.js",
+      "local": "/_astro/_corner-squares.DiqxCxro.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_dashed-border.BFTj80x3.js",
+      "local": "/_astro/_dashed-border.BFTj80x3.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_dashed-line.fsRHST_A.js",
+      "local": "/_astro/_dashed-line.fsRHST_A.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_dots.CaGZk5dn.js",
+      "local": "/_astro/_dots.CaGZk5dn.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_footer-privacy-choices.CZU2Aezz.js",
+      "local": "/_astro/_footer-privacy-choices.CZU2Aezz.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_globe.DHK0FEOR.js",
+      "local": "/_astro/_globe.DHK0FEOR.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_image.DXHTH8KM.js",
+      "local": "/_astro/_image.DXHTH8KM.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_infinite-slider.Boez-vRC.js",
+      "local": "/_astro/_infinite-slider.Boez-vRC.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_keyframe.Dy_gnIkd.js",
+      "local": "/_astro/_keyframe.Dy_gnIkd.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_layout.astro_astro_type_script_index_1_lang.MkjUBwT7.js",
+      "local": "/_astro/_layout.astro_astro_type_script_index_1_lang.MkjUBwT7.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_link-arrow.DFiY-I_2.js",
+      "local": "/_astro/_link-arrow.DFiY-I_2.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_linkified-description.DF933Kcr.js",
+      "local": "/_astro/_linkified-description.DF933Kcr.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_logos.15Sltq3c.js",
+      "local": "/_astro/_logos.15Sltq3c.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_open-ai.CobRdYXe.js",
+      "local": "/_astro/_open-ai.CobRdYXe.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_performance-monitor.B_x1B8Gj.js",
+      "local": "/_astro/_performance-monitor.B_x1B8Gj.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_platform-content.Dk50FV5m.js",
+      "local": "/_astro/_platform-content.Dk50FV5m.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_poi.DDn45Zdg.js",
+      "local": "/_astro/_poi.DDn45Zdg.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_popups.BxE6aU-f.js",
+      "local": "/_astro/_popups.BxE6aU-f.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_privacy-choices.DXDu5hg2.js",
+      "local": "/_astro/_privacy-choices.DXDu5hg2.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_product-dropdown-chin-links.C15pcPe7.js",
+      "local": "/_astro/_product-dropdown-chin-links.C15pcPe7.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_quote-media.D1_0rPCH.js",
+      "local": "/_astro/_quote-media.D1_0rPCH.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_responsive-modal.Bng4Pck1.js",
+      "local": "/_astro/_responsive-modal.Bng4Pck1.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_rotating-text.JTt1MZls.js",
+      "local": "/_astro/_rotating-text.JTt1MZls.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_select.Dxli9DZf.js",
+      "local": "/_astro/_select.Dxli9DZf.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_separator.BBOwvw2r.css",
+      "local": "/_astro/_separator.BBOwvw2r.css"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_shipping.D4Qw86u4.js",
+      "local": "/_astro/_shipping.D4Qw86u4.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_simple-tooltip.P9VWKmnC.js",
+      "local": "/_astro/_simple-tooltip.P9VWKmnC.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_sprite-icon.P_KSxWjD.js",
+      "local": "/_astro/_sprite-icon.P_KSxWjD.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_stepper.CXEDIVui.js",
+      "local": "/_astro/_stepper.CXEDIVui.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_tabs.2hCn_pXc.js",
+      "local": "/_astro/_tabs.2hCn_pXc.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_tooltip.BuCOgGnK.js",
+      "local": "/_astro/_tooltip.BuCOgGnK.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_trigger.Q3o-g2Fd.js",
+      "local": "/_astro/_trigger.Q3o-g2Fd.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_ui.0fPrtVG6.js",
+      "local": "/_astro/_ui.0fPrtVG6.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_use-auto-rotate.ChRsDspy.js",
+      "local": "/_astro/_use-auto-rotate.ChRsDspy.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_use-body-scroll-lock.ClIjeKSb.js",
+      "local": "/_astro/_use-body-scroll-lock.ClIjeKSb.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_use-breakpoint.C2jSCcA3.js",
+      "local": "/_astro/_use-breakpoint.C2jSCcA3.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_use-dark-mode.CJnPP9j-.js",
+      "local": "/_astro/_use-dark-mode.CJnPP9j-.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_use-in-view.DYmITXyX.js",
+      "local": "/_astro/_use-in-view.DYmITXyX.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_use-webgl-support._QQf5KV5.js",
+      "local": "/_astro/_use-webgl-support._QQf5KV5.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/_waveform.43-NjNol.js",
+      "local": "/_astro/_waveform.43-NjNol.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/bridge.BGcwWeWm.js",
+      "local": "/_astro/bridge.BGcwWeWm.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/client.BobvjJnu.js",
+      "local": "/_astro/client.BobvjJnu.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/client.NJmn-zt1.js",
+      "local": "/_astro/client.NJmn-zt1.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/config.Do2ocrsN.js",
+      "local": "/_astro/config.Do2ocrsN.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/data.C6VO65WV.js",
+      "local": "/_astro/data.C6VO65WV.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/dropdown-menu.hmcigs8Z.js",
+      "local": "/_astro/dropdown-menu.hmcigs8Z.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/image-url.D0NMJRSQ.js",
+      "local": "/_astro/image-url.D0NMJRSQ.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.AQboWZPc.js",
+      "local": "/_astro/index.AQboWZPc.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.BH-Qs_T1.js",
+      "local": "/_astro/index.BH-Qs_T1.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.BHJWNCIg.js",
+      "local": "/_astro/index.BHJWNCIg.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.BWVBTTGG.js",
+      "local": "/_astro/index.BWVBTTGG.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.BmJns3rU.js",
+      "local": "/_astro/index.BmJns3rU.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.Bvt71uJM.js",
+      "local": "/_astro/index.Bvt71uJM.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.C-7oc_f2.js",
+      "local": "/_astro/index.C-7oc_f2.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.C9KgyGeR.js",
+      "local": "/_astro/index.C9KgyGeR.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.CBObQJ5a.js",
+      "local": "/_astro/index.CBObQJ5a.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.CN3UJUeJ.css",
+      "local": "/_astro/index.CN3UJUeJ.css"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.CW9GYvit.js",
+      "local": "/_astro/index.CW9GYvit.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.CcczbAED.js",
+      "local": "/_astro/index.CcczbAED.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.CfYooCCA.js",
+      "local": "/_astro/index.CfYooCCA.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.Ci0mnyLk.js",
+      "local": "/_astro/index.Ci0mnyLk.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.Cm-titPL.css",
+      "local": "/_astro/index.Cm-titPL.css"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.CqqHCyOl.js",
+      "local": "/_astro/index.CqqHCyOl.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.DCHM64Hb.js",
+      "local": "/_astro/index.DCHM64Hb.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.DCkm5R9e.js",
+      "local": "/_astro/index.DCkm5R9e.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.DEuOKImm.js",
+      "local": "/_astro/index.DEuOKImm.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.MEWpIbny.js",
+      "local": "/_astro/index.MEWpIbny.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.Tx2m30wf.js",
+      "local": "/_astro/index.Tx2m30wf.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index._qkO2sWU.js",
+      "local": "/_astro/index._qkO2sWU.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.eB9haOI5.js",
+      "local": "/_astro/index.eB9haOI5.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.gCLHZX1J.js",
+      "local": "/_astro/index.gCLHZX1J.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.lutVuxoH.js",
+      "local": "/_astro/index.lutVuxoH.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/index.xlN6-Jrw.js",
+      "local": "/_astro/index.xlN6-Jrw.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/input.DU7wRzTc.js",
+      "local": "/_astro/input.DU7wRzTc.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/jsx-runtime.DXco-PnT.js",
+      "local": "/_astro/jsx-runtime.DXco-PnT.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/loader-j2v6fab8iucuxz1z.Dss5gSrA.js",
+      "local": "/_astro/loader-j2v6fab8iucuxz1z.Dss5gSrA.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/logo-wall-svg-normalize.D-AvnGeH.js",
+      "local": "/_astro/logo-wall-svg-normalize.D-AvnGeH.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/marketing-paths.CBJKr9bc.js",
+      "local": "/_astro/marketing-paths.CBJKr9bc.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/motion.DQ4LMkoi.js",
+      "local": "/_astro/motion.DQ4LMkoi.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/portal-scrim.BEYASeEO.js",
+      "local": "/_astro/portal-scrim.BEYASeEO.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/preview-content-performance.DaMOZZZh.js",
+      "local": "/_astro/preview-content-performance.DaMOZZZh.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/proxy.DbB8impi.js",
+      "local": "/_astro/proxy.DbB8impi.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/sheet.CZ7lZ3uS.js",
+      "local": "/_astro/sheet.CZ7lZ3uS.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/use-motion-value.Szc7UhC7.js",
+      "local": "/_astro/use-motion-value.Szc7UhC7.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/use-reduced-motion.CIlg_-Qh.js",
+      "local": "/_astro/use-reduced-motion.CIlg_-Qh.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/use-transform.BcUBlJbh.js",
+      "local": "/_astro/use-transform.BcUBlJbh.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/utils.lB_l3zhK.js",
+      "local": "/_astro/utils.lB_l3zhK.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/with-selector.DW5z7Wr-.js",
+      "local": "/_astro/with-selector.DW5z7Wr-.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/_astro/x.D_GuypfC.js",
+      "local": "/_astro/x.D_GuypfC.js"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/02430f10-e1fe-4e48-8400-43adfa3328e2.svg",
+      "local": "/companies/02430f10-e1fe-4e48-8400-43adfa3328e2.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/05745480-bcb4-4699-8344-aa2e854fe6a6.svg",
+      "local": "/companies/05745480-bcb4-4699-8344-aa2e854fe6a6.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/0c59832d-e3d3-458e-bb88-8894a4f9d18e.svg",
+      "local": "/companies/0c59832d-e3d3-458e-bb88-8894a4f9d18e.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/1e9d9fd3-c1e8-47df-a4dc-7c97d9f8b6c8.svg",
+      "local": "/companies/1e9d9fd3-c1e8-47df-a4dc-7c97d9f8b6c8.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/1f3ec03d-833c-4b28-b61d-317e3fa0c886.svg",
+      "local": "/companies/1f3ec03d-833c-4b28-b61d-317e3fa0c886.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/21708102-7a68-4230-8ca6-b088879ce262.png",
+      "local": "/companies/21708102-7a68-4230-8ca6-b088879ce262.png"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/23f76a0c-6da4-4fcd-a101-7fcddcb3cc29.svg",
+      "local": "/companies/23f76a0c-6da4-4fcd-a101-7fcddcb3cc29.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/2427de55-f683-4bf7-a30a-d748222436ce.svg",
+      "local": "/companies/2427de55-f683-4bf7-a30a-d748222436ce.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/2aee0afe-176a-449e-a926-a4444adf1fe0.svg",
+      "local": "/companies/2aee0afe-176a-449e-a926-a4444adf1fe0.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/39a8c473-3e3e-448b-ac0b-109ec525621e.svg",
+      "local": "/companies/39a8c473-3e3e-448b-ac0b-109ec525621e.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/3ccce0b1-a008-42d0-a6e3-7c228a78d0c8.svg",
+      "local": "/companies/3ccce0b1-a008-42d0-a6e3-7c228a78d0c8.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/47e69d4e-6b6d-46e4-868a-3f22950572f8.svg",
+      "local": "/companies/47e69d4e-6b6d-46e4-868a-3f22950572f8.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/4b6fd6e4-96c4-4c26-a4e4-d52c75d93cdf.svg",
+      "local": "/companies/4b6fd6e4-96c4-4c26-a4e4-d52c75d93cdf.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/54d619f3-887b-4eb2-8c4a-1fd75959f303.svg",
+      "local": "/companies/54d619f3-887b-4eb2-8c4a-1fd75959f303.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/673e6f52-edfd-4d95-81b6-6a523da89374.svg",
+      "local": "/companies/673e6f52-edfd-4d95-81b6-6a523da89374.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/6ad20752-7949-4dc6-9de8-c93d5e33888a.svg",
+      "local": "/companies/6ad20752-7949-4dc6-9de8-c93d5e33888a.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/6d07e6ca-12a0-4244-b1dd-327cde491e2f.svg",
+      "local": "/companies/6d07e6ca-12a0-4244-b1dd-327cde491e2f.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/6d985b86-996a-45d4-b004-f8becedf5676.svg",
+      "local": "/companies/6d985b86-996a-45d4-b004-f8becedf5676.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/74c5e83e-abc8-49a4-a55b-0ecf972bb849.svg",
+      "local": "/companies/74c5e83e-abc8-49a4-a55b-0ecf972bb849.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/75ef1c21-b669-4199-b229-d6551a7e951d.svg",
+      "local": "/companies/75ef1c21-b669-4199-b229-d6551a7e951d.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/798a24ba-4e1b-4777-bf88-d534a6a9b690.svg",
+      "local": "/companies/798a24ba-4e1b-4777-bf88-d534a6a9b690.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/7b4629c1-433d-4069-a068-1a227076122c.svg",
+      "local": "/companies/7b4629c1-433d-4069-a068-1a227076122c.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/7d670892-b1c3-4d75-854e-f3cf43b5dd1a.svg",
+      "local": "/companies/7d670892-b1c3-4d75-854e-f3cf43b5dd1a.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/7f0c2889-d3c1-4b33-b205-e1917c22bb53.svg",
+      "local": "/companies/7f0c2889-d3c1-4b33-b205-e1917c22bb53.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/ad2cf871-580c-41ba-ac0c-8d2f7be3c8ff.svg",
+      "local": "/companies/ad2cf871-580c-41ba-ac0c-8d2f7be3c8ff.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/anthropic.png",
+      "local": "/companies/anthropic.png"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/asana.png",
+      "local": "/companies/asana.png"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/atlassian.png",
+      "local": "/companies/atlassian.png"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/bd5897bc-21b1-4ec0-bc08-6697da26ac59.svg",
+      "local": "/companies/bd5897bc-21b1-4ec0-bc08-6697da26ac59.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/block.png",
+      "local": "/companies/block.png"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/c9ead275-76e3-424e-b181-4f410ecb68ce.svg",
+      "local": "/companies/c9ead275-76e3-424e-b181-4f410ecb68ce.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/canva.png",
+      "local": "/companies/canva.png"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/coreweave.png",
+      "local": "/companies/coreweave.png"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/d3e85b73-865f-4017-b29c-5acaf120c0c4.svg",
+      "local": "/companies/d3e85b73-865f-4017-b29c-5acaf120c0c4.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/d89fbfe9-ff19-4095-9f9d-94e39bc90ecc.svg",
+      "local": "/companies/d89fbfe9-ff19-4095-9f9d-94e39bc90ecc.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/doordash.png",
+      "local": "/companies/doordash.png"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/e4ea9663-706f-4411-b25c-539fca52c862.svg",
+      "local": "/companies/e4ea9663-706f-4411-b25c-539fca52c862.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/e6a62228-5ebe-410e-bb84-d06227d882a2.svg",
+      "local": "/companies/e6a62228-5ebe-410e-bb84-d06227d882a2.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/ecbc9f10-50da-4a73-9a27-54a18d00aa9e.svg",
+      "local": "/companies/ecbc9f10-50da-4a73-9a27-54a18d00aa9e.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/ef9e904a-27f8-44e1-870f-935dc2bfdb90.svg",
+      "local": "/companies/ef9e904a-27f8-44e1-870f-935dc2bfdb90.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/intercom.png",
+      "local": "/companies/intercom.png"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/leonardo.png",
+      "local": "/companies/leonardo.png"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/shopify.png",
+      "local": "/companies/shopify.png"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/stripe.png",
+      "local": "/companies/stripe.png"
+    },
+    {
+      "url": "https://www.cloudflare.com/companies/wix.png",
+      "local": "/companies/wix.png"
+    },
+    {
+      "url": "https://www.cloudflare.com/favicon.ico",
+      "local": "/favicon.ico"
+    },
+    {
+      "url": "https://www.cloudflare.com/fonts/Apercu%20Mono%20Pro%20Regular.woff2",
+      "local": "/fonts/Apercu Mono Pro Regular.woff2"
+    },
+    {
+      "url": "https://www.cloudflare.com/fonts/Kunst%20Grotesk%20Medium.woff2",
+      "local": "/fonts/Kunst Grotesk Medium.woff2"
+    },
+    {
+      "url": "https://www.cloudflare.com/fonts/Kunst%20Grotesk%20Regular.woff2",
+      "local": "/fonts/Kunst Grotesk Regular.woff2"
+    },
+    {
+      "url": "https://www.cloudflare.com/fonts/STKBureauSans-Book-Italic.otf",
+      "local": "/fonts/STKBureauSans-Book-Italic.otf"
+    },
+    {
+      "url": "https://www.cloudflare.com/fonts/STKBureauSans-Book.otf",
+      "local": "/fonts/STKBureauSans-Book.otf"
+    },
+    {
+      "url": "https://www.cloudflare.com/fonts/STKBureauSans-Regular.otf",
+      "local": "/fonts/STKBureauSans-Regular.otf"
+    },
+    {
+      "url": "https://www.cloudflare.com/icons.svg",
+      "local": "/icons.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/llms.txt",
+      "local": "/llms.txt"
+    },
+    {
+      "url": "https://www.cloudflare.com/logo.svg",
+      "local": "/logo.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/people/duncan-davidson.png",
+      "local": "/people/duncan-davidson.png"
+    },
+    {
+      "url": "https://www.cloudflare.com/people/skeleton.svg",
+      "local": "/people/skeleton.svg"
+    },
+    {
+      "url": "https://www.cloudflare.com/preview.png",
+      "local": "/preview.png"
+    },
+    {
+      "url": "https://www.cloudflare.com/static/earth-land-points.bin",
+      "local": "/static/earth-land-points.bin"
+    },
+    {
+      "url": "https://www.cloudflare.com/static/earth_atmos_2048.jpg",
+      "local": "/static/earth_atmos_2048.jpg"
+    },
+    {
+      "url": "https://www.cloudflare.com/static/globe-dark.png",
+      "local": "/static/globe-dark.png"
+    },
+    {
+      "url": "https://www.cloudflare.com/static/globe.png",
+      "local": "/static/globe.png"
+    },
+    {
+      "url": "https://www.cloudflare.com/static/hero-background-video.mp4",
+      "local": "/static/hero-background-video.mp4"
+    },
+    {
+      "url": "https://www.cloudflare.com/static/hero-poster.avif",
+      "local": "/static/hero-poster.avif"
+    }
+  ]
+}
