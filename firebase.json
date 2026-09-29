@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "site": "gooddesigns",
+    "public": "public",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "cleanUrls": true,
+    "headers": [
+      { "source": "/sites/**/*.@(woff2|woff|jpg|jpeg|png|webp|avif|svg|mp3|mp4|webm)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }] },
+      { "source": "/thumbs/**", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] }
+    ]
+  }
+}

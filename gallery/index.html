@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GoodDesigns</title>
+  <meta name="description" content="A personal gallery of high-fidelity website recreations worth studying.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23151412'/><path d='M9 22 16 8l7 14' fill='none' stroke='%23f2efe8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+  <link rel="stylesheet" href="app.css">
+</head>
+<body>
+  <main id="gallery" class="gallery">
+    <header class="masthead">
+      <h1>Good<span>Designs</span></h1>
+      <p>Recreations of sites worth studying. Open one to explore it, or jump to its folder in the repo.</p>
+    </header>
+    <ul id="grid" class="grid" aria-label="Sites"></ul>
+    <footer class="foot">For design study only. Trademarks, copy and imagery belong to their owners.</footer>
+  </main>
+
+  <section id="viewer" class="viewer" hidden>
+    <header class="bar">
+      <a class="btn" href="#/" id="back">← Gallery</a>
+      <div class="title"><strong id="v-name"></strong><span id="v-tag"></span></div>
+      <div class="actions">
+        <div class="seg" role="group" aria-label="Viewport">
+          <button data-w="100%" class="on">Desktop</button>
+          <button data-w="820px">Tablet</button>
+          <button data-w="390px">Mobile</button>
+        </div>
+        <a class="btn" id="prev" href="#/" aria-label="Previous site">‹</a>
+        <a class="btn" id="next" href="#/" aria-label="Next site">›</a>
+        <a class="btn" id="v-open" target="_blank" rel="noopener">Open ↗</a>
+        <a class="btn primary" id="v-src" target="_blank" rel="noopener">View source ↗</a>
+      </div>
+    </header>
+    <div class="stage"><iframe id="frame" title="Site preview"></iframe></div>
+  </section>
+  <script src="app.js"></script>
+</body>
+</html>

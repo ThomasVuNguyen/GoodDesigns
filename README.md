@@ -9,6 +9,17 @@ A personal collection of high-fidelity, self-contained recreations of websites a
 
 Each design lives in its own folder with local run instructions.
 
+## Gallery (Firebase Hosting)
+
+`gallery/` is a browsable index of every recreation with an in-page viewer and a link to each site's folder in this repo. It deploys to the `gooddesigns` site in Firebase project `starmind`.
+
+```bash
+node scripts/build-gallery.mjs          # assembles public/ (gitignored) from gallery/ + each <Site>/dist
+firebase deploy --only hosting          # publishes it
+```
+
+To add a site, append it to `gallery/sites.json`, rebuild, then refresh thumbnails with `npx -p playwright node scripts/capture-thumbs.mjs <slug>` (needs Chrome installed). The build script rewrites root-absolute asset paths (`/assets/...`) so every site works under `/sites/<slug>/`.
+
 ## Recreating another site
 
 Agents should follow the gated [website cloning workflow](./.agents/workflows/clone-perfectly.md). It turns a reference URL into a page inventory, self-contained implementation, fixed-viewport comparison loop, browser-health checks, and reusable handoff instead of relying on a one-shot visual guess.
