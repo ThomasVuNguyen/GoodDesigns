@@ -5,6 +5,7 @@ A personal collection of high-fidelity, self-contained recreations of websites a
 ## Designs
 
 - [Cloudflare homepage](./Cloudflare/) — responsive local capture of the current Cloudflare homepage, with locally mirrored assets and page interactions.
+- [PostHog homepage](./PostHog/) — responsive local capture of the PostHog homepage with mirrored assets and reconstructed interactions.
 - [Notion product page](./Notion/) — responsive reconstruction of `notion.com/product`, including local fonts, imagery, navigation, motion, feature cards, testimonials, CTA, and footer.
 
 Each design lives in its own folder with local run instructions.
