@@ -10,7 +10,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const out = path.join(root, 'public');
 const manifest = JSON.parse(await readFile(path.join(root, 'gallery/sites.json'), 'utf8'));
 
-const REWRITE_EXT = new Set(['.html', '.css', '.js']);
+const REWRITE_EXT = new Set(['.html', '.css', '.js', '.mjs']);
 
 async function* walk(dir) {
   for (const entry of await readdir(dir, { withFileTypes: true })) {
@@ -46,7 +46,11 @@ for (const site of manifest.sites) {
   for await (const file of walk(dest)) {
     if (!REWRITE_EXT.has(path.extname(file))) continue;
     const before = await readFile(file, 'utf8');
-    const after = rewrite(before);
+    let after = rewrite(before);
+    // Framer image URLs in mirrored modules resolve against the document, not the module file.
+    if (path.extname(file) === '.mjs' && topLevel.has('assets')) {
+      after = after.replaceAll('../../assets/', `/sites/${site.slug}/assets/`);
+    }
     if (after !== before) {
       await writeFile(file, after);
       rewritten++;
