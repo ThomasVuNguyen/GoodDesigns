@@ -2,6 +2,7 @@
   "repo": "https://github.com/ThomasVuNguyen/GoodDesigns",
   "branch": "main",
   "sites": [
+    { "slug": "allia", "name": "Allia", "folder": "Allia", "reference": "https://allia.health/", "tagline": "The intelligent EHR for behavioral health practices", "captured": "2026-10-01" },
     { "slug": "aside", "name": "Aside", "folder": "Aside", "reference": "https://aside.com/", "tagline": "The browser built to do real work for you", "captured": "2026-09-24" },
     { "slug": "cloudflare", "name": "Cloudflare", "folder": "Cloudflare", "reference": "https://www.cloudflare.com/", "tagline": "Build for the agent era", "captured": "2026-09-24" },
     { "slug": "dia", "name": "Dia", "folder": "Dia", "reference": "https://www.diabrowser.com/", "tagline": "Dia Browser homepage", "captured": "2026-09-24" },
