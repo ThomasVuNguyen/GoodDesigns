@@ -6,6 +6,7 @@
     { "slug": "cloudflare", "name": "Cloudflare", "folder": "Cloudflare", "reference": "https://www.cloudflare.com/", "tagline": "Build for the agent era", "captured": "2026-09-24" },
     { "slug": "dia", "name": "Dia", "folder": "Dia", "reference": "https://www.diabrowser.com/", "tagline": "Dia Browser homepage", "captured": "2026-09-24" },
     { "slug": "every", "name": "Every", "folder": "Every", "reference": "https://every.to/", "tagline": "Every.to homepage", "captured": "2026-09-17" },
+    { "slug": "fal", "name": "fal", "folder": "Fal", "reference": "https://fal.ai/", "tagline": "Generative media platform for developers", "captured": "2026-10-01" },
     { "slug": "fizzy", "name": "Fizzy", "folder": "Fizzy", "reference": "https://www.fizzy.do/", "tagline": "Kanban as it should be. Not as it has been.", "captured": "2026-09-17" },
     { "slug": "kernel", "name": "Kernel", "folder": "Kernel", "reference": "https://www.kernel.sh/", "tagline": "Browser infrastructure for web agents and automations", "captured": "2026-09-17" },
     { "slug": "notion", "name": "Notion", "folder": "Notion", "reference": "https://www.notion.com/product", "tagline": "The AI workspace that works for you", "captured": "2026-09-16" },

@@ -1,0 +1,20 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Tracy's corner (Group 316121705) pre-composited onto the paper
+       (#FFFFFF): shadow = #C4C3C0 gradient at 60% multiply, flap =
+       #ECEAE4 multiply. Flattened here so the browser does no blending
+       and the render matches Figma exactly. -->
+  <rect width="100" height="100" fill="url(#shadow)"/>
+  <path d="M0 100 L100 0 H0 Z" fill="url(#flap)"/>
+  <defs>
+    <linearGradient id="shadow" x1="42.4242" y1="50.8474" x2="96.9324" y2="95.909" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DCDBD9"/>
+      <stop offset="0.552885" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="flap" x1="42.4242" y1="50.8474" x2="96.9324" y2="95.909" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EDEDED"/>
+      <stop offset="0.552885" stop-color="#F2F2F2"/>
+      <stop offset="1" stop-color="#F2F2F2"/>
+    </linearGradient>
+  </defs>
+</svg>
