@@ -15,6 +15,7 @@ A personal collection of high-fidelity, self-contained recreations of websites a
 - [Socratica](./Socratica/) — responsive local capture of `socratica.info`, with its rotating doodle wordmark, nav overlay, and local Tiempos/Geist fonts.
 - [HeyPCB](./HeyPCB/) — responsive local capture of `heypcb.ai`, hydrated from the original Next.js chunks with its 3D board viewer and local Geist fonts.
 - [F13](./F13/) — responsive local capture of `f13.com`, hydrated from the original Next.js chunks with its animated hero carousel and local Saans fonts.
+- [Foglamp](./Foglamp/) — responsive local capture of `foglamp.dev`, hydrated from the original Next.js chunks with its dashboard hero and local Inter fonts.
 - [Notion product page](./Notion/) — responsive reconstruction of `notion.com/product`, including local fonts, imagery, navigation, motion, feature cards, testimonials, CTA, and footer.
 
 Each design lives in its own folder with local run instructions.

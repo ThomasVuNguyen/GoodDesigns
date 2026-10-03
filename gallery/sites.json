@@ -21,6 +21,7 @@
     { "slug": "plasmidsaurus", "name": "Plasmidsaurus", "folder": "Plasmidsaurus", "reference": "https://plasmidsaurus.com/", "tagline": "Sequencing infrastructure for modern biology", "captured": "2026-10-02" },
     { "slug": "socratica", "name": "Socratica", "folder": "Socratica", "reference": "https://socratica.info/", "tagline": "Weekly co-working sessions for passion projects", "captured": "2026-10-02" },
     { "slug": "heypcb", "name": "HeyPCB", "folder": "HeyPCB", "reference": "https://heypcb.ai/", "tagline": "Describe it. Get a board.", "captured": "2026-10-02" },
-    { "slug": "f13", "name": "F13", "folder": "F13", "reference": "https://www.f13.com/", "tagline": "Production-grade vector graphics from a prompt", "captured": "2026-10-02" }
+    { "slug": "f13", "name": "F13", "folder": "F13", "reference": "https://www.f13.com/", "tagline": "Production-grade vector graphics from a prompt", "captured": "2026-10-02" },
+    { "slug": "foglamp", "name": "Foglamp", "folder": "Foglamp", "reference": "https://www.foglamp.dev/", "tagline": "Observability for AI agents", "captured": "2026-10-02" }
   ]
 }
