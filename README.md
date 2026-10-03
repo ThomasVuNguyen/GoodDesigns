@@ -4,6 +4,8 @@ A personal collection of high-fidelity, self-contained recreations of websites a
 
 ## Designs
 
+- [Allia homepage](./Allia/) — responsive local capture of the Allia homepage with mirrored media, fonts, navigation, carousel, and FAQ.
+- [Town homepage](./Town/) — static recreation of the Town homepage with the reference layout, sticky header, filters, persona tabs, mobile menu and floating prompt bar; imagery and fonts are linked from the reference CDN.
 - [Cloudflare homepage](./Cloudflare/) — responsive local capture of the current Cloudflare homepage, with locally mirrored assets and page interactions.
 - [Cloudflare Git Challenge](./CloudflareGitChallenge/) — responsive capture of the competition page, including its animated Tetris hero, mobile navigation, and finalist sections.
 - [PostHog homepage](./PostHog/) — responsive local capture of the PostHog homepage with mirrored assets and reconstructed interactions.

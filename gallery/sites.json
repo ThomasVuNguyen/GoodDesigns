@@ -14,6 +14,7 @@
     { "slug": "notion", "name": "Notion", "folder": "Notion", "reference": "https://www.notion.com/product", "tagline": "The AI workspace that works for you", "captured": "2026-09-16" },
     { "slug": "opencode", "name": "OpenCode Data", "folder": "OpenCode", "reference": "https://opencode.ai/data", "tagline": "AI model usage rankings", "captured": "2026-09-18" },
     { "slug": "posthog", "name": "PostHog", "folder": "PostHog", "reference": "https://posthog.com/", "tagline": "Your product's context layer", "captured": "2026-09-29" },
+    { "slug": "town", "name": "Town", "folder": "Town", "reference": "https://www.town.com/", "tagline": "The AI assistant that does the work", "captured": "2026-09-29" },
     { "slug": "propublica", "name": "ProPublica", "folder": "ProPublica", "reference": "https://www.propublica.org/", "tagline": "Investigative journalism in the public interest", "captured": "2026-09-17" }
   ]
 }
