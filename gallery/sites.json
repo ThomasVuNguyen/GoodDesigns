@@ -18,6 +18,7 @@
     { "slug": "propublica", "name": "ProPublica", "folder": "ProPublica", "reference": "https://www.propublica.org/", "tagline": "Investigative journalism in the public interest", "captured": "2026-09-17" },
     { "slug": "cloudflare-sandbox", "name": "Cloudflare Sandbox SDK", "folder": "Sandbox", "reference": "https://sandbox.cloudflare.com/", "tagline": "Run sandboxed code environments on the edge", "captured": "2026-10-02" },
     { "slug": "openai-developers", "name": "OpenAI Developers", "folder": "OpenAIDevelopers", "reference": "https://developers.openai.com/", "tagline": "Docs and resources to build with, for, and on OpenAI", "captured": "2026-10-02" },
-    { "slug": "plasmidsaurus", "name": "Plasmidsaurus", "folder": "Plasmidsaurus", "reference": "https://plasmidsaurus.com/", "tagline": "Sequencing infrastructure for modern biology", "captured": "2026-10-02" }
+    { "slug": "plasmidsaurus", "name": "Plasmidsaurus", "folder": "Plasmidsaurus", "reference": "https://plasmidsaurus.com/", "tagline": "Sequencing infrastructure for modern biology", "captured": "2026-10-02" },
+    { "slug": "socratica", "name": "Socratica", "folder": "Socratica", "reference": "https://socratica.info/", "tagline": "Weekly co-working sessions for passion projects", "captured": "2026-10-02" }
   ]
 }
