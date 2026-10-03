@@ -1,0 +1,181 @@
+/* Embedding only: reserve one stable stage before scripts, fonts, or CAD load. */
+html { color-scheme: light dark; }
+#home-link-widget button { -webkit-user-select: none; user-select: none; }
+html, body { min-height: 0; height: 100%; margin: 0; overflow: hidden; background: #f2f0ec; }
+.siteRoot[data-gadgets-timeline="september"] { color-scheme: inherit; }
+#home-link-widget {
+  --paper: #fdfdfb; --image-paper: #f2f0ec; --model-paper: #f2f0ec;
+  --ink: #252523; --body-ink: #484844; --muted: #62625d;
+  --rule: #d0d0cb; --fine: #e5e5df; --grid: #eeeeea;
+  --surface: #f2f2ee; --tint: #f2ecdf; --viewer-accent: #5c4f3b;
+  --model-grid: color-mix(in srgb, var(--viewer-accent) 12%, transparent);
+  --control-rule: #62625d; --panel: #f2f2ee; --blue: #5c4f3b;
+}
+#home-link-widget, .lightHome, .homeLinkWindow, .homeLinkLayout,
+#home-link-widget .septemberHeroMedia { width: 100%; height: 100%; min-height: 0; margin: 0; }
+#home-link-widget .septemberHeroMedia,
+#home-link-widget .hardwareStage { background: var(--model-paper); }
+
+/* Match the content edge of the surrounding Gadgets page. */
+#home-link-widget .exploreHeading,
+#home-link-widget .specIndicator,
+#home-link-widget .specConnector { right: var(--embed-right-inset, 12px); }
+
+/* The scene reserves the control row before the menu module mounts. */
+#home-link-widget .hardwareStage { --menu-reserve: 56px; position: relative; display: block; width: 100%; height: 100%; min-height: 0; }
+/* Gently blend the bottom of the stationary floor into the controls. */
+#home-link-widget .viewerFloor {
+  position: absolute;
+  z-index: 0;
+  inset: 0 0 var(--menu-reserve);
+  overflow: hidden;
+  pointer-events: none;
+  mask-image: linear-gradient(to bottom, #000 calc(100% - 40px), transparent 100%);
+}
+#home-link-widget .viewerFloor::before {
+  content: "";
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  width: max(1200px, 200%);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%) rotateX(54.7356deg) rotateZ(45deg);
+  background-image:
+    linear-gradient(to right, var(--model-grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--model-grid) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+#home-link-widget .cadMenu { position: absolute; z-index: 5; top: auto; right: 0; bottom: 0; left: 0; display: flex; height: var(--menu-reserve); min-width: 0; align-items: center; justify-content: flex-start; border: 0; background: var(--model-paper); box-shadow: none; font: 12px/1.65 "Optimistic Mono", ui-monospace, monospace; letter-spacing: normal; -webkit-font-smoothing: antialiased; font-synthesis: none; --soundtrack-control-width: 48px; --nav-ink: var(--ink); --nav-muted: var(--body-ink); --nav-hover: var(--viewer-accent); --nav-focus: var(--viewer-accent); }
+#home-link-widget .cadViews { position: relative; display: flex; flex: 0 0 100%; align-items: center; justify-content: center; gap: 36px; width: 100%; height: 100%; min-width: 0; padding-inline: var(--soundtrack-control-width); }
+#home-link-widget .cadViews button { display: flex; flex: 0 0 auto; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 0 6px; border: 0; background: transparent; color: var(--nav-muted); font: inherit; text-align: center; text-decoration: none; white-space: nowrap; cursor: pointer; transition: color 180ms ease, background-color 180ms ease; }
+#home-link-widget .cadViews button[aria-pressed="true"] { color: var(--nav-ink); text-decoration-line: underline; text-decoration-thickness: 2px; text-underline-offset: 6px; }
+#home-link-widget .cadViewLabel { display: block; min-width: 0; }
+#home-link-widget .cadViews[data-indicator-ready] button[aria-pressed="true"] { text-decoration: none; }
+#home-link-widget .cadViewIndicator { position: absolute; top: 0; left: 0; height: 2px; background: var(--nav-ink); pointer-events: none; }
+#home-link-widget .cadViewIndicator[hidden] { display: none; }
+#home-link-widget .cadViewIndicator[data-animated] {
+  transition:
+    transform 500ms cubic-bezier(.34, 1.35, .55, 1),
+    width 500ms cubic-bezier(.34, 1.35, .55, 1);
+}
+#home-link-widget .cadViews button:hover { color: var(--nav-hover); }
+#home-link-widget .cadViews button:focus-visible { outline: 2px solid var(--nav-focus); outline-offset: -3px; }
+#home-link-widget .cadViews button:disabled { color: var(--nav-muted); cursor: default; text-decoration: none; }
+#home-link-widget .soundtrackToggle { position: absolute; z-index: 1; top: 50%; right: 0; display: grid; width: var(--soundtrack-control-width); height: 100%; min-height: 44px; transform: translateY(-50%); place-items: center; padding: 0; border: 0; background: transparent; color: var(--nav-muted); cursor: pointer; }
+#home-link-widget .soundtrackToggle[hidden] { display: none; }
+#home-link-widget .soundtrackToggle svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+#home-link-widget .soundtrackToggle svg path:first-child { fill: currentColor; }
+#home-link-widget .soundtrackToggle:is(:hover, [aria-pressed="true"]) { color: var(--nav-hover); }
+#home-link-widget .soundtrackToggle:focus-visible { outline: 2px solid var(--nav-focus); outline-offset: -3px; }
+#home-link-widget .soundtrackToggle:disabled { color: var(--nav-muted); cursor: default; opacity: .55; }
+#home-link-widget .cadViewerStatus button { min-height: 44px; padding: 0 8px; border: 0; background: transparent; color: var(--viewer-accent); font: inherit; text-decoration: underline; text-underline-offset: .18em; cursor: pointer; }
+#home-link-widget .cadViewerStatus button:hover { color: var(--ink); }
+#home-link-widget .cadViewerStatus button:focus-visible { outline: 2px solid var(--viewer-accent); outline-offset: 2px; }
+#home-link-widget .cadViewerStatus { position: absolute; inset: 0 0 var(--menu-reserve); z-index: 6; display: flex; min-height: 44px; align-items: center; justify-content: center; gap: 12px; color: var(--ink); font: 12px/1.65 "Optimistic Mono", ui-monospace, monospace; text-align: center; }
+#home-link-widget .cadViewerStatus [data-viewer-status],
+#home-link-widget .cadViewerStatus button { background: var(--surface); }
+#home-link-widget .cadViewerStatus[hidden],
+#home-link-widget .cadViewerStatus button[hidden] { display: none; }
+#home-link-widget .cadMenu[data-unavailable] .cadViews { visibility: hidden; }
+#home-link-widget .viewerScene { position: absolute; z-index: 1; inset: 0 0 var(--menu-reserve); min-width: 0; min-height: 0; }
+#home-link-widget .viewerScene .viewport { width: 100%; height: 100%; aspect-ratio: auto; }
+#home-link-widget .explorePanel { color: var(--body-ink); }
+#home-link-widget .exploreSceneLabel,
+#home-link-widget .specLabel { border-color: var(--control-rule); background: var(--surface); color: var(--viewer-accent); }
+#home-link-widget .exploreSceneLabel::before { background: var(--viewer-accent); }
+#home-link-widget .specLeaders path { stroke: var(--viewer-accent); }
+#home-link-widget .specLeaders circle { fill: var(--viewer-accent); stroke: var(--model-paper); }
+#home-link-widget .specLabel span,
+#home-link-widget .specLabel small { color: var(--muted); }
+#home-link-widget .specDimensions,
+#home-link-widget .specDimensions small { color: var(--body-ink); }
+#home-link-widget .specIndicator { top: 12px; }
+#home-link-widget .specConnector { bottom: 14px; }
+@media (max-width: 580px) {
+  #home-link-widget .hardwareStage { --menu-reserve: 50px; }
+  #home-link-widget .cadMenu { --soundtrack-control-width: 44px; }
+  #home-link-widget .cadViews { gap: 16px; }
+  #home-link-widget .cadViewerStatus { flex-wrap: wrap; gap: 0 10px; }
+}
+@media (max-width: 364px) {
+  #home-link-widget .cadViews button { padding-inline: 4px; }
+}
+@media (max-width: 352px) {
+  #home-link-widget .cadViews button { padding-inline: 0; }
+}
+/* Keep the three views on one row; only the soundtrack side stays reserved. */
+@media (max-width: 330px) {
+  #home-link-widget .cadViews { padding-inline: 0 var(--soundtrack-control-width); }
+}
+@media (prefers-reduced-motion: reduce) {
+  #home-link-widget .cadViewIndicator[data-animated] { transition: none; }
+}
+
+/* Last in the standalone cascade: preserve the source light palette and let
+   native media queries update the embed and standalone page without a reload.
+   WebGL already clears to transparent; never filter the canvas or model art. */
+@media (prefers-color-scheme: dark) {
+  html, body { background: #1b222e; }
+  #home-link-widget {
+    --paper: #16161d; --image-paper: #1b222e; --model-paper: #1b222e;
+    --ink: #f0f1f5; --body-ink: #d2d5df; --link: #80adff;
+    --muted: #aeb4c2; --rule: #484d5b; --fine: #303440; --grid: #242a36;
+    --surface: #22232c; --tint: #202d45; --viewer-accent: #80adff;
+    --control-rule: #aeb4c2; --panel: #22232c;
+    --orchid: var(--ink); --blue: #80adff; --mono-dark-mode: 1;
+  }
+  #home-link-widget .septemberHeroMedia,
+  #home-link-widget .hardwareStage[data-display-mode] { background: var(--model-paper); }
+  #home-link-widget .hardwareCaption { background: var(--paper); }
+
+  #home-link-widget .cadMark,
+  #home-link-widget .cadItems hr { border-color: var(--rule); }
+  #home-link-widget .cadMark img { filter: brightness(0) invert(1); }
+  #home-link-widget .cadItems {
+    background: var(--panel); color: var(--ink); border-color: var(--rule);
+    outline-color: var(--paper); box-shadow: 3px 3px 0 #08080880;
+  }
+  #home-link-widget .cadDropdown[open] summary,
+  #home-link-widget .cadDropdown summary:hover,
+  #home-link-widget .cadItems button[aria-pressed="true"],
+  #home-link-widget .cadItems button:hover,
+  #home-link-widget .cadItems button:focus-visible,
+  #home-link-widget .explorePlayback:hover {
+    color: var(--ink); background: var(--tint);
+  }
+  #home-link-widget .cadDropdown summary:focus-visible,
+  #home-link-widget .cadItems button:focus-visible,
+  #home-link-widget .explorePlayback:focus-visible {
+    outline: 2px solid var(--ink); outline-offset: 2px;
+  }
+  #home-link-widget .explorePlayback,
+  #home-link-widget .controls button {
+    background: var(--panel); color: var(--ink); border-color: var(--rule);
+  }
+  #home-link-widget .controls,
+  #home-link-widget .explorePanel { color: var(--body-ink); }
+  #home-link-widget .exploreSceneLabel,
+  #home-link-widget .specLabel {
+    background: var(--panel); color: var(--blue); border-color: var(--rule);
+  }
+  #home-link-widget .exploreIndex,
+  #home-link-widget .exploreBadge,
+  #home-link-widget .exploreNarration,
+  #home-link-widget .specLabel span,
+  #home-link-widget .specLabel small { color: var(--muted); }
+  #home-link-widget .specDimensions,
+  #home-link-widget .specDimensions small { color: var(--body-ink); }
+  #home-link-widget .exploreSceneLabel::before { background: var(--blue); }
+  #home-link-widget .specLeaders path { stroke: var(--blue); }
+  #home-link-widget .specLeaders circle { fill: var(--blue); stroke: var(--paper); }
+
+  /* Retain support for the bundled, currently dormant renderer settings UI. */
+  #home-link-widget .retroPanel { background: var(--panel); }
+  #home-link-widget .retroSettings { background: var(--paper); }
+  #home-link-widget .retroSliders output { color: var(--ink); }
+  #home-link-widget .retroSliders input[type=range],
+  #home-link-widget .retroCheck input { accent-color: var(--ink); }
+  #home-link-widget .retroActions [data-copy],
+  #home-link-widget .retroActions button:hover { background: var(--tint); }
+  #home-link-widget ::selection { background: var(--ink); color: var(--paper); }
+}

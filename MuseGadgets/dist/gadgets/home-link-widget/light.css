@@ -1,0 +1,30 @@
+
+.siteRoot[data-gadgets-timeline="september"] {
+  --paper: #fff; --image-paper: #fafafa; --ink: #222; --body-ink: #363636; --link: #252525;
+  --muted: #747474; --rule: #c4c4c1; --panel: #f7f7f5; --orchid: #535353; --blue: #535353;
+  --mono-dark-mode: 0; --content-width: 1440px; --page-gutter: 48px;
+  color-scheme: light; font-size: 14px; line-height: 1.65;
+}
+.lightHome .homeLinkWindow { border: 0; }
+.lightHome .homeLinkLayout { display: flex; flex-direction: column; }
+.siteRoot[data-gadgets-timeline="september"] .lightHome .septemberHeroMedia { border: 0; background: #fafaf9; }
+.lightHome .hardwareStage { height: clamp(320px,34vw,490px); min-height: 0; flex: none; background: #fafaf9; }
+.lightHome .hardwareStage[data-display-mode="wireframe"] { background: #000704; }
+.lightHome .hardwareCaption { background: #fff; font-size: 10px; padding: 12px 20px; }
+.lightHome .hardwareCaption span:last-child { color: var(--muted); }
+.lightHome .retroPanel { margin: 0; border-width: 1px 0 0; padding: 18px 24px; background: #f7f7f5; }
+.retroSliders output { color: #333; }
+.retroSliders input[type=range],
+.retroCheck input { accent-color: #484848; }
+.retroActions [data-copy],
+.retroActions button:hover { background: #ededed; }
+.retroSettings { background: #fff; }
+.cadMenu { background: #fff; box-shadow: 2px 2px 0 #bbb; border-color: #acaca6; }
+.lightHome .controls { color: #646464; }
+.lightHome .controls button { background: #ffffffdc; color: #333; }
+.lightHome .hardwareStage[data-display-mode="wireframe"] .controls { color: #bbd0c2; }
+.lightHome .hardwareStage[data-display-mode="wireframe"] .controls button { background: #0b1610; color: #d5e7dc; }
+@media(max-width: 800px) {
+  .siteRoot[data-gadgets-timeline="september"] { --page-gutter: 20px; }
+  .lightHome .hardwareStage { height: 380px; }
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Explore Muse Home Link</title>
+  <link rel="preload" href="./home-link-3d/poster.png" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="./base.css">
+  <link rel="stylesheet" href="./shell.css">
+  <link rel="stylesheet" href="./viewer.css">
+  <link rel="stylesheet" href="./controls.css">
+  <link rel="stylesheet" href="./light.css">
+  <link rel="stylesheet" href="./viewer-explore.css" data-home-link-explore-style>
+  <link rel="stylesheet" href="./embed.css">
+</head>
+<body>
+  <div id="home-link-widget" class="siteRoot" data-gadgets-timeline="september">
+    <main class="lightHome" aria-label="Explore Muse Home Link">
+      <div class="homeLinkWindow">
+        <div class="homeLinkLayout">
+          <figure class="septemberHeroMedia alphaMedia">
+            <div class="hardwareStage" data-display-mode="solid">
+              <div class="viewerFloor" aria-hidden="true"></div>
+              <div class="viewerScene">
+                <div class="viewer" data-home-link-viewer data-viewer-state="loading">
+                  <div class="viewport">
+                    <img class="poster" src="./home-link-3d/poster.png" width="540" height="540"
+                      alt="Muse Home Link with its USB plug angled toward the lower left"
+                      loading="eager" fetchpriority="high" draggable="false">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </figure>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script type="module" src="./viewer-menu.js"></script>
+</body>
+</html>

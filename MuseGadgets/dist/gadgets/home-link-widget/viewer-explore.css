@@ -1,0 +1,77 @@
+/* One white CAD viewport in every mode. Only the 3D scene changes. */
+.siteRoot[data-gadgets-timeline="september"] .lightHome .hardwareStage[data-display-mode] { background: #fafaf9; }
+.siteRoot[data-gadgets-timeline="september"] .hardwareStage[data-display-mode] .constructionLines { display: none; }
+.siteRoot[data-gadgets-timeline="september"] .hardwareStage .cadMenu { background: #fff; border-color: #c9cccf; box-shadow: 2px 2px 0 #dedfdf; color: #222; }
+.siteRoot[data-gadgets-timeline="september"] .hardwareStage .cadMark { border-color: #c9cccf; }
+.siteRoot[data-gadgets-timeline="september"] .hardwareStage .cadItems { background: #fff; border-color: #bfc2c3; outline-color: #fff; color: #222; box-shadow: 3px 3px 0 #c4c4c480; }
+.siteRoot[data-gadgets-timeline="september"] .hardwareStage .cadDropdown[open] summary,
+.siteRoot[data-gadgets-timeline="september"] .hardwareStage .cadDropdown summary:hover,
+.siteRoot[data-gadgets-timeline="september"] .hardwareStage .cadItems button:hover,
+.siteRoot[data-gadgets-timeline="september"] .hardwareStage .cadItems button:focus-visible { color: #fff; background: #222; }
+.siteRoot[data-gadgets-timeline="september"] .hardwareStage .cadItems hr { border-color: #ddd; }
+
+
+.siteRoot[data-gadgets-timeline="september"] .hardwareStage .cadMark img { filter: brightness(0); }
+
+/* Transparent, absolutely positioned controls never resize or obscure the model. */
+.explorePanel { position: absolute; inset: 0; z-index: 2; background: transparent; color: #303638; font: 10px/1.4 "Optimistic Mono",monospace; pointer-events: none; opacity: 0; }
+.explorePanel[hidden], .exploreSceneLabel[hidden] { display: none; }
+.exploreHeading { position: absolute; top: 54px; right: 14px; left: 14px; display: flex; justify-content: flex-end; gap: 10px; align-items: center; }
+.exploreIndex { color: #636c74; font-size: 8px; letter-spacing: .08em; }
+.exploreBadge { color: #7b8288; font-size: 7px; letter-spacing: .05em; }
+.exploreSceneLabels { position: absolute; inset: 0; }
+.exploreSceneLabel { position: absolute; transform: translate(-50%,7px); max-width: 145px; padding: 3px 5px; background: #fffffff0; border: 1px solid #d2d7df; color: #34539b; font-size: 9px; line-height: 1.25; white-space: nowrap; }
+.exploreSceneLabel::before { position: absolute; content: ''; width: 3px; height: 3px; top: -7px; left: calc(50% - 1.5px); background: #325aca; }
+.exploreSceneLabel[data-edge="left"] { transform: translate(0,7px); }
+.exploreSceneLabel[data-edge="left"]::before { left: -1px; }
+.exploreSceneLabel[data-edge="right"] { transform: translate(-100%,7px); }
+.exploreSceneLabel[data-edge="right"]::before { left: auto; right: -1px; }
+.exploreSceneLabel[data-stagger="true"] { transform: translate(-50%,30px); }
+.exploreSceneLabel[data-edge="left"][data-stagger="true"] { transform: translate(0,30px); }
+.exploreSceneLabel[data-edge="right"][data-stagger="true"] { transform: translate(-100%,30px); }
+.exploreSceneLabel[data-stagger="true"]::before {
+  top: -30px;
+  width: 3px;
+  height: 26px;
+  background: linear-gradient(#325aca,#325aca) center top/3px 3px no-repeat,
+    linear-gradient(#325aca,#325aca) center 3px/1px 23px no-repeat;
+}
+.exploreNarration { margin: 0 0 6px; color: #5c656e; font-size: 9px; line-height: 1.4; }
+.explorePlayback { flex-shrink: 0; min-width: 53px; padding: 6px 8px; border: 1px solid #cbd1da; color: #34539b; background: #fffffff2; font: 9px/1.2 "Optimistic Mono",monospace; cursor: pointer; pointer-events: auto; }
+.explorePlayback:hover { background: #edf2ff; }
+.explorePanel button:focus-visible { outline: 2px solid #2449bd; outline-offset: 2px; }
+
+/* Callout leaders follow projected 3D model anchors; no viewport transform. */
+.specCallouts { position: absolute; inset: 0; z-index: 2; pointer-events: none; font-family: "Optimistic Mono",monospace; opacity: 0; }
+.specCallouts[hidden], .specLabel[hidden] { display: none; }
+.specLeaders { position: absolute; inset: 0; width: 100%; height: 100%; overflow: hidden; }
+.specLeaders path { stroke: #7891c9; stroke-width: .75; fill: none; }
+.specLeaders circle { fill: #325aca; stroke: #fff; stroke-width: 1; }
+.specLabel { position: absolute; display: grid; gap: 3px; min-width: 94px; padding: 7px 9px; border: 1px solid #cdd3dc; background: #fffffff0; color: #34539b; }
+.specLabel span { color: #75808a; font-size: 7px; letter-spacing: .04em; }
+.specLabel strong { font-size: 12px; font-weight: 400; line-height: 1.3; }
+.specLabel small { color: #75808a; font-size: 8px; }
+.specEnclosure { top: 40%; left: 12px; }
+.specIndicator { top: 59px; right: 12px; }
+.specConnector { bottom: 44px; right: 12px; }
+.specDimensions { position: absolute; left: 14px; bottom: 14px; display: grid; gap: 3px; color: #636d77; font-size: 9px; }
+.specDimensions small { color: #8b949d; font-size: 7px; }
+@media(max-width: 480px) {
+  .exploreHeading { right: 10px; left: 10px; }
+  .exploreBadge { font-size: 6px; }
+  .explorePlayback { min-width: 47px; padding: 6px; font-size: 8px; }
+  .exploreNarration { font-size: 8px; }
+  .exploreSceneLabel { font-size: 8px; padding: 3px 4px; }
+  .specLabel { min-width: 83px; padding: 6px; }
+  .specLabel strong { font-size: 11px; }
+  .specLabel small { font-size: 7px; }
+  .specEnclosure { left: 8px; }
+  .specIndicator, .specConnector { right: 8px; }
+}
+
+/* Shared playback stays in one place across all Explore views. */
+.viewerPlaybackDock { position: absolute; z-index: 3; right: 12px; bottom: 12px; }
+.viewerPlaybackDock .explorePlayback { color: #333; background: #fff; border-color: #c5c8c6; min-width: 64px; }
+.viewerPlaybackDock .explorePlayback:hover { background: #f2f2f2; }
+.viewerPlaybackDock .explorePlayback:disabled { opacity: .45; cursor: default; }
+.viewerPlaybackDock .explorePlayback:focus-visible { outline: 2px solid #333; outline-offset: 2px; }

@@ -1,0 +1,46 @@
+
+.viewer[data-home-link-viewer] .controls { display: none; }
+.hardwareStage:not([data-display-mode="wireframe"]):not([data-display-mode="internals"]) .constructionLines { display: none; }
+
+.retroPanel { margin: 14px 0 0; padding: 16px 18px; border: 1px solid var(--rule, #494652); background: var(--paper, #17151c); color: var(--ink, #eee); font: 12px/1.5 "Optimistic Mono", monospace; }
+.retroPanel summary { cursor: pointer; font-weight: bold; text-transform: uppercase; letter-spacing: .08em; }
+.retroPanel summary span { float: right; opacity: .55; font-size: 10px; }
+.retroSliders { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 20px; }
+.retroSliders label { display: block; }
+.retroSliders output { float: right; color: #d89ac7; }
+.retroSliders input[type=range] { display: block; width: 100%; margin-top: 10px; accent-color: #bd8faa; cursor: ew-resize; }
+.retroSliders .retroCheck { grid-column: 1 / -1; display: flex; gap: 8px; align-items: center; }
+.retroCheck input { accent-color: #bd8faa; }
+.retroActions { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 12px; }
+.retroActions button { padding: 7px 10px; border: 1px solid var(--rule, #605565); background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.retroActions button:hover { background: #98799433; }
+.retroActions [data-copy] { margin-left: auto; background: #98799433; }
+.retroStatus { opacity: .75; }
+.retroSettings { width: 100%; margin-top: 8px; padding: 8px; resize: vertical; background: #0002; color: inherit; font: 11px/1.5 monospace; border: 1px solid var(--rule, #605565); }
+@media(max-width: 600px) { .retroSliders { grid-template-columns: 1fr; gap: 14px; } .retroActions [data-copy] { margin-left: 0; } }
+.cadMenu { position: absolute; z-index: 5; top: 12px; left: 12px; right: 12px; display: flex; align-items: stretch; min-height: 28px; background: #fff; color: #0000c8; border: 1px solid #fff; box-shadow: 2px 2px 0 #000; font: 12px/1.25 "Geist Pixel", "Courier New", monospace; letter-spacing: .02em; }
+.cadMark { display: grid; place-items: center; width: 28px; border-right: 1px solid #0000c8; }
+.cadDropdown { position: relative; }
+.cadDropdown summary { display: flex; align-items: center; gap: 8px; height: 100%; min-height: 28px; padding: 5px 12px; cursor: pointer; list-style: none; }
+.cadDropdown summary::-webkit-details-marker { display: none; }
+.cadDropdown summary::after { content: '▾'; font-size: 10px; }
+.cadDropdown[open] summary,
+.cadDropdown summary:hover { color: #fff; background: #0000c8; }
+.cadItems { position: absolute; top: 100%; left: -1px; min-width: 230px; padding: 5px 3px; background: #fff; color: #0000c8; border: 1px solid #0000c8; outline: 1px solid #fff; box-shadow: 4px 4px 0 #000a; }
+.cadItems button { display: flex; align-items: center; width: 100%; gap: 8px; padding: 7px 6px; border: 0; background: transparent; color: inherit; text-align: left; white-space: nowrap; font: inherit; cursor: pointer; }
+.cadItems button:hover,
+.cadItems button:focus-visible { color: #fff; background: #0000c8; outline: none; }
+.cadTick { width: 12px; flex-shrink: 0; }
+.cadShortcut { margin-left: auto; opacity: .55; font-size: 10px; }
+.cadItems hr { margin: 4px 5px; border: 0; border-top: 1px solid #0000c8; }
+.cadCurrent { align-self: center; margin-left: auto; padding: 0 9px; font-size: 10px; }
+.hardwareStage[data-display-mode="wireframe"],
+.hardwareStage[data-display-mode="internals"] { background: #000704; }
+.hardwareStage[data-display-mode="wireframe"] .constructionLines,
+.hardwareStage[data-display-mode="internals"] .constructionLines { opacity: .18; }
+@media(max-width: 420px) { .cadMenu { left: 6px; right: 6px; } .cadDropdown summary { padding: 5px 8px; } .cadCurrent { font-size: 9px; } .cadItems { min-width: 205px; } }
+
+.siteRoot[data-gadgets-timeline="september"] .hardwareStage .cadMark img { position: static; display: block; width: 24px; height: 24px; max-width: none; margin: 0; transform: none; object-fit: contain; image-rendering: pixelated; filter: brightness(0) saturate(100%) invert(10%) sepia(100%) saturate(7490%) hue-rotate(245deg) brightness(76%) contrast(135%); }
+
+.cadCurrent { align-self: stretch; display: flex; align-items: center; line-height: 1; }
+.siteRoot[data-gadgets-timeline="september"] [data-home-link-canvas][data-pointer-focus] { outline: none; }

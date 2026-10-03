@@ -24,7 +24,7 @@ function rewriter(slug, topLevel) {
   const prefix = `/sites/${slug}`;
   const names = [...topLevel].sort((a, b) => b.length - a.length).map((n) => n.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
   // A root-absolute path is one that follows a quote, "(" or whitespace-delimited url context and is not protocol-relative.
-  const re = new RegExp(`(["'\`(=,\\s])/(${names.join('|')})(?=[/"'?#)\\s\\\\]|$)`, 'g');
+  const re = new RegExp(`(["'\`(=,;\\s])/(${names.join('|')})(?=[/"'?#)\\s\\\\]|$)`, 'g');
   return (text) => text.replace(re, `$1${prefix}/$2`);
 }
 
