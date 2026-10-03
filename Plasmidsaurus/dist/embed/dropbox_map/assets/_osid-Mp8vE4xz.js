@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-CIkHs51R.js";import"./zods-DD7_jhod.js";import{n as t}from"./typography-CGKWnMc6.js";var n=e(),r=({error:e})=>(0,n.jsx)(`div`,{style:{padding:`20px`},children:(0,n.jsxs)(t,{size:`base`,variant:`destructive`,children:[`Error loading histogram:`,` `,e instanceof Error?e.message:String(e)]})});export{r as errorComponent};

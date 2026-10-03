@@ -1,0 +1,1 @@
+import{t as e}from"./jsx-runtime-CIkHs51R.js";var t=e(),n=()=>(0,t.jsx)(`div`,{children:`Hello`});export{n as component};

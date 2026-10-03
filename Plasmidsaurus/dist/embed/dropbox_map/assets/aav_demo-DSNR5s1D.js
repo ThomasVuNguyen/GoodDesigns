@@ -1,0 +1,1 @@
+import{s as e}from"./triangle-alert-rCgIuEPg.js";import{t}from"./jsx-runtime-CIkHs51R.js";import{t as n}from"./SummaryReport-DkF4UE1B.js";import{r}from"./index-nbVCP9sg.js";var i=t();function a(){let{item:t}=e({from:r.id});return(0,i.jsx)(`div`,{className:`shadcn-island`,style:{background:`transparent`},children:(0,i.jsx)(n,{item:t,showRerunRequest:!1})})}export{a as component};

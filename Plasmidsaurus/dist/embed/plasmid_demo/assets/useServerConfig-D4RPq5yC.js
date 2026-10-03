@@ -1,0 +1,1 @@
+import{i as e}from"./rolldown-runtime-BgaNhQyE.js";import{t}from"./react-TWV6aMVA.js";import{t as n}from"./jsx-runtime-CIkHs51R.js";var r=e(t(),1),i=n(),a=(0,r.createContext)({apiServerUrl:``}),o=({children:e,config:t})=>(0,i.jsx)(a.Provider,{value:t,children:e}),s=()=>(0,r.useContext)(a);export{s as n,o as t};

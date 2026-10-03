@@ -1,0 +1,2 @@
+/* clone-only: the invisible closed nav dropdowns overflow the viewport on desktop */
+.Header { overflow-x: clip; }

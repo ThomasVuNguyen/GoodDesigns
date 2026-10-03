@@ -11,6 +11,7 @@ A personal collection of high-fidelity, self-contained recreations of websites a
 - [PostHog homepage](./PostHog/) — responsive local capture of the PostHog homepage with mirrored assets and reconstructed interactions.
 - [Cloudflare Sandbox SDK](./Sandbox/) — responsive local capture of `sandbox.cloudflare.com`, with its outlined-type hero, animated feature diagrams, example tabs, and testimonials running on the original React islands.
 - [OpenAI Developers](./OpenAIDevelopers/) — responsive local capture of `developers.openai.com`, with its DevDay hero, model cards, nav dropdowns, theme toggle, and local OpenAI Sans fonts.
+- [Plasmidsaurus homepage](./Plasmidsaurus/) — responsive local capture of `plasmidsaurus.com`, with mirrored fonts, illustrations, videos, and the two embedded React demo apps.
 - [Notion product page](./Notion/) — responsive reconstruction of `notion.com/product`, including local fonts, imagery, navigation, motion, feature cards, testimonials, CTA, and footer.
 
 Each design lives in its own folder with local run instructions.

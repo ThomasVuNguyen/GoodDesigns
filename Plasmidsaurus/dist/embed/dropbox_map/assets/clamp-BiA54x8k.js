@@ -1,0 +1,1 @@
+import{O as e}from"./button-B6YAfdfN.js";import{T as t}from"./schemas-DCWM2I8-.js";var n=e(`x`,[[`path`,{d:`M18 6 6 18`,key:`1bl5f8`}],[`path`,{d:`m6 6 12 12`,key:`d8bk6v`}]]);function r(e){return t(19)?e:e?`true`:void 0}function i(e,t=-(2**53-1),n=2**53-1){return Math.max(t,Math.min(e,n))}export{r as n,n as r,i as t};

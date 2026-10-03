@@ -1,0 +1,60 @@
+LOCUS       plasmid                 1407 bp    DNA     circular SYN 14-AUG-2026
+DEFINITION  .
+ACCESSION   .
+VERSION     .
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+COMMENT     Annotated with pLannotate v1.2.2
+FEATURES             Location/Qualifiers
+     CDS             complement(631..1176)
+                     /note="pLannotate"
+                     /label="SNAP-tag®"
+                     /database="snapgene"
+                     /identity="100.0"
+                     /match_length="100.0"
+                     /fragment="False"
+                     /other="CDS"
+     protein_bind    complement(486..519)
+                     /note="pLannotate"
+                     /label="loxP"
+                     /database="snapgene"
+                     /identity="100.0"
+                     /match_length="100.0"
+                     /fragment="False"
+                     /other="protein_bind"
+     CDS             complement(1213..1305)
+                     /note="pLannotate"
+                     /label="ARF5_HUMAN (fragment)"
+                     /database="swissprot"
+                     /identity="87.1"
+                     /match_length="17.2"
+                     /fragment="True"
+                     /other="CDS"
+ORIGIN
+        1 tgtgttttgg atctttctct ggctggtaca agcagtatta gaaaatcttt ttggcaaggg
+       61 agagaaataa atacaaatgg aatgctacat ttttaaatta gcaaactgtc tcaggaatga
+      121 taaaggtatc agtaaagtag caaggggata actttaaaac attatttgtc tggggctcaa
+      181 aaaacactca aaacaattta tttaaaggtt gcacaagagc tatgtccagg catttacgct
+      241 tatgggaagt aaaattaaaa gaggatactt ttttcccaag gagaatttct ttaaaaccaa
+      301 gcacattgct aaatagcaac attatactcg gtaaacaata attggcaaca aaataagttt
+      361 aatattctgc ccaaaccagt cccagatact gtttaataac caagatacaa actaattttg
+      421 ttgtaacaag cctagaccaa ttttatcaaa catgtcgttg gttagatatc gaatttcatg
+      481 aattcataac ttcgtataat gtatgctata cgaagttatg ctagctcaaa ctcgctttac
+      541 gaaaacccag tagcgatcgc cagacccacc actgccgccg gagccaccgg tgctgtccag
+      601 gcccagcagg gggttgggga tgggcttgcc acccagccca ggcttgccca gtctgtggcc
+      661 ctcgtgggcc agcagccact ctttcacggc gagcccgccc tcgtagcccc ccacgtccag
+      721 gtcgccctgc accacccggt ggcaggggat cagaatgggc acgggatttc cgctcagggc
+      781 ggttttcacg gcggcggtgg cggcgggatt gccggccagg gcggccaggt ggctgtagct
+      841 gatgacctct ccgaacttca ccactttcag cagtttccac agcacctggc gggtaaagct
+      901 ctcctgctgg aacactgggt ggtgcagggc tggcacaggg aactcctcga tggcctcagg
+      961 ctggtgaaag taggcgttga gccaggcggt ggcctgcatc agtggctctg gtccgcccag
+     1021 cacggcggct ggggcaggca cttccacggc gtcggcggca gatgttcctt tgcccaggaa
+     1081 gatgatacgg tgcaggccct gttcgcaccc agacagttcc agcttgccca gagggctatc
+     1141 cagggtggtg cgcttcattt cgcagtcttt gtccatggat cctgagccgg aaccagagcc
+     1201 tgaccctgat ccacgttttg aaagctcatt tgacagccag tcaagtcctt catacagacc
+     1261 agttccttgt gttgcacaag tggcttgaac ataccactgt aaagagaaga caagaaaata
+     1321 cttgattaac aaagttaata tataacacca gtgtttaaac tttcttaatc aaacttaaga
+     1381 gtcttttcac acctcttgca tctcaca
+//
