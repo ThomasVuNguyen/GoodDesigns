@@ -14,6 +14,7 @@ A personal collection of high-fidelity, self-contained recreations of websites a
 - [Plasmidsaurus homepage](./Plasmidsaurus/) — responsive local capture of `plasmidsaurus.com`, with mirrored fonts, illustrations, videos, and the two embedded React demo apps.
 - [Socratica](./Socratica/) — responsive local capture of `socratica.info`, with its rotating doodle wordmark, nav overlay, and local Tiempos/Geist fonts.
 - [HeyPCB](./HeyPCB/) — responsive local capture of `heypcb.ai`, hydrated from the original Next.js chunks with its 3D board viewer and local Geist fonts.
+- [F13](./F13/) — responsive local capture of `f13.com`, hydrated from the original Next.js chunks with its animated hero carousel and local Saans fonts.
 - [Notion product page](./Notion/) — responsive reconstruction of `notion.com/product`, including local fonts, imagery, navigation, motion, feature cards, testimonials, CTA, and footer.
 
 Each design lives in its own folder with local run instructions.
