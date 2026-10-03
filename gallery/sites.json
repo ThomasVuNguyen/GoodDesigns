@@ -16,6 +16,7 @@
     { "slug": "posthog", "name": "PostHog", "folder": "PostHog", "reference": "https://posthog.com/", "tagline": "Your product's context layer", "captured": "2026-09-29" },
     { "slug": "town", "name": "Town", "folder": "Town", "reference": "https://www.town.com/", "tagline": "The AI assistant that does the work", "captured": "2026-09-29" },
     { "slug": "propublica", "name": "ProPublica", "folder": "ProPublica", "reference": "https://www.propublica.org/", "tagline": "Investigative journalism in the public interest", "captured": "2026-09-17" },
-    { "slug": "cloudflare-sandbox", "name": "Cloudflare Sandbox SDK", "folder": "Sandbox", "reference": "https://sandbox.cloudflare.com/", "tagline": "Run sandboxed code environments on the edge", "captured": "2026-10-02" }
+    { "slug": "cloudflare-sandbox", "name": "Cloudflare Sandbox SDK", "folder": "Sandbox", "reference": "https://sandbox.cloudflare.com/", "tagline": "Run sandboxed code environments on the edge", "captured": "2026-10-02" },
+    { "slug": "openai-developers", "name": "OpenAI Developers", "folder": "OpenAIDevelopers", "reference": "https://developers.openai.com/", "tagline": "Docs and resources to build with, for, and on OpenAI", "captured": "2026-10-02" }
   ]
 }

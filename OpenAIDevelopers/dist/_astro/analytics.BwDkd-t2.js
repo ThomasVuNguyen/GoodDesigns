@@ -1,0 +1,1 @@
+import{n as e}from"./dist.Cu0tpUEC.js";var t=(t,n)=>{e(t,n)};export{t};
