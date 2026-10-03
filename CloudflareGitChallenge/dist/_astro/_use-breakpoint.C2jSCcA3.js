@@ -1,0 +1,1 @@
+import{r as s}from"./index.Bvt71uJM.js";globalThis.process??={};globalThis.process.env??={};function a(e){const[i,n]=s.useState(void 0);return s.useEffect(()=>{const t=window.matchMedia(`(max-width: ${e-1}px)`),o=()=>{n(window.innerWidth<e)};return t.addEventListener("change",o),n(window.innerWidth<e),()=>t.removeEventListener("change",o)},[e]),!!i}export{a as u};

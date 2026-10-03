@@ -1,0 +1,1 @@
+import{r as o}from"./index.Bvt71uJM.js";import{h as r,i as s,p as t}from"./index.BWVBTTGG.js";globalThis.process??={};globalThis.process.env??={};function u(){!r.current&&s();const[e]=o.useState(t.current);return e}export{u};

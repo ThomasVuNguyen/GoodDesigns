@@ -1,0 +1,1 @@
+globalThis.process??={};globalThis.process.env??={};const r={current:null},t={current:!1},o=typeof window<"u";function s(){if(t.current=!0,!!o)if(window.matchMedia){const e=window.matchMedia("(prefers-reduced-motion)"),n=()=>r.current=e.matches;e.addEventListener("change",n),n()}else r.current=!1}export{t as h,s as i,r as p};
