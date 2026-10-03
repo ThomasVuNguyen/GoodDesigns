@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 64" fill="none">
+  <!-- heypcb's own FPGA mark: a package outline with its pins and the four letters. No vendor owns "FPGA". -->
+  <g stroke="#18181b" stroke-width="3" stroke-linecap="round">
+    <path d="M14 20v-8M26 20v-8M38 20v-8M50 20v-8M62 20v-8M74 20v-8M86 20v-8"/>
+    <path d="M14 52v-8M26 52v-8M38 52v-8M50 52v-8M62 52v-8M74 52v-8M86 52v-8"/>
+  </g>
+  <rect x="6" y="20" width="84" height="24" rx="4" fill="#18181b"/>
+  <text x="48" y="37.5" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="15" font-weight="700" letter-spacing="2" fill="#ffffff">FPGA</text>
+</svg>
