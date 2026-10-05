@@ -17,6 +17,7 @@ A personal collection of high-fidelity, self-contained recreations of websites a
 - [F13](./F13/) — responsive local capture of `f13.com`, hydrated from the original Next.js chunks with its animated hero carousel and local Saans fonts.
 - [Foglamp](./Foglamp/) — responsive local capture of `foglamp.dev`, hydrated from the original Next.js chunks with its dashboard hero and local Inter fonts.
 - [Muse Gadgets](./MuseGadgets/) — responsive local capture of `gadgets.muse.ai`, hydrated from the original Next.js chunks with its ASCII hero, project carousel, and WebGL Home Link viewer.
+- [Paul Kalkbrenner design study](./PaulKalkbrenner/) — responsive study of the artist homepage, with a typographic grid, album tabs, tour listings, gallery carousel, video archive and original replacement imagery.
 - [Notion product page](./Notion/) — responsive reconstruction of `notion.com/product`, including local fonts, imagery, navigation, motion, feature cards, testimonials, CTA, and footer.
 
 Each design lives in its own folder with local run instructions.

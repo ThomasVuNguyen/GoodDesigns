@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta name="description" content="An independent visual study of an electronic music artist's digital archive." />
+    <title>Paul Kalkbrenner — Music, Live &amp; Archive | Design Study</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/assets/styles.css" />
+    <script defer src="/assets/app.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="monogram" href="#home" aria-label="Back to top">PK</a>
+      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#music">Music</a>
+        <a href="#tour">Tour</a>
+        <a href="#about">About</a>
+        <a href="#journey">Journey</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#archive">News</a>
+        <a href="#contact">Contact</a>
+        <a href="https://pk-merch.de/" target="_blank" rel="noreferrer">Store</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home" aria-labelledby="artist-name">
+        <p class="hero-copy">Explore the music, new releases, live performances and a body of work shaped by more than two decades of electronic music.</p>
+        <h1 class="hero-title" id="artist-name"><span>Paul</span><span class="title-frame" aria-hidden="true"></span><span>Kalkbrenner</span></h1>
+        <div class="now-playing"><span class="waveform" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span><small>Now playing</small><strong>Time To Dance</strong></span></div>
+        <p class="hero-description">A living archive of sound, image and the moments between.</p>
+        <button class="sound-toggle" type="button" aria-pressed="false"><span class="sound-state">Sound OFF</span><span class="sound-switch" aria-hidden="true"><i></i></span></button>
+      </section>
+
+      <section class="manifesto" aria-label="Experience the pulse of electronic music">
+        <div class="manifesto-grid" aria-hidden="true">
+          <span class="grid-index">01</span><span class="grid-index">02</span><span class="grid-index">03</span><span class="grid-index">04</span>
+          <span class="grid-index">05</span><span class="grid-index">06</span><span class="grid-index">07</span><span class="grid-index">08</span>
+          <span class="grid-index">09</span><span class="grid-index">10</span><span class="grid-index">11</span><span class="grid-index">12</span>
+        </div>
+        <div class="manifesto-line line-one">Experience</div>
+        <div class="manifesto-line line-two">the <b>Pulse</b></div>
+        <div class="manifesto-line line-three">of Electronic Music</div>
+      </section>
+
+      <section class="platforms" aria-label="Listen on music platforms">
+        <span>Spotify</span><span>YouTube Music</span><span>Amazon Music</span><span>Deezer</span><span>Apple Music</span><span>Beatport</span><span>Tidal</span>
+      </section>
+
+      <section class="photo-band studio-band" aria-label="Studio portrait">
+        <img src="/assets/studio.jpg" alt="An anonymous electronic musician working in a warm Berlin studio" />
+      </section>
+
+      <section class="records-panel" id="music" aria-labelledby="records-title">
+        <div class="section-heading">
+          <p class="eyebrow"><span class="marker"></span>Recordings</p>
+          <p class="section-subtitle">Explore a collection of records built for long nights and open air.</p>
+        </div>
+        <div class="records-content">
+          <div class="record-art" aria-label="Abstract vinyl artwork">
+            <div class="vinyl-disc"><div class="vinyl-label"><span class="label-dot"></span><span class="label-type">PK<br />STUDIO</span></div></div>
+            <div class="record-caption">A collection in motion <span>01—03</span></div>
+          </div>
+          <div class="record-details">
+            <div class="album-tabs" role="tablist" aria-label="Choose a record">
+              <button class="album-tab is-active" id="tab-2025" role="tab" aria-selected="true" aria-controls="album-copy" data-album="2025">2025</button>
+              <button class="album-tab" id="tab-2018" role="tab" aria-selected="false" aria-controls="album-copy" data-album="2018">2018</button>
+              <button class="album-tab" id="tab-2015" role="tab" aria-selected="false" aria-controls="album-copy" data-album="2015">2015</button>
+              <a href="https://open.spotify.com/artist/0rasA5Z5h1ITtHelCpfu9R" target="_blank" rel="noreferrer">View all albums <span aria-hidden="true">↗</span></a>
+            </div>
+            <article class="album-copy" id="album-copy" role="tabpanel" aria-labelledby="tab-2025">
+              <p class="album-year">2025 / LP</p>
+              <h2 id="records-title">The Essence</h2>
+              <p class="availability">Available as:<br /><strong>CD, 12” vinyl and digital</strong></p>
+              <p class="album-description">An intimate collection shaped across years of studio work and late-night listening. Warm analog textures meet patient melodies in a record made to feel personal and expansive at once.</p>
+            </article>
+            <div class="album-actions">
+              <a href="https://pk-merch.de/" target="_blank" rel="noreferrer">Explore the record</a>
+              <a href="https://open.spotify.com/artist/0rasA5Z5h1ITtHelCpfu9R" target="_blank" rel="noreferrer">Listen <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tour-panel" id="tour" aria-labelledby="tour-title">
+        <div class="section-heading">
+          <p class="eyebrow"><span class="marker"></span>Tour dates</p>
+          <p class="section-subtitle">Experience a live electronic set.</p>
+        </div>
+        <div class="tour-portrait"><img src="/assets/studio.jpg" alt="A musician preparing for a live performance" /></div>
+        <div class="tour-table" role="table" aria-label="2026 tour dates">
+          <div class="tour-row tour-head" role="row"><span role="columnheader">Date</span><span role="columnheader">Venue</span><span role="columnheader">City</span><span aria-hidden="true"></span></div>
+          <a class="tour-row" role="row" href="https://www.bandsintown.com/t/107950041" target="_blank" rel="noreferrer"><span>Oct 9</span><span>Pink Paradize 2026</span><span>Toulouse, France</span><span>Tickets ↗</span></a>
+          <a class="tour-row" role="row" href="https://www.bandsintown.com/t/108826578" target="_blank" rel="noreferrer"><span>Oct 22</span><span>Paul Kalkbrenner Live x Loveland</span><span>Amsterdam, Netherlands</span><span>Tickets ↗</span></a>
+          <a class="tour-row" role="row" href="https://www.bandsintown.com/t/1039318645" target="_blank" rel="noreferrer"><span>Oct 30</span><span>Festival du Soir 2026 — Positiv</span><span>Le Grand-Saconnex, Switzerland</span><span>Tickets ↗</span></a>
+          <a class="tour-row" role="row" href="https://www.bandsintown.com/t/108876254" target="_blank" rel="noreferrer"><span>Dec 5</span><span>Drumsheds London</span><span>London, United Kingdom</span><span>Tickets ↗</span></a>
+          <a class="tour-row" role="row" href="https://www.bandsintown.com/t/1040029642" target="_blank" rel="noreferrer"><span>Dec 6</span><span>Airbeat One x Paul Kalkbrenner</span><span>Rostock, Germany</span><span>Tickets ↗</span></a>
+          <a class="tour-row" role="row" href="https://www.bandsintown.com/t/108806872" target="_blank" rel="noreferrer"><span>Dec 12</span><span>Gastein Sounds</span><span>Bad Hofgastein, Austria</span><span>Tickets ↗</span></a>
+        </div>
+        <a class="tour-all" href="https://www.paulkalkbrenner.net/tour" target="_blank" rel="noreferrer">View all dates <span aria-hidden="true">↗</span></a>
+      </section>
+
+      <section class="photo-band live-band" aria-label="Live performance">
+        <img src="/assets/live-stage.jpg" alt="An electronic musician playing to a crowd under concert lights" />
+        <div class="live-caption"><span>Berlin / Worldwide</span><span>Live, in the moment</span></div>
+      </section>
+
+      <section class="gallery-panel" id="gallery" aria-labelledby="gallery-title">
+        <div class="section-heading">
+          <p class="eyebrow"><span class="marker"></span>Gallery</p>
+          <p class="section-subtitle">A visual archive of studios, stages, cities and the people who gather around the music.</p>
+        </div>
+        <div class="gallery-stage" aria-live="polite">
+          <div class="gallery-stack" id="gallery-stack">
+            <div class="gallery-card photo-cell photo-7" aria-hidden="true"></div>
+            <div class="gallery-card photo-cell photo-5" aria-hidden="true"></div>
+            <div class="gallery-card photo-cell photo-3" aria-hidden="true"></div>
+            <div class="gallery-card photo-cell photo-1" aria-hidden="true"></div>
+            <div class="gallery-card photo-cell photo-0 is-current" aria-label="Gallery image 1 of 8"></div>
+          </div>
+        </div>
+        <h2 class="visually-hidden" id="gallery-title">Gallery</h2>
+        <div class="carousel-controls">
+          <span class="gallery-count"><b id="gallery-index">01</b> / 08</span>
+          <div><button type="button" id="gallery-prev" aria-label="Previous gallery image">Prev</button><button type="button" id="gallery-next" aria-label="Next gallery image">Next</button></div>
+        </div>
+      </section>
+
+      <section class="archive-panel" id="archive" aria-labelledby="archive-title">
+        <div class="section-heading">
+          <p class="eyebrow"><span class="marker marker-light"></span>Video archive</p>
+          <p class="section-subtitle">Selected moments, stories and performances captured on film.</p>
+        </div>
+        <h2 class="visually-hidden" id="archive-title">Video archive</h2>
+        <div class="archive-main">
+          <p class="video-count"><span id="video-index">01</span><span>/08</span></p>
+          <div class="video-feature">
+            <p class="video-title" id="video-title">Studio Session — Cronitis Boy</p>
+            <a class="video-preview photo-cell photo-0" id="video-link" href="https://www.youtube.com/watch?v=vWlNPNPkk1c" target="_blank" rel="noreferrer" aria-label="Open selected music film on YouTube"><span class="play-button" aria-hidden="true">▶</span><span class="watch-label">Watch film ↗</span></a>
+            <p class="video-credit" id="video-credit">Live and studio films<br />A collection of moving images</p>
+          </div>
+        </div>
+        <div class="video-thumbnails" aria-label="Choose a film">
+          <button class="video-thumb is-active photo-cell photo-0" data-video="0" aria-label="Select film 1: Studio Session — Cronitis Boy"><span>04:10</span></button>
+          <button class="video-thumb photo-cell photo-1" data-video="1" aria-label="Select film 2: Dreaming On"><span>03:50</span></button>
+          <button class="video-thumb photo-cell photo-2" data-video="2" aria-label="Select film 3: Que Ce Soit Clair"><span>02:54</span></button>
+          <button class="video-thumb photo-cell photo-3" data-video="3" aria-label="Select film 4: Ninety-Two"><span>04:59</span></button>
+          <button class="video-thumb photo-cell photo-4" data-video="4" aria-label="Select film 5: Kabelmann II"><span>04:21</span></button>
+          <button class="video-thumb photo-cell photo-5" data-video="5" aria-label="Select film 6: Kabelmann I"><span>04:31</span></button>
+          <button class="video-thumb photo-cell photo-6" data-video="6" aria-label="Select film 7: Schwer"><span>03:35</span></button>
+          <button class="video-thumb photo-cell photo-8" data-video="7" aria-label="Select film 8: Graf Zahl"><span>05:36</span></button>
+        </div>
+      </section>
+
+      <section class="life-panel" id="about" aria-labelledby="life-title">
+        <img src="/assets/live-stage.jpg" alt="A performer at a synthesizer in a dark concert hall" />
+        <div class="life-overlay">
+          <p class="eyebrow"><span class="marker marker-light"></span>Life works</p>
+          <p class="life-intro">Producer, writer and performer. A sound shaped by Berlin's club culture, classic machines and a lasting curiosity for what comes next.</p>
+          <h2 id="life-title">2026</h2>
+        </div>
+      </section>
+
+      <section class="newsletter-panel" id="news" aria-labelledby="newsletter-title">
+        <div class="section-heading">
+          <p class="eyebrow"><span class="marker"></span>Newsletter</p>
+          <h2 id="newsletter-title">Updates on new music, tour dates and special projects.</h2>
+        </div>
+        <div class="newsletter-strip" aria-hidden="true">
+          <div class="photo-cell photo-8"></div><div class="photo-cell photo-5"></div><div class="photo-cell photo-2"></div><div class="photo-cell photo-0"></div><div class="photo-cell photo-3"></div><div class="photo-cell photo-6"></div><div class="photo-cell photo-1"></div><div class="photo-cell photo-4"></div>
+        </div>
+        <form class="newsletter-form" id="newsletter-form" novalidate>
+          <label class="visually-hidden" for="newsletter-email">Your email</label>
+          <input id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="Your email here" />
+          <label class="visually-hidden" for="newsletter-phone">Phone number, including country code</label>
+          <input id="newsletter-phone" name="phone" type="tel" autocomplete="tel" placeholder="Phone (include country code)" />
+          <button type="submit" id="newsletter-submit">Join the newsletter <span aria-hidden="true">↗</span></button>
+        </form>
+        <p class="form-message" id="form-message" role="status">Enter an email address or phone number.</p>
+        <p class="terms-copy">By clicking Join, you agree to the <a href="https://www.paulkalkbrenner.net/legal/privacy-policy" target="_blank" rel="noreferrer">privacy terms</a>.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contact">
+      <div class="footer-links">
+        <div><h2>Links</h2><a href="#music">Music</a><a href="#tour">Tour</a><a href="https://pk-merch.de/" target="_blank" rel="noreferrer">Merch store</a><a href="https://www.paulkalkbrenner.net/contact" target="_blank" rel="noreferrer">Contact</a></div>
+        <div><h2>Support</h2><a href="https://www.paulkalkbrenner.net/legal/privacy-policy" target="_blank" rel="noreferrer">Privacy policy</a><a href="https://www.paulkalkbrenner.net/legal/imprint" target="_blank" rel="noreferrer">Imprint</a></div>
+        <div><h2>Follow</h2><a href="https://www.instagram.com/iampaulkalkbrenner/" target="_blank" rel="noreferrer">Instagram</a><a href="https://www.youtube.com/user/paulkalkbrenner" target="_blank" rel="noreferrer">YouTube</a><a href="https://open.spotify.com/artist/0rasA5Z5h1ITtHelCpfu9R" target="_blank" rel="noreferrer">Spotify</a><a href="https://soundcloud.com/paulkalkbrenner" target="_blank" rel="noreferrer">SoundCloud</a></div>
+      </div>
+      <div class="footer-signoff"><span class="footer-mark">PK</span><span>Paul Kalkbrenner<br />© 2026 — Independent design study</span></div>
+      <p class="disclaimer">Unofficial visual study. Original photography and local interactions created for this recreation.</p>
+    </footer>
+  </body>
+</html>
