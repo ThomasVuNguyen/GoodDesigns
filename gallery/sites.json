@@ -27,6 +27,7 @@
     { "slug": "paul-kalkbrenner", "name": "Paul Kalkbrenner", "folder": "PaulKalkbrenner", "reference": "https://www.paulkalkbrenner.net/", "tagline": "Unofficial homepage study · electronic music in motion", "captured": "2026-10-05" },
     { "slug": "ronald-mcdonald-house", "name": "Ronald McDonald House", "folder": "RonaldMcDonaldHouse", "reference": "https://ronaldmcdonaldhouse.org/", "tagline": "Keeping families together when a child is sick", "captured": "2026-10-05" },
     { "slug": "glide-classic", "name": "Glide Classic", "folder": "GlideClassic", "reference": "https://www.glideapps.com/classic", "tagline": "No-code builder for business apps", "captured": "2026-10-08" },
-    { "slug": "glide", "name": "Glide", "folder": "Glide", "reference": "https://www.glideapps.com/", "tagline": "Turn spreadsheets into apps & agents", "captured": "2026-10-08" }
+    { "slug": "glide", "name": "Glide", "folder": "Glide", "reference": "https://www.glideapps.com/", "tagline": "Turn spreadsheets into apps & agents", "captured": "2026-10-08" },
+    { "slug": "holly-li", "name": "Holly Li", "folder": "Holly", "reference": "https://www.thisishollyli.com/", "tagline": "Personal site of Holly Li · archived from the Wayback Machine", "captured": "2026-10-09" }
   ]
 }

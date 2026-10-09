@@ -21,6 +21,7 @@ A personal collection of high-fidelity, self-contained recreations of websites a
 - [Ronald McDonald House](./RonaldMcDonaldHouse/) — responsive local capture of `ronaldmcdonaldhouse.org`, with its mega-menu, mobile menu, impact counters, stories carousel, and local Audrey fonts.
 - [Glide Classic](./GlideClassic/) — responsive local capture of `glideapps.com/classic`, hydrated from the original Next.js chunks with its hero video, use-case carousel, pillar tabs and local videos.
 - [Glide](./Glide/) — responsive local capture of `glideapps.com`, hydrated from the original Next.js chunks with its prompt hero, rotating scene showcase, spreadsheet-to-app flow and local videos.
+- [Holly Li](./Holly/) — responsive capture of `thisishollyli.com` (site is offline) from the Wayback Machine, running on the original Vite/React bundle with its local fonts; most photography was never archived.
 - [Notion product page](./Notion/) — responsive reconstruction of `notion.com/product`, including local fonts, imagery, navigation, motion, feature cards, testimonials, CTA, and footer.
 
 Each design lives in its own folder with local run instructions.
