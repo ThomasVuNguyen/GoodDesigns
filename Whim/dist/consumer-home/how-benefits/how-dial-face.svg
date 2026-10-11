@@ -1,0 +1,36 @@
+<svg preserveAspectRatio="none" overflow="visible" width="178" height="220" viewBox="0 0 177.641 219.601" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g filter="url(#dial-shadow)">
+    <circle cx="88.8203" cy="76.3215" r="73.6432" fill="#2A2A2A"/>
+  </g>
+  <defs>
+    <filter id="dial-shadow" x="0" y="0" width="177.641" height="219.601" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="2.23193"/>
+      <feGaussianBlur stdDeviation="2.45513"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="shadow1"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="8.92774"/>
+      <feGaussianBlur stdDeviation="4.46387"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.35 0"/>
+      <feBlend mode="normal" in2="shadow1" result="shadow2"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="19.641"/>
+      <feGaussianBlur stdDeviation="5.80303"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.21 0"/>
+      <feBlend mode="normal" in2="shadow2" result="shadow3"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="34.8182"/>
+      <feGaussianBlur stdDeviation="6.919"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0"/>
+      <feBlend mode="normal" in2="shadow3" result="shadow4"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dy="54.4592"/>
+      <feGaussianBlur stdDeviation="7.58858"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.01 0"/>
+      <feBlend mode="normal" in2="shadow4" result="shadow5"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="shadow5" result="shape"/>
+    </filter>
+  </defs>
+</svg>
