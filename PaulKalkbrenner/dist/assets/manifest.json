@@ -1,0 +1,117 @@
+[
+  {
+    "local": "assets/media/studio-room.jpg",
+    "purpose": "warm studio portrait",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/artist-portrait-bw.jpg",
+    "purpose": "black and white editorial portrait",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/tour-car.jpg",
+    "purpose": "generated travel portrait",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/live-stage.jpg",
+    "purpose": "generated stage scene",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/noise-grain.svg",
+    "purpose": "original procedural grain texture",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/portrait-01.jpg",
+    "purpose": "generated portrait study 01",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/portrait-02.jpg",
+    "purpose": "generated portrait study 02",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/portrait-03.jpg",
+    "purpose": "generated portrait study 03",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/portrait-04.jpg",
+    "purpose": "generated portrait study 04",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/portrait-05.jpg",
+    "purpose": "generated portrait study 05",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/portrait-06.jpg",
+    "purpose": "generated portrait study 06",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/portrait-07.jpg",
+    "purpose": "generated portrait study 07",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/portrait-08.jpg",
+    "purpose": "generated portrait study 08",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/portrait-09.jpg",
+    "purpose": "generated portrait study 09",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/video-still-01.jpg",
+    "purpose": "generated video archive still 01",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/video-still-02.jpg",
+    "purpose": "generated video archive still 02",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/video-still-03.jpg",
+    "purpose": "generated video archive still 03",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/video-still-04.jpg",
+    "purpose": "generated video archive still 04",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/video-still-05.jpg",
+    "purpose": "generated video archive still 05",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/video-still-06.jpg",
+    "purpose": "generated video archive still 06",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/video-still-07.jpg",
+    "purpose": "generated video archive still 07",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/video-still-08.jpg",
+    "purpose": "generated video archive still 08",
+    "source": "original generated or authored asset"
+  },
+  {
+    "local": "assets/media/video-still-09.jpg",
+    "purpose": "generated video archive still 09",
+    "source": "original generated or authored asset"
+  }
+]

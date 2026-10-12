@@ -1,0 +1,13 @@
+/* Localized assets, typographic service labels, and non-network video previews. */
+html { scroll-behavior: smooth; }
+[id] { scroll-margin-top: 1.25rem; }
+body { font-family: Arial, Helvetica, sans-serif !important; }
+.sound-button__wrap { cursor: pointer; }
+.draggable-marquee__item-label { display: flex; width: 100%; height: 100%; align-items: center; justify-content: center; color: currentColor; font-family: Arial, Helvetica, sans-serif; font-size: .82em; font-weight: 700; letter-spacing: -.035em; text-align: center; white-space: nowrap; }
+.archive-inner__main-visual[data-watch-video] { cursor: pointer; }
+.local-video-prompt { position: absolute; right: 1rem; bottom: 1rem; z-index: 3; padding: .55rem .75rem; border-radius: 2rem; background: #fff; color: #111; font: 700 .72rem/1 Arial, Helvetica, sans-serif; opacity: .82; pointer-events: none; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+/* Fallback font metrics are slightly wider than the original face; keep the embedded-photo wordmark on the same measured rail. */
+.home-hero__inner { letter-spacing: -.08em; }
+.home-hero__img { filter: grayscale(1); }
+html[data-local-at-top] .nav, html[data-local-at-top] .nav-wrap { transform: none !important; translate: none !important; }

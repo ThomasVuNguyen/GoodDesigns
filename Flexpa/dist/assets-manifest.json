@@ -1,0 +1,337 @@
+{
+  "/_next/static/media/0b498a16acf6ae00-s.p.woff": {
+    "role": "Maison Neue font asset",
+    "source_url": "https://www.flexpa.com/_next/static/media/0b498a16acf6ae00-s.p.woff",
+    "content_type": "font/woff"
+  },
+  "/_next/static/media/4b71ef397f5b1a40-s.p.woff2": {
+    "role": "Maison Neue font asset",
+    "source_url": "https://www.flexpa.com/_next/static/media/4b71ef397f5b1a40-s.p.woff2",
+    "content_type": "font/woff2"
+  },
+  "/_next/static/media/68bd7abf2da89ba4-s.p.woff": {
+    "role": "Maison Neue font asset",
+    "source_url": "https://www.flexpa.com/_next/static/media/68bd7abf2da89ba4-s.p.woff",
+    "content_type": "font/woff"
+  },
+  "/_next/static/media/933ba3063237eb9e-s.p.woff2": {
+    "role": "Maison Neue font asset",
+    "source_url": "https://www.flexpa.com/_next/static/media/933ba3063237eb9e-s.p.woff2",
+    "content_type": "font/woff2"
+  },
+  "/_next/static/media/b410cd58e7de8cf8-s.p.ttf": {
+    "role": "Maison Neue font asset",
+    "source_url": "https://www.flexpa.com/_next/static/media/b410cd58e7de8cf8-s.p.ttf",
+    "content_type": "font/ttf"
+  },
+  "/_next/static/media/b8e129fde30cc6da-s.p.woff": {
+    "role": "Maison Neue font asset",
+    "source_url": "https://www.flexpa.com/_next/static/media/b8e129fde30cc6da-s.p.woff",
+    "content_type": "font/woff"
+  },
+  "/_next/static/media/c1a07bc4edc31e7d-s.p.woff2": {
+    "role": "Maison Neue font asset",
+    "source_url": "https://www.flexpa.com/_next/static/media/c1a07bc4edc31e7d-s.p.woff2",
+    "content_type": "font/woff2"
+  },
+  "/_next/static/media/e3a8c719636bf70d-s.p.ttf": {
+    "role": "Maison Neue font asset",
+    "source_url": "https://www.flexpa.com/_next/static/media/e3a8c719636bf70d-s.p.ttf",
+    "content_type": "font/ttf"
+  },
+  "/_next/static/media/fdc0ce3d6e93d015-s.p.ttf": {
+    "role": "Maison Neue font asset",
+    "source_url": "https://www.flexpa.com/_next/static/media/fdc0ce3d6e93d015-s.p.ttf",
+    "content_type": "font/ttf"
+  },
+  "/favicon.ico": {
+    "role": "site favicon",
+    "source_url": "https://www.flexpa.com/favicon.ico",
+    "content_type": "image/vnd.microsoft.icon"
+  },
+  "/images/blog/fallback.png": {
+    "role": "navigation feature image",
+    "source_url": "https://www.flexpa.com/images/blog/fallback.png",
+    "content_type": "image/png"
+  },
+  "/images/footer/github-icon.svg": {
+    "role": "footer social icon",
+    "source_url": "https://www.flexpa.com/images/footer/github-icon.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/footer/linkedin-icon.svg": {
+    "role": "footer social icon",
+    "source_url": "https://www.flexpa.com/images/footer/linkedin-icon.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/footer/twitter-icon.svg": {
+    "role": "footer social icon",
+    "source_url": "https://www.flexpa.com/images/footer/twitter-icon.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/icons/benefits-icon.svg": {
+    "role": "navigation or interface icon",
+    "source_url": "https://www.flexpa.com/images/icons/benefits-icon.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/icons/blog-icon.svg": {
+    "role": "navigation or interface icon",
+    "source_url": "https://www.flexpa.com/images/icons/blog-icon.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/icons/caret-down.svg": {
+    "role": "navigation or interface icon",
+    "source_url": "https://www.flexpa.com/images/icons/caret-down.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/icons/clinical-icon.svg": {
+    "role": "navigation or interface icon",
+    "source_url": "https://www.flexpa.com/images/icons/clinical-icon.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/icons/cursor-icon.svg": {
+    "role": "navigation or interface icon",
+    "source_url": "https://www.flexpa.com/images/icons/cursor-icon.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/icons/documentation-icon.svg": {
+    "role": "navigation or interface icon",
+    "source_url": "https://www.flexpa.com/images/icons/documentation-icon.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/icons/files-icon.svg": {
+    "role": "navigation or interface icon",
+    "source_url": "https://www.flexpa.com/images/icons/files-icon.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/icons/getting-started-icon.svg": {
+    "role": "navigation or interface icon",
+    "source_url": "https://www.flexpa.com/images/icons/getting-started-icon.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/icons/globe-icon.svg": {
+    "role": "navigation or interface icon",
+    "source_url": "https://www.flexpa.com/images/icons/globe-icon.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/icons/legal-icon.svg": {
+    "role": "navigation or interface icon",
+    "source_url": "https://www.flexpa.com/images/icons/legal-icon.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/icons/patient-icon.svg": {
+    "role": "navigation or interface icon",
+    "source_url": "https://www.flexpa.com/images/icons/patient-icon.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/icons/payers-icon.svg": {
+    "role": "navigation or interface icon",
+    "source_url": "https://www.flexpa.com/images/icons/payers-icon.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/icons/portal-icon.svg": {
+    "role": "navigation or interface icon",
+    "source_url": "https://www.flexpa.com/images/icons/portal-icon.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/icons/providers-icon.svg": {
+    "role": "navigation or interface icon",
+    "source_url": "https://www.flexpa.com/images/icons/providers-icon.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/icons/qr-code-icon.svg": {
+    "role": "navigation or interface icon",
+    "source_url": "https://www.flexpa.com/images/icons/qr-code-icon.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/navigation/caret-down.svg": {
+    "role": "page asset",
+    "source_url": "https://www.flexpa.com/images/navigation/caret-down.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/navigation/logo-white.svg": {
+    "role": "page asset",
+    "source_url": "https://www.flexpa.com/images/navigation/logo-white.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/navigation/logo.svg": {
+    "role": "page asset",
+    "source_url": "https://www.flexpa.com/images/navigation/logo.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/products/fax.svg": {
+    "role": "page illustration",
+    "source_url": "https://www.flexpa.com/images/products/fax.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/products/network-illustration.svg": {
+    "role": "page illustration",
+    "source_url": "https://www.flexpa.com/images/products/network-illustration.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/products/records-feature-2.png": {
+    "role": "page illustration",
+    "source_url": "https://www.flexpa.com/images/products/records-feature-2.png",
+    "content_type": "image/png"
+  },
+  "/images/smart-health-links.svg": {
+    "role": "page illustration",
+    "source_url": "https://www.flexpa.com/images/smart-health-links.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/value-prop/checks.svg": {
+    "role": "record category icon",
+    "source_url": "https://www.flexpa.com/images/value-prop/checks.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/value-prop/cloud.svg": {
+    "role": "record category icon",
+    "source_url": "https://www.flexpa.com/images/value-prop/cloud.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/value-prop/cost.svg": {
+    "role": "record category icon",
+    "source_url": "https://www.flexpa.com/images/value-prop/cost.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/value-prop/cube.svg": {
+    "role": "record category icon",
+    "source_url": "https://www.flexpa.com/images/value-prop/cube.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/value-prop/document.svg": {
+    "role": "record category icon",
+    "source_url": "https://www.flexpa.com/images/value-prop/document.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/value-prop/flow.svg": {
+    "role": "record category icon",
+    "source_url": "https://www.flexpa.com/images/value-prop/flow.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/value-prop/rx.svg": {
+    "role": "record category icon",
+    "source_url": "https://www.flexpa.com/images/value-prop/rx.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/value-prop/time.svg": {
+    "role": "record category icon",
+    "source_url": "https://www.flexpa.com/images/value-prop/time.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/logos/aetna.png": {
+    "role": "Aetna logo",
+    "source_url": "https://cdn.flexpa.com/logos/3f3b2c76-0e41-4d8a-b446-569e51f0c02d",
+    "content_type": "image/png"
+  },
+  "/images/logos/unitedhealthcare.png": {
+    "role": "UnitedHealthcare logo",
+    "source_url": "https://cdn.flexpa.com/logos/c083609f-47e9-4373-b01e-d51c05f5517f",
+    "content_type": "image/png"
+  },
+  "/images/logos/cigna.png": {
+    "role": "Cigna logo",
+    "source_url": "https://cdn.flexpa.com/logos/5cf31ec1-5418-4343-81e9-39ea68361b06",
+    "content_type": "image/png"
+  },
+  "/images/logos/humana.png": {
+    "role": "Humana logo",
+    "source_url": "https://cdn.flexpa.com/logos/893e7d7c-23f7-4e3b-9b2b-013e2ec1f5f5",
+    "content_type": "image/png"
+  },
+  "/images/logos/kaiser-permanente.png": {
+    "role": "Kaiser Permanente logo",
+    "source_url": "https://cdn.flexpa.com/logos/a2ce3a46-30bf-4f4d-b8da-0b789cf5dafd",
+    "content_type": "image/png"
+  },
+  "/images/logos/anthem-blue-cross.png": {
+    "role": "Anthem Blue Cross logo",
+    "source_url": "https://cdn.flexpa.com/logos/d704ce2b-05e1-4fa2-a7d0-1f672e0a59db",
+    "content_type": "image/png"
+  },
+  "/images/logos/centene.png": {
+    "role": "Centene logo",
+    "source_url": "https://cdn.flexpa.com/logos/69da1d24-efd9-4f9a-9bd3-fc37a490c3f0",
+    "content_type": "image/png"
+  },
+  "/images/logos/molina.png": {
+    "role": "Molina logo",
+    "source_url": "https://cdn.flexpa.com/logos/30a59592-fd03-4ff6-a1a4-ff64ba8d80e4",
+    "content_type": "image/png"
+  },
+  "/images/logos/carefirst-bcbs.jpg": {
+    "role": "CareFirst BCBS logo",
+    "source_url": "https://cdn.flexpa.com/logos/77894af9-aa75-4013-af99-7f538a093761",
+    "content_type": "image/jpeg"
+  },
+  "/images/logos/oscar-health.png": {
+    "role": "Oscar Health logo",
+    "source_url": "https://cdn.flexpa.com/logos/b4f8744c-d241-43c2-8b38-8e3da7852cee",
+    "content_type": "image/png"
+  },
+  "/images/logos/highmark.jpg": {
+    "role": "Highmark logo",
+    "source_url": "https://cdn.flexpa.com/logos/cf308097-113f-46a4-b04c-0a4c19cc65e2",
+    "content_type": "image/jpeg"
+  },
+  "/images/logos/ambetter.png": {
+    "role": "Ambetter logo",
+    "source_url": "https://cdn.flexpa.com/logos/1b7999a6-9271-4a84-a76a-482f1ec8dde0",
+    "content_type": "image/png"
+  },
+  "/images/logos/bcbs-texas.jpg": {
+    "role": "BCBS Texas logo",
+    "source_url": "https://cdn.flexpa.com/logos/150f4edd-4491-442a-a4c8-80a3bbe993e4",
+    "content_type": "image/jpeg"
+  },
+  "/images/logos/mayo-clinic.jpg": {
+    "role": "Mayo Clinic logo",
+    "source_url": "https://cdn.flexpa.com/logos/996e828e-23f5-4fa1-a056-0ea1321775c7",
+    "content_type": "image/jpeg"
+  },
+  "/images/logos/cleveland-clinic.jpg": {
+    "role": "Cleveland Clinic logo",
+    "source_url": "https://cdn.flexpa.com/logos/fcf40736-4fdb-413a-845e-5eecad0da775",
+    "content_type": "image/jpeg"
+  },
+  "/images/logos/mass-general-brigham.jpg": {
+    "role": "Mass General Brigham logo",
+    "source_url": "https://cdn.flexpa.com/logos/168a45f4-dc32-4ae3-ab90-9687d212b03f",
+    "content_type": "image/jpeg"
+  },
+  "/images/logos/upmc.jpg": {
+    "role": "UPMC logo",
+    "source_url": "https://cdn.flexpa.com/logos/1984b1cf-819b-43ea-be4d-0a4196c50c52",
+    "content_type": "image/jpeg"
+  },
+  "/images/logos/geisinger.jpg": {
+    "role": "Geisinger logo",
+    "source_url": "https://cdn.flexpa.com/logos/7ecc3f2d-3987-4c15-b9c5-3c18f3a961a1",
+    "content_type": "image/jpeg"
+  },
+  "/images/logos/athenahealth.png": {
+    "role": "athenahealth logo",
+    "source_url": "https://cdn.flexpa.com/logos/6807059a-f0f3-43c6-bffd-64e89defbba1",
+    "content_type": "image/png"
+  },
+  "/_next/static/css/346f41ddf842a107.css": {
+    "role": "original Flexpa page stylesheet",
+    "source_url": "https://www.flexpa.com/_next/static/css/346f41ddf842a107.css",
+    "content_type": "text/css"
+  },
+  "/images/cta/left.svg": {
+    "role": "CTA decorative pattern (left)",
+    "source_url": "https://www.flexpa.com/images/cta/left.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/images/cta/right.svg": {
+    "role": "CTA decorative pattern (right)",
+    "source_url": "https://www.flexpa.com/images/cta/right.svg",
+    "content_type": "image/svg+xml"
+  },
+  "/og-default.png": {
+    "role": "social preview image",
+    "source_url": "https://www.flexpa.com/og-default.png",
+    "content_type": "image/png"
+  }
+}
