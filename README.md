@@ -23,6 +23,7 @@ A personal collection of high-fidelity, self-contained recreations of websites a
 - [Glide](./Glide/) — responsive local capture of `glideapps.com`, hydrated from the original Next.js chunks with its prompt hero, rotating scene showcase, spreadsheet-to-app flow and local videos.
 - [Holly Li](./Holly/) — responsive capture of `thisishollyli.com` (site is offline) from the Wayback Machine, running on the original Vite/React bundle with its local fonts; most photography was never archived.
 - [Whim](./Whim/) — responsive local capture of `whim.com`, hydrated from the original Next.js chunks with its interactive product room, benefit cards, testimonial videos and local ABC Diatype fonts.
+- [Gumroad](./Gumroad/) — responsive local capture of `gumroad.com`, with its coin-parallax hero, Lottie mascot, category marquee, mobile menu and local ABC Favorit fonts.
 - [Notion product page](./Notion/) — responsive reconstruction of `notion.com/product`, including local fonts, imagery, navigation, motion, feature cards, testimonials, CTA, and footer.
 
 Each design lives in its own folder with local run instructions.
