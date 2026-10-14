@@ -1,0 +1,454 @@
+<div id="shopify-section-predictive-search-empty" class="shopify-section predictive-search-empty-section"><style data-section-stylesheet>
+  .resource-card__wrapper {
+    display: block;
+    height: 100%;
+  }
+
+  .resource-card {
+    --resource-card-secondary-image-opacity: 0;
+    --resource-card-primary-image-opacity: calc(1 - var(--resource-card-secondary-image-opacity));
+
+    display: flex;
+    flex-direction: column;
+    row-gap: var(--padding-xs);
+    position: relative;
+    text-decoration: none;
+    height: 100%;
+    opacity: 0;
+    animation: fadeIn var(--animation-speed-medium) var(--animation-timing-fade-in) forwards;
+  }
+
+  .resource-card__link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  .resource-card__content {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-foreground);
+    gap: var(--padding-3xs);
+     padding-bottom: 12px;
+
+    .price {
+      font-weight: 500;
+      color: #303030;
+    }
+
+    .volume-pricing-note {
+      display: block;
+      margin-top: var(--padding-3xs);
+      font-family: var(--font-body--family);
+      font-weight: normal;
+      font-size: min(0.85em, var(--font-paragraph--size));
+      line-height: normal;
+      letter-spacing: normal;
+      text-transform: none;
+      color: rgb(var(--color-rgb, var(--color-foreground-rgb)) / var(--opacity-subdued-text));
+    }
+  }
+
+  .resource-card[data-resource-type='article'] .resource-card__content,
+  .resource-card[data-resource-type='page'] .resource-card__content {
+    gap: var(--padding-xs);
+  }
+
+  .resource-card__image {
+    aspect-ratio: var(--resource-card-aspect-ratio, auto);
+    object-fit: cover;
+    border-radius: var(--resource-card-corner-radius);
+    opacity: var(--resource-card-primary-image-opacity);
+  }
+
+  .resource-card__image--secondary {
+    position: absolute;
+    top: 0;
+    opacity: var(--resource-card-secondary-image-opacity);
+    border-radius: var(--resource-card-corner-radius);
+  }
+
+  .resource-card__media:empty {
+    display: none;
+  }
+
+  .resource-card__image-placeholder {
+    padding: var(--padding-sm);
+    font-size: var(--font-size--lg);
+    line-height: var(--line-height--display-loose);
+    word-break: break-word;
+    background-color: rgb(var(--color-foreground-rgb) / var(--opacity-5));
+    aspect-ratio: var(--resource-card-aspect-ratio, auto);
+    border-radius: var(--resource-card-corner-radius);
+    color: var(--color-foreground);
+  }
+
+  .resource-card__title {
+    margin-block: 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    line-height: 1.3;
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  .resource-card__title.paragraph {
+    line-height: 1.3;
+  }
+
+  .resource-card--overlay {
+    height: 100%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 50% 0 0;
+      background: var(--gradient-image-overlay);
+      border-radius: var(--resource-card-corner-radius);
+      pointer-events: none;
+      z-index: var(--layer-flat);
+    }
+  }
+
+  .resource-card--overlay .resource-card__image {
+    height: 100%;
+  }
+
+  .resource-card--overlay .resource-card__content {
+    position: absolute;
+    inset: auto 0 0;
+    padding: var(--padding-lg) var(--padding-lg) var(--padding-sm);
+    z-index: var(--layer-raised);
+  }
+
+  .resource-card--overlay .resource-card__title {
+    color: var(--color-white);
+  }
+
+  /* Collection images */
+  .resource-card__image-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--gap-2xs);
+  }
+
+  .resource-card__collection-image {
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: calc(var(--card-corner-radius) - (var(--padding-xs) / 2));
+  }
+
+  .resource-card__subtext {
+    color: rgb(var(--color-rgb, var(--color-foreground-rgb)) / var(--opacity-subdued-text));
+    margin-block-start: 0;
+  }
+
+  .resource-card__subtext.paragraph {
+    font-size: var(--font-size--body-sm);
+    line-height: var(--line-height--body-tight);
+    color: rgb(var(--color-rgb, var(--color-foreground-rgb)) / var(--opacity-subdued-text));
+  }
+
+  .resource-card:has(.resource-card__image--secondary) {
+    &:hover,
+    &:focus {
+      --resource-card-secondary-image-opacity: 1;
+    }
+  }
+</style>
+
+
+
+<div
+  id="predictive-search-results"
+  class="predictive-search-dropdown"
+  role="listbox"
+  aria-expanded="true"
+  style="--color-shadow: rgb(var(--color-foreground-rgb) / 0.1);"
+>
+  
+    <div class="predictive-search-results__inner">
+      
+      
+        
+        
+        
+          <div
+  id="predictive-search-products"
+  class="predictive-search-results__products"
+  
+    data-testid="products-list-default--reset"
+  
+>
+  
+    <h4 class="predictive-search-results__title">
+      Kits
+    </h4>
+    <ul
+      class="predictive-search-results__list predictive-search-results__wrapper-products list-unstyled"
+    >
+      
+      
+        <li
+          class="predictive-search-results__card predictive-search-results__card--product"
+          ref="resultsItems[]"
+        >
+          
+<product-card-link
+    class="resource-card__wrapper"
+    
+      data-product-id="8740871897223"
+      data-featured-media-url="/cdn/shop/files/bioe101_w500.webp?v=1"
+      data-product-transition="true"
+      on:click="/handleViewTransition"
+    
+    
+    view-event-payload="{&quot;product&quot;:{&quot;id&quot;:8740871897223,&quot;title&quot;:&quot;Bioengineering 101 Lab Kit \u0026 Course&quot;,&quot;handle&quot;:&quot;bioengineering-101-lab-kit-course&quot;,&quot;selectedVariant&quot;:null},&quot;context&quot;:&quot;search&quot;,&quot;selectedOptions&quot;:[]}"
+    
+  ><div
+  class="resource-card"
+  data-resource-type="product"
+>
+  <a
+    class="resource-card__link"
+    href="/products/bioengineering-101-lab-kit-course"
+  >
+    <span class="visually-hidden">
+      Bioengineering 101 Lab Kit & Course
+    </span>
+  </a>
+  <div
+    class="resource-card__media"
+    style="--resource-card-aspect-ratio: 4 / 5;"
+    
+      ref="cardGallery"
+      data-view-transition-to-main-product
+    
+  >
+      
+      
+
+        <img src="/cdn/shop/files/bioe101_w500.webp?v=1" alt="" srcset="/cdn/shop/files/bioe101_w240.webp?v=1 240w, /cdn/shop/files/bioe101_w352.webp?v=1 352w" width="500" height="500" loading="lazy" class="resource-card__image" sizes="auto" ref="imagesToTransition[]" style="object-position: 50.0% 50.0%;">
+
+          <img src="/cdn/shop/files/Setofpipettes-png_w500.webp?v=1" alt="Bioengineering 101 Lab Kit &amp; Course" srcset="/cdn/shop/files/Setofpipettes-png_w240.webp?v=1 240w, /cdn/shop/files/Setofpipettes-png_w352.webp?v=1 352w" width="500" height="500" loading="lazy" class="resource-card__image resource-card__image--secondary" sizes="auto" ref="imagesToTransition[]" data-media-id="37089064550535" style="object-position: 50.0% 50.0%;">
+</div>
+
+  <div class="resource-card__content">
+    <p class="resource-card__title paragraph">Bioengineering 101 Lab Kit & Course</p>
+
+    
+      <div ref="priceContainer">
+  
+    
+    
+      <span class="price">$349.00 USD</span>
+    
+  
+</div>
+    
+  </div>
+</div></product-card-link>
+
+        </li>
+      
+        <li
+          class="predictive-search-results__card predictive-search-results__card--product"
+          ref="resultsItems[]"
+        >
+          
+<product-card-link
+    class="resource-card__wrapper"
+    
+      data-product-id="8740837523591"
+      data-featured-media-url="/cdn/shop/files/3kingdomskit-png_w500.webp?v=1"
+      data-product-transition="true"
+      on:click="/handleViewTransition"
+    
+    
+    view-event-payload="{&quot;product&quot;:{&quot;id&quot;:8740837523591,&quot;title&quot;:&quot;Engineer Across Life: Bacteria, Yeast \u0026 Plants Bundle&quot;,&quot;handle&quot;:&quot;engineer-across-life-bacteria-yeast-plants-bundle&quot;,&quot;selectedVariant&quot;:null},&quot;context&quot;:&quot;search&quot;,&quot;selectedOptions&quot;:[]}"
+    
+  ><div
+  class="resource-card"
+  data-resource-type="product"
+>
+  <a
+    class="resource-card__link"
+    href="/products/engineer-across-life-bacteria-yeast-plants-bundle"
+  >
+    <span class="visually-hidden">
+      Engineer Across Life: Bacteria, Yeast & Plants Bundle
+    </span>
+  </a>
+  <div
+    class="resource-card__media"
+    style="--resource-card-aspect-ratio: 4 / 5;"
+    
+      ref="cardGallery"
+      data-view-transition-to-main-product
+    
+  >
+      
+      
+
+        <img src="/cdn/shop/files/3kingdomskit-png_w500.webp?v=1" alt="" srcset="/cdn/shop/files/3kingdomskit-png_w240.webp?v=1 240w, /cdn/shop/files/3kingdomskit-png_w352.webp?v=1 352w" width="500" height="500" loading="lazy" class="resource-card__image" sizes="auto" ref="imagesToTransition[]" style="object-position: 50.0% 50.0%;">
+
+          <img src="/cdn/shop/files/bund_e-png_w500.webp?v=1" alt="Engineer Across Life: Bacteria, Yeast &amp; Plants Bundle" srcset="/cdn/shop/files/bund_e-png_w240.webp?v=1 240w, /cdn/shop/files/bund_e-png_w352.webp?v=1 352w" width="500" height="500" loading="lazy" class="resource-card__image resource-card__image--secondary" sizes="auto" ref="imagesToTransition[]" data-media-id="37088928333959" style="object-position: 50.0% 50.0%;">
+</div>
+
+  <div class="resource-card__content">
+    <p class="resource-card__title paragraph">Engineer Across Life: Bacteria, Yeast & Plants Bundle</p>
+
+    
+      <div ref="priceContainer">
+  
+    
+    
+      <span class="price">$349.00 USD</span>
+    
+  
+</div>
+    
+  </div>
+</div></product-card-link>
+
+        </li>
+      
+        <li
+          class="predictive-search-results__card predictive-search-results__card--product"
+          ref="resultsItems[]"
+        >
+          
+<product-card-link
+    class="resource-card__wrapper"
+    
+      data-product-id="8740800299143"
+      data-featured-media-url="/cdn/shop/files/Homelab-png_w500.webp?v=1"
+      data-product-transition="true"
+      on:click="/handleViewTransition"
+    
+    
+    view-event-payload="{&quot;product&quot;:{&quot;id&quot;:8740800299143,&quot;title&quot;:&quot;Complete Genetic Engineering Lab Kit&quot;,&quot;handle&quot;:&quot;complete-genetic-engineering-lab-kit&quot;,&quot;selectedVariant&quot;:null},&quot;context&quot;:&quot;search&quot;,&quot;selectedOptions&quot;:[]}"
+    
+  ><div
+  class="resource-card"
+  data-resource-type="product"
+>
+  <a
+    class="resource-card__link"
+    href="/products/complete-genetic-engineering-lab-kit"
+  >
+    <span class="visually-hidden">
+      Complete Genetic Engineering Lab Kit
+    </span>
+  </a>
+  <div
+    class="resource-card__media"
+    style="--resource-card-aspect-ratio: 4 / 5;"
+    
+      ref="cardGallery"
+      data-view-transition-to-main-product
+    
+  >
+      
+      
+
+        <img src="/cdn/shop/files/Homelab-png_w500.webp?v=1" alt="" srcset="/cdn/shop/files/Homelab-png_w240.webp?v=1 240w, /cdn/shop/files/Homelab-png_w352.webp?v=1 352w" width="500" height="500" loading="lazy" class="resource-card__image" sizes="auto" ref="imagesToTransition[]" style="object-position: 50.0% 50.0%;">
+
+          <img src="/cdn/shop/files/pipette_set_w500.webp?v=1" alt="Complete Genetic Engineering Lab Kit" srcset="/cdn/shop/files/pipette_set_w240.webp?v=1 240w, /cdn/shop/files/pipette_set_w352.webp?v=1 352w" width="500" height="500" loading="lazy" class="resource-card__image resource-card__image--secondary" sizes="auto" ref="imagesToTransition[]" data-media-id="37088268386439" style="object-position: 50.0% 50.0%;">
+</div>
+
+  <div class="resource-card__content">
+    <p class="resource-card__title paragraph">Complete Genetic Engineering Lab Kit</p>
+
+    
+      <div ref="priceContainer">
+  
+    
+    
+      <span class="price">$1,664.00 USD</span>
+    
+  
+</div>
+    
+  </div>
+</div></product-card-link>
+
+        </li>
+      
+        <li
+          class="predictive-search-results__card predictive-search-results__card--product"
+          ref="resultsItems[]"
+        >
+          
+<product-card-link
+    class="resource-card__wrapper"
+    
+      data-product-id="8740724211847"
+      data-featured-media-url="/cdn/shop/files/ChatGPT_Image_Mar_5_2026_02_52_37_PM__23944.1775997096.1280.1280-png_w500.webp?v=1"
+      data-product-transition="true"
+      on:click="/handleViewTransition"
+    
+    
+    view-event-payload="{&quot;product&quot;:{&quot;id&quot;:8740724211847,&quot;title&quot;:&quot;Glow-in-the-Dark Bacteria Engineering Kit&quot;,&quot;handle&quot;:&quot;gfp-bacteria&quot;,&quot;selectedVariant&quot;:null},&quot;context&quot;:&quot;search&quot;,&quot;selectedOptions&quot;:[]}"
+    
+  ><div
+  class="resource-card"
+  data-resource-type="product"
+>
+  <a
+    class="resource-card__link"
+    href="/products/gfp-bacteria"
+  >
+    <span class="visually-hidden">
+      Glow-in-the-Dark Bacteria Engineering Kit
+    </span>
+  </a>
+  <div
+    class="resource-card__media"
+    style="--resource-card-aspect-ratio: 4 / 5;"
+    
+      ref="cardGallery"
+      data-view-transition-to-main-product
+    
+  >
+      
+      
+
+        <img src="/cdn/shop/files/ChatGPT_Image_Mar_5_2026_02_52_37_PM__23944.1775997096.1280.1280-png_w500.webp?v=1" alt="" srcset="/cdn/shop/files/ChatGPT_Image_Mar_5_2026_02_52_37_PM__23944.1775997096.1280.1280-png_w240.webp?v=1 240w, /cdn/shop/files/ChatGPT_Image_Mar_5_2026_02_52_37_PM__23944.1775997096.1280.1280-png_w352.webp?v=1 352w" width="500" height="500" loading="lazy" class="resource-card__image" sizes="auto" ref="imagesToTransition[]" style="object-position: 50.0% 50.0%;">
+
+          <img src="/cdn/shop/files/ChatGPT_Image_Mar_6_2026_12_41_27_PM__30883.1775997096.1280.1280-png_w500.webp?v=1" alt="Glow-in-the-Dark Bacteria Engineering Kit" srcset="/cdn/shop/files/ChatGPT_Image_Mar_6_2026_12_41_27_PM__30883.1775997096.1280.1280-png_w240.webp?v=1 240w, /cdn/shop/files/ChatGPT_Image_Mar_6_2026_12_41_27_PM__30883.1775997096.1280.1280-png_w352.webp?v=1 352w" width="500" height="500" loading="lazy" class="resource-card__image resource-card__image--secondary" sizes="auto" ref="imagesToTransition[]" data-media-id="37087970852999" style="object-position: 50.0% 50.0%;">
+</div>
+
+  <div class="resource-card__content">
+    <p class="resource-card__title paragraph">Glow-in-the-Dark Bacteria Engineering Kit</p>
+
+    
+      <div ref="priceContainer">
+  
+    
+    
+      <span class="price">$39.99 USD</span>
+    
+  
+</div>
+    
+  </div>
+</div></product-card-link>
+
+        </li>
+      
+    </ul>
+  
+</div>
+
+        
+      
+    </div>
+  
+</div>
+
+
+
+</div>

@@ -1,0 +1,1 @@
+import{b as o,o as t,e as r}from"./_plugin-vue_export-helper-DVpryo2A.js";const n={width:"16",height:"16",fill:"currentColor",xmlns:"http://www.w3.org/2000/svg"};function s(l,e){return t(),o("svg",n,e[0]||(e[0]=[r("path",{d:"M11.06 5.53027L8 8.58361L4.94 5.53027L4 6.47027L8 10.4703L12 6.47027L11.06 5.53027Z"},null,-1)]))}const a={render:s};export{a as C};

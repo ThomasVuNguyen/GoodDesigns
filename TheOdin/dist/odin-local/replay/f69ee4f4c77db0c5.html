@@ -1,0 +1,250 @@
+<div id="shopify-section-template--21672899707015__search" class="shopify-section"><style data-section-stylesheet>
+  :root {
+    --text-align-default: left;
+  }
+
+  [style*='--horizontal-alignment: center'] .text-block {
+    --text-align-default: center;
+  }
+
+  [style*='--horizontal-alignment: flex-end'] .text-block {
+    --text-align-default: right;
+  }
+
+  [style*='--horizontal-alignment: flex-start'] > .text-block {
+    --text-align-default: left;
+  }
+
+  [style*='--horizontal-alignment: center'] > .text-block {
+    --text-align-default: center;
+  }
+
+  [style*='--horizontal-alignment: flex-end'] > .text-block {
+    --text-align-default: right;
+  }
+
+  .text-block {
+    width: var(--width);
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: var(--horizontal-alignment);
+    color: var(--color, var(--color-foreground));
+  }
+
+  .text-block > * {
+    width: var(--width);
+    max-inline-size: min(100%, var(--max-width, 100%));
+    text-align: var(--text-align, var(--text-align-default));
+    text-wrap: var(--text-wrap);
+  }
+
+  .text-block:not(.text-block--full-width).rte,
+  .text-block:not(.text-block--full-width).paragraph {
+    /* Safari doesn't support pretty, so fallback to balance */
+    text-wrap: balance;
+    text-wrap: pretty;
+  }
+
+  .text-block:not(.text-block--full-width):is(.h1, .h2, .h3, .h4, .h5, .h6) {
+    text-wrap: balance;
+  }
+
+  /* Hide underline unless text is using paragraph styles. */
+  .text-block.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) a {
+    text-decoration-line: none;
+    color: currentColor;
+
+    &:hover {
+      text-decoration-line: none;
+      color: currentColor;
+    }
+  }
+
+  .text-block h1,
+  .text-block.h1 > * {
+    margin-block: var(--font-h1--spacing);
+  }
+
+  .text-block h2,
+  .text-block.h2 > * {
+    margin-block: var(--font-h2--spacing);
+  }
+
+  .text-block h3,
+  .text-block.h3 > * {
+    margin-block: var(--font-h3--spacing);
+  }
+
+  .text-block h4,
+  .text-block.h4 > * {
+    margin-block: var(--font-h4--spacing);
+  }
+
+  .text-block h5,
+  .text-block.h5 > * {
+    margin-block: var(--font-h5--spacing);
+  }
+
+  .text-block h6,
+  .text-block.h6 > * {
+    margin-block: var(--font-h6--spacing);
+  }
+
+  .text-block p,
+  .text-block.p > * {
+    margin-block: var(--font-paragraph--spacing);
+  }
+
+  .text-block > *:first-child {
+    margin-block-start: 0;
+  }
+
+  .text-block > *:last-child {
+    margin-block-end: 0;
+  }
+
+  .text-block--align-center,
+  .text-block--align-center > * {
+    margin-inline: auto;
+  }
+
+  .text-block--align-right,
+  .text-block--align-right > * {
+    margin-inline-start: auto;
+  }
+
+  .text-block--background {
+    background-color: var(--text-background-color);
+    border-radius: var(--text-corner-radius);
+
+    /* To avoid text being cropped when using a border radius we add a minimum padding. */
+    padding-block-start: max(var(--text-padding), var(--padding-block-start, 0));
+    padding-block-end: max(var(--text-padding), var(--padding-block-end, 0));
+    padding-inline-start: max(var(--text-padding), var(--padding-inline-start, 0));
+    padding-inline-end: max(var(--text-padding), var(--padding-inline-end, 0));
+  }
+
+  .custom-color,
+  .custom-color > :is(h1, h2, h3, h4, h5, h6, p, *) {
+    color: var(--color);
+  }
+</style>
+
+
+
+<div
+  class="section-background"
+></div>
+<div class="section section--page-width lab-grid">
+  <div
+    class="spacing-style search-page__header"
+    style="
+      --horizontal-alignment: flex-start;
+      --padding-block-start: max(20px, calc(var(--spacing-scale) * 24px));--padding-block-end: max(20px, calc(var(--spacing-scale) * 40px));
+    "
+  >
+    
+
+    
+
+    
+
+    
+
+
+
+
+
+
+
+  <div class=" spacing-style text-block text-block--AdkEvTEJJTkk5b1Bze__heading h2    text-block--align-left  "  style="    --padding-block-start: 0px; --padding-block-end:0px; --padding-inline-start:0px; --padding-inline-end:0px;              --color: #020202;      --color-rgb: 2 2 2;        --width: 100%;    --max-width: var(--max-width--body-);          --text-align: left;          ">
+    
+      <h3>Search results</h3>
+    
+  </div>
+
+
+
+
+
+
+
+    
+
+<script
+  src="/cdn/shop/t/2/assets/search-page-input.js"
+  defer
+  type="module"
+></script>
+
+<form
+  action="/search"
+  method="get"
+  role="search"
+  class="search-page-input__parent"
+>
+  <search-page-input-component
+    style="
+      --size-style-width:50%;--size-style-height: ;
+      
+      
+        --color-input-background: #fcfafa; --color-input-text: #303030; --color-input-text-rgb: 48 48 48; --color-input-border: #dbdbdb;
+        --style-border-width-inputs: 1px;
+        --style-border-radius-inputs: 16px;
+      
+    "
+    
+  >
+    <label
+      for="SearchPageInput--AUHZCQ0EwOFBRd2J0Z__search"
+      class="visually-hidden"
+    >
+      Search
+    </label>
+    <span class="svg-wrapper search__icon">
+      <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"><circle cx="9" cy="9" r="4.75" stroke="currentColor" stroke-width="var(--icon-stroke-width)"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--icon-stroke-width)" d="m12.5 12.5 3.25 3.25"/></svg>
+
+    </span>
+    <input
+      name="type"
+      value="product"
+      type="hidden"
+    >
+    <input
+      class="search-page-input"
+      id="SearchPageInput--AUHZCQ0EwOFBRd2J0Z__search"
+      type="search"
+      name="q"
+      ref="searchPageInput"
+      on:keydown="/handleKeyDown"
+      value="__ODIN_QH__"
+      placeholder="Search"
+    >
+    <a
+      href="/search?type=product&amp;q="
+      class="search__reset-button"
+      aria-label="Reset search"
+    >
+      <span class="svg-wrapper search__reset-button-icon">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="6.25" stroke="currentColor" stroke-width="var(--icon-stroke-width)"/><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="var(--icon-stroke-width)" d="m12.5 7.5-5 5M12.5 12.5l-5-5"/></svg>
+
+      </span>
+      <span class="search__reset-button-text">
+        Clear
+      </span>
+    </a>
+  </search-page-input-component>
+
+  
+</form>
+
+
+
+
+
+  </div>
+</div>
+
+
+</div>

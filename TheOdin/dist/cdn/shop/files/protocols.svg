@@ -1,0 +1,13 @@
+<svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="55" height="55" rx="7.5" fill="#1C1C1C"></rect>
+<rect x="0.5" y="0.5" width="55" height="55" rx="7.5" stroke="#2A2A2A"></rect>
+<rect x="25.334" y="18.668" width="16" height="2.66667" fill="#34C759"></rect>
+<rect x="25.334" y="24" width="10.6667" height="2.66667" fill="#34C759"></rect>
+<rect x="25.334" y="29.332" width="16" height="2.66667" fill="#34C759"></rect>
+<rect x="25.334" y="34.668" width="10.6667" height="2.66667" fill="#34C759"></rect>
+<path d="M19.999 26.668H17.332V24.001H19.999V26.668ZM17.332 24.001H14.666V21.334H17.332V24.001ZM22.666 24.001H19.999V21.334H22.666V24.001ZM19.999 21.334H17.332V18.668H19.999V21.334Z" fill="#34C759"></path>
+<rect x="17.334" y="29.332" width="2.66667" height="2.66667" fill="#34C759"></rect>
+<rect x="17.334" y="34.668" width="2.66667" height="2.66667" fill="#34C759"></rect>
+<rect x="14.666" y="34.668" width="2.66667" height="2.66667" transform="rotate(-90 14.666 34.668)" fill="#34C759"></rect>
+<rect x="20" y="34.668" width="2.66667" height="2.66667" transform="rotate(-90 20 34.668)" fill="#34C759"></rect>
+</svg>

@@ -1,0 +1,73 @@
+.path-nav-sys a{color:inherit!important}
+.disp-blk{display:block}
+.disp-inline{display:inline}
+.disp-if{display:inline-flex}
+.pad-none{padding:0}
+.mg-none{margin:0}
+.list-reset{list-style:none}
+.link-unstyled,.link-unstyled:hover{text-decoration:none}
+.nav-seq-list{display:block}
+.nav-item-inline{display:inline}
+.sep-sym-base{display:inline-flex}
+
+/* Shopify color settings expose RGBA channels, so consume them through rgba(). */
+.path-nav-sys[data-nav-style="breadcrumb"]{border-radius:var(--br-rad,5px);font-size:var(--txt-sz);background-color:rgba(var(--bg-col));color:var(--txt-col);margin-top:var(--sp-v);margin-bottom:var(--sp-v);padding:var(--pad-v-m) var(--pad-h-m)}
+.path-nav-sys[data-theme-el="navigation"]{max-width:var(--wrap-w)}
+/* Center the capped container as well as its text, without moving left-aligned blocks. */
+.path-nav-sys[data-nav-style="breadcrumb"][data-text-align="center"]{margin-inline:auto}
+
+.path-nav-sys .sep-sym-base[data-role="divider"]{margin-left:var(--sep-gap);margin-right:var(--sep-gap)}
+[data-nav-style="breadcrumb"] .sep-sym-base[data-role="divider"]{width:max(var(--ico-dim),calc(var(--txt-sz) * 1.1));height:max(var(--ico-dim),calc(var(--txt-sz) * 1.1))}
+[data-nav-style="breadcrumb"] .nav-item-inline{display:inline-flex;align-items:center}
+.path-nav-sys .txt-nav-item{font-size:var(--txt-sz);display:inline-flex;align-items:center}
+.path-nav-sys .pad-base{text-align:var(--txt-align,left)}
+.path-nav-sys .sep-sym-base:last-child{display:none}
+.path-nav-sys .sep-sym-base:not([data-obc-variant-divider]):not(:has(~ [data-nav-item="true"])){display:none}
+.path-nav-sys .txt-nav-item[data-state="active"]{font-weight:var(--active-fw,inherit)!important}
+
+.txt-div-sep{display:inline-flex;align-items:center;justify-content:center}
+.txt-div-sep[data-align="center"]{align-items:center;justify-content:center}
+.txt-div-sep[data-valign="mid"]{vertical-align:middle}
+.path-nav-sys .txt-div-sep{line-height:1;font-size:max(var(--ico-dim),12px);color:currentColor;width:max(var(--ico-dim),12px);height:max(var(--ico-dim),12px)}
+
+@keyframes homePulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.85;transform:scale(1.08)}}
+.icon.icon-home{display:inline-block;width:1em;height:1em;vertical-align:-.1em;background:currentColor;-webkit-mask:url("/cdn/ext/cdn.shopify.com/extensions/01a1348b-4a34-709e-90ca-1d97c8692881/oh-breadcrumbs-categories-162/assets/obc-home.svg") center/contain no-repeat;mask:url("/cdn/ext/cdn.shopify.com/extensions/01a1348b-4a34-709e-90ca-1d97c8692881/oh-breadcrumbs-categories-162/assets/obc-home.svg") center/contain no-repeat;transition:background .3s ease,transform .2s ease}
+.icon.icon-home.icon-sm{-webkit-mask-image:url("/cdn/ext/cdn.shopify.com/extensions/01a1348b-4a34-709e-90ca-1d97c8692881/oh-breadcrumbs-categories-162/assets/obc-home-outline.svg");mask-image:url("/cdn/ext/cdn.shopify.com/extensions/01a1348b-4a34-709e-90ca-1d97c8692881/oh-breadcrumbs-categories-162/assets/obc-home-outline.svg")}
+a:hover .icon.icon-home{background:#000!important;animation:homePulse .6s ease-in-out infinite}
+.oh-home-label-html{display:inline-block;vertical-align:baseline;line-height:1}
+.oh-home-label-html .icon.icon-home{margin-right:0}
+
+.path-nav-sys[data-hover-effect="scale"] .txt-nav-item{transition:transform .3s}
+.path-nav-sys[data-hover-effect="scale"] a.txt-nav-item:hover{transform:scale(1.08)}
+
+@keyframes ul-in{from{left:0;right:100%}to{left:0;right:0}}
+@keyframes ul-out{from{left:0;right:0}to{left:100%;right:0}}
+.path-nav-sys[data-hover-effect="underline"] a.txt-nav-item{position:relative}
+.path-nav-sys[data-hover-effect="underline"] a.txt-nav-item::after{content:'';position:absolute;height:1px;bottom:-2px;left:100%;right:0;background-color:currentColor}
+.path-nav-sys[data-hover-effect="underline"] a.txt-nav-item.oh-hl-in::after{animation:ul-in .3s forwards}
+.path-nav-sys[data-hover-effect="underline"] a.txt-nav-item.oh-hl-out::after{animation:ul-out .3s forwards}
+
+.path-nav-sys[data-hover-effect="glow"] .txt-nav-item{transition:text-shadow .3s}
+.path-nav-sys[data-hover-effect="glow"] a.txt-nav-item:hover{text-shadow:0 0 8px currentColor}
+
+.path-nav-sys[data-hover-effect="bounce"] .txt-nav-item{transition:transform .3s cubic-bezier(.68,-.55,.265,1.55)}
+.path-nav-sys[data-hover-effect="bounce"] a.txt-nav-item:hover{transform:translateY(-3px)}
+
+@keyframes swing{0%,100%{transform:rotate(0)}25%{transform:rotate(2deg)}75%{transform:rotate(-2deg)}}
+.path-nav-sys[data-hover-effect="swing"] a.txt-nav-item:hover{animation:swing .5s ease}
+
+@media (max-width:749px){
+  .mobile-scroll-nav[data-list-type="ordered"]{scroll-snap-type:x mandatory;overflow-x:auto;overflow-y:hidden}
+  [data-nav-style="breadcrumb"] .mobile-scroll-nav{display:flex;align-items:center;scroll-behavior:smooth}
+  /* Auto margins share spare space but become zero on overflow, keeping both ends reachable. */
+  .path-nav-sys[data-text-align="center"] .mobile-scroll-nav::before,
+  .path-nav-sys[data-text-align="center"] .mobile-scroll-nav::after{content:"";margin-inline:auto}
+  .mobile-scroll-nav{scrollbar-width:none;-webkit-overflow-scrolling:touch;-ms-overflow-style:none}
+  .mobile-scroll-nav::-webkit-scrollbar{display:none}
+  .path-nav-sys .mobile-scroll-nav .nav-item-inline{flex-shrink:0;display:flex;align-items:center}
+  .path-nav-sys .mobile-scroll-nav,.path-nav-sys .mobile-scroll-nav .txt-nav-item{white-space:nowrap}
+}
+
+@media (min-width:990px){
+  .path-nav-sys[data-nav-style="breadcrumb"]{padding:var(--pad-v-d) var(--pad-h-d)}
+}

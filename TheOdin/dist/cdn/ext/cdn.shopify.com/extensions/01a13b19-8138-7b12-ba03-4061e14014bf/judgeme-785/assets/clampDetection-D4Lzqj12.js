@@ -1,0 +1,1 @@
+function o(t){const e=window.getComputedStyle(t,null),r=e.getPropertyValue("line-height");if(r==="normal"){const n=parseFloat(e.getPropertyValue("font-size"))||16;return Math.round(n*1.2)}return parseFloat(r)||20}function i(t){if(!t)return!1;const e=t.scrollHeight-t.clientHeight;return e<=0?!1:e>o(t)/2}export{o as g,i};

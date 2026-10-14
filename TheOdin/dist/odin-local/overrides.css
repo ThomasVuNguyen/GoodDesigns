@@ -1,0 +1,24 @@
+/* Static stand-ins for things Shopify's runtime draws on the live store. */
+
+/* Express checkout buttons (Shop Pay, PayPal, Google Pay) painted over the wallet skeletons by shim.js */
+.odin-wallet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: clamp(25px, var(--shopify-accelerated-checkout-button-block-size, 44px), 55px);
+  border-radius: var(--shopify-accelerated-checkout-button-border-radius, 4px);
+  cursor: default;
+  animation: none !important;
+}
+.odin-wallet img { height: 37%; max-width: 70%; }
+.odin-wallet--shop_pay { background: #5a31f4; }
+.odin-wallet--paypal { background: #ffc439; }
+.odin-wallet--paypal img { height: 46%; }
+.odin-wallet--google_pay { background: #000; }
+
+/* Judge.me review widgets are frozen renders; one per breakpoint (see tools/capture.py) */
+.odin-island { display: contents; }
+@media (max-width: 749px) { .odin-island--desktop { display: none; } }
+@media (min-width: 750px) { .odin-island--mobile { display: none; } }
+/* the skeleton grid pads its first row by 8px; the rendered wallets sit right under the checkout button */
+.wallet-cart-button-container:first-child:has(> .odin-wallet) { margin-top: 0 !important; }
