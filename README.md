@@ -25,6 +25,7 @@ A personal collection of high-fidelity, self-contained recreations of websites a
 - [Whim](./Whim/) — responsive local capture of `whim.com`, hydrated from the original Next.js chunks with its interactive product room, benefit cards, testimonial videos and local ABC Diatype fonts.
 - [Gumroad](./Gumroad/) — responsive local capture of `gumroad.com`, with its coin-parallax hero, Lottie mascot, category marquee, mobile menu and local ABC Favorit fonts.
 - [The ODIN storefront](./TheOdin/) — capture of all 44 pages of `the-odin.com` (home, collections, every product, blog and articles, cart, search) on the original Horizon theme, with a local emulator for variants, predictive search, sorting and a working cart.
+- [Atlassian Teamwork Graph](./TeamworkGraph/) — local capture of `teamworkgraph.com` running on the original Parcel/React bundle, with its animated graph hero, scroll-driven feature story, connector carousel, live-style metrics, agent demos, sample-question graph explorer and local Charlie/Atlassian Sans fonts.
 - [Notion product page](./Notion/) — responsive reconstruction of `notion.com/product`, including local fonts, imagery, navigation, motion, feature cards, testimonials, CTA, and footer.
 
 Each design lives in its own folder with local run instructions.

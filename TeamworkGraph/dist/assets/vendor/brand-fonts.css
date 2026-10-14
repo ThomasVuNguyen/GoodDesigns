@@ -1,0 +1,55 @@
+/* Charlie Display */
+@font-face {
+	font-family: 'Charlie Display';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(fonts/charlie/v1/CharlieDisplayRegular.woff2)
+		format('woff2');
+}
+
+@font-face {
+	font-family: 'Charlie Display';
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url(fonts/charlie/v1/CharlieDisplaySemibold.woff2)
+		format('woff2');
+}
+
+@font-face {
+	font-family: 'Charlie Display';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(fonts/charlie/v1/CharlieDisplayBold.woff2)
+		format('woff2');
+}
+
+/* Charlie Text */
+@font-face {
+	font-family: 'Charlie Text';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(fonts/charlie/v1/CharlieTextRegular.woff2)
+		format('woff2');
+}
+
+@font-face {
+	font-family: 'Charlie Text';
+	font-style: normal;
+	font-weight: 600;
+	font-display: swap;
+	src: url(fonts/charlie/v1/CharlieTextSemibold.woff2)
+		format('woff2');
+}
+
+@font-face {
+	font-family: 'Charlie Text';
+	font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+	src: url(fonts/charlie/v1/CharlieTextBold.woff2)
+		format('woff2');
+}

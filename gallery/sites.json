@@ -31,6 +31,7 @@
     { "slug": "holly-li", "name": "Holly Li", "folder": "Holly", "reference": "https://www.thisishollyli.com/", "tagline": "Personal site of Holly Li · archived from the Wayback Machine", "captured": "2026-10-09" },
     { "slug": "whim", "name": "Whim", "folder": "Whim", "reference": "https://www.whim.com/", "tagline": "Rent premium products directly from the brands that make them", "captured": "2026-10-10" },
     { "slug": "gumroad", "name": "Gumroad", "folder": "Gumroad", "reference": "https://gumroad.com/", "tagline": "Go from 0 to $1 · the creator commerce platform", "captured": "2026-10-11" },
-    { "slug": "the-odin", "name": "The ODIN", "folder": "TheOdin", "reference": "https://the-odin.com/", "tagline": "DIY genetic engineering kits · full storefront with 44 pages and a working cart", "captured": "2026-10-14" }
+    { "slug": "the-odin", "name": "The ODIN", "folder": "TheOdin", "reference": "https://the-odin.com/", "tagline": "DIY genetic engineering kits · full storefront with 44 pages and a working cart", "captured": "2026-10-14" },
+    { "slug": "teamwork-graph", "name": "Atlassian Teamwork Graph", "folder": "TeamworkGraph", "reference": "https://teamworkgraph.com/", "tagline": "Meet the graph that builds your teamwork context", "captured": "2026-10-14" }
   ]
 }

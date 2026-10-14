@@ -1,0 +1,48 @@
+// Runs before the original bundle. Answers the microsite's API calls from a capture-time
+// snapshot and swallows analytics, so the page renders identically with no backend.
+(function () {
+  var SNAPSHOT = {"currentUser":{"data":{"me":{"user":null}}},"metricsGlobal":{"organisationId":"__global__","totalRelationships":241307718152,"activeRelTypes":501,"relDataAsOf":"2026-10-12","computedAt":"2026-10-14T03:03:34.417Z","cacheStatus":"READY","totalNodes":69266970847,"activeNodeTypes":140,"nodeDataAsOf":"2026-10-10","avgDailyNodeGrowth":471393571,"daysSinceSnapshot":4,"estimatedNodesNow":71152545131,"avgFetchQueriesPerDay":64277104,"queryDataAsOf":"2026-10-12"},"clientSdkKey":{"clientSdkKey":"client-yj36Yy7JdeyfOlvn2IxZanvJLQoSDnlpa4eb8YvUZAk"},"experimentValues":{"experimentValues":{"feature_gates":{"1426971228":{"name":"1426971228","value":false,"rule_id":"default","secondary_exposures":[],"id_type":"atlassianAccountId"},"2005121349":{"name":"2005121349","value":true,"rule_id":"2kAxJU4KWQye7y4UmFTnsK","secondary_exposures":[],"id_type":"atlassianAccountId"},"1851306793":{"name":"1851306793","value":false,"rule_id":"default","secondary_exposures":[],"id_type":"atlassianAccountId"},"4124397917":{"name":"4124397917","value":true,"rule_id":"5fgw84kb1K61Ya4iI68vff","secondary_exposures":[],"id_type":"analyticsAnonymousId"},"3226107736":{"name":"3226107736","value":false,"rule_id":"default","secondary_exposures":[],"id_type":"atlassianAccountId"},"3854835308":{"name":"3854835308","value":false,"rule_id":"default","secondary_exposures":[],"id_type":"atlassianOrgId"},"1446131800":{"name":"1446131800","value":false,"rule_id":"default","secondary_exposures":[],"id_type":"atlassianAccountId"},"1671767301":{"name":"1671767301","value":false,"rule_id":"default","secondary_exposures":[],"id_type":"tenantId"},"2828240962":{"name":"2828240962","value":true,"rule_id":"3TE8XfCkJAxG0bMPrsEpv3","secondary_exposures":[],"id_type":"analyticsAnonymousId"},"134364324":{"name":"134364324","value":false,"rule_id":"default","secondary_exposures":[],"id_type":"atlassianOrgId"},"4020449067":{"name":"4020449067","value":false,"rule_id":"default","secondary_exposures":[],"id_type":"atlassianAccountId"}},"dynamic_configs":{"4089637840":{"name":"4089637840","value":{"variant":"agent_first"},"rule_id":"launchedGroup","secondary_exposures":[],"group":"launchedGroup","is_user_in_experiment":false,"is_experiment_active":false,"is_device_based":false,"group_name":"Variant B","id_type":"analyticsAnonymousId"},"1895710721":{"name":"1895710721","value":{"value":""},"rule_id":"default","secondary_exposures":[],"group":"default","is_device_based":false,"id_type":"atlassianOrgId","passed":false},"3163307673":{"name":"3163307673","value":{"value":"[{\"categoryName\":\"Knowledge\",\"categoryKey\":\"knowledge\",\"connectors\":[{\"name\":\"Google Drive\",\"isConnected\":true,\"basicStatus\":\"connected\",\"type\":\"connector\",\"connectUrl\":\"https://\"},{\"name\":\"microsoft-sharepoint\",\"isConnected\":false,\"basicStatus\":\"not-connected\",\"type\":\"connector\",\"connectUrl\":\"https://\"}]},{\"categoryName\":\"Work\",\"categoryKey\":\"work\",\"connectors\":[{\"name\":\"Figma\",\"isConnected\":true,\"basicStatus\":\"connected\",\"type\":\"mcp\",\"connectUrl\":\"https://\"},{\"name\":\"Salesforce\",\"isConnected\":false,\"basicStatus\":\"not-connected\",\"type\":\"connector\",\"connectUrl\":\"https://\"},{\"name\":\"ServiceNow\",\"isConnected\":false,\"basicStatus\":\"not-connected\",\"type\":\"connector\",\"connectUrl\":\"https://\"},{\"name\":\"Zendesk\",\"isConnected\":false,\"basicStatus\":\"not-connected\",\"type\":\"connector\",\"connectUrl\":\"https://\"}]},{\"categoryName\":\"Code\",\"categoryKey\":\"code\",\"connectors\":[{\"name\":\"Github\",\"isConnected\":true,\"basicStatus\":\"connected\",\"type\":\"connector\",\"connectUrl\":\"https://\"},{\"name\":\"Gitlab\",\"isConnected\":false,\"basicStatus\":\"not-connected\",\"type\":\"connector\",\"connectUrl\":\"https://\"}]},{\"categoryName\":\"Communications\",\"categoryKey\":\"communications\",\"connectors\":[{\"name\":\"Slack\",\"isConnected\":false,\"basicStatus\":\"not-connected\",\"type\":\"connector\",\"connectUrl\":\"https://\"},{\"name\":\"Zoom\",\"isConnected\":false,\"basicStatus\":\"not-connected\",\"type\":\"connector\",\"connectUrl\":\"https://\"},{\"name\":\"Gmail\",\"isConnected\":false,\"basicStatus\":\"not-connected\",\"type\":\"connector\",\"connectUrl\":\"https://\"},{\"name\":\"microsoft-teams\",\"isConnected\":false,\"basicStatus\":\"not-connected\",\"type\":\"connector\",\"connectUrl\":\"https://\"}]},{\"categoryName\":\"People\",\"categoryKey\":\"people\",\"connectors\":[{\"name\":\"Workday\",\"isConnected\":false,\"basicStatus\":\"not-connected\",\"type\":\"connector\",\"connectUrl\":\"https://\"},{\"name\":\"BambooHR\",\"isConnected\":false,\"basicStatus\":\"not-connected\",\"type\":\"connector\",\"connectUrl\":\"https://\"}]},{\"categoryName\":\"Data\",\"categoryKey\":\"data\",\"connectors\":[{\"name\":\"Databricks\",\"isConnected\":false,\"basicStatus\":\"not-connected\",\"type\":\"connector\",\"connectUrl\":\"https://\"},{\"name\":\"Snowflake\",\"isConnected\":false,\"basicStatus\":\"not-connected\",\"type\":\"connector\",\"connectUrl\":\"https://\"}]}]"},"rule_id":"default","secondary_exposures":[],"group":"default","is_device_based":false,"id_type":"atlassianOrgId","passed":false},"3469402539":{"name":"3469402539","value":{"value":["google_drive","github","google_calendar","gmail","gitlab_sl","gitlab"]},"rule_id":"default","secondary_exposures":[],"group":"default","is_device_based":false,"id_type":"atlassianAccountId","passed":false}},"layer_configs":{},"sdkParams":{},"has_updates":true,"time":1792017321024,"evaluated_keys":{"customIDs":{"analyticsAnonymousId":"59cf0d8a-cf97-45b5-8d7d-1bc10c0df700"}},"hash_used":"djb2","user":{"userID":null,"userAgent":null,"appVersion":null,"country":null,"custom":{"microsEnv":"prod-east","region":"prod-east","microsAwsAvailabilityZone":"us-east-1b"},"customIDs":{"analyticsAnonymousId":"59cf0d8a-cf97-45b5-8d7d-1bc10c0df700"},"email":null,"ip":null,"locale":null,"statsigEnvironment":{"tier":"production"}},"sdkInfo":{"sdkType":"java-server","sdkVersion":"3.1.3"}},"clientSdkKey":"client-yj36Yy7JdeyfOlvn2IxZanvJLQoSDnlpa4eb8YvUZAk","customAttributes":{}}};
+
+  // Gallery serves the site under /sites/<slug>/; the patched router uses this as its basename.
+  var base = location.pathname.match(/^\/sites\/[^/]+/);
+  window.__TWG_BASE__ = base ? base[0] : '';
+
+  var answers = [
+    [/\/gateway\/api\/graphql\/pq\/[^?]*\?operation=utils_twg_microsite_CurrentUser_Query/, SNAPSHOT.currentUser],
+    [/\/gateway\/api\/twg-api\/v1\/microsite\/metrics\/global/, SNAPSHOT.metricsGlobal],
+    [/\/flags\/api\/v2\/frontend\/clientSdkKey\//, SNAPSHOT.clientSdkKey],
+    [/\/flags\/api\/v2\/frontend\/experimentValues/, SNAPSHOT.experimentValues],
+  ];
+  // Everything else that would leave the page: telemetry, feature-flag sync, consent, and other gateway APIs.
+  var silenced = /sentry\.io|sentry-cdn|xp\.atlassian\.com|as\.atlassian\.com|statsig|featureassets\.org|prodregistryv2\.org|vercel-insights|api\.atlassian\.com\/flags|cookielaw|onetrust|marketo|mktoresp|\/gateway\//;
+
+  function lookup(url) {
+    for (var i = 0; i < answers.length; i++) if (answers[i][0].test(url)) return answers[i][1];
+    return silenced.test(url) ? {} : undefined;
+  }
+
+  var realFetch = window.fetch.bind(window);
+  window.fetch = function (input, init) {
+    var url = typeof input === 'string' ? input : input instanceof URL ? input.href : input.url;
+    var body = lookup(url);
+    if (body === undefined) return realFetch(input, init);
+    return Promise.resolve(new Response(JSON.stringify(body), { status: 200, headers: { 'Content-Type': 'application/json' } }));
+  };
+
+  var realOpen = XMLHttpRequest.prototype.open;
+  XMLHttpRequest.prototype.open = function (method, url) {
+    var body = lookup(String(url));
+    if (body !== undefined) {
+      arguments[0] = 'GET';
+      arguments[1] = 'data:application/json,' + encodeURIComponent(JSON.stringify(body));
+    }
+    return realOpen.apply(this, arguments);
+  };
+
+  if (navigator.sendBeacon) {
+    var realBeacon = navigator.sendBeacon.bind(navigator);
+    navigator.sendBeacon = function (url, data) {
+      return lookup(String(url)) !== undefined ? true : realBeacon(url, data);
+    };
+  }
+})();
