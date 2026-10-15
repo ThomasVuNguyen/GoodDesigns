@@ -35,7 +35,7 @@ Each design lives in its own folder with local run instructions.
 
 ## Gallery (Firebase Hosting)
 
-`gallery/` is a browsable index of every recreation with an in-page viewer and a link to each site's folder in this repo. It deploys to the `gooddesigns` site in Firebase project `starmind`.
+`gallery/` is a browsable index of every recreation (and of the Good Videos list) with an in-page viewer and a link to each site's folder in this repo. It deploys to the `gooddesigns` site in Firebase project `starmind`.
 
 ```bash
 node scripts/build-gallery.mjs          # assembles public/ (gitignored) from gallery/ + each <Site>/dist
@@ -43,6 +43,16 @@ firebase deploy --only hosting          # publishes it
 ```
 
 To add a site, append it to `gallery/sites.json`, rebuild, then refresh thumbnails with `npx -p playwright node scripts/capture-thumbs.mjs <slug>` (needs Chrome installed). The build script rewrites root-absolute asset paths (`/assets/...`) so every site works under `/sites/<slug>/`.
+
+## Good Videos
+
+The gallery also has a **Good Videos** section of YouTube and X videos. They play in the same full-screen viewer, embedded from the platform. To add one:
+
+```bash
+node scripts/add-video.mjs <youtube or x url> ["optional note shown under the title"]
+```
+
+The script fetches the title and author (YouTube oEmbed, or the FxTwitter API for X posts). It saves the poster to `gallery/thumbs/videos/<slug>.jpg` and appends the video to `gallery/videos.json`. Then rebuild and deploy.
 
 ## Recreating another site
 
