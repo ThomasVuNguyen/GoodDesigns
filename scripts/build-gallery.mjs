@@ -5,6 +5,7 @@ import { cp, mkdir, readdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const out = path.join(root, 'public');
@@ -33,6 +34,16 @@ await mkdir(path.join(out, 'sites'), { recursive: true });
 
 // Gallery shell
 await cp(path.join(root, 'gallery'), out, { recursive: true });
+// Fingerprint the shell's CSS and JS so a deploy never pairs new HTML with a cached old script.
+{
+  const indexPath = path.join(out, 'index.html');
+  let index = await readFile(indexPath, 'utf8');
+  for (const file of ['app.css', 'app.js']) {
+    const hash = createHash('sha256').update(await readFile(path.join(out, file))).digest('hex').slice(0, 10);
+    index = index.replace(`"${file}"`, `"${file}?v=${hash}"`);
+  }
+  await writeFile(indexPath, index);
+}
 
 let rewritten = 0;
 for (const site of manifest.sites) {
