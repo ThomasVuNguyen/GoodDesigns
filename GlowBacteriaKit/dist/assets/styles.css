@@ -1,52 +1,6 @@
-/* Glow-in-the-Dark Bacteria Engineering Kit — web edition of the ODIN protocol PDF.
-   Every length is written in PDF points multiplied by --u (CSS px per point), so the
-   desktop sheet is the 378pt-wide PDF page at 1.8x. Horizontal layout inside a sheet is
-   fluid (%, fr) so the same markup reflows on phones. */
-
-@font-face {
-  font-family: "Chakra Petch";
-  src: url("fonts/chakra-petch-500.woff2") format("woff2");
-  font-weight: 500;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Chakra Petch";
-  src: url("fonts/chakra-petch-600.woff2") format("woff2");
-  font-weight: 600;
-  font-display: swap;
-}
-
-:root {
-  --u: 1.8px;
-  --page: calc(378 * var(--u));
-  --margin: calc(18.75 * var(--u));
-  --cell: calc(13.5 * var(--u));
-  --hairline: calc(0.75 * var(--u));
-  --radius: calc(4.5 * var(--u));
-
-  --ink: #1a1a1a;
-  --black: #020202;
-  --text: #303030;
-  --muted: #838383;
-  --caption: rgba(48, 48, 48, 0.6);
-  --page-num: rgba(2, 2, 2, 0.5);
-  --card: #f9f9f9;
-  --line: #ebebeb;
-  --purple: #7f00ff;
-  --green: #34c759;
-  --orange: #e3901a;
-  --grid-from: #c629f1;
-  --grid-to: #02d862;
-
-  --display: "Chakra Petch", "Helvetica Neue", Arial, sans-serif;
-  --body: "Helvetica Neue", Helvetica, Arial, sans-serif;
-
-  --fs-body: 10.5;
-  --fs-step: 9;
-  --fs-caption: 7.5;
-  --fs-kit: 9;
-  color-scheme: light;
-}
+/* Each section is one PDF page: the page's own vectors (pages/pNN.svg) with a transparent
+   text layer and the interactive controls laid over the rectangles the PDF draws.
+   Desktop shows the page at 1.8x its point size (680 px); narrower screens scale it to fit. */
 
 *,
 *::before,
@@ -62,666 +16,99 @@ html {
 body {
   margin: 0;
   background: #fff;
-  color: var(--text);
-  font-family: var(--body);
-  font-size: calc(var(--fs-body) * var(--u));
-  line-height: calc(12 * var(--u));
-  -webkit-font-smoothing: antialiased;
+  color: #303030;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
+.document {
+  container-type: inline-size;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-p,
-h1,
-h2,
-h3,
-ol,
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  color: inherit;
-}
-
-:focus-visible {
-  outline: 2px solid var(--purple);
-  outline-offset: 2px;
-}
-
-.skip {
-  position: absolute;
-  left: -9999px;
-}
-.skip:focus {
-  left: var(--margin);
-  top: var(--margin);
-  z-index: 10;
-  background: #fff;
-  padding: 4px 8px;
-}
-
-/* ---------- Paper: white sheet with the PDF's gradient grid ---------- */
-
-.paper {
+.page {
   position: relative;
-  overflow: hidden;
+  --w: min(100cqw, 680px);
+  width: var(--w);
+  /* Whole-pixel page heights, so fractional heights don't add up down the document. */
+  height: round(calc(var(--w) * 522.007 / 378.007), 1px);
+  container-type: inline-size;
 }
 
-.paper::before {
-  content: "";
+.page .art,
+.text-layer {
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.page .art {
+  display: block;
+  user-select: none;
+  -webkit-user-select: none;
   pointer-events: none;
-  background: linear-gradient(90deg, var(--grid-from) 22.6%, var(--grid-to) 79.3%);
-  opacity: 0.06;
-  /* One 0.75pt line on the right and bottom edge of each 13.5pt cell, aligned to the sheet's left edge. */
-  -webkit-mask-image: linear-gradient(90deg, transparent calc(var(--cell) - var(--hairline)), #000 0),
-    linear-gradient(180deg, transparent calc(var(--cell) - var(--hairline)), #000 0);
-  mask-image: linear-gradient(90deg, transparent calc(var(--cell) - var(--hairline)), #000 0),
-    linear-gradient(180deg, transparent calc(var(--cell) - var(--hairline)), #000 0);
-  -webkit-mask-size: var(--cell) var(--cell);
-  mask-size: var(--cell) var(--cell);
-  -webkit-mask-position: calc(50% - 182.25 * var(--u)) 0;
-  mask-position: calc(50% - 182.25 * var(--u)) 0;
 }
 
-/* ---------- Sheets (one per PDF page) ---------- */
-
-.sheet {
-  position: relative;
-  width: var(--page);
-  max-width: 100%;
-  margin: 0 auto;
-  padding: calc(var(--pt, 40.5) * var(--u)) var(--margin) calc(var(--pb, 40) * var(--u));
-  overflow: hidden;
+/* Selectable, searchable text at the PDF's exact character positions; the visible
+   glyphs underneath are the PDF's own outlines. */
+.text-layer {
+  overflow: visible;
+}
+.text-layer text {
+  fill: transparent;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  white-space: pre;
+}
+.text-layer text::selection {
+  fill: transparent;
+  background: rgba(127, 0, 255, 0.22);
 }
 
-.sheet > * + *,
-.flow > * + * {
-  margin-top: calc(var(--mt, 12) * var(--u));
-}
-
-.sheet > .page-num + * {
-  margin-top: 0;
-}
-
-.page-num {
+.hit {
   position: absolute;
-  top: calc(18.5 * var(--u));
-  right: calc(20.1 * var(--u));
-  margin: 0 !important;
-  color: var(--page-num);
-  font-size: calc(10.5 * var(--u));
-  line-height: calc(12 * var(--u));
-}
-
-/* ---------- Type ---------- */
-
-.h1 {
-  font-family: var(--display);
-  font-weight: 500;
-  font-size: calc(33.75 * var(--u));
-  line-height: calc(30 * var(--u));
-  letter-spacing: -0.05em;
-  color: var(--ink);
-}
-
-.h2 {
-  letter-spacing: -0.05em;
-  font-family: var(--display);
-  font-weight: 500;
-  font-size: calc(24 * var(--u));
-  line-height: calc(22 * var(--u));
-  color: var(--ink);
-}
-
-.h3 {
-  letter-spacing: -0.05em;
-  font-family: var(--display);
-  font-weight: 500;
-  font-size: calc(18 * var(--u));
-  line-height: calc(19 * var(--u));
-  color: var(--black);
-}
-
-.muted {
-  color: var(--muted);
-}
-
-.h3 .glyph {
-  display: inline-block;
-  vertical-align: calc(-1 * var(--u));
-  height: calc(20 * var(--u));
-  width: auto;
-  margin-block: calc(-4 * var(--u));
-  margin-left: calc(3 * var(--u));
-}
-
-.lede {
-  font-size: calc(12 * var(--u));
-  line-height: calc(14 * var(--u));
-}
-
-.meta {
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: calc(9 * var(--u));
-  line-height: calc(11 * var(--u));
-  letter-spacing: -0.025em;
-  color: var(--green);
-}
-.meta span + span {
-  margin-left: calc(7.3 * var(--u));
-}
-
-.callout {
-  letter-spacing: -0.05em;
-  font-family: var(--display);
-  font-weight: 500;
-  font-size: calc(18 * var(--u));
-  line-height: calc(19 * var(--u));
-}
-.callout--warn {
-  color: var(--orange);
-}
-.callout--ok {
-  color: var(--green);
-}
-
-.caption {
-  color: var(--caption);
-  font-size: calc(var(--fs-caption) * var(--u));
-  line-height: calc(8 * var(--u));
-}
-
-/* ---------- Cards ---------- */
-
-.card {
-  background: var(--card);
-  border: var(--hairline) solid var(--line);
-  border-radius: var(--radius);
-  overflow: hidden;
-}
-
-/* Icon list (safety, warning, success). */
-.icon-list > li {
-  display: flex;
-  align-items: center;
-  gap: calc(5.3 * var(--u));
-  padding: calc(6.2 * var(--u)) calc(5.2 * var(--u));
-  list-style: none;
-}
-.icon-list > li + li {
-  border-top: var(--hairline) solid var(--line);
-}
-.icon-list img {
-  flex: none;
-  width: calc(20.1 * var(--u));
-  height: calc(20.1 * var(--u));
-  /* The 19.5pt tile overhangs the row padding, as in the PDF. */
-  margin-block: calc(-1.9 * var(--u));
-}
-.icon-list strong,
-.icon-list--strong span {
-  font-weight: 500;
-}
-
-/* Cell grids (kit contents, illustration strips, before/after panels). */
-.cells {
-  display: grid;
-  grid-template-columns: repeat(var(--cols, 3), minmax(0, 1fr));
-  background: var(--line);
-  gap: var(--hairline);
-}
-.cells > * {
-  background: var(--card);
-  min-width: 0;
-}
-.cells img {
-  width: 100%;
-  height: auto;
-}
-.cells--partial {
-  background: transparent;
-  border: 0;
-  gap: 0;
-}
-.cells--partial > * {
-  border: var(--hairline) solid var(--line);
-  margin: 0 calc(-1 * var(--hairline)) calc(-1 * var(--hairline)) 0;
-}
-
-.panels {
-  display: grid;
-  grid-template-columns: minmax(0, 154.9fr) minmax(0, 30fr) minmax(0, 155.6fr);
-  background: var(--line);
-  gap: var(--hairline);
-}
-.panels > * {
-  background: var(--card);
-  min-width: 0;
-  position: relative;
-}
-.panels img {
-  width: 100%;
-  height: auto;
-}
-.panels .arrow-cell {
-  display: grid;
-  place-items: center;
-}
-.panels .arrow-cell img {
-  width: calc(28.4 * var(--u));
-}
-.panels figure {
-  padding-bottom: calc(var(--band, 0) * var(--u));
-}
-.panels .caption {
-  position: absolute;
-  left: calc(5.8 * var(--u));
-  right: calc(5.3 * var(--u));
-  bottom: calc(var(--cb, 6.2) * var(--u));
-}
-
-.kit {
-  text-align: center;
-  font-size: calc(var(--fs-kit) * var(--u));
-  line-height: calc(11 * var(--u));
-  color: var(--text);
-  padding-bottom: calc(6 * var(--u));
-}
-.kit figcaption {
-  margin-top: calc(2 * var(--u));
-  padding: 0 calc(4 * var(--u));
-}
-.kit figure,
-figure {
-  margin: 0;
-}
-
-/* ---------- Cover ---------- */
-
-.cover {
-  --pt: 0;
-  --pb: 0;
-  height: calc(522 * var(--u));
-}
-.brand {
-  position: absolute;
-  top: calc(18 * var(--u));
-  left: calc(18 * var(--u));
-  display: flex;
-  align-items: center;
-  gap: calc(5.3 * var(--u));
-  margin: 0 !important;
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: calc(9 * var(--u));
-  text-transform: uppercase;
-  letter-spacing: -0.02em;
-  color: var(--ink);
-  text-decoration: none;
-}
-.brand img {
-  width: calc(28.5 * var(--u));
-}
-.cover .h1 {
-  padding-top: calc(98.4 * var(--u));
-}
-.cover .lede {
-  margin-top: calc(11.6 * var(--u));
-}
-.cover-dish {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  margin: 0 !important;
-}
-
-/* ---------- Timeline ---------- */
-
-.timeline {
-  padding: calc(6.75 * var(--u)) calc(7.5 * var(--u));
-}
-.timeline li {
-  position: relative;
-  list-style: none;
-  display: grid;
-  grid-template-columns: calc(15 * var(--u)) 1fr;
-  column-gap: calc(7.5 * var(--u));
-  padding: calc(4 * var(--u)) 0 calc(6.1 * var(--u));
-}
-.timeline li > img {
-  width: calc(15.8 * var(--u));
-  margin: calc(-0.4 * var(--u));
-  margin-top: calc(3.15 * var(--u));
-  grid-row: span 2;
-}
-.timeline li:not(:last-child)::after {
-  content: "";
-  position: absolute;
-  left: calc(7.1 * var(--u));
-  top: calc(22.55 * var(--u));
-  width: var(--hairline);
-  height: calc(100% - 15 * var(--u));
-  background: var(--purple);
-}
-.timeline .when {
-  font-family: var(--display);
-  font-weight: 600;
-  font-size: calc(9 * var(--u));
-  line-height: calc(11 * var(--u));
-  text-transform: uppercase;
-  letter-spacing: -0.025em;
-  color: var(--black);
-}
-.timeline .what {
-  margin-top: calc(1.9 * var(--u));
-}
-
-/* ---------- QR tiles ---------- */
-
-.qr-card {
-  width: calc(175.5 / 340.5 * 100%);
-  padding: calc(12 * var(--u)) calc(12 * var(--u)) calc(12.8 * var(--u));
-}
-.qr-card a {
-  display: block;
-  text-decoration: none;
-}
-.qr-card img {
-  width: calc(90 * var(--u));
-  max-width: 100%;
-}
-.qr-card .caption {
-  margin-top: calc(10.7 * var(--u));
-  font-size: calc(9 * var(--u));
-  line-height: calc(10 * var(--u));
-  color: var(--caption);
-}
-
-/* ---------- Steps ---------- */
-
-.steps {
-  position: relative;
-}
-.steps > li {
-  position: relative;
-  list-style: none;
-  display: grid;
-  grid-template-columns: calc(17.5 * var(--u)) minmax(0, 1fr) calc(12 * var(--u));
-  column-gap: calc(7.55 * var(--u));
-  align-items: center;
-  align-content: start;
-  min-height: calc(20 * var(--u));
-  padding-left: calc(1.75 * var(--u));
-  font-size: calc(var(--fs-step) * var(--u));
-  line-height: calc(10 * var(--u));
-}
-.steps > li + li {
-  margin-top: calc(var(--gap, 8.25) * var(--u));
-}
-.steps .badge {
-  width: calc(18.3 * var(--u));
-  max-width: none;
-  margin: calc(-0.4 * var(--u));
-  margin-top: calc(1 * var(--u));
-  align-self: start;
-  position: relative;
-  z-index: 1;
-}
-.steps label {
-  cursor: pointer;
-  padding-right: calc(8 * var(--u));
-}
-.steps b {
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-/* Connector between badges: half a segment above and below each badge. */
-.steps > li::before,
-.steps > li::after {
-  content: "";
-  position: absolute;
-  left: calc(10.15 * var(--u));
-  width: var(--hairline);
-  background: var(--black);
-}
-.steps > li::before {
-  top: calc(-1 * var(--gap, 8.25) * var(--u));
-  height: calc(var(--gap, 8.25) * var(--u) + 1.8 * var(--u));
-}
-.steps > li::after {
-  top: calc(18 * var(--u));
-  bottom: 0;
-}
-.steps > li:first-child::before,
-.steps > li:last-child::after {
-  display: none;
-}
-/* Step 1 runs over the page break: the line leaves the bottom of one sheet and enters the next. */
-.steps--continues > li:last-child::after {
-  display: block;
-  bottom: -200vh;
-}
-.steps--continued > li:first-child::before {
-  display: block;
-  top: -200vh;
-  height: calc(200vh + 1.8 * var(--u));
+  border-radius: 1.6cqw;
 }
 
 .check {
+  position: absolute;
+  margin: 0;
   appearance: none;
   -webkit-appearance: none;
-  margin: 0;
-  width: calc(12 * var(--u));
-  height: calc(12 * var(--u));
-  border: calc(1 * var(--u)) solid var(--black);
-  border-radius: calc(2.25 * var(--u));
-  background: #fff;
+  background: transparent;
+  border: 0;
+  border-radius: 0.8cqw;
   cursor: pointer;
-  display: grid;
-  place-items: center;
-}
-.check::after {
-  content: "";
-  width: calc(6.5 * var(--u));
-  height: calc(3.6 * var(--u));
-  border-left: calc(1.5 * var(--u)) solid #fff;
-  border-bottom: calc(1.5 * var(--u)) solid #fff;
-  transform: translateY(calc(-0.8 * var(--u))) rotate(-45deg);
-  opacity: 0;
 }
 .check:checked {
-  background: var(--black);
+  background: #020202;
 }
 .check:checked::after {
-  opacity: 1;
-}
-.steps li:has(.check:checked) label {
-  color: var(--muted);
-}
-
-.sticker {
+  content: "";
   position: absolute;
-  width: calc(38.5 * var(--u));
-  right: calc(5.75 * var(--u));
-  top: calc(9.3 * var(--u));
-  pointer-events: none;
-  z-index: 2;
+  left: 30%;
+  top: 20%;
+  width: 30%;
+  height: 48%;
+  border-right: 0.42cqw solid #fff;
+  border-bottom: 0.42cqw solid #fff;
+  transform: rotate(45deg);
 }
 
-/* ---------- Diagram (How it works) ---------- */
-
-.diagram {
-  position: relative;
-  padding-bottom: calc(28.2 * var(--u));
-}
-.diagram .caption {
+.notes {
   position: absolute;
-  top: calc(79 * var(--u));
-  transform: translateX(-50%);
-  text-align: center;
-  white-space: nowrap;
-  font-size: calc(9 * var(--u));
-  line-height: calc(10 * var(--u));
-}
-
-/* ---------- Record your results ---------- */
-
-.record {
-  padding: calc(7.5 * var(--u)) calc(6.75 * var(--u));
-}
-.record textarea {
-  display: block;
-  width: 100%;
-  height: calc(322.5 * var(--u));
-  border: 0;
-  resize: none;
   margin: 0;
-  padding: 0 calc(2 * var(--u));
-  font: inherit;
-  color: var(--text);
-  line-height: calc(15 * var(--u));
-  /* 0.75pt rule every 15pt, first rule 18.4pt below the card's top edge. */
-  background: linear-gradient(180deg, transparent calc(15 * var(--u) - var(--hairline)), var(--line) 0) 0
-    calc(3.65 * var(--u)) / 100% calc(15 * var(--u)) repeat-y;
-  background-clip: content-box;
-  padding-top: calc(3.6 * var(--u));
-  outline-offset: calc(2 * var(--u));
-}
-
-/* ---------- Back cover ---------- */
-
-.back {
-  --pt: 0;
-  --pb: 0;
-  height: calc(522 * var(--u));
-  text-align: center;
-}
-.back .odin-cubes {
-  width: calc(46.5 * var(--u));
-  margin: calc(68 * var(--u)) auto 0;
-}
-.back .h1 {
-  margin-top: calc(5.4 * var(--u));
-  font-size: calc(36 * var(--u));
-  line-height: calc(29 * var(--u));
-}
-.back .lede {
-  margin-top: calc(10 * var(--u));
-  font-size: calc(10.5 * var(--u));
-  line-height: calc(12 * var(--u));
-}
-.back .qr-shop {
-  display: block;
-  width: calc(90 * var(--u));
-  margin: calc(9.6 * var(--u)) auto 0;
-  border: var(--hairline) solid var(--line);
-  border-radius: var(--radius);
+  padding: 0 0.55cqw;
+  border: 0;
+  background: transparent;
+  resize: none;
   overflow: hidden;
-}
-.back .help {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: calc(20.95 * var(--u));
-}
-.back .help .h3 {
-  font-size: calc(15 * var(--u));
-  line-height: calc(17 * var(--u));
-}
-.back .help p {
-  margin-top: calc(2 * var(--u));
+  color: #303030;
+  font: calc(10.5 * 100cqw / 378) / calc(15 * 100cqw / 378) "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* ---------- Responsive ---------- */
-
-@media (max-width: 720px) {
-  :root {
-    --u: calc(100vw / 390);
-  }
-}
-
-@media (max-width: 520px) {
-  :root {
-    --u: 1.22px;
-    --margin: 16px;
-    --fs-body: 12.5;
-    --fs-step: 10.5;
-    --fs-caption: 8.5;
-    --fs-kit: 9.5;
-  }
-  br.b {
-    display: none;
-  }
-  .paper::before {
-    -webkit-mask-position: 0 0;
-    mask-position: 0 0;
-  }
-  body {
-    line-height: calc(14.5 * var(--u));
-  }
-  .steps > li {
-    line-height: calc(12.5 * var(--u));
-  }
-  .icon-list > li {
-    padding-block: calc(7.5 * var(--u));
-  }
-  .kit {
-    line-height: calc(12 * var(--u));
-  }
-  .cover,
-  .back {
-    height: auto;
-  }
-  .cover {
-    padding-bottom: calc(100vw * 0.77);
-  }
-  .cover .h1 {
-    padding-top: calc(110 * var(--u));
-    font-size: calc(36 * var(--u));
-    line-height: calc(33 * var(--u));
-  }
-  .cover .lede {
-    font-size: calc(14 * var(--u));
-    line-height: calc(17 * var(--u));
-  }
-  .diagram .caption {
-    top: auto;
-    bottom: calc(5 * var(--u));
-    white-space: normal;
-    width: 30%;
-    font-size: calc(8.5 * var(--u));
-  }
-  .qr-card {
-    width: 62%;
-  }
-  .panels figure {
-    padding-bottom: 0;
-  }
-  .panels .caption {
-    position: static;
-    padding: calc(2 * var(--u)) calc(5.8 * var(--u)) calc(6 * var(--u));
-  }
-  .back {
-    padding-bottom: calc(80 * var(--u));
-  }
-  .back .h1 {
-    line-height: calc(31 * var(--u));
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    transition: none !important;
-  }
+:focus-visible {
+  outline: 2px solid #7f00ff;
+  outline-offset: 2px;
 }

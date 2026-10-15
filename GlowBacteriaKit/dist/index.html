@@ -5,317 +5,436 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Glow-in-the-Dark Bacteria Engineering Kit · Protocol</title>
   <meta name="description" content="Make bacteria glow with jellyfish DNA. The ODIN protocol for transforming E. coli with a GFP plasmid, step by step.">
-  <link rel="icon" href="assets/img/odin-logo.webp" type="image/webp">
-  <link rel="preload" href="assets/fonts/chakra-petch-500.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" href="assets/favicon.webp" type="image/webp">
   <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-<a class="skip" href="#what">Skip to the protocol</a>
-<main class="paper">
+<main class="document" style="--ratio: 378.007 / 522.007">
 
-  <!-- Cover -->
-  <header class="sheet cover" id="top">
-    <a class="brand" href="https://www.the-odin.com" aria-label="The ODIN — Protocol">
-      <img src="assets/img/odin-logo.webp" alt="" width="114" height="128">
-      <span>Protocol</span>
-    </a>
-    <h1 class="h1">Glow-in-the-Dark<br>Bacteria Engineering Kit</h1>
-    <p class="lede">Make Bacteria Glow with Jellyfish DNA.</p>
-    <img class="cover-dish" src="assets/img/cover-dish.webp" width="1512" height="1144" alt="A petri dish of streaked E. coli. The left half is plain white; the right half glows bright green.">
-  </header>
+<section class="page" id="page-0" aria-label="Cover">
+<img class="art" src="pages/p00.svg" width="378" height="522" alt="" loading="eager" decoding="async">
+<svg class="text-layer" viewBox="0 0 378.007 522.007" aria-hidden="false">
+<text x="51.75 57.309 63.132 69.052 73.926 79.977 85.624 91.676 94.376" y="37.125" font-size="9">protocol </text>
+<text role="heading" aria-level="1" x="18.75 39.343 45.862 63.324 85.729 97.951 104.766 122.524 134.745 146.505 164.329 181.824 194.045 215.033 232.198 243.76 253.885" y="136.5" font-size="33.75">Glow-in-the-Dark </text>
+<text role="heading" aria-level="1" x="18.75 39.145 56.31 72.915 84.18 101.675 113.237 120.052 137.217 144.032 162.252 180.01 198.131 204.946 222.705 240.199 257.694 269.256 276.071 293.829 311.95 318.765 338.27 345.086 355.211" y="166.5" font-size="33.75">Bacteria Engineering Kit </text>
+<text x="18.75 28.964 35.169 41.151 47.357 50.457 58.431 64.637 70.842 74.387 80.593 84.349 86.769 92.974 96.074 104.939 107.36 114.01 122.864 125.964 134.818 137.238 140.783 147.211 150.311 156.293 162.499 164.919 167.339 173.099 179.315 179.07 184.83 191.258 194.358 202.567 210.987 218.528 222.128" y="192.5" font-size="12">Make Bacteria Glow with Jellyfish DNA. </text>
+</svg>
+</section>
 
-  <!-- 01 What you'll do -->
-  <section class="sheet" id="what" aria-labelledby="what-h">
-    <p class="page-num">01</p>
-    <h2 class="h2" id="what-h">What You'll Do</h2>
-    <p style="--mt:7.35">In this experiment, you'll insert a gene from a jellyfish into<br class="b"> harmless E. coli bacteria.</p>
-    <p>That gene makes a protein called Green Fluorescent Protein<br class="b"> (GFP) – the same protein that makes jellyfish glow.</p>
-    <p>When you shine blue light on the bacteria through<br class="b"> the orange filter included in this kit, any bacteria that<br class="b"> successfully took up the gene will glow bright green.</p>
-    <p>This is called bacterial transformation, and it's one of<br class="b"> the most foundational techniques in genetic engineering.</p>
-  </section>
+<section class="page" id="page-1" aria-label="What You&#x27;ll Do">
+<img class="art" src="pages/p01.svg" width="378" height="522" alt="" loading="eager" decoding="async">
+<svg class="text-layer" viewBox="0 0 378.007 522.007" aria-hidden="false">
+<text role="heading" aria-level="2" x="18.736 38.372 51.047 63.019 71.382 76.228 87.426 100.078 112.448 116.428 121.064 125.7 130.546 145.471 152.671" y="61" font-size="24">What You&#x27;ll Do </text>
+<text x="18.736 21.244 26.868 29.58 32.682 38.307 40.425 45.465 48.177 53.607 58.831 64.845 70.275 73.561 75.679 84.421 89.85 95.475 98.577 101.289 104.002 109.042 114.861 120.485 123.198 125.315 127.433 130.145 132.263 137.887 142.927 148.357 151.644 154.746 157.458 162.888 165.6 171.419 176.849 182.473 187.903 190.616 193.512 196.614 202.434 211.175 213.888 219.317 222.03 224.147 229.577 231.695 233.812 238.852 244.291 244.077 249.117 254.741 257.454 259.571 265.196 268.298 271.448" y="80" font-size="10.5">In this experiment, you&#x27;ll insert a gene from a jellyfish into </text>
+<text x="18.736 24.361 29.79 33.077 41.819 43.936 49.366 54.406 59.446 62.158 68.367 71.08 73.792 79.222 85.041 87.159 89.276 91.989 98.003 103.432 108.862 111.964 117.394 120.68 122.798 128.227 131.377" y="92" font-size="10.5">harmless E. coli bacteria. </text>
+<text x="18.736 24.556 30.18 35.61 38.712 41.424 47.243 52.673 58.297 63.727 66.439 75.181 80.611 85.846 91.275 96.315 99.028 104.457 107.17 113.184 116.286 122.105 125.207 130.637 132.754 138.379 141.091 146.521 151.95 154.068 156.186 161.615 167.63 170.342 178.099 181.201 186.631 192.06 197.685 200.397 206.217 208.334 213.959 219.778 222.88 228.31 233.35 238.779 244.209 249.833 252.935 255.648 262.246 265.348 271.168 274.27 279.699 281.817 284.967" y="116" font-size="10.5">That gene makes a protein called Green Fluorescent Protein </text>
+<text x="18.736 21.244 29.001 34.82 41.419 43.926 46.638 51.678 54.391 57.493 63.117 68.547 71.259 76.299 81.729 90.471 95.9 98.613 104.627 107.729 113.548 116.65 122.08 124.197 129.822 132.534 135.636 141.261 146.69 149.792 152.505 161.246 166.676 171.911 177.34 182.38 185.093 187.21 192.64 194.758 196.875 201.915 207.354 207.14 212.18 217.804 220.517 226.336 228.454 234.273 241.446 244.596" y="128" font-size="10.5">(GFP) – the same protein that makes jellyfish glow. </text>
+<text x="18.736 28.247 33.871 39.301 44.926 47.638 52.678 58.497 64.122 66.834 71.874 77.499 79.616 85.241 90.67 93.383 99.397 101.514 107.139 112.569 115.281 117.399 119.516 125.335 130.96 134.062 136.774 142.594 148.218 150.93 154.032 159.657 165.087 167.799 173.813 179.243 184.672 187.774 193.204 196.491 198.608 204.038 206.75 209.852 215.477 218.579 224.398 230.023 235.842 238.992" y="152" font-size="10.5">When you shine blue light on the bacteria through </text>
+<text x="18.736 21.838 27.463 32.892 35.605 41.424 44.711 50.14 55.765 61.584 67.014 69.726 75.165 74.951 77.068 80.17 85.6 88.887 91.599 93.717 99.341 104.771 106.888 112.513 118.527 123.957 129.971 132.683 134.801 140.425 143.137 146.239 151.864 153.982 159.022 161.734 166.969 169.086 172.188 174.901 177.613 183.043 188.667 193.707 196.42 202.434 207.863 213.293 216.395 221.825 225.111 227.229 232.659 235.371 238.473 244.097 249.527 252.677" y="164" font-size="10.5">the orange filter included in this kit, any bacteria that </text>
+<text x="18.736 23.776 29.401 34.83 40.26 45.69 50.73 55.77 58.667 64.291 66.409 68.526 73.566 76.279 79.381 85.2 91.019 96.254 98.967 104.591 110.605 113.317 116.419 122.044 127.474 130.186 136.005 141.435 147.059 152.489 155.201 162.948 165.066 167.184 169.301 172.014 177.833 179.951 185.77 193.517 196.229 202.243 205.53 207.648 213.467 219.091 222.193 224.906 230.725 233.827 239.257 244.686 250.311 253.461" y="176" font-size="10.5">successfully took up the gene will glow bright green. </text>
+<text x="18.736 24.556 30.18 32.298 37.338 40.05 42.168 47.208 49.92 55.35 60.779 62.897 65.015 70.444 76.458 79.171 85.185 90.615 96.044 99.146 104.576 107.862 109.98 115.41 117.527 120.24 123.342 126.628 132.058 137.682 142.722 145.619 151.439 154.725 163.467 168.896 171.999 174.116 179.935 185.56 188.272 190.985 196.414 202.039 208.053 210.765 212.883 215.985 218.697 223.737 226.45 232.269 237.893 243.323 246.035 251.855 255.005" y="200" font-size="10.5">This is called bacterial transformation, and it&#x27;s one of </text>
+<text x="18.736 21.838 27.463 32.892 35.605 44.346 50.166 55.206 58.308 61.02 63.917 69.736 75.361 80.985 86.999 92.429 95.531 97.649 103.468 109.092 114.522 116.64 119.352 122.454 127.884 133.313 138.938 144.562 146.68 152.694 158.319 163.748 168.788 171.501 173.618 179.243 181.955 187.774 193.204 198.828 204.258 207.36 209.478 214.907 217.62 223.049 228.674 234.493 236.611 242.235 247.665 253.095 256.381 258.499 264.123 269.943 273.093" y="212" font-size="10.5">the most foundational techniques in genetic engineering. </text>
+</svg>
+</section>
 
-  <!-- 02 Safety -->
-  <section class="sheet" id="safety" aria-labelledby="safety-h">
-    <p class="page-num">02</p>
-    <h2 class="h2" id="safety-h">Safety Notes</h2>
-    <ul class="card icon-list" style="--mt:12.7">
-      <li><img src="assets/img/safety-1.webp" alt="" width="80" height="80"><span>The E. coli in this kit is non-pathogenic and non-<br class="b">hazardous. It cannot make you sick.</span></li>
-      <li><img src="assets/img/safety-2.webp" alt="" width="80" height="80"><span>Wear gloves when handling bacteria.</span></li>
-      <li><img src="assets/img/safety-3.webp" alt="" width="80" height="80"><span>Wash hands after the experiment.</span></li>
-      <li><img src="assets/img/safety-4.webp" alt="" width="80" height="80"><span>To dispose of bacteria: pour 5% bleach on any<br class="b"> plates, wait 10 minutes, then trash.</span></li>
-      <li><img src="assets/img/safety-5.webp" alt="" width="80" height="80"><span>Keep your work area clean. Wipe surfaces with<br class="b"> rubbing alcohol before you start.</span></li>
-    </ul>
-  </section>
+<section class="page" id="page-2" aria-label="Safety Notes">
+<img class="art" src="pages/p02.svg" width="378" height="522" alt="" loading="lazy" decoding="async">
+<svg class="text-layer" viewBox="0 0 378.007 522.007" aria-hidden="false">
+<text x="347.784 353.622 356.772" y="28.75" font-size="10.5">02 </text>
+<text role="heading" aria-level="2" x="18.736 32.325 44.532 52.074 64.514 72.76 85.411 90.258 105.394 117.694 125.705 138.145 145.345" y="61" font-size="24">Safety Notes </text>
+<text x="49.486 55.306 60.93 66.36 69.072 75.281 77.993 80.706 86.135 91.955 94.072 96.19 98.902 101.02 106.644 109.357 112.459 118.083 120.201 125.241 127.953 133.188 135.306 138.408 141.12 143.238 148.278 150.99 156.615 162.434 168.058 171.929 177.944 183.373 186.475 192.1 197.919 203.738 209.168 214.792 216.91 222.34 225.052 230.482 236.106 242.12 244.833 250.457 256.276 261.901 265.051" y="92.75" font-size="10.5">The E. coli in this kit is non-pathogenic and non- </text>
+<text x="49.486 55.111 60.54 65.375 70.805 73.907 79.921 85.74 91.365 96.405 99.117 101.83 104.337 107.439 110.151 115.581 121.011 126.635 132.26 138.079 141.181 143.893 152.635 158.065 163.299 168.729 171.441 176.481 182.301 187.925 190.637 195.677 197.795 203.225 208.46 211.61" y="104.75" font-size="10.5">hazardous. It cannot make you sick. </text>
+<text x="49.486 58.402 63.832 69.262 72.548 75.261 81.08 83.197 89.017 94.057 99.486 104.526 107.239 114.986 120.61 126.04 131.664 134.377 140.001 145.431 151.055 157.069 159.187 161.305 166.929 172.749 175.461 181.475 186.905 192.334 195.436 200.866 204.153 206.27 211.7 214.85" y="131.75" font-size="10.5">Wear gloves when handling bacteria. </text>
+<text x="49.486 58.607 64.037 69.077 74.702 77.414 83.038 88.468 94.092 100.107 105.147 107.859 113.289 116.186 119.288 124.717 128.004 130.716 133.818 139.443 144.872 147.585 153.014 158.239 164.253 169.683 172.969 175.087 183.828 189.258 194.883 197.985 201.135" y="161.75" font-size="10.5">Wash hands after the experiment. </text>
+<text x="49.486 54.137 59.956 62.668 68.682 70.8 75.84 81.854 87.674 92.714 98.143 100.856 106.675 109.572 112.284 118.298 123.728 129.158 132.26 137.689 140.976 143.093 148.523 151.235 153.948 159.962 165.781 171.406 174.692 177.405 183.029 193.319 196.031 202.046 204.163 209.593 215.023 220.452 226.077 228.789 234.608 240.233 242.945 248.375 253.999 257.149" y="188.75" font-size="10.5">To dispose of bacteria: pour 5% bleach on any </text>
+<text x="49.486 55.5 57.618 63.048 66.15 71.579 76.619 79.332 82.044 89.791 95.221 97.338 100.44 103.153 108.777 114.402 117.114 125.856 127.973 133.598 139.222 142.324 147.754 152.794 155.506 158.219 161.321 166.945 172.375 177.999 180.712 183.814 187.1 192.53 197.57 203.194 206.344" y="200.75" font-size="10.5">plates, wait 10 minutes, then trash. </text>
+<text x="49.486 56.28 61.709 67.139 73.153 75.866 80.906 86.725 92.349 95.636 98.348 106.095 111.915 115.201 120.436 123.148 128.578 131.68 137.11 142.539 145.252 150.681 152.799 158.229 163.658 169.283 171.995 174.707 184.218 186.336 192.35 197.78 200.492 205.532 211.156 214.443 217.34 222.77 228.199 233.629 238.669 241.381 249.128 251.246 254.348 257.498" y="224.75" font-size="10.5">Keep your work area clean. Wipe surfaces with </text>
+<text x="49.486 52.773 58.397 64.411 70.426 72.543 78.168 83.987 86.699 92.129 94.247 99.676 105.496 111.12 116.939 119.057 121.769 127.784 133.213 136.11 141.929 145.031 150.461 153.173 158.213 164.033 169.657 172.37 177.41 180.512 185.941 189.228 192.33 195.48" y="236.75" font-size="10.5">rubbing alcohol before you start. </text>
+</svg>
+</section>
 
-  <!-- 03 How it works -->
-  <section class="sheet" id="how" aria-labelledby="how-h">
-    <p class="page-num">03</p>
-    <h2 class="h2" id="how-h">How It Works</h2>
-    <p style="--mt:7.35">Cells use DNA as an instruction manual for making proteins.<br class="b"> Every 3 letters of DNA code for one amino acid, and chains<br class="b"> of amino acids make proteins.</p>
-    <p>GFP is a protein that naturally fluoresces, it absorbs blue<br class="b"> light and emits green light.</p>
-    <p>The GFP gene is carried on a tiny circular piece of DNA<br class="b"> called a plasmid. We'll mix the bacteria with chemicals<br class="b"> that temporarily make their cell walls leaky, then add<br class="b"> the plasmid.</p>
-    <p>Some bacteria will absorb the plasmid and start producing<br class="b"> GFP. Only the transformed bacteria survive on our antibiotic<br class="b"> plates, which glow green in blue light.</p>
-    <figure class="card diagram" style="--mt:17.15">
-      <img src="assets/img/how-it-works.webp" width="1362" height="313" alt="A circular plasmid with a green GFP segment, an arrow to a pale bacterium taking up the plasmid, and an arrow to the same bacterium glowing bright green.">
-      <figcaption>
-        <span class="caption" style="left:13.05%">Plasmid with<br>GFP gene</span>
-        <span class="caption" style="left:49.1%;margin-top:calc(5 * var(--u))">Bacteria</span>
-        <span class="caption" style="left:85.7%">Bacteria<br>glowing green</span>
-      </figcaption>
-    </figure>
-  </section>
+<section class="page" id="page-3" aria-label="How It Works">
+<img class="art" src="pages/p03.svg" width="378" height="522" alt="" loading="lazy" decoding="async">
+<svg class="text-layer" viewBox="0 0 378.007 522.007" aria-hidden="false">
+<text x="347.57 350.72" y="28.75" font-size="10.5">3 </text>
+<text role="heading" aria-level="2" x="18.736 33.896 46.313 62.246 67.092 72.033 80.395 85.241 103.799 116.451 124.673 136.152 143.352" y="61" font-size="24">How It Works </text>
+<text x="18.736 26.104 31.534 33.651 35.769 40.809 43.521 49.146 54.186 59.615 62.328 69.511 76.878 83.477 86.189 91.619 96.659 99.371 104.801 110.426 113.138 115.256 120.88 125.92 129.022 132.309 137.933 143.363 146.465 148.582 154.402 160.026 162.738 171.48 176.91 182.534 188.159 193.588 195.706 198.418 201.315 207.135 210.421 213.134 221.875 227.305 232.54 234.657 240.282 246.101 248.813 254.828 257.93 263.749 266.851 272.281 274.398 280.023 285.063 288.213" y="80" font-size="10.5">Cells use DNA as an instruction manual for making proteins. </text>
+<text x="18.736 24.945 29.985 35.415 38.702 43.742 46.454 52.078 54.791 56.908 62.338 65.44 68.542 73.972 77.258 82.298 85.011 90.83 93.727 96.439 103.622 110.99 117.588 120.301 125.73 131.55 137.564 142.994 145.706 148.603 154.422 157.709 160.421 166.24 171.865 177.295 180.007 185.437 194.178 196.296 201.92 207.74 210.452 215.882 221.311 223.429 229.443 232.155 234.868 240.297 245.922 251.936 254.648 260.078 265.702 271.132 273.25 278.874 282.024" y="92" font-size="10.5">Every 3 letters of DNA code for one amino acid, and chains </text>
+<text x="18.736 24.556 27.453 30.165 35.595 44.336 46.454 52.078 57.898 60.61 66.04 71.469 73.587 79.601 84.641 87.353 96.095 101.525 106.76 112.189 114.902 120.916 124.018 129.837 132.939 138.369 140.486 146.111 151.151 154.301" y="104" font-size="10.5">of amino acids make proteins. </text>
+<text x="18.736 26.494 32.313 38.912 41.624 43.742 48.782 51.494 56.924 59.636 65.65 68.752 74.571 77.673 83.103 85.221 90.845 93.557 96.659 102.284 107.714 110.816 113.528 119.152 124.582 127.684 133.309 136.595 142.025 144.142 146.26 151.3 154.012 159.451 159.237 164.861 170.681 173.783 179.212 184.252 189.682 195.112 200.152 202.864 205.576 207.694 210.796 213.508 218.938 224.952 229.992 235.812 239.098 245.112 250.152 252.865 258.879 260.996 266.621 269.771" y="128" font-size="10.5">GFP is a protein that naturally fluoresces, it absorbs blue </text>
+<text x="18.736 20.854 22.972 28.791 34.415 37.517 40.23 45.659 51.284 57.298 60.01 65.44 74.182 76.299 79.401 84.441 87.154 92.973 96.075 101.505 106.934 112.559 115.271 117.389 119.506 125.326 130.95 134.052 137.202" y="140" font-size="10.5">light and emits green light. </text>
+<text x="18.736 24.556 30.18 35.61 38.322 46.079 51.899 58.497 61.21 67.029 72.459 78.083 83.513 86.225 88.343 93.383 96.095 101.525 106.954 110.241 113.528 115.645 121.075 127.089 129.801 135.621 141.245 143.957 149.387 152.099 155.201 157.319 162.944 167.984 170.696 176.126 178.243 181.345 186.775 192.399 194.517 199.947 203.233 205.946 211.96 214.077 219.507 224.937 230.366 233.079 238.898 241.795 244.507 251.69 259.058 262.208" y="164" font-size="10.5">The GFP gene is carried on a tiny circular piece of DNA </text>
+<text x="18.736 24.166 29.596 31.713 33.831 39.261 45.275 47.987 53.417 56.129 62.143 64.261 69.69 74.73 83.472 85.59 91.604 94.316 97.029 105.945 111.374 114.087 116.204 118.322 121.034 129.776 131.894 137.118 139.83 142.932 148.557 153.987 156.699 162.713 168.143 173.572 176.674 182.104 185.391 187.508 192.938 195.65 203.397 205.515 208.617 214.241 216.954 222.383 228.008 233.438 242.179 244.297 249.726 255.156 257.274 260.424" y="176" font-size="10.5">called a plasmid. We&#x27;ll mix the bacteria with chemicals </text>
+<text x="18.736 21.838 27.463 32.892 35.994 38.707 41.809 47.238 55.98 61.994 67.814 71.1 76.53 79.816 81.934 84.052 89.092 91.804 100.546 105.975 111.21 116.64 119.352 122.454 128.079 133.508 135.626 138.913 141.625 147.055 152.484 154.602 156.719 159.432 167.179 172.608 174.726 176.844 181.884 184.596 186.714 192.143 197.573 202.808 207.069 209.781 212.493 215.595 221.22 226.649 232.274 234.986 240.416 246.43 249.58" y="188" font-size="10.5">that temporarily make their cell walls leaky, then add </text>
+<text x="18.736 21.838 27.463 32.892 35.605 41.619 43.737 49.166 54.206 62.948 65.066 71.08 74.23" y="200" font-size="10.5">the plasmid. </text>
+<text x="18.736 25.335 31.154 39.896 45.326 48.038 54.052 59.482 64.911 68.013 73.443 76.73 78.847 84.277 86.989 94.736 96.854 98.972 101.089 103.802 109.231 115.245 120.285 126.105 129.391 135.405 138.118 141.22 146.844 152.274 154.986 161 163.118 168.548 173.588 182.329 184.447 190.461 193.173 198.603 204.227 210.242 212.954 217.994 221.096 226.526 229.812 232.914 235.627 241.641 244.743 250.562 256.576 262.201 267.63 269.748 275.372 278.522" y="224" font-size="10.5">Some bacteria will absorb the plasmid and start producing </text>
+<text x="18.736 26.494 32.313 37.035 39.747 42.46 50.227 55.852 57.969 63.009 65.722 68.824 74.448 79.878 82.59 85.692 88.979 94.409 100.033 105.073 107.97 113.789 117.076 125.817 131.247 137.261 139.974 145.988 151.417 156.847 159.949 165.379 168.665 170.783 176.213 178.925 183.965 189.589 192.876 197.916 200.034 205.074 210.503 213.216 219.035 224.659 227.372 233.191 238.816 242.102 244.814 250.244 255.869 258.971 261.088 267.102 269.22 275.039 278.141 280.259 283.409" y="236" font-size="10.5">GFP. Only the transformed bacteria survive on our antibiotic </text>
+<text x="18.736 24.75 26.868 32.298 35.4 40.829 45.869 48.582 51.294 59.041 64.666 66.783 72.213 77.837 80.55 86.369 88.487 94.306 102.053 104.765 110.585 113.687 119.116 124.546 130.17 132.883 135 140.625 143.337 149.351 151.469 157.094 162.523 165.236 167.353 169.471 175.29 180.915 184.017 187.167" y="248" font-size="10.5">plates, which glow green in blue light. </text>
+<text x="38.832 44.488 46.303 50.957 55.277 62.77 64.585 69.74 72.065 78.705 80.521 83.179 85.879" y="356" font-size="9">Plasmid with </text>
+<text x="45.211 51.86 56.848 62.504 64.829 69.817 74.471 79.292 81.992" y="366" font-size="9">GFP gene </text>
+<text x="167.53 173.533 178.187 182.841 185.5 190.154 192.971 194.786 197.486" y="361" font-size="9">Bacteria </text>
+<text x="289.97 295.973 300.627 305.281 307.94 312.594 315.411 317.226 319.926" y="356" font-size="9">Bacteria </text>
+<text x="286.186 291.173 292.989 297.977 304.617 306.432 311.253 316.241 318.566 323.554 326.213 330.867 335.521 338.221" y="366" font-size="9">glowing green </text>
+</svg>
+</section>
 
-  <!-- 04 What's in the kit -->
-  <section class="sheet" id="kit" aria-labelledby="kit-h">
-    <p class="page-num">04</p>
-    <h2 class="h2" id="kit-h">What's in the Kit</h2>
-    <h3 class="h3" style="--mt:10.65">1. Equipment</h3>
-    <div class="card cells" style="--mt:8.35">
-      <figure class="kit"><img src="assets/img/equip-a-1.webp" width="454" height="240" alt="1×"><figcaption>250mL glass bottle<br>(for melting agar)</figcaption></figure>
-      <figure class="kit"><img src="assets/img/equip-a-2.webp" width="454" height="240" alt="1×"><figcaption>50mL tube<br>(for measuring water)</figcaption></figure>
-      <figure class="kit"><img src="assets/img/equip-a-3.webp" width="454" height="240" alt="1×"><figcaption>orange UV filter sheet +<br>blue LED light</figcaption></figure>
-      <figure class="kit"><img src="assets/img/equip-b-1.webp" width="454" height="240" alt="5×"><figcaption>1.5mL tubes pre-filled<br>with LB broth</figcaption></figure>
-      <figure class="kit"><img src="assets/img/equip-b-2.webp" width="454" height="240" alt="5×"><figcaption>inoculation<br>loops</figcaption></figure>
-      <figure class="kit"><img src="assets/img/equip-b-3.webp" width="454" height="240" alt="5×"><figcaption>pairs of nitrile<br>gloves</figcaption></figure>
-      <figure class="kit"><img src="assets/img/equip-c-1.webp" width="454" height="240" alt="9×"><figcaption>disposable<br>transfer pipettes</figcaption></figure>
-      <figure class="kit"><img src="assets/img/equip-c-2.webp" width="454" height="240" alt="7×"><figcaption>petri<br>plates</figcaption></figure>
-      <figure class="kit"><img src="assets/img/equip-c-3.webp" width="454" height="240" alt="25×"><figcaption>microcentrifuge<br>tubes</figcaption></figure>
-    </div>
-  </section>
+<section class="page" id="page-4" aria-label="What&#x27;s in the Kit">
+<img class="art" src="pages/p04.svg" width="378" height="522" alt="" loading="lazy" decoding="async">
+<svg class="text-layer" viewBox="0 0 378.007 522.007" aria-hidden="false">
+<text x="347.784 353.622 356.772" y="28.75" font-size="10.5">04 </text>
+<text role="heading" aria-level="2" x="18.736 38.372 51.047 63.019 71.03 74.4 85.669 90.515 95.362 107.99 112.836 121.199 133.874 146.314 151.161 165.031 169.877 177.077" y="61" font-size="24">What&#x27;s in the Kit </text>
+<text role="heading" aria-level="3" x="18.75 24.442 27.444 31.079 40.796 50.338 59.791 63.426 73.09 87.395 96.726 106.021 111.421" y="89.75" font-size="18">1. Equipment </text>
+<text x="117.702 120.249 121.379 124.079" y="116.25" font-size="9">1 x </text>
+<text x="231.201 233.748 234.879 237.579" y="116.25" font-size="9">1 x </text>
+<text x="344.701 347.248 348.379 351.079" y="116.25" font-size="9">1 x </text>
+<text x="38.684 43.505 48.326 53.146 60.639 65.46 67.785 72.773 74.588 79.242 83.562 87.882 90.207 95.362 100.35 103.009 105.668 107.483 110.183" y="172.25" font-size="9">250mL glass bottle </text>
+<text x="43.113 45.262 47.745 52.733 55.55 57.875 65.368 70.022 71.837 74.496 76.311 81.132 86.12 88.445 93.099 98.087 102.741 105.558 108.258" y="183.25" font-size="9">(for melting agar) </text>
+<text x="166.963 171.784 176.605 184.098 188.919 191.244 193.903 198.724 203.879 206.579" y="172.25" font-size="9">50mL tube </text>
+<text x="148.389 150.538 153.021 158.009 160.826 163.151 170.644 175.298 179.952 184.272 189.093 191.91 193.725 198.546 203.534 205.859 212.499 217.153 219.812 224.466 227.283 229.983" y="183.25" font-size="9">(for measuring water) </text>
+<text x="258.27 263.258 266.075 270.729 275.55 280.538 285.192 287.516 293.832 299.154 301.478 306.14 305.957 307.772 310.431 315.085 317.902 320.227 324.547 329.368 334.022 338.675 341.334 343.659 346.359" y="172.25" font-size="9">orange UV filter sheet + </text>
+<text x="275.664 280.819 282.634 287.455 292.109 294.434 299.255 304.577 310.734 313.059 314.874 316.689 321.677 326.498 329.198" y="183.25" font-size="9">blue LED light </text>
+<text x="116.199 120.249 121.379 124.079" y="206.25" font-size="9">5 x </text>
+<text x="229.698 233.748 234.879 237.579" y="206.25" font-size="9">5 x </text>
+<text x="343.198 347.248 348.379 351.079" y="206.25" font-size="9">5 x </text>
+<text x="33.289 38.11 40.435 45.256 52.749 57.57 59.895 62.554 67.375 72.53 77.184 81.504 83.828 88.983 91.642 96.296 99.614 104.276 104.093 105.908 107.723 112.377 115.077" y="262.25" font-size="9">1.5mL tubes pre-filled </text>
+<text x="49.576 56.216 58.032 60.69 65.511 67.836 72.657 78.638 80.963 86.118 88.777 93.765 96.424 99.124" y="273.25" font-size="9">with LB broth </text>
+<text x="167.985 169.8 174.621 179.609 184.263 189.084 190.899 195.553 198.212 200.027 205.015 207.715" y="262.25" font-size="9">inoculation </text>
+<text x="178.277 180.092 185.08 190.068 195.223 197.923" y="273.25" font-size="9">loops </text>
+<text x="275.609 280.764 285.418 287.233 290.05 294.37 296.695 301.683 304.166 306.491 311.312 313.127 315.786 318.603 320.418 322.233 324.933" y="262.25" font-size="9">pairs of nitrile </text>
+<text x="289.868 294.856 296.671 301.659 305.979 310.633 313.333" y="273.25" font-size="9">gloves </text>
+<text x="116.199 120.249 121.379 124.079" y="296.25" font-size="9">9 x </text>
+<text x="228.951 233.748 234.879 237.579" y="296.25" font-size="9">7 x </text>
+<text x="339.147 343.197 347.247 348.379 351.079" y="296.25" font-size="9">25 x </text>
+<text x="54.395 59.55 61.365 65.685 70.84 75.828 80.148 84.802 89.957 91.772 94.472" y="352.25" font-size="9">disposable </text>
+<text x="44.1 46.759 49.576 54.23 59.051 63.371 65.854 70.508 73.325 75.65 80.805 82.62 87.775 92.429 95.088 97.747 102.401 105.101" y="363.25" font-size="9">transfer pipettes </text>
+<text x="180.36 185.515 190.169 192.828 195.645 198.345" y="352.25" font-size="9">petri </text>
+<text x="177.282 182.437 184.252 188.906 191.565 196.219 198.919" y="363.25" font-size="9">plates </text>
+<text x="272.423 279.916 281.731 286.385 289.044 294.032 298.686 303.34 308.161 310.819 313.637 315.452 317.935 322.756 327.744 330.444" y="352.25" font-size="9">microcentrifuge </text>
+<text x="291.606 294.265 299.086 304.241 308.895 311.595" y="363.25" font-size="9">tubes </text>
+</svg>
+</section>
 
-  <!-- 05 Perishables -->
-  <section class="sheet" style="--pt:39.35" aria-labelledby="fridge-h">
-    <p class="page-num">05</p>
-    <h3 class="h3" id="fridge-h">2. Perishables <img class="glyph" src="assets/img/icon-fridge.webp" alt="(fridge)" width="44" height="80"><br><span class="muted">(store in fridge on arrival)</span></h3>
-    <div class="cells cells--partial" style="--mt:7.85">
-      <figure class="kit" style="border-top-left-radius:var(--radius)"><img src="assets/img/fridge-a-1.webp" width="454" height="240" alt="1×"><figcaption>sterile water<br>tube</figcaption></figure>
-      <figure class="kit"><img src="assets/img/fridge-a-2.webp" width="454" height="240" alt="1×"><figcaption>LB agar powder<br>tube</figcaption></figure>
-      <figure class="kit" style="border-top-right-radius:var(--radius);border-bottom-right-radius:var(--radius)"><img src="assets/img/fridge-a-3.webp" width="454" height="240" alt="1×"><figcaption>LB + Kanamycin agar<br>powder tube</figcaption></figure>
-      <figure class="kit" style="border-bottom-left-radius:var(--radius);border-bottom-right-radius:var(--radius)"><img src="assets/img/fridge-b-1.webp" width="454" height="208" alt="5×"><figcaption>0.1 mL bacterial<br>transformation buffer<br>(CaCl₂ + PEG 8000)</figcaption></figure>
-    </div>
-    <h3 class="h3" style="--mt:26.05">3. Perishables <img class="glyph" src="assets/img/icon-freezer.webp" alt="(freezer)" width="56" height="80"><br><span class="muted">(store in freezer on arrival)</span></h3>
-    <div class="cells cells--partial" style="--mt:7.85">
-      <figure class="kit" style="border-top-left-radius:var(--radius);border-bottom-left-radius:var(--radius)"><img src="assets/img/freezer-1.webp" width="454" height="206" alt="5×"><figcaption>tubes of GFP plasmid<br>(jellyfish gene),<br>20 ng/µL</figcaption></figure>
-      <figure class="kit" style="border-top-right-radius:var(--radius);border-bottom-right-radius:var(--radius)"><img src="assets/img/freezer-2.webp" width="454" height="206" alt="2×"><figcaption>tubes of non-pathogenic<br>E. coli DH5a,<br>freeze dried</figcaption></figure>
-    </div>
-  </section>
+<section class="page" id="page-5" aria-label="Perishables">
+<img class="art" src="pages/p05.svg" width="378" height="522" alt="" loading="lazy" decoding="async">
+<svg class="text-layer" viewBox="0 0 378.007 522.007" aria-hidden="false">
+<text x="347.784 353.408 356.558" y="28.75" font-size="10.5">05 </text>
+<text role="heading" aria-level="3" x="18.75 27.887 30.89 34.524 44.505 53.836 60.002 63.637 72.088 81.595 90.749 100.379 103.856 113.186 118.586" y="56" font-size="18">2. Perishables </text>
+<text role="heading" aria-level="3" x="18.75 23.651 32.103 38.111 47.599 53.309 62.639 66.274 69.909 79.38 83.015 88.935 95.101 98.736 108.401 118.065 127.395 131.03 140.519 149.99 153.625 162.779 168.946 175.112 178.747 186.425 195.58 199.057 204.457" y="75" font-size="18">(store in fridge on arrival) </text>
+<text x="117.702 120.249 121.379 124.079" y="101" font-size="9">1 x </text>
+<text x="231.201 233.748 234.879 237.579" y="101" font-size="9">1 x </text>
+<text x="344.701 347.248 348.379 351.079" y="101" font-size="9">1 x </text>
+<text x="52.169 56.489 59.147 63.801 66.619 68.434 70.249 74.903 77.228 83.868 88.522 91.181 95.835 98.535" y="157" font-size="9">sterile water </text>
+<text x="66.766 69.425 74.246 79.401 82.101" y="168" font-size="9">tube </text>
+<text x="157.923 162.744 168.725 171.05 175.704 180.692 185.346 188.163 190.488 195.643 200.631 207.271 212.426 217.08 219.78" y="157" font-size="9">LB agar powder </text>
+<text x="180.266 182.925 187.746 192.901 195.601" y="168" font-size="9">tube </text>
+<text x="260.83 265.651 271.632 273.957 279.173 281.498 287.321 291.975 296.796 301.45 308.943 313.263 317.917 319.732 324.553 326.878 331.532 336.52 341.174 343.874" y="157" font-size="9">LB + Kanamycin agar </text>
+<text x="279.061 284.216 289.204 295.844 300.999 305.653 308.47 310.795 313.454 318.275 323.43 326.13" y="168" font-size="9">powder tube </text>
+<text x="116.199 120.249 121.379 124.079" y="191" font-size="9">5 x </text>
+<text x="44.597 49.418 51.743 56.564 58.889 66.382 71.203 73.527 78.682 83.336 87.99 90.649 95.303 98.12 99.935 104.589 107.289" y="239" font-size="9">0.1 mL bacterial </text>
+<text x="35.113 37.772 40.589 45.243 50.064 54.384 56.867 61.855 64.672 72.165 76.819 79.478 81.293 86.281 91.102 93.427 98.582 103.403 108.596 108.417 113.071 115.771" y="250" font-size="9">transformation buffer </text>
+<text x="37.585 39.735 46.05 50.704 57.019 58.834 58.834 64.31 69.526 71.851 77.507 82.829 89.478 91.803 96.624 101.445 106.266 111.087 113.787" y="261" font-size="9">(CaCl₂ + PEG 8000) </text>
+<text role="heading" aria-level="3" x="18.75 28.151 31.153 34.788 44.769 54.099 60.266 63.901 72.352 81.858 91.013 100.642 104.119 113.45 118.85" y="312.5" font-size="18">3. Perishables </text>
+<text role="heading" aria-level="3" x="18.75 23.651 32.103 38.111 47.599 53.309 62.639 66.274 69.909 79.38 83.015 88.935 94.644 103.975 113.217 120.913 130.243 136.41 140.045 149.533 159.004 162.639 171.794 177.96 184.127 187.761 195.439 204.594 208.071 213.471" y="331.5" font-size="18">(store in freezer on arrival) </text>
+<text x="116.199 120.249 121.379 124.079" y="357.5" font-size="9">5 x </text>
+<text x="229.698 233.748 234.879 237.579" y="357.5" font-size="9">2 x </text>
+<text x="33.623 36.282 41.103 46.258 50.912 55.232 57.557 62.545 65.028 67.353 74.002 78.99 84.646 86.971 92.126 93.941 98.595 102.915 110.408 112.223 114.923" y="405.5" font-size="9">tubes of GFP plasmid </text>
+<text x="46.196 48.345 50.161 54.815 56.63 58.445 62.765 67.427 67.243 71.563 76.384 78.709 83.697 88.351 93.172 97.826 99.975 102.675" y="416.5" font-size="9">(jellyfish gene), </text>
+<text x="58.293 63.114 67.935 70.26 75.081 80.069 82.886 87.707 90.407" y="427.5" font-size="9">20 ng/µL </text>
+<text x="141.557 144.216 149.037 154.192 158.846 163.166 165.491 170.479 172.962 175.287 180.108 185.096 189.917 193.235 198.39 203.044 205.702 210.523 215.511 220.499 225.153 229.974 231.789 234.489" y="405" font-size="9">tubes of non-pathogenic </text>
+<text x="162.827 168.149 170.474 172.799 177.453 182.441 184.256 186.071 188.396 194.553 200.868 205.689 210.343 213.043" y="416" font-size="9">E. coli DH5a, </text>
+<text x="166.326 168.809 171.468 176.122 180.776 184.92 189.574 191.899 197.054 199.871 201.686 206.34 209.04" y="427" font-size="9">freeze dried </text>
+</svg>
+</section>
 
-  <!-- 06 Timeline -->
-  <section class="sheet" aria-labelledby="timeline-h">
-    <p class="page-num">06</p>
-    <h2 class="h2" id="timeline-h">Timeline at a Glance</h2>
-    <ol class="card timeline" style="--mt:12.5">
-      <li><img src="assets/img/timeline-node.webp" alt="" width="64" height="64"><p class="when">Day 1, Afternoon (~1 hour)</p><p class="what">Make agar plates. Streak bacteria onto a plate.</p></li>
-      <li><img src="assets/img/timeline-node.webp" alt="" width="64" height="64"><p class="when">Day 1, Evening</p><p class="what">Let bacteria grow overnight (12-24 hours).</p></li>
-      <li><img src="assets/img/timeline-node.webp" alt="" width="64" height="64"><p class="when">Day 2 (~2 hours)</p><p class="what">Prepare competent cells, add plasmid, heat shock, plate.</p></li>
-      <li><img src="assets/img/timeline-node.webp" alt="" width="64" height="64"><p class="when">Day 2-4</p><p class="what">Wait for colonies to grow, then check for fluorescence.</p></li>
-    </ol>
-  </section>
+<section class="page" id="page-6" aria-label="Timeline at a Glance">
+<img class="art" src="pages/p06.svg" width="378" height="522" alt="" loading="lazy" decoding="async">
+<svg class="text-layer" viewBox="0 0 378.007 522.007" aria-hidden="false">
+<text role="heading" aria-level="2" x="18.736 30.825 35.672 54.745 67.186 71.822 76.668 89.296 101.737 106.583 118.555 126.917 131.764 143.97 148.816 163.46 168.096 180.302 192.93 204.738 211.938" y="61" font-size="24">Timeline at a Glance </text>
+<text x="49.5 55.306 60.048 65.449 67.633 70.819 72.678 74.863 80.413 85.348 90.354 95.553 101.376 107.401 113.452 119.504 125.529 127.713 130.548 135.571 138.757 140.941 146.975 153.027 159.078 164.901 167.601" y="95.5" font-size="9">Day 1, Afternoon (~1 hour) </text>
+<text x="49.5 58.437 63.867 69.101 74.531 77.243 82.673 88.492 93.922 97.209 99.921 105.935 108.053 113.482 116.584 122.014 127.054 129.766 132.479 139.077 142.179 145.281 150.711 156.141 161.376 164.088 170.102 175.532 180.961 184.063 189.493 192.78 194.897 200.327 203.039 208.858 214.483 217.585 223.404 226.117 231.546 234.259 240.273 242.39 247.82 250.922 256.352 259.502" y="109.5" font-size="10.5">Make agar plates. Streak bacteria onto a plate. </text>
+<text x="49.5 55.306 60.048 65.449 67.633 70.819 72.678 74.863 80.061 85.656 90.855 96.88 99.09 105.116 107.816" y="130.5" font-size="9">Day 1, Evening </text>
+<text x="49.5 55.125 60.555 63.657 66.369 72.383 77.813 83.242 86.344 91.774 95.061 97.178 102.608 105.32 111.14 114.242 120.061 127.808 130.52 136.34 141.38 146.809 150.28 155.905 158.022 163.842 169.466 172.568 175.281 177.788 183.412 189.037 192.908 198.532 204.157 206.869 212.494 218.313 223.937 227.224 232.264 234.771 237.921" y="144.5" font-size="10.5">Let bacteria grow overnight (12-24 hours). </text>
+<text x="49.5 55.306 60.048 65.449 67.633 72.551 74.735 77.57 82.593 87.51 89.695 95.729 101.78 107.831 113.654 119.134 121.834" y="165.5" font-size="9">Day 2 (~2 hours) </text>
+<text x="49.5 56.099 59.201 64.631 70.645 76.075 79.177 84.606 87.319 92.748 98.567 107.309 113.323 118.753 121.855 127.285 132.909 136.011 138.723 144.153 149.583 151.7 153.818 158.858 161.57 164.283 169.712 175.727 181.741 184.453 190.467 192.585 198.014 203.054 211.796 213.914 219.928 222.64 225.353 230.977 236.407 241.836 244.938 247.651 252.691 258.315 264.134 269.564 274.799 277.511 280.224 286.238 288.355 293.785 296.887 302.317 305.467" y="179.5" font-size="10.5">Prepare competent cells, add plasmid, heat shock, plate. </text>
+<text x="49.5 55.306 60.048 65.449 67.633 72.551 76.168 78.868" y="200.5" font-size="9">Day 2-4 </text>
+<text x="49.5 58.622 64.051 66.169 69.271 71.983 74.88 80.699 83.986 86.698 92.128 97.947 100.065 105.884 111.509 113.626 119.056 124.096 126.808 129.91 135.73 138.442 144.261 147.363 153.183 160.355 163.068 165.78 168.882 174.507 179.936 185.561 188.273 193.703 199.327 204.757 210.187 215.421 218.134 221.031 226.85 230.137 232.849 238.288 238.074 243.698 249.517 252.619 258.049 263.089 268.519 273.948 279.573 285.002 290.432 293.582" y="214.5" font-size="10.5">Wait for colonies to grow, then check for fluorescence. </text>
+</svg>
+</section>
 
-  <!-- 07 Video guides -->
-  <section class="sheet" aria-labelledby="video-h">
-    <p class="page-num">07</p>
-    <h2 class="h2" id="video-h">Before You Start:<br><span class="muted">60-Second Video Guides</span></h2>
-    <p style="--mt:7.35">Before starting your experiment, check out these fast<br class="b"> 60-second video protocols.</p>
-    <p>They walk you through every step of making agar plates,<br class="b"> from melting and pouring to cooling and storage, so you<br class="b"> can avoid common mistakes and set up your lab work for<br class="b"> success.</p>
-    <div class="card qr-card" style="--mt:5.65">
-      <a href="https://www.youtube.com/watch?v=46vy4GylcNY" target="_blank" rel="noopener">
-        <img src="assets/img/qr-video.webp" width="360" height="360" alt="QR code linking to the 60-second video: How to Make Agar Plates">
-        <p class="caption">60 Second Video Protocols<br>“How to Make Agar Plates”.</p>
-      </a>
-    </div>
-  </section>
+<section class="page" id="page-7" aria-label="Before You Start">
+<img class="art" src="pages/p07.svg" width="378" height="522" alt="" loading="lazy" decoding="async">
+<svg class="text-layer" viewBox="0 0 378.007 522.007" aria-hidden="false">
+<text x="347.784 353.622 356.772" y="28.75" font-size="10.5">07 </text>
+<text role="heading" aria-level="2" x="18.75 33.253 45.694 53.236 65.888 73.5 85.941 90.787 101.986 114.637 127.242 132.088 145.56 153.923 166.129 174.351 182.713 189.913" y="61" font-size="24">Before You Start: </text>
+<text role="heading" aria-level="2" x="18.75 32.105 46.163 54.502 68.091 80.531 92.339 104.991 117.619 130.505 135.351 148.636 153.482 166.368 178.808 191.46 196.306 210.95 223.555 228.401 241.287 253.728 260.928" y="83" font-size="24">60-Second Video Guides </text>
+<text x="18.75 25.728 31.158 34.055 39.874 42.976 48.406 51.118 56.158 59.26 64.69 67.976 71.078 73.196 78.82 84.64 87.352 92.392 98.211 103.836 107.123 109.835 115.265 120.489 126.503 131.933 135.219 137.337 146.079 151.508 157.133 160.235 162.947 165.66 171.089 176.714 182.143 187.573 192.808 195.52 201.34 206.964 210.066 212.778 215.88 221.505 226.934 231.974 237.404 240.117 243.013 248.443 253.483 256.633" y="102" font-size="10.5">Before starting your experiment, check out these fast </text>
+<text x="18.75 24.375 29.999 33.87 38.91 44.34 49.77 55.589 61.213 67.227 69.94 74.98 77.097 83.112 88.541 94.36 97.073 103.087 106.189 112.008 115.11 120.93 126.359 132.179 134.296 139.336 142.486" y="114" font-size="10.5">60-second video protocols. </text>
+<text x="18.75 24.57 30.194 35.624 40.664 43.376 51.123 56.553 58.67 63.905 66.618 71.658 77.477 83.101 85.814 88.916 94.54 97.642 103.461 109.086 114.905 120.53 123.242 128.672 133.712 139.141 142.428 147.468 150.18 155.22 158.322 163.752 169.766 172.478 178.298 181.195 183.907 192.649 198.078 203.313 205.431 211.055 216.875 219.587 225.017 230.836 236.266 239.552 242.264 248.279 250.396 255.826 258.928 264.358 269.398 272.548" y="138" font-size="10.5">They walk you through every step of making agar plates, </text>
+<text x="18.75 21.647 24.749 30.568 39.31 42.023 50.764 56.194 58.311 61.413 63.531 69.156 74.975 77.687 83.117 88.741 94.755 97.468 103.482 109.301 114.926 118.212 120.33 125.954 131.774 134.486 137.588 143.407 146.12 151.549 157.369 163.188 165.306 167.423 173.048 178.867 181.579 187.009 192.634 198.648 201.36 206.4 209.502 215.321 218.608 224.038 229.857 235.286 237.999 240.711 245.751 251.571 254.283 259.323 265.142 268.292" y="150" font-size="10.5">from melting and pouring to cooling and storage, so you </text>
+<text x="18.75 24.18 29.61 35.234 37.946 43.376 48.416 54.235 56.353 62.367 65.079 70.509 76.328 85.07 93.812 99.631 105.255 107.968 116.709 118.827 123.867 126.969 132.399 137.634 143.063 148.103 150.816 156.245 161.87 167.884 170.596 175.636 181.066 184.168 186.88 192.505 198.519 201.231 206.271 212.09 217.715 221.002 223.714 225.832 231.261 237.275 239.988 247.735 253.554 256.841 262.075 264.788 267.685 273.504 276.654" y="162" font-size="10.5">can avoid common mistakes and set up your lab work for </text>
+<text x="18.75 23.79 29.415 34.844 40.274 45.704 50.744 55.784 58.934" y="174" font-size="10.5">success. </text>
+<text x="30.75 35.571 40.392 42.718 47.372 52.026 57.014 61.835 66.99 69.157 70.972 76.127 80.781 85.769 88.095 90.754 95.742 98.401 103.389 108.043 113.031 114.846 119.166 121.668 124.17 126.87" y="304.25" font-size="9">60 Second Video Protocols </text>
+<text x="54.671 57.33 62.318 64.64 69.294 73.781 78.435 80.761 85.749 90.403 93.22 95.546 97.361 102.015 104.674 109.328 109.328 109.328 109.328 109.328 109.328 109.328 109.328 109.328 109.328 109.328 112.028" y="314.25" font-size="9">“How to Make Agar Plates”. </text>
+</svg>
+<a class="hit" href="https://www.youtube.com/watch?v=46vy4GylcNY" target="_blank" rel="noopener" aria-label="Watch the 60-second video: How to Make Agar Plates" style="left:4.9602%;top:34.9037%;width:46.0441%;height:27.9690%"></a>
+</section>
 
-  <!-- 08 Step 1 -->
-  <section class="sheet" style="--pt:41" id="step-1" aria-labelledby="s1-h">
-    <p class="page-num">08</p>
-    <p class="meta"><span>STEP: 1</span><span>TIME: ~1h</span></p>
-    <h2 class="h2" id="s1-h" style="--mt:4.5">Make Agar Plates</h2>
-    <p style="--mt:7.35">Agar plates are solid nutrient surfaces for bacteria<br class="b"> to grow on.</p>
-    <p>You'll make two types: plain LB agar (for growing bacteria)<br class="b"> and LB + Kanamycin agar (antibiotic plates – only<br class="b"> transformed bacteria survive here).</p>
-    <div class="card cells" style="--cols:4;--mt:6.65">
-      <img src="assets/img/step1-1.webp" width="340" height="277" alt="LB agar tube and 50mL tube">
-      <img src="assets/img/step1-2.webp" width="339" height="277" alt="Tube contents poured into the glass bottle">
-      <img src="assets/img/step1-3.webp" width="340" height="277" alt="Microwave">
-      <img src="assets/img/step1-4.webp" width="343" height="277" alt="Petri plate filled with agar">
-    </div>
-    <ol class="steps steps--continues" style="--mt:5.5">
-      <li><img class="badge" src="assets/img/badge-01.webp" alt="1" width="74" height="74"><label for="s1">Pour the contents of the LB Agar tube into the 250mL glass bottle.</label><input class="check" type="checkbox" id="s1"></li>
-      <li><img class="badge" src="assets/img/badge-02.webp" alt="2" width="74" height="74"><label for="s2">Use the 50mL measuring tube to add 150mL of tap water<br class="b"> to the bottle. Shake vigorously.</label><input class="check" type="checkbox" id="s2"></li>
-      <li><img class="badge" src="assets/img/badge-03.webp" alt="3" width="74" height="74"><label for="s3">Loosely place the lid on top – do <b>not</b> screw it down tight.<br class="b"> Place the bottle in the microwave.</label><input class="check" type="checkbox" id="s3"></li>
-      <li><img class="badge" src="assets/img/badge-04.webp" alt="4" width="74" height="74"><label for="s4">Microwave in 20–30 second bursts, swirling between each burst.<br class="b"> Stop if you see boiling.</label><input class="check" type="checkbox" id="s4"></li>
-      <li style="--gap:8"><img class="badge" src="assets/img/badge-05.webp" alt="5" width="74" height="74"><label for="s5">Continue until the liquid looks completely clear and yellow with<br class="b"> no visible grains or cloudiness. Total time: about 2–3 minutes of<br class="b"> microwaving.</label><input class="check" type="checkbox" id="s5"></li>
-      <li style="--gap:8"><img class="badge" src="assets/img/badge-06.webp" alt="6" width="74" height="74"><label for="s6">Remove carefully (bottle is hot). Let cool 20–30 minutes until you<br class="b"> can hold it comfortably.</label><input class="check" type="checkbox" id="s6"></li>
-      <li><img class="badge" src="assets/img/badge-07.webp" alt="7" width="74" height="74"><label for="s7">While still warm, pour into 2 petri plates: lift each lid, pour just<br class="b"> enough to cover the bottom half, replace the lid. Don't move them<br class="b"> until solid.</label><input class="check" type="checkbox" id="s7"><img class="sticker" src="assets/img/sticker-done.webp" alt="" width="154" height="164"></li>
-    </ol>
-  </section>
+<section class="page" id="page-8" aria-label="Step 1: Make Agar Plates">
+<img class="art" src="pages/p08.svg" width="378" height="522" alt="" loading="lazy" decoding="async">
+<svg class="text-layer" viewBox="0 0 378.007 522.007" aria-hidden="false">
+<text x="347.785 353.623 356.773" y="28.75" font-size="10.5">08 </text>
+<text x="18.751 24.003 29.008 34.207 39.767 41.59 43.775 47.141 53.751 58.757 60.967 67.924 73.123 74.947 77.131 82.154 85.341 88.041" y="50" font-size="9">Step: 1 TIME: ~1h </text>
+<text role="heading" aria-level="2" x="18.751 36.395 48.601 59.706 72.147 76.993 90.535 103.421 115.627 123.849 128.695 142.613 147.249 159.22 167.231 179.672 186.872" y="77" font-size="24">Make Agar Plates </text>
+<text x="18.751 25.35 31.169 36.599 39.885 42.598 48.612 50.729 56.159 59.261 64.691 69.731 72.443 77.873 80.975 86.404 89.117 94.157 99.976 102.094 104.211 110.225 112.938 118.562 124.187 127.289 130.575 132.693 138.123 143.747 146.849 149.562 154.602 160.226 163.513 166.41 171.839 177.269 182.698 187.738 190.451 193.348 199.167 202.454 205.166 211.18 216.61 222.039 225.141 230.571 233.858 235.975 239.125" y="96" font-size="10.5">Agar plates are solid nutrient surfaces for bacteria </text>
+<text x="18.751 21.853 27.673 30.385 36.204 39.306 45.125 52.873 55.585 61.404 67.029 70.179" y="108" font-size="10.5">to grow on. </text>
+<text x="18.751 24.181 30 35.625 38.337 40.455 42.572 45.285 54.026 59.456 64.691 70.12 72.833 75.935 83.682 89.501 92.213 95.315 100.355 106.37 111.799 116.839 119.552 122.264 128.278 130.396 135.825 137.943 143.568 146.28 151.904 158.882 161.595 167.024 172.844 178.273 181.56 184.272 186.78 189.676 195.496 198.782 201.495 207.314 210.416 216.235 223.982 226.1 231.724 237.544 240.256 246.27 251.7 257.13 260.232 265.661 268.948 271.065 276.495 279.645" y="132" font-size="10.5">You&#x27;ll make two types: plain LB agar (for growing bacteria) </text>
+<text x="18.751 24.181 29.805 35.819 38.532 44.156 51.134 53.847 59.933 62.645 69.438 74.868 80.492 85.922 94.664 99.704 105.133 107.251 112.876 115.588 121.018 126.837 132.266 135.553 138.265 140.773 146.202 151.827 154.929 157.046 163.061 165.178 170.998 174.1 176.217 181.647 184.359 190.373 192.491 197.921 201.023 206.452 211.492 214.205 219.245 221.957 227.776 233.401 235.518 238.668" y="144" font-size="10.5">and LB + Kanamycin agar (antibiotic plates – only </text>
+<text x="18.751 21.853 25.14 30.569 36.194 41.234 44.131 49.95 53.237 61.978 67.408 73.422 76.135 82.149 87.578 93.008 96.11 101.54 104.826 106.944 112.373 115.086 120.126 125.75 129.037 134.077 136.195 141.235 146.664 149.377 155.001 160.431 163.533 168.962 171.47 174.62" y="156" font-size="10.5">transformed bacteria survive here). </text>
+<text x="27.601 30.301" y="254.375" font-size="9">1 </text>
+<text x="27.1 29.8" y="282.875" font-size="9">2 </text>
+<text x="27.1 29.8" y="311.375" font-size="9">3 </text>
+<text x="26.103 28.803" y="339.875" font-size="9">4 </text>
+<text x="27.1 29.8" y="368.375" font-size="9">5 </text>
+<text x="27.1 29.8" y="405.875" font-size="9">6 </text>
+<text x="26.726 29.426" y="434.375" font-size="9">7 </text>
+<text x="45.751 51.407 56.395 61.216 64.033 66.358 69.017 73.838 78.492 80.817 85.471 90.459 95.28 97.939 102.593 107.414 110.072 114.392 116.717 121.705 124.188 126.513 129.172 133.993 138.647 140.972 145.793 151.774 154.099 159.755 164.743 169.397 172.214 174.539 177.198 182.019 187.174 191.828 194.152 195.968 200.789 203.447 208.435 210.76 213.419 218.24 222.894 225.219 230.04 234.861 239.682 247.175 251.996 254.321 259.309 261.124 265.778 270.098 274.418 276.743 281.897 286.885 289.544 292.203 294.018 298.672 301.372" y="254.25" font-size="9">Pour the contents of the LB Agar tube into the 250mL glass bottle. </text>
+<text x="45.751 52.066 56.386 61.04 63.365 66.024 70.845 75.499 77.824 82.645 87.466 94.959 99.78 102.105 109.597 114.251 118.905 123.225 128.046 130.863 132.679 137.5 142.488 144.812 147.471 152.292 157.447 162.101 164.426 167.085 172.073 174.398 179.052 184.207 189.362 191.687 196.508 201.329 206.15 213.642 218.463 220.788 225.776 228.259 230.584 233.243 237.897 243.052 245.377 252.017 256.671 259.33 263.984 266.684" y="277.75" font-size="9">Use the 50mL measuring tube to add 150mL of tap water </text>
+<text x="45.751 48.41 53.398 55.723 58.382 63.203 67.857 70.182 75.337 80.325 82.983 85.642 87.457 92.111 94.436 96.761 102.417 107.238 111.892 116.379 121.033 123.358 127.678 129.493 134.481 139.469 142.128 147.116 151.937 156.257 158.072 161.724 164.424" y="287.75" font-size="9">to the bottle. Shake vigorously. </text>
+<text x="45.751 50.572 55.56 60.548 64.868 69.522 71.337 75.657 77.982 83.137 84.952 89.606 94.26 98.914 101.239 103.898 108.719 113.373 115.698 117.513 119.328 124.483 126.808 131.796 136.617 138.942 141.601 146.588 151.743 154.068 158.388 160.713 165.868 170.856 173.181 179.496 186.154 191.309 193.634 197.954 202.608 205.267 209.921 216.561 218.886 220.701 223.36 225.685 230.84 235.828 242.468 247.289 249.614 252.273 254.088 259.076 263.897 266.556 269.256" y="305.75" font-size="9">Loosely place the lid on top – do NOT screw it down tight. </text>
+<text x="45.751 51.407 53.222 57.876 62.53 67.184 69.509 72.168 76.989 81.643 83.968 89.123 94.111 96.77 99.428 101.244 105.898 108.222 110.038 114.859 117.183 119.842 124.663 129.317 131.642 139.135 140.95 145.604 148.263 153.251 159.891 164.545 168.865 173.519 176.219" y="315.75" font-size="9">Place the bottle in the microwave. </text>
+<text x="45.751 53.411 55.226 59.88 62.539 67.527 74.167 78.821 83.141 87.795 90.12 91.935 96.756 99.081 103.902 108.723 113.043 117.864 122.685 125.01 129.33 133.984 138.638 143.626 148.447 153.602 155.927 161.082 165.903 168.72 173.04 175.699 180.019 182.343 184.668 188.988 195.629 197.444 200.261 202.076 203.891 208.712 213.7 216.025 221.18 225.834 228.493 235.133 239.787 244.441 249.262 251.587 256.241 260.895 265.549 270.37 272.695 277.85 282.671 285.488 289.808 292.467 295.167" y="334.75" font-size="9">Microwave in 20–30 second bursts, swirling between each burst. </text>
+<text x="45.751 51.407 54.066 59.054 64.209 66.534 68.349 70.832 73.157 77.477 82.465 87.286 89.611 93.931 98.585 103.239 105.564 110.719 115.707 117.522 119.337 121.152 125.973 130.961 133.661" y="344.75" font-size="9">Stop if you see boiling. </text>
+<text x="45.751 52.066 57.054 61.875 64.534 66.349 71.17 75.991 80.645 82.97 87.791 92.612 95.271 97.086 98.901 101.226 103.885 108.706 113.36 115.685 117.5 119.315 124.47 129.291 131.106 136.261 138.586 140.401 145.389 150.377 154.864 159.184 161.509 166.163 171.151 178.644 183.799 185.614 190.268 192.926 197.58 199.396 203.716 206.04 210.694 212.51 217.164 221.818 224.635 226.96 231.613 236.434 241.589 243.914 248.234 252.888 254.703 256.519 261.507 268.147 270.472 277.112 278.927 281.586 284.286" y="362.75" font-size="9">Continue until the liquid looks completely clear and yellow with </text>
+<text x="45.751 50.572 55.56 57.885 62.205 64.02 68.34 70.155 75.31 77.125 81.779 84.104 89.092 91.909 96.563 98.378 103.199 107.519 109.844 114.832 117.649 119.974 124.628 126.443 131.431 136.252 141.407 143.222 148.043 152.697 157.017 161.337 163.662 165.987 169.973 174.961 177.62 182.274 184.089 186.414 189.073 190.888 198.381 203.035 205.36 207.684 212.338 217.493 222.481 227.302 229.961 232.286 237.107 241.427 246.248 248.573 256.066 257.881 262.702 267.523 270.182 274.836 279.156 281.481 286.469 289.169" y="372.75" font-size="9">no visible grains or cloudiness. Total time: about 2–3 minutes of </text>
+<text x="45.751 53.244 55.059 59.713 62.372 67.36 74 78.654 82.974 84.789 89.61 94.598 97.298" y="382.75" font-size="9">microwaving. </text>
+<text x="45.751 51.732 56.386 63.879 68.867 73.187 77.841 80.166 84.82 89.474 92.133 96.787 99.27 104.091 105.906 107.721 112.041 114.366 116.515 121.67 126.658 129.317 131.976 133.791 138.445 140.77 142.585 146.905 149.23 154.051 159.039 161.698 163.847 166.172 168.496 173.317 177.971 180.63 182.955 187.609 192.597 197.585 199.4 201.725 206.546 211.367 215.687 220.508 225.329 227.654 235.147 236.962 241.783 246.604 249.263 253.917 258.237 260.562 265.382 270.203 272.862 274.677 276.493 278.817 283.137 288.125 290.825" y="400.75" font-size="9">Remove carefully (bottle is hot). Let cool 20–30 minutes until you </text>
+<text x="45.751 50.405 55.059 59.88 62.205 67.026 72.014 73.829 78.984 81.309 83.124 85.783 88.108 92.762 97.75 105.243 107.726 112.714 115.531 118.19 122.844 127.999 129.814 133.466 136.166" y="410.75" font-size="9">can hold it comfortably. </text>
+<text x="45.751 53.903 58.724 60.539 62.354 67.008 69.333 73.653 76.312 78.127 79.942 81.758 84.082 90.723 95.377 98.194 105.687 108.012 110.336 115.491 120.479 125.3 128.117 130.442 132.257 137.078 139.737 144.725 147.05 151.871 154.196 159.351 164.005 166.664 169.481 171.296 173.621 178.776 180.591 185.245 187.904 192.558 196.878 199.203 201.528 203.343 205.158 207.641 210.3 212.625 217.279 221.933 226.587 231.408 233.732 235.548 237.363 242.518 244.842 247.167 252.322 257.31 262.131 264.948 267.273 269.088 273.909 278.229 280.929" y="428.75" font-size="9">While still warm, pour into 2 petri plates: lift each lid, pour just </text>
+<text x="45.751 50.405 55.226 60.214 65.035 70.023 74.844 77.169 79.828 84.816 87.141 91.795 96.783 101.103 105.757 108.574 110.899 113.557 118.378 123.032 125.357 130.512 135.5 138.159 140.818 145.806 153.299 155.624 160.445 165.099 166.914 169.397 171.722 174.047 176.705 181.359 186.514 188.33 192.983 197.637 202.291 204.616 207.275 212.096 216.75 219.075 220.89 222.705 227.86 230.185 232.51 238.667 243.655 248.476 250.801 253.46 255.785 263.277 268.265 272.585 277.239 279.564 282.223 287.044 291.698 294.398" y="438.75" font-size="9">enough to cover the bottom half, replace the lid. Don&#x27;t move them </text>
+<text x="45.751 50.572 55.393 58.052 59.867 61.682 64.007 68.327 73.315 75.13 76.945 82.1 84.8" y="448.75" font-size="9">until solid. </text>
+<text x="324.315 328.726 331.777 333.833 336.761 337.979 339.19 340.99" y="449.687" font-size="6">Mark it </text>
+<text x="325.523 329.254 333.056 336.84 338.64" y="454.687" font-size="6">DONE </text>
+</svg>
+<input class="check" type="checkbox" id="s1" aria-label="Step 1 done" style="left:91.8635%;top:46.9821%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s2" aria-label="Step 2 done" style="left:91.8635%;top:52.4418%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s3" aria-label="Step 3 done" style="left:91.8635%;top:57.9015%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s4" aria-label="Step 4 done" style="left:91.8635%;top:63.3612%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s5" aria-label="Step 5 done" style="left:91.8635%;top:69.6829%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s6" aria-label="Step 6 done" style="left:91.8635%;top:76.0047%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s7" aria-label="Step 7 done" style="left:91.8635%;top:82.3264%;width:3.1745%;height:2.2988%">
+</section>
 
-  <!-- 09 Step 1 (continued) -->
-  <section class="sheet" style="--pt:42" aria-label="Step 1, continued">
-    <p class="page-num">09</p>
-    <ol class="steps steps--continued" start="8">
-      <li><img class="badge" src="assets/img/badge-08.webp" alt="8" width="74" height="73"><label for="s8">Let cool at least 1 hour. Repeat the whole process for the LB +<br class="b"> Kanamycin agar tube, making 5 more plates. Label them clearly.</label><input class="check" type="checkbox" id="s8"></li>
-      <li><img class="badge" src="assets/img/badge-09.webp" alt="9" width="74" height="73"><label for="s9">Store plates upside down in the fridge (4°C). They'll last 1–2 months.</label><input class="check" type="checkbox" id="s9"></li>
-    </ol>
-    <div class="card panels" style="--mt:12.25">
-      <figure style="--band:24.5;--cb:6.95"><img src="assets/img/plates-stacked.webp" width="619" height="322" alt="A stack of petri plates, lid side up"><figcaption class="caption">Petri plate columns with labels:<br>“LB Agar” and “LB + Kan Agar”</figcaption></figure>
-      <div class="arrow-cell"><img src="assets/img/arrow.webp" alt="then" width="113" height="128"></div>
-      <figure style="--band:24.5;--cb:10.5"><img src="assets/img/plates-flipped.webp" width="623" height="322" alt="The same stack flipped upside down"><figcaption class="caption">Correct upside-down storage in fridge</figcaption></figure>
-    </div>
-  </section>
+<section class="page" id="page-9" aria-label="Step 1, continued">
+<img class="art" src="pages/p09.svg" width="378" height="522" alt="" loading="lazy" decoding="async">
+<svg class="text-layer" viewBox="0 0 378.007 522.007" aria-hidden="false">
+<text x="27.099 29.799" y="55.625" font-size="9">8 </text>
+<text x="27.099 29.799" y="84.125" font-size="9">9 </text>
+<text x="45.751 50.572 55.226 57.885 60.21 64.864 69.852 74.84 76.655 78.98 83.634 86.292 88.617 90.432 95.086 99.74 104.06 106.719 109.044 113.865 116.19 121.011 125.999 130.82 132.811 135.136 137.461 143.442 148.096 153.251 157.905 162.559 165.218 167.542 170.201 175.022 179.676 182.001 188.641 193.462 198.45 200.266 204.919 207.244 212.399 215.058 220.046 224.7 229.354 233.674 237.994 240.319 242.802 247.79 250.607 252.932 255.591 260.412 265.066 267.391 272.212 278.193 280.518 283.218" y="50.5" font-size="9">Let cool at least 1 hour. Repeat the whole process for the LB + </text>
+<text x="45.751 51.574 56.228 61.049 65.703 73.196 77.516 82.17 83.985 88.806 91.131 95.785 100.773 105.427 108.244 110.569 113.227 118.048 123.203 127.857 130.182 132.507 140 144.654 149.141 150.956 155.777 160.765 163.09 167.911 170.236 177.729 182.717 185.375 190.029 192.354 197.509 199.324 203.978 206.637 211.291 215.611 217.936 220.261 225.082 229.736 234.891 239.545 241.36 243.685 246.344 251.165 255.819 263.312 265.636 270.29 272.106 276.76 281.413 284.231 286.046 289.698 292.398" y="60.5" font-size="9">Kanamycin agar tube, making 5 more plates. Label them clearly. </text>
+<text x="45.751 51.407 54.066 59.054 61.713 66.367 68.691 73.846 75.662 80.316 82.974 87.628 91.948 94.273 99.094 104.249 108.569 110.384 115.539 120.193 122.518 127.673 132.661 139.301 144.122 146.447 148.262 153.083 155.408 158.067 162.888 167.542 169.867 172.35 175.167 176.982 182.137 187.125 191.779 194.104 196.253 201.074 204.498 210.813 212.962 215.287 217.612 222.6 227.421 232.074 236.394 238.719 240.534 242.35 244.674 246.49 251.144 255.464 258.122 260.447 265.268 269.588 274.409 276.734 284.227 289.215 294.036 296.695 301.516 305.836 308.536" y="84" font-size="9">Store plates upside down in the fridge (4°C). They&#x27;ll last 1–2 months. </text>
+<text x="24.56 28.439 30.654 33.002 34.515 36.452 40.748 42.26 46.139 48.354 52.233 54.17 58.048 62.205 63.718 67.735 73.979 77.997 81.597 83.534 89.068 90.58 92.796 96.813 98.751 100.263 104.142 108.438 112.316 113.828 115.341 116.854 119.104" y="193" font-size="7.5">Petri plate columns with labels: </text>
+<text x="42.847 46.725 49.071 51.009 54.887 58.904 63.2 65.134 69.151 74.135 76.073 80.42 82.357 87.21 91.088 95.105 97.044 101.2 105.079 107.576 107.576 107.576 107.576 107.576 107.576 107.576 107.576 107.576 107.576 109.826" y="201" font-size="7.5">“LB Agar” and “LB + Kan Agar” </text>
+<text x="209.43 213.586 215.934 218.15 222.028 225.906 228.122 230.059 234.077 238.373 241.973 243.485 247.781 247.781 247.781 251.656 255.952 260.108 265.642 269.66 271.597 275.197 277.413 281.569 283.917 287.795 291.952 295.83 297.768 299.28 303.298 305.235 307.304 309.652 311.164 315.46 319.617 321.867" y="197" font-size="7.5">Correct upside-down storage in fridge </text>
+</svg>
+<input class="check" type="checkbox" id="s8" aria-label="Step 8 done" style="left:91.8634%;top:8.9079%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s9" aria-label="Step 9 done" style="left:91.8634%;top:14.3676%;width:3.1745%;height:2.2988%">
+</section>
 
-  <!-- 10 Step 2 -->
-  <section class="sheet" style="--pt:41" id="step-2" aria-labelledby="s2-h">
-    <p class="page-num">10</p>
-    <p class="meta"><span>STEP: 2</span><span>TIME: ~10min</span></p>
-    <h2 class="h2" id="s2-h" style="--mt:4.5">Prepare the Bacteria</h2>
-    <p style="--mt:7.35">Your E. coli arrives freeze-dried. You'll rehydrate it and<br class="b"> streak it onto a plain LB agar plate to grow a fresh colony<br class="b"> overnight.</p>
-    <div class="card cells" style="--cols:5;--mt:8.65">
-      <img src="assets/img/step2-1.webp" width="272" height="279" alt="Freeze-dried bacteria tube">
-      <img src="assets/img/step2-2.webp" width="271" height="279" alt="Transfer pipette with sterile water">
-      <img src="assets/img/step2-3.webp" width="272" height="279" alt="Shaking the tube">
-      <img src="assets/img/step2-4.webp" width="272" height="279" alt="Pipetting onto an LB agar plate">
-      <img src="assets/img/step2-5.webp" width="275" height="279" alt="Streaking with an inoculation loop">
-    </div>
-    <ol class="steps" start="10" style="--mt:5.3">
-      <li><img class="badge" src="assets/img/badge-10.webp" alt="10" width="74" height="73"><label for="s10">Add 4 drops (~100µL) of sterile water to the freeze-dried bacteria<br class="b"> tube using the disposable transfer pipette.</label><input class="check" type="checkbox" id="s10"></li>
-      <li><img class="badge" src="assets/img/badge-11.webp" alt="11" width="74" height="73"><label for="s11">Shake for 1 minute until the bacteria are fully dissolved.</label><input class="check" type="checkbox" id="s11"></li>
-      <li><img class="badge" src="assets/img/badge-12.webp" alt="12" width="74" height="73"><label for="s12">Pipette all 100µL of the bacteria suspension onto a plain LB agar<br class="b"> plate <b>(not the antibiotic plate)</b>.</label><input class="check" type="checkbox" id="s12"></li>
-      <li><img class="badge" src="assets/img/badge-13.webp" alt="13" width="74" height="73"><label for="s13">Use an inoculation loop to gently streak the bacteria across the plate<br class="b"> in a zigzag pattern.</label><input class="check" type="checkbox" id="s13"></li>
-      <li style="--gap:8"><img class="badge" src="assets/img/badge-14.webp" alt="14" width="74" height="73"><label for="s14">Place the lid back on and let the plate grow at room temperature<br class="b"> overnight (12–18 hours). <b>Do not refrigerate.</b> Colonies are<br class="b"> ready to use when they appear as visible white or cream-colored<br class="b"> dots spread across the plate.</label><input class="check" type="checkbox" id="s14"></li>
-    </ol>
-  </section>
+<section class="page" id="page-10" aria-label="Step 2: Prepare the Bacteria">
+<img class="art" src="pages/p10.svg" width="378" height="522" alt="" loading="lazy" decoding="async">
+<svg class="text-layer" viewBox="0 0 378.007 522.007" aria-hidden="false">
+<text x="347.783 353.407 356.557" y="28.75" font-size="10.5">10 </text>
+<text x="18.749 24.001 29.006 34.205 39.764 41.588 43.773 48.867 55.749 60.755 62.965 69.922 75.121 76.945 79.129 84.152 87.338 92.95 100.443 102.627 105.327" y="50" font-size="9">Step: 2 TIME: ~10min </text>
+<text role="heading" aria-level="2" x="18.749 32.432 40.044 52.485 65.371 77.577 85.19 97.63 102.477 110.839 123.514 135.955 140.801 155.304 167.51 179.318 187.329 199.77 207.992 212.838 220.038" y="77" font-size="24">Prepare the Bacteria </text>
+<text x="18.749 24.179 29.998 35.622 38.909 41.621 47.83 50.543 53.255 58.685 64.504 66.622 68.739 71.452 76.881 80.168 83.454 85.572 90.612 96.042 101.082 103.794 106.691 109.793 115.223 120.652 125.487 130.917 134.788 140.802 144.089 146.206 151.636 157.65 160.362 163.075 168.504 174.324 179.948 182.661 184.778 186.896 189.608 192.71 198.14 203.764 208.804 214.818 218.105 223.535 226.637 232.066 234.779 236.896 239.998 242.711 248.14 253.765 256.915" y="96" font-size="10.5">Your E. coli arrives freeze-dried. You&#x27;ll rehydrate it and </text>
+<text x="18.749 23.789 26.891 29.993 35.423 40.852 46.087 48.8 50.917 54.019 56.732 62.551 68.175 71.277 77.097 79.809 85.239 87.951 93.965 96.083 101.512 103.63 109.255 111.967 117.591 124.569 127.282 132.711 138.531 143.96 147.247 149.959 155.973 158.091 163.521 166.623 172.052 174.765 177.867 183.686 186.398 192.218 195.32 201.139 208.886 211.598 217.028 219.74 222.637 225.739 231.169 236.209 241.833 244.546 249.975 255.795 257.912 263.732 269.356 272.506" y="108" font-size="10.5">streak it onto a plain LB agar plate to grow a fresh colony </text>
+<text x="18.749 24.568 29.608 35.038 38.509 44.134 46.251 52.071 57.695 60.797 63.947" y="120" font-size="10.5">overnight. </text>
+<text x="26.028 27.917 30.617" y="220.625" font-size="9">10 </text>
+<text x="27.029 29.665 32.365" y="249.125" font-size="9">11 </text>
+<text x="26.028 28.664 31.364" y="277.625" font-size="9">12 </text>
+<text x="26.028 28.664 31.364" y="306.125" font-size="9">13 </text>
+<text x="25.779 27.668 30.368" y="334.625" font-size="9">14 </text>
+<text x="45.749 51.405 56.56 61.715 64.04 68.861 71.186 76.341 78.999 83.987 89.142 93.462 95.787 97.936 103.153 107.974 112.795 117.616 122.437 127.258 129.407 131.732 136.72 139.203 141.528 145.848 148.507 153.161 155.978 157.793 159.608 164.262 166.587 173.227 177.881 180.54 185.194 188.011 190.336 192.995 197.983 200.307 202.966 207.787 212.441 214.766 217.249 219.908 224.562 229.216 233.36 238.014 241.332 246.487 249.304 251.12 255.773 260.928 263.253 268.408 273.062 277.716 280.375 285.029 287.846 289.661 292.361" y="215.5" font-size="9">Add 4 drops (~100µL) of sterile water to the freeze-dried bacteria </text>
+<text x="45.749 48.408 53.229 58.384 63.038 65.363 70.184 74.504 76.319 81.14 86.128 88.453 91.111 95.932 100.586 102.911 108.066 109.881 114.201 119.356 124.344 128.664 133.318 138.473 140.288 144.942 147.267 149.926 152.743 157.397 162.218 166.538 169.021 173.675 176.492 178.817 183.972 185.787 190.942 195.596 198.255 200.914 205.568 208.268" y="225.5" font-size="9">tube using the disposable transfer pipette. </text>
+<text x="45.749 51.405 56.226 60.88 65.367 70.021 72.346 74.829 79.817 82.634 84.959 89.78 92.105 99.597 101.413 106.234 111.055 113.713 118.367 120.692 125.513 130.334 132.993 134.808 136.623 138.948 141.607 146.428 151.082 153.407 158.562 163.216 167.87 170.529 175.183 178 179.815 184.469 186.794 191.448 194.107 198.761 201.085 203.569 208.39 210.205 212.02 216.34 218.665 223.82 225.635 229.955 234.275 239.263 241.078 245.398 250.052 255.207 257.907" y="249" font-size="9">Shake for 1 minute until the bacteria are fully dissolved. </text>
+<text x="45.749 51.405 53.22 58.375 63.029 65.688 68.347 73.001 75.326 79.98 81.795 83.61 85.935 90.756 95.577 100.398 105.219 110.04 112.364 117.352 119.836 122.16 124.819 129.64 134.294 136.619 141.774 146.428 151.082 153.741 158.395 161.212 163.027 167.681 170.006 174.326 179.147 183.467 188.622 193.276 198.097 202.417 204.232 209.22 214.041 216.366 221.354 226.175 228.834 233.822 236.146 240.8 243.125 248.28 250.095 254.749 256.565 261.385 263.71 268.531 274.512 276.837 281.491 286.479 291.133 293.833" y="272.5" font-size="9">Pipette all 100µL of the bacteria suspension onto a plain LB agar </text>
+<text x="45.749 50.904 52.719 57.373 60.032 64.686 67.011 69.336 75.651 82.309 87.464 89.789 94.944 101.259 106.748 109.072 114.895 121.211 126.365 128.69 134.847 137.172 143.83 148.985 151.31 157.625 159.95 165.773 170.761 175.758 180.913 186.401 188.726 191.426" y="282.5" font-size="9">plate (not the antibiotic plate). </text>
+<text x="45.749 52.064 56.384 61.038 63.363 68.017 72.838 75.163 76.978 81.799 86.787 91.441 96.262 98.077 102.731 105.39 107.205 112.193 117.014 119.339 121.154 126.142 131.13 136.285 138.61 141.269 146.257 148.581 153.569 158.223 163.044 165.703 167.518 171.838 174.163 178.483 181.142 183.801 188.455 193.109 197.596 199.921 202.58 207.401 212.055 214.38 219.534 224.188 228.842 231.501 236.155 238.972 240.788 245.442 247.766 252.42 257.074 259.733 264.721 269.041 273.361 275.686 278.345 283.166 287.82 290.145 295.3 297.115 301.769 304.428 307.128" y="301" font-size="9">Use an inoculation loop to gently streak the bacteria across the plate </text>
+<text x="45.749 47.564 52.385 54.71 59.364 61.689 65.833 67.648 72.636 76.78 81.434 86.422 88.747 93.902 98.556 101.215 103.874 108.528 111.503 116.324 119.024" y="311" font-size="9">in a zigzag pattern. </text>
+<text x="45.749 51.405 53.22 57.874 62.528 67.182 69.507 72.166 76.987 81.641 83.966 85.781 87.596 92.751 95.076 100.231 104.885 109.539 114.026 116.351 121.338 126.159 128.484 133.138 137.959 143.114 145.439 147.254 151.908 154.567 156.892 159.551 164.372 169.026 171.351 176.506 178.321 182.975 185.634 190.288 192.612 197.6 200.259 205.247 211.888 214.212 218.866 221.525 223.85 226.509 231.497 236.485 243.978 246.303 248.962 253.616 261.108 266.263 270.917 273.734 278.388 281.047 285.868 288.527 291.227" y="329" font-size="9">Place the lid back on and let the plate grow at room temperature </text>
+<text x="45.749 50.737 55.057 59.711 62.686 67.507 69.322 74.31 79.131 81.79 84.115 86.264 91.085 95.906 100.226 105.047 109.868 112.193 117.014 122.002 126.823 129.64 133.96 136.109 138.434 140.759 147.074 153.732 156.057 162.372 169.03 174.185 176.51 182.666 188.155 193.31 199.467 201.792 208.441 213.93 220.087 225.084 230.239 235.728 238.053 240.378 246.693 251.681 253.496 258.484 263.305 265.12 269.774 274.094 276.419 281.073 283.732 286.432" y="339" font-size="9">overnight (12–18 hours). Do not refrigerate. Colonies are </text>
+<text x="45.749 48.408 53.062 57.716 62.871 67.191 69.516 72.175 77.163 79.487 84.308 88.628 93.282 95.607 102.248 107.069 111.723 116.544 118.868 121.527 126.348 131.002 135.322 137.647 142.301 147.456 152.611 157.265 161.919 164.736 167.061 171.715 176.035 178.36 182.68 184.495 188.815 190.63 195.785 197.6 202.254 204.579 211.219 216.04 217.855 220.514 225.168 227.493 232.481 235.298 237.623 242.277 244.936 249.59 254.244 261.737 265.055 269.709 274.697 276.512 281.5 284.159 288.813 291.513" y="349" font-size="9">ready to use when they appear as visible white or cream-colored </text>
+<text x="45.749 50.904 55.892 58.551 62.871 65.196 69.516 74.671 77.33 81.984 86.637 91.792 94.117 98.771 103.425 106.084 111.072 115.392 119.712 122.037 124.696 129.517 134.171 136.496 141.651 143.466 148.12 150.779 155.433 158.133" y="359" font-size="9">dots spread across the plate. </text>
+</svg>
+<input class="check" type="checkbox" id="s10" aria-label="Step 10 done" style="left:91.8628%;top:40.5167%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s11" aria-label="Step 11 done" style="left:91.8628%;top:45.9764%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s12" aria-label="Step 12 done" style="left:91.8628%;top:51.4361%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s13" aria-label="Step 13 done" style="left:91.8628%;top:56.8957%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s14" aria-label="Step 14 done" style="left:91.8628%;top:64.1753%;width:3.1745%;height:2.2988%">
+</section>
 
-  <!-- 11 Zigzag + warnings -->
-  <section class="sheet" style="--pt:41.2" aria-label="Streaking pattern and warnings">
-    <p class="page-num">11</p>
-    <figure class="card" style="position:relative;padding-bottom:calc(15 * var(--u))">
-      <img src="assets/img/zigzag.webp" width="1362" height="492" alt="Zigzag streak lines across a yellow agar plate, drawn with an inoculation loop">
-      <figcaption class="caption" style="position:absolute;left:calc(5.8 * var(--u));bottom:calc(4.8 * var(--u))">Zigzag pattern across plate</figcaption>
-    </figure>
-    <h2 class="callout callout--warn" style="--mt:24.75">Warning:</h2>
-    <ul class="card icon-list icon-list--strong" style="--mt:4.75">
-      <li><img src="assets/img/warning-1.webp" alt="" width="80" height="80"><span>If your room is cold (below 18°C), bacteria may<br class="b"> take longer to grow – up to 24 hours.</span></li>
-      <li><img src="assets/img/warning-2.webp" alt="" width="80" height="80"><span>Do not grow bacteria above 37°C. It damages the<br class="b"> bacteria and the experiment will fail.</span></li>
-      <li><img src="assets/img/warning-3.webp" alt="" width="80" height="80"><span>If agar solidifies in the bottle before you finish,<br class="b"> briefly re-microwave to liquefy it again.</span></li>
-    </ul>
-  </section>
+<section class="page" id="page-11" aria-label="Streaking and warnings">
+<img class="art" src="pages/p11.svg" width="378" height="522" alt="" loading="lazy" decoding="async">
+<svg class="text-layer" viewBox="0 0 378.007 522.007" aria-hidden="false">
+<text x="24.538 26.471 28.406 30.491 30.491 30.491 30.491 30.491 30.491 30.491 30.491 30.491 30.491 30.491 30.491 30.491 30.491 30.491 30.491 30.491 30.491 30.491 30.491 30.491 30.491 30.491 30.491 32.741" y="174.25" font-size="7.5">Zigzag pattern across plate </text>
+<text role="heading" aria-level="3" x="18.751 32.757 41.912 48.078 57.549 61.184 70.655 80.32 85.72" y="222" font-size="18">Warning: </text>
+<text x="49.501 52.213 55.315 58.028 63.263 69.277 75.096 78.577 81.29 84.587 90.601 96.615 105.541 108.253 110.576 115.811 118.523 124.148 130.162 132.485 138.694 141.406 144.118 150.327 155.952 158.274 164.289 172.251 174.963 180.588 186.212 190.206 197.574 200.286 202.999 205.711 211.92 217.544 223.169 226.455 232.08 235.561 237.884 243.509 246.221 255.147 260.772 263.922" y="246.75" font-size="10.5">If your room is cold (below 18°C), bacteria may </text>
+<text x="49.501 52.788 58.412 63.842 69.466 72.179 74.501 80.515 86.335 92.349 97.973 101.455 104.167 107.454 113.468 116.18 122.194 125.491 131.505 139.467 142.18 147.22 149.932 155.752 161.96 164.673 167.959 173.974 176.686 182.31 187.935 190.647 196.467 202.481 208.3 211.781 217.016 220.166" y="258.75" font-size="10.5">take longer to grow – up to 24 hours. </text>
+<text x="49.501 56.869 62.883 65.595 71.414 77.429 80.715 83.427 89.442 92.738 98.753 106.715 109.427 115.636 121.261 126.885 130.172 135.796 139.278 141.6 147.225 149.937 155.562 161.771 167.785 173.02 178.644 181.356 186.981 192.605 196.599 203.967 206.679 209.392 212.104 215.391 218.103 224.312 229.937 238.863 244.487 250.501 256.126 261.361 264.073 267.36 273.179 276.329" y="282.75" font-size="10.5">Do not grow bacteria above 37°C. It damages the </text>
+<text x="49.501 55.71 61.334 66.959 70.245 75.87 79.351 81.674 87.299 90.011 95.635 101.455 107.664 110.376 113.663 119.482 125.106 127.819 133.443 138.873 145.082 150.706 154.188 156.51 165.437 171.061 176.88 180.167 182.879 190.842 193.164 195.487 197.81 200.522 203.624 209.249 211.571 213.894 217.044" y="294.75" font-size="10.5">bacteria and the experiment will fail. </text>
+<text x="49.501 52.213 55.315 58.028 63.652 69.666 75.291 78.772 81.485 86.719 92.733 95.056 97.379 103.588 105.911 111.749 111.535 117.16 122.394 125.107 127.429 133.249 135.961 139.248 145.067 150.691 153.404 159.613 165.627 168.913 172.2 174.523 180.147 182.86 189.069 194.693 197.795 203.809 207.106 212.73 215.443 220.678 226.692 232.511 235.223 241.061 240.848 246.667 248.99 254.225 260.044 263.194" y="318.75" font-size="10.5">If agar solidifies in the bottle before you finish, </text>
+<text x="49.501 55.71 59.191 61.514 67.139 72.977 72.763 77.998 80.71 84.007 89.631 93.503 102.429 104.751 110.376 113.673 119.687 127.649 133.274 138.509 144.133 146.845 150.132 156.146 158.858 161.181 163.504 169.713 175.532 181.157 184.259 189.493 192.206 194.529 197.815 200.527 206.152 212.166 217.791 220.113 225.933 229.083" y="330.75" font-size="10.5">briefly re-microwave to liquefy it again. </text>
+</svg>
+</section>
 
-  <!-- 12 Step 3 -->
-  <section class="sheet" style="--pt:41" id="step-3" aria-labelledby="s3-h">
-    <p class="page-num">12</p>
-    <p class="meta"><span>STEP: 3</span><span>TIME: 2h</span></p>
-    <h2 class="h2" id="s3-h" style="--mt:4.5">Transformation:<br><span class="muted">Adding the GFP Gene</span></h2>
-    <p style="--mt:7.35">This is the main event. You'll mix bacteria with the<br class="b"> transformation buffer (which temporarily makes cell walls<br class="b"> porous), add the plasmid DNA, then heat shock the mixture<br class="b"> to drive the plasmid inside.</p>
-    <h3 class="h3" style="--mt:11.8">3.1 Prepare Competent Cells</h3>
-    <div class="card cells" style="--cols:4;--mt:11.35">
-      <img src="assets/img/step3-1.webp" width="340" height="279" alt="Overnight LB agar plate">
-      <img src="assets/img/step3-2.webp" width="339" height="279" alt="Scraping colonies with an inoculation loop">
-      <img src="assets/img/step3-3.webp" width="340" height="279" alt="Microcentrifuge tube of transformation buffer">
-      <img src="assets/img/step3-4.webp" width="343" height="279" alt="Swirling the loop in the tube">
-    </div>
-    <ol class="steps" start="15" style="--mt:4.8">
-      <li><img class="badge" src="assets/img/badge-15.webp" alt="15" width="74" height="73"><label for="s15">Take an inoculation loop and gently scrape a small amount of<br class="b"> bacteria from your overnight plate. You want the loop to be visibly<br class="b"> coated. A thin film is enough.</label><input class="check" type="checkbox" id="s15"></li>
-      <li style="--gap:7.5"><img class="badge" src="assets/img/badge-16.webp" alt="16" width="74" height="73"><label for="s16">Transfer the bacteria into a microcentrifuge tube containing 100µL<br class="b"> of transformation buffer. Swirl the loop to release the bacteria.<br class="b"> Mix gently until any clumps dissolve.</label><input class="check" type="checkbox" id="s16"></li>
-    </ol>
-    <h3 class="h3" style="--mt:14.45">3.2 Add the Plasmid DNA</h3>
-    <ol class="steps" start="17" style="--mt:6.05">
-      <li><img class="badge" src="assets/img/badge-17.webp" alt="17" width="74" height="73"><label for="s17">Take the GFP plasmid tube. Add 10µL of sterile water and shake for<br class="b"> 1 minute to rehydrate the freeze-dried DNA.</label><input class="check" type="checkbox" id="s17"></li>
-      <li><img class="badge" src="assets/img/badge-18.webp" alt="18" width="74" height="73"><label for="s18">Add 10µL of the rehydrated GFP plasmid to your bacteria tube.<br class="b"> <b>Mix gently.</b></label><input class="check" type="checkbox" id="s18"></li>
-    </ol>
-  </section>
+<section class="page" id="page-12" aria-label="Step 3: Transformation">
+<img class="art" src="pages/p12.svg" width="378" height="522" alt="" loading="lazy" decoding="async">
+<svg class="text-layer" viewBox="0 0 378.007 522.007" aria-hidden="false">
+<text x="347.785 353.623 356.773" y="28.75" font-size="10.5">12 </text>
+<text x="18.751 24.003 29.008 34.207 39.766 41.59 43.774 49.129 55.751 60.757 62.967 69.924 75.123 76.947 79.131 84.049 86.749" y="50" font-size="9">Step: 3 TIME: 2h </text>
+<text role="heading" aria-level="2" x="18.751 29.153 36.765 48.971 61.599 72.868 80.41 93.062 101.284 120.357 132.329 140.692 145.538 158.189 170.818 178.018" y="77" font-size="24">Transformation: </text>
+<text role="heading" aria-level="2" x="18.751 32.293 45.179 58.065 62.911 75.539 88.425 93.272 101.634 114.309 126.75 131.596 146.24 158.47 172.387 177.233 191.877 204.317 216.946 224.146" y="99" font-size="24">Adding the GFP Gene </text>
+<text x="18.751 24.57 30.195 32.312 37.352 40.065 42.182 47.222 49.935 53.037 58.661 64.091 66.803 75.545 80.975 83.092 88.717 91.429 96.859 101.899 107.328 112.953 116.055 118.767 121.48 126.909 132.728 138.353 141.065 143.183 145.301 148.013 156.755 158.872 164.097 166.809 172.823 178.253 183.683 186.785 192.214 195.501 197.618 203.048 205.76 213.508 215.625 218.727 224.352 227.064 230.166 235.79 238.94" y="118" font-size="10.5">This is the main event. You&#x27;ll mix bacteria with the </text>
+<text x="18.751 21.853 25.14 30.569 36.194 41.234 44.131 49.95 53.237 61.978 67.408 70.51 72.627 78.447 84.071 86.784 92.798 98.422 104.481 104.272 109.702 112.988 115.701 118.208 125.955 131.58 133.697 139.127 144.751 147.464 150.566 155.995 164.737 170.751 176.57 179.857 185.287 188.573 190.691 192.809 197.849 200.561 209.303 214.732 219.967 225.397 230.437 233.149 238.579 244.008 246.126 248.244 250.956 258.703 264.133 266.25 268.368 271.518" y="130" font-size="10.5">transformation buffer (which temporarily makes cell walls </text>
+<text x="18.751 24.765 30.584 33.686 39.506 45.13 50.17 52.677 55.39 58.102 63.532 69.546 75.56 78.272 81.374 86.999 92.429 95.141 101.155 103.273 108.702 113.742 122.484 124.602 130.616 133.328 140.511 147.879 154.477 157.19 159.902 163.004 168.629 174.058 179.683 182.395 188.02 193.449 198.879 201.981 204.693 209.733 215.358 221.177 226.607 231.841 234.554 237.656 243.28 248.71 251.422 260.164 262.282 267.506 270.608 276.233 279.335 282.485" y="142" font-size="10.5">porous), add the plasmid DNA, then heat shock the mixture </text>
+<text x="18.751 21.853 27.672 30.385 36.399 39.685 41.803 46.843 52.273 54.985 58.087 63.711 69.141 71.854 77.868 79.985 85.415 90.455 99.197 101.314 107.328 110.041 112.158 117.783 122.823 124.94 130.955 136.384 139.534" y="154" font-size="10.5">to drive the plasmid inside. </text>
+<text role="heading" aria-level="3" x="18.751 28.152 29.801 35.492 39.127 49.389 55.099 64.429 74.094 83.248 88.958 98.288 101.923 112.519 122.008 136.313 145.977 155.308 161.316 170.646 179.942 186.213 189.848 200.444 209.775 213.252 216.729 222.129" y="184.25" font-size="18">3.1 Prepare Competent Cells </text>
+<text x="45.751 49.737 54.391 58.878 63.532 65.857 70.511 75.332 77.657 79.472 84.293 89.281 93.935 98.756 100.571 105.225 107.884 109.699 114.687 119.508 121.833 123.648 128.636 133.624 138.779 141.104 145.757 150.578 155.733 158.058 163.046 167.7 172.521 175.18 176.995 181.315 183.64 187.96 192.614 195.431 200.085 205.24 209.894 212.219 216.873 219.198 223.518 231.011 235.665 237.48 239.295 241.62 246.274 253.767 258.755 263.576 268.397 271.055 273.38 278.368 281.068" y="282.5" font-size="9">Take an inoculation loop and gently scrape a small amount of </text>
+<text x="45.751 50.906 55.56 60.214 62.873 67.527 70.344 72.159 76.813 79.138 81.621 84.28 89.268 96.761 99.085 103.405 108.393 113.214 116.031 118.356 123.344 127.664 132.318 135.294 140.115 141.93 146.918 151.739 154.397 156.722 161.877 163.692 168.346 171.005 175.659 177.984 180.309 184.963 189.951 194.772 197.097 203.737 208.391 213.212 215.871 218.196 220.855 225.676 230.33 232.655 234.47 239.458 244.446 249.601 251.926 254.584 259.572 261.897 267.052 271.706 274.031 278.351 280.166 284.486 286.301 291.456 293.271 295.971" y="292.5" font-size="9">bacteria from your overnight plate. You want the loop to be visibly </text>
+<text x="45.751 50.405 55.393 60.047 62.706 67.36 72.515 74.84 77.164 82.82 85.145 87.804 92.625 94.44 99.261 101.586 106.248 106.064 107.879 115.372 117.697 119.512 123.832 126.157 130.811 135.632 140.62 145.441 150.429 155.25 157.95" y="302.5" font-size="9">coated. A thin film is enough. </text>
+<text x="26.405 29.041 31.741" y="287.75" font-size="9">15 </text>
+<text x="45.751 49.913 52.73 57.384 62.205 66.525 69.008 73.662 76.479 78.804 81.463 86.284 90.938 93.263 98.417 103.071 107.725 110.384 115.038 117.855 119.671 124.324 126.649 128.464 133.285 135.944 140.932 143.257 147.911 150.236 157.729 159.544 164.198 166.857 171.845 176.499 181.153 185.974 188.633 191.45 193.265 195.748 200.569 205.557 210.211 212.536 215.195 220.016 225.171 229.825 232.149 236.803 241.791 246.612 249.271 253.925 255.74 260.561 262.376 267.197 272.185 274.51 279.331 284.152 288.973 293.794 296.494" y="320" font-size="9">Transfer the bacteria into a microcentrifuge tube containing 100µL </text>
+<text x="45.751 50.739 53.222 55.547 58.206 61.023 65.677 70.498 74.818 77.301 82.289 85.106 92.599 97.253 99.912 101.727 106.715 111.536 113.861 119.016 123.837 129.03 128.851 133.505 135.496 137.821 140.146 145.801 152.442 154.257 157.074 158.889 161.214 163.873 168.694 173.348 175.673 177.488 182.476 187.464 192.619 194.944 197.602 202.59 204.915 207.574 212.228 214.043 218.697 223.351 227.671 232.325 234.65 237.309 242.13 246.784 249.109 254.264 258.918 263.572 266.231 270.885 273.702 275.517 280.171 282.871" y="330" font-size="9">of transformation buffer. Swirl the loop to release the bacteria. </text>
+<text x="45.751 53.411 55.226 59.704 62.029 67.017 71.671 76.492 79.151 80.966 85.286 87.611 92.432 97.253 99.912 101.727 103.542 105.867 110.521 115.342 119.662 121.987 126.641 128.456 133.277 140.77 145.924 150.244 152.569 157.724 159.539 163.859 168.179 173.167 174.983 179.303 183.957 186.657" y="340" font-size="9">Mix gently until any clumps dissolve. </text>
+<text x="26.554 28.891 31.591" y="325.625" font-size="9">16 </text>
+<text role="heading" aria-level="3" x="18.751 28.152 31.154 40.291 43.926 54.083 63.747 73.411 77.046 83.318 92.824 102.155 105.79 116.227 119.704 128.859 137.311 151.616 155.25 164.915 168.55 179.743 191.095 196.495" y="372.5" font-size="18">3.2 Add the Plasmid DNA </text>
+<text x="45.751 49.737 54.391 58.878 63.532 65.857 68.516 73.337 77.991 80.316 86.965 91.953 97.609 99.933 105.088 106.904 111.557 115.877 123.37 125.185 130.34 132.665 135.324 140.145 145.3 149.954 152.279 154.604 160.26 165.415 170.57 172.895 177.716 182.537 187.358 192.179 194.503 199.491 201.974 204.299 208.619 211.278 215.932 218.749 220.564 222.379 227.033 229.358 235.999 240.653 243.312 247.965 250.783 253.107 257.761 262.582 267.737 270.062 274.382 279.203 283.857 288.344 292.998 295.323 297.806 302.794 305.494" y="389.5" font-size="9">Take the GFP plasmid tube. Add 10µL of sterile water and shake for </text>
+<text x="45.751 50.572 52.897 60.39 62.205 67.026 71.847 74.506 79.16 81.484 84.143 89.131 91.456 94.115 98.769 103.59 107.91 113.065 115.882 120.536 123.195 127.849 130.174 132.833 137.654 142.308 144.632 147.116 149.774 154.428 159.082 163.227 167.881 171.199 176.354 179.171 180.986 185.64 190.795 193.12 199.277 205.592 211.248 213.948" y="399.5" font-size="9">1 minute to rehydrate the freeze-dried DNA. </text>
+<text x="26.405 28.293 30.993" y="394.625" font-size="9">17 </text>
+<text x="45.751 51.407 56.562 61.717 64.042 68.863 73.684 78.505 83.326 85.651 90.638 93.122 95.446 98.105 102.926 107.58 109.905 112.564 117.218 122.039 126.359 131.514 134.331 138.985 141.644 146.298 151.453 153.778 160.427 165.415 171.071 173.396 178.551 180.366 185.02 189.34 196.832 198.648 203.803 206.127 208.786 213.774 216.099 220.419 225.407 230.228 233.045 235.37 240.525 245.179 249.833 252.492 257.146 259.963 261.778 266.432 268.757 271.416 276.237 281.392 286.046 288.746" y="418" font-size="9">Add 10µL of the rehydrated GFP plasmid to your bacteria tube. </text>
+<text x="45.751 53.569 55.894 61.55 63.875 70.524 76.013 82.328 87.483 91.469 96.123 98.823" y="428" font-size="9">Mix gently. </text>
+<text x="25.804 28.141 30.841" y="423.125" font-size="9">18 </text>
+</svg>
+<input class="check" type="checkbox" id="s15" aria-label="Step 15 done" style="left:91.8634%;top:54.3096%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s16" aria-label="Step 16 done" style="left:91.8634%;top:61.4934%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s17" aria-label="Step 17 done" style="left:91.8634%;top:73.8495%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s18" aria-label="Step 18 done" style="left:91.8634%;top:79.3092%;width:3.1745%;height:2.2988%">
+</section>
 
-  <!-- 13 Cold incubation, heat shock, recovery -->
-  <section class="sheet" style="--pt:39.15" aria-label="Steps 3.3 to 3.5">
-    <p class="page-num">13</p>
-    <h3 class="h3">3.3 Cold Incubation</h3>
-    <ol class="steps" start="19" style="--mt:5.65">
-      <li><img class="badge" src="assets/img/badge-19.webp" alt="19" width="74" height="73"><label for="s19">Place the tube in the fridge (4°C) for 30 minutes.<br class="b"> <b>Do not freeze it.</b></label><input class="check" type="checkbox" id="s19"></li>
-    </ol>
-    <div class="card panels" style="--mt:12.9">
-      <figure><img src="assets/img/cold-tube.webp" width="619" height="279" alt="Transformation tube"></figure>
-      <div class="arrow-cell"><img src="assets/img/arrow.webp" alt="into" width="113" height="128"></div>
-      <figure><img src="assets/img/cold-fridge.webp" width="623" height="279" alt="Fridge"></figure>
-    </div>
-    <h3 class="h3" style="--mt:14.35">3.4 Heat Shock</h3>
-    <ol class="steps" start="20" style="--mt:5.75">
-      <li><img class="badge" src="assets/img/badge-20.webp" alt="20" width="74" height="74"><label for="s20">Heat shock the tube in warm water at 42°C (108°F) <b>for exactly<br class="b"> 30 seconds</b>. You can test temperature with your wrist. It should<br class="b"> feel hot but not painful.</label><input class="check" type="checkbox" id="s20"></li>
-      <li style="--gap:9.05"><img class="badge" src="assets/img/badge-21.webp" alt="21" width="74" height="74"><label for="s21">Immediately move the tube to room temperature.</label><input class="check" type="checkbox" id="s21"></li>
-    </ol>
-    <div class="card panels" style="--mt:10.55">
-      <figure><img src="assets/img/heat-tube.webp" width="619" height="279" alt="Transformation tube"></figure>
-      <div class="arrow-cell"><img src="assets/img/arrow.webp" alt="into" width="113" height="128"></div>
-      <figure><img src="assets/img/heat-bath.webp" width="623" height="279" alt="Warm water bath at 42°C / 108°F"></figure>
-    </div>
-    <h3 class="h3" style="--mt:14.35">3.5 Recovery</h3>
-    <ol class="steps" start="22" style="--mt:5.75">
-      <li><img class="badge" src="assets/img/badge-22.webp" alt="22" width="74" height="74"><label for="s22">Add 900µL of LB broth (from one of the pre-filled LB tubes) to your<br class="b"> transformation tube.</label><input class="check" type="checkbox" id="s22"></li>
-      <li style="--gap:9"><img class="badge" src="assets/img/badge-23.webp" alt="23" width="74" height="74"><label for="s23">Incubate at 37°C for 1–2 hours, or at room temperature for at least<br class="b"> 4 hours. This lets the bacteria recover and start expressing GFP.</label><input class="check" type="checkbox" id="s23"></li>
-    </ol>
-  </section>
+<section class="page" id="page-13" aria-label="Steps 3.3 to 3.5">
+<img class="art" src="pages/p13.svg" width="378" height="522" alt="" loading="lazy" decoding="async">
+<svg class="text-layer" viewBox="0 0 378.007 522.007" aria-hidden="false">
+<text x="347.783 353.407 356.557" y="28.75" font-size="10.5">13 </text>
+<text role="heading" aria-level="3" x="18.749 28.15 30.888 40.553 44.188 54.784 64.272 67.749 77.414 81.049 84.754 94.225 103.081 112.535 122.164 131.143 137.415 141.049 150.538 155.938" y="56" font-size="18">3.3 Cold Incubation </text>
+<text x="45.749 51.405 53.22 57.874 62.528 67.182 69.507 72.166 76.987 81.641 83.966 86.624 91.445 96.6 101.254 103.579 105.394 110.215 112.54 115.199 120.02 124.674 126.999 129.482 132.299 134.114 139.269 144.257 148.911 151.236 153.385 158.206 161.63 167.945 170.094 172.419 174.902 179.89 182.707 185.032 189.853 194.674 196.999 204.491 206.307 211.128 215.949 218.607 223.261 227.581 230.281" y="72.5" font-size="9">Place the tube in the fridge (4°C) for 30 minutes. </text>
+<text x="45.749 52.064 58.722 61.047 67.362 74.02 79.175 81.5 86.655 92.812 98.301 103.79 109.278 114.767 117.092 119.417 123.57 126.27" y="82.5" font-size="9">Do NOT freeze it. </text>
+<text x="26.403 29.039 31.739" y="78.125" font-size="9">19 </text>
+<text role="heading" aria-level="3" x="18.749 28.15 30.976 40.219 43.854 55.223 64.554 73.533 79.804 83.439 93.719 103.225 112.714 121.57 126.97" y="199.25" font-size="18">3.4 Heat Shock </text>
+<text x="45.749 52.064 56.718 61.372 64.031 66.356 70.676 75.497 80.485 85.139 89.626 91.951 94.61 99.431 104.084 106.409 109.068 113.889 119.044 123.698 126.023 127.838 132.659 134.984 141.624 146.278 149.095 156.588 158.913 165.553 170.207 172.866 177.52 180.337 182.662 187.316 189.975 192.3 197.121 201.942 205.365 211.681 214.005 216.155 220.975 225.796 230.617 234.041 239.029 241.178 243.503 248.658 255.316 261.473 263.798 269.286 274.942 280.765 287.081 292.235 296.221 298.921" y="215.75" font-size="9">Heat shock the tube in warm water at 42°C (108°F) for exactly </text>
+<text x="45.749 50.57 55.391 57.716 63.372 68.861 75.176 81.834 88.149 94.464 100.12 102.445 104.77 109.424 114.412 119.233 121.557 126.211 130.865 135.686 138.011 140.67 145.324 149.644 152.303 154.628 157.287 161.941 169.434 174.589 179.243 182.06 186.714 189.372 194.193 196.852 201.506 203.831 210.472 212.287 214.946 219.766 222.091 226.411 231.399 236.22 239.037 241.362 248.003 250.82 252.635 256.955 259.614 261.939 264.263 266.413 269.071 271.396 275.716 280.537 285.525 290.346 292.161 294.861" y="225.75" font-size="9">30 seconds. You can test temperature with your wrist. It should </text>
+<text x="45.749 48.232 52.886 57.54 59.355 61.68 66.501 71.489 74.148 76.473 81.628 86.449 89.108 91.432 96.253 101.241 103.9 106.225 111.38 116.034 117.849 122.67 125.153 129.974 131.789 134.489" y="235.75" font-size="9">feel hot but not painful. </text>
+<text x="24.028 28.17 30.87" y="221.375" font-size="9">20 </text>
+<text x="45.749 47.898 55.391 62.884 67.538 72.693 74.508 79.162 81.821 86.475 88.29 92.61 94.935 102.428 107.416 111.736 116.39 118.714 121.373 126.194 130.848 133.173 135.832 140.653 145.808 150.462 152.787 155.446 160.434 162.759 165.417 170.405 175.393 182.886 185.211 187.87 192.524 200.017 205.172 209.826 212.643 217.297 219.956 224.777 227.435 232.089 234.789" y="259.75" font-size="9">Immediately move the tube to room temperature. </text>
+<text x="25.653 29.795 32.495" y="259.875" font-size="9">21 </text>
+<text x="264.541 267.905 271.28 274.49 279.119 282.494 283.993 287.991 291.366 294.576 296.826" y="341.25" font-size="7.5">42°C/108°F </text>
+<text role="heading" aria-level="3" x="18.749 28.15 30.888 40.606 44.24 55.206 64.536 73.392 82.705 90.471 99.801 105.968 111.368" y="379.25" font-size="18">3.5 Recovery </text>
+<text x="45.749 51.405 56.56 61.715 64.04 68.861 73.682 78.503 83.324 88.145 90.47 95.457 97.941 100.265 105.086 111.068 113.392 118.547 121.206 126.194 128.853 133.674 135.999 138.148 140.631 143.29 148.278 155.771 158.096 163.084 167.905 172.559 174.884 179.872 182.355 184.679 187.338 192.159 196.813 199.138 204.293 206.952 211.606 214.924 219.586 219.402 221.217 223.033 227.686 232.841 235.166 239.987 245.968 248.293 250.952 255.773 260.928 265.582 269.902 272.051 274.376 277.035 282.023 284.348 288.668 293.656 298.477 301.177" y="395.75" font-size="9">Add 900µL of LB broth (from one of the pre-filled LB tubes) to your </text>
+<text x="45.749 48.408 51.225 55.879 60.7 65.02 67.503 72.491 75.308 82.801 87.455 90.114 91.929 96.917 101.738 104.063 106.722 111.543 116.698 121.351 124.051" y="405.75" font-size="9">transformation tube. </text>
+<text x="25.151 29.293 31.993" y="401.375" font-size="9">22 </text>
+<text x="45.749 47.898 52.719 57.373 62.194 67.349 72.003 74.662 79.316 81.641 86.295 88.954 91.278 96.099 100.92 104.344 110.659 112.984 115.467 120.455 123.272 125.597 130.418 134.738 139.559 141.884 146.705 151.693 156.514 159.331 163.651 165.976 168.301 173.289 176.106 178.43 183.084 185.743 188.068 190.727 195.715 200.703 208.196 210.521 213.18 217.834 225.326 230.481 235.135 237.952 242.606 245.265 250.086 252.745 257.399 259.724 262.207 267.195 270.012 272.337 276.991 279.65 281.975 283.79 288.444 293.098 297.418 300.118" y="424.75" font-size="9">Incubate at 37°C for 1–2 hours, or at room temperature for at least </text>
+<text x="45.749 50.57 52.895 57.716 62.704 67.525 70.342 74.662 76.987 79.312 84.3 89.121 90.936 95.256 97.581 99.396 104.05 106.709 111.029 113.353 116.012 120.833 125.487 127.812 132.967 137.621 142.275 144.934 149.588 152.405 154.22 158.874 161.199 163.858 168.512 173.166 178.154 182.474 187.128 189.945 192.27 196.924 201.745 206.9 209.225 213.545 216.203 220.857 223.674 226.333 228.658 233.312 237.79 242.945 245.604 250.258 254.578 258.898 260.713 265.534 270.522 272.847 279.496 284.484 288.532 291.232" y="434.75" font-size="9">4 hours. This lets the bacteria recover and start expressing GFP. </text>
+<text x="25.151 29.293 31.993" y="429.875" font-size="9">23 </text>
+</svg>
+<input class="check" type="checkbox" id="s19" aria-label="Step 19 done" style="left:91.8628%;top:13.2182%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s20" aria-label="Step 20 done" style="left:91.8628%;top:41.6182%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s21" aria-label="Step 21 done" style="left:91.8628%;top:48.0357%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s22" aria-label="Step 22 done" style="left:91.8628%;top:75.1426%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s23" aria-label="Step 23 done" style="left:91.8628%;top:80.6023%;width:3.1745%;height:2.2988%">
+</section>
 
-  <!-- 14 Plate the bacteria -->
-  <section class="sheet" style="--pt:39.45" aria-labelledby="s36-h">
-    <p class="page-num">14</p>
-    <h3 class="h3" id="s36-h">3.6 Plate the Bacteria</h3>
-    <ol class="steps" start="24" style="--mt:6.05">
-      <li><img class="badge" src="assets/img/badge-24.webp" alt="24" width="74" height="73"><label for="s24">Take an LB + Kanamycin plate out of the fridge and let it warm<br class="b"> to room temperature.</label><input class="check" type="checkbox" id="s24"></li>
-      <li><img class="badge" src="assets/img/badge-25.webp" alt="25" width="74" height="73"><label for="s25">Pipette a few drops (~100µL) of your transformation mixture onto<br class="b"> the antibiotic plate.</label><input class="check" type="checkbox" id="s25"></li>
-      <li><img class="badge" src="assets/img/badge-26.webp" alt="26" width="74" height="73"><label for="s26">Use an inoculation loop or spreader to gently distribute the bacteria<br class="b"> across the plate.</label><input class="check" type="checkbox" id="s26"></li>
-      <li><img class="badge" src="assets/img/badge-27.webp" alt="27" width="74" height="73"><label for="s27">Let the plate sit closed for 10 minutes so the liquid absorbs.</label><input class="check" type="checkbox" id="s27"></li>
-      <li><img class="badge" src="assets/img/badge-28.webp" alt="28" width="74" height="73"><label for="s28">Flip the plate upside down, put the lid on, and incubate at 37°C<br class="b"> for 16–24 hours, or at room temperature for 24–48 hours.</label><input class="check" type="checkbox" id="s28"></li>
-    </ol>
-    <div class="card panels" style="--mt:12.2">
-      <figure style="--band:16.5;--cb:6.3"><img src="assets/img/plate-spread.webp" width="619" height="354" alt="Petri plate with bacteria spread evenly"><figcaption class="caption">Petri plate with bacteria spread evenly</figcaption></figure>
-      <div class="arrow-cell"><img src="assets/img/arrow.webp" alt="then" width="113" height="128"></div>
-      <figure style="--band:16.5;--cb:6.3"><img src="assets/img/plate-flip.webp" width="623" height="354" alt="The plate flipped upside down"><figcaption class="caption">Flip upside-down for incubation</figcaption></figure>
-    </div>
-  </section>
+<section class="page" id="page-14" aria-label="Step 3.6: Plate the Bacteria">
+<img class="art" src="pages/p14.svg" width="378" height="522" alt="" loading="lazy" decoding="async">
+<svg class="text-layer" viewBox="0 0 378.007 522.007" aria-hidden="false">
+<text x="347.785 353.409 356.559" y="28.75" font-size="10.5">14 </text>
+<text role="heading" aria-level="3" x="18.744 28.144 30.883 40.899 44.534 54.972 58.449 67.428 73.436 82.766 86.401 92.673 102.179 111.51 115.144 126.022 135.176 144.032 150.04 159.371 165.537 169.172 174.572" y="56" font-size="18">3.6 Plate the Bacteria </text>
+<text x="45.751 49.737 54.391 58.878 63.532 65.857 70.511 75.332 77.657 82.478 88.459 90.784 96 98.325 104.148 108.802 113.623 118.277 125.77 130.09 134.744 136.559 141.38 143.705 148.86 150.675 155.329 157.988 162.642 164.967 169.954 174.775 177.434 179.759 184.747 187.23 189.555 192.214 197.035 201.689 204.014 206.497 209.314 211.129 216.284 221.272 225.926 228.251 232.905 237.726 242.881 245.206 247.021 251.675 254.334 256.659 258.474 261.133 263.457 270.098 274.752 277.569 280.269" y="73" font-size="9">Take an LB + Kanamycin plate out of the fridge and let it warm </text>
+<text x="45.751 48.41 53.398 55.723 58.382 63.37 68.357 75.85 78.175 80.834 85.488 92.981 98.136 102.79 105.607 110.261 112.92 117.741 120.4 125.054 127.754" y="83" font-size="9">to room temperature. </text>
+<text x="24.405 27.799 30.499" y="78.125" font-size="9">24 </text>
+<text x="45.751 51.407 53.222 58.377 63.031 65.69 68.349 73.003 75.328 79.982 82.306 84.79 89.444 96.084 98.409 103.564 106.223 111.211 116.365 120.685 123.01 125.159 130.376 135.197 140.018 144.839 149.66 154.481 156.63 158.955 163.943 166.426 168.751 173.071 178.059 182.88 185.697 188.022 190.68 193.498 198.152 202.973 207.293 209.776 214.764 217.581 225.074 229.728 232.386 234.201 239.189 244.01 246.335 253.828 255.643 260.122 262.78 267.601 270.26 274.914 277.239 282.227 287.048 289.707 292.407" y="101.5" font-size="9">Pipette a few drops (~100µL) of your transformation mixture onto </text>
+<text x="45.751 48.41 53.231 57.885 60.21 64.864 69.685 72.344 74.159 79.314 81.129 86.117 88.776 90.591 95.245 97.57 102.724 104.54 109.194 111.852 116.506 119.206" y="111.5" font-size="9">the antibiotic plate. </text>
+<text x="25.528 29.67 32.37" y="106.625" font-size="9">25 </text>
+<text x="45.751 52.066 56.386 61.04 63.365 68.019 72.84 75.165 76.98 81.801 86.789 91.443 96.264 98.079 102.733 105.392 107.207 112.195 117.016 119.341 121.156 126.144 131.132 136.287 138.612 143.6 146.417 148.742 153.062 158.217 160.875 165.529 170.183 175.338 179.992 182.809 185.134 187.793 192.781 195.106 200.094 204.748 209.569 212.228 214.043 218.363 220.688 225.843 227.658 231.978 234.637 237.454 239.269 244.424 249.245 251.904 256.558 258.883 261.541 266.362 271.016 273.341 278.496 283.15 287.804 290.463 295.117 297.934 299.749 302.449" y="130" font-size="9">Use an inoculation loop or spreader to gently distribute the bacteria </text>
+<text x="45.751 50.405 55.059 57.718 62.706 67.026 71.346 73.671 76.33 81.151 85.804 88.129 93.284 95.099 99.753 102.412 107.066 109.766" y="140" font-size="9">across the plate. </text>
+<text x="25.528 29.67 32.37" y="135.125" font-size="9">26 </text>
+<text x="45.751 50.572 55.226 57.885 60.21 62.869 67.69 72.344 74.668 79.823 81.638 86.292 88.951 93.605 95.93 100.25 102.065 104.724 107.049 111.703 113.518 118.506 122.826 127.48 132.635 134.96 137.443 142.431 145.248 147.573 152.394 157.215 159.54 167.033 168.848 173.669 178.49 181.149 185.803 190.123 192.447 196.767 201.755 204.08 206.739 211.56 216.214 218.539 220.354 222.169 227.324 232.145 233.96 239.115 241.44 246.094 251.249 255.569 260.557 263.374 268.529 272.849 275.549" y="163.5" font-size="9">Let the plate sit closed for 10 minutes so the liquid absorbs. </text>
+<text x="24.405 28.546 31.246" y="163.625" font-size="9">27 </text>
+<text x="45.751 50.739 52.554 54.369 59.524 61.849 64.508 69.329 73.983 76.308 81.463 83.278 87.932 90.591 95.245 97.57 102.391 107.545 111.865 113.681 118.836 123.49 125.814 130.969 135.957 142.598 147.419 149.744 152.068 157.223 162.044 164.703 167.028 169.687 174.508 179.162 181.487 183.302 185.117 190.272 192.597 197.585 202.406 204.731 207.056 211.71 216.531 221.686 224.01 225.826 230.646 235.3 240.121 245.276 249.93 252.589 257.243 259.568 264.222 266.881 269.206 274.027 278.848 282.271 284.971" y="187" font-size="9">Flip the plate upside down, put the lid on, and incubate at 37°C </text>
+<text x="45.751 48.234 53.222 56.039 58.364 63.185 65.885" y="197" font-size="9">for 16 </text>
+<text x="224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 224.388 228.708 233.529 238.35 240.675 245.496 250.484 255.305 258.122 262.442 265.142" y="197" font-size="9">–24 hours, or at room temperature for 24–48 hours. </text>
+<text x="25.528 29.67 32.37" y="192.125" font-size="9">28 </text>
+<text x="24.751 29.464 33.343 35.558 37.906 39.418 41.356 45.652 47.164 51.043 53.258 57.137 59.074 64.608 66.12 68.336 72.353 74.291 78.587 82.465 86.343 88.559 92.437 94.785 96.297 100.176 102.113 105.713 110.009 112.225 116.103 119.981 124.277 126.215 126.215 130.092 133.97 137.988 139.5 141.75" y="309.25" font-size="7.5">Petri plate with bacteria spread evenly </text>
+<text x="209.626 213.783 215.295 216.808 221.104 223.041 227.059 231.354 234.954 236.467 240.763 240.763 244.638 248.934 253.09 258.624 262.641 264.579 266.648 270.805 273.152 275.089 276.602 280.62 284.498 288.515 292.811 296.689 298.905 300.418 304.574 306.824" y="309.25" font-size="7.5">Flip upside-down for incubation </text>
+</svg>
+<input class="check" type="checkbox" id="s24" aria-label="Step 24 done" style="left:91.8634%;top:13.2182%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s25" aria-label="Step 25 done" style="left:91.8634%;top:18.6779%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s26" aria-label="Step 26 done" style="left:91.8634%;top:24.1376%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s27" aria-label="Step 27 done" style="left:91.8634%;top:29.5973%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s28" aria-label="Step 28 done" style="left:91.8634%;top:35.0570%;width:3.1745%;height:2.2988%">
+</section>
 
-  <!-- 15 Step 4 -->
-  <section class="sheet" style="--pt:41" id="step-4" aria-labelledby="s4-h">
-    <p class="page-num">15</p>
-    <p class="meta"><span>STEP: 4</span><span>TIME: 1-3d</span></p>
-    <h2 class="h2" id="s4-h" style="--mt:4.5">Check Your Results</h2>
-    <p style="--mt:7.35">After incubation, look for white or cream-colored dots on<br class="b"> the plate. These are bacterial colonies. Only transformed<br class="b"> bacteria survive on the antibiotic plate.</p>
-    <ol class="steps" start="29" style="--mt:3.35">
-      <li><img class="badge" src="assets/img/badge-29.webp" alt="29" width="74" height="74"><label for="s29">To check for fluorescence, hold the orange filter up to your eyes.</label><input class="check" type="checkbox" id="s29"></li>
-      <li><img class="badge" src="assets/img/badge-30.webp" alt="30" width="74" height="74"><label for="s30">Shine the blue LED light onto the plate.</label><input class="check" type="checkbox" id="s30"></li>
-      <li><img class="badge" src="assets/img/badge-31.webp" alt="31" width="74" height="74"><label for="s31">Transformed colonies will glow bright green through the filter.<br class="b"> Non-transformed colonies won't survive on the antibiotic plate.</label><input class="check" type="checkbox" id="s31"></li>
-    </ol>
-    <div class="card panels" style="--mt:12.3">
-      <figure style="--band:16.2;--cb:6.2"><img src="assets/img/result-white.webp" width="619" height="355" alt="Petri plate with white colonies under the blue LED light"><figcaption class="caption">Petri plate with white colonies visible</figcaption></figure>
-      <div class="arrow-cell"><img src="assets/img/arrow.webp" alt="then" width="113" height="128"></div>
-      <figure style="--band:16.2;--cb:6.2"><img src="assets/img/result-blue.webp" width="623" height="355" alt="The same plate glowing under blue light"><figcaption class="caption">Petri plate under blue light</figcaption></figure>
-    </div>
-    <h2 class="callout callout--ok" style="--mt:26.65">Success:</h2>
-    <ul class="card icon-list" style="--mt:4.85">
-      <li><img src="assets/img/success-1.webp" alt="" width="80" height="80"><span><strong>Bright green glowing dots visible through<br class="b"> the orange filter.</strong></span></li>
-      <li><img src="assets/img/success-2.webp" alt="" width="80" height="80"><span><strong>If no colonies appear:</strong><br>The agar plate may have been too hot when<br class="b"> bacteria were plated. Try again.</span></li>
-      <li><img src="assets/img/success-3.webp" alt="" width="80" height="80"><span><strong>If colonies appear but don't glow:</strong><br>The plasmid may not have been taken up.<br class="b"> Retry with fresh bacteria.</span></li>
-    </ul>
-  </section>
+<section class="page" id="page-15" aria-label="Step 4: Check Your Results">
+<img class="art" src="pages/p15.svg" width="378" height="522" alt="" loading="lazy" decoding="async">
+<svg class="text-layer" viewBox="0 0 378.007 522.007" aria-hidden="false">
+<text x="18.749 24.001 29.006 34.205 39.764 41.588 43.773 48.912 55.749 60.755 62.965 69.922 75.121 76.945 79.129 82.315 85.932 91.105 93.805" y="50" font-size="9">Step: 4 TIME: 1-3d </text>
+<text role="heading" aria-level="2" x="18.749 32.877 45.552 57.993 69.801 81.515 86.361 97.559 110.211 122.816 131.038 135.884 150.504 162.945 174.214 186.818 191.454 199.699 206.899" y="77" font-size="24">Check Your Results </text>
+<text x="18.749 25.348 28.245 31.347 36.776 40.063 42.775 44.893 50.517 55.947 61.571 67.586 73.015 76.117 78.235 84.054 89.679 92.391 95.103 97.221 103.04 108.86 114.094 116.807 119.704 125.523 128.81 131.522 139.269 144.893 147.011 150.113 155.543 158.255 164.074 167.361 170.073 175.503 178.605 184.035 189.464 198.206 202.077 207.507 213.326 215.444 221.263 224.365 229.794 235.809 238.521 244.535 250.354 253.456 258.496 261.209 267.028 270.178" y="96" font-size="10.5">After incubation, look for white or cream-colored dots on </text>
+<text x="18.749 21.851 27.476 32.905 35.618 41.632 43.749 49.179 52.281 57.711 60.423 63.135 68.955 74.579 80.009 85.049 90.478 93.191 98.62 101.722 107.152 109.864 115.879 121.308 126.738 129.84 135.269 138.556 140.674 146.103 148.221 150.933 156.363 162.182 164.3 170.119 175.744 177.861 183.291 188.331 191.043 193.756 201.523 207.148 209.265 214.305 217.018 220.12 223.406 228.836 234.46 239.5 242.397 248.217 251.503 260.245 265.675 268.825" y="108" font-size="10.5">the plate. These are bacterial colonies. Only transformed </text>
+<text x="18.749 24.763 30.193 35.622 38.724 44.154 47.441 49.558 54.988 57.7 62.74 68.365 71.651 76.691 78.809 83.849 89.279 91.991 97.81 103.435 106.147 109.249 114.874 120.303 123.016 128.445 134.07 137.172 139.289 145.304 147.421 153.24 156.342 158.46 163.89 166.602 172.616 174.734 180.164 183.266 188.695 191.845" y="120" font-size="10.5">bacteria survive on the antibiotic plate. </text>
+<text x="45.749 49.735 54.723 57.048 61.702 66.523 71.177 75.831 80.318 82.643 85.126 90.114 92.931 95.256 99.918 99.734 104.555 109.543 112.202 116.856 121.176 125.83 130.484 135.305 139.959 144.613 146.938 149.262 154.083 159.071 160.886 166.041 168.366 171.025 175.846 180.5 182.825 187.813 190.63 195.284 200.105 205.093 209.747 212.072 216.734 216.55 218.365 221.024 225.678 228.495 230.82 235.641 240.796 243.121 245.78 250.768 253.092 257.412 262.4 267.221 270.038 272.363 277.017 281.337 285.991 290.311 293.011" y="138.75" font-size="9">To check for fluorescence, hold the orange filter up to your eyes. </text>
+<text x="25.526 29.668 32.368" y="138.875" font-size="9">29 </text>
+<text x="45.749 51.405 56.226 58.041 62.862 67.516 69.841 72.5 77.321 81.975 84.3 89.455 91.27 96.091 100.745 103.07 107.891 113.212 119.369 121.694 123.509 125.324 130.312 135.133 137.792 140.117 145.105 149.926 152.585 157.573 159.898 162.557 167.378 172.032 174.357 179.512 181.327 185.981 188.639 193.293 195.993" y="167.25" font-size="9">Shine the blue LED light onto the plate. </text>
+<text x="24.403 28.545 31.245" y="167.375" font-size="9">30 </text>
+<text x="45.749 49.911 52.728 57.382 62.203 66.523 69.006 73.994 76.811 84.304 88.958 94.113 96.438 101.092 106.08 107.895 112.883 117.704 119.519 124.173 128.493 130.818 137.458 139.273 141.088 142.903 145.228 150.216 152.031 157.019 163.66 165.984 171.139 173.956 175.772 180.76 185.581 188.239 190.564 195.552 198.211 202.865 207.519 212.34 214.665 217.324 222.145 224.804 229.792 234.613 239.601 244.422 246.746 249.405 254.226 258.88 261.205 265.867 265.683 267.498 270.157 274.811 276.802 279.502" y="190.75" font-size="9">Transformed colonies will glow bright green through the filter. </text>
+<text x="45.749 52.064 57.052 61.873 65.191 67.85 70.667 75.321 80.142 84.462 86.945 91.933 94.75 102.243 106.897 112.052 114.377 119.031 124.019 125.834 130.822 135.643 137.458 142.112 146.432 148.757 155.397 160.385 165.206 167.531 170.19 172.515 176.835 181.656 184.473 188.793 190.608 194.928 199.582 201.907 206.895 211.716 214.041 216.699 221.52 226.174 228.499 233.153 237.974 240.633 242.448 247.603 249.418 254.406 257.065 258.88 263.534 265.859 271.014 272.829 277.483 280.142 284.796 287.496" y="200.75" font-size="9">Non-transformed colonies won&#x27;t survive on the antibiotic plate. </text>
+<text x="26.028 30.17 32.87" y="195.875" font-size="9">31 </text>
+<text x="19.6 24.602 28.481 30.696 33.044 34.557 36.494 40.79 42.302 46.181 48.396 52.275 54.212 59.746 61.258 63.474 67.491 69.429 74.962 78.98 80.493 82.708 86.587 88.524 92.402 96.559 98.072 102.228 106.246 107.758 111.637 115.237 117.174 120.774 122.287 125.887 127.399 131.695 133.208 135.458" y="313" font-size="7.5">Petri plate with white colonies visible </text>
+<text x="204.475 209.477 213.356 215.571 217.919 219.432 221.369 225.665 227.177 231.056 233.271 237.15 239.087 243.105 247.122 251.418 255.296 257.644 259.581 263.877 265.389 269.407 273.285 275.223 276.735 278.248 282.405 286.422 288.672" y="313" font-size="7.5">Petri plate under blue light </text>
+<text role="heading" aria-level="3" x="18.777 29.057 38.51 47.366 56.222 65.552 74.004 82.455 87.855" y="364.25" font-size="18">Success: </text>
+<text x="49.527 56.71 60.191 62.514 68.528 74.347 77.634 80.346 86.361 89.657 95.282 100.906 106.726 109.438 115.452 117.775 123.789 131.751 134.074 139.893 145.907 148.62 154.829 160.843 164.129 169.364 172.077 177.311 179.634 184.869 187.192 193.401 195.723 201.348 204.06 207.347 213.166 216.463 222.477 228.296 234.31 237.46" y="389" font-size="10.5">Bright green glowing dots visible through </text>
+<text x="49.527 52.813 58.633 64.257 66.97 72.984 76.465 82.09 87.909 93.923 99.547 102.26 108.098 107.884 110.207 113.494 119.118 121.636 124.786" y="401" font-size="10.5">the orange filter. </text>
+<text x="49.527 52.239 55.341 58.054 63.873 69.887 72.599 78.224 84.238 86.561 92.575 98.394 100.717 106.341 111.576 114.288 119.913 126.122 132.331 137.955 143.58 147.061 150.211" y="425" font-size="10.5">If no colonies appear: </text>
+<text x="49.527 55.346 60.971 66.4 69.113 74.542 80.362 85.791 89.078 91.79 97.804 99.922 105.352 108.454 113.883 116.596 125.337 130.767 135.807 138.519 144.144 149.573 154.613 160.043 162.755 168.77 174.199 179.629 185.253 187.966 191.068 196.887 202.706 205.419 211.043 216.862 219.964 222.677 230.424 236.048 241.478 244.628" y="437" font-size="10.5">The agar plate may have been too hot when </text>
+<text x="49.527 55.541 60.971 66.4 69.502 74.932 78.219 80.336 85.766 88.478 96.225 101.655 104.757 110.187 112.899 118.913 121.031 126.46 129.562 134.992 141.006 143.718 146.431 151.286 154.573 159.613 162.325 167.755 173.574 179.004 181.121 186.746 189.896" y="449" font-size="10.5">bacteria were plated. Try again. </text>
+<text x="49.527 52.239 55.341 58.054 63.678 69.692 72.015 78.029 83.848 86.171 91.796 97.03 99.743 105.367 111.576 117.785 123.41 129.034 132.515 135.228 141.437 147.256 150.543 153.255 159.464 165.478 171.297 174.01 177.296 180.009 186.023 188.345 194.36 202.322 205.472" y="474" font-size="10.5">If colonies appear but don&#x27;t glow: </text>
+<text x="49.527 55.346 60.971 66.4 69.113 75.127 77.244 82.674 87.714 96.456 98.573 104.587 107.3 116.041 121.471 126.511 129.223 134.848 140.667 143.769 146.482 152.106 157.536 162.576 168.005 170.718 176.732 182.162 187.591 193.216 195.928 199.03 204.46 209.695 215.124 220.749 223.461 229.085 235.1 238.25" y="486" font-size="10.5">The plasmid may not have been taken up. </text>
+<text x="49.527 56.505 61.934 65.037 68.323 73.363 76.075 83.822 85.94 89.042 94.667 97.379 100.276 103.378 108.808 113.848 119.472 122.184 128.199 133.628 139.058 142.16 147.589 150.876 152.994 158.423 161.573" y="498" font-size="10.5">Retry with fresh bacteria. </text>
+</svg>
+<input class="check" type="checkbox" id="s29" aria-label="Step 29 done" style="left:91.8628%;top:24.8560%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s30" aria-label="Step 30 done" style="left:91.8628%;top:30.3157%;width:3.1745%;height:2.2988%">
+<input class="check" type="checkbox" id="s31" aria-label="Step 31 done" style="left:91.8628%;top:35.7753%;width:3.1745%;height:2.2988%">
+</section>
 
-  <!-- 16 Record -->
-  <section class="sheet" aria-labelledby="record-h">
-    <p class="page-num">16</p>
-    <h2 class="h2" id="record-h"><label for="record">Record Your Results Here</label></h2>
-    <div class="card record" style="--mt:12.7">
-      <textarea id="record" spellcheck="true" aria-describedby="record-h"></textarea>
-    </div>
-  </section>
+<section class="page" id="page-16" aria-label="Record Your Results Here">
+<img class="art" src="pages/p16.svg" width="378" height="522" alt="" loading="lazy" decoding="async">
+<svg class="text-layer" viewBox="0 0 378.007 522.007" aria-hidden="false">
+<text role="heading" aria-level="2" x="18.751 33.851 46.772 59.06 72.191 80.284 93.65 98.976 110.654 123.786 136.871 145.573 150.899 165.999 178.92 190.669 203.753 208.869 217.595 229.343 234.67 250.309 263.23 271.322 278.522" y="61" font-size="24">Record Your Results Here </text>
+</svg>
+<textarea id="record" class="notes" aria-label="Record your results here" spellcheck="true" style="left:6.7459%;top:15.4404%;width:86.5063%;height:60.3440%"></textarea>
+</section>
 
-  <!-- Back cover -->
-  <footer class="sheet back">
-    <img class="odin-cubes" src="assets/img/odin-cubes.webp" alt="The ODIN" width="186" height="206">
-    <p class="h1">This Is Just<br><span class="muted">the Beginning</span></p>
-    <p class="lede">Explore more experiments at <a href="https://www.the-odin.com" style="text-decoration:none">the-odin.com</a></p>
-    <a class="qr-shop" href="https://www.the-odin.com"><img src="assets/img/qr-shop.webp" width="353" height="354" alt="QR code linking to the-odin.com"></a>
-    <div class="help">
-      <p class="h3">Need Help?</p>
-      <p>Contact us at <a href="mailto:odin@the-odin.com" style="text-decoration:none">odin@the-odin.com</a></p>
-    </div>
-  </footer>
+<section class="page" id="page-17" aria-label="This Is Just the Beginning">
+<img class="art" src="pages/p17.svg" width="378" height="522" alt="" loading="lazy" decoding="async">
+<svg class="text-layer" viewBox="0 0 378.007 522.007" aria-hidden="false">
+<text role="heading" aria-level="1" x="104.635 123.296 142.309 149.578 166.481 173.751 181.162 198.065 205.334 223.855 242.762 259.665 270.465" y="150.75" font-size="36">This Is Just </text>
+<text role="heading" aria-level="1" x="84.459 97.003 116.015 134.676 141.946 163.701 182.361 201.69 208.96 227.902 246.844 254.114 273.056 283.856" y="179.75" font-size="36">the Beginning </text>
+<text x="93.203 99.412 104.637 110.651 112.768 118.588 121.69 127.119 129.832 138.573 144.393 147.495 152.924 155.637 161.066 166.291 172.305 177.735 181.021 183.139 191.881 197.31 202.935 206.037 211.077 213.789 219.219 222.321 225.033 228.135 233.76 239.189 243.06 248.88 254.894 257.011 262.636 265.348 270.778 276.597 279.747" y="203.75" font-size="10.5">Explore more experiments at the-odin.com </text>
+<text role="heading" aria-level="3" x="153.156 162.616 170.392 178.167 186.221 189.25 198.724 206.5 209.397 217.451 221.951" y="484.375" font-size="15">Need Help? </text>
+<text x="113.632 121 126.819 132.444 135.546 140.975 146.405 149.507 152.22 157.844 162.884 165.596 171.026 174.128 176.84 182.66 188.674 190.791 196.416 204.604 207.706 213.33 218.76 222.631 228.45 234.464 236.582 242.207 244.919 250.349 256.168 259.318" y="499.375" font-size="10.5">Contact us at odin@the-odin.com </text>
+</svg>
+<a class="hit" href="https://www.the-odin.com" target="_blank" rel="noopener" aria-label="the-odin.com" style="left:38.2003%;top:41.3787%;width:23.8091%;height:17.2411%"></a>
+<a class="hit" href="https://www.the-odin.com" target="_blank" rel="noopener" aria-label="the-odin.com" style="left:59.7872%;top:36.9727%;width:15.6082%;height:2.4904%"></a>
+<a class="hit" href="mailto:odin@the-odin.com" aria-label="Email odin@the-odin.com" style="left:47.3536%;top:93.5811%;width:22.7509%;height:2.5862%"></a>
+</section>
 
 </main>
 <script src="assets/app.js"></script>
