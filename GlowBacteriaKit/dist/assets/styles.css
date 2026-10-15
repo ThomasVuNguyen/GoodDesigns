@@ -15,25 +15,42 @@ html {
 
 body {
   margin: 0;
-  background: #fff;
+  background: #eceef0;
   color: #303030;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+/* Pages sit on a soft backdrop with a gap between them, like a document viewer. */
 .document {
+  --gutter: 32px;
   container-type: inline-size;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--gutter);
+  padding: var(--gutter) 0 calc(var(--gutter) * 2);
 }
 
 .page {
   position: relative;
-  --w: min(100cqw, 680px);
+  --w: round(down, min(100cqw - 2 * var(--gutter), 680px), 1px);
   width: var(--w);
   /* Whole-pixel page heights, so fractional heights don't add up down the document. */
   height: round(calc(var(--w) * 522.007 / 378.007), 1px);
   container-type: inline-size;
+  flex: none;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06), 0 6px 20px rgba(16, 24, 40, 0.08);
+  scroll-margin-top: var(--gutter);
+}
+
+@media (max-width: 520px) {
+  .document {
+    --gutter: 12px;
+  }
+  .page {
+    box-shadow: 0 1px 2px rgba(16, 24, 40, 0.08), 0 3px 10px rgba(16, 24, 40, 0.08);
+  }
 }
 
 .page .art,
