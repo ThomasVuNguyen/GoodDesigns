@@ -29,4 +29,18 @@
       save();
     });
   }
+
+  // When the pages fill the screen, hide the home button while scrolling down
+  // so it never sits over the page for long; it returns on any scroll up.
+  const home = document.querySelector('.home');
+  const page = document.querySelector('.page');
+  if (home && page) {
+    let lastY = scrollY;
+    addEventListener('scroll', () => {
+      const y = scrollY;
+      const crowded = page.getBoundingClientRect().left < home.getBoundingClientRect().right + 12;
+      home.classList.toggle('is-hidden', crowded && y > lastY && y > 60);
+      lastY = y;
+    }, { passive: true });
+  }
 })();

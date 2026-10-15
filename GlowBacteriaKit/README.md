@@ -37,6 +37,7 @@ The PDF has no usable fonts. Its text is drawn as vector outlines, and its only 
   - links over both QR codes (decoded: the YouTube agar-plate video and the-odin.com), "the-odin.com" and the email address.
 
   Ticks and notes save to `localStorage` (key `glow-kit-protocol:v1`).
+- **Home button**: fixed top-left, linking to the GoodDesigns gallery at `/` (with `target="_top"`, so it also works from inside the gallery's viewer). On narrow screens, where the pages fill the width, it hides while scrolling down and returns on scroll up. When served on its own from `dist/`, `/` is this page.
 - **Layout**: pages sit on a light grey backdrop with a soft shadow and a gap between them (32 px on desktop, 12 px on phones), like a document viewer. They are 680 px wide on desktop and scale to the screen width on phones. Each page height is snapped to a whole pixel, so fractional heights don't add up and shift later pages.
 
 ## Files
