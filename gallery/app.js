@@ -15,7 +15,7 @@
     ? `https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1&rel=0&playsinline=1`
     : `https://platform.twitter.com/embed/Tweet.html?id=${v.id}&dnt=true`;
 
-  $('n-designs').textContent = sites.length;
+  $('n-sites').textContent = sites.length;
   $('n-videos').textContent = videos.length;
 
   $('grid').innerHTML = sites.map((s) => `
