@@ -26,6 +26,7 @@ A personal collection of high-fidelity, self-contained recreations of websites a
 - [Gumroad](./Gumroad/) — responsive local capture of `gumroad.com`, with its coin-parallax hero, Lottie mascot, category marquee, mobile menu and local ABC Favorit fonts.
 - [The ODIN storefront](./TheOdin/) — capture of all 44 pages of `the-odin.com` (home, collections, every product, blog and articles, cart, search) on the original Horizon theme, with a local emulator for variants, predictive search, sorting and a working cart.
 - [Atlassian Teamwork Graph](./TeamworkGraph/) — local capture of `teamworkgraph.com` running on the original Parcel/React bundle, with its animated graph hero, scroll-driven feature story, connector carousel, live-style metrics, agent demos, sample-question graph explorer and local Charlie/Atlassian Sans fonts.
+- [Glow-in-the-Dark Bacteria Kit](./GlowBacteriaKit/) — The ODIN's 18-page protocol PDF rebuilt as a responsive web page, with artwork cut from the PDF, gradient grid, step checklists and a results log that save in the browser, and linked QR codes.
 - [Notion product page](./Notion/) — responsive reconstruction of `notion.com/product`, including local fonts, imagery, navigation, motion, feature cards, testimonials, CTA, and footer.
 
 Each design lives in its own folder with local run instructions.

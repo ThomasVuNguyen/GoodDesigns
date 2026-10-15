@@ -32,6 +32,7 @@
     { "slug": "whim", "name": "Whim", "folder": "Whim", "reference": "https://www.whim.com/", "tagline": "Rent premium products directly from the brands that make them", "captured": "2026-10-10" },
     { "slug": "gumroad", "name": "Gumroad", "folder": "Gumroad", "reference": "https://gumroad.com/", "tagline": "Go from 0 to $1 · the creator commerce platform", "captured": "2026-10-11" },
     { "slug": "the-odin", "name": "The ODIN", "folder": "TheOdin", "reference": "https://the-odin.com/", "tagline": "DIY genetic engineering kits · full storefront with 44 pages and a working cart", "captured": "2026-10-14" },
-    { "slug": "teamwork-graph", "name": "Atlassian Teamwork Graph", "folder": "TeamworkGraph", "reference": "https://teamworkgraph.com/", "tagline": "Meet the graph that builds your teamwork context", "captured": "2026-10-14" }
+    { "slug": "teamwork-graph", "name": "Atlassian Teamwork Graph", "folder": "TeamworkGraph", "reference": "https://teamworkgraph.com/", "tagline": "Meet the graph that builds your teamwork context", "captured": "2026-10-14" },
+    { "slug": "glow-bacteria-kit", "name": "Glow-in-the-Dark Bacteria Kit", "folder": "GlowBacteriaKit", "reference": "Glow-in-the-Dark_Bacteria_Engineering_Kit.pdf (The ODIN)", "tagline": "The ODIN's 18-page GFP protocol PDF, rebuilt as a responsive web page with working checklists", "captured": "2026-10-14" }
   ]
 }
