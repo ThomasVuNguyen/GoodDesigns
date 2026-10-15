@@ -1,5 +1,9 @@
 {
   "videos": [
-    {"slug":"youtube-EF4etGUKZx4","platform":"youtube","id":"EF4etGUKZx4","url":"https://www.youtube.com/watch?v=EF4etGUKZx4","title":"How to Get Perfect Prints Every Time With Form Studio 1","author":"Formlabs","authorUrl":"https://www.youtube.com/@Formlabs","added":"2026-10-15"}
+    {"slug":"youtube-EF4etGUKZx4","platform":"youtube","id":"EF4etGUKZx4","url":"https://www.youtube.com/watch?v=EF4etGUKZx4","title":"How to Get Perfect Prints Every Time With Form Studio 1","author":"Formlabs","authorUrl":"https://www.youtube.com/@Formlabs","added":"2026-10-15"},
+    {"slug":"x-2110751188916617592","platform":"x","id":"2110751188916617592","url":"https://x.com/nabihasaklayen/status/2110751188916617592","title":"In partnership with Vinod Khosla (@vkhosla), I’m proud to introduce Reservoir.","author":"Dr. Nabiha Saklayen (@nabihasaklayen)","authorUrl":"https://x.com/nabihasaklayen","added":"2026-10-15"},
+    {"slug":"youtube-GImxy01wW0o","platform":"youtube","id":"GImxy01wW0o","url":"https://www.youtube.com/watch?v=GImxy01wW0o","title":"Welcome to Notion Projects","author":"Notion","authorUrl":"https://www.youtube.com/@Notion","added":"2026-10-15"},
+    {"slug":"youtube-OfvkfnAQ3JQ","platform":"youtube","id":"OfvkfnAQ3JQ","url":"https://www.youtube.com/watch?v=OfvkfnAQ3JQ","title":"Arc on Windows is here. Now what...","author":"The Browser Company","authorUrl":"https://www.youtube.com/@TheBrowserCompany","added":"2026-10-15"},
+    {"slug":"youtube-oHHM9A4jN_M","platform":"youtube","id":"oHHM9A4jN_M","url":"https://www.youtube.com/watch?v=oHHM9A4jN_M","title":"We're giving students equity in The Browser Company?","author":"The Browser Company","authorUrl":"https://www.youtube.com/@TheBrowserCompany","added":"2026-10-15"}
   ]
 }

@@ -44,7 +44,8 @@ a { color: inherit; }
 .card--video .meta h2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 .play { position: absolute; left: 50%; top: 50%; width: 56px; height: 56px; margin: -28px 0 0 -28px; display: grid; place-items: center; border-radius: 50%; background: rgba(21, 20, 18, 0.72); color: var(--bg); padding-left: 3px; backdrop-filter: blur(6px); transition: background .2s ease, transform .2s ease; }
 .card--video:hover .play, .card--video .thumb:focus-visible .play { background: var(--accent); transform: scale(1.06); }
-.badge { position: absolute; left: 10px; top: 10px; padding: 3px 9px; border-radius: 999px; background: rgba(250, 248, 243, 0.92); color: var(--ink); font-size: 12px; font-weight: 500; }
+.meta .src--icon { display: inline-flex; align-self: flex-start; margin-top: 3px; border: 0; transition: color .15s ease; }
+.meta .src--icon:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 .foot { margin-top: 72px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
 
 .viewer { position: fixed; inset: 0; background: #fff; }

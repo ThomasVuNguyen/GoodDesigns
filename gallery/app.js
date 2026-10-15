@@ -6,6 +6,10 @@
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
   const srcUrl = (s) => `${repo}/tree/${branch}/${s.folder}`;
   const PLATFORM = { youtube: 'YouTube', x: 'X' };
+  const ICON = {
+    youtube: '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.8 15.1V8.9l5.8 3.1-5.8 3.1Z"/></svg>',
+    x: '<svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><path fill="currentColor" d="M17.8 2.5h3.3l-7.2 8.2 8.5 10.8h-6.6l-5.2-6.7-5.9 6.7H1.4l7.7-8.8L1 2.5h6.8l4.7 6.1 5.3-6.1Zm-1.2 17.1h1.8L7.5 4.3H5.5l11.1 15.3Z"/></svg>',
+  };
   // The player each platform offers for embedding; YouTube's privacy-enhanced domain sets no cookies until play.
   const embedUrl = (v) => v.platform === 'youtube'
     ? `https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1&rel=0&playsinline=1`
@@ -31,11 +35,10 @@
       <a class="thumb" href="#/videos/${v.slug}" aria-label="Play ${esc(v.title)}">
         <img src="thumbs/videos/${v.slug}.jpg" alt="" loading="lazy" width="1280" height="720">
         <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
-        <span class="badge">${PLATFORM[v.platform]}</span>
       </a>
       <div class="meta">
         <h2><a href="#/videos/${v.slug}">${esc(v.title)}</a></h2>
-        <a class="src" href="${esc(v.url)}" target="_blank" rel="noopener">${PLATFORM[v.platform]} ↗</a>
+        <a class="src src--icon" href="${esc(v.url)}" target="_blank" rel="noopener" aria-label="Open on ${PLATFORM[v.platform]} (opens in a new tab)" title="Open on ${PLATFORM[v.platform]}">${ICON[v.platform]}</a>
       </div>
       <p class="tag">${esc(v.note || v.author)}</p>
     </li>`).join('') || '<li class="empty">No videos yet.</li>';

@@ -30,7 +30,8 @@ if (host === 'youtube.com' || host === 'youtu.be') {
   const { tweet } = await json(`https://api.fxtwitter.com/${user}/status/${id}`);
   const media = tweet.media?.videos?.[0];
   if (!media) throw new Error(`Post ${id} has no video`);
-  const text = tweet.text.replace(/\s*https:\/\/t\.co\/\S+$/, '').trim();
+  // The title is the post's first line, without a trailing t.co link.
+  const text = tweet.text.replace(/\s*https:\/\/t\.co\/\S+$/, '').trim().split(/\n+/)[0].trim();
   video = { slug: `x-${id}`, platform: 'x', id, url: `https://x.com/${tweet.author.screen_name}/status/${id}`, title: text.length > 90 ? `${text.slice(0, 88).trimEnd()}…` : text || `Post by @${tweet.author.screen_name}`, author: `${tweet.author.name} (@${tweet.author.screen_name})`, authorUrl: `https://x.com/${tweet.author.screen_name}` };
   thumbUrls = [media.thumbnail_url].filter(Boolean);
 } else {
