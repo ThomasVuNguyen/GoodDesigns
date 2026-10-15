@@ -19,22 +19,17 @@
   </main>
 
   <section id="viewer" class="viewer" hidden>
-    <header class="bar">
-      <a class="btn" href="#/" id="back">← Gallery</a>
-      <div class="title"><strong id="v-name"></strong><span id="v-tag"></span></div>
-      <div class="actions">
-        <div class="seg" role="group" aria-label="Viewport">
-          <button data-w="100%" class="on">Desktop</button>
-          <button data-w="820px">Tablet</button>
-          <button data-w="390px">Mobile</button>
-        </div>
-        <a class="btn" id="prev" href="#/" aria-label="Previous site">‹</a>
-        <a class="btn" id="next" href="#/" aria-label="Next site">›</a>
-        <a class="btn" id="v-open" target="_blank" rel="noopener">Open ↗</a>
-        <a class="btn primary" id="v-src" target="_blank" rel="noopener">View source ↗</a>
-      </div>
-    </header>
-    <div class="stage"><iframe id="frame" title="Site preview"></iframe></div>
+    <iframe id="frame" title="Site preview"></iframe>
+    <nav class="float" aria-label="Viewer">
+      <a class="fab" id="back" href="#/">
+        <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M3 9.2 10 3l7 6.2M5 7.6V17h3.6v-4.6h2.8V17H15V7.6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Home</span>
+      </a>
+      <a class="fab fab--dark" id="v-src" target="_blank" rel="noopener">
+        <svg viewBox="0 0 20 20" width="16" height="16" aria-hidden="true"><path d="M7 6 3 10l4 4M13 6l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>View source</span>
+      </a>
+    </nav>
   </section>
   <script src="app.js"></script>
 </body>

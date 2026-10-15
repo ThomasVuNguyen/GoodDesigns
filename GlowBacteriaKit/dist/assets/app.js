@@ -1,5 +1,8 @@
 // Remembers ticked steps and the results notes in this browser only.
 (() => {
+  // Inside the gallery's viewer, the viewer's own floating buttons replace this page's.
+  if (window.top !== window) document.documentElement.classList.add('framed');
+
   const KEY = 'glow-kit-protocol:v1';
   let state = {};
   try {

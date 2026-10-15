@@ -75,6 +75,10 @@ body {
 .home svg {
   flex: none;
 }
+.framed .home {
+  display: none;
+}
+
 /* Narrow screens: the pages fill the width, so the button tucks away while scrolling down. */
 .home.is-hidden {
   opacity: 0;
@@ -94,6 +98,9 @@ body {
     --gutter: 12px;
     /* Room above the first page for the home button. */
     padding-top: 54px;
+  }
+  .framed .document {
+    padding-top: var(--gutter);
   }
   .page {
     box-shadow: 0 1px 2px rgba(16, 24, 40, 0.08), 0 3px 10px rgba(16, 24, 40, 0.08);

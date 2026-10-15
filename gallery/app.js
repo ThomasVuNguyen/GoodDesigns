@@ -16,39 +16,33 @@
     </li>`).join('');
 
   const frame = $('frame');
-  const seg = document.querySelector('.seg');
-  seg.addEventListener('click', (e) => {
-    const b = e.target.closest('button');
-    if (!b) return;
-    seg.querySelectorAll('button').forEach((x) => x.classList.toggle('on', x === b));
-    frame.style.width = b.dataset.w;
-  });
+  let current = -1;
 
   function route() {
     const slug = location.hash.replace(/^#\/?/, '');
     const i = sites.findIndex((s) => s.slug === slug);
     const open = i >= 0;
+    current = i;
     $('gallery').hidden = open;
     $('viewer').hidden = !open;
     document.body.style.overflow = open ? 'hidden' : '';
     if (!open) { document.title = 'GoodDesigns'; frame.removeAttribute('src'); return; }
     const s = sites[i];
     document.title = `${s.name} · GoodDesigns`;
-    $('v-name').textContent = s.name;
-    $('v-tag').textContent = s.tagline;
-    $('v-open').href = `sites/${s.slug}/`;
+    frame.title = `${s.name} preview`;
+    $('back').setAttribute('aria-label', `Back to the GoodDesigns gallery from ${s.name}`);
     $('v-src').href = srcUrl(s);
-    $('prev').href = `#/${sites[(i - 1 + sites.length) % sites.length].slug}`;
-    $('next').href = `#/${sites[(i + 1) % sites.length].slug}`;
+    $('v-src').setAttribute('aria-label', `View source for ${s.name} on GitHub (opens in a new tab)`);
     const target = `sites/${s.slug}/`;
     if (!frame.src.endsWith(target)) frame.src = target;
   }
   addEventListener('hashchange', route);
   addEventListener('keydown', (e) => {
     if ($('viewer').hidden) return;
+    const step = (d) => { location.hash = `#/${sites[(current + d + sites.length) % sites.length].slug}`; };
     if (e.key === 'Escape') location.hash = '#/';
-    if (e.key === 'ArrowLeft' && e.altKey) $('prev').click();
-    if (e.key === 'ArrowRight' && e.altKey) $('next').click();
+    if (e.key === 'ArrowLeft' && e.altKey) step(-1);
+    if (e.key === 'ArrowRight' && e.altKey) step(1);
   });
   route();
 })();
