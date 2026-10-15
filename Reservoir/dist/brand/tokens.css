@@ -1,0 +1,96 @@
+/* Reservoir product palette: the Figma Digital Guide, 02 - Color (#332).
+   Every page links this file and uses these names; none declares its own copy.
+   Served from /brand/ because the gate lets brand assets through, so the gate-free
+   legal pages get the palette while signed out. */
+:root {
+  --heartwood:  #353223;
+  --sage:       #85836D;
+  --fieldstone: #AAA799;
+  --oat:        #F1ECDE;
+  --birch:      #F3F2EC;
+  --honey:      #C8894A;
+  --frost:      #AAD8DD;
+  --elderberry: #613249;
+  --quartz:     #EAB5C2;
+  --eucalyptus: #85BD8A;
+  --umber:      #382927;
+  --deep-water: #2E3E3E;
+  --juniper:    #364C38;
+
+  /* Form errors. The guide has no error color, so they take Elderberry: 9.1:1 on Birch,
+     where the red they had was 4.47:1, under AA. The message text carries the meaning. */
+  --error:      var(--elderberry);
+
+  /* Type: Digital Guide, 03 - Typography. One face, Regular, tracked -2% (--track)
+     except text-xs and text-2xs, which carry their own tracking. The bottom bar
+     (05 - Navigation) is the one place set Light. */
+  --text-2xl: 400 40px/1.15 var(--font-text);
+  --text-xl:  400 28px/1.2 var(--font-text);
+  --text-lg:  400 20px/1.2 var(--font-text);
+  --text-md:  400 16px/1.1 var(--font-text);
+  --text-sm:  400 12px/1.15 var(--font-text);
+  --text-xs:  400 9px/14px var(--font-text);
+  --text-2xs: 400 6.8px/10px var(--font-text);
+  --text-bar:       300 12px/1.15 var(--font-text);
+  --text-bar-glyph: 300 16px/1.15 var(--font-text);
+  /* Phones (the mobile frames, Figma 575:2958): the waitlist pill's label is 18px Light. */
+  --text-pill-phone: 300 18px/1.15 var(--font-text);
+  /* The Card view on phones (575:3013): the letter 14px Light, its date and signature 10px. */
+  --text-card-phone: 300 14px/1.25 var(--font-text);
+  --text-meta-phone: 300 10px/1.15 var(--font-text);
+  /* Meet Reservoir on phones (575:3177): the intro 16px Light, the cities caption 12px
+     Medium in capitals, the footer 11px. */
+  --text-lead-phone:    300 16px/1.25 var(--font-text);
+  --text-caption-phone: 500 12px/14px var(--font-text);
+  --text-foot-phone:    300 11px/1.25 var(--font-text);
+  /* Meet Reservoir's step titles: 28px (text-xl) at the 390 design width, shrinking on a narrower
+     phone so 'Preserve' (about 4.25em wide) fits its slot, 100vw - 48px - 177.4px. */
+  --text-step-phone:    400 min(28px, calc((100vw - 225.4px) / 4.3))/1.2 var(--font-text);
+  /* Meet Reservoir's body copy: the size of text-md (desktop) and of the phones' 14px card
+     copy, with one to two points more leading (the designer, 2026-10-08). */
+  --text-body:       400 16px/1.25 var(--font-text);
+  --text-body-phone: 300 14px/1.4 var(--font-text);
+  --track: -0.02em;
+  --track-xs: 0.09px;
+  --track-2xs: 0.07px;
+  --track-caps: 0.05em; /* the capitals caption on phones */
+
+  /* Keyboard focus: the guide's Honey on dark surfaces. Light (Birch) surfaces set
+     --focus to Heartwood, since Honey is about 2.6:1 there, under 3:1 (#458). */
+  --focus: var(--honey);
+
+  /* Space and corners: Digital Guide, 04 - Space & Radius. */
+  --space-8: 8px;
+  --space-16: 16px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --edge: 32px;         /* the platform's edges, top, left and right */
+  --edge-bottom: 24px;
+  --radius: 4px;        /* cards and informative frames */
+  --radius-round: 999px; /* the bottom bar and nodes */
+  /* The Mobile Dock's active view: Oat at 10% on the Heartwood dock. */
+  --dock-active: rgb(from var(--oat) r g b / 0.1);
+
+  /* The call-to-action pill: Digital Guide, 06 - UI Elements (#343). Every pill on
+     the site takes these states and nothing else. Hover and press are Material 3
+     state layers, the label's color over the fill at 8% and 10%, mixed from the two
+     guide colors rather than added to the palette. */
+  --pill:               var(--elderberry);
+  --pill-text:          var(--quartz);
+  --pill-hover:         color-mix(in srgb, var(--elderberry) 92%, var(--quartz));
+  --pill-press:         color-mix(in srgb, var(--elderberry) 90%, var(--quartz));
+  --pill-disabled:      var(--fieldstone); /* disabled, or busy while a request runs */
+  --pill-disabled-text: var(--sage);
+  /* Elderberry with Quartz (5.77:1, AA) is the primary: Book your draw, and the sign-up
+     form's submit. The second call to action beside it (Join the list) is Birch with a
+     Heartwood label (11.47:1, AAA) and a Heartwood ink edge, as Birch is the ground it
+     mostly sits on; its hover and press are the same state layers, the label's color over
+     the fill at 8% and 10%. The edge also rings a pill on the wall, where Elderberry is
+     2.7:1 on Sage and an edge needs 3:1 (WCAG 1.4.11): Heartwood is 3.35:1 there. */
+  --pill-secondary:       var(--birch);
+  --pill-secondary-text:  var(--heartwood);
+  --pill-secondary-hover: color-mix(in srgb, var(--birch) 92%, var(--heartwood));
+  --pill-secondary-press: color-mix(in srgb, var(--birch) 90%, var(--heartwood));
+  --pill-edge:            var(--heartwood);
+}

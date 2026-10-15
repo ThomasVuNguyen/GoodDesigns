@@ -27,6 +27,7 @@ A personal collection of high-fidelity, self-contained recreations of websites a
 - [The ODIN storefront](./TheOdin/) — capture of all 44 pages of `the-odin.com` (home, collections, every product, blog and articles, cart, search) on the original Horizon theme, with a local emulator for variants, predictive search, sorting and a working cart.
 - [Atlassian Teamwork Graph](./TeamworkGraph/) — local capture of `teamworkgraph.com` running on the original Parcel/React bundle, with its animated graph hero, scroll-driven feature story, connector carousel, live-style metrics, agent demos, sample-question graph explorer and local Charlie/Atlassian Sans fonts.
 - [Glow-in-the-Dark Bacteria Kit](./GlowBacteriaKit/) — The ODIN's 18-page protocol PDF reproduced page for page from its own vectors (pixel-diffed against the PDF), with a selectable text layer, working step checkboxes, a notes field and linked QR codes.
+- [Reservoir](./Reservoir/) — local capture of `withreservoir.com`, with its intro card, pannable letters wall, cards and timeline views, the Meet Reservoir story overlay, and local Stack Sans Text fonts.
 - [Notion product page](./Notion/) — responsive reconstruction of `notion.com/product`, including local fonts, imagery, navigation, motion, feature cards, testimonials, CTA, and footer.
 
 Each design lives in its own folder with local run instructions.

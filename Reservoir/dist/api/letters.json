@@ -1,0 +1,191 @@
+{
+ "letters": [
+  {
+   "id": "d1368253cc7d4085a7c64a26878c71d6",
+   "kind": "future_self_v1",
+   "remember": "the joy of mathematics",
+   "still": "the ability to close your eyes and take in the universe",
+   "name": "Arnav",
+   "location": "Mountain View, California",
+   "image_url": null,
+   "pick": "images/pick-07.jpg",
+   "created_at": "2026-10-15T18:16:46.642039+00:00"
+  },
+  {
+   "id": "7401805197f841ab9d07a2cb51950c21",
+   "kind": "future_self_v1",
+   "remember": "the struggle and feeling of inactivity and inadequacy",
+   "still": "love your family and motivated to learn more",
+   "name": "CSK?",
+   "location": "Houston, Texas",
+   "image_url": null,
+   "pick": "images/pick-10.jpg",
+   "created_at": "2026-10-15T18:16:27.528509+00:00"
+  },
+  {
+   "id": "c422cd4bc099467fb74fe216766f0e48",
+   "kind": "future_self_v1",
+   "remember": "Living with your brother and where you started building this new chapter",
+   "still": "are yourself. Building and doing what you want, not what other people expect/want of you",
+   "name": "Bradley",
+   "location": "Los Angeles, California",
+   "image_url": null,
+   "pick": "images/pick-01.jpg",
+   "created_at": "2026-10-15T18:12:11.296416+00:00"
+  },
+  {
+   "id": "d023a39b6bc7448dba2ef0a6c0bb33ec",
+   "kind": "future_self_v1",
+   "remember": "to have fun",
+   "still": "have fun",
+   "name": "Khush",
+   "location": "London, ENG",
+   "image_url": null,
+   "pick": "images/pick-09.jpg",
+   "created_at": "2026-10-15T18:07:31.773056+00:00"
+  },
+  {
+   "id": "2b15fd55343b402dafe5ed5f6b178ded",
+   "kind": "future_self_v1",
+   "remember": "how young this felt",
+   "still": "call home",
+   "name": "Shoumik",
+   "location": "San Francisco, California",
+   "image_url": null,
+   "pick": "images/pick-02.jpg",
+   "created_at": "2026-10-15T18:03:07.194779+00:00"
+  },
+  {
+   "id": "39ad0e9208704fd09b6e7562b488edc3",
+   "kind": "future_self_v1",
+   "remember": "how much beauty there is in becoming",
+   "still": "see pieces of who you were in everything you've become",
+   "name": null,
+   "location": null,
+   "image_url": null,
+   "pick": "images/pick-02.jpg",
+   "created_at": "2026-10-15T18:03:01.541541+00:00"
+  },
+  {
+   "id": "d42201fcdcc94d75bead2b17d4e68ec1",
+   "kind": "future_self_v1",
+   "remember": "the beautiful people in your life.",
+   "still": "embrace your family.",
+   "name": "David",
+   "location": "Cambridge, Massachusetts",
+   "image_url": null,
+   "pick": "images/pick-03.jpg",
+   "created_at": "2026-10-15T17:46:21.663360+00:00"
+  },
+  {
+   "id": "7c961a7d92f841c9aec5efb0d4a9195a",
+   "kind": "future_self_v1",
+   "remember": "to lift heavy and sleep early! Your future bones will thank you ;)",
+   "still": "play tennis",
+   "name": "Paulina",
+   "location": "Houston, Texas",
+   "image_url": null,
+   "pick": "images/pick-05.jpg",
+   "created_at": "2026-10-15T17:42:30.024198+00:00"
+  },
+  {
+   "id": "7009c130c5f343a9b07929c1f575574f",
+   "kind": "future_self_v1",
+   "remember": "the excitement you felt when you got your first internship in the lab, which changed the course of your life.",
+   "still": "practice kindness, even when people may not be showing it to you always.",
+   "name": "Orn",
+   "location": "Boston, Massachusetts",
+   "image_url": null,
+   "pick": "images/pick-05.jpg",
+   "created_at": "2026-10-15T16:54:54.352891+00:00"
+  },
+  {
+   "id": "f122e51013934665be5402dbca5a72b4",
+   "kind": "future_self_v1",
+   "remember": "the mindfulness",
+   "still": "are you",
+   "name": "Vishnu",
+   "location": "San Jose, California",
+   "image_url": null,
+   "pick": "images/pick-10.jpg",
+   "created_at": "2026-10-15T16:46:45.703063+00:00"
+  },
+  {
+   "id": "3340d103d9a945928d859514eaf018f2",
+   "kind": "future_self_v1",
+   "remember": "the dreams",
+   "still": "play tennis",
+   "name": "Colin",
+   "location": "New York, New York",
+   "image_url": null,
+   "pick": "images/pick-01.jpg",
+   "created_at": "2026-10-15T16:34:22.601200+00:00"
+  },
+  {
+   "id": "185cefb5a5ee4601a07a1adc27624f54",
+   "kind": "future_self_v1",
+   "remember": "holding your daughters when they were young",
+   "still": "can play basketball against 20 year olds",
+   "name": "sam",
+   "location": "Los Angeles, California",
+   "image_url": null,
+   "pick": "images/pick-04.jpg",
+   "created_at": "2026-10-15T16:24:04.726381+00:00"
+  },
+  {
+   "id": "2a4d7f9ec05a4916baf23fe7afd25f5f",
+   "kind": "future_self_v1",
+   "remember": "when this was just an idea",
+   "still": "make things before you know if they'll work",
+   "name": "Arun",
+   "location": "San Ramon, California",
+   "image_url": null,
+   "pick": "images/pick-10.jpg",
+   "created_at": "2026-10-15T16:21:33.656423+00:00"
+  },
+  {
+   "id": "5a3ac4d3739146bd918d071e7dd14cea",
+   "kind": "future_self_v1",
+   "remember": "your boys' laughter",
+   "still": "follow your heart",
+   "name": "Bryan",
+   "location": "Santa Clara, California",
+   "image_url": null,
+   "pick": "images/pick-06.jpg",
+   "created_at": "2026-10-15T15:51:36.055110+00:00"
+  },
+  {
+   "id": "5f73ac9a8eaf45e19ea1271594b10281",
+   "kind": "future_self_v1",
+   "remember": "to be kind.",
+   "still": "dream big and glorify God.",
+   "name": "Larry",
+   "location": "Atlanta, Georgia",
+   "image_url": null,
+   "pick": "images/pick-02.jpg",
+   "created_at": "2026-10-15T15:39:02.761168+00:00"
+  },
+  {
+   "id": "44d291123c58419e8b4602f67638f78b",
+   "kind": "future_self_v1",
+   "remember": "when this was just an idea",
+   "still": "2026",
+   "name": "Arun",
+   "location": "Boston, Massachusetts",
+   "image_url": null,
+   "pick": "images/pick-06.jpg",
+   "created_at": "2026-10-15T15:35:18.096363+00:00"
+  },
+  {
+   "id": "0269f48cf21c4bbdbfec40911ffa297e",
+   "kind": "future_self_v1",
+   "remember": "dancing in the desert",
+   "still": "enjoy the music and be proud of yourself.",
+   "name": "Jorge",
+   "location": "San Juan",
+   "image_url": null,
+   "pick": "images/pick-11.jpg",
+   "created_at": "2026-10-15T15:26:21.993464+00:00"
+  }
+ ]
+}
