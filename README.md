@@ -28,6 +28,7 @@ A personal collection of high-fidelity, self-contained recreations of websites a
 - [Atlassian Teamwork Graph](./TeamworkGraph/) — local capture of `teamworkgraph.com` running on the original Parcel/React bundle, with its animated graph hero, scroll-driven feature story, connector carousel, live-style metrics, agent demos, sample-question graph explorer and local Charlie/Atlassian Sans fonts.
 - [Glow-in-the-Dark Bacteria Kit](./GlowBacteriaKit/) — The ODIN's 18-page protocol PDF reproduced page for page from its own vectors (pixel-diffed against the PDF), with a selectable text layer, working step checkboxes, a notes field and linked QR codes.
 - [Reservoir](./Reservoir/) — local capture of `withreservoir.com`, with its intro card, pannable letters wall, cards and timeline views, the Meet Reservoir story overlay, and local Stack Sans Text fonts.
+- [Generalist GEN-1.5](./Generalist/) — local capture of the `generalistai.com/blog/gen-1.5` research post, with its three.js cover, 42 demo videos in the custom player, prompt-pair tabs, charts, footnotes and local FK Grotesk fonts.
 - [Notion product page](./Notion/) — responsive reconstruction of `notion.com/product`, including local fonts, imagery, navigation, motion, feature cards, testimonials, CTA, and footer.
 
 Each design lives in its own folder with local run instructions.

@@ -1,0 +1,1313 @@
+/* Placeholder blocks standing in for videos and figures that haven't been
+   produced yet. Swap each .media-placeholder for the real <video-player> /
+   <img> / chart markup before publishing. */
+
+.gen-1-5-post {
+  --gen15-panel-outline: var(--stroke-weight) solid rgb(var(--foreground-rgb) / 0.075);
+}
+
+@media (min-width: 1200px) {
+  .gen-1-5-post .gen15-standalone-caption {
+    margin: 0;
+  }
+}
+
+.gen-1-5-post .media-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  padding: 20px;
+  box-sizing: border-box;
+  border: var(--stroke-weight) dashed var(--border-color-strong);
+  border-radius: var(--border-radius);
+  background-color: var(--surface-subtle);
+  text-align: center;
+}
+
+.gen-1-5-post .media-placeholder-kind {
+  font-size: var(--type-xs);
+  color: var(--text-faint);
+}
+
+.gen-1-5-post .media-placeholder-note {
+  font-size: var(--type-sm);
+  color: var(--text-muted);
+  line-height: 1.5;
+  max-width: 44ch;
+  text-wrap: balance;
+}
+
+/* The global `* { margin: 0 }` reset leaves nested lists flush against their
+   parent bullet's text, so restore a gap slightly wider than the 8px between
+   sibling items. */
+.gen-1-5-post .post-content li > ul {
+  margin-top: 8px;
+}
+
+/* Figure 1: one-shot in-context learning compared across a language model
+   (text Q/A with the model's output in blue) and an embodied model (a
+   physical demonstration followed by the model rollout). Rendered as a
+   table-like grid: label column on the left, example content on the right. */
+.gen-1-5-post .one-shot-compare-figure {
+  /* The post body is a flex column with align-items: flex-start, so span the
+     content column instead of shrinking to the grid's intrinsic width. */
+  width: 100%;
+}
+
+.gen-1-5-post .post-abstract {
+  border: var(--gen15-panel-outline);
+}
+
+.gen-1-5-post .one-shot-compare {
+  display: grid;
+  /* Narrow enough that "one-shot example" wraps to its own line. */
+  grid-template-columns: minmax(110px, 140px) minmax(0, 1fr);
+  padding: 10px 20px;
+  box-sizing: border-box;
+  border: var(--gen15-panel-outline);
+  border-radius: var(--border-radius);
+  background: var(--surface-subtle);
+  margin-bottom: 0.75rem;
+}
+
+.gen-1-5-post .one-shot-compare-label,
+.gen-1-5-post .one-shot-compare-content {
+  padding: 14px 16px 14px 0;
+  border-bottom: var(--stroke-weight) solid var(--border-color);
+}
+
+.gen-1-5-post .one-shot-compare-content {
+  padding-right: 0;
+}
+
+.gen-1-5-post .one-shot-compare-label {
+  font-size: var(--type-sm);
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.gen-1-5-post .one-shot-compare > :nth-last-child(-n+2) {
+  border-bottom: 0;
+}
+
+/* The language example is dressed as a playground-style text box, with the
+   model's completion highlighted in light green the way the GPT-3 playground
+   marked generated text. */
+.gen-1-5-post .one-shot-compare-textbox {
+  padding: 12px 14px;
+  border: var(--stroke-weight) solid var(--border-color-strong);
+  border-radius: var(--border-radius);
+  background: var(--background-color);
+}
+
+.gen-1-5-post .one-shot-compare-prompt {
+  margin: 0;
+  font-size: var(--type-sm);
+  line-height: 1.7;
+}
+
+.gen-1-5-post .one-shot-compare-output {
+  /* Light green in the style of the GPT-3 playground's generated-text highlight. */
+  background-color: #d3facc;
+  border-radius: 2px;
+  padding: 1px 3px;
+  margin: -1px -3px;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+@media (prefers-color-scheme: dark) {
+  .gen-1-5-post .one-shot-compare-output {
+    background-color: oklch(var(--color-green) / 0.65);
+  }
+}
+
+/* Stack label above content once the two columns get cramped. */
+@media (max-width: 700px) {
+  .gen-1-5-post .one-shot-compare {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .gen-1-5-post .one-shot-compare-label {
+    padding-bottom: 6px;
+    border-bottom: none;
+  }
+}
+
+/* Figure 1's embodied example reuses the prompt-pair switcher, with the task
+   tabs stacked in the left label column and one video per panel on the right.
+   The label cell is a flex column so the tabs pin to the cell bottom, which
+   shares the video's bottom edge (both cells use the same bottom padding). */
+.gen-1-5-post .one-shot-compare-label-tabs {
+  display: flex;
+  flex-direction: column;
+}
+
+.gen-1-5-post .one-shot-compare-label .prompt-pair-tabs {
+  flex-direction: column;
+  align-items: stretch;
+  align-self: auto;
+  gap: 4px;
+  width: calc(100% + 8px);
+  max-width: none;
+  margin-top: auto;
+  padding-top: 12px;
+  /* Match the full-width, optically oversized pills in the site sidebar. */
+  margin-left: -8px;
+}
+
+.gen-1-5-post .one-shot-compare-label .prompt-pair-tab {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.gen-1-5-post .one-shot-compare .prompt-pair-panel {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+/* Let this post's players size themselves from each video's native ratio,
+   including during the brief custom-element upgrade. */
+.gen-1-5-post video-player:not(:defined) {
+  aspect-ratio: auto;
+}
+
+/* Sequential examples: caption first, followed by a two-up video pair. */
+.gen-1-5-post .video-grid-3x1 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 32px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.gen-1-5-post .video-grid-3x1 > .post-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.gen-1-5-post .video-grid-3x1 .video-stack {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: auto;
+}
+
+/* Physical-prompt task switcher: one prompt/rollout pair is shown at a time. */
+.gen-1-5-post .prompt-pair-switcher {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  border: var(--gen15-panel-outline);
+  background: var(--surface-subtle);
+  border-radius: var(--border-radius);
+}
+
+.gen-1-5-post .prompt-pair-tabs {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+  justify-content: center;
+  gap: 8px;
+  width: fit-content;
+  max-width: 100%;
+}
+
+.gen-1-5-post .prompt-pair-selection {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  width: 0;
+  height: 0;
+  border-radius: var(--button-border-radius);
+  background: var(--foreground-color);
+  pointer-events: none;
+}
+
+.gen-1-5-post .prompt-pair-tabs.is-ready .prompt-pair-selection {
+  transition:
+    width 240ms ease,
+    height 240ms ease,
+    transform 240ms ease;
+}
+
+.gen-1-5-post .prompt-pair-tab {
+  appearance: none;
+  position: relative;
+  z-index: 1;
+  min-width: 0;
+  padding: 5px 8px 4px;
+  border: 0;
+  border-radius: var(--button-border-radius);
+  background: transparent;
+  color: var(--foreground-color);
+  font: inherit;
+  font-size: var(--type-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    color 160ms ease,
+    background-color 160ms ease;
+}
+
+.gen-1-5-post .prompt-pair-tab:not(.is-selected):hover {
+  background-color: rgb(var(--foreground-rgb) / 0.2);
+}
+
+.gen-1-5-post .prompt-pair-tab.is-selected {
+  color: var(--background-color);
+}
+
+.gen-1-5-post .prompt-pair-tab:focus-visible {
+  outline: 2px solid var(--foreground-color);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gen-1-5-post .prompt-pair-tabs.is-ready .prompt-pair-selection {
+    transition: none;
+  }
+}
+
+.gen-1-5-post .prompt-pair-panel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 0;
+}
+
+.gen-1-5-post .prompt-pair-panel[hidden] {
+  display: none;
+}
+
+.gen-1-5-post .prompt-pair-mobile-title {
+  display: none;
+  margin: 0;
+  font-size: var(--type-sm);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+.gen-1-5-post .prompt-pair-video {
+  position: relative;
+  min-width: 0;
+}
+
+.gen-1-5-post .prompt-pair-video video-player {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  border-radius: var(--border-radius);
+}
+
+/* 3-across, 2-row grid (dustpan improvisation examples). */
+.gen-1-5-post .video-grid-3x2 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.gen-1-5-post .video-grid-3x2 > .post-figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Per-clip captions sit above their videos; anchor the media to the bottom of
+   each cell so clips stay row-aligned when captions wrap to different
+   heights. */
+.gen-1-5-post .video-grid-3x2 > .post-figure > video-player,
+.gen-1-5-post .video-grid-3x2 > .post-figure > .media-placeholder {
+  margin-top: auto;
+}
+
+.gen-1-5-post .video-grid-3x2 video-player {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+/* One tall clip on the left, a 2x2 grid of clips on the right. The left
+   clip stretches to the full height of the grid beside it. */
+.gen-1-5-post .video-split-1-4 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.gen-1-5-post .video-split-1-4-main {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+/* Column captions: one above the main clip, one spanning the 2x2 grid. Zero
+   the caption margins and lean on the 12px gaps so both columns leave the
+   same space below their captions. */
+.gen-1-5-post .video-split-1-4 .post-caption {
+  margin: 0;
+}
+
+.gen-1-5-post .video-split-1-4-grid > .post-caption {
+  grid-column: 1 / -1;
+}
+
+.gen-1-5-post .video-split-1-4-main .media-placeholder,
+.gen-1-5-post .video-split-1-4-main video-player {
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+.gen-1-5-post .video-split-1-4-main .media-placeholder {
+  height: 100%;
+  aspect-ratio: auto;
+}
+
+.gen-1-5-post .video-split-1-4-main video-player {
+  display: block;
+  align-self: flex-start;
+}
+
+@media (min-width: 640px) {
+  .gen-1-5-post .video-split-1-4-main {
+    align-self: stretch;
+  }
+
+  .gen-1-5-post .video-split-1-4-main video-player {
+    flex: 1 1 0;
+    align-self: stretch;
+    height: 0;
+    min-height: 0;
+  }
+
+  .gen-1-5-post .video-split-1-4-main video-player video {
+    object-fit: cover;
+  }
+}
+
+.gen-1-5-post .video-split-1-4-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 0;
+}
+
+.gen-1-5-post .video-split-1-4-grid video-player {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+@media (max-width: 639px) {
+  .gen-1-5-post .video-grid-3x2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Stack the feature clip above the 2x2 grid on small screens. */
+  .gen-1-5-post .video-split-1-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .gen-1-5-post .video-split-1-4-main .media-placeholder {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+/* 5-across, 2-row grid of the 10 evaluation task clips. */
+.gen-1-5-post .video-grid-5x2 {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.gen-1-5-post .video-grid-5x2 video-player,
+.gen-1-5-post .video-grid-5x2 .media-placeholder {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+.gen-1-5-post .video-grid-5x2 .media-placeholder {
+  aspect-ratio: 16 / 9;
+}
+
+/* 2x2 grid of 4 clips (twist lid generalization). */
+.gen-1-5-post .video-row-4 {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.gen-1-5-post .video-row-4 video-player,
+.gen-1-5-post .video-row-4 .media-placeholder {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+.gen-1-5-post .video-row-4 .media-placeholder {
+  aspect-ratio: 16 / 9;
+}
+
+.gen-1-5-post .video-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+/* Wrapper that anchors a corner label over a stacked video. */
+.gen-1-5-post .video-stack-item {
+  position: relative;
+  min-width: 0;
+}
+
+/* .video-stack-item is also used on its own (outside a .video-stack) for
+   side-by-side labeled videos, e.g. the sim2real pair. */
+.gen-1-5-post .video-stack video-player,
+.gen-1-5-post .video-stack-item video-player {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+@media (max-width: 639px) {
+  .gen-1-5-post .video-grid-3x1 {
+    grid-template-columns: 1fr;
+  }
+
+  .gen-1-5-post .video-grid-5x2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Composite video figure ("removing a piece of paper"): caption on top, then
+   two small labeled clips stacked on the left of the main video. Spans both
+   columns when placed inside a .video-grid-2x2 so the three videos have room. */
+.gen-1-5-post .video-grid-2x2 > .video-composite-figure {
+  grid-column: 1 / -1;
+}
+
+.gen-1-5-post .video-composite {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 12px;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.gen-1-5-post .video-composite-side {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.gen-1-5-post .video-composite-item {
+  position: relative;
+  display: flex;
+  flex: 1;
+  min-width: 0;
+}
+
+/* Keep placeholder proportions stable while real videos use their native ratio. */
+.gen-1-5-post .video-composite-item .media-placeholder,
+.gen-1-5-post .video-composite-item video-player {
+  flex: 1;
+  min-width: 0;
+}
+
+.gen-1-5-post .video-composite-item .media-placeholder {
+  aspect-ratio: 32 / 9;
+}
+
+.gen-1-5-post .video-composite-item video-player {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+/* Label overlaid on the video, top-left, on a semi-transparent black box so
+   the white text stays legible over bright footage. */
+/* z-index 3 keeps labels crisp above the player chrome. */
+.gen-1-5-post .video-composite-label {
+  position: absolute;
+  left: 8px;
+  top: 7px;
+  z-index: 3;
+  padding: 4px 8px 2px;
+  font-size: var(--type-sm);
+  font-weight: var(--font-weight-medium);
+  color: #fff;
+  line-height: 1.4;
+  background: rgb(0 0 0 / 0.55);
+  border-radius: var(--border-radius);
+  pointer-events: none;
+}
+
+/* Stretch the main video to match the height of the stacked pair. */
+/* Variant with prompts on the left and a dominant rollout on the right. */
+.gen-1-5-post .video-composite-wide-main {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+}
+
+@media (min-width: 640px) {
+  .gen-1-5-post .video-composite-wide-main > .video-composite-main {
+    align-self: stretch;
+    min-height: 0;
+  }
+
+  .gen-1-5-post .video-composite-wide-main > .video-composite-main video-player {
+    align-self: stretch;
+    height: 100%;
+    min-height: 0;
+  }
+
+  .gen-1-5-post .video-composite-wide-main > .video-composite-main video-player video {
+    object-fit: cover;
+  }
+}
+
+.gen-1-5-post .video-composite-vertical {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.gen-1-5-post .video-composite-vertical > .video-composite-main,
+.gen-1-5-post .video-composite-vertical > .video-composite-side {
+  justify-self: center;
+  width: min(100%, 44rem);
+}
+
+.gen-1-5-post .video-composite-vertical > .video-composite-side {
+  order: -1;
+}
+
+.gen-1-5-post .video-composite-vertical > .video-composite-main {
+  order: 0;
+}
+
+.gen-1-5-post .video-composite-wide-main .video-composite-item .media-placeholder {
+  aspect-ratio: 16 / 9;
+}
+
+.gen-1-5-post .video-composite-main {
+  position: relative;
+  display: flex;
+  min-width: 0;
+}
+
+.gen-1-5-post .video-composite-main .media-placeholder,
+.gen-1-5-post .video-composite-main video-player {
+  width: 100%;
+}
+
+.gen-1-5-post .video-composite-main .media-placeholder {
+  height: 100%;
+  aspect-ratio: auto;
+}
+
+.gen-1-5-post .video-composite-main video-player {
+  display: block;
+  align-self: flex-start;
+  min-width: 0;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+}
+
+@media (max-width: 639px) {
+  .gen-1-5-post .video-composite {
+    grid-template-columns: 1fr;
+  }
+
+  .gen-1-5-post .video-composite-main {
+    order: -1;
+  }
+
+  .gen-1-5-post .video-composite-wide-main .video-composite-main {
+    order: 0;
+  }
+
+  .gen-1-5-post .video-composite-main .media-placeholder {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* On mobile, show every task pair in sequence instead of using tabs. */
+  .gen-1-5-post .prompt-pair-switcher {
+    gap: 0;
+  }
+
+  .gen-1-5-post .prompt-pair-tabs {
+    display: none;
+  }
+
+  .gen-1-5-post .prompt-pair-panel,
+  .gen-1-5-post .prompt-pair-panel[hidden] {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .gen-1-5-post .prompt-pair-mobile-title {
+    display: block;
+    grid-column: 1 / -1;
+  }
+
+  .gen-1-5-post .prompt-pair-panel + .prompt-pair-panel {
+    margin-top: 32px;
+  }
+
+  /* Every mobile video layout is a single full-width column. */
+  .gen-1-5-post .video-grid-3x1,
+  .gen-1-5-post .video-grid-3x2,
+  .gen-1-5-post .video-grid-5x2,
+  .gen-1-5-post .video-grid-2x2,
+  .gen-1-5-post .video-row-4,
+  .gen-1-5-post .video-split-1-4,
+  .gen-1-5-post .video-split-1-4-grid,
+  .gen-1-5-post .video-composite,
+  .gen-1-5-post .video-composite-wide-main {
+    grid-template-columns: 1fr;
+  }
+
+  .gen-1-5-post .video-grid-3x1 .video-stack {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Pretraining curve (training-plot.js): mean translation prediction error
+   over training steps, rendered as an inline SVG line chart. */
+.gen-1-5-post .post-figure:has(> .training-plot) {
+  width: 100%;
+}
+
+.gen-1-5-post .training-plot {
+  position: relative;
+  padding: 1.25rem 1.25rem 0.75rem;
+  border: var(--gen15-panel-outline);
+  background: var(--surface-subtle);
+  border-radius: var(--border-radius);
+  margin: 1rem 0;
+}
+
+.gen-1-5-post .training-plot svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.gen-1-5-post .tp-gridline {
+  stroke: rgb(var(--foreground-rgb) / 0.08);
+  stroke-width: var(--stroke-weight);
+}
+
+.gen-1-5-post .tp-axis-line {
+  stroke: rgb(var(--foreground-rgb) / 0.3);
+  stroke-width: var(--stroke-weight);
+}
+
+.gen-1-5-post .tp-tick {
+  font-size: 12px;
+  fill: rgb(var(--foreground-rgb) / 0.6);
+}
+
+.gen-1-5-post .tp-tick-sup {
+  font-size: 9px;
+}
+
+.gen-1-5-post .tp-axis-title {
+  font-size: 13px;
+  fill: rgb(var(--foreground-rgb) / 0.7);
+}
+
+.gen-1-5-post .tp-line {
+  fill: none;
+  stroke: #1462f8;
+  stroke-width: 2;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+/* Per-point dots and the larger marker on the final point. */
+.gen-1-5-post .tp-dot {
+  fill: #1462f8;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gen-1-5-post .tp-end-dot {
+  fill: #1462f8;
+  stroke: #fff;
+  stroke-width: 1.5;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gen-1-5-post .tp-dot.tp-visible,
+.gen-1-5-post .tp-end-dot.tp-visible {
+  opacity: 1;
+}
+
+/* Annotation markers for moments of algorithmic improvement. */
+.gen-1-5-post .tp-annot {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gen-1-5-post .tp-annot.tp-visible {
+  opacity: 1;
+}
+
+.gen-1-5-post .tp-annot-line {
+  stroke: rgb(var(--foreground-rgb) / 0.35);
+  stroke-width: var(--stroke-weight);
+}
+
+.gen-1-5-post .tp-annot-pill {
+  fill: rgb(0 0 0 / 0.5);
+}
+
+.gen-1-5-post .tp-annot-text {
+  font-size: 12px;
+  font-weight: var(--font-weight-medium);
+  fill: #fff;
+}
+
+/* Hover marker on the line and its tooltip (positioned by training-plot.js
+   at the hovered data point). */
+.gen-1-5-post .tp-marker {
+  fill: #1462f8;
+  stroke: #fff;
+  stroke-width: 1.5;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gen-1-5-post .tp-tooltip {
+  position: absolute;
+  z-index: 2;
+  padding: 4px 8px 2px;
+  background: rgb(0 0 0 / 0.75);
+  color: #fff;
+  font-size: var(--type-xs);
+  line-height: 1.4;
+  white-space: nowrap;
+  border-radius: var(--border-radius);
+  transform: translate(-50%, -100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.12s ease;
+}
+
+.gen-1-5-post .tp-marker.tp-visible,
+.gen-1-5-post .tp-tooltip.tp-visible {
+  opacity: 1;
+}
+
+.gen-1-5-post .tp-tooltip sup {
+  font-size: 0.75em;
+}
+
+/* Interactive per-task results chart (results-chart.js). Rendered as plain
+   HTML elements — divs for bars, real text for labels — so task names and
+   values are selectable/copyable, unlike a canvas chart. Success-rate values
+   sit at the end of each bar, hidden until that bar is hovered. */
+/* The post body is a flex column with align-items: flex-start, so figures
+   default to their content's natural width; stretch the chart's figure so the
+   gray panel spans the content column instead of stopping at the legend's
+   intrinsic width. */
+.gen-1-5-post .post-figure:has(> .results-chart) {
+  width: 100%;
+}
+
+.gen-1-5-post .results-chart {
+  padding: 1.25rem 1.25rem 1rem;
+  border: var(--gen15-panel-outline);
+  background: var(--surface-subtle);
+  border-radius: var(--border-radius);
+  margin: 1rem 0;
+}
+
+.gen-1-5-post .rc-legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  margin-bottom: 1.25rem;
+  font-size: var(--type-sm);
+  color: rgb(var(--foreground-rgb) / 0.75);
+}
+
+.gen-1-5-post .rc-legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gen-1-5-post .rc-swatch {
+  width: 13px;
+  height: 13px;
+  flex: none;
+}
+
+.gen-1-5-post .rc-swatch-ft,
+.gen-1-5-post .rc-bar-ft {
+  background: rgb(20 98 248 / 0.8);
+}
+
+.gen-1-5-post .rc-swatch-ic,
+.gen-1-5-post .rc-bar-ic {
+  background: rgb(38 147 23 / 0.8);
+}
+
+.gen-1-5-post .rc-bar-pending {
+  background: rgb(var(--foreground-rgb) / 0.14);
+}
+
+/* No gap between rows: row spacing comes from each track's vertical padding,
+   so the gridline backgrounds tile into continuous vertical lines. */
+.gen-1-5-post .rc-rows {
+  display: flex;
+  flex-direction: column;
+}
+
+.gen-1-5-post .rc-row {
+  display: grid;
+  grid-template-columns: 172px 1fr;
+  gap: 12px;
+  align-items: center;
+}
+
+.gen-1-5-post .rc-label {
+  font-size: var(--type-sm);
+  font-weight: var(--font-weight-medium);
+  color: rgb(var(--foreground-rgb) / 0.8);
+  line-height: 1.3;
+  text-align: left;
+}
+
+/* Bar track: y-axis hairline on the left, vertical gridlines every 20% plus
+   one at 100% (the second gradient, pinned to the right edge), and right
+   space reserved (via margin) so hover values fit next to full bars. */
+.gen-1-5-post .rc-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 5px 0;
+  margin-right: 48px;
+  border-left: var(--stroke-weight) solid rgb(var(--foreground-rgb) / 0.3);
+  background-image:
+    linear-gradient(to right, rgb(var(--foreground-rgb) / 0.08) var(--stroke-weight), transparent var(--stroke-weight)),
+    linear-gradient(to left, rgb(var(--foreground-rgb) / 0.08) var(--stroke-weight), transparent var(--stroke-weight));
+  background-size: 20% 100%, 100% 100%;
+}
+
+.gen-1-5-post .rc-bar {
+  position: relative;
+  height: 13px;
+}
+
+/* Render the chart in its final state immediately. */
+.gen-1-5-post .rc-row,
+.gen-1-5-post .rc-axis-title {
+  opacity: 1;
+}
+
+.gen-1-5-post .rc-bar {
+  width: var(--rc-width);
+}
+
+/* Success-rate value at the end of the bar; hidden until the bar is hovered. */
+.gen-1-5-post .rc-value {
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 6px;
+  font-size: var(--type-sm);
+  font-weight: var(--font-weight-bold);
+  white-space: nowrap;
+  color: rgb(var(--foreground-rgb) / 0.7);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gen-1-5-post .rc-bar-pending .rc-value {
+  color: rgb(var(--foreground-rgb) / 0.4);
+}
+
+.gen-1-5-post .rc-bar:hover .rc-value {
+  opacity: 1;
+}
+
+.gen-1-5-post .rc-axis {
+  margin-top: 0;
+}
+
+/* The border-top is the x-axis line, sitting directly under the bar tracks
+   and above the percentage tick labels. */
+.gen-1-5-post .rc-axis-ticks {
+  position: relative;
+  height: 20px;
+  margin-right: 48px;
+  padding-top: 4px;
+  box-sizing: border-box;
+  border-top: var(--stroke-weight) solid rgb(var(--foreground-rgb) / 0.3);
+}
+
+.gen-1-5-post .rc-axis-tick {
+  position: absolute;
+  transform: translateX(-50%);
+  font-size: var(--type-sm);
+  color: rgb(var(--foreground-rgb) / 0.6);
+}
+
+.gen-1-5-post .rc-axis-title {
+  text-align: center;
+  margin-top: 6px;
+  font-size: var(--type-sm);
+  color: rgb(var(--foreground-rgb) / 0.7);
+}
+
+@media (max-width: 639px) {
+  .gen-1-5-post .rc-row {
+    grid-template-columns: 108px 1fr;
+    gap: 8px;
+  }
+
+  .gen-1-5-post .rc-bars,
+  .gen-1-5-post .rc-axis-ticks {
+    margin-right: 40px;
+  }
+}
+
+/* Captions that sit below a figure body (sim2real composite, Figure 3 map)
+   get breathing room; the global rules only cover img/video + caption. */
+.gen-1-5-post .video-composite-figure > .video-grid-2x2 + .post-caption,
+.gen-1-5-post .video-composite-figure > .video-composite + .post-caption,
+.gen-1-5-post .ckpt-map + .post-caption {
+  margin-top: 0.75rem;
+  margin-bottom: 0;
+}
+
+/* Moving checkpoint map (checkpoint-map.js): each task's fine-tuned
+   checkpoint at 1/2/5/10 gradient steps, drifting out from the shared
+   pretrained origin on a radially logarithmic scale. Hovering a trail
+   highlights it and shows the task name and step count. */
+.gen-1-5-post .ckpt-map {
+  position: relative;
+  min-width: 0;
+  border: var(--gen15-panel-outline);
+  border-radius: var(--border-radius);
+  background-color: var(--surface-subtle);
+}
+
+.gen-1-5-post .ckpt-map-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.gen-1-5-post .ckpt-rings circle {
+  fill: none;
+  stroke: rgb(var(--foreground-rgb) / 0.28);
+  stroke-width: 1;
+  stroke-dasharray: 1.5 3.5;
+  stroke-linecap: round;
+}
+
+.gen-1-5-post .ckpt-rings text {
+  font-size: 9px;
+  fill: rgb(var(--foreground-rgb) / 0.5);
+}
+
+.gen-1-5-post .ckpt-endlabel {
+  font-size: 11px;
+  font-style: italic;
+  pointer-events: none;
+}
+
+.gen-1-5-post .ckpt-endlabel-sub {
+  font-size: 7.5px;
+  font-style: normal;
+}
+
+/* The pretraining curve, its label, and the origin dot share one dark gray. */
+.gen-1-5-post .ckpt-pretrain-curve {
+  fill: none;
+  stroke: rgb(var(--foreground-rgb) / 0.65);
+  stroke-width: 1.8;
+  stroke-linecap: round;
+}
+
+.gen-1-5-post .ckpt-pretrain-label {
+  font-size: 16px;
+  font-style: italic;
+  fill: rgb(var(--foreground-rgb) / 0.65);
+  pointer-events: none;
+}
+
+.gen-1-5-post .ckpt-pretrain-label .ckpt-endlabel-sub {
+  font-size: 11px;
+}
+
+.gen-1-5-post .ckpt-origin circle {
+  fill: rgb(var(--foreground-rgb) / 0.65);
+  stroke: var(--background-color);
+  stroke-width: 1.5;
+}
+
+.gen-1-5-post .ckpt-trail {
+  fill: none;
+  stroke-width: 1.6;
+  opacity: 0.45;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.gen-1-5-post .ckpt-dot {
+  stroke: var(--background-color);
+  stroke-width: 1;
+  transform-box: fill-box;
+  transform-origin: center;
+  transition: transform 0.15s ease;
+}
+
+.gen-1-5-post .ckpt-dot-hover {
+  transform: scale(1.4);
+}
+
+.gen-1-5-post .ckpt-task {
+  transition: opacity 0.15s ease;
+}
+
+/* Hovering one trail dims the others. */
+.gen-1-5-post .ckpt-dimmed .ckpt-task {
+  opacity: 0.25;
+}
+
+.gen-1-5-post .ckpt-dimmed .ckpt-task.ckpt-active {
+  opacity: 1;
+}
+
+.gen-1-5-post .ckpt-task.ckpt-active .ckpt-trail {
+  opacity: 0.9;
+}
+
+.gen-1-5-post .ckpt-tooltip {
+  position: absolute;
+  transform: translate(-50%, calc(-100% - 12px));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4px 10px 5px;
+  background: rgb(20 20 20 / 0.78);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 7px;
+  box-shadow: 0 3px 12px rgb(0 0 0 / 0.16);
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.15s ease,
+    visibility 0.15s,
+    left 0.18s ease,
+    top 0.18s ease;
+  z-index: 4;
+}
+
+.gen-1-5-post .ckpt-tooltip-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.gen-1-5-post .ckpt-tooltip-below {
+  transform: translate(-50%, 14px);
+}
+
+.gen-1-5-post .ckpt-tooltip-name {
+  font-size: 11.5px;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+  color: #fff;
+  text-align: center;
+}
+
+.gen-1-5-post .ckpt-tooltip-steps {
+  font-size: 10px;
+  line-height: 1.3;
+  color: rgb(255 255 255 / 0.65);
+  text-align: center;
+}
+
+/* Figure sized to match the body text column: paragraphs are capped at 70ch
+   of --type-lg text, so mirror both here (the ch unit depends on font size)
+   for a video that lines up with the prose above it. */
+.gen-1-5-post .post-figure-content-width {
+  width: 100%;
+  max-width: 70ch;
+  font-size: var(--type-lg);
+}
+
+/* GEN-1.5 cover. Its text layers follow the GEN-1 orbit hero's
+   typography and placement while the WebGL canvas remains decorative. */
+.gen-1-5-post .post-full-width:has(#gen1p5cover-hero) {
+  min-width: 0;
+}
+
+#gen1p5cover-hero {
+  --font-weight-bold: 500;
+  --font-weight-medium: 400;
+  position: relative;
+  container-type: inline-size;
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  background: #e35e49;
+}
+
+#gen1p5cover-label,
+#gen1p5cover-subtitle {
+  position: absolute;
+  left: 50%;
+  z-index: 3;
+  color: #fff;
+  pointer-events: none;
+  white-space: nowrap;
+  text-align: center;
+}
+
+#gen1p5cover-label {
+  top: 51%;
+  transform: translate(-50%, -50%);
+  font-size: 20.6cqi;
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+#gen1p5cover-label .gen1p5cover-label-suffix {
+  margin-left: -0.08em;
+  font-size: inherit;
+}
+
+#gen1p5cover-subtitle {
+  bottom: 5%;
+  transform: translateX(-50%);
+  max-width: 94%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 2.14cqi;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.1;
+}
+
+#gen1p5cover-fallback {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+#gen1p5cover-hero.gen1p5cover-ready #gen1p5cover-fallback {
+  display: none;
+}
+
+#gen1p5cover-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+#gen1p5cover-hero.gen1p5cover-static-fallback #gen1p5cover-fallback,
+#gen1p5cover-hero.gen1p5cover-unavailable #gen1p5cover-fallback {
+  display: block;
+}
+
+#gen1p5cover-hero.gen1p5cover-static-fallback #gen1p5cover-canvas,
+#gen1p5cover-hero.gen1p5cover-unavailable #gen1p5cover-canvas {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  #gen1p5cover-hero {
+    aspect-ratio: 1 / 1;
+  }
+
+  #gen1p5cover-label {
+    font-size: 16.5cqi;
+  }
+
+  #gen1p5cover-subtitle {
+    width: 80%;
+    max-width: none;
+    overflow: visible;
+    white-space: normal;
+    text-overflow: clip;
+    text-wrap: balance;
+    font-size: 2.7cqi;
+  }
+}
+
+.post-content ul {
+  font-size: var(--type-lg);
+    font-weight: var(--font-weight-regular);
+    max-width: 70ch;
+    line-height: 1.4;
+    list-style-position: outside;
+    list-style: square;
+}
+
+.post-content ul li ul {
+  list-style: disc;
+}
+
+.post-content ul li::marker {
+  color: rgb(var(--foreground-rgb) / 0.35);
+}
