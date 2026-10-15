@@ -13,6 +13,13 @@ const manifest = JSON.parse(await readFile(path.join(root, 'gallery/sites.json')
 
 const REWRITE_EXT = new Set(['.html', '.css', '.js', '.mjs']);
 
+// Rybbit analytics, added to every full HTML document of every site. Not to the HTML some sites fetch
+// rather than open: fragments without </head>, and The ODIN's recorded responses under odin-local/.
+// A page framed by another site page (an embed) skips it, so only the page a visitor opened counts;
+// a site shown in the gallery viewer still counts.
+const RYBBIT_SRC = 'https://rybbit.beenex.org/api/script.js?siteId=c0f0d113f98d';
+const RYBBIT_TAG = `<script>(function(){try{if(window.parent!==window&&window.parent.location.pathname.indexOf('/sites/')===0)return}catch(e){}var s=document.createElement('script');s.src='${RYBBIT_SRC}';s.defer=true;document.head.appendChild(s)})()</script>`;
+
 async function* walk(dir) {
   for (const entry of await readdir(dir, { withFileTypes: true })) {
     const full = path.join(dir, entry.name);
@@ -46,6 +53,7 @@ await cp(path.join(root, 'gallery'), out, { recursive: true });
 }
 
 let rewritten = 0;
+let tracked = 0;
 for (const site of manifest.sites) {
   const dist = path.join(root, site.folder, 'dist');
   if (!existsSync(dist)) throw new Error(`Missing ${site.folder}/dist`);
@@ -58,6 +66,11 @@ for (const site of manifest.sites) {
     if (!REWRITE_EXT.has(path.extname(file))) continue;
     const before = await readFile(file, 'utf8');
     let after = rewrite(before);
+    // Right after the opening <head>: a page's first </head> can sit inside a comment.
+    if (path.extname(file) === '.html' && /<\/head>/i.test(after) && !file.includes(`${path.sep}odin-local${path.sep}`)) {
+      after = after.replace(/<head\b[^>]*>/i, (head) => head + RYBBIT_TAG);
+      tracked++;
+    }
     // Framer image URLs in mirrored modules resolve against the document, not the module file.
     if (path.extname(file) === '.mjs' && topLevel.has('assets')) {
       after = after.replaceAll('../../assets/', `/sites/${site.slug}/assets/`);
@@ -69,4 +82,4 @@ for (const site of manifest.sites) {
   }
   console.log(`✓ ${site.slug}`);
 }
-console.log(`Built ${manifest.sites.length} sites into public/ (${rewritten} files had paths rewritten)`);
+console.log(`Built ${manifest.sites.length} sites, ${tracked} pages with Rybbit, into public/ (${rewritten} files had paths rewritten)`);

@@ -272,11 +272,13 @@
   }
 
   // ------------------------------------------------------------ fetch patch
+  // Other origins get an empty answer, except the gallery's own analytics (Rybbit).
+  const ANALYTICS = /^rybbit\.beenex\.org$/;
   window.fetch = async function (input, init = {}) {
     const req = input instanceof Request ? input : null;
     const url = new URL(req ? req.url : String(input), location.href);
     const method = String(init.method || req?.method || 'GET').toUpperCase();
-    if (url.origin !== location.origin) return json({}, 200);
+    if (url.origin !== location.origin) return ANALYTICS.test(url.hostname) ? nativeFetch(input, init) : json({}, 200);
     const path = strip(url.pathname);
     if (/^\/(odin-local|cdn)\//.test(path) || /\.(css|js|json|svg|png|jpe?g|webp|woff2?)$/.test(path) && !/^\/(cart|products)/.test(path)) return nativeFetch(input, init);
     if (/^\/cart(\/[a-z]|\.js|\.json)/.test(path) || (/^\/cart\/?$/.test(path) && method !== 'GET')) return cartRequest(path, method, init, req);
@@ -295,7 +297,8 @@
     }
     return nativeFetch(pageFile(url.pathname, url.searchParams), init);
   };
-  navigator.sendBeacon = () => true;
+  const nativeBeacon = navigator.sendBeacon && navigator.sendBeacon.bind(navigator);
+  navigator.sendBeacon = (url, data) => (nativeBeacon && ANALYTICS.test(new URL(url, location.href).hostname) ? nativeBeacon(url, data) : true);
 
   // ------------------------------------------------------------ restore the emulated cart on load
   const lines = readCart();
