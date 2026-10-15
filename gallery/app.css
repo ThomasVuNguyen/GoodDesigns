@@ -42,8 +42,10 @@ a { color: inherit; }
 .card--video .thumb { position: relative; aspect-ratio: 16 / 9; background: var(--ink); }
 .card--video .thumb img { object-position: center; }
 .card--video .meta h2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.play { position: absolute; left: 50%; top: 50%; width: 56px; height: 56px; margin: -28px 0 0 -28px; display: grid; place-items: center; border-radius: 50%; background: rgba(21, 20, 18, 0.72); color: var(--bg); padding-left: 3px; backdrop-filter: blur(6px); transition: background .2s ease, transform .2s ease; }
-.card--video:hover .play, .card--video .thumb:focus-visible .play { background: var(--accent); transform: scale(1.06); }
+/* A small play mark in the corner, so the poster reads first; it warms to the accent on hover. */
+.play { position: absolute; left: 10px; bottom: 10px; width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; background: rgba(21, 20, 18, 0.45); color: var(--bg); padding-left: 2px; backdrop-filter: blur(6px); transition: background .2s ease, transform .2s ease; }
+.play svg { width: 14px; height: 14px; }
+.card--video:hover .play, .card--video .thumb:focus-visible .play { background: var(--accent); transform: scale(1.1); }
 .meta .src--icon { display: inline-flex; align-self: flex-start; margin-top: 3px; border: 0; transition: color .15s ease; }
 .meta .src--icon:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
 .foot { margin-top: 72px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
