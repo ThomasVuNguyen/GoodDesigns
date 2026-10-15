@@ -15,6 +15,7 @@ Two things are swapped for lighter equivalents, both drawn from the PDF's own da
   * The ODIN cube logo (~13,500 tiny paths) is embedded as a 12x raster of itself.
 """
 import base64
+import hashlib
 import html
 import io
 import json
@@ -332,6 +333,11 @@ def main():
     template = (Path(__file__).parent / "template.html").read_text()
     out = template.replace("{{PAGES}}", "\n\n".join(sections))
     out = out.replace("{{RATIO}}", f"{fmt(page_w)} / {fmt(page_h)}")
+    # Content-hash every local asset URL so an update is never paired with a cached old file.
+    def bust(m):
+        digest = hashlib.sha256((DIST / m.group(2)).read_bytes()).hexdigest()[:10]
+        return f'{m.group(1)}="{m.group(2)}?v={digest}"'
+    out = re.sub(r'(href|src)="((?:assets|pages)/[^"?]+)"', bust, out)
     (DIST / "index.html").write_text(out)
     for n, kb, nl in report:
         print(f"page {n:02d}: {kb:5d} KB svg, {nl:3d} text lines")
