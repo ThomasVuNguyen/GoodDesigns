@@ -31,6 +31,8 @@ A personal collection of high-fidelity, self-contained recreations of websites a
 - [Generalist GEN-1.5](./Generalist/) — local capture of the `generalistai.com/blog/gen-1.5` research post, with its three.js cover, 42 demo videos in the custom player, prompt-pair tabs, charts, footnotes and local FK Grotesk fonts.
 - [Arc Institute Tools](./ArcInstitute/) — local capture of `arcinstitute.org/tools`, hydrated from the original Next.js chunks with its mega-menu dropdowns, announcement banner, lab search, illustrated tool cards and local Tiempos/IBM Plex fonts.
 - [fal Worlds](./FalWorlds/) — local capture of `fal.ai/worlds`, hydrated from the original Next.js chunks with its endless scroll of generated canvas objects, typed tagline, nav dropdowns, mobile menu and local Focal/Public Sans fonts.
+- [Nature Is Our Learning Environment](./Periodic/) — local capture of the Periodic Labs research article, with its Framer type, figures, disclosures, and local GT Standard / Formular Mono fonts.
+- [Stripe Press](./StripePress/) — local capture of `press.stripe.com`, with the WebGL book stack, book and film details, podcast audio, and local Ivar fonts.
 - [Notion product page](./Notion/) — responsive reconstruction of `notion.com/product`, including local fonts, imagery, navigation, motion, feature cards, testimonials, CTA, and footer.
 
 Each design lives in its own folder with local run instructions.
@@ -46,7 +48,7 @@ firebase deploy --only hosting          # publishes it
 
 A push to `main` runs that build and publishes the `gooddesigns` site. The workflow is `.github/workflows/firebase-hosting.yml`.
 
-To add a site, append it to `gallery/sites.json`, rebuild, then refresh thumbnails with `npx -p playwright node scripts/capture-thumbs.mjs <slug>` (needs Chrome installed). The build script rewrites root-absolute asset paths (`/assets/...`) so every site works under `/sites/<slug>/`.
+To add a site, append it to `gallery/sites.json` and refresh thumbnails with `npx -p playwright node scripts/capture-thumbs.mjs <slug>` (needs Chrome installed), then commit and push. The build script rewrites root-absolute asset paths (`/assets/...`) so every site works under `/sites/<slug>/`.
 
 ## Good Videos
 
@@ -56,7 +58,7 @@ The gallery also has a **Good Videos** section of YouTube and X videos. They pla
 node scripts/add-video.mjs <youtube or x url> ["optional note shown under the title"]
 ```
 
-The script fetches the title and author (YouTube oEmbed, or the FxTwitter API for X posts). It saves the poster to `gallery/thumbs/videos/<slug>.jpg` and appends the video to `gallery/videos.json`. Then rebuild and deploy.
+The script fetches the title and author (YouTube oEmbed, or the FxTwitter API for X posts). It saves the poster to `gallery/thumbs/videos/<slug>.jpg` and appends the video to `gallery/videos.json`. Commit and push to publish it.
 
 ## Recreating another site
 

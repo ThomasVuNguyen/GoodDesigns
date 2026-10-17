@@ -29,6 +29,7 @@ The result is complete only when all of these are true:
 - All required fonts and media load locally; the page makes no runtime request to the reference domain.
 - Browser checks report zero broken images, zero unintended horizontal overflow, and zero console errors.
 - The folder contains run instructions and notes identifying reusable structure, tokens, and components.
+- The site folder, including `dist/`, is committed and pushed to `main`. The gallery build and Firebase publish run in GitHub Actions.
 
 A page-shaped approximation is not done. A single screenshot used as the page is not reusable and is not done.
 
@@ -229,7 +230,13 @@ Before reporting completion:
 1. Re-run the local server from the documented command.
 2. Re-run desktop and mobile screenshot comparisons.
 3. Re-run broken-image, overflow, console, and interaction checks.
-4. Inspect repository status and stage only this website's files.
+4. Commit the site folder, including `dist/`, plus `gallery/sites.json` and any new thumbnail. Push to `main`.
 5. Report the localhost URL, output folder, tested viewports, check results, and any intentional differences.
 
 If any completion criterion is still false, continue the loop or state the specific blocker. Separate checks that passed from checks that could not be run. Do not describe the clone as perfect or complete based only on successful file creation, copied source markup, or an HTTP 200 response.
+
+## Publishing
+
+A push to `main` is the release. GitHub Actions runs `node scripts/build-gallery.mjs` and deploys the `gooddesigns` site to https://gooddesigns.web.app. The last run took about a minute and a half. Do not run that build or `firebase deploy` locally. `public/` is gitignored and is assembled in CI from `gallery/` and each site's committed `dist/`.
+
+To show the clone in the gallery, append it to `gallery/sites.json` and commit a thumbnail from `npx -p playwright node scripts/capture-thumbs.mjs <slug>` before the push.
