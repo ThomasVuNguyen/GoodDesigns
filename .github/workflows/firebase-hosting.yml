@@ -1,0 +1,39 @@
+# Pushing to main builds the gallery and publishes the gooddesigns Firebase Hosting site.
+# Auth is keyless: GitHub's OIDC token is exchanged for the hosting deployer account.
+name: Deploy to Firebase Hosting
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: firebase-hosting-live
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - uses: google-github-actions/auth@v3
+        with:
+          workload_identity_provider: projects/372397827204/locations/global/workloadIdentityPools/github-actions-pool/providers/gooddesigns
+          service_account: github-gooddesigns-hosting@starmind-72daa.iam.gserviceaccount.com
+
+      - name: Build gallery
+        run: node scripts/build-gallery.mjs
+
+      - name: Deploy to Firebase Hosting
+        run: npx --yes firebase-tools@15.14.0 deploy --only hosting --project starmind-72daa --non-interactive

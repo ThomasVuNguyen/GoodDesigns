@@ -44,6 +44,8 @@ node scripts/build-gallery.mjs          # assembles public/ (gitignored) from ga
 firebase deploy --only hosting          # publishes it
 ```
 
+A push to `main` runs that build and publishes the `gooddesigns` site. The workflow is `.github/workflows/firebase-hosting.yml`.
+
 To add a site, append it to `gallery/sites.json`, rebuild, then refresh thumbnails with `npx -p playwright node scripts/capture-thumbs.mjs <slug>` (needs Chrome installed). The build script rewrites root-absolute asset paths (`/assets/...`) so every site works under `/sites/<slug>/`.
 
 ## Good Videos
