@@ -30,6 +30,7 @@ A personal collection of high-fidelity, self-contained recreations of websites a
 - [Reservoir](./Reservoir/) — local capture of `withreservoir.com`, with its intro card, pannable letters wall, cards and timeline views, the Meet Reservoir story overlay, and local Stack Sans Text fonts.
 - [Generalist GEN-1.5](./Generalist/) — local capture of the `generalistai.com/blog/gen-1.5` research post, with its three.js cover, 42 demo videos in the custom player, prompt-pair tabs, charts, footnotes and local FK Grotesk fonts.
 - [Arc Institute Tools](./ArcInstitute/) — local capture of `arcinstitute.org/tools`, hydrated from the original Next.js chunks with its mega-menu dropdowns, announcement banner, lab search, illustrated tool cards and local Tiempos/IBM Plex fonts.
+- [fal Worlds](./FalWorlds/) — local capture of `fal.ai/worlds`, hydrated from the original Next.js chunks with its endless scroll of generated canvas objects, typed tagline, nav dropdowns, mobile menu and local Focal/Public Sans fonts.
 - [Notion product page](./Notion/) — responsive reconstruction of `notion.com/product`, including local fonts, imagery, navigation, motion, feature cards, testimonials, CTA, and footer.
 
 Each design lives in its own folder with local run instructions.

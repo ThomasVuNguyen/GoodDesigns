@@ -1,0 +1,4 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="d21639e8-3dae-2369-1a12-edf4527b06d0")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,582816,e=>{"use strict";e.i(732009),e.s(["f",0,function(e){let n=new Map,t=new Map,i=e.clone();return function e(n,t,i){i(n,t);for(let o=0;o<n.children.length;o++)e(n.children[o],t.children[o],i)}(e,i,function(e,i){n.set(i,e),t.set(e,i)}),i.traverse(function(e){if(!e.isSkinnedMesh)return;let i=n.get(e),o=i.skeleton.bones;e.skeleton=i.skeleton.clone(),e.bindMatrix.copy(i.bindMatrix),e.skeleton.bones=o.map(function(e){return t.get(e)}),e.bind(e.skeleton,e.bindMatrix)}),i}])}]);
+
+//# debugId=d21639e8-3dae-2369-1a12-edf4527b06d0
