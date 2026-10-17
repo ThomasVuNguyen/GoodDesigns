@@ -35,6 +35,7 @@
     { "slug": "teamwork-graph", "name": "Atlassian Teamwork Graph", "folder": "TeamworkGraph", "reference": "https://teamworkgraph.com/", "tagline": "Meet the graph that builds your teamwork context", "captured": "2026-10-14" },
     { "slug": "glow-bacteria-kit", "name": "Glow-in-the-Dark Bacteria Kit", "folder": "GlowBacteriaKit", "reference": "Glow-in-the-Dark_Bacteria_Engineering_Kit.pdf (The ODIN)", "tagline": "The ODIN's 18-page GFP protocol PDF, page for page from its own vectors, with selectable text and working checklists", "captured": "2026-10-14" },
     { "slug": "reservoir", "name": "Reservoir", "folder": "Reservoir", "reference": "https://withreservoir.com/", "tagline": "Preserve your immune cells at their current best · letters-to-the-future wall and Meet Reservoir story", "captured": "2026-10-15" },
-    { "slug": "generalist-gen-1-5", "name": "Generalist GEN-1.5", "folder": "Generalist", "reference": "https://generalistai.com/blog/gen-1.5", "tagline": "Embodied foundation models are one-shot learners · research post with 3D cover, custom video player and interactive charts", "captured": "2026-10-15" }
+    { "slug": "generalist-gen-1-5", "name": "Generalist GEN-1.5", "folder": "Generalist", "reference": "https://generalistai.com/blog/gen-1.5", "tagline": "Embodied foundation models are one-shot learners · research post with 3D cover, custom video player and interactive charts", "captured": "2026-10-15" },
+    { "slug": "arc-institute-tools", "name": "Arc Institute Tools", "folder": "ArcInstitute", "reference": "https://arcinstitute.org/tools", "tagline": "Computational tools from Arc scientists · hero, lab search and illustrated tool cards", "captured": "2026-10-16" }
   ]
 }
