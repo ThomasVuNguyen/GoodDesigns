@@ -21,7 +21,7 @@
   $('grid').innerHTML = sites.map((s) => `
     <li class="card">
       <a class="thumb" href="#/${s.slug}" aria-label="View ${s.name}">
-        <img src="thumbs/${s.slug}.jpg" alt="${s.name} preview" loading="lazy" width="1200" height="750">
+        <img src="thumbs/${s.slug}.jpg?v=${s.captured}" alt="${s.name} preview" loading="lazy" width="1200" height="750">
       </a>
       <div class="meta">
         <h2><a href="#/${s.slug}">${s.name}</a></h2>
