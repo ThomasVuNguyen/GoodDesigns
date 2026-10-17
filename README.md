@@ -29,13 +29,14 @@ A personal collection of high-fidelity, self-contained recreations of websites a
 - [Glow-in-the-Dark Bacteria Kit](./GlowBacteriaKit/) — The ODIN's 18-page protocol PDF reproduced page for page from its own vectors (pixel-diffed against the PDF), with a selectable text layer, working step checkboxes, a notes field and linked QR codes.
 - [Reservoir](./Reservoir/) — local capture of `withreservoir.com`, with its intro card, pannable letters wall, cards and timeline views, the Meet Reservoir story overlay, and local Stack Sans Text fonts.
 - [Generalist GEN-1.5](./Generalist/) — local capture of the `generalistai.com/blog/gen-1.5` research post, with its three.js cover, 42 demo videos in the custom player, prompt-pair tabs, charts, footnotes and local FK Grotesk fonts.
+- [Arc Institute Tools](./ArcInstitute/) — local capture of `arcinstitute.org/tools`, hydrated from the original Next.js chunks with its mega-menu dropdowns, announcement banner, lab search, illustrated tool cards and local Tiempos/IBM Plex fonts.
 - [Notion product page](./Notion/) — responsive reconstruction of `notion.com/product`, including local fonts, imagery, navigation, motion, feature cards, testimonials, CTA, and footer.
 
 Each design lives in its own folder with local run instructions.
 
 ## Gallery (Firebase Hosting)
 
-`gallery/` is a browsable index of every recreation (and of the Good Videos list) with an in-page viewer and a link to each site's folder in this repo. It deploys to the `gooddesigns` site in Firebase project `starmind`.
+`gallery/` is a browsable index of every recreation (and of the Good Videos list) with an in-page viewer and a link to each site's folder in this repo. It deploys to the `gooddesigns` site in Firebase project `starmind-72daa`.
 
 ```bash
 node scripts/build-gallery.mjs          # assembles public/ (gitignored) from gallery/ + each <Site>/dist
