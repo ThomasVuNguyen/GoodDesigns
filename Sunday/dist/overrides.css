@@ -1,0 +1,277 @@
+/* Local interactions layered on the captured Sunday styles. */
+
+/* The captured page leaves its intro curtain in place until the app boots. */
+body > .cursor-progress {
+  display: none !important;
+}
+
+header > div {
+  transition: width 0.35s ease, height 0.35s ease;
+}
+
+#menu-scrim {
+  transition: opacity 0.25s ease;
+}
+
+#menu-scrim.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+#toc-pill {
+  transition: width 0.35s ease, height 0.35s ease, transform 0.45s ease;
+}
+
+#toc-pill .toc-items {
+  transition: opacity 0.25s ease;
+}
+
+#toc-pill.is-open .toc-items,
+#toc-pill.is-open .toc-items > ul {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto;
+}
+
+#toc-pill.is-open .toc-indicators {
+  visibility: hidden;
+}
+
+#toc-pill .toc-indicators li.is-current {
+  background: var(--color-off-black, #1a1a1a);
+}
+
+media-controller {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+media-controller img[slot="poster"] {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+
+media-controller.is-playing img[slot="poster"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+[id$="-panel"] {
+  transition: height 0.3s ease, opacity 0.3s ease;
+}
+
+@media (max-width: 1023px) {
+  .word-stick {
+    padding-bottom: 32vh;
+  }
+}
+
+#vote-overlay,
+#subscribe-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  display: none;
+}
+
+#vote-overlay.is-open,
+#subscribe-dialog.is-open {
+  display: block;
+}
+
+#vote-overlay {
+  background: #d9ecee;
+  color: #1a1a1a;
+  overflow: auto;
+}
+
+#vote-stage {
+  display: grid;
+  grid-template-columns: 1fr minmax(220px, 280px) auto;
+  gap: 32px;
+  align-items: center;
+  min-height: 100%;
+  padding: 72px 48px 48px;
+}
+
+#vote-copy h2 {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: -0.025em;
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+#vote-copy p {
+  color: rgba(26, 26, 26, 0.6);
+  font-family: var(--font-sans), sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+#hat-rail {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  max-height: 100vh;
+  overflow: auto;
+  padding: 24px 8px 80px;
+  scrollbar-width: none;
+}
+
+.hat-card {
+  width: 240px;
+  margin: 0 auto;
+  padding: 12px 12px 16px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 16px 40px rgba(26, 26, 26, 0.12);
+  cursor: pointer;
+  text-align: left;
+  border: 2px solid transparent;
+}
+
+.hat-card:nth-child(odd) { transform: rotate(-4deg); }
+.hat-card:nth-child(even) { transform: rotate(3deg); }
+
+.hat-card.is-selected {
+  border-color: #1a1a1a;
+}
+
+.hat-card img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.hat-card strong,
+.hat-card span {
+  display: block;
+  font-family: var(--font-sans), sans-serif;
+}
+
+.hat-card strong {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+.hat-card span {
+  color: rgba(26, 26, 26, 0.55);
+  font-size: 0.875rem;
+}
+
+#vote-next,
+#vote-close,
+#subscribe-close {
+  border: 1px solid rgba(26, 26, 26, 0.15);
+  background: transparent;
+  border-radius: 999px;
+  cursor: pointer;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.025em;
+}
+
+#vote-next {
+  height: 40px;
+  padding: 0 16px;
+}
+
+#vote-next:disabled {
+  opacity: 0.45;
+}
+
+#vote-close,
+#subscribe-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+}
+
+#subscribe-dialog {
+  background: rgba(26, 26, 26, 0.35);
+}
+
+#subscribe-card {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(420px, calc(100% - 32px));
+  padding: 28px;
+  border-radius: 16px;
+  background: #fff;
+  color: #1a1a1a;
+}
+
+#subscribe-card h2 {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+}
+
+#subscribe-card form {
+  display: flex;
+  gap: 8px;
+}
+
+#subscribe-card input {
+  flex: 1;
+  border: 1px solid rgba(26, 26, 26, 0.15);
+  border-radius: 999px;
+  padding: 10px 14px;
+  font: inherit;
+  font-size: 0.9rem;
+}
+
+#subscribe-card button[type="submit"] {
+  border: 0;
+  border-radius: 999px;
+  background: #1a1a1a;
+  color: #fff;
+  padding: 0 16px;
+  cursor: pointer;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.75rem;
+}
+
+#weather-pills span {
+  border: 1px solid rgba(26, 26, 26, 0.18);
+  border-radius: 999px;
+  padding: 6px 12px;
+  font-family: var(--font-mono), monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+:focus-visible {
+  outline: 2px solid #1a1a1a;
+  outline-offset: 3px;
+}
+
+@media (max-width: 800px) {
+  #vote-stage {
+    grid-template-columns: 1fr;
+    padding: 72px 20px 32px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  header > div,
+  #toc-pill,
+  [id$="-panel"],
+  media-controller img[slot="poster"] {
+    transition: none;
+  }
+}

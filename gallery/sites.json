@@ -39,6 +39,7 @@
     { "slug": "arc-institute-tools", "name": "Arc Institute Tools", "folder": "ArcInstitute", "reference": "https://arcinstitute.org/tools", "tagline": "Computational tools from Arc scientists · hero, lab search and illustrated tool cards", "captured": "2026-10-16" },
     { "slug": "fal-worlds", "name": "fal Worlds", "folder": "FalWorlds", "reference": "https://fal.ai/worlds", "tagline": "Build the next intelligence frontier with fal worlds · endless scroll of generative canvas objects behind a giant wordmark", "captured": "2026-10-16" },
     { "slug": "periodic", "name": "Nature Is Our Learning Environment", "folder": "Periodic", "reference": "https://periodic.com/news/nature-is-our-learning-environment", "tagline": "Periodic Labs research article · scientific midtraining, XRD figures, and disclosures", "captured": "2026-10-17" },
-    { "slug": "stripe-press", "name": "Stripe Press", "folder": "StripePress", "reference": "https://press.stripe.com/", "tagline": "Ideas for progress · WebGL book stack, film and podcast details", "captured": "2026-10-17" }
+    { "slug": "stripe-press", "name": "Stripe Press", "folder": "StripePress", "reference": "https://press.stripe.com/", "tagline": "Ideas for progress · WebGL book stack, film and podcast details", "captured": "2026-10-17" },
+    { "slug": "sunday", "name": "Sunday", "folder": "Sunday", "reference": "https://www.sunday.ai/", "tagline": "The helpful home robot", "captured": "2026-10-18" }
   ]
 }
