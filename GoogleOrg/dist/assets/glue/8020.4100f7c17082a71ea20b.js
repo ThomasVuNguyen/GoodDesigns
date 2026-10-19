@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbrightspot_theme_core=self.webpackChunkbrightspot_theme_core||[]).push([[8020],{8020:function(e,t,r){r.r(t),r.d(t,{HeaderNavigationGlue:function(){return c}});var n=r(7509);class c{constructor(){const e=document.querySelector(".glue-header");if(!e)return!1;this.init(e)}init(e){e&&new n.h(e)}}}}]);

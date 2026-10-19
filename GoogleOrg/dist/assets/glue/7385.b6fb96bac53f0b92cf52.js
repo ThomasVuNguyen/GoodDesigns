@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbrightspot_theme_core=self.webpackChunkbrightspot_theme_core||[]).push([[7385],{7385:function(t,o,e){e.r(o),e.d(o,{ReturnToTop:function(){return r}});class r{constructor(){const t=document.querySelector(".return-to-top a");t&&t.addEventListener("click",(function(){window.scrollTo({top:0,behavior:"smooth"})}))}}}}]);

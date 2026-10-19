@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkbrightspot_theme_core=self.webpackChunkbrightspot_theme_core||[]).push([[3950],{3950:function(e,t,n){n.r(t),n.d(t,{BannerGlue:function(){return u}});var r=n(5395),c=function(e){return e.BANNER=".glue-banner",e}(c||{});class u{constructor(){document.querySelectorAll(c.BANNER).forEach((e=>{this.init(e)}))}init(e){e&&new r.jL(e)}}}}]);
