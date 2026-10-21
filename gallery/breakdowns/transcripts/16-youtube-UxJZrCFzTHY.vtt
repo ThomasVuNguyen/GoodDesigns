@@ -1,0 +1,112 @@
+WEBVTT
+
+00:00.880 --> 00:04.000
+Now experiments that took weeks take days.
+
+00:04.800 --> 00:07.920
+That can enable scientific breakthroughs much quicker.
+
+00:09.680 --> 00:14.640
+For the past year, we've been putting AI to work inside labs and manufacturing facilities.
+
+00:16.160 --> 00:17.440
+We kept hitting the same wall.
+
+00:19.040 --> 00:22.560
+There's no common way to connect a model to physical equipment.
+
+00:22.560 --> 00:25.040
+The model hardware standard changes that.
+
+00:25.040 --> 00:30.880
+MHS gives any AI model one standard way to connect with and operate devices.
+
+00:30.880 --> 00:35.920
+If you wanted your instruments to work together, say a camera and a stage of a microscope,
+
+00:35.920 --> 00:38.720
+you had to build a custom software integration between them.
+
+00:39.440 --> 00:42.080
+Every device you add complicates the picture.
+
+00:42.720 --> 00:45.600
+For complicated experiments, that's weeks of work.
+
+00:46.480 --> 00:50.080
+With MHS, each device connects once through one interface.
+
+00:50.640 --> 00:52.560
+The setup is accelerated by the agent.
+
+00:52.560 --> 01:04.960
+The agent has access to this context and can control operations.
+
+01:06.000 --> 01:09.680
+Here we're seeing Claude controlling a Leica microscope on its own.
+
+01:09.680 --> 01:14.880
+It's focusing the microscope, looking for a bacteria and deciding what to capture next.
+
+01:15.920 --> 01:19.520
+At Genentech, a scientist designed an experiment in a PDF,
+
+01:19.520 --> 01:21.760
+and dropped that PDF into Claude.
+
+01:21.760 --> 01:24.560
+Then Claude autonomously executed that experiment.
+
+01:24.560 --> 01:28.080
+When things went wrong, it was able to recover even overnight.
+
+01:28.080 --> 01:35.840
+The iteration cycle is much faster and the focus for me as a scientist shifts to actual scientific questions.
+
+01:35.840 --> 01:41.120
+Once everything is connected, running an experiment looks like you ask Claude to start it.
+
+01:41.120 --> 01:45.680
+Here we are looking at images of neurons in the brain.
+
+01:45.680 --> 01:53.120
+With MHS, I can instruct the microscope to move around, go deeper, or even take side views.
+
+01:53.120 --> 01:53.920
+All in real time.
+
+01:53.920 --> 02:00.320
+If you can test hypotheses faster, you could create general technologies faster,
+
+02:00.880 --> 02:04.560
+like finding new materials, also solving important scientific problems.
+
+02:04.560 --> 02:07.440
+This is how a century of progress can compress into a decade.
+
+02:07.440 --> 02:12.800
+The first time I've been able to do is to make a new model for a century of science.
+
+02:12.800 --> 02:14.800
+The first time I've been able to do is to make a new model for a century of science.
+
+02:14.800 --> 02:16.800
+The first time I've been able to do is to make a new model for a century of science.
+
+02:16.800 --> 02:18.800
+The first time I've been able to do is to make a new model for a century of science.
+
+02:18.800 --> 02:20.800
+The first time I've been able to do is to make a new model for a century of science.
+
+02:20.800 --> 02:22.800
+The first time I've been able to do is to make a new model for a century of science.
+
+02:22.800 --> 02:24.800
+The first time I've been able to do is to make a new model for a century of science.
+
+02:24.800 --> 02:26.800
+The first time I've been able to do is to make a new model for a century of science.
+
+02:26.800 --> 02:28.800
+The first time I've been able to do is to make a new model for a century of science.

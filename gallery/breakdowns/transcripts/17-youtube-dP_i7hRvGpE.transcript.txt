@@ -1,0 +1,56 @@
+[00:00:00] When somebody walks onto the floor for the first time, the biggest shock is really that we say
+[00:00:18] we're building prototypes and you see essentially almost a full manufacturing line. And that's
+[00:00:23] really why prototype operations exist is because we are putting a level of scaled rigor into a
+[00:00:29] prototype process. And that's another reason that allows us to do prototypes at scale, not just one or two.
+[00:00:35] Prototype operations helps support research and development builds and our suite of services that
+[00:00:43] can help translate everyone's designs into real products across the whole spectrum of being able
+[00:00:48] to build it, test it, support it, and maintain it all within a prototype space.
+[00:00:52] We own our own shop because we get so many no quotes. Nobody can do what we do. Every time we
+[00:01:06] try to get something done outside, they say we can't do it. We work with such tight tolerances
+[00:01:12] that it's very hard to get work done outside the shop.
+[00:01:15] We're really trying to accelerate velocity of technology development. And so having our own
+[00:01:21] precision shop allows us to both have the engineering team come down to the machine shop, interact, make
+[00:01:27] adjustments really fast, and then produce the parts at extremely high quality and extreme speed.
+[00:01:36] Machining parts for robots that don't exist yet varies from production because you're developing the
+[00:01:43] machining method. You know, you're doing the first pass on the design for manufacturing where, you know,
+[00:01:50] tool selection is really important to creating the part efficiently and cost effectively.
+[00:01:57] So here at Boston Dynamics, you know, we do some very niche things to make the robot go.
+[00:02:03] So we do a lot of gear cutting and that's very, very specific in the industry. So you don't see it in many
+[00:02:09] places and you really get to explore it here. We're basically the candy store for 600 engineers.
+[00:02:16] So every time they need something, we have to come up with a way to make it. So every machine you see
+[00:02:22] here is new. We've gotten more advanced year after year. We get to use a lot of different specialized
+[00:02:29] equipment and tools. I could name an endless number that are really awesome where I would dream of having
+[00:02:36] this at any other place I've ever worked. And here we just casually have it, which is phenomenal.
+[00:02:41] Our precision shop downstairs has state of the art machining equipment on the line. We've got robot
+[00:02:47] arms integrated into our assembly process. And a lot of this stuff is really phenomenal, but I think the
+[00:02:53] coolest part of all of it is the collection of our capabilities and that we're constantly striving to
+[00:02:59] add more and more capabilities. A year ago, building one robot was quite an event. So over the past year,
+[00:03:06] we've really scaled up and now to build one robot, it's about a day. And next year, it's going to be
+[00:03:12] about an hour. And then years after that, it's going to be minutes. The feedback loop is pretty brutal,
+[00:03:16] but in a good way. You can go from having an idea Monday to being able to implement it by the end of
+[00:03:22] the week. This spans across design, assembly processes, just general organizational processes,
+[00:03:28] are allowed to rapidly iterate and find issues really, really fast and fail fast. And it allows us to be
+[00:03:34] able to solve the right problems really quickly.
+[00:03:41] They know we can make anything, so they're going to try anything. So when engineers come in here and
+[00:03:47] they see that our capacities and see what we can do, they start really thinking outside the box. And
+[00:03:52] that's what this whole company is about, thinking outside the box.
+[00:03:55] I'd say the biggest game changer from general manufacturing is that here at Boston Dynamics, you
+[00:04:02] get end-to-end ownership of a project. So you start with, you know, working with the engineers, trying to
+[00:04:08] figure out the best way to approach any given project. And really develop it from start to finish.
+[00:04:14] When you get to take one of the parts that you made and put it in a robot, it is awesome. One of the big
+[00:04:19] differences between here and general machining in the, you know, most of the world is, you know,
+[00:04:24] you're just making a part because it came down the order and you have no idea what it goes through.
+[00:04:28] You know, maybe somebody tells you to go to a ship far away that you'll never be on, but you know,
+[00:04:33] here we'll, we'll make a part. And then in some cases that parts assemble same day or next day,
+[00:04:38] and then you can go upstairs into the humanoid department and, you know, watch it move. And it's
+[00:04:43] really cool. You want to do something different every day, you want to have fun at work. It's a
+[00:04:50] great place to work. Benefits are great. People are great. We work with the engineers and that's
+[00:04:55] totally different. You never get to work with engineers anywhere else that I've been or seen,
+[00:04:59] where you can talk to the engineer if you don't like what they did and they come back and they help
+[00:05:04] you out. That's, that's a different world here. We get a lot of pressure, but we put a lot of pressure
+[00:05:09] on ourselves. We get to do some of the coolest things in the world. In my opinion, we get to build
+[00:05:14] robots. A lot of people get numb to it because you see robots walking around here every day, but it's
+[00:05:19] extremely rewarding to be able to contribute to assembling something that you see operate either
+[00:05:24] in a factory, you see it do a backflip on the Atlas lab. It takes an army of people to design and build
+[00:05:31] and test these highly integrated systems. And I think that's just, it's just fun to be a part of.
+[00:05:39] you

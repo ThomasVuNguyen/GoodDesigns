@@ -1,0 +1,151 @@
+[00:00:00] Hi everyone, I'm Rachel.
+[00:00:09] Kimi Work is our local agent.
+[00:00:11] It's like an AI teammate on your computer.
+[00:00:13] It can work directly with your files, browser, and everyday tools to help you get things done.
+[00:00:19] If you use Kimi on the web, you probably know the usual flow.
+[00:00:22] Upload a file, wait for Kimi to finish, and then download the result.
+[00:00:27] With Kimi Work, it's much simpler.
+[00:00:29] Just tell Kimi where the file is, and it can read and edit it directly.
+[00:00:33] When it's done, the results stay right on your computer.
+[00:00:37] In this video, we'll start by installing Kimi Work.
+[00:00:39] Then I'll show you around, walk you through the basics, and introduce a few advanced features for more complex tasks.
+[00:00:47] The video is divided into chapters, so feel free to jump to the part you need, or stay with me, and we'll go through it together, step by step.
+[00:00:55] First, let's get Kimi Work set up.
+[00:00:57] Go to Kimi.ai, click Kimi Work on the sidebar, and follow the instructions to install it.
+[00:01:03] Once it's installed, sign in with your Kimi account, and you're ready to get started.
+[00:01:11] Once you open Kimi Work app, you'll see two tabs, chat and work.
+[00:01:15] Chat works just like Kimi on the web, and your history stays in sync.
+[00:01:20] Today, we're focusing on the work, so go ahead and select it.
+[00:01:23] Let's take a quick look at the interface.
+[00:01:27] On the far left, you'll find features including dashboards, plugins, and schedule tasks.
+[00:01:32] Below is your history, where your projects and conversations are saved.
+[00:01:37] Before we move on, let's look at a few settings worth knowing about.
+[00:01:41] One is permissions.
+[00:01:42] This determines whether Kimi Work needs your approval before it takes action.
+[00:01:47] Another is model and thinking level.
+[00:01:49] For more complex tasks, you can choose a higher thinking level, but it will take longer.
+[00:01:55] Here, we can start by selecting K3 High.
+[00:01:59] To start a new task, click the Create button beside Project and choose a folder.
+[00:02:04] You can use an existing folder or create a new one.
+[00:02:08] The folders become KimiWorks workspace.
+[00:02:11] It can read the files inside, edit existing files, and create new content.
+[00:02:16] Now, let's try a simple task together.
+[00:02:19] Organizing a project folder.
+[00:02:21] We can ask Kimi to read every file and sort them by content.
+[00:02:25] Put duplicate or outdated files into a review folder and give us a summary when it's done.
+[00:02:30] We can see Kimi opens each file, work out what it's for, organize the folder as requested, and send us the result.
+[00:02:40] But what if the information you need isn't stored locally?
+[00:02:43] Sometime, you need to look it up in a browser or sign into an account before you can access it.
+[00:02:48] That's when you can use Kimi browser extension.
+[00:02:51] Once you've installed it by following the instructions,
+[00:02:54] KimiWorks can work directly within the page in your browser.
+[00:02:58] For example, it can browse feeds, find social media trends and insights,
+[00:03:03] or help you fill out online forms.
+[00:03:05] Now, let's go beyond the browser.
+[00:03:08] KimiWorks can also use other apps on your computer.
+[00:03:11] Once computer use is installed and enabled,
+[00:03:13] Kimi can understand what's on your screen and handle actions that will normally require a mouse and a keyboard,
+[00:03:19] including clicking, scrolling, and typing.
+[00:03:23] From sending a message or printing a file to working on complex software,
+[00:03:28] you can hand all kinds of tasks over to KimiWork.
+[00:03:31] For example, before a product launch, you can ask Kimi to follow a checklist, test each feature, and record any issues it finds.
+[00:03:40] Kimi follows the same step as a real user would.
+[00:03:43] It opens a feature and works through the entire flow.
+[00:03:47] From files to browser to the rest of your computer,
+[00:03:50] KimiWork can take action across more and more of your workspace.
+[00:03:54] That means more of the work you use to handle yourself can now be handed over to Kimi.
+[00:03:59] Now we've covered the basic, let's look at a few advanced features for more complex tasks.
+[00:04:05] So far, we've been working with one agent at a time.
+[00:04:10] But some tasks are simply too big for one agent to handle alone.
+[00:04:14] Like converting hundreds of files into the same format,
+[00:04:17] or putting together a business review,
+[00:04:19] where sales data, user feedback, and support issues need to be analyzed separately.
+[00:04:24] That's when you can use agents form.
+[00:04:26] It's like a team of agents built for your task.
+[00:04:29] Each agent has its own strength,
+[00:04:31] and they work together in parallel to complete the projects.
+[00:04:35] Let's look at an example.
+[00:04:37] Say I want to research the global semiconductor market.
+[00:04:40] Finding the data and doing the analysis used to take several days, or even a week.
+[00:04:45] Now, I can click here and hand the full task over to the agent's form.
+[00:04:50] Once Kimi received the task, this form divides the work on its own.
+[00:04:54] Some agents collect and organize data, some test strategies, other analyze risk, combine the findings, and write the report.
+[00:05:03] An hour later, I have an analysis of 100 semiconductor stocks based on 10 years of data, 5 strategies to consider, and a complete research report, and with public presentation.
+[00:05:15] Instead of relying on one agent to do everything, you now have a whole team working together.
+[00:05:21] That makes even larger, complex tasks much more manageable.
+[00:05:26] Agents form helps with large tasks by splitting the work across a team of agents.
+[00:05:32] Goal works differently.
+[00:05:34] You can give Kimi a clear result to work towards, along with the standards you need to meet.
+[00:05:39] Kimi then keeps working, tracking, and improving the result until it's done.
+[00:05:43] Let's say you want to make a small game.
+[00:05:46] Writing the first version of code is only the beginning.
+[00:05:49] Before the game is truly finished, it needs to be tested and improved again and again.
+[00:05:54] This is exactly the kind of task Goal is designed for.
+[00:05:58] Kimi can build, check its work, and make changes until the results meet your requirements.
+[00:06:04] To use it, type a slash and select Goal.
+[00:06:07] A good Goal should clearly cover three things.
+[00:06:10] What you want Kimi to make, what it should check before finishing, and any rules you need to follow.
+[00:06:17] Here, I'm asking Kimi to build a 3D retro arcade that runs on the browser and includes four classic games.
+[00:06:25] Before it finishes, Kimi needs to play each game and make sure everything runs smoothly with no errors.
+[00:06:31] I've also added one design rule. No neon or cyberpunk elements.
+[00:06:36] Once the Goal is set, you don't need to look at the test window or review every version.
+[00:06:41] Kimi will build, test, and fix the result on its own.
+[00:06:44] As long as it hasn't met the requirements, it will keep going.
+[00:06:48] A regular task may finish in 10 or 20 minutes.
+[00:06:52] With Goal, Kimi can keep working for hours.
+[00:06:55] Here's the final result.
+[00:06:57] If we compare it with earlier version, we can see the visuals becoming more polished and the games becoming more playable with each round.
+[00:07:05] Good tools help people work more efficiently, and the same is true for agents.
+[00:07:11] Now, let's give Kimi the right tools.
+[00:07:14] Plugins are like tool kit for Kimi work.
+[00:07:16] Click Plugins on the left to open the plugin marketplace.
+[00:07:20] There are two types of plugins in Kimi work.
+[00:07:23] The first is connectors.
+[00:07:25] They let Kimi connect to and use the apps you already work with, including Google Workspace, Notion, Obsidian, Blender, Trepo, etc.
+[00:07:35] The second is expert skills.
+[00:07:37] They cover areas like financial analysis, software development, and design,
+[00:07:42] and show Kimi how to handle those specialized tasks.
+[00:07:46] Many tasks also need reliable data.
+[00:07:48] Kimi connects to professional data sources, including WINT, scientific databases, and academic research databases.
+[00:07:55] On the skills page, you will also find more ready-made workflows for specific tasks, such as organizing meeting notes, polishing presentation, and converting citation formats.
+[00:08:07] Let's install them.
+[00:08:08] Just find the plugin you need in the marketplace and click install.
+[00:08:12] Then click use or type a slash in the chat box to quickly open any plugin you've installed.
+[00:08:17] If you can't find the right plugin, you can build your own.
+[00:08:21] Type a slash, choose plugin builder, and describe what you need.
+[00:08:25] You can build one from an open source project, connect it to a third-party app, or turn a workflow you use often into a reusable plugin.
+[00:08:34] With plugins, Kimi can take a bigger role in your day-to-day work.
+[00:08:38] It can read documents from the tool you already use, pull in data from professional databases, organize the final material, and email them to a client.
+[00:08:47] We'll keep adding to the plugin library, so you can come back and see what's new.
+[00:08:52] A good coworker does more than getting the job done.
+[00:08:55] They also learn how you like to work.
+[00:08:57] Agents.md helps Kimi do the same.
+[00:09:00] Think of Agents.md as a set of standing instructions for Kimi work.
+[00:09:05] Each project folder or conversation can have its own file, so Kimi knows how to handle that type of work.
+[00:09:11] And you don't need to write it from scratch.
+[00:09:14] Just tell Kimi about the work, the rules they should follow, the plugins they should use, and the final output you want.
+[00:09:21] Kimi can turn those requirements into an Agents.md for you.
+[00:09:25] As you can see, Kimi creates an Agents.md for you and saves it to the right project folder.
+[00:09:31] If anything changes later, you can edit it yourself or ask Kimi to update it.
+[00:09:36] With Agents.md, future tasks become much easier.
+[00:09:41] Just tell Kimi what you want to do, and it will automatically follow the same instructions.
+[00:09:46] Dashboard can help you keep up with the things that matter in your everyday work.
+[00:09:50] It brings everything into one place.
+[00:09:52] Click Dashboard on the left, and you'll see two examples.
+[00:09:55] One is Daily Finance Dashboard.
+[00:09:57] It brings market news, stock prices, and industry heat map onto one page.
+[00:10:02] Each part is a widget.
+[00:10:04] You can move and combine them, delete the ones you don't need, or ping them to your desktop for easier access.
+[00:10:10] Simply put, anything you want to follow can become a widget.
+[00:10:14] It doesn't have to be work data.
+[00:10:16] Your calendar, habit tracking, daily news, or even a playlist can all become widgets.
+[00:10:22] Put them together, and you have a dashboard of your own.
+[00:10:25] To make a dashboard of your own, click the plus button on the top and tell Kimi work what you want to follow.
+[00:10:31] It will help you build the dashboard step by step, through conversations.
+[00:10:35] And that's your tour of Kimi work.
+[00:10:37] I put everything we've covered into a mind map.
+[00:10:40] Feel free to take a screenshot and save it for later.
+[00:10:43] There's a lot here, so don't worry about remembering everything at once.
+[00:10:47] And if anything is so unclear, you can also download Kimi work and ask it directly.
+[00:10:53] I'll see you next time.
+[00:10:54] Bye.

@@ -1,0 +1,187 @@
+[00:00:02] [Music]
+[00:00:02] you never know when it's right to ship a
+[00:00:04] 1.0 and it always feels too soon what's
+[00:00:09] the worst thing that can happen people
+[00:00:10] don't like it we'll find out eventually
+[00:00:12] we better find out
+[00:00:13] [Music]
+[00:00:16] now it's been I think 6 months or less
+[00:00:20] and we're about to be shipping this
+[00:00:21] browser to hundreds of thousands
+[00:00:23] hopefully millions of people oo
+[00:00:26] spicy cheers first question
+[00:00:31] for us the release is very much the
+[00:00:33] beginning and we try to aim for way
+[00:00:35] before we feel like it's done it is like
+[00:00:38] daunting cuz it's a whole other platform
+[00:00:40] like it's and there's so many like way
+[00:00:42] too many users well there's just so many
+[00:00:44] different ways that a Windows app can
+[00:00:46] crash it's controversial we're not a
+[00:00:47] beta anymore the expectations change
+[00:00:50] every time you ship 1.0 is a is the
+[00:00:53] first chapter in a story
+[00:01:00] [Music]
+[00:01:00] you want to say it together yes okay
+[00:01:02] when on Windows 10 okay soon soon we
+[00:01:07] hear you guys we're just a small team
+[00:01:09] and we started with Windows 11 I mean
+[00:01:12] like you go deep on the subreddit it's
+[00:01:14] it's already out there like people
+[00:01:16] people have figured out how to run it on
+[00:01:18] Windows 10 so like you know we can do it
+[00:01:20] too unofficially on Windows 10 this is
+[00:01:22] not a recommendation don't do that we
+[00:01:24] will be bringing it to you in an
+[00:01:26] official capacity
+[00:01:40] all right next question is there a
+[00:01:40] timeline for Ark for Mac feature parody
+[00:01:42] I've seen bcny show off so many cool new
+[00:01:45] arc features only always to realize it's
+[00:01:48] just for the Mac version it's a great
+[00:01:50] question uh parody can mean a lot of
+[00:01:53] different things uh parody in the
+[00:01:55] context of Arcon windows and arc on Mac
+[00:01:57] is going to come through the form of
+[00:02:00] both beefing up the arc on Windows app
+[00:02:02] and also pairing down the arc on Mac app
+[00:02:05] we're a prototype team we have a
+[00:02:08] prototype culture but as a result of
+[00:02:10] that there are a few things in the Mac
+[00:02:11] App that have maybe no place in it
+[00:02:15] anymore it's about finding the balance
+[00:02:16] between what's arc on Windows what's arc
+[00:02:18] on Mac and then what's what's Arc
+[00:02:22] yeah it's so nice having everybody here
+[00:02:25] so this brainstorm the purpose is going
+[00:02:27] to be to figure out what are we doing
+[00:02:29] after G what's up next I had easel on
+[00:02:32] here deflate the networking stack and
+[00:02:35] feature flag generation and interaction
+[00:02:38] and uh we or I should fix the switch CH
+[00:02:42] reps we have a lot to do we've gotten
+[00:02:46] Windows to a point where we're like
+[00:02:48] ready to show it to the world and this
+[00:02:50] was our first chance to be like well
+[00:02:53] what about after that yeah I know what's
+[00:02:55] next yeah okay this isn't really a
+[00:02:57] question it's more of a statement I want
+[00:03:00] all the AI features well us two us two
+[00:03:03] and they're coming soon we're about to
+[00:03:05] we're about to work on them and I think
+[00:03:07] the question is in what order and which
+[00:03:10] ones yeah there was a big big cluster of
+[00:03:12] sticky notes that said arcmax on them so
+[00:03:14] yeah it's coming I know I really miss uh
+[00:03:17] like ask on page I I miss that one too
+[00:03:20] right do you use it in slack use it on
+[00:03:22] Wikipedia when Taylor Swift's new album
+[00:03:24] came out of course I was deep on her
+[00:03:26] Wikipedia figuring out her entire life
+[00:03:29] history and Wikipedia only can tell you
+[00:03:31] so much right you need you need AI to
+[00:03:32] tell you the rest include the one for my
+[00:03:35] dad said it said that's my kid yeah I
+[00:03:38] just saw
+[00:03:49] that um from our our dear friend Josh
+[00:03:49] Miller hey Josh I bet each of you
+[00:03:51] doubted that we could pull off Swift on
+[00:03:53] WIS uh what do you wish you could have
+[00:03:55] told yourself back then when you had
+[00:03:57] doubts about if this was even possible
+[00:03:59] and worth doing I think maybe what I
+[00:04:01] would have told myself is don't second
+[00:04:04] guess as much back then if we had known
+[00:04:08] that this was going to be the world that
+[00:04:11] we were living in we would have had no
+[00:04:14] doubts as to whether or not Swift on
+[00:04:16] Windows was the right call for us if you
+[00:04:18] have a swift app on Mac you can build
+[00:04:22] something and deploy it on Windows
+[00:04:24] pretty quickly we decided we wanted to
+[00:04:26] add picture and picture to the very
+[00:04:29] first version of archon Windows and we
+[00:04:31] were able to get that entire project end
+[00:04:33] to endend done in 3 days kind of
+[00:04:36] amazing why is this such a big feat not
+[00:04:38] only is this the most fleshed out app in
+[00:04:40] Swift on Windows to put things in
+[00:04:42] perspective uh the next most complicated
+[00:04:44] Swift on Windows out was a
+[00:04:53] calculator we really wanted to find the
+[00:04:53] balance between like what it meant to
+[00:04:54] have arc on Windows but also like not
+[00:04:57] have it feel like we just ported the Mac
+[00:04:58] version over lot of us it's the first
+[00:05:00] time we're all designing on um on on
+[00:05:03] Windows yeah I think the hardest parts
+[00:05:04] we're probably just like figuring out
+[00:05:05] what we do with the top bar um I can
+[00:05:07] show you different versions of what that
+[00:05:09] almost looked like if if we just brought
+[00:05:11] over like the Mac top bar like how bad
+[00:05:13] would that feel if we added like a
+[00:05:14] little glassy version of it if we
+[00:05:17] minimized it and just had like smaller
+[00:05:18] little little bits on the left and the
+[00:05:20] right um we had a right sidebar uh which
+[00:05:24] we we tried we explored briefly I really
+[00:05:26] like this blurry material that just kind
+[00:05:27] of like embraced the top but also didn't
+[00:05:30] like focus on it so much yeah we tried
+[00:05:32] one where it like kind of tucks into the
+[00:05:33] top I mean I I still think there's like
+[00:05:35] tons of room to iterate and tons of room
+[00:05:36] to grow from where we're at there's tons
+[00:05:38] of energy internally and externally to
+[00:05:40] try to make that top bar as invisible as
+[00:05:44] [Music]
+[00:05:55] possible a happy
+[00:05:55] M how are performance improvements taken
+[00:05:58] care of super high priority this is I
+[00:06:01] think one of the biggest things on our
+[00:06:02] minds right now the great thing and the
+[00:06:05] complicated thing about Windows is the
+[00:06:06] diversity of Hardware you can have all
+[00:06:09] kinds of different machines with
+[00:06:10] different specs there different
+[00:06:12] Performance challenges but yeah we have
+[00:06:14] amazing people working in performance my
+[00:06:16] job is to make sure that AR run fast and
+[00:06:18] that it's efficient and and stable do a
+[00:06:21] good job Matthew he's
+[00:06:28] fantastic we have three different
+[00:06:28] verticals that we're working on this
+[00:06:29] Milestone which all ultimately tie back
+[00:06:32] to how fast can you use the internet I
+[00:06:35] think there's one more
+[00:06:36] yeah we're talking about this lunch when
+[00:06:39] Android uh soon I'm personally very
+[00:06:42] excited about Android I we have a slack
+[00:06:44] channel uh uh for Android uh where some
+[00:06:47] preliminary stuff is happening I check
+[00:06:49] it every day and if you are a talented
+[00:06:51] Android engineer we'd love to hire
+[00:06:54] [Music]
+[00:06:57] you arc on Windows is the most simple
+[00:07:00] set of features that we felt we needed
+[00:07:03] to put together to bring Arc to Windows
+[00:07:06] and now we get to look ahead and get
+[00:07:08] creative about what we want to follow up
+[00:07:10] with next excited to get plenty of
+[00:07:12] feedback I'm sure it'll be all kinds of
+[00:07:14] feedback it's it's nice to see how much
+[00:07:16] people care Tuesday forward this is a
+[00:07:20] live build we want a gesture towards the
+[00:07:23] future of act two a browser that is
+[00:07:26] deeply personalized to you that browses
+[00:07:28] for you does things things on your
+[00:07:30] behalf so anything that doesn't fall
+[00:07:32] into that category of work is not going
+[00:07:35] to be on our plate for this
+[00:07:38] [Music]
+[00:07:42] Milestone it's uh we are not done it's
+[00:07:46] like just me
+[00:07:59] coming yes it is there's a new day
+[00:07:59] coming
+[00:08:00] a new day

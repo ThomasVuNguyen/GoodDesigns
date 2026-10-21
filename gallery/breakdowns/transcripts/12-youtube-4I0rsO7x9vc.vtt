@@ -1,0 +1,535 @@
+WEBVTT
+
+00:00.000 --> 00:09.160
+Hi everyone, I'm Rachel.
+
+00:09.160 --> 00:11.160
+Kimi Work is our local agent.
+
+00:11.160 --> 00:13.560
+It's like an AI teammate on your computer.
+
+00:13.560 --> 00:19.200
+It can work directly with your files, browser, and everyday tools to help you get things done.
+
+00:19.200 --> 00:22.760
+If you use Kimi on the web, you probably know the usual flow.
+
+00:22.760 --> 00:27.040
+Upload a file, wait for Kimi to finish, and then download the result.
+
+00:27.040 --> 00:29.440
+With Kimi Work, it's much simpler.
+
+00:29.440 --> 00:33.680
+Just tell Kimi where the file is, and it can read and edit it directly.
+
+00:33.680 --> 00:37.200
+When it's done, the results stay right on your computer.
+
+00:37.200 --> 00:39.960
+In this video, we'll start by installing Kimi Work.
+
+00:39.960 --> 00:47.240
+Then I'll show you around, walk you through the basics, and introduce a few advanced features for more complex tasks.
+
+00:47.240 --> 00:55.560
+The video is divided into chapters, so feel free to jump to the part you need, or stay with me, and we'll go through it together, step by step.
+
+00:55.560 --> 00:57.960
+First, let's get Kimi Work set up.
+
+00:57.960 --> 01:03.960
+Go to Kimi.ai, click Kimi Work on the sidebar, and follow the instructions to install it.
+
+01:03.960 --> 01:11.200
+Once it's installed, sign in with your Kimi account, and you're ready to get started.
+
+01:11.200 --> 01:15.920
+Once you open Kimi Work app, you'll see two tabs, chat and work.
+
+01:15.920 --> 01:20.160
+Chat works just like Kimi on the web, and your history stays in sync.
+
+01:20.160 --> 01:23.920
+Today, we're focusing on the work, so go ahead and select it.
+
+01:23.920 --> 01:27.920
+Let's take a quick look at the interface.
+
+01:27.920 --> 01:32.920
+On the far left, you'll find features including dashboards, plugins, and schedule tasks.
+
+01:32.920 --> 01:37.160
+Below is your history, where your projects and conversations are saved.
+
+01:37.160 --> 01:41.920
+Before we move on, let's look at a few settings worth knowing about.
+
+01:41.920 --> 01:42.920
+One is permissions.
+
+01:42.920 --> 01:47.920
+This determines whether Kimi Work needs your approval before it takes action.
+
+01:47.920 --> 01:49.920
+Another is model and thinking level.
+
+01:49.920 --> 01:55.920
+For more complex tasks, you can choose a higher thinking level, but it will take longer.
+
+01:55.920 --> 01:59.920
+Here, we can start by selecting K3 High.
+
+01:59.920 --> 02:04.920
+To start a new task, click the Create button beside Project and choose a folder.
+
+02:04.920 --> 02:08.920
+You can use an existing folder or create a new one.
+
+02:08.920 --> 02:11.920
+The folders become KimiWorks workspace.
+
+02:11.920 --> 02:16.920
+It can read the files inside, edit existing files, and create new content.
+
+02:16.920 --> 02:19.920
+Now, let's try a simple task together.
+
+02:19.920 --> 02:21.920
+Organizing a project folder.
+
+02:21.920 --> 02:25.920
+We can ask Kimi to read every file and sort them by content.
+
+02:25.920 --> 02:30.920
+Put duplicate or outdated files into a review folder and give us a summary when it's done.
+
+02:30.920 --> 02:40.920
+We can see Kimi opens each file, work out what it's for, organize the folder as requested, and send us the result.
+
+02:40.920 --> 02:43.920
+But what if the information you need isn't stored locally?
+
+02:43.920 --> 02:48.920
+Sometime, you need to look it up in a browser or sign into an account before you can access it.
+
+02:48.920 --> 02:51.920
+That's when you can use Kimi browser extension.
+
+02:51.920 --> 02:54.920
+Once you've installed it by following the instructions,
+
+02:54.920 --> 02:58.920
+KimiWorks can work directly within the page in your browser.
+
+02:58.920 --> 03:03.920
+For example, it can browse feeds, find social media trends and insights,
+
+03:03.920 --> 03:05.920
+or help you fill out online forms.
+
+03:05.920 --> 03:08.920
+Now, let's go beyond the browser.
+
+03:08.920 --> 03:11.920
+KimiWorks can also use other apps on your computer.
+
+03:11.920 --> 03:13.920
+Once computer use is installed and enabled,
+
+03:13.920 --> 03:19.920
+Kimi can understand what's on your screen and handle actions that will normally require a mouse and a keyboard,
+
+03:19.920 --> 03:23.920
+including clicking, scrolling, and typing.
+
+03:23.920 --> 03:28.920
+From sending a message or printing a file to working on complex software,
+
+03:28.920 --> 03:31.920
+you can hand all kinds of tasks over to KimiWork.
+
+03:31.920 --> 03:40.920
+For example, before a product launch, you can ask Kimi to follow a checklist, test each feature, and record any issues it finds.
+
+03:40.920 --> 03:43.920
+Kimi follows the same step as a real user would.
+
+03:43.920 --> 03:47.920
+It opens a feature and works through the entire flow.
+
+03:47.920 --> 03:50.920
+From files to browser to the rest of your computer,
+
+03:50.920 --> 03:54.920
+KimiWork can take action across more and more of your workspace.
+
+03:54.920 --> 03:59.920
+That means more of the work you use to handle yourself can now be handed over to Kimi.
+
+03:59.920 --> 04:05.920
+Now we've covered the basic, let's look at a few advanced features for more complex tasks.
+
+04:05.920 --> 04:10.920
+So far, we've been working with one agent at a time.
+
+04:10.920 --> 04:14.920
+But some tasks are simply too big for one agent to handle alone.
+
+04:14.920 --> 04:17.920
+Like converting hundreds of files into the same format,
+
+04:17.920 --> 04:19.920
+or putting together a business review,
+
+04:19.920 --> 04:24.920
+where sales data, user feedback, and support issues need to be analyzed separately.
+
+04:24.920 --> 04:26.920
+That's when you can use agents form.
+
+04:26.920 --> 04:29.920
+It's like a team of agents built for your task.
+
+04:29.920 --> 04:31.920
+Each agent has its own strength,
+
+04:31.920 --> 04:35.920
+and they work together in parallel to complete the projects.
+
+04:35.920 --> 04:37.920
+Let's look at an example.
+
+04:37.920 --> 04:40.920
+Say I want to research the global semiconductor market.
+
+04:40.920 --> 04:45.920
+Finding the data and doing the analysis used to take several days, or even a week.
+
+04:45.920 --> 04:50.920
+Now, I can click here and hand the full task over to the agent's form.
+
+04:50.920 --> 04:54.920
+Once Kimi received the task, this form divides the work on its own.
+
+04:54.920 --> 05:03.920
+Some agents collect and organize data, some test strategies, other analyze risk, combine the findings, and write the report.
+
+05:03.920 --> 05:15.920
+An hour later, I have an analysis of 100 semiconductor stocks based on 10 years of data, 5 strategies to consider, and a complete research report, and with public presentation.
+
+05:15.920 --> 05:21.920
+Instead of relying on one agent to do everything, you now have a whole team working together.
+
+05:21.920 --> 05:26.920
+That makes even larger, complex tasks much more manageable.
+
+05:26.920 --> 05:32.920
+Agents form helps with large tasks by splitting the work across a team of agents.
+
+05:32.920 --> 05:34.920
+Goal works differently.
+
+05:34.920 --> 05:39.920
+You can give Kimi a clear result to work towards, along with the standards you need to meet.
+
+05:39.920 --> 05:43.920
+Kimi then keeps working, tracking, and improving the result until it's done.
+
+05:43.920 --> 05:46.920
+Let's say you want to make a small game.
+
+05:46.920 --> 05:49.920
+Writing the first version of code is only the beginning.
+
+05:49.920 --> 05:54.920
+Before the game is truly finished, it needs to be tested and improved again and again.
+
+05:54.920 --> 05:58.920
+This is exactly the kind of task Goal is designed for.
+
+05:58.920 --> 06:04.920
+Kimi can build, check its work, and make changes until the results meet your requirements.
+
+06:04.920 --> 06:07.920
+To use it, type a slash and select Goal.
+
+06:07.920 --> 06:10.920
+A good Goal should clearly cover three things.
+
+06:10.920 --> 06:17.920
+What you want Kimi to make, what it should check before finishing, and any rules you need to follow.
+
+06:17.920 --> 06:25.920
+Here, I'm asking Kimi to build a 3D retro arcade that runs on the browser and includes four classic games.
+
+06:25.920 --> 06:31.920
+Before it finishes, Kimi needs to play each game and make sure everything runs smoothly with no errors.
+
+06:31.920 --> 06:36.920
+I've also added one design rule. No neon or cyberpunk elements.
+
+06:36.920 --> 06:41.920
+Once the Goal is set, you don't need to look at the test window or review every version.
+
+06:41.920 --> 06:44.920
+Kimi will build, test, and fix the result on its own.
+
+06:44.920 --> 06:48.920
+As long as it hasn't met the requirements, it will keep going.
+
+06:48.920 --> 06:52.920
+A regular task may finish in 10 or 20 minutes.
+
+06:52.920 --> 06:55.920
+With Goal, Kimi can keep working for hours.
+
+06:55.920 --> 06:57.920
+Here's the final result.
+
+06:57.920 --> 07:05.920
+If we compare it with earlier version, we can see the visuals becoming more polished and the games becoming more playable with each round.
+
+07:05.920 --> 07:11.920
+Good tools help people work more efficiently, and the same is true for agents.
+
+07:11.920 --> 07:14.920
+Now, let's give Kimi the right tools.
+
+07:14.920 --> 07:16.920
+Plugins are like tool kit for Kimi work.
+
+07:16.920 --> 07:20.920
+Click Plugins on the left to open the plugin marketplace.
+
+07:20.920 --> 07:23.920
+There are two types of plugins in Kimi work.
+
+07:23.920 --> 07:25.920
+The first is connectors.
+
+07:25.920 --> 07:35.920
+They let Kimi connect to and use the apps you already work with, including Google Workspace, Notion, Obsidian, Blender, Trepo, etc.
+
+07:35.920 --> 07:37.920
+The second is expert skills.
+
+07:37.920 --> 07:42.920
+They cover areas like financial analysis, software development, and design,
+
+07:42.920 --> 07:46.920
+and show Kimi how to handle those specialized tasks.
+
+07:46.920 --> 07:48.920
+Many tasks also need reliable data.
+
+07:48.920 --> 07:55.920
+Kimi connects to professional data sources, including WINT, scientific databases, and academic research databases.
+
+07:55.920 --> 08:07.920
+On the skills page, you will also find more ready-made workflows for specific tasks, such as organizing meeting notes, polishing presentation, and converting citation formats.
+
+08:07.920 --> 08:08.920
+Let's install them.
+
+08:08.920 --> 08:12.920
+Just find the plugin you need in the marketplace and click install.
+
+08:12.920 --> 08:17.920
+Then click use or type a slash in the chat box to quickly open any plugin you've installed.
+
+08:17.920 --> 08:21.920
+If you can't find the right plugin, you can build your own.
+
+08:21.920 --> 08:25.920
+Type a slash, choose plugin builder, and describe what you need.
+
+08:25.920 --> 08:34.920
+You can build one from an open source project, connect it to a third-party app, or turn a workflow you use often into a reusable plugin.
+
+08:34.920 --> 08:38.920
+With plugins, Kimi can take a bigger role in your day-to-day work.
+
+08:38.920 --> 08:47.920
+It can read documents from the tool you already use, pull in data from professional databases, organize the final material, and email them to a client.
+
+08:47.920 --> 08:52.920
+We'll keep adding to the plugin library, so you can come back and see what's new.
+
+08:52.920 --> 08:55.920
+A good coworker does more than getting the job done.
+
+08:55.920 --> 08:57.920
+They also learn how you like to work.
+
+08:57.920 --> 09:00.920
+Agents.md helps Kimi do the same.
+
+09:00.920 --> 09:05.920
+Think of Agents.md as a set of standing instructions for Kimi work.
+
+09:05.920 --> 09:11.920
+Each project folder or conversation can have its own file, so Kimi knows how to handle that type of work.
+
+09:11.920 --> 09:14.920
+And you don't need to write it from scratch.
+
+09:14.920 --> 09:21.920
+Just tell Kimi about the work, the rules they should follow, the plugins they should use, and the final output you want.
+
+09:21.920 --> 09:25.920
+Kimi can turn those requirements into an Agents.md for you.
+
+09:25.920 --> 09:31.920
+As you can see, Kimi creates an Agents.md for you and saves it to the right project folder.
+
+09:31.920 --> 09:36.920
+If anything changes later, you can edit it yourself or ask Kimi to update it.
+
+09:36.920 --> 09:41.920
+With Agents.md, future tasks become much easier.
+
+09:41.920 --> 09:46.920
+Just tell Kimi what you want to do, and it will automatically follow the same instructions.
+
+09:46.920 --> 09:50.920
+Dashboard can help you keep up with the things that matter in your everyday work.
+
+09:50.920 --> 09:52.920
+It brings everything into one place.
+
+09:52.920 --> 09:55.920
+Click Dashboard on the left, and you'll see two examples.
+
+09:55.920 --> 09:57.920
+One is Daily Finance Dashboard.
+
+09:57.920 --> 10:02.920
+It brings market news, stock prices, and industry heat map onto one page.
+
+10:02.920 --> 10:04.920
+Each part is a widget.
+
+10:04.920 --> 10:10.920
+You can move and combine them, delete the ones you don't need, or ping them to your desktop for easier access.
+
+10:10.920 --> 10:14.920
+Simply put, anything you want to follow can become a widget.
+
+10:14.920 --> 10:16.920
+It doesn't have to be work data.
+
+10:16.920 --> 10:22.920
+Your calendar, habit tracking, daily news, or even a playlist can all become widgets.
+
+10:22.920 --> 10:25.920
+Put them together, and you have a dashboard of your own.
+
+10:25.920 --> 10:31.920
+To make a dashboard of your own, click the plus button on the top and tell Kimi work what you want to follow.
+
+10:31.920 --> 10:35.920
+It will help you build the dashboard step by step, through conversations.
+
+10:35.920 --> 10:37.920
+And that's your tour of Kimi work.
+
+10:37.920 --> 10:40.920
+I put everything we've covered into a mind map.
+
+10:40.920 --> 10:43.920
+Feel free to take a screenshot and save it for later.
+
+10:43.920 --> 10:47.920
+There's a lot here, so don't worry about remembering everything at once.
+
+10:47.920 --> 10:53.920
+And if anything is so unclear, you can also download Kimi work and ask it directly.
+
+10:53.920 --> 10:54.920
+I'll see you next time.
+
+10:54.920 --> 10:55.920
+Bye.
+
+10:55.920 --> 10:56.920
+Bye.
+
+10:56.920 --> 10:57.920
+Bye.
+
+10:57.920 --> 10:58.920
+Bye.
+
+10:58.920 --> 10:59.920
+Bye.
+
+10:59.920 --> 11:00.920
+Bye.
+
+11:00.920 --> 11:01.920
+Bye.
+
+11:01.920 --> 11:02.920
+Bye.
+
+11:02.920 --> 11:03.920
+Bye.
+
+11:03.920 --> 11:04.920
+Bye.
+
+11:04.920 --> 11:05.920
+Bye.
+
+11:05.920 --> 11:06.920
+Bye.
+
+11:06.920 --> 11:07.920
+Bye.
+
+11:07.920 --> 11:08.920
+Bye.
+
+11:08.920 --> 11:09.920
+Bye.
+
+11:09.920 --> 11:10.920
+Bye.
+
+11:10.920 --> 11:11.920
+Bye.
+
+11:11.920 --> 11:12.920
+Bye.
+
+11:12.920 --> 11:13.920
+Bye.
+
+11:13.920 --> 11:14.920
+Bye.
+
+11:14.920 --> 11:15.920
+Bye.
+
+11:15.920 --> 11:16.920
+Bye.
+
+11:16.920 --> 11:17.920
+Bye.
+
+11:17.920 --> 11:18.920
+Bye.
+
+11:18.920 --> 11:19.920
+Bye.
+
+11:19.920 --> 11:20.920
+Bye.
+
+11:20.920 --> 11:21.920
+Bye.
+
+11:21.920 --> 11:22.920
+Bye.

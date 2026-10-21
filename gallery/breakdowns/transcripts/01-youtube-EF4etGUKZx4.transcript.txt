@@ -1,0 +1,90 @@
+[00:00:06] Hi, I'm Mila.
+[00:00:08] Today I'm excited to show you the Form Studio 1 ecosystem
+[00:00:11] and guide you through its simple workflow.
+[00:00:13] This Form Labs SLA printer is built for a range of users,
+[00:00:17] from artists, makers and designers to professional teams,
+[00:00:20] all looking for professional results without the complexity.
+[00:00:23] I'll walk you through the complete workflow, from preparing a file
+[00:00:26] in PreForm, to setting up your printer, to post-processing your parts.
+[00:00:30] Start to finish, this is a workflow anyone can learn in minutes.
+[00:00:34] First up, let's prepare the file you want to print.
+[00:00:37] Grab your design from your preferred CAD software, model repository or 3D artist,
+[00:00:42] then open it up in PreForm – Formlabs’ free and easy print preparation software.
+[00:00:47] With Formlabs’ validated print settings for each supported material,
+[00:00:51] you can set up your part with just one click.
+[00:00:54] Next, it's time to choose your layer thickness.
+[00:00:57] Smaller layers give you slightly smoother surfaces and better detail,
+[00:01:01] but they'll add to your print time.
+[00:01:03] For a balance between speed and detail, I'd recommend a larger layer
+[00:01:07] setting like 100 microns, but if you want a maximum fine feature
+[00:01:11] detail, you can drop down to something smaller, like 30 to 50 microns.
+[00:01:15] The last thing to do is select one click print.
+[00:01:18] It'll set up your supports, layout and orientation automatically.
+[00:01:22] All in one go.
+[00:01:23] Want even more control?
+[00:01:25] You can fine tune your setup further
+[00:01:26] by making manual adjustments to your settings.
+[00:01:29] You can also play around
+[00:01:30] with advanced settings like the part texturing and hollowing tools.
+[00:01:35] Looking to use a third party resin or adjust your print settings by hand?
+[00:01:39] No problem.
+[00:01:40] Form Studio 1 is an open platform built for flexibility.
+[00:01:44] Once your file is ready, you can send it straight to your printer via Wi-Fi or USB.
+[00:01:49] Not near your printer?
+[00:01:50] Remote print’s got you covered, letting you upload the job from anywhere.
+[00:01:54] Or you can use the Formlabs mobile app to print right from your phone
+[00:01:59] Form Studio 1 comes with two resin tank options – the Form
+[00:02:02] Studio 1 Resin Tank and the Forum Studio 1 Resin Tank Pro.
+[00:02:06] Check our website to confirm material compatibility.
+[00:02:09] Today I'm printing in the Alpha White resin,
+[00:02:11] so I'll use a Form Studio 1 Resin Tank.
+[00:02:14] It just slides into place and the two side latches snap shut.
+[00:02:18] Next, insert a Form Studio 1 build platform and latch it into place,
+[00:02:23] or upgrade to the Build Platform Flex with quick release technology to easily
+[00:02:27] remove parts from the build platform without any extra tools.
+[00:02:31] Last thing, insert your resin cartridge and open the air vent.
+[00:02:34] Formlabs’ hassle free cartridge dispenses resin automatically so you can switch
+[00:02:38] between materials without pouring a drop of liquid resin by hand.
+[00:02:42] Form Studio 1 will sense everything's inserted correctly and confirm
+[00:02:46] that you're ready to print
+[00:02:48] For the safest printing workflow, add Formlabs’ fume extraction system.
+[00:02:52] With it in place., your Form Studio 1 ecosystem is UL Green Guard certified.
+[00:02:57] Plug in the power cord.
+[00:02:58] Then, on the back of your printer, remove the fume exhaust port cover and connect
+[00:03:02] the hose that connects the two.
+[00:03:05] Once it's powered on, you can choose between three flow speeds.
+[00:03:08] Only keep it running for the duration of your print.
+[00:03:11] Once your print finishes, there are three main steps in post-processing.
+[00:03:14] Rinsing in wash solvent, removing supports, and then post curing.
+[00:03:19] Formlabs combines washing and curing into one
+[00:03:22] easy compact unit, the Form Wash+Cure.
+[00:03:25] To wash your parts, insert the wash bucket into the unit filled with IPA,
+[00:03:29] TPM or Formlabs resin washing solution.
+[00:03:33] Turn on the wash cycle for your desired duration, letting the solvent agitate
+[00:03:37] around your parts to clear away any uncured resin left over from printing.
+[00:03:41] Once washing is done,
+[00:03:43] remove the internal basket and using the hooks on the outside,
+[00:03:46] prop it up on the edge of the wash basin
+[00:03:48] so your parts can drain and air dry completely.
+[00:03:52] Before you start curing, make sure your parts are fully dry.
+[00:03:55] We also recommend removing any support structures before curing.
+[00:03:58] Light touch supports are designed to tear away with ease,
+[00:04:01] keeping support marks to a minimum for easier finishing.
+[00:04:05] Next, remove the wash bucket and pull out the glass
+[00:04:08] turntable tucked in the back recess of the cavity.
+[00:04:11] Drop the turntable into place at the bottom of the unit.
+[00:04:14] You'll feel it slot into place when it's seated.
+[00:04:17] Place your parts on top of the turntable, close the lid
+[00:04:19] and set the timer for your desired curing duration.
+[00:04:23] Curing’s the last step.
+[00:04:24] It’s what gives your parts its final strength.
+[00:04:27] What more of a hands off, streamlined washing and curing experience?
+[00:04:30] You can always upgrade to the Form Wash and Form Cure.
+[00:04:33] And that's it.
+[00:04:34] Your parts are ready to go.
+[00:04:35] From here, it's up to you.
+[00:04:37] Sand, paint, coat or electroplate.
+[00:04:40] Whatever brings your vision to the next level.
+[00:04:42] Speed, quality and accessibility.
+[00:04:45] The Form Studio 1 makes it easy no matter who you are or what you're creating.
+[00:04:49] Learn more and get started at formlabs.com

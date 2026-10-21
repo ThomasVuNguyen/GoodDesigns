@@ -1,0 +1,48 @@
+[00:00:00] Welcome to our course on managing projects in Notion.
+[00:00:05] I'm Andrea and I work on brand campaigns at Notion.
+[00:00:08] A big part of my job is overseeing work across a bunch of teams,
+[00:00:13] making sure stakeholders are on the same page,
+[00:00:15] keeping track of project timelines and statuses so everything launches as scheduled,
+[00:00:20] and keeping our brand voice consistent across channels.
+[00:00:24] Managing this work in Notion ensures that everyone working on a campaign
+[00:00:27] is on the same page at any point in time.
+[00:00:30] In this course, you'll learn how to plan and execute a project with Notion.
+[00:00:36] We'll walk you through how to set up and customize your own project management workflow
+[00:00:40] in a way that's tailored to your company and team.
+[00:00:43] Along the way, we'll also explore how to connect your projects to your docs in Notion,
+[00:00:48] track sprints, integrate GitHub, and much more.
+[00:00:52] But before getting into the details, let's zoom out.
+[00:00:54] In one way or another, projects are how most of us work.
+[00:00:58] They're how we turn an idea into reality.
+[00:01:01] Having ideas is great.
+[00:01:03] Every company has ideas.
+[00:01:04] If you can't turn that idea into something real, something that is actually providing value,
+[00:01:08] you will not survive as a company.
+[00:01:10] Once you have an idea, you're left with the challenging task of organizing all the moving pieces of your project.
+[00:01:16] Think about it.
+[00:01:18] How many tasks and docs do you have to puzzle together to achieve your goal?
+[00:01:22] And where does all this information live?
+[00:01:25] Often, it's dozens of tools.
+[00:01:28] Tasks, updates, statuses, pings, buzzes, and blips coming at you from everywhere.
+[00:01:33] We believe that to do your most impactful work, project management needs to unite documentation,
+[00:01:39] context, and execution in a seamless way.
+[00:01:43] Old ways of running projects meant you'd have to fill these gaps with painful meetings that could have been emails,
+[00:01:48] and long email threads cluttering your inbox.
+[00:01:51] Instead, you can bring all your project work together in Notion for everyone.
+[00:01:58] Whether your current project management system is sticky notes on your desk or a full-fledged agile workflow,
+[00:02:04] Notion brings clarity and alignment.
+[00:02:07] You can see the project plan, all its tasks with owners and deadlines, the meeting notes for that project,
+[00:02:12] and all relevant docs in one place.
+[00:02:15] In upcoming lessons, we'll focus on how you can unlock project flow state.
+[00:02:20] You'll learn how to write a project plan using Notion AI,
+[00:02:24] create a related project tracker with tasks and custom properties,
+[00:02:29] build views of tasks for different members on your team,
+[00:02:33] manage tasks in sprints,
+[00:02:36] and finally, integrate your system with other essential tools, like GitHub.
+[00:02:41] Enough talking. Let's dive deeper into how you can use Notion to start effectively managing your projects,
+[00:02:47] starting by creating a project plan.
+[00:02:50] See you soon.
+[00:02:51] Bye.
+[00:02:52] Bye.
+[00:03:10] Bye.
+[00:03:12] Bye.

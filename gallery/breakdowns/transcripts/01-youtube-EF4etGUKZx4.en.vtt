@@ -1,0 +1,339 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:06.381 --> 00:00:08.091
+Hi, I'm Mila.
+
+00:00:08.091 --> 00:00:11.636
+Today I'm excited to show you the Form
+Studio 1 ecosystem
+
+00:00:11.720 --> 00:00:13.513
+and guide you through its simple workflow.
+
+00:00:13.513 --> 00:00:17.017
+This Form Labs
+SLA printer is built for a range of users,
+
+00:00:17.017 --> 00:00:20.603
+from artists, makers and designers
+to professional teams,
+
+00:00:20.603 --> 00:00:23.606
+all looking for professional results
+without the complexity.
+
+00:00:23.773 --> 00:00:26.776
+I'll walk you through the complete
+workflow, from preparing a file
+
+00:00:26.776 --> 00:00:30.363
+in PreForm, to setting up your printer,
+to post-processing your parts.
+
+00:00:30.488 --> 00:00:33.825
+Start to finish, this is a workflow
+anyone can learn in minutes.
+
+00:00:34.409 --> 00:00:37.287
+First up, let's prepare the file
+you want to print.
+
+00:00:37.287 --> 00:00:42.083
+Grab your design from your preferred CAD
+software, model repository or 3D artist,
+
+00:00:42.208 --> 00:00:47.464
+then open it up in PreForm – Formlabs’
+free and easy print preparation software.
+
+00:00:47.672 --> 00:00:51.342
+With Formlabs’ validated print settings
+for each supported material,
+
+00:00:51.468 --> 00:00:53.636
+you can set up your
+part with just one click.
+
+00:00:54.971 --> 00:00:57.932
+Next, it's time to choose your layer
+thickness.
+
+00:00:57.932 --> 00:01:01.519
+Smaller layers give you slightly smoother
+surfaces and better detail,
+
+00:01:01.519 --> 00:01:03.188
+but they'll add to your print time.
+
+00:01:03.188 --> 00:01:07.233
+For a balance between speed and detail,
+I'd recommend a larger layer
+
+00:01:07.233 --> 00:01:11.196
+setting like 100 microns,
+but if you want a maximum fine feature
+
+00:01:11.196 --> 00:01:14.991
+detail, you can drop down to something
+smaller, like 30 to 50 microns.
+
+00:01:15.241 --> 00:01:18.244
+The last thing to do is select
+one click print.
+
+00:01:18.244 --> 00:01:22.123
+It'll set up your supports,
+layout and orientation automatically.
+
+00:01:22.290 --> 00:01:23.708
+All in one go.
+
+00:01:23.708 --> 00:01:25.001
+Want even more control?
+
+00:01:25.001 --> 00:01:26.795
+You can fine tune your setup further
+
+00:01:26.795 --> 00:01:29.756
+by making manual adjustments
+to your settings.
+
+00:01:29.756 --> 00:01:30.965
+You can also play around
+
+00:01:30.965 --> 00:01:34.344
+with advanced settings like the part
+texturing and hollowing tools.
+
+00:01:35.261 --> 00:01:38.973
+Looking to use a third party resin
+or adjust your print settings by hand?
+
+00:01:39.015 --> 00:01:40.100
+No problem.
+
+00:01:40.100 --> 00:01:43.853
+Form Studio 1
+is an open platform built for flexibility.
+
+00:01:44.395 --> 00:01:49.150
+Once your file is ready, you can send it
+straight to your printer via Wi-Fi or USB.
+
+00:01:49.526 --> 00:01:50.944
+Not near your printer?
+
+00:01:50.944 --> 00:01:54.739
+Remote print’s got you covered,
+letting you upload the job from anywhere.
+
+00:01:54.781 --> 00:01:58.576
+Or you can use the Formlabs
+mobile app to print right from your phone
+
+00:01:59.035 --> 00:02:02.622
+Form Studio 1 comes with two resin tank
+options – the Form
+
+00:02:02.622 --> 00:02:06.042
+Studio 1 Resin Tank
+and the Forum Studio 1 Resin Tank Pro.
+
+00:02:06.334 --> 00:02:09.337
+Check our website to confirm
+material compatibility.
+
+00:02:09.337 --> 00:02:11.923
+Today
+I'm printing in the Alpha White resin,
+
+00:02:11.923 --> 00:02:14.926
+so I'll use a Form Studio 1 Resin Tank.
+
+00:02:14.968 --> 00:02:18.304
+It just slides into place
+and the two side latches snap shut.
+
+00:02:18.847 --> 00:02:22.976
+Next, insert a Form Studio
+1 build platform and latch it into place,
+
+00:02:23.059 --> 00:02:27.689
+or upgrade to the Build Platform Flex
+with quick release technology to easily
+
+00:02:27.689 --> 00:02:30.692
+remove parts from the build platform
+without any extra tools.
+
+00:02:31.109 --> 00:02:34.571
+Last thing, insert your resin cartridge
+and open the air vent.
+
+00:02:34.779 --> 00:02:38.825
+Formlabs’ hassle free cartridge dispenses
+resin automatically so you can switch
+
+00:02:38.825 --> 00:02:42.245
+between materials without pouring
+a drop of liquid resin by hand.
+
+00:02:42.829 --> 00:02:46.416
+Form Studio 1 will sense everything's
+inserted correctly and confirm
+
+00:02:46.416 --> 00:02:48.001
+that you're ready to print
+
+00:02:48.001 --> 00:02:52.046
+For the safest printing workflow, add
+Formlabs’ fume extraction system.
+
+00:02:52.172 --> 00:02:56.676
+With it in place., your Form Studio 1
+ecosystem is UL Green Guard certified.
+
+00:02:57.260 --> 00:02:58.636
+Plug in the power cord.
+
+00:02:58.636 --> 00:03:02.765
+Then, on the back of your printer, remove
+the fume exhaust port cover and connect
+
+00:03:02.765 --> 00:03:04.058
+the hose that connects the two.
+
+00:03:05.101 --> 00:03:08.354
+Once it's powered on, you can choose
+between three flow speeds.
+
+00:03:08.563 --> 00:03:11.149
+Only keep it running
+for the duration of your print.
+
+00:03:11.149 --> 00:03:14.694
+Once your print finishes, there are three
+main steps in post-processing.
+
+00:03:14.819 --> 00:03:18.948
+Rinsing in wash solvent,
+removing supports, and then post curing.
+
+00:03:19.449 --> 00:03:22.285
+Formlabs
+combines washing and curing into one
+
+00:03:22.285 --> 00:03:25.288
+easy compact unit, the Form Wash+Cure.
+
+00:03:25.413 --> 00:03:29.375
+To wash your parts, insert the wash bucket
+into the unit filled with IPA,
+
+00:03:29.542 --> 00:03:32.545
+TPM or Formlabs resin washing solution.
+
+00:03:33.171 --> 00:03:37.217
+Turn on the wash cycle for your desired
+duration, letting the solvent agitate
+
+00:03:37.217 --> 00:03:41.012
+around your parts to clear away
+any uncured resin left over from printing.
+
+00:03:41.930 --> 00:03:43.097
+Once washing is done,
+
+00:03:43.097 --> 00:03:46.559
+remove the internal basket
+and using the hooks on the outside,
+
+00:03:46.684 --> 00:03:48.728
+prop it up on the edge of the wash basin
+
+00:03:48.728 --> 00:03:51.731
+so your parts can drain
+and air dry completely.
+
+00:03:52.023 --> 00:03:55.026
+Before you start curing,
+make sure your parts are fully dry.
+
+00:03:55.026 --> 00:03:58.529
+We also recommend removing
+any support structures before curing.
+
+00:03:58.821 --> 00:04:01.824
+Light touch supports are designed
+to tear away with ease,
+
+00:04:01.908 --> 00:04:05.078
+keeping support marks
+to a minimum for easier finishing.
+
+00:04:05.328 --> 00:04:08.414
+Next, remove the wash bucket
+and pull out the glass
+
+00:04:08.414 --> 00:04:11.417
+turntable tucked in the back
+recess of the cavity.
+
+00:04:11.626 --> 00:04:14.420
+Drop the turntable into place
+at the bottom of the unit.
+
+00:04:14.420 --> 00:04:17.006
+You'll feel it slot into place
+when it's seated.
+
+00:04:17.006 --> 00:04:19.801
+Place your parts on top of the turntable,
+close the lid
+
+00:04:19.801 --> 00:04:22.804
+and set the timer
+for your desired curing duration.
+
+00:04:23.346 --> 00:04:24.722
+Curing’s the last step.
+
+00:04:24.722 --> 00:04:27.058
+It’s what gives your parts
+its final strength.
+
+00:04:27.058 --> 00:04:30.353
+What more of a hands off,
+streamlined washing and curing experience?
+
+00:04:30.478 --> 00:04:33.481
+You can always upgrade to the Form
+Wash and Form Cure.
+
+00:04:33.731 --> 00:04:34.691
+And that's it.
+
+00:04:34.691 --> 00:04:35.942
+Your parts are ready to go.
+
+00:04:35.942 --> 00:04:37.652
+From here, it's up to you.
+
+00:04:37.652 --> 00:04:40.154
+Sand, paint, coat or electroplate.
+
+00:04:40.154 --> 00:04:42.573
+Whatever brings your vision
+to the next level.
+
+00:04:42.573 --> 00:04:45.076
+Speed, quality and accessibility.
+
+00:04:45.076 --> 00:04:48.913
+The Form Studio 1 makes it easy no matter
+who you are or what you're creating.
+
+00:04:49.080 --> 00:04:50.873
+Learn more and get started at formlabs.com

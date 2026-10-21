@@ -1,0 +1,29 @@
+[00:00:00] Now experiments that took weeks take days.
+[00:00:04] That can enable scientific breakthroughs much quicker.
+[00:00:09] For the past year, we've been putting AI to work inside labs and manufacturing facilities.
+[00:00:16] We kept hitting the same wall.
+[00:00:19] There's no common way to connect a model to physical equipment.
+[00:00:22] The model hardware standard changes that.
+[00:00:25] MHS gives any AI model one standard way to connect with and operate devices.
+[00:00:30] If you wanted your instruments to work together, say a camera and a stage of a microscope,
+[00:00:35] you had to build a custom software integration between them.
+[00:00:39] Every device you add complicates the picture.
+[00:00:42] For complicated experiments, that's weeks of work.
+[00:00:46] With MHS, each device connects once through one interface.
+[00:00:50] The setup is accelerated by the agent.
+[00:00:52] The agent has access to this context and can control operations.
+[00:01:06] Here we're seeing Claude controlling a Leica microscope on its own.
+[00:01:09] It's focusing the microscope, looking for a bacteria and deciding what to capture next.
+[00:01:15] At Genentech, a scientist designed an experiment in a PDF,
+[00:01:19] and dropped that PDF into Claude.
+[00:01:21] Then Claude autonomously executed that experiment.
+[00:01:24] When things went wrong, it was able to recover even overnight.
+[00:01:28] The iteration cycle is much faster and the focus for me as a scientist shifts to actual scientific questions.
+[00:01:35] Once everything is connected, running an experiment looks like you ask Claude to start it.
+[00:01:41] Here we are looking at images of neurons in the brain.
+[00:01:45] With MHS, I can instruct the microscope to move around, go deeper, or even take side views.
+[00:01:53] All in real time.
+[00:01:53] If you can test hypotheses faster, you could create general technologies faster,
+[00:02:00] like finding new materials, also solving important scientific problems.
+[00:02:04] This is how a century of progress can compress into a decade.
+[00:02:07] The first time I've been able to do is to make a new model for a century of science.

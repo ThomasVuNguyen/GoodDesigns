@@ -1,0 +1,287 @@
+[
+  {
+    "number": 1,
+    "slug": "youtube-EF4etGUKZx4",
+    "title": "How to Get Perfect Prints Every Time With Form Studio 1",
+    "author": "Formlabs",
+    "url": "https://www.youtube.com/watch?v=EF4etGUKZx4",
+    "duration": 305.374,
+    "bytes": 23130112,
+    "width": 1920,
+    "height": 1080,
+    "fps": "24000/1001",
+    "second_frames": 305,
+    "scene_frames": 69,
+    "transcript": {
+      "vtt": "transcripts/01-youtube-EF4etGUKZx4.en.vtt",
+      "text": "transcripts/01-youtube-EF4etGUKZx4.transcript.txt",
+      "kind": "creator captions"
+    }
+  },
+  {
+    "number": 2,
+    "slug": "x-2110751188916617592",
+    "title": "In partnership with Vinod Khosla (@vkhosla), I’m proud to introduce Reservoir.",
+    "author": "Dr. Nabiha Saklayen (@nabihasaklayen)",
+    "url": "https://x.com/nabihasaklayen/status/2110751188916617592",
+    "duration": 115.093333,
+    "bytes": 47069931,
+    "width": 1920,
+    "height": 1080,
+    "fps": "24000/1001",
+    "second_frames": 115,
+    "scene_frames": 64,
+    "transcript": {
+      "vtt": "transcripts/02-x-2110751188916617592.vtt",
+      "text": "transcripts/02-x-2110751188916617592.transcript.txt",
+      "kind": "local speech recognition"
+    }
+  },
+  {
+    "number": 3,
+    "slug": "youtube-GImxy01wW0o",
+    "title": "Welcome to Notion Projects",
+    "author": "Notion",
+    "url": "https://www.youtube.com/watch?v=GImxy01wW0o",
+    "duration": 176.734,
+    "bytes": 25681182,
+    "width": 1920,
+    "height": 1080,
+    "fps": "2118500/88359",
+    "second_frames": 177,
+    "scene_frames": 26,
+    "transcript": {
+      "vtt": "transcripts/03-youtube-GImxy01wW0o.vtt",
+      "text": "transcripts/03-youtube-GImxy01wW0o.transcript.txt",
+      "kind": "local speech recognition"
+    }
+  },
+  {
+    "number": 4,
+    "slug": "youtube-OfvkfnAQ3JQ",
+    "title": "Arc on Windows is here. Now what...",
+    "author": "The Browser Company",
+    "url": "https://www.youtube.com/watch?v=OfvkfnAQ3JQ",
+    "duration": 483.9835,
+    "bytes": 172259498,
+    "width": 1920,
+    "height": 1080,
+    "fps": "24000/1001",
+    "second_frames": 484,
+    "scene_frames": 172,
+    "transcript": {
+      "vtt": "transcripts/04-youtube-OfvkfnAQ3JQ.en.vtt",
+      "text": "transcripts/04-youtube-OfvkfnAQ3JQ.transcript.txt",
+      "kind": "YouTube auto captions"
+    }
+  },
+  {
+    "number": 5,
+    "slug": "youtube-oHHM9A4jN_M",
+    "title": "We're giving students equity in The Browser Company?",
+    "author": "The Browser Company",
+    "url": "https://www.youtube.com/watch?v=oHHM9A4jN_M",
+    "duration": 172.774,
+    "bytes": 52739217,
+    "width": 1902,
+    "height": 1080,
+    "fps": "24000/1001",
+    "second_frames": 173,
+    "scene_frames": 31,
+    "transcript": {
+      "vtt": "transcripts/05-youtube-oHHM9A4jN_M.en.vtt",
+      "text": "transcripts/05-youtube-oHHM9A4jN_M.transcript.txt",
+      "kind": "YouTube auto captions"
+    }
+  },
+  {
+    "number": 6,
+    "slug": "youtube-IsL4dVezs18",
+    "title": "Introducing GPT-6 in ChatGPT with Intelligent UI",
+    "author": "OpenAI",
+    "url": "https://www.youtube.com/watch?v=IsL4dVezs18",
+    "duration": 70.114,
+    "bytes": 23577647,
+    "width": 1920,
+    "height": 1080,
+    "fps": "1681000/70111",
+    "second_frames": 70,
+    "scene_frames": 36,
+    "transcript": {
+      "vtt": "transcripts/06-youtube-IsL4dVezs18.en.vtt",
+      "text": "transcripts/06-youtube-IsL4dVezs18.transcript.txt",
+      "kind": "YouTube auto captions"
+    }
+  },
+  {
+    "number": 7,
+    "slug": "youtube-uXspbC2srEQ",
+    "title": "Introducing dots, always-on agents built to handle everything.",
+    "author": "OpenAI",
+    "url": "https://www.youtube.com/watch?v=uXspbC2srEQ",
+    "duration": 147.734,
+    "bytes": 29522825,
+    "width": 1920,
+    "height": 1080,
+    "fps": "32200/1343",
+    "second_frames": 148,
+    "scene_frames": 64,
+    "transcript": {
+      "vtt": "transcripts/07-youtube-uXspbC2srEQ.en.vtt",
+      "text": "transcripts/07-youtube-uXspbC2srEQ.transcript.txt",
+      "kind": "creator captions"
+    }
+  },
+  {
+    "number": 8,
+    "slug": "youtube-96ogPwN9ykM",
+    "title": "Get Stuff Done with ChatGPT Voice",
+    "author": "OpenAI",
+    "url": "https://www.youtube.com/watch?v=96ogPwN9ykM",
+    "duration": 125.234,
+    "bytes": 41966015,
+    "width": 1920,
+    "height": 1080,
+    "fps": "375250/15651",
+    "second_frames": 125,
+    "scene_frames": 66,
+    "transcript": {
+      "vtt": "transcripts/08-youtube-96ogPwN9ykM.vtt",
+      "text": "transcripts/08-youtube-96ogPwN9ykM.transcript.txt",
+      "kind": "local speech recognition"
+    }
+  },
+  {
+    "number": 9,
+    "slug": "youtube-0XLGisanEAs",
+    "title": "Discovering new antibiotics with ChatGPT",
+    "author": "OpenAI",
+    "url": "https://www.youtube.com/watch?v=0XLGisanEAs",
+    "duration": 129.354,
+    "bytes": 39527583,
+    "width": 1920,
+    "height": 1080,
+    "fps": "3101000/129337",
+    "second_frames": 129,
+    "scene_frames": 58,
+    "transcript": {
+      "vtt": "transcripts/09-youtube-0XLGisanEAs.en.vtt",
+      "text": "transcripts/09-youtube-0XLGisanEAs.transcript.txt",
+      "kind": "creator captions"
+    }
+  },
+  {
+    "number": 10,
+    "slug": "youtube-q571PxpsdoA",
+    "title": "Meet the family running a cereal business from their dining room with GPT-5.6",
+    "author": "OpenAI",
+    "url": "https://www.youtube.com/watch?v=q571PxpsdoA",
+    "duration": 121.574,
+    "bytes": 15645409,
+    "width": 1920,
+    "height": 1080,
+    "fps": "24000/1001",
+    "second_frames": 122,
+    "scene_frames": 51,
+    "transcript": {
+      "vtt": "transcripts/10-youtube-q571PxpsdoA.vtt",
+      "text": "transcripts/10-youtube-q571PxpsdoA.transcript.txt",
+      "kind": "local speech recognition"
+    }
+  },
+  {
+    "number": 11,
+    "slug": "youtube-hWhfrR9WJ_c",
+    "title": "Meet the broccoli farmer running his farm with GPT-5.6.",
+    "author": "OpenAI",
+    "url": "https://www.youtube.com/watch?v=hWhfrR9WJ_c",
+    "duration": 142.914,
+    "bytes": 14428272,
+    "width": 1920,
+    "height": 1080,
+    "fps": "24000/1001",
+    "second_frames": 143,
+    "scene_frames": 40,
+    "transcript": {
+      "vtt": "transcripts/11-youtube-hWhfrR9WJ_c.ja.vtt",
+      "text": "transcripts/11-youtube-hWhfrR9WJ_c.transcript.txt",
+      "kind": "Japanese speech recognition"
+    }
+  },
+  {
+    "number": 12,
+    "slug": "youtube-4I0rsO7x9vc",
+    "title": "Get Started with Kimi Work - Tutorial #3",
+    "author": "Kimi AI",
+    "url": "https://www.youtube.com/watch?v=4I0rsO7x9vc",
+    "duration": 657.014,
+    "bytes": 221075351,
+    "width": 1920,
+    "height": 1080,
+    "fps": "19690000/656989",
+    "second_frames": 657,
+    "scene_frames": 95,
+    "transcript": {
+      "vtt": "transcripts/12-youtube-4I0rsO7x9vc.vtt",
+      "text": "transcripts/12-youtube-4I0rsO7x9vc.transcript.txt",
+      "kind": "local speech recognition"
+    }
+  },
+  {
+    "number": 13,
+    "slug": "youtube-gqET0T7CWI4",
+    "title": "Build Slides with Kimi Work (Kimi K3)",
+    "author": "Kimi AI",
+    "url": "https://www.youtube.com/watch?v=gqET0T7CWI4",
+    "duration": 123.514,
+    "bytes": 43864545,
+    "width": 1920,
+    "height": 1080,
+    "fps": "3701000/123489",
+    "second_frames": 123,
+    "scene_frames": 27,
+    "transcript": {
+      "vtt": "transcripts/13-youtube-gqET0T7CWI4.vtt",
+      "text": "transcripts/13-youtube-gqET0T7CWI4.transcript.txt",
+      "kind": "local speech recognition"
+    }
+  },
+  {
+    "number": 16,
+    "slug": "youtube-UxJZrCFzTHY",
+    "title": "Model Hardware Standard: AI operating physical equipment",
+    "author": "Anthropic",
+    "url": "https://www.youtube.com/watch?v=UxJZrCFzTHY",
+    "duration": 132.534,
+    "bytes": 13747818,
+    "width": 1572,
+    "height": 1080,
+    "fps": "24000/1001",
+    "second_frames": 133,
+    "scene_frames": 41,
+    "transcript": {
+      "vtt": "transcripts/16-youtube-UxJZrCFzTHY.vtt",
+      "text": "transcripts/16-youtube-UxJZrCFzTHY.transcript.txt",
+      "kind": "local speech recognition"
+    }
+  },
+  {
+    "number": 17,
+    "slug": "youtube-dP_i7hRvGpE",
+    "title": "Machine, Assemble, Repair: How We Build Atlas | Boston Dynamics",
+    "author": "Boston Dynamics",
+    "url": "https://www.youtube.com/watch?v=dP_i7hRvGpE",
+    "duration": 356.474,
+    "bytes": 55896827,
+    "width": 1920,
+    "height": 1080,
+    "fps": "24000/1001",
+    "second_frames": 356,
+    "scene_frames": 135,
+    "transcript": {
+      "vtt": "transcripts/17-youtube-dP_i7hRvGpE.vtt",
+      "text": "transcripts/17-youtube-dP_i7hRvGpE.transcript.txt",
+      "kind": "local speech recognition"
+    }
+  }
+]

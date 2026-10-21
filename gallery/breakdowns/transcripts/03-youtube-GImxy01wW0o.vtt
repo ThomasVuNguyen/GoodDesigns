@@ -1,0 +1,232 @@
+WEBVTT
+
+00:00.000 --> 00:03.320
+Welcome to our course on managing projects in Notion.
+
+00:05.500 --> 00:08.320
+I'm Andrea and I work on brand campaigns at Notion.
+
+00:08.880 --> 00:12.980
+A big part of my job is overseeing work across a bunch of teams,
+
+00:13.200 --> 00:15.500
+making sure stakeholders are on the same page,
+
+00:15.960 --> 00:19.960
+keeping track of project timelines and statuses so everything launches as scheduled,
+
+00:20.360 --> 00:23.120
+and keeping our brand voice consistent across channels.
+
+00:24.040 --> 00:27.320
+Managing this work in Notion ensures that everyone working on a campaign
+
+00:27.320 --> 00:29.860
+is on the same page at any point in time.
+
+00:30.960 --> 00:35.100
+In this course, you'll learn how to plan and execute a project with Notion.
+
+00:36.440 --> 00:40.500
+We'll walk you through how to set up and customize your own project management workflow
+
+00:40.500 --> 00:43.200
+in a way that's tailored to your company and team.
+
+00:43.660 --> 00:47.900
+Along the way, we'll also explore how to connect your projects to your docs in Notion,
+
+00:48.400 --> 00:51.800
+track sprints, integrate GitHub, and much more.
+
+00:52.240 --> 00:54.900
+But before getting into the details, let's zoom out.
+
+00:54.900 --> 00:58.680
+In one way or another, projects are how most of us work.
+
+00:58.680 --> 01:01.980
+They're how we turn an idea into reality.
+
+01:01.980 --> 01:03.280
+Having ideas is great.
+
+01:03.280 --> 01:04.780
+Every company has ideas.
+
+01:04.780 --> 01:08.680
+If you can't turn that idea into something real, something that is actually providing value,
+
+01:08.680 --> 01:10.180
+you will not survive as a company.
+
+01:10.180 --> 01:16.480
+Once you have an idea, you're left with the challenging task of organizing all the moving pieces of your project.
+
+01:16.480 --> 01:18.280
+Think about it.
+
+01:18.280 --> 01:22.780
+How many tasks and docs do you have to puzzle together to achieve your goal?
+
+01:22.780 --> 01:25.280
+And where does all this information live?
+
+01:25.280 --> 01:28.580
+Often, it's dozens of tools.
+
+01:28.580 --> 01:33.580
+Tasks, updates, statuses, pings, buzzes, and blips coming at you from everywhere.
+
+01:33.580 --> 01:39.880
+We believe that to do your most impactful work, project management needs to unite documentation,
+
+01:39.880 --> 01:43.680
+context, and execution in a seamless way.
+
+01:43.680 --> 01:48.880
+Old ways of running projects meant you'd have to fill these gaps with painful meetings that could have been emails,
+
+01:48.880 --> 01:51.880
+and long email threads cluttering your inbox.
+
+01:51.880 --> 01:58.180
+Instead, you can bring all your project work together in Notion for everyone.
+
+01:58.180 --> 02:04.680
+Whether your current project management system is sticky notes on your desk or a full-fledged agile workflow,
+
+02:04.680 --> 02:07.180
+Notion brings clarity and alignment.
+
+02:07.180 --> 02:12.880
+You can see the project plan, all its tasks with owners and deadlines, the meeting notes for that project,
+
+02:12.880 --> 02:15.680
+and all relevant docs in one place.
+
+02:15.680 --> 02:20.180
+In upcoming lessons, we'll focus on how you can unlock project flow state.
+
+02:20.180 --> 02:24.180
+You'll learn how to write a project plan using Notion AI,
+
+02:24.180 --> 02:29.180
+create a related project tracker with tasks and custom properties,
+
+02:29.180 --> 02:33.180
+build views of tasks for different members on your team,
+
+02:33.180 --> 02:36.180
+manage tasks in sprints,
+
+02:36.180 --> 02:41.180
+and finally, integrate your system with other essential tools, like GitHub.
+
+02:41.180 --> 02:47.180
+Enough talking. Let's dive deeper into how you can use Notion to start effectively managing your projects,
+
+02:47.180 --> 02:50.180
+starting by creating a project plan.
+
+02:50.180 --> 02:51.180
+See you soon.
+
+02:51.180 --> 02:52.180
+Bye.
+
+02:52.180 --> 02:52.180
+
+
+02:52.180 --> 02:52.180
+
+
+02:52.180 --> 02:53.180
+Bye.
+
+02:53.180 --> 02:54.180
+Bye.
+
+02:54.180 --> 02:55.180
+Bye.
+
+02:55.180 --> 02:56.180
+Bye.
+
+02:56.180 --> 02:57.180
+Bye.
+
+02:57.180 --> 02:58.180
+Bye.
+
+02:58.180 --> 02:59.180
+Bye.
+
+02:59.180 --> 03:00.180
+Bye.
+
+03:00.180 --> 03:01.180
+Bye.
+
+03:01.180 --> 03:02.180
+Bye.
+
+03:02.180 --> 03:03.180
+Bye.
+
+03:03.180 --> 03:04.180
+Bye.
+
+03:04.180 --> 03:05.180
+Bye.
+
+03:05.180 --> 03:06.180
+Bye.
+
+03:06.180 --> 03:07.180
+Bye.
+
+03:07.180 --> 03:08.180
+Bye.
+
+03:08.180 --> 03:09.180
+Bye.
+
+03:09.180 --> 03:10.180
+Bye.
+
+03:10.180 --> 03:10.180
+
+
+03:10.180 --> 03:11.180
+Bye.
+
+03:11.180 --> 03:12.180
+Bye.
+
+03:12.180 --> 03:12.180
+
+
+03:12.180 --> 03:13.180
+Bye.
+
+03:13.180 --> 03:14.180
+Bye.
+
+03:14.180 --> 03:15.180
+Bye.
+
+03:15.180 --> 03:16.180
+Bye.
+
+03:16.180 --> 03:17.180
+Bye.
+
+03:17.180 --> 03:18.180
+Bye.
+
+03:18.180 --> 03:19.180
+Bye.
+
+03:19.180 --> 03:20.180
+Bye.

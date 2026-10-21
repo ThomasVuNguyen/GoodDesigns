@@ -1,0 +1,7 @@
+/source/
+/frames/
+/overviews/
+/transcripts/
+/index.html
+/*.html
+__pycache__/

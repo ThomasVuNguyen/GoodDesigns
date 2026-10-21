@@ -1,0 +1,52 @@
+[00:00:20] Hey. I'm your Dot.
+[00:00:21] I'm new in ChatGPT.
+[00:00:24] I'll be here to handle everything that comes your way.
+[00:00:27] Ready to jump in when you need me.
+[00:00:30] I'm going to call you...
+[00:00:31] I'm going to call you Alfred.
+[00:00:32] You got it!
+[00:00:33] I'm Alfred.
+[00:00:35] I'll keep things moving and check in when something important needs your approval.
+[00:00:39] Love it. Let's get to work.
+[00:00:40] I've been getting your website ready for the fall launch
+[00:00:43] using your approved designs.
+[00:00:44] Okay, perfect.
+[00:00:46] The latest consumer experience numbers came in on Teams.
+[00:00:48] I've been updating your board meeting deck.
+[00:00:50] Sounds good.
+[00:00:51] So I caught the app migration in your Google Meet notes.
+[00:00:54] I've already mapped out the changes.
+[00:00:56] Get it started, but make sure you first check
+[00:00:59] every flow against the current product before I review.
+[00:01:04] Also, update on wedding planning.
+[00:01:06] Bad news: the cake vendor canceled.
+[00:01:08] Good news: I already found a backup.
+[00:01:10] Lifesaver.
+[00:01:11] When can we do a tasting?
+[00:01:12] Saturday at 11 a.m.
+[00:01:14] works for both of you.
+[00:01:23] Hey there.
+[00:01:24] Your website is updated with the new designs for the fall drop.
+[00:01:27] Check it out.
+[00:01:31] Nice.
+[00:01:32] I like that.
+[00:01:32] Just swap the first and third photo, and then you can publish the site.
+[00:01:36] Done, you’re live.
+[00:01:39] Your board meeting deck is ready.
+[00:01:41] Product use is climbing and revenue’s up 51% year over year.
+[00:01:44] Okay, this looks good except for - change it
+[00:01:47] so that the consumer experience is first and then get into the growth numbers.
+[00:01:51] How's it looking?
+[00:01:52] The rebuild is faster in testing, with no regressions found so far.
+[00:01:56] The preview and results are in the PR.
+[00:01:58] Amazing.
+[00:01:59] Share the results with the team on slack and get the staged rollout
+[00:02:02] ready for my approval.
+[00:02:03] I'll flag anything that changes.
+[00:02:05] Also, I booked the kids’ after-school lessons as soon as registration opened.
+[00:02:09] They’ll love that. Thank you.
+[00:02:10] Tomorrow's finance review just got moved to the same time
+[00:02:13] as your daughter's recital, so I'm going to see if we can reschedule.
+[00:02:16] Okay, Yes, please.
+[00:02:17] I can't miss that recital.
+[00:02:20] All set. I'll start prepping your notes now.

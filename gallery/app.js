@@ -41,6 +41,7 @@
         <a class="src src--icon" href="${esc(v.url)}" target="_blank" rel="noopener" aria-label="Open on ${PLATFORM[v.platform]} (opens in a new tab)" title="Open on ${PLATFORM[v.platform]}">${ICON[v.platform]}</a>
       </div>
       <p class="tag">${esc(v.note || v.author)}</p>
+      ${v.breakdown ? `<a class="breakdown-button" href="breakdowns/${encodeURIComponent(v.breakdown)}.html">Breakdown</a>` : ''}
     </li>`).join('') || '<li class="empty">No videos yet.</li>';
 
   const frame = $('frame');

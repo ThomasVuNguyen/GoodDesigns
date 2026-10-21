@@ -60,6 +60,8 @@ node scripts/add-video.mjs <youtube or x url> ["optional note shown under the ti
 
 The script fetches the title and author (YouTube oEmbed, or the FxTwitter API for X posts). It saves the poster to `gallery/thumbs/videos/<slug>.jpg` and appends the video to `gallery/videos.json`. Commit and push to publish it.
 
+Videos with a `breakdown` field in `gallery/videos.json` show a Breakdown button. Their pages, transcripts, compact videos, and WebP frame sequences are committed under `gallery/breakdowns/`. The full-resolution working files stay in `notes/good-videos-video-study/` and are ignored by Git; `python3 scripts/publish-video-breakdowns.py` refreshes the gallery copy from that local study.
+
 ## Recreating another site
 
 Agents should follow the gated [website cloning workflow](./.agents/workflows/clone-perfectly.md). It turns a reference URL into a page inventory, self-contained implementation, fixed-viewport comparison loop, browser-health checks, and reusable handoff instead of relying on a one-shot visual guess.

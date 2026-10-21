@@ -48,6 +48,9 @@ a { color: inherit; }
 .card--video:hover .play, .card--video .thumb:focus-visible .play { background: var(--accent); transform: scale(1.1); }
 .meta .src--icon { display: inline-flex; align-self: flex-start; margin-top: 3px; border: 0; transition: color .15s ease; }
 .meta .src--icon:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+.breakdown-button { display: inline-flex; align-items: center; align-self: flex-start; margin: 10px 2px 0; padding: 7px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); font-size: 14px; text-decoration: none; }
+.breakdown-button:hover { border-color: var(--accent); color: var(--accent); }
+.breakdown-button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .foot { margin-top: 72px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
 
 .viewer { position: fixed; inset: 0; background: #fff; }
