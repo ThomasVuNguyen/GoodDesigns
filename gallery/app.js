@@ -1,8 +1,24 @@
 (async () => {
+  const $ = (id) => document.getElementById(id);
+  // The gallery shows one tab at a time: #/ is sites, #/videos is videos. The old #sites and #videos anchors still work.
+  const tabs = $('tabs');
+  const tabHash = { sites: '#/', videos: '#/videos' };
+  const tabOf = (hash) => (hash === 'videos' || hash.startsWith('videos/') ? 'videos' : 'sites');
+  let tab;
+  function showTab(next) {
+    tab = next;
+    for (const a of tabs.querySelectorAll('a')) {
+      if (a.dataset.tab === next) a.setAttribute('aria-current', 'page');
+      else a.removeAttribute('aria-current');
+    }
+    for (const el of document.querySelectorAll('.section')) el.hidden = el.dataset.tab !== next;
+  }
+  // Before the lists load, so a link to the videos never shows the sites heading first.
+  showTab(tabOf(location.hash.replace(/^#\/?/, '')));
+
   const [{ repo, branch, sites }, { videos }] = await Promise.all(
     ['sites.json', 'videos.json'].map(async (f) => (await fetch(f)).json()),
   );
-  const $ = (id) => document.getElementById(id);
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
   const srcUrl = (s) => `${repo}/tree/${branch}/${s.folder}`;
   const PLATFORM = { youtube: 'YouTube', x: 'X' };
@@ -50,25 +66,36 @@
     ...videos.map((v) => ({ hash: `videos/${v.slug}`, kind: 'video', item: v })),
   ];
   let current = -1;
-  let galleryScroll = 0; // where the gallery was when a viewer opened, restored when it closes
+  const scrolls = {}; // where each tab was left, restored when it comes back
+
+  // The scroll at which the switch has just pinned, with the tab's heading below it.
+  function tabStart() {
+    const style = getComputedStyle(tabs);
+    return $(`panel-${tab}`).offsetTop - parseFloat(style.marginBottom) - tabs.offsetHeight - parseFloat(style.top);
+  }
 
   function route() {
     const hash = location.hash.replace(/^#\/?/, '');
     const i = items.findIndex((x) => x.hash === hash);
     const open = i >= 0;
-    if (open && !$('gallery').hidden) galleryScroll = scrollY;
+    const wasOpen = $('gallery').hidden;
+    const prev = tab;
+    if (!wasOpen) scrolls[prev] = scrollY;
     current = i;
     $('gallery').hidden = open;
     $('viewer').hidden = !open;
     document.body.style.overflow = open ? 'hidden' : '';
+    showTab(open ? (items[i].kind === 'video' ? 'videos' : 'sites') : tabOf(hash));
     if (!open) {
-      document.title = 'GoodDesigns';
+      document.title = tab === 'videos' ? 'Videos · GoodDesigns' : 'GoodDesigns';
       frame.removeAttribute('src');
-      if (!hash) scrollTo(0, galleryScroll);
+      // A tab opened for the first time starts at its top, or where the switch pins if the page was scrolled past that.
+      if (wasOpen || prev !== tab) scrollTo(0, scrolls[tab] ?? Math.min(scrolls[prev] ?? 0, tabStart()));
       return;
     }
     const { kind, item } = items[i];
     const name = kind === 'site' ? item.name : item.title;
+    $('back').href = tabHash[tab];
     $('viewer').dataset.kind = kind === 'site' ? 'site' : item.platform;
     document.title = `${name} · GoodDesigns`;
     frame.title = kind === 'site' ? `${name} preview` : name;
@@ -83,13 +110,17 @@
     if (frame.getAttribute('src') !== target) frame.src = target;
   }
   addEventListener('hashchange', route);
+  // The switch is pinned once its top edge reaches the line 17px down, just past where it sticks.
+  new IntersectionObserver(([e]) => tabs.toggleAttribute('data-stuck', e.intersectionRatio < 1 && e.boundingClientRect.top < 40), {
+    threshold: 1, rootMargin: '-17px 0px 0px 0px',
+  }).observe(tabs);
   addEventListener('keydown', (e) => {
     if ($('viewer').hidden) return;
     // Alt+arrows step through the open item's own list (sites or videos).
     const kind = items[current].kind;
     const list = items.filter((x) => x.kind === kind);
     const step = (d) => { const at = list.indexOf(items[current]); location.hash = `#/${list[(at + d + list.length) % list.length].hash}`; };
-    if (e.key === 'Escape') location.hash = '#/';
+    if (e.key === 'Escape') location.hash = tabHash[tab];
     if (e.key === 'ArrowLeft' && e.altKey) step(-1);
     if (e.key === 'ArrowRight' && e.altKey) step(1);
   });

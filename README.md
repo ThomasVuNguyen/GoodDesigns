@@ -52,7 +52,7 @@ To add a site, append it to `gallery/sites.json` and refresh thumbnails with `np
 
 ## Good Videos
 
-The gallery also has a **Good Videos** section of YouTube and X videos. They play in the same full-screen viewer, embedded from the platform. To add one:
+The gallery also has a **Good Videos** tab of YouTube and X videos, next to the sites (`#/videos` links straight to it). They play in the same full-screen viewer, embedded from the platform. To add one:
 
 ```bash
 node scripts/add-video.mjs <youtube or x url> ["optional note shown under the title"]

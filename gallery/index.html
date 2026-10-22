@@ -14,16 +14,16 @@
     <header class="masthead">
       <h1>Good<span>Designs</span></h1>
       <p>Recreations of sites worth studying, and videos worth watching. Open one to explore it, or jump to its source.</p>
-      <nav class="sections" aria-label="Sections">
-        <a href="#sites">Sites <span id="n-sites"></span></a>
-        <a href="#videos">Videos <span id="n-videos"></span></a>
-      </nav>
     </header>
-    <section id="sites" class="section" aria-labelledby="sites-title">
+    <nav id="tabs" class="tabs" aria-label="Sections">
+      <a href="#/" data-tab="sites" aria-current="page">Sites <span id="n-sites"></span></a>
+      <a href="#/videos" data-tab="videos">Videos <span id="n-videos"></span></a>
+    </nav>
+    <section id="panel-sites" class="section" data-tab="sites" aria-labelledby="sites-title">
       <h2 class="section-title" id="sites-title">Good <em>Sites</em></h2>
       <ul id="grid" class="grid" aria-label="Sites"></ul>
     </section>
-    <section id="videos" class="section" aria-labelledby="videos-title">
+    <section id="panel-videos" class="section" data-tab="videos" aria-labelledby="videos-title" hidden>
       <h2 class="section-title" id="videos-title">Good <em>Videos</em></h2>
       <ul id="video-grid" class="grid" aria-label="Videos"></ul>
     </section>
