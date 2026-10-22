@@ -41,6 +41,7 @@
     { "slug": "periodic", "name": "Nature Is Our Learning Environment", "folder": "Periodic", "reference": "https://periodic.com/news/nature-is-our-learning-environment", "tagline": "Periodic Labs research article · scientific midtraining, XRD figures, and disclosures", "captured": "2026-10-17" },
     { "slug": "stripe-press", "name": "Stripe Press", "folder": "StripePress", "reference": "https://press.stripe.com/", "tagline": "Ideas for progress · WebGL book stack, film and podcast details", "captured": "2026-10-17" },
     { "slug": "sunday", "name": "Sunday", "folder": "Sunday", "reference": "https://www.sunday.ai/", "tagline": "The helpful home robot", "captured": "2026-10-18" },
-    { "slug": "google-org", "name": "Google.org", "folder": "GoogleOrg", "reference": "https://www.google.org/", "tagline": "Unlocking potential for everyone, everywhere · project carousel with story modals, ambient video and focus cards", "captured": "2026-10-19" }
+    { "slug": "google-org", "name": "Google.org", "folder": "GoogleOrg", "reference": "https://www.google.org/", "tagline": "Unlocking potential for everyone, everywhere · project carousel with story modals, ambient video and focus cards", "captured": "2026-10-19" },
+    { "slug": "wired-world-fair", "name": "WIRED World Fair", "folder": "WiredWorldFair", "reference": "https://www.wired.com/wiredworldfair/", "tagline": "A Festival of the Future · ASCII-drawn maps and portraits, lineup accordions, festival site plan and schedule grid", "captured": "2026-10-22" }
   ]
 }

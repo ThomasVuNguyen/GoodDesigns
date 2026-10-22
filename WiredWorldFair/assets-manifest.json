@@ -1,0 +1,194 @@
+{
+  "assets/embed.css": {
+    "role": "embed stylesheet",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/embed.css?v=3358fa72ec"
+  },
+  "assets/embed.js": {
+    "role": "embed runtime",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/embed.js?v=ff46c73e9f"
+  },
+  "assets/favicon.ico": {
+    "role": "favicon",
+    "source": "https://www.wired.com/verso/static/wired-us/assets/favicon.ico"
+  },
+  "assets/fonts/WIREDSans-Regular.woff2": {
+    "role": "font",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/fonts/WIREDSans-Regular.woff2"
+  },
+  "assets/fonts/WiredMono-Bold.woff2": {
+    "role": "font (from the WIRED template)",
+    "source": "https://www.wired.com/.design/fonts/WIRED%20Mono/WiredMono-Bold.woff2"
+  },
+  "assets/fonts/WiredMono-Regular.woff2": {
+    "role": "font",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/fonts/WiredMono-Regular.woff2"
+  },
+  "assets/site/map-foliage.webp": {
+    "role": "festival map texture",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/site/map-foliage.webp"
+  },
+  "assets/site/map-hatch.png": {
+    "role": "festival map texture",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/site/map-hatch.png"
+  },
+  "assets/speakers/photos/alex-gibney-bw.webp": {
+    "role": "speaker portrait",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/speakers/photos/alex-gibney-bw.webp"
+  },
+  "assets/speakers/photos/alexis-ohanian-bw.webp": {
+    "role": "speaker portrait",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/speakers/photos/alexis-ohanian-bw.webp"
+  },
+  "assets/speakers/photos/ashley-st-clair-bw.webp": {
+    "role": "speaker portrait",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/speakers/photos/ashley-st-clair-bw.webp"
+  },
+  "assets/speakers/photos/ben-collins-bw.webp": {
+    "role": "speaker portrait",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/speakers/photos/ben-collins-bw.webp"
+  },
+  "assets/speakers/photos/ben-lamm-bw.webp": {
+    "role": "speaker portrait",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/speakers/photos/ben-lamm-bw.webp"
+  },
+  "assets/speakers/photos/cj-pearson-bw.webp": {
+    "role": "speaker portrait",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/speakers/photos/cj-pearson-bw.webp"
+  },
+  "assets/speakers/photos/cl-ment-delangue-bw.webp": {
+    "role": "speaker portrait",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/speakers/photos/cl-ment-delangue-bw.webp"
+  },
+  "assets/speakers/photos/dan-buettner-bw.webp": {
+    "role": "speaker portrait",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/speakers/photos/dan-buettner-bw.webp"
+  },
+  "assets/speakers/photos/denise-herzing-bw.webp": {
+    "role": "speaker portrait",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/speakers/photos/denise-herzing-bw.webp"
+  },
+  "assets/speakers/photos/eric-verdin-bw.webp": {
+    "role": "speaker portrait",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/speakers/photos/eric-verdin-bw.webp"
+  },
+  "assets/speakers/photos/evan-ratliff-bw.webp": {
+    "role": "speaker portrait",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/speakers/photos/evan-ratliff-bw.webp"
+  },
+  "assets/speakers/photos/hunter-schafer-bw.webp": {
+    "role": "speaker portrait",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/speakers/photos/hunter-schafer-bw.webp"
+  },
+  "assets/speakers/photos/kat-abughazaleh-bw.webp": {
+    "role": "speaker portrait",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/speakers/photos/kat-abughazaleh-bw.webp"
+  },
+  "assets/speakers/photos/mark-lanier-bw.webp": {
+    "role": "speaker portrait",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/speakers/photos/mark-lanier-bw.webp"
+  },
+  "assets/speakers/photos/matt-husk-bw.webp": {
+    "role": "speaker portrait",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/speakers/photos/matt-husk-bw.webp"
+  },
+  "assets/speakers/photos/silka-luisa-bw.webp": {
+    "role": "speaker portrait",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/speakers/photos/silka-luisa-bw.webp"
+  },
+  "assets/sponsors/emerge-americas-white.webp": {
+    "role": "partner logo",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/sponsors/emerge-americas-white.webp"
+  },
+  "assets/sponsors/refresh-miami-white.webp": {
+    "role": "partner logo",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/sponsors/refresh-miami-white.webp"
+  },
+  "assets/sponsors/sapphire-reserve-business-2line-white.webp": {
+    "role": "partner logo",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/sponsors/sapphire-reserve-business-2line-white.webp"
+  },
+  "assets/sponsors/sapphire-reserve-business-white.svg": {
+    "role": "partner logo",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/sponsors/sapphire-reserve-business-white.svg"
+  },
+  "assets/sponsors/shelborne-by-proper-white.svg": {
+    "role": "partner logo",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/sponsors/shelborne-by-proper-white.svg"
+  },
+  "assets/works/abramovic-slow-walking.webp": {
+    "role": "experience image",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/works/abramovic-slow-walking.webp"
+  },
+  "assets/works/kinda-emergence-lead.webp": {
+    "role": "experience image",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/works/kinda-emergence-lead.webp"
+  },
+  "assets/works/lumenate-1.webp": {
+    "role": "experience image",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/works/lumenate-1.webp"
+  },
+  "assets/works/lumenate-2.webp": {
+    "role": "experience image",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/works/lumenate-2.webp"
+  },
+  "assets/works/lumenate-3.webp": {
+    "role": "experience image",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/works/lumenate-3.webp"
+  },
+  "assets/works/nasa-xoss-2.webp": {
+    "role": "experience image",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/works/nasa-xoss-2.webp"
+  },
+  "assets/works/nasa-xoss-3.webp": {
+    "role": "experience image",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/works/nasa-xoss-3.webp"
+  },
+  "assets/works/nasa-xoss.webp": {
+    "role": "experience image",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/works/nasa-xoss.webp"
+  },
+  "assets/works/nuralogix-1.webp": {
+    "role": "experience image",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/works/nuralogix-1.webp"
+  },
+  "assets/works/nuralogix-2.webp": {
+    "role": "experience image",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/works/nuralogix-2.webp"
+  },
+  "assets/works/nuralogix-3.webp": {
+    "role": "experience image",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/works/nuralogix-3.webp"
+  },
+  "assets/works/refik-anadol.webp": {
+    "role": "experience image",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/works/refik-anadol.webp"
+  },
+  "assets/works/reka.webp": {
+    "role": "experience image",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/works/reka.webp"
+  },
+  "assets/works/somadome-1.webp": {
+    "role": "experience image",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/works/somadome-1.webp"
+  },
+  "assets/works/somadome-2.webp": {
+    "role": "experience image",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/works/somadome-2.webp"
+  },
+  "assets/works/somadome-3.webp": {
+    "role": "experience image",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/works/somadome-3.webp"
+  },
+  "assets/works/unitree-g1-2.webp": {
+    "role": "experience image",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/works/unitree-g1-2.webp"
+  },
+  "assets/works/unitree-g1-3.webp": {
+    "role": "experience image",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/works/unitree-g1-3.webp"
+  },
+  "assets/works/unitree-g1.webp": {
+    "role": "experience image",
+    "source": "https://interactive.wired.com/wired-world-fair/assets/works/unitree-g1.webp"
+  }
+}
