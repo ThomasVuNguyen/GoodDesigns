@@ -1,9 +1,12 @@
 (async () => {
   const $ = (id) => document.getElementById(id);
-  // The gallery shows one tab at a time: #/ is sites, #/videos is videos. The old #sites and #videos anchors still work.
+  // The gallery shows one tab at a time: #/ is sites, #/videos is videos, #/posts is posts.
   const tabs = $('tabs');
-  const tabHash = { sites: '#/', videos: '#/videos' };
-  const tabOf = (hash) => (hash === 'videos' || hash.startsWith('videos/') ? 'videos' : 'sites');
+  const tabHash = { sites: '#/', videos: '#/videos', posts: '#/posts' };
+  const tabOf = (hash) => (
+    hash === 'posts' || hash.startsWith('posts/') ? 'posts' :
+    hash === 'videos' || hash.startsWith('videos/') ? 'videos' : 'sites'
+  );
   let tab;
   function showTab(next) {
     tab = next;
@@ -13,11 +16,11 @@
     }
     for (const el of document.querySelectorAll('.section')) el.hidden = el.dataset.tab !== next;
   }
-  // Before the lists load, so a link to the videos never shows the sites heading first.
+  // Before the lists load, so a link to videos or posts never shows the sites heading first.
   showTab(tabOf(location.hash.replace(/^#\/?/, '')));
 
-  const [{ repo, branch, sites }, { videos }] = await Promise.all(
-    ['sites.json', 'videos.json'].map(async (f) => (await fetch(f)).json()),
+  const [{ repo, branch, sites }, { videos }, { posts }] = await Promise.all(
+    ['sites.json', 'videos.json', 'posts.json'].map(async (f) => (await fetch(f)).json()),
   );
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
   const srcUrl = (s) => `${repo}/tree/${branch}/${s.folder}`;
@@ -33,6 +36,7 @@
 
   $('n-sites').textContent = sites.length;
   $('n-videos').textContent = videos.length;
+  $('n-posts').textContent = posts.length;
 
   $('grid').innerHTML = sites.map((s) => `
     <li class="card">
@@ -60,10 +64,23 @@
       ${v.breakdown ? `<a class="breakdown-button" href="breakdowns/${encodeURIComponent(v.breakdown)}.html">Breakdown</a>` : ''}
     </li>`).join('') || '<li class="empty">No videos yet.</li>';
 
+  $('post-grid').innerHTML = posts.map((p) => `
+    <li class="card card--post">
+      <a class="thumb" href="#/posts/${p.slug}" aria-label="Read ${esc(p.title)}">
+        <img src="thumbs/posts/${p.slug}.jpg" alt="" loading="lazy" width="1200" height="750">
+      </a>
+      <div class="meta">
+        <h2><a href="#/posts/${p.slug}">${esc(p.title)}</a></h2>
+        <a class="src src--icon" href="${esc(p.url)}" target="_blank" rel="noopener" aria-label="Open on ${PLATFORM[p.platform]} (opens in a new tab)" title="Open on ${PLATFORM[p.platform]}">${ICON[p.platform]}</a>
+      </div>
+      <p class="tag">${esc(p.note || p.author)}</p>
+    </li>`).join('') || '<li class="empty">No posts yet.</li>';
+
   const frame = $('frame');
   const items = [
     ...sites.map((s) => ({ hash: s.slug, kind: 'site', item: s })),
     ...videos.map((v) => ({ hash: `videos/${v.slug}`, kind: 'video', item: v })),
+    ...posts.map((p) => ({ hash: `posts/${p.slug}`, kind: 'post', item: p })),
   ];
   let current = -1;
   const scrolls = {}; // where each tab was left, restored when it comes back
@@ -85,9 +102,9 @@
     $('gallery').hidden = open;
     $('viewer').hidden = !open;
     document.body.style.overflow = open ? 'hidden' : '';
-    showTab(open ? (items[i].kind === 'video' ? 'videos' : 'sites') : tabOf(hash));
+    showTab(open ? (items[i].kind === 'post' ? 'posts' : items[i].kind === 'video' ? 'videos' : 'sites') : tabOf(hash));
     if (!open) {
-      document.title = tab === 'videos' ? 'Videos · GoodDesigns' : 'GoodDesigns';
+      document.title = tab === 'posts' ? 'Posts · GoodDesigns' : tab === 'videos' ? 'Videos · GoodDesigns' : 'GoodDesigns';
       frame.removeAttribute('src');
       // A tab opened for the first time starts at its top, or where the switch pins if the page was scrolled past that.
       if (wasOpen || prev !== tab) scrollTo(0, scrolls[tab] ?? Math.min(scrolls[prev] ?? 0, tabStart()));
@@ -116,7 +133,7 @@
   }).observe(tabs);
   addEventListener('keydown', (e) => {
     if ($('viewer').hidden) return;
-    // Alt+arrows step through the open item's own list (sites or videos).
+    // Alt+arrows step through the open item's own list (sites, videos or posts).
     const kind = items[current].kind;
     const list = items.filter((x) => x.kind === kind);
     const step = (d) => { const at = list.indexOf(items[current]); location.hash = `#/${list[(at + d + list.length) % list.length].hash}`; };

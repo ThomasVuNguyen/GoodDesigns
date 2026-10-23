@@ -62,6 +62,16 @@ The script fetches the title and author (YouTube oEmbed, or the FxTwitter API fo
 
 Videos with a `breakdown` field in `gallery/videos.json` show a Breakdown button. Their pages, transcripts, compact videos, and WebP frame sequences are committed under `gallery/breakdowns/`. The full-resolution working files stay in `notes/good-videos-video-study/` and are ignored by Git; `python3 scripts/publish-video-breakdowns.py` refreshes the gallery copy from that local study.
 
+## Good Posts
+
+The gallery also has a **Good Posts** tab of notable X and web posts, next to the sites and videos (`#/posts` links straight to it). They open in the same full-screen viewer, embedded from the platform. To add one:
+
+```bash
+node scripts/add-post.mjs <x url> ["optional note shown under the title"]
+```
+
+The script fetches the title and author (via the FxTwitter API), captures a high-resolution preview thumbnail to `gallery/thumbs/posts/<slug>.jpg`, and appends the post to `gallery/posts.json`. Commit and push to publish it.
+
 ## Recreating another site
 
 Agents should follow the gated [website cloning workflow](./.agents/workflows/clone-perfectly.md). It turns a reference URL into a page inventory, self-contained implementation, fixed-viewport comparison loop, browser-health checks, and reusable handoff instead of relying on a one-shot visual guess.

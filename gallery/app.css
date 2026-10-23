@@ -39,10 +39,11 @@ a { color: inherit; }
 .tag { margin: 4px 2px 0; color: var(--muted); }
 .empty { color: var(--muted); }
 
-/* Video cards: the frame is the video's own 16:9, with a play mark and the platform. */
+/* Video and post cards: the title clamps to 2 lines so rows align. */
 .card--video .thumb { position: relative; aspect-ratio: 16 / 9; background: var(--ink); }
 .card--video .thumb img { object-position: center; }
-.card--video .meta h2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.card--post .thumb img { object-position: center; }
+.card--video .meta h2, .card--post .meta h2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 /* A small play mark in the corner, so the poster reads first; it warms to the accent on hover. */
 .play { position: absolute; left: 10px; bottom: 10px; width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; background: rgba(21, 20, 18, 0.45); color: var(--bg); padding-left: 2px; backdrop-filter: blur(6px); transition: background .2s ease, transform .2s ease; }
 .play svg { width: 14px; height: 14px; }
