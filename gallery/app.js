@@ -78,7 +78,22 @@
 
   function renderPost(p) {
     const formattedText = esc(p.text || '')
-      .replace(/@([a-zA-Z0-9_]+)/g, '<a class="mention" href="https://x.com/$1" target="_blank" rel="noopener">@$1</a>');
+      .replace(/@([a-zA-Z0-9_]+)/g, '<a class="mention" href="https://x.com/$1" target="_blank" rel="noopener">@$1</a>')
+      .replace(/(https?:\/\/[^\s<]+)/g, '<a class="post-link" href="$1" target="_blank" rel="noopener">$1</a>');
+
+    let mediaHtml = '';
+    if (p.video) {
+      mediaHtml = `
+        <div class="post-media">
+          <video class="post-media-video" src="${esc(p.video)}" poster="${esc(p.videoPoster || '')}" controls playsinline preload="metadata"></video>
+        </div>`;
+    } else if (p.photos && p.photos.length) {
+      mediaHtml = `
+        <div class="post-media">
+          ${p.photos.map(u => `<img class="post-media-img" src="${esc(u)}" alt="" loading="lazy">`).join('')}
+        </div>`;
+    }
+
     return `
       <article class="post-card">
         <header class="post-header">
@@ -97,6 +112,7 @@
           </a>
         </header>
         <div class="post-body">${formattedText}</div>
+        ${mediaHtml}
         <footer class="post-footer">
           ${p.date ? `<time class="post-date">${esc(p.date)}</time>` : ''}
           <div class="post-stats">

@@ -14,7 +14,18 @@ if (!input) { console.error('Usage: node scripts/add-post.mjs <x url> ["note"]')
 const url = new URL(input);
 const host = url.hostname.replace(/^(www|m|mobile)\./, '');
 const today = new Date().toLocaleDateString('en-CA');
-const json = async (u) => { const r = await fetch(u); if (!r.ok) throw new Error(`${r.status} ${u}`); return r.json(); };
+const json = async (u, retries = 3) => {
+  for (let i = 0; i < retries; i++) {
+    try {
+      const r = await fetch(u);
+      if (r.ok) return await r.json();
+    } catch (e) {
+      if (i === retries - 1) throw e;
+      await new Promise((res) => setTimeout(res, 1500));
+    }
+  }
+  throw new Error(`Failed fetching ${u}`);
+};
 
 if (host !== 'x.com' && host !== 'twitter.com') {
   throw new Error(`Only X/Twitter links are supported (got ${host})`);
@@ -23,7 +34,7 @@ if (host !== 'x.com' && host !== 'twitter.com') {
 const [, user, , id] = url.pathname.split('/');
 if (!/^\d+$/.test(id || '')) throw new Error(`No post id in ${input}`);
 
-// FxTwitter's public API returns the full post text, author, and engagement.
+// FxTwitter's public API returns the full post text, author, engagement, and media.
 const { tweet } = await json(`https://api.fxtwitter.com/${user}/status/${id}`);
 
 const rawTitle = tweet.text
@@ -37,6 +48,11 @@ const fmt = (n) => n == null ? '' : n >= 1e6 ? (n / 1e6).toFixed(1).replace(/\.0
 const d = new Date(tweet.created_timestamp * 1000);
 const timeStr = d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
 const dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+
+const photos = tweet.media?.photos?.map((p) => p.url) || [];
+const videoObj = tweet.media?.videos?.[0];
+const video = videoObj?.url || null;
+const videoPoster = videoObj?.thumbnail_url || null;
 
 const post = {
   slug: `x-${id}`,
@@ -58,6 +74,12 @@ const post = {
   replies: fmt(tweet.replies),
   views: fmt(tweet.views),
 };
+
+if (photos.length) post.photos = photos;
+if (video) {
+  post.video = video;
+  if (videoPoster) post.videoPoster = videoPoster;
+}
 
 if (note) post.note = note;
 post.added = today;
@@ -88,6 +110,25 @@ async function captureThumbnail(item, destPath) {
   const browser = await chromium.launch(launchOptions);
   try {
     const page = await browser.newPage({ viewport: { width: 1200, height: 750 }, deviceScaleFactor: 2 });
+    
+    let mediaSnippet = '';
+    const cardWidth = item.video ? '780px' : (item.photos?.length ? '960px' : '900px');
+    const contentFontSize = item.text.length > 350 ? '13px' : '15px';
+    const mediaMaxHeight = item.text.length > 200 ? '340px' : '450px';
+
+    if (item.video && item.videoPoster) {
+      mediaSnippet = `
+        <div class="media-wrap" style="max-height:${mediaMaxHeight};">
+          <img src="${item.videoPoster}">
+          <div class="play-btn"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13l11-6.5z"/></svg></div>
+        </div>`;
+    } else if (item.photos?.length) {
+      mediaSnippet = `
+        <div class="media-wrap" style="max-height:${mediaMaxHeight};">
+          <img src="${item.photos[0]}">
+        </div>`;
+    }
+
     const html = `
     <!doctype html>
     <html>
@@ -96,20 +137,21 @@ async function captureThumbnail(item, destPath) {
       <style>
         * { box-sizing: border-box; }
         body {
-          margin: 0; padding: 24px 32px; width: 1200px; height: 750px;
+          margin: 0; padding: 20px 28px; width: 1200px; height: 750px;
           background: #faf8f3;
           font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
           display: flex; align-items: center; justify-content: center;
         }
         .card {
-          width: 900px; max-height: 700px;
+          width: ${cardWidth}; max-height: 710px;
           background: #ffffff;
           border: 1px solid #dfdbd2;
           border-radius: 18px;
-          padding: 24px 28px;
+          padding: 22px 26px;
           box-shadow: 0 4px 24px rgba(21, 20, 18, 0.06);
+          display: flex; flex-direction: column;
         }
-        .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+        .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
         .user { display: flex; align-items: center; gap: 12px; }
         .avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
         .name-box { line-height: 1.25; }
@@ -118,15 +160,36 @@ async function captureThumbnail(item, destPath) {
         .handle { font-size: 14px; color: #536471; }
         .x-logo svg { width: 20px; height: 20px; fill: #0f1419; }
         .content {
-          font-size: 13.5px;
-          line-height: 1.45;
+          font-size: ${contentFontSize};
+          line-height: 1.42;
           color: #0f1419;
           white-space: pre-wrap;
           word-break: break-word;
+          margin-bottom: ${mediaSnippet ? '12px' : '0'};
         }
         .mention { color: #1d9bf0; text-decoration: none; font-weight: 500; }
+        .media-wrap {
+          position: relative;
+          border-radius: 12px;
+          overflow: hidden;
+          border: 1px solid #cfd9de;
+          display: flex; align-items: center; justify-content: center;
+          background: #000;
+        }
+        .media-wrap img { width: 100%; height: auto; max-height: ${mediaMaxHeight}; object-fit: cover; display: block; }
+        .play-btn {
+          position: absolute;
+          width: 56px; height: 56px;
+          border-radius: 50%;
+          background: rgba(21, 20, 18, 0.7);
+          backdrop-filter: blur(8px);
+          display: flex; align-items: center; justify-content: center;
+          color: #fff;
+          box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+        }
+        .play-btn svg { width: 26px; height: 26px; margin-left: 3px; }
         .footer {
-          margin-top: 14px;
+          margin-top: 12px;
           padding-top: 10px;
           border-top: 1px solid #eff3f4;
           display: flex;
@@ -150,6 +213,7 @@ async function captureThumbnail(item, destPath) {
           <div class="x-logo"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div>
         </div>
         <div class="content">${item.text.replace(/@([a-zA-Z0-9_]+)/g, '<span class="mention">@$1</span>')}</div>
+        ${mediaSnippet}
         <div class="footer">
           <span>${item.date}</span>
           ${item.likes ? `<span><b>${item.likes}</b> Likes</span>` : ''}
