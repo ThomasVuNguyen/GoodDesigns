@@ -76,7 +76,41 @@
       <p class="tag">${esc(p.note || p.author)}</p>
     </li>`).join('') || '<li class="empty">No posts yet.</li>';
 
+  function renderPost(p) {
+    const formattedText = esc(p.text || '')
+      .replace(/@([a-zA-Z0-9_]+)/g, '<a class="mention" href="https://x.com/$1" target="_blank" rel="noopener">@$1</a>');
+    return `
+      <article class="post-card">
+        <header class="post-header">
+          <a class="post-author-link" href="${esc(p.authorUrl)}" target="_blank" rel="noopener">
+            ${p.authorAvatar ? `<img class="post-avatar" src="${esc(p.authorAvatar)}" alt="${esc(p.authorName || p.author)}" width="48" height="48">` : ''}
+            <div class="post-author-meta">
+              <div class="post-author-name">
+                <span>${esc(p.authorName || p.author)}</span>
+                ${p.verified ? `<span class="post-badge" title="Verified"><svg viewBox="0 0 24 24" width="16" height="16" fill="#1d9bf0"><path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.68-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z"/></svg></span>` : ''}
+              </div>
+              ${p.authorHandle ? `<div class="post-author-handle">@${esc(p.authorHandle)}</div>` : ''}
+            </div>
+          </a>
+          <a class="post-platform-link" href="${esc(p.url)}" target="_blank" rel="noopener" aria-label="Open on ${PLATFORM[p.platform] || 'platform'}" title="Open on ${PLATFORM[p.platform] || 'platform'}">
+            ${ICON[p.platform] || ''}
+          </a>
+        </header>
+        <div class="post-body">${formattedText}</div>
+        <footer class="post-footer">
+          ${p.date ? `<time class="post-date">${esc(p.date)}</time>` : ''}
+          <div class="post-stats">
+            ${p.likes ? `<span><b>${esc(p.likes)}</b> Likes</span>` : ''}
+            ${p.reposts ? `<span><b>${esc(p.reposts)}</b> Reposts</span>` : ''}
+            ${p.bookmarks ? `<span><b>${esc(p.bookmarks)}</b> Bookmarks</span>` : ''}
+            ${p.replies ? `<span><b>${esc(p.replies)}</b> Replies</span>` : ''}
+          </div>
+        </footer>
+      </article>`;
+  }
+
   const frame = $('frame');
+  const postView = $('post-view');
   const items = [
     ...sites.map((s) => ({ hash: s.slug, kind: 'site', item: s })),
     ...videos.map((v) => ({ hash: `videos/${v.slug}`, kind: 'video', item: v })),
@@ -106,6 +140,8 @@
     if (!open) {
       document.title = tab === 'posts' ? 'Posts · GoodDesigns' : tab === 'videos' ? 'Videos · GoodDesigns' : 'GoodDesigns';
       frame.removeAttribute('src');
+      postView.hidden = true;
+      postView.innerHTML = '';
       // A tab opened for the first time starts at its top, or where the switch pins if the page was scrolled past that.
       if (wasOpen || prev !== tab) scrollTo(0, scrolls[tab] ?? Math.min(scrolls[prev] ?? 0, tabStart()));
       return;
@@ -113,18 +149,29 @@
     const { kind, item } = items[i];
     const name = kind === 'site' ? item.name : item.title;
     $('back').href = tabHash[tab];
-    $('viewer').dataset.kind = kind === 'site' ? 'site' : item.platform;
+    $('viewer').dataset.kind = kind === 'site' ? 'site' : kind === 'post' ? 'post' : item.platform;
     document.title = `${name} · GoodDesigns`;
-    frame.title = kind === 'site' ? `${name} preview` : name;
     $('back').setAttribute('aria-label', `Back to the GoodDesigns gallery from ${name}`);
     const out = kind === 'site' ? srcUrl(item) : item.url;
-    const label = kind === 'site' ? 'View source' : `Open on ${PLATFORM[item.platform]}`;
+    const label = kind === 'site' ? 'View source' : `Open on ${PLATFORM[item.platform] || 'platform'}`;
     $('v-src').href = out;
     $('v-src-label').textContent = label;
     $('v-src-icon').setAttribute('d', kind === 'site' ? 'M7 6 3 10l4 4M13 6l4 4-4 4' : 'M8.5 4.5H4.5v11h11v-4M11.5 3.5h5v5M16.5 3.5l-7.5 7.5');
     $('v-src').setAttribute('aria-label', `${label} for ${name} (opens in a new tab)`);
-    const target = kind === 'site' ? `sites/${item.slug}/` : embedUrl(item);
-    if (frame.getAttribute('src') !== target) frame.src = target;
+
+    if (kind === 'post') {
+      frame.hidden = true;
+      frame.removeAttribute('src');
+      postView.hidden = false;
+      postView.innerHTML = renderPost(item);
+    } else {
+      postView.hidden = true;
+      postView.innerHTML = '';
+      frame.hidden = false;
+      frame.title = kind === 'site' ? `${name} preview` : name;
+      const target = kind === 'site' ? `sites/${item.slug}/` : embedUrl(item);
+      if (frame.getAttribute('src') !== target) frame.src = target;
+    }
   }
   addEventListener('hashchange', route);
   // The switch is pinned once its top edge reaches the line 17px down, just past where it sticks.

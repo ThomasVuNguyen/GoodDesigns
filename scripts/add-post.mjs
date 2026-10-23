@@ -1,4 +1,4 @@
-// Adds an X post to gallery/posts.json and captures its thumbnail to gallery/thumbs/posts/<slug>.jpg.
+// Adds an X post to gallery/posts.json and captures its full thumbnail to gallery/thumbs/posts/<slug>.jpg.
 // Usage: node scripts/add-post.mjs <x url> ["optional note"]
 //   https://x.com/<user>/status/ID, https://twitter.com/<user>/status/ID
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
@@ -23,16 +23,20 @@ if (host !== 'x.com' && host !== 'twitter.com') {
 const [, user, , id] = url.pathname.split('/');
 if (!/^\d+$/.test(id || '')) throw new Error(`No post id in ${input}`);
 
-// FxTwitter's public API returns the post's text, author, and engagement.
+// FxTwitter's public API returns the full post text, author, and engagement.
 const { tweet } = await json(`https://api.fxtwitter.com/${user}/status/${id}`);
 
-// The title is the post's first line, stripped of URLs and trailing colons.
 const rawTitle = tweet.text
   .replace(/\s*https:\/\/t\.co\/\S+$/g, '')
   .trim()
   .split(/\n+/)[0]
   .replace(/[:\s]+$/, '')
   .trim();
+
+const fmt = (n) => n == null ? '' : n >= 1e6 ? (n / 1e6).toFixed(1).replace(/\.0$/, '') + 'M' : n >= 1e3 ? (n / 1e3).toFixed(1).replace(/\.0$/, '') + 'K' : String(n);
+const d = new Date(tweet.created_timestamp * 1000);
+const timeStr = d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+const dateStr = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
 
 const post = {
   slug: `x-${id}`,
@@ -41,7 +45,18 @@ const post = {
   url: `https://x.com/${tweet.author.screen_name}/status/${id}`,
   title: rawTitle.length > 90 ? `${rawTitle.slice(0, 88).trimEnd()}…` : rawTitle || `Post by @${tweet.author.screen_name}`,
   author: `${tweet.author.name} (@${tweet.author.screen_name})`,
+  authorName: tweet.author.name,
+  authorHandle: tweet.author.screen_name,
   authorUrl: `https://x.com/${tweet.author.screen_name}`,
+  authorAvatar: tweet.author.avatar_url,
+  verified: Boolean(tweet.author.verification?.verified),
+  date: `${timeStr} · ${dateStr}`,
+  text: tweet.text,
+  likes: fmt(tweet.likes),
+  reposts: fmt(tweet.retweets),
+  bookmarks: fmt(tweet.bookmarks),
+  replies: fmt(tweet.replies),
+  views: fmt(tweet.views),
 };
 
 if (note) post.note = note;
@@ -66,40 +81,95 @@ async function getChromium() {
   throw new Error('Playwright not found');
 }
 
-async function captureThumbnail(postId, destPath) {
+async function captureThumbnail(item, destPath) {
   const chromium = await getChromium();
   const chromeExe = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
   const launchOptions = existsSync(chromeExe) ? { executablePath: chromeExe } : {};
   const browser = await chromium.launch(launchOptions);
   try {
     const page = await browser.newPage({ viewport: { width: 1200, height: 750 }, deviceScaleFactor: 2 });
-    await page.goto(`https://platform.twitter.com/embed/Tweet.html?id=${postId}&dnt=true`, { waitUntil: 'networkidle' });
-    await page.evaluate(() => {
-      document.documentElement.style.background = '#faf8f3';
-      document.body.style.background = '#faf8f3';
-      document.body.style.display = 'flex';
-      document.body.style.alignItems = 'center';
-      document.body.style.justifyContent = 'center';
-      document.body.style.minHeight = '100vh';
-      const app = document.getElementById('app');
-      if (app) {
-        app.style.width = '550px';
-        app.style.margin = '0 auto';
-        app.style.transform = 'scale(1.65)';
-        app.style.transformOrigin = 'center center';
-      }
-    });
-    await page.waitForTimeout(500);
+    const html = `
+    <!doctype html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <style>
+        * { box-sizing: border-box; }
+        body {
+          margin: 0; padding: 24px 32px; width: 1200px; height: 750px;
+          background: #faf8f3;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+          display: flex; align-items: center; justify-content: center;
+        }
+        .card {
+          width: 900px; max-height: 700px;
+          background: #ffffff;
+          border: 1px solid #dfdbd2;
+          border-radius: 18px;
+          padding: 24px 28px;
+          box-shadow: 0 4px 24px rgba(21, 20, 18, 0.06);
+        }
+        .header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+        .user { display: flex; align-items: center; gap: 12px; }
+        .avatar { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; }
+        .name-box { line-height: 1.25; }
+        .name { font-weight: 700; font-size: 16px; color: #0f1419; display: flex; align-items: center; gap: 4px; }
+        .badge { color: #1d9bf0; display: inline-flex; }
+        .handle { font-size: 14px; color: #536471; }
+        .x-logo svg { width: 20px; height: 20px; fill: #0f1419; }
+        .content {
+          font-size: 13.5px;
+          line-height: 1.45;
+          color: #0f1419;
+          white-space: pre-wrap;
+          word-break: break-word;
+        }
+        .mention { color: #1d9bf0; text-decoration: none; font-weight: 500; }
+        .footer {
+          margin-top: 14px;
+          padding-top: 10px;
+          border-top: 1px solid #eff3f4;
+          display: flex;
+          gap: 20px;
+          font-size: 13px;
+          color: #536471;
+        }
+        .footer b { color: #0f1419; }
+      </style>
+    </head>
+    <body>
+      <div class="card">
+        <div class="header">
+          <div class="user">
+            <img class="avatar" src="${item.authorAvatar}">
+            <div class="name-box">
+              <div class="name">${item.authorName} ${item.verified ? '<span class="badge"><svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M22.25 12c0-1.43-.88-2.67-2.19-3.34.46-1.39.2-2.9-.81-3.91s-2.52-1.27-3.91-.81c-.66-1.31-1.91-2.19-3.34-2.19s-2.67.88-3.33 2.19c-1.4-.46-2.91-.2-3.92.81s-1.26 2.52-.8 3.91c-1.31.67-2.2 1.91-2.2 3.34s.89 2.67 2.2 3.34c-.46 1.39-.21 2.9.8 3.91s2.52 1.26 3.91.81c.67 1.31 1.91 2.19 3.34 2.19s2.68-.88 3.34-2.19c1.39.45 2.9.2 3.91-.81s1.27-2.52.81-3.91c1.31-.67 2.19-1.91 2.19-3.34zm-11.71 4.2L6.8 12.46l1.41-1.42 2.26 2.26 4.8-5.23 1.47 1.36-6.2 6.77z"/></svg></span>' : ''}</div>
+              <div class="handle">@${item.authorHandle}</div>
+            </div>
+          </div>
+          <div class="x-logo"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></div>
+        </div>
+        <div class="content">${item.text.replace(/@([a-zA-Z0-9_]+)/g, '<span class="mention">@$1</span>')}</div>
+        <div class="footer">
+          <span>${item.date}</span>
+          ${item.likes ? `<span><b>${item.likes}</b> Likes</span>` : ''}
+          ${item.reposts ? `<span><b>${item.reposts}</b> Reposts</span>` : ''}
+          ${item.bookmarks ? `<span><b>${item.bookmarks}</b> Bookmarks</span>` : ''}
+        </div>
+      </div>
+    </body>
+    </html>`;
+    await page.setContent(html);
     await mkdir(path.dirname(destPath), { recursive: true });
-    await page.screenshot({ path: destPath, type: 'jpeg', quality: 86 });
+    await page.screenshot({ path: destPath, type: 'jpeg', quality: 88 });
   } finally {
     await browser.close();
   }
 }
 
 const thumbPath = path.join(root, `gallery/thumbs/posts/${post.slug}.jpg`);
-console.log(`Capturing thumbnail for ${post.slug}...`);
-await captureThumbnail(id, thumbPath);
+console.log(`Capturing full thumbnail for ${post.slug}...`);
+await captureThumbnail(post, thumbPath);
 
 const list = JSON.parse(await readFile(listPath, 'utf8').catch(() => '{"posts":[]}'));
 const at = list.posts.findIndex((p) => p.slug === post.slug);
