@@ -1,0 +1,188 @@
+{
+  "id": "v0160IirdL4",
+  "title": "videofile_ : The Internet Computer",
+  "folkSlug": "josh-miller",
+  "folkName": "Josh Miller",
+  "paragraphs": [
+    {
+      "start": 9.7,
+      "time": "0:09",
+      "text": "oh yay hello uh my name is josh i'm one of the co-founders and the ceo of the browser company i'm coming to you from the swiss french alps uh where i am visiting my wife's uh family i'm sorry i'm a little sweaty i just got off the trampoline with my niece but i i'm really excited to record this video as odd as the format may be because three years ago in this very same place on my annual trip to switzerland i first"
+    },
+    {
+      "start": 35.5,
+      "time": "0:35",
+      "text": "came up with the idea for the browser company and after a long walk and a few days of thinking wrote this long essay to hersh and that became the browser company and three years later i have really really big exciting news to share with you i want to talk about three things today i think this is as big a moment for what we're doing as that founding founding story three years ago um three things"
+    },
+    {
+      "start": 57.5,
+      "time": "0:57",
+      "text": "i want to show some graphs of how arc is doing uh it's really exciting the second is i want to kind of pull back the current a little bit and tell you where we think we're going in the next five years or really why we're all here what our actual aspiration is because the browser company names a little bit of a misdirection and and third and finally uh i want to share some news we raised a"
+    },
+    {
+      "start": 79,
+      "time": "1:19",
+      "text": "round of financing that i'm really excited about and it's pretty unique i know i've said excited a few times i'll tone it down a bit but um here we go so first things first how's arc doing you've probably been seeing more tweets hopefully you've been using it uh uh and and the spoiler alert is it seems like people really like this thing we've built uh i we're pretty surprised uh not"
+    },
+    {
+      "start": 101.8,
+      "time": "1:41",
+      "text": "we were confident and we are confident that we can make something amazing but uh to be honest we look at the product and see so much that's so wrong with it let me just get into it um i want to first show you how many people are using the product at least five days a week this is a graph over time since we started of the number of people that used arc at least five out of seven"
+    },
+    {
+      "start": 126.2,
+      "time": "2:06",
+      "text": "days a week right so at the very least it's their default browser and they likely really really like it if they're using it that much thousands and thousands of you now and you can see how much progress we've had uh in the last few months uh but on top of that what we're even you know just as grateful for is it's not just that people that try ark seem to love it or seem to like it you are all telling your"
+    },
+    {
+      "start": 146.6,
+      "time": "2:26",
+      "text": "friends about it or it seems like you're telling your friends about it because um for every invite we send to ark we see more than one waitlist sign up come back organically and that means because you the people that are that are using it are telling your colleagues and your friends about it and we so appreciate it this is our our list of sign ups um and and the reason that that's really big is"
+    },
+    {
+      "start": 165.4,
+      "time": "2:45",
+      "text": "because uh in many ways we've been so focused on just building the basics right making sure arc is fast and secure and has extension support and has keyboard remapping yay profiles coming and uh it only feels like oh my goodness that was not a flattering pause um it only feels like right now because retention is really good and because it seems like the growth engine is humming"
+    },
+    {
+      "start": 189.5,
+      "time": "3:09",
+      "text": "that we can really take a step back and refocus on why we all join this company and why we're building this company and i don't want to tell you about it um because it may not be what you expect um in order to tell you where we want to be in five years i want to start in the past a bit um and take you through the the arc of computing um maybe you know why where that part of the reason that we called it arc"
+    },
+    {
+      "start": 212.5,
+      "time": "3:32",
+      "text": "um so the arc of computing really i like to think about it uh started with um ibm so i mean biased i was a summer intern at ibm not that i've been a special loyalty to them but international business machines that was the first computing company uh that i truly made waves at the level of a company like apple and um ibm you know the original computers uh they they they existed in rooms like"
+    },
+    {
+      "start": 239,
+      "time": "3:59",
+      "text": "this is the ibm 360 really the first uh line of computers that was was incredibly successful and it filled up rooms it cost many many millions of dollars it had multiple people to operate them but most importantly they were for businesses they were for corporations international business machines ibm it wasn't a thing that sat on your desk it wasn't for the individual it was it was transformative"
+    },
+    {
+      "start": 261.6,
+      "time": "4:21",
+      "text": "but like what we think of as a computer has changed a lot and it started as a business computer and for you know a couple decades now we've been in really the second what i like to think of the second phase in evolution of computing and that's the personal computer so uh obviously apple i'm on an apple apple computer right now changed my life i got this see-through imac uh on the right-hand side uh when i was i"
+    },
+    {
+      "start": 285.1,
+      "time": "4:45",
+      "text": "don't know probably like 10. i i i just i mean anyone that's watching this video i know you had one of these moments with with computers mine was with an imac but obviously the original macintosh some would even say even was even before the macintosh with the homebrew club and and the one that was but the point is after the business original business computer phase computers went into this phase of being"
+    },
+    {
+      "start": 306.8,
+      "time": "5:06",
+      "text": "extremely personal uh the two steves put them on our desks uh they gave us input mechanisms and interfaces such as the keyboard and the mouse and uh fonts and again they weren't the first but they really were the ones that popularized it and ever since then what we think of as a computer is this kind of hunk of metal that sits on our desk in front of us or sits on our lap it's pretty incredible but but it really"
+    },
+    {
+      "start": 330.2,
+      "time": "5:30",
+      "text": "hasn't changed all that much in a couple which gets us to why we're actually here so yes we're building a browser but we're not just building a browser we view the browser engine as the foundation for the next evolution in computing which we believe uh are internet computers and so we want our aspiration is for arc"
+    },
+    {
+      "start": 356.9,
+      "time": "5:56",
+      "text": "to be the first popular internet uh and uh i'll let your mind wander a little bit about what that means i don't want to fill in too many of the blanks and quite frankly we're still figuring it out ourselves but we think that we're on the precipice and it's about time for for for the next for something new i think we're all just a little bit bored and something about these machines"
+    },
+    {
+      "start": 379.2,
+      "time": "6:19",
+      "text": "and the software on them don't feel like they've met this moment that we're at right now um and and we think uh the next wave of computing is going to be internet computers and that and we want ark to be that i want my son who's 10 i'm sorry my son who's one and a half when he is 10 the same age i got that imac i want his first computer to be arc to be an internet computer and the"
+    },
+    {
+      "start": 401,
+      "time": "6:41",
+      "text": "reason that we're so uh bullish that that is this is the moment for it whether it's us or someone else we have no doubt that internet computers are going to be the next next category um the reason we're so bullish is i mean let's just look at this you know i love i love this this personal computer i love this laptop in front of me but i also loved instagram and like instagram it's it's just decaying it's"
+    },
+    {
+      "start": 427.3,
+      "time": "7:07",
+      "text": "slowly decaying and that's i don't think it's a bad thing it just it had its moment but what i mean is if you look at this computer if you just take a step back and and don't talk about it in terms of tech the thing people want from their computers is their stuff you can call it files whatever you want to call it and the stuff that matters to people are not on their computer anymore"
+    },
+    {
+      "start": 450.6,
+      "time": "7:30",
+      "text": "you know on my computer these are all just random screenshots that i don't actually care about uh you know i don't i don't save the stuff that matters to my personal and professional life and folders on my desktop anymore neither do you everything is a url now it's my documents my presentations my pdfs my photos everything is out there on the and lives at a url and it's not on my on"
+    },
+    {
+      "start": 473.3,
+      "time": "7:53",
+      "text": "my computer like if i if i accidentally dropped this computer down the mountain i would be sad that i lost the resale value of the device but i wouldn't lose anything and that's because it's all on the internet and then again i know i may be at the tip of the spear or a little bit of an extreme but all of our applications are now on the internet too like i run a modern technology company"
+    },
+    {
+      "start": 493.8,
+      "time": "8:13",
+      "text": "and i can i just use all the applications in arc because they're all just web apps spotify i use an arc slack i use an arc the list goes on everything i need from my computing life i can get from arc from the internet because none of it is on my computer anymore and in fact most of the stuff that's on my computer they're just electron apps and and for those of you who don't know about"
+    },
+    {
+      "start": 517.4,
+      "time": "8:37",
+      "text": "essentially that just means is something like superhuman or figma or notion or all of these products are actually secretly just web browsers that have been essentially white labeled to look like native applications but they're just web apps and that's why i can use spotify for example or slack in my browser and that's not a bad thing that's an unbelievably exciting thing this is what we mean is"
+    },
+    {
+      "start": 540.6,
+      "time": "9:00",
+      "text": "it's not that there's anything wrong with my macbook it's just from a bygone era we are long live the web the internet has had a resurgence and we think the next great computing platform is right in front of us and it's the internet all of the developer the best developers and designers are building for the web all the really exciting macro trends in technology if you're excited about transformer neural"
+    },
+    {
+      "start": 562.3,
+      "time": "9:22",
+      "text": "networks or blockchain technologies or whatever it is that gets you going uh it all takes place through the internet and it all takes place through an internet client a web browser and so really our hypothesis is that the reason that we're missing we're missing something called an internet computer whatever that looks because our computing lives have moved beyond this hunk of metal and"
+    },
+    {
+      "start": 588.2,
+      "time": "9:48",
+      "text": "and it's really exciting to think about a world in five years whether it's arc or another product and company where when i come to switzerland to visit my in-laws once a year i don't need to lug around this machine i can free myself from the machine because i can go up to my in-laws computer in there you know in that back office i can tap my finger on the on the device or i can toss at a"
+    },
+    {
+      "start": 609.8,
+      "time": "10:09",
+      "text": "glance and whoosh my computer comes down from the internet comes down from the clouds and is right there on that machine because all of the stuff i need all of my tools all of my files all of my people my teams all of those things are out there on the internet too so it doesn't matter where i access it from and so if you go back and you look at arc and you look at it through that lens i think you can"
+    },
+    {
+      "start": 631.8,
+      "time": "10:31",
+      "text": "probably see uh you can see the seeds of that and you can see why the browser company is called the browser company um but not just because we're building a web browser but we because we think the future of computing is on the internet and browsers are going to be at the foundation of that but really what we're building is an internet computer and and exciting part of that is there we just found a lot of people who"
+    },
+    {
+      "start": 656,
+      "time": "10:56",
+      "text": "believe in that and believe in us we just raised a round of funding from mike krieger uh my krieger ins the grand co-founder just to have something to look at mike is a wonderful wonderful wonderful human uh just a lovely person who shares our values um and also happened to co-found instagram and was it cto uh"
+    },
+    {
+      "start": 681.5,
+      "time": "11:21",
+      "text": "until it sold to facebook and a long time after that and and not only mike uh but we also raised money from the ceo and co-founder of shopify uh the ceo and co-founder of pinterest the ceo and co-founder of slack the cto and co-founder of slack uh the ceo front uh the for the the camille ricketts who was the kind of first storytelling community person brilliant at notion and"
+    },
+    {
+      "start": 706.6,
+      "time": "11:46",
+      "text": "and you know i don't mean to list these people to sound like a coachella lineup and we didn't raise money from these people just uh to raise money from the fanciest people we could find it's because if again if you look at what we're doing not as building a new web browser but building a new type of computer for the internet then we need to go raise money from all of the people who are making who have"
+    },
+    {
+      "start": 727.8,
+      "time": "12:07",
+      "text": "made and are making that future internet and that future computing life and even if you go back to our series a our series day wasn't raised from vc funds uh it was raised from uh the co-founders of stripe and the founder of zoom and uh god i'm gonna miss it you know the the you know the founder of figma and the ceo of notion and all of these people because that's the future and that future isn't on our"
+    },
+    {
+      "start": 751.1,
+      "time": "12:31",
+      "text": "local computer no one's making windows apps no one's making mac apps i mean some people are making mac ups but people are building for the internet and uh just feel so grateful that they're uh that we get to learn from from all these folks uh and on top of that just grateful i mean it's a recession right now it was we did not expect to be raising money in this moment and um it wasn't only all these"
+    },
+    {
+      "start": 776.1,
+      "time": "12:56",
+      "text": "new folks but folks like nabeel and jeff and uh you know who you are all the people that have come back and backed us again and again um we're just we're just really grateful and i wanted to end by just saying i'm thankful for everyone watching this video if you've been watching this long we owe you a big hug um because uh with your friends or family or uh someone that's been falling"
+    },
+    {
+      "start": 798.5,
+      "time": "13:18",
+      "text": "arc from the beginning or someone just loves the product or a new friend from the internet it really is a david and goliath thing going on we are going up against apple we were going in up against google we were going up against microsoft and we can't do that unless we have unless you know we're just a handful of people in a proverbial room trying our best like we need the extended extended crew and if you're"
+    },
+    {
+      "start": 822,
+      "time": "13:42",
+      "text": "watching this you're part of that and so thank you thank you so much i cannot wait to record another one of these videos in three years uh again and see where we are and um yeah see you on the internet thank you so much"
+    }
+  ]
+}

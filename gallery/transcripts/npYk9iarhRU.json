@@ -1,0 +1,1648 @@
+{
+  "id": "npYk9iarhRU",
+  "title": "Software as Art, Hiring Misfits, and Optimizing for Feelings",
+  "folkSlug": "josh-miller",
+  "folkName": "Josh Miller",
+  "paragraphs": [
+    {
+      "start": 0,
+      "time": "0:00",
+      "text": "I would never, ever want to be the CEO or founder of a desktop browser company. Like, can you think of something more boring? I actually think there's a good chance The Browser Company would have sold for a lot more money if I wasn't the CEO. We were a web browser company that pretended it was a consumer company. There was one day in the office where I was kind of dancing to EDM,"
+    },
+    {
+      "start": 18.2,
+      "time": "0:18",
+      "text": "and then we just decided that we kind of needed to make the little Spotify music player kind of dance. I'm not sure how commercial a decision that was, but one of the best compliments I think I ever received about our work was, someone was like, I don't know how you're going to beat Chrome, but you seem like you're having a lot of fun. So they just shipped an update to the new tab page where instead of just saying"
+    },
+    {
+      "start": 35.1,
+      "time": "0:35",
+      "text": "Twitter, they'd show the favicon. Overnight, worldwide search ad revenue for Google dropped 5%. No way. 5%. Just because you added a Twitter icon, we moved everything to go work with Ev. In the middle of this meeting, he stopped me with Josh. I have no idea what the answers to these questions are. Beware of anyone you meet in Silicon Valley that purports to have the answers. We still believe very, very"
+    },
+    {
+      "start": 54.7,
+      "time": "0:54",
+      "text": "different things than everyone else, which means if we're wrong, we're boned. But if we're right, we have such a different perspective that we're going to have a differentiated product for some period of time. They said, I think you believe in me more than I do. And that really hit home because I do believe in them. Software is going to become art. Software is art now. Who's the Paul Thomas"
+    },
+    {
+      "start": 73.4,
+      "time": "1:13",
+      "text": "Anderson of software? As my therapist likes to say, people weren't put on this earth to be productive. Welcome to Dialectic episode 61 with Josh Miller. Josh is the co-founder and CEO of the Browser Company, which makes Dia and formerly Arc. They were acquired by Atlassian a year ago. And I wanted to sit down and have a long conversation with Josh about the arc of his career, his influences,"
+    },
+    {
+      "start": 100.3,
+      "time": "1:40",
+      "text": "the history of browser, and what he's thinking about now. How software is going to change and what the internet computer of the future might look like. Josh is wise and incredibly energizing. And he has been someone who has been very helpful to me over the years. So this was a really special conversation to get to sit and reflect with him. If you enjoy the conversation, please share it with a friend."
+    },
+    {
+      "start": 126.9,
+      "time": "2:06",
+      "text": "I'd also like to thank Notion, Dialectic's presenting partner. Notion is a collaborative workspace for your life's work that has become the ideal hub to hold all of the context, work, and information that you and your team use to collaborate with both each other and with AI and agents. Everyone is trying to get more output and leverage from AI and agents. And I think many of us are"
+    },
+    {
+      "start": 148.9,
+      "time": "2:28",
+      "text": "trying new tools constantly. Having a single place that stores all of your context, your skills, your memory, is really useful so that as the tools around it are changing, you have consistency and resiliency across everything you and your team are working on. You can try any new model right when it comes out. It's available right within Notion or work across a broad range of agents,"
+    },
+    {
+      "start": 173.8,
+      "time": "2:53",
+      "text": "whether they're those you create in Notion or any other agent or tool you're using. Everything integrates with Notion. And Notion is, in some sense, the Switzerland that works across all of the tools that you use. You can learn more at notion.com/dialectic. With that, here is my conversation with Josh Miller. Josh Miller, thank you for being here. This is a long time coming. It's awesome."
+    },
+    {
+      "start": 199,
+      "time": "3:19",
+      "text": "I feel like I'm about to have a therapy session on this couch. A little bit. Only a little bit. And the guy behind the camera was actually helped make the video when we told people that we were transitioning away from Arc. So really great to see an old friend, but I kind of feel like we're about to get into it. Full circle. Shout out, Mark. A big one to start. Do you think you have been too commercial"
+    },
+    {
+      "start": 222.8,
+      "time": "3:42",
+      "text": "or not commercial enough over the course of your career? I got to lay down on this therapy couch. No, I mean, I think that's an easy one, to be honest. I think not nearly commercial enough. Really? I actually think there's a good chance The Browser Company would have sold for a lot more money if I wasn't the CEO. And I'm not trying to diminish how proud I am of the work that we did and I did,"
+    },
+    {
+      "start": 244.9,
+      "time": "4:04",
+      "text": "but I mean, we were a web browser company that pretended it was a consumer company that made behind the scenes YouTube videos and got really excited when we made the Spotify icon. There was one day in the office where I was kind of dancing to EDM. And then we just decided that we kind of needed to make the little Spotify music player kind of dance when there's music dancing. I'm not sure how"
+    },
+    {
+      "start": 264.6,
+      "time": "4:24",
+      "text": "commercial a decision that was, but one of the best compliments I think I ever received about our work was someone was like, I don't know how you're going to beat Chrome, but you seem like you're having a lot of fun. And I remember just feeling like, I feel like I've made it in some way. So that's a long way of saying I am definitely not as commercial as I probably could and should be."
+    },
+    {
+      "start": 286.8,
+      "time": "4:46",
+      "text": "But I think that's also a little bit of the magic of why people have loved the work that we've done. Was that something that you were kind of conscious of throughout? Was that something that you're sort of reflecting on now? um, would you have done things differently? And maybe the biggest question, which is just like, what, what dispositionally about you, Hursh, the team, the setup, um, produced the"
+    },
+    {
+      "start": 311.4,
+      "time": "5:11",
+      "text": "less, I, we should also caveat, like you had, you guys had an amazing outcome and you're continuing to build a great business. Yes. And very proud of it. Like, I don't mean to be, uh, too self-deprecating. I just think, honestly, the probably gifts I have are not necessarily aligned with the word commercial. Okay. But in terms of where it came from, you know, if you look at our"
+    },
+    {
+      "start": 329.7,
+      "time": "5:29",
+      "text": "early team, especially so many of us had worked at Instagram, Snapchat, Facebook, and we were in many ways taught our crafted software at some of those institutions, which were fabulous, but they all revolved around a very specific kind of dogma at the time, which is you really are optimizing for a metric. I'll never forget at Facebook one day, Chris Cox, unbelievably charismatic, great storyteller."
+    },
+    {
+      "start": 354.7,
+      "time": "5:54",
+      "text": "Like the head of all product. Uh, he was chief product officer at the time. He's hopped around a little bit, but he got up on stage and like gave this talk about how Facebook's a medium, you know, and where, you know, like just very, very hitty stuff. But then at the very end, it was very hard, you know, you felt like you were there for a purpose. And then either at the end or fall talk, he"
+    },
+    {
+      "start": 373.2,
+      "time": "6:13",
+      "text": "would basically put up this big pie chart and it said hours in the day. And it sort of divided it by like, how long are you on the toilet? And how long are you sleeping? And, and the implied goal was, our goal was to capture as many of those hours as possible. It's like the Netflix thing. We're competing with sleep. Yeah. Yeah. And you, you know, and it, this kind of metrics driven culture was"
+    },
+    {
+      "start": 392.3,
+      "time": "6:32",
+      "text": "extremely effective. So for example, I was on teams that were focused on how much are people sharing? How many pieces of content are, is the, you know, user sharing every week? And it was, I, we all learned a lot, but when you are building software that's so ruthlessly optimizes for numbers, a big part of the browser company project was to say, well, what if you optimize for the polar opposite? What"
+    },
+    {
+      "start": 415.2,
+      "time": "6:55",
+      "text": "if we just optimize for how people felt like what the experience was like using a piece of software in the way that I'm sure a lot of kind of artists or filmmakers, or they sort of say like, Hey, I don't, how do I want the person to feel using this piece of software? And then that sort of instinct and founding motivation compounded because we were The Browser Company of New York. So excited"
+    },
+    {
+      "start": 435.5,
+      "time": "7:15",
+      "text": "to be in a room together. And then two weeks later, COVID hit. And so all of a sudden this very, like, we want to be together band of brothers and sisters team was, you know, stuck in our own product, which was a web browser in this kind of dystopian, weird state of the world going like, how do we literally make, like, we literally wake up, open our product and stay in it for eight to 10 hours."
+    },
+    {
+      "start": 456.9,
+      "time": "7:36",
+      "text": "Like, how do we make this rectangle feel awesome? I sometimes wonder if we would have been a company that's so obsessed over how people felt if it weren't for COVID, if that makes sense. You had to make the digital thing, like very real, or, um, you had to like, you were so immersed in the digital thing. It was like, how are we going to make this? Yeah. How do we not make it painful? I mean,"
+    },
+    {
+      "start": 475.4,
+      "time": "7:55",
+      "text": "again, keep in mind it was going so like sociopolitically in the world. There was all this, I mean, sort of similar how it feels now. People just like, weren't feeling good, you know? And so we sort of took it upon us to say like, all right, like if we're going to be in this space every day, this office of sorts, like your browser became your office, like, how do we want it to feel? But I think intrinsically it"
+    },
+    {
+      "start": 495.7,
+      "time": "8:15",
+      "text": "came from this seeing, you know, we all kind of got in the industry, Twitter is going to bring democracy to the world and, you know, et cetera, et cetera, et cetera. And we were reckoning at the time, you know, this is after President Trump was elected with sort of like, what, what world are we creating as software craftspeople? And so that definitely was rooted in an exploration of what does it"
+    },
+    {
+      "start": 517.3,
+      "time": "8:37",
+      "text": "look like if you're not so ruthlessly optimizing for metrics? And keep in mind at the time, the theory of making a web browser for desktop was that it was actually a consumer product, right? That was sort of the key, one of the key insights of what we were all there to do is like, wait, we're all consumer people. We've been thinking about messaging and UGC on your phone for our whole"
+    },
+    {
+      "start": 534.4,
+      "time": "8:54",
+      "text": "careers. But if you actually look at the landscape, there are a lot of social network messaging apps competing for each other. But if you look at the products that your mom uses, your cousin uses, and you use, the web browser is actually one of the most consumer pieces of software. What if we made it feel like a consumer piece of software? So there's definitely some in retrospect, why did we"
+    },
+    {
+      "start": 550.7,
+      "time": "9:10",
+      "text": "end up doing that little dancey emoji on Spotify? You know, was it because of our background? Was it COVID? Yeah. I think it's probably a mixture of all those things. The web browser specifically, maybe, maybe to, if I'm hearing you right, like to put that a different way, the least obvious thing to do something in consumer in is the desktop computer, at least at this stage. And so maybe it was sort of an"
+    },
+    {
+      "start": 573,
+      "time": "9:33",
+      "text": "inversion of that says, yes, mobile is the ideal place to focus, except for this one thing, which is like every consumer does use a Mac or whatever, and they have a web browser. Yeah. And in fact, the story of the browser company was I was actually an investor at Thrive Capital. Right, right, right. And Thrive famously incubates companies in addition to investing in them, Oscar and"
+    },
+    {
+      "start": 592.1,
+      "time": "9:52",
+      "text": "the like. And this was an incubation I was doing as an investor because I would never, ever want to be the CEO or founder of a desktop browser company? Like, can you think of something more boring? I'm sure your listeners are, you know, if they don't know our worker, like that is like one of the most boring things you could pick to do. But it was sort of that, the fact that we think about it like"
+    },
+    {
+      "start": 611.8,
+      "time": "10:11",
+      "text": "that, but you spend eight hours a day in it. Like what piece of software do you spend eight hours a day in? What room do you spend eight hours a day in? So when we, when we and I realized that we sort of changed our perspective on the problem space and said, we're just blind to how utilitarian chrome is, what if we spice it up a little bit? You know, what if we made people feel something?"
+    },
+    {
+      "start": 631.9,
+      "time": "10:31",
+      "text": "But again, not very commercial in that regard. So maybe on that note, I think you studied sociology. Yeah. Why do you think you, and you did a startup, I think you dropped out, right? Yeah. Like do you branch like White House, notwithstanding the shape of your career has been very commercial. You were a full-time investor for two years. Yes. Was that obvious? Like, was there a different path for you?"
+    },
+    {
+      "start": 654.2,
+      "time": "10:54",
+      "text": "Like, why do you think despite you, you're the reason, one of the reasons I think it was such an interesting question for you is like, you're actually in this really interesting like dance between creativity and commerciality in a way that obviously like there are some people who are max, max commercial empire builder, whatever optimizer. And there are other people who are like the artist"
+    },
+    {
+      "start": 673.3,
+      "time": "11:13",
+      "text": "who doesn't have a commercial bone in their body. Yeah. There've always been sort of three parts of me that I've grappled with and will probably always grapple with. There's the part of me that, that is, let's say traditionally ambitious that, you know, has looked up to business people and wanted to make a kind of business of some sort. There's the part of me that has always wished"
+    },
+    {
+      "start": 691.1,
+      "time": "11:31",
+      "text": "I was an artist or an urban designer or something. And there's a part of me that my mom worked for city government growing up. My godfather ran, was a city manager of Culver City and then became head of urban planning for Los Angeles. Cool. So there's a part of me that's always kind of grown up in like local politics, local policy or community. And I'd always try to combine those into"
+    },
+    {
+      "start": 708.2,
+      "time": "11:48",
+      "text": "one job or tried my best. Like, how do I find, we've talked about this on walks before, like, how do you find that perfect job that's perfect for you? I was, it was a point in 2023 where I was very searching and we had a conversation exactly on this note. And I thought my job at the Obama White House was that I combined, I mean, maybe not the business side, but I'd sort of found the"
+    },
+    {
+      "start": 722.9,
+      "time": "12:02",
+      "text": "perfect job. President Trump is elected, everything's thrown off. You were there until the election, basically. Yeah. I was there the day that he was elected. And then actually one story about President Obama that to me captures his character. After the election, we were going to do photos with the president in the Oval Office. It's like a thank you for the time. And the day that"
+    },
+    {
+      "start": 744.3,
+      "time": "12:24",
+      "text": "he was meeting President Trump was the, which he of course had no idea that was going to be the day. These photos were scheduled, you know, weeks, months in advance, parents fly in, wear their, and he didn't cancel on us. He met with President Trump for the first time, then met with LeBron James, and then took photos with like a hundred White House staffers and their family, which is, you know, he"
+    },
+    {
+      "start": 762.4,
+      "time": "12:42",
+      "text": "was a, he's such a good person. But to go back to your question, one of the reasons I joined Thrive Capital after the White House is I was like, I'm over this. I want to do everything the best and separate it. So if I want to do art, just do art, whatever that means for you. And so Thrive Capital was a, okay, this Josh Kushner guy and their team, they're like, it feels like they're creative with"
+    },
+    {
+      "start": 786.1,
+      "time": "13:06",
+      "text": "Capital in a way that I don't see elsewhere. And it seems to be working. So they had kind of this style to them that caught my attention and made me curious. They didn't add a website with nothing on it, but really that was an experiment in what if I'm just really commercial actually. And then I was messing around with other projects on the side. Like I almost made this documentary with Josh Lee, who ended"
+    },
+    {
+      "start": 807.7,
+      "time": "13:27",
+      "text": "up running video at The Browser Company, made this like prototype called text journal. That was this like kind of artsy UGC thing. Anyways, at Thrive, it was around the time that Thrive invested in Robinhood. And what was so fascinating about that deal, which my partner Kareem led was what Kareem picked up about Robinhood strategy is E-Trade is a public company, Charles Schwab."
+    },
+    {
+      "start": 830.6,
+      "time": "13:50",
+      "text": "They couldn't really compete with Robinhood because their whole business model was charging for trades. So Robinhood shows up and goes, how about trades are free? And you see this, what are you going to do as a public company? And to me, that was actually the first time I was really inspired by commerciality as a lens through kind of creative work. And that's actually, I need to tell that part"
+    },
+    {
+      "start": 853.9,
+      "time": "14:13",
+      "text": "of the story because the root of The Browser Company was the heart. It was the hours a day. This is almost like a office, a physical office, but it also was, wait, why hasn't the browser changed? And you peel back the onion and it is Google doesn't care about browsers. They care about search and they really care about search ads. So really they saw Chrome as this big search box at the top"
+    },
+    {
+      "start": 876.3,
+      "time": "14:36",
+      "text": "and anything that trade off against those metrics as someone that going back to metrics knew they'd be optimizing for metrics said, if we can build a browser that is better and it monetizes or is better at something that is not search and it's decoupled from search as a business model, they're not going to shut it down. They're not. I mean, actually a week ago, they announced a vertical sidebar with favorites"
+    },
+    {
+      "start": 896.7,
+      "time": "14:56",
+      "text": "that looks identical to arc. It's going to bring this up. And this is 2026. Yeah. And we started the company in 20... So the thesis was correct, which is it would take Google a long time to do things that trade off against search revenue. Why does vertical tabs trade off against search revenue? Anything that is... Just any change. One story... Oh, man, that's a real therapy couch."
+    },
+    {
+      "start": 917,
+      "time": "15:17",
+      "text": "We ended up working with someone who's actually one of the co-creators of Chrome. So there were... It was Sundar, who's now CEO, who's the PM. And this person who worked for us that ended up was the VP of engineering for Chrome when he left, came to work at The Browser Company, told me the story. When you hit Command-T without thinking. It's like you're driving, right? Let's say you want to go to Twitter."
+    },
+    {
+      "start": 937.4,
+      "time": "15:37",
+      "text": "Yeah, I go Command-T, T-W. Exactly, right? And so on the new tab page, there are these suggestions of where you... Oh, Jackson, you go to Twitter a lot. Maybe you want to just click this big button and go to Twitter. And they realized that because you're going so fast, if you actually show the favicon or the icon for the website, it's a lot easier for you to pick up what it is and find utility from it."
+    },
+    {
+      "start": 959.3,
+      "time": "15:59",
+      "text": "So they just shipped an update to the new tab page, where instead of just saying Twitter, they'd show the favicon. And people, you loved it. They started using it more. Overnight, worldwide search ad revenue for Google dropped 5%. No way. 5%. Just because you added a Twitter icon. So you say, Wow. What does the vertical sidebar do? Well, the whole theory of Arc and the features we built were,"
+    },
+    {
+      "start": 982.2,
+      "time": "16:22",
+      "text": "Hey, this is your office. This is your space, Jackson. It should look exactly like you want. It should have everything you need. You shouldn't have to go anywhere. Actually, we should do everything to keep you right here. That is, you know, intrinsically trades off with your time, your attention, with going to Google search and finding stuff. So I guess that's all to say, it very much was an experiment."
+    },
+    {
+      "start": 1006.2,
+      "time": "16:46",
+      "text": "And wait, could you start a company that was very much driven to do something very different and new, but was doing so under the auspices that there's a massive market opportunity if we are in the right place? Where did the, just to maybe go back to the like business ambition, artistic, creative stuff, civic service stuff. Sounds like your parents certainly influenced the latter."
+    },
+    {
+      "start": 1029.1,
+      "time": "17:09",
+      "text": "Maybe where did the, just like entrepreneurial, like I can do and make new things come from? I mean, I think you went to Princeton, you studied sociology, like those paths tend to like not lead to like drop out and do something new. They tend to lead to more conceptual, we're going deeper down the therapy rabbit hole. I was talking to my dad about this the other day. My dad and my parents,"
+    },
+    {
+      "start": 1052.8,
+      "time": "17:32",
+      "text": "I'm so lucky. There are parents that just, they don't care that I sold my business for a lot of money. Like they've always been just like, just be happy. And neither of them are, you know, ambitious in the way that I have been. And I used to be a big nurture person. I was a big, big fan. I think so many of the decisions I made in my career and life were, you know, I found tech through a professor named"
+    },
+    {
+      "start": 1078.8,
+      "time": "17:58",
+      "text": "Robert Putnam's book, Bowling Alone. Really? I went to see him give a talk as a sociology professor. Yeah. About bowling alone. And I was, it was the first time I'd heard someone describe the world and this idea of social capital that explained everything I felt like I'd seen up to that point. And I went up to Professor Putnam after the talk. I said, hey, what should I do for a living?"
+    },
+    {
+      "start": 1099.4,
+      "time": "18:19",
+      "text": "And he's like, I don't know you, but if you liked my book, there is this guy, Scott Heiferman, who started a tech company after he read Bowling Alone. Wow. So if you like my book and you're trying to figure out what to do with your life, maybe you should go work for Scott. I interned at Meetup in New York City in 2011. Wow. As part of interning at Meetup, you have to go to Meetups"
+    },
+    {
+      "start": 1120.1,
+      "time": "18:40",
+      "text": "because that's the product. At the time, the New York Tech Meetup was the center of tech in New York. Everyone went to this demo day. At that demo day, I was like, these guys are my age. These gals are my age. Like I can make software and the rest is history. Anyways, going back to your underlying question, I have become over time much more of a nature person. Now, you know, I have two sons"
+    },
+    {
+      "start": 1144,
+      "time": "19:04",
+      "text": "and you just, you meet your child in the first year and you're just like, there's such a fully formed person. There's a spirit in there. So that's a long way of saying, I think if I go back, back, back with my dad, I've always had this part of me that wants to make and do things. And I think it's been encouraged mostly by my parents in that no matter what you do, if you fail, we love you."
+    },
+    {
+      "start": 1165.4,
+      "time": "19:25",
+      "text": "Just be happy, be happy, which keep in mind, I'm from the West side of Los Angeles, very hippy-dippy parents, but my, my instinct is it comes more from, I don't know, how I came out as a kid. You said to me on the phone recently, you said, I'm not particularly, I'm not particularly an artist, but clearly like this is rolling around also. Was that just like interest in art? Was that making stuff?"
+    },
+    {
+      "start": 1190.5,
+      "time": "19:50",
+      "text": "Like, I don't know, what was something I want to talk about later? Like you really talented, creative people, videographers, designers, whatever are drawn to you, or at least you're good at identifying them. um, I think your wife, if not as an artist, works with artists. Like how did, was there a route for that thread? There's definitely a, I say a lot in another life, I'd be an artist."
+    },
+    {
+      "start": 1211.4,
+      "time": "20:11",
+      "text": "And someone once said, well, why don't you become an artist? It's not too late. And so I think deep down, there's some part of me that struggles to even say that word in this podcast. So we'll leave that aside. I think something more relevant is, so we start the browser company 2019, 2020. And around that time, my wife gets a job running James Turrell's studio. And we moved-This is pre-COVID."
+    },
+    {
+      "start": 1235.6,
+      "time": "20:35",
+      "text": "And then at the very beginning of, like literally overlapped with The Browser Company. And so on a dime, because of COVID, instead of Valerie commuting, we moved to Flagstaff, Arizona in the high desert up in the mountains. The only, it's a fact-It's like basically next to the greater? Yes. So for those of you don't know, the artist James Turrell, light artist, people have probably seen his work,"
+    },
+    {
+      "start": 1257.8,
+      "time": "20:57",
+      "text": "but what most people don't know is in the 70s, 50 years ago, he got a grant from the Guggenheim and spent seven months flying over the American West. He's a pilot. And he spotted a volcano, an extinct volcano, and said, I'm going to use my Guggenheim grant to buy that volcano. He like landed his plane next to this volcanic crater. And he spent 50 years, hundreds of millions of dollars,"
+    },
+    {
+      "start": 1278.9,
+      "time": "21:18",
+      "text": "including his own money. So it was so fascinating about Charlie. Takes money he makes from celebrities buying his work and just puts it back into his work. And so as we were building The Browser Company in COVID, I was just sitting there with Valerie and James and his wife Kyung and going out to the crater and the ambition of an artist to spend their entire life working on this Magnus Opus"
+    },
+    {
+      "start": 1301.2,
+      "time": "21:41",
+      "text": "that he wants to be, the modern day Matt Machu Picchu, pouring his own funds into it, obsessing over like the type of clay that's going to curve the wall, which to me is like not an important wall. It was hard to physically be around that. In this moment when in COVID, the world feels like it's falling and he has just kind of this singular purpose and drive to, you know, he builds chamber,"
+    },
+    {
+      "start": 1323.4,
+      "time": "22:03",
+      "text": "he's hollowed out this volcano with hundreds of millions of dollars, built all these chambers and tunnels that align with celestial events. I remember once he was explaining to me this long tunnel, the length of a football field. It brings the sun and it projects under this piece of marble that's a big circle. So it feels like Turrell took the sun out of the sky and put it onto this piece of marble."
+    },
+    {
+      "start": 1343.9,
+      "time": "22:23",
+      "text": "It's the most glorious thing you've ever seen. And I was making awkward small talk with him. It was towards the beginning. Also like, this isn't open. Like people don't get to see. No, I mean, hopefully soon, but it wasn't at the time. And then he made some comments like, oh, this isn't, yeah, I like that the sun comes here. I built this chamber because once every 18 years, there's this thing"
+    },
+    {
+      "start": 1362.3,
+      "time": "22:42",
+      "text": "called the moon, da, da, da. And like every 18 years, the moon's going to be projected over here. And so I'm around this guy that's like thinking about building experiences that, you know, are going to happen once every 18 years with big pieces of marble and football field length tunnels that connect to, it's just, so it's hard not to be deeply inspired by that and not pretending"
+    },
+    {
+      "start": 1381,
+      "time": "23:01",
+      "text": "like we're making things like Roden Crater. But if this man can dedicate his life to making people feel a certain way, like, and we're building this big, this rectangle that you're in for eight hours a day, like how can we bring some of that spirit into our work? And so my instinct, in addition, just being a fan of art, I grew up in Los Angeles. I love going to indie films with my parents and museums."
+    },
+    {
+      "start": 1401.4,
+      "time": "23:21",
+      "text": "I think just being around James and his work for the kind of early duration of the company, I think trickled into the sort of people we took bets on, the sorts of things that we did. It's, there's this, there's some idea that is like, sort of like the founding DNA of a company really, really matters. And it's really interesting. And obviously part of that is maybe like the way that early product"
+    },
+    {
+      "start": 1421.5,
+      "time": "23:41",
+      "text": "kind of shapes with business model I'm in. There's sort of more of the kind of rational version of that. But I have to imagine that being a part of the DNA of like where your headspace was in those early days. It's like crazy. Even for example, one of the best hires, and it's worth noting for your viewers, I'm a sociology major that I think my main skill is identifying really talented artists"
+    },
+    {
+      "start": 1442.4,
+      "time": "24:02",
+      "text": "in themselves and giving them encouragement and a platform to go do their work. So just as an example, so many of the things we're known for were co-created by a guy named Nate Parrott. And Nate Parrott was our first design hire who had never been a designer before, was two years out of college. And keep in mind, this is our, Hursh and I sold our first company to Facebook. Like we knew designers."
+    },
+    {
+      "start": 1465.4,
+      "time": "24:25",
+      "text": "We could have hired someone senior. And this person who I didn't really know was like, hey, you got to meet this Nate guy. He's a kid, but he like makes browsers for fun. You kind of look him up on the internet. And Nate's website at the time was a video game arcade where you won coins by doing things like reading his resume. It's very playful. You can go look it up. And I meet this guy, Nate,"
+    },
+    {
+      "start": 1483.7,
+      "time": "24:43",
+      "text": "who makes this like really artsy like personal website. And he was just like making browsers for fun on the side, you know, not even designing them. He was just making them, you know, kind of full stack and making them. And so we're like, did you meet him the first time? We're going to, this is our first guy. This is our designer. And he's like, And so I think meeting people like Turrell,"
+    },
+    {
+      "start": 1502.7,
+      "time": "25:02",
+      "text": "hearing their life story, seeing how quirky they are, seeing how nonsensical some of the things they say are, but how brilliant if you like look through what you're supposed to say in certain situations, I think made us more open-minded to people like Nate, who on paper wouldn't pass the screen, but you say, you just feel like there's something in there. Josh Lee, when we decided to bet on video,"
+    },
+    {
+      "start": 1525.1,
+      "time": "25:25",
+      "text": "it's so obvious now, but you know, this was in 2020 something, I want, why would you hire a video person? And you're gonna make like behind the scenes, YouTube videos, like, and part of it, and the story is the secular bet on video as a storytelling medium. And part of it was like Josh was just an N of one person and you bet on N of one creative people. - Were you looking for someone?"
+    },
+    {
+      "start": 1545.3,
+      "time": "25:45",
+      "text": "- I was looking to hire Josh. - Okay, 'cause you already knew him. - I'm someone that, yeah, I'm at, yeah, I'm someone that I just can't, when I meet someone that grabs me like that, I'll wait years trying to recruit them. So Josh was someone that had interned for me. He basically came up, after we sold to Facebook, he was a fan of our first company branch. He was an intern at Facebook"
+    },
+    {
+      "start": 1565,
+      "time": "26:05",
+      "text": "and like asked me to go on a coffee walk, did. Kind of, he stood out to me. And then when I was at the White House, he wanted to come intern. So he interned for me at the White House as a designer. And then he decided that his heart was in film and he wanted to go pursue filmmaking. And so he was pursuing filmmaking at the time, we did some sort of side projects together. And I just felt like he was"
+    },
+    {
+      "start": 1582.5,
+      "time": "26:22",
+      "text": "such a creative genius, honestly, that I just wanted him at The Browser Company. So the way that I got him to try it was, while he was trying to make these kind of artistic film projects, maybe he would not call them artistic. I thought they were fairly artistic. I was like, hey, let us be the like for-profit contract. And then, and that was, you know, we were making a bet on YouTube culture"
+    },
+    {
+      "start": 1603.5,
+      "time": "26:43",
+      "text": "and how kind of opaque and untrustworthy tech companies were at the time. So again, I guess, since this is a therapy session, there probably is something to my work and our work as marrying both sides of the brain, or at least marrying kind of art and business in some way, where it was led by the artist, Josh. He's special, get him in the door. But it was also observing that from a kind of business"
+    },
+    {
+      "start": 1623,
+      "time": "27:03",
+      "text": "standpoint, we couldn't succeed. People didn't trust Google. People did not trust Facebook, whether you liked it or not. In that cultural environment, how do we as a dinky little startup get you to trust us? - Yes. - Spending eight hours a day here with what you get paid to do, buying things. Why are you gonna trust this little dinky startup? And our view was no one's perfect, but if we can invite people"
+    },
+    {
+      "start": 1644.3,
+      "time": "27:24",
+      "text": "in to get to know us as humans and they see we're just a bunch of people in our room trying our best, video is the best medium to capture that spirit so that people would feel like, okay, when they never get something wrong or they're stumbles. - Yeah. - I know these people. - Yeah, I'm with them. - They're really trying, they're really trying hard. And that turned out to be true, but it came from,"
+    },
+    {
+      "start": 1666.1,
+      "time": "27:46",
+      "text": "what did Josh Lee come first? Did this sort of observation about betting on video come first? It's sort of, yeah, it's sort of been both the whole way. - It's funny, I always used to, I worked with all these Twitch streamers and stuff and YouTubers and I always used to joke, like I have very wealthy friends and if they like bought a Lamborghini and I posted a video, like check out my Lamborghini,"
+    },
+    {
+      "start": 1685.9,
+      "time": "28:05",
+      "text": "I'd be like, you're such a douche. But if like Nadeshot or one of these YouTubers did it, it was like, that's our guy. - Yeah. - We did it. - Yeah. - And I think you were, I mean, I don't think you certainly, I mean, you guys have influential in so many ways, even though, even the name like has been, become a little bit of a meme now, but I think the way the work you guys were doing,"
+    },
+    {
+      "start": 1704.8,
+      "time": "28:24",
+      "text": "especially early on is like, so how the rest of Silicon Valley works now. - Yeah. - In a way that is, it's not obvious. I also, I think it's worth noting, like that answer you just gave also very, to me is the opposite side of the coin of why the reaction I think with Dia was so strong. It was actually like, it was the same thing. It was like the same energy that was working for you,"
+    },
+    {
+      "start": 1724.8,
+      "time": "28:44",
+      "text": "worked against you. - A hundred percent. - I want to talk a little about the kind of activation energy of the company. - Yeah. - And I think maybe an important place to start with that, especially given your previous comment about like, maybe I can have my commercial business life as an investor and my creative life and my whatever, like those more compartmentalize. Why, it's funny."
+    },
+    {
+      "start": 1748.3,
+      "time": "29:08",
+      "text": "I talked to Josh Kushner about this once and he was like, he explained being really bummed when you left. - Yeah. - In part because he felt like you were really starting to hit your stride, like taking a little while. Investing is a great job, especially if you're really good at it, at an amazing place like that. Like why abandon it all to try to smush all these things together into one container?"
+    },
+    {
+      "start": 1769.5,
+      "time": "29:29",
+      "text": "- It's funny going back to kind of nature versus nurture and the sense of who you are. I'd always been a big planner or tried to be about my life. You know, what was going to happen? And, you know, at that point you looked at everywhere I had lived and everything that had happened in my career and none of it was part of the plan. And so I think I've just learned over the years,"
+    },
+    {
+      "start": 1788.2,
+      "time": "29:48",
+      "text": "as I'm sure maybe many people listening to this have, to just sort of trust my intuition. So I wish I had a very rational reason why I left Thrive to be a CEO and co-founder of The Browser Company, but it really was just an emotional, bet on the people, you know, I started the company with Hursh, who was my second time co-founder and Hursh is like my professional wife or husband. Like we just are, have, there's"
+    },
+    {
+      "start": 1810.6,
+      "time": "30:10",
+      "text": "something about us that chemistry wise have always clicked. And so I'm actually going to blame Josh. The most I can think of as a reason I left Thrive was when I joined Thrive, I thought I was going to start a nonprofit. I was an EIR. I was an entrepreneur residence. Josh was very kind and generous. And he said, Hey, come to Thrive. You start a company, you start a nonprofit, you want"
+    },
+    {
+      "start": 1830.6,
+      "time": "30:30",
+      "text": "to join an investor. We just want to work with you. Actually, I think he in some ways inspired the bet on people I've made because he said, let's not figure it out. Just come in the building. We'll figure it out. And I joined after the white house gig and thought I was going to do something with civic tech. And I brought this idea once to him. I don't remember which it is, but I think it"
+    },
+    {
+      "start": 1848.2,
+      "time": "30:48",
+      "text": "was to make a babysitting co-op company. Okay. And Josh very much like in my memory acknowledged how generous the idea was how much it could help people, but it was very small. The whole kind of point of point was, and Josh said, small ideas are just as hard to make successful as big ideas. You should go for it, Josh. And so the main motivation for The Browser Company"
+    },
+    {
+      "start": 1875.4,
+      "time": "31:15",
+      "text": "was this instinctual desire to work with Hursh again and to build a place where our people could come and we could work in the way that we've decided we really wanted to. But what really motivated me, I think put me over the edge was realizing this is a product that billions of people use. They spend eight hours a day in, they're using it more like an operating system because okay,"
+    },
+    {
+      "start": 1898.9,
+      "time": "31:38",
+      "text": "all the apps that you use are now in browser tabs, which means it's sort of the new Mac OS windows. And we had learned that actually operating systems held a lot of the leverage in the technology industry because Apple just cut off Facebook. And so it was sort of like, wow, we're building a web browser, but actually if this works, this is going to be my future children's sense of what"
+    },
+    {
+      "start": 1920.2,
+      "time": "32:00",
+      "text": "a computer is. Anyways, you go to that and you go, this is worthy. This is like, it's going to be really hard. If you're going to do something new, like might as well make it or in hard, make it really big. Yes. And so there is, I think if I'm being honest, whether I'm proud of it or not, you know, in 30 years, when I listened to this is it was, if this all works, it might truly change the way we use"
+    },
+    {
+      "start": 1938.4,
+      "time": "32:18",
+      "text": "the internet and our computers and that combination of the people and the audacity again, Roden Crater, you know, Valerie just started working for trail or think about working for trail. I think she had started by then. It was just this audacity. Like, let's just try really new, exciting things. You said something to me in that conversation in 2023, when I was kind of like really searching,"
+    },
+    {
+      "start": 1961.9,
+      "time": "32:41",
+      "text": "you said something about like, speaking of being big, I think you said it was deep, but it was also wide, which is a really good fit for me in the sense that like, it was this container that would like allow you, I think you were, I know you're pretty skeptical of crypto, but you even made a comment, like if the crypto thing kind of really actually works, that's part, that could be part of"
+    },
+    {
+      "start": 1983.4,
+      "time": "33:03",
+      "text": "this. It was, it was able to kind of be an aperture that was wide enough. Yeah. And this is one of the things I really learned from Zuckerberg at Facebook. I will never forget this internal talk he gave. I don't remember the size or the purpose, but in it, he made this proclamation that he was sure that in five, I forget if he said five to 10, some five to 10 years, everything on"
+    },
+    {
+      "start": 2001.5,
+      "time": "33:21",
+      "text": "Facebook and Instagram was going to be video. And I was like, this disconnected billionaire, like what a fucking idiot. Like how rich are you? Have you tried buffer? Does he have some sort of billionaire wife? Like, have you tried watching a video on your phone? It's got Verizon premium. And like, what do you think of us plebeians? Like you think that we're going to want to watch"
+    },
+    {
+      "start": 2026,
+      "time": "33:46",
+      "text": "on our tiny screen? Like, why would you not watch? What year is this? Like 2013 probably or something? 2013. Yeah. 2013. It must've been when we joined. And I remained skeptical after the talk ended. He didn't like convince me. I was just like, this guy's disconnected. And lo and behold, he predicted TikTok and everything that came out of it. And I was really inspired by the way"
+    },
+    {
+      "start": 2044.2,
+      "time": "34:04",
+      "text": "he made this bet. And there were a lot of things he did in response to that thesis that put Facebook right next to the hoop to dunk the ball when they needed to. And that carried through with me. So when I was at Thrive, I'm doing-The adjacent possible, you're in the water. Yeah. And, and, and just like for me at the time, up until that point, it was mobile, mobile, mobile, mobile, mobile my career. Like"
+    },
+    {
+      "start": 2064.8,
+      "time": "34:24",
+      "text": "the, you know, the iPhone came out when I started my career. So my whole career in software had been like, every, everything's going to be on your phone. So I go join this like sexy VC firm and like, and I see all the hot, and all the companies come in with these like productivity tools in your browser. And so it was part of observing like, okay, all of my most talent, all the most talented people I know in the industry"
+    },
+    {
+      "start": 2084.4,
+      "time": "34:44",
+      "text": "are all of a sudden building these desktop web apps. There are all these people doing crypto and saying computing is going to be rewritten by crypto. Now all of a sudden we're using Chrome extensions like MetaMask and like Chrome extensions are cool all of a sudden. And then there were all these kind of like nascent AI ML companies. So obviously didn't know transformers were coming, but that required, you know,"
+    },
+    {
+      "start": 2102.1,
+      "time": "35:02",
+      "text": "cloud servers and cloud compute. And so you sort of just looked at, and then you look right. And my wife is working for like a 78 year old artist who is not tech savvy in the middle of the most rural county in Arizona. And she was not leaving her browser strip because some gallery sends a PDF, it links to Dropbox. And so you just look around you at the micro and you look up at the macro and you"
+    },
+    {
+      "start": 2123.4,
+      "time": "35:23",
+      "text": "go, I don't see how in five years the web browser is not one of the most strategic pieces of software. It's not going to look like a web browser today, but there's just, it feels like there's no chance with all of these trends that the browser won't be more central. And so it's kind of surreal in that one of the questions I get the most is like, you know, hey, everyone is embedding a"
+    },
+    {
+      "start": 2140.3,
+      "time": "35:40",
+      "text": "browser and trying to take over the browser. And people have different theories. Like, how are you going to win in this extremely crowded space? You know, the jury's still out on our role in the ecosystem and how successful we will be. But in many ways, it was the same thing I saw from Zuck saying like, I promise you video is going to be central. And it inspired that kind of long-term"
+    },
+    {
+      "start": 2160,
+      "time": "36:00",
+      "text": "thinking, which is not normal for me. I think I can be reactive and kind of short-term sighted. And I think I observed from him the compounding of kind of patience and conviction. Yes. Well, and I think part of it too is like, you kind of need to spot something on the horizon. I don't even know how much specific resolution there needs to be, but it's like, I want to run over there."
+    },
+    {
+      "start": 2185.2,
+      "time": "36:25",
+      "text": "Yes. And it was also probably a reaction to the failures of our first company. Like, we stumbled our way into an aqua hire that made our investors' money going to Facebook. But in retrospect, I'm like embarrassed to call it a company. But one of the challenges with that company is, you know, if you, you know, you're 20 at the time, you try to like answer all the questions. Okay, what's the business money?"
+    },
+    {
+      "start": 2206.6,
+      "time": "36:46",
+      "text": "You know, you check all the boxes and you have this plan. And then whenever the plan doesn't go well, you're sort of like, okay, well, what's our North Star? Our North Star was this like Harvard MBA product proposal plan thing that had all the questions answered. And it really, I think, changed my worldview. If you go read the essay we wrote in replace of sort of a value statement, we wrote"
+    },
+    {
+      "start": 2226.4,
+      "time": "37:06",
+      "text": "this essay about going on road trips. And one of the core values is just like, assume you have no idea. Assume you don't know. And so we needed to go play in an area and direction where as our ideas worked and didn't work and as things played out in the world that we didn't anticipate, we would be in the right place. And our conviction would be at the highest level because we knew we were going to"
+    },
+    {
+      "start": 2247.7,
+      "time": "37:27",
+      "text": "get it wrong. And so that was probably honestly some, not PTSD, but honestly learning and evolution from being 20 and trying to control the world. And I'll never forget for Branch, my first company, we started in New York. We moved out to San Francisco. And then this guy named Ev Williams offered to lead our seed round. Wow. And Ev kind of had a similar, you know, the same way Turrell has just worked on"
+    },
+    {
+      "start": 2271.2,
+      "time": "37:51",
+      "text": "light his whole career. Ev is where his entire career worked on putting thoughts on the internet. He was the one that popularized blogging. Blogspot? Blogger. Yeah. And it became blogspot. Google acquired it. Then he co-founded Twitter and was CEO of Twitter. And then he went on a medium after that. And each successive point, he just removed friction of publishing. And so we were doing"
+    },
+    {
+      "start": 2289.5,
+      "time": "38:09",
+      "text": "a publishing platform. That was what Branch was. Cool. And Ev Williams wanted to be our lead investor. And not only that, he just left Twitter and he wanted to teach us. He was like, I'll help you come move to San Francisco. We'll work across from each other. And I'll never forget, we move out of San Francisco. I barely know Hursh, my co-founder. I don't know Ev at all. We're going out there to the"
+    },
+    {
+      "start": 2307.8,
+      "time": "38:27",
+      "text": "promised land so he can teach us everything. And in the first meeting with him, I prepared this whole thing on the plane of like, here's our plan for the next five years. And Ev's, keep in mind, I moved everything. We moved everything to go work with Ev. In the middle of this meeting, he stops me with Josh, I have no idea what the answers to these questions are. Like, you were mistaken if you"
+    },
+    {
+      "start": 2327.5,
+      "time": "38:47",
+      "text": "think I have any, I have no idea. And by the way, you just moved out here, beware of anyone you meet in Silicon Valley that purports to have the answers to all the questions. Because all of us who had made something like Twitter, know we were all making up as we went along and we all got really, really lucky, which doesn't mean we're not talented and doesn't mean we don't have foresight, but just, and so I almost feel like I"
+    },
+    {
+      "start": 2348.5,
+      "time": "39:08",
+      "text": "didn't really take his advice as much as I should have. But years later, starting the browser company wanted to sort of, how do you set up for success if your philosophical worldview about how business or industry works is no one has any idea, even the greats that have done it two, three times. So I was not wise and mature enough to internalize his feedback then, but in retrospect, I think, you know,"
+    },
+    {
+      "start": 2372.8,
+      "time": "39:32",
+      "text": "he sort of preempted everything I've come to believe about what we do for a living. So this prompts two interesting things to me. One, our mutual friend, Chris Paik, who is also an investor and browser, he, I don't know how much you guys have talked about this, but he has this frame of companies that they're bottom-up companies, they're top-down companies. Yeah. And his frame is basically like bottom up"
+    },
+    {
+      "start": 2389.4,
+      "time": "39:49",
+      "text": "is most of what we think of in software. It's like you start, and frankly, like branch, like you start with a single feature thing and it just, or Twitter, it just grows forever. And in some sense, it's like very much the YC, just like iterate your way. We are a startup machine. Yes. Like vision doesn't matter actually at all. Just like iterate until you find the thing that catches fire."
+    },
+    {
+      "start": 2412.2,
+      "time": "40:12",
+      "text": "Top down on the other hand, which is much more commonly associated with a company like Apple or Tesla, like software, it's more rare in software, which is you're shipping multiple attempts at a vision basically. And you are a classic example, at least with browser company of like the relatively rare top down software company. Was there anything about the product of Arc and then later Dia that was like sacred"
+    },
+    {
+      "start": 2434.1,
+      "time": "40:34",
+      "text": "or was it all just in service of this like vision of like, we need to build whatever, a thing that is going to be the web browser in five years? Yeah. And I think we can be criticized here for not keeping more sacred. There was nothing other than what we came to describe as the internet computer vision. Yeah. So if you go back to our YouTube page and go all the way back to the first video,"
+    },
+    {
+      "start": 2457.4,
+      "time": "40:57",
+      "text": "it was me sitting in a kitchen, basically just riffing. Recording through photo booth, I think. Right. Yes. And actually at the time it was actually like an update to our like a hundred people that use the product. I think it was like, I show some graph that was like a hockey stick and it was like-I watched the video this week. The N was like a thousand people, you know, but I'm like, I'm like, we've made it,"
+    },
+    {
+      "start": 2476.2,
+      "time": "41:16",
+      "text": "man. Like, oh, this is how it feels. Anyway, so there, the, the vision, which I've, I've kind of touched on was that when my son, at that point we had our first child and he was, I think two, maybe one. And it was like, when he's 10, I want his, I got an iMac when I was 10 and it changed my life. Yeah. I wanted his blue see-through iMac to be the product we were making. Wow. Because our belief was computers would"
+    },
+    {
+      "start": 2499.2,
+      "time": "41:39",
+      "text": "end up spanning all the devices in your life and sort of be this invisible layer that sit on top of it. And that's what we were making. That was sacred. That is sacred. That's why we pivoted from arc. That's, that explains everything we've done. And I think different people at different times that even work for us have believed that or not. Yes. I try to be really honest about who we are."
+    },
+    {
+      "start": 2517.8,
+      "time": "41:57",
+      "text": "We put our values up there. We write an essay called, we optimize for feelings. We say, go watch the internet computer video. And so I think you make a product like arc, which is a, you know, a cult hit, let's call it an indie, you know, indie software. I'm not sure label, but people love the thing. They don't care about this random YouTube video. They actually think you're kind of a"
+    },
+    {
+      "start": 2533.9,
+      "time": "42:13",
+      "text": "blowtard, like talking about all these like proclamations, not knowing going back to all these stories that informed it, whether it's Turrell or Zuckerberg, like this long-term bet on where we wanted computers and thought they were going was why we were here. I don't care about some little feature in this product number one, but actually you make a whole brand and you make a whole video series"
+    },
+    {
+      "start": 2551.7,
+      "time": "42:31",
+      "text": "and you make a whole storytelling machine around like, here's who we are. Here's what we're working on. We're going to geek out to you about this little crafty tail animation and our onboarding flow. Get attached to it. Then, yeah. Then you remove it and people go, you're losing it. You're like abandoning your roots. Yes. And I go, no, we're actually like, we're staying true to what we came here to do."
+    },
+    {
+      "start": 2572.2,
+      "time": "42:52",
+      "text": "So, um, that explains a lot. I was imperfect in many ways during that period, but to your question of what was sacred, very little, if anything was sacred at the kind of implementation product layer, but the sort of foundational roots of the company are, are extremely sacred. And I think once you view it through that lens, agree or disagree, it explains, I think most of not everything about what we've done."
+    },
+    {
+      "start": 2596.4,
+      "time": "43:16",
+      "text": "Absolutely. Um, you, I think you mentioned intuition earlier. You seem to be, to me, a very intuitive person. The max to the max, for better words. I'd love to hear about how that maybe squared with this kind of idea of, we don't know. Like, I think it was even a core company value of like, just like, we don't know the answer. You can only learn from experimenting. Yeah. It's clear to me that those two intuition"
+    },
+    {
+      "start": 2621.1,
+      "time": "43:41",
+      "text": "and that aren't at odds, but I'm curious how they interplay. Yeah. A hundred percent. So we don't know, doesn't mean we don't know anything. Assume you don't know, just sort of says, Hey, what's going to happen with AI safety? Is a bio terror attack about to happen? No one has any idea."
+    },
+    {
+      "start": 2646.7,
+      "time": "44:06",
+      "text": "Um, but one of the reasons we were so motivated to start a browser company was because it meant we would use our software every day. Turrell lives in the art spaces that he makes. And so if we woke up and in order to do our jobs, we spent eight hours in our product and we thought we were crafts people that loved, loved what we did and we're striving to get better at it. And we're trying to get better at it"
+    },
+    {
+      "start": 2671.6,
+      "time": "44:31",
+      "text": "so we can make something for ourselves. You know, a big part of the browser was, it meant I could go into a dinner party and know everyone there used a browser. And that meant theoretically they could all relate to what we were making. And I could explain to them at a very human personal level, why I thought it would make them really happy or why I thought they'd love it relative to Chrome."
+    },
+    {
+      "start": 2690.4,
+      "time": "44:50",
+      "text": "And so we assumed we didn't know at the macro level or at the strategic level or at the industry level. But when we woke up and was like, okay, should we make the dancing Spotify icons like dance this way or that way? We had a lot of conviction in what we wanted to do because we're making it for ourself and we knew it might not be right for everyone, but we knew what we wanted to do."
+    },
+    {
+      "start": 2710.7,
+      "time": "45:10",
+      "text": "And so I think one of the secrets to browser companies success or innovations or whatever you want to call them on the product side, the things that people think of us for and our products for, it was probably someone at our company just said, I really want this for myself. So it's extreme trust in your intuition and your artistic sensibilities, for lack of a better word, at the day-to-day level and"
+    },
+    {
+      "start": 2727.9,
+      "time": "45:27",
+      "text": "complete acknowledgement that you're not in control and you have no idea what's going to happen, you know, a couple layers above. And so that marrying of a macro bet, it's going to go generally that way. This is the road trip metaphor. But when you're on a road trip and you're on some like interstate, you're like, this doesn't feel that, let's take that exit. I see. You trust your instinct."
+    },
+    {
+      "start": 2750.4,
+      "time": "45:50",
+      "text": "Take that exit. You're on the interstate. You know, you're going to get more Dunkin' Donuts. If you go off that way, maybe you'll get a good tamale. Like, you know, go for it. Just, just trust your instinct to go that way. Like, I know you travel a lot. I'm sure you dropped Jackson in some random city. How do you know which way to wander for an hour? You know, so I actually think once you"
+    },
+    {
+      "start": 2763.7,
+      "time": "46:03",
+      "text": "think about it that way, you know, you want to go walk around Amsterdam for three hours. You don't know which way you go, but you just, you've been walked around enough cities that you trust your instinct about which street to go down and which coffee shop to go in. You, there's an element too, I think of you don't know being, giving way to tolerate other people's intuition more and like thus"
+    },
+    {
+      "start": 2786.1,
+      "time": "46:26",
+      "text": "be more experimental on the intuition. It's so fun because all that means is we need to try a lot of things, go on a lot of ventures. And also when we feel like we're starting to have conviction in something, double and triple down on it. So really what it are, it pushes people to do the work for us. It's just like, stop talking. Don't make it. If you love it, give it to a few of us."
+    },
+    {
+      "start": 2811.4,
+      "time": "46:51",
+      "text": "If we love it, then let's all run towards it, you know? Yes. How do you train slash maintain slash stay connected to your intuition personally? I think just continuing to explore new things in my personal life. I've always kept personal and professional lives very separate. And actually there's a reason we wanted to be The Browser Company of New York. And if you go and read the optimizing"
+    },
+    {
+      "start": 2834.7,
+      "time": "47:14",
+      "text": "for feelings essay that we wrote, actually the main point we're making is to, for technology, yes, we're making a point about metrics versus feelings. But one of the things we really argue for is, hey, go look at architecture. If we're making software and it's where I, so this browser, I spent eight hours a day there for my job. I work with colleagues in it, like this Google Meet tab."
+    },
+    {
+      "start": 2857.5,
+      "time": "47:37",
+      "text": "I do focus time on what I'm paid to do. That sounds a lot like an office. Yep. So instead of pretending like we're making this browser thing and the only reference is Google Chrome, and maybe if you go way back mosaic, we sort of said, hey, what can we learn from office design? You know, what can we learn from the offices we've been in? And so I think we've always drawn inspiration from industries or, you know,"
+    },
+    {
+      "start": 2879.3,
+      "time": "47:59",
+      "text": "whatever you want to call them that sort of sit adjacent to software and technology. And as a result, I think in my personal life, I actually, I stay pretty far away from the tech world physically and I think spiritually and try my best to just try and explore new things, which sounds very, I'm sure, generic and boring to listen to, but it's the truthful answer about just staying curious, I guess."
+    },
+    {
+      "start": 2899.7,
+      "time": "48:19",
+      "text": "What do you think people loved most about, loved slash love most about Arc and about Dia? There's this wonderful woman that ran our storytelling team and that doesn't even do justice, what she did for us named Nash. Yeah. Nash is another great example. Nash, she's getting her due and she's getting it. Like Nash is brilliant. You know, one of the most brilliant storytellers, hopefully future poets that I've"
+    },
+    {
+      "start": 2929.6,
+      "time": "48:49",
+      "text": "ever met. Nash was a venture capitalist when I met her. And when I met her, I remember, I think, telling her like, you're in the wrong, what are you doing? You could just tell. And Nash had this line that she, she started saying in her final year or two at the browser company after a bunch of years, which was, we leave our fingerprints on things. You know, it's just this idea that if"
+    },
+    {
+      "start": 2949.7,
+      "time": "49:09",
+      "text": "you're having fun and you're making it for yourself and you're sort of expressing your own intuition, it's going to be imperfect. It's going to be funky. It's going to be playful. It's going to be whatever it is you are and what you're trying to do. And I think people can feel that, you know, it's sort of like I live in a part of Brooklyn where all these condo towers going up. And, you know, if you look at a photo"
+    },
+    {
+      "start": 2971.5,
+      "time": "49:31",
+      "text": "of it, it's like, oh, it looks cool. But then you kind of go in the lobby or that, and you just, it feels void of any. And so the best I can articulate is that we were genuinely having fun. We've really optimized for that. I think you can feel that team having fun behind it. And we're a culture that encouraged people to kind of leave their fingerprints on what they did and not try to do it"
+    },
+    {
+      "start": 2991.1,
+      "time": "49:51",
+      "text": "The Browser Company way, but do it the Omar way or do it the Carla way or do it the Kristina way, you know? So Kristina, who designed many of the, you know, designed the scrim border around ARK and that, you know-Is this Kristina Saint? Yeah. No, I was just with her in Maine like a month ago. So Kristina, I met at Facebook. She hated it. And she decided to quit tech to become a furniture maker."
+    },
+    {
+      "start": 3018.3,
+      "time": "50:18",
+      "text": "And she was doing contract work in order to pay the bills at furniture making. And I met her and we just hit it off. We were talking about, I think Christopher Alexander. Like we had-She mentioned seeing is forgetting. I think you showed her that back. I brought her home because I'm, that's a great, I met, I reconnected her after five years as this tech contractor. We went on this rabbit hole,"
+    },
+    {
+      "start": 3038.7,
+      "time": "50:38",
+      "text": "walked her back to my apartment to give her seeing is forgetting about Robert Irwin. And I was just like, she has, someone that wants to make furniture with wood in Maine is gonna make a really great browser. I want my browser to feel that way. And so I think, yeah, again, it's so easy to add a narrative in retrospect. Was it we were having fun? Was it we hired people like Kristina"
+    },
+    {
+      "start": 3059.9,
+      "time": "50:59",
+      "text": "that lo and behold quit two years later because she went to Maine and made furniture and is now quite successful at that? Is it because we encourage people to not do it The Browser Company way, but do it the Kristina way? I'm not sure. And I think Kristina would answer better, but I do think part of what people can feel is the sort of the art, the craftsperson or artists behind it"
+    },
+    {
+      "start": 3080.2,
+      "time": "51:20",
+      "text": "doing their thing, not doing it the way they expect. And by the way, huge downsides to this too. It is definitely not like, it's caused, I got a lot of grays now, but it was definitely worth it. It's an amazing answer. It wasn't quite what I was trying to ask, which I guess what I'm trying to ask is like, are there distinctions between what you think people particularly loved or love about ARK?"
+    },
+    {
+      "start": 3101.2,
+      "time": "51:41",
+      "text": "And like, what is especially great? Maybe that's a great answer for your overall philosophy on both products, but is there a distinction between where you found people really loved about ARK and love about Dia? It's hard in retrospect, and especially being so close to it, to kind of analyze what made ARK successful. But I do, in some ways, it's sort of in retrospect felt a little bit like"
+    },
+    {
+      "start": 3122,
+      "time": "52:02",
+      "text": "we were building it together. It was in COVID. We were very public and open about our experiments and the people we hired in our board meetings and ship stuff and got feedback on it and changed it based on feedback and sort of broke down the wall. And I think there was this feeling of people that used ARK that they were part of the story. Yeah. And that was, and they were, we truly were."
+    },
+    {
+      "start": 3146.3,
+      "time": "52:26",
+      "text": "It did feel like we were building with everyone and that was the intention. And the downside of that was if, as Valerie said, I remember there was once, I started getting a lot of hate online after we abandoned ARK. And like, I really like, you know, it sort of crossed into some threshold. I was like, man, it was making me really sad, you know, at a personal level. And I couldn't expose that at work,"
+    },
+    {
+      "start": 3164.2,
+      "time": "52:44",
+      "text": "you know, in many ways. And Valerie was just like, if you are someone that leaves YouTube, I've never wondered why you were so happy people were leaving positive YouTube comments. If you are leaving YouTube comments on a video about a tech company's board meeting, make, you're not representative. And she was saying this as a, don't let you get you down. And so I think for a bunch of structural reasons"
+    },
+    {
+      "start": 3185.4,
+      "time": "53:05",
+      "text": "about who wanted that sort of content, who wanted a indie software browser, who wanted to root for this team that we ended up making a very niche, but beloved product, but beloved. And I think with Dia, what we've successfully done is build a product that can speak to the average person using their laptop for their job that doesn't know. Which go back to what was actually the original vision."
+    },
+    {
+      "start": 3206.9,
+      "time": "53:26",
+      "text": "Yeah. And I was thinking about this. Dialectic is one of my favorite podcasts. It's like, oddly, so many of the people I look up to and I've looked up to in my career have been guests on this. And I was thinking about, but how do I explain to someone why this person's work? Like, it's an inside world or it's a specific, it's a subculture of sorts. And so I think Dia is really, our attempt to be that mass market."
+    },
+    {
+      "start": 3228.6,
+      "time": "53:48",
+      "text": "How do we hopefully take the sensibilities that led to ARK, but put them in a package? And so we hire people like Charlie Dietz, who invented Swipe to Reply on WhatsApp and was the lead designer of Safari for many years. And the idea was like, how do you, his designs don't feel early browser company in their color and their flair and their animations. And some people like that,"
+    },
+    {
+      "start": 3249.4,
+      "time": "54:09",
+      "text": "some people don't like that. But it's a very strategic and intentional move to say, how do we, let's try to, let's get next up the ladder and how do we distill something down? So like the iPod click wheel, I don't think we've done it yet. But so I think the people that love Dia, we hear things like, I, you know, our morning brief. I believe we were the first product to have something like a daily brief."
+    },
+    {
+      "start": 3271.6,
+      "time": "54:31",
+      "text": "And we called it the morning brief and we led into the editorial design and we don't say AI anywhere. We have these colorful, juicy buttons. And we started hearing from people that it was the first thing. How did you do this? Oh, this is AI. This is the first time I understood how AI could help me in my day-to-day. And tech people and AI insiders, I think generally gave respect"
+    },
+    {
+      "start": 3294.7,
+      "time": "54:54",
+      "text": "for the kind of novelty of the packaging and the interface around, you know, the harness and the models. But they looked at it and go, I can ask Chachi Media to send me a task reminder every morning and it can do that. What's so different about it, you know? And so I think we've kept some of that spirit, but we're really striving to build something more essential and culturally relevant"
+    },
+    {
+      "start": 3310,
+      "time": "55:10",
+      "text": "than this YouTube video driven. Well, also like the person who uses Arc is like, I can't wait. I want to mod my thing. Yes. Like, right. These things are, yeah. It seems that you've done less of it. I don't think you've done a podcast in a while at the very least. The sort of building in public thing broadly, which again, I think is so much more common now. Yeah."
+    },
+    {
+      "start": 3335.5,
+      "time": "55:35",
+      "text": "Any reflections on that slash like, is there a reason? Obviously part of that I'm sure is you're part of a bigger company or whatever, but like maybe it's even suited to one, that one mode was more suited to Arc and another mode's more suited to the current product. So we are redesigning our office for the first time. We've had this kind of dinky little office in Williamsburg since we started the,"
+    },
+    {
+      "start": 3358.4,
+      "time": "55:58",
+      "text": "or since the middle of COVID and we're renovating right now. And we just moved into a co-working space across the street. So we're back in a co-working space after this big splashy acquisition. We're back to our roots. And so like any co-working space, like we got this little, you know, see-through door with our browser company logo on it. And right next to it is one of those companies"
+    },
+    {
+      "start": 3376.8,
+      "time": "56:16",
+      "text": "that's called the blank company. It's like out of, it's unreal that we just happened to be put next to some startup called the blank company. And by the way, I'm actually like really proud to the extent that it inspired, but we called it the browser company of New York because that in itself was sort of a cultural reaction to the tech startup ecosystem at the time. It was so not the way-"
+    },
+    {
+      "start": 3401.4,
+      "time": "56:41",
+      "text": "Like Ziply or whatever. We were playing. We were just having fun. Like, let's call it, we're in New York City with these, you know, Gothic buildings. It's like, we're The Browser Company of New York. You know, you see the Paul Rand logo is sort of, it was a joke of sorts. And so, and when we started doing behind the scenes YouTube videos that were not polished and they really were raw"
+    },
+    {
+      "start": 3421.3,
+      "time": "57:01",
+      "text": "about what happened at our board meeting, it was us reacting to the culture in technology and saying, you know, why is everyone so stiff in these PR blog posts no one likes? Like, what if you share the people behind it? We were trying to zig where others zagged. And so I think you fast forward six years because the browser company of New York is, we don't even share that name as much anymore"
+    },
+    {
+      "start": 3442.7,
+      "time": "57:22",
+      "text": "because it kind of feels like it's become the culture. And so I think I opened my X feed or whatever and it's just these like launch videos and these behind the scene videos and there's nothing wrong with it, but it now has lost that authentic, I don't know, vulnerability. I hear what you mean. I think it's funny. I had this exact, basically the almost exact same conversation with Gabe Laley who runs MSCHF."
+    },
+    {
+      "start": 3465.2,
+      "time": "57:45",
+      "text": "Yeah. And he's like, the drop stopped serving us. Like internet virality became something that was just about shots on goal. It was no longer. So the thing that had-It's so funny that you mentioned Gabe Laley because he's actually responsible for, indirectly for me and us kind of pulling back in some way in those ways because after the deal closed, one of the things I tried to do"
+    },
+    {
+      "start": 3486.1,
+      "time": "58:06",
+      "text": "was catch up with people that I really look up to. Yeah. And Gabe to me is a generational talent and his office is around the corner in Brooklyn and we went on a walk and I hadn't seen him in many, many years. And he was telling me that he's basically betting on the sort of inverse of what he bet in before. His whole thing before was with MSCHF was tapping into the culture and sort of, you know,"
+    },
+    {
+      "start": 3507.7,
+      "time": "58:27",
+      "text": "playful, subversive ways to try to game the algorithm. And his view was the world's going the opposite way. It's all going to be about private, closed, exclusive, scarce, human-to-human experiences. In person often. The polar. And so there's something, I walked home from that and there was something about that that was just, okay, if we came in a world where there was no transparency,"
+    },
+    {
+      "start": 3527.6,
+      "time": "58:47",
+      "text": "people didn't, behind, you know, with regards to tech companies, people didn't trust tech leaders. You never saw them. You never saw the people that made the product. It's the thing we did at Browser Company. If Nate made a product, you heard about Nate. If Kristina made a product, you saw Kristina. Why should you see me? Yeah. And so I just think in the same way that Gabe and MSCHF"
+    },
+    {
+      "start": 3544.8,
+      "time": "59:04",
+      "text": "are evolving to the culture around them, I think so much of what we did before was like maybe kind of cool in 2020, 2021, but if everyone's just doing it as part of the playbook and they got the contractors and the, what are we doing here? You know, what's the world today as we see it? And so don't get me wrong. We're taking some big swings on storytelling. We just did our first"
+    },
+    {
+      "start": 3565.7,
+      "time": "59:25",
+      "text": "national ad campaign, posters in a bunch of major U.S. cities. And we just basically put up, we commissioned this painter to just paint a bunch of art and we just put it up in these cities and said, we hope you have a great day. Okay. and so we can get to the commerciality and that why strategically did we did that? But I think you're gonna see us experimenting with new mediums and new"
+    },
+    {
+      "start": 3587,
+      "time": "59:47",
+      "text": "ways of telling our story that they're not gonna be direct to camera. But I had to talk to you. We've gone back, so. It's an honor. Yeah. Maybe let's talk a little bit about the commerciality. I wanna hear about how the last year has been, in some sense, there is a great irony, which is you've talked plenty about how you were like so obsessed with like, I'm not gonna build, even where we started the conversation,"
+    },
+    {
+      "start": 3611.1,
+      "time": "1:00:11",
+      "text": "like if I were more commercial, maybe we would have built the enterprise thing sooner. In the end, you work at, like you think about SaaS, like Atlassian. Sort of invented some SaaS. They know SaaS. You've certainly ended up where maybe other people were telling you you should have been many years ago. Yeah. How has that been? So it's been fantastic, but one revealing story there,"
+    },
+    {
+      "start": 3632.6,
+      "time": "1:00:32",
+      "text": "speaking of Assume You Don't Know, is when we were early Arc, like it wasn't even, I don't know if it was even called Arc. I think it was still called Browser by The Browser Company. Okay. There was this guy, and I knew everyone that, like I had recorded like selfie videos for most people that had onboarded to Arc, just welcoming them. Like that level of new people using our product."
+    },
+    {
+      "start": 3649.9,
+      "time": "1:00:49",
+      "text": "And then I think we opened up a little bit more where I couldn't record the videos and sort of get to know people, but just barely out. And there's this guy that kept reporting all these bugs. And he just like, his volume of bug reporting was just so off the charts. I was like, I got to send this guy. Thank you. Right, right, right. And I, you know, I copy and paste the email and paste it in."
+    },
+    {
+      "start": 3668.3,
+      "time": "1:01:08",
+      "text": "And it's like, CEO of Atlassian. I'm like, what's an Atlassian? No way. And then I Google Atlassian. I'm like, oh my God, he's like the richest guy in like Australia. He invented like, and Mike is the most down to earth, wonderful, genuine person. He's been using Arc maybe before it was Arc and not only using Arc, but giving us feedback. And actually during SVB, speaking of commerciality,"
+    },
+    {
+      "start": 3690.2,
+      "time": "1:01:30",
+      "text": "I had 100% of our cash in SVB. So, you know, overnight I thought all of our cash was gone. And Mike texted me because he now had my number from all his bug reports saying, hey, go to, do an all hands, tell your team their payroll is good for the next two months. I'm going to wire you the money you need from my personal account to The Browser Company. So you, like I'm doing this,"
+    },
+    {
+      "start": 3712.6,
+      "time": "1:01:52",
+      "text": "like I know what it's like to run a company. Is he an investor or anything? I think maybe, yeah, Atlassian had been a strategic investor, but it was a minimal amount and my relationship was with Mike. And so, wow. Anyways, there was this, the point of all of that was I trusted him. He loved our product, was there since the beginning, helped us build it, bailed out our team. You know,"
+    },
+    {
+      "start": 3733.9,
+      "time": "1:02:13",
+      "text": "he cared and he kept telling me over the years, like, what are you doing, man? You're monetizing this thing all wrong. You're going to realize you're an enterprise company, you're an enterprise company. And I respect people that call their shots and stick to it. And I found it really annoying at the time. I don't know if Atlassian Power will love that, but it's sort of like would border on pissing me off."
+    },
+    {
+      "start": 3752.6,
+      "time": "1:02:32",
+      "text": "Yeah. And, but I respected many years later, what I realized was he was right. He was right about the ideal way to monetize a browser, given everything we cared about and those sort of founding values and hypotheses. especially because at the time what we were doing with Dia was saying, hey, we think the main interface to AI on your computer, at least for work or school, is going to look"
+    },
+    {
+      "start": 3776.5,
+      "time": "1:02:56",
+      "text": "like a browser. How do we make AI cross the chasm? How do we package it up? And, you know, at the time, it's obvious, I think now in retrospect, this is when OpenAI was focusing on consumer and everyone was like, the next Google. And we said, hey, this looks like productivity software. We're playing around with LMs too. And it seems like it's really, really, really good at things related"
+    },
+    {
+      "start": 3795.7,
+      "time": "1:03:15",
+      "text": "to our job. Yes. And so, in addition to just realizing that enterprise and getting people to pay for it like a professional tool because it helps them with work, was the business model the most aligned with our values and most aligned with sort of the counter positioning and against Google Chrome and every other browser, you know, what we had done and risked everything with Dia was to say,"
+    },
+    {
+      "start": 3815.8,
+      "time": "1:03:35",
+      "text": "hey, let's go be that iMac or that Macintosh for AI. Let's try. We're probably going to feel let's go. And if everyone's using it for productivity use cases, they're not going to be able to add business off of that. And actually, an ad business will have weird incentives if you do that. Yes. And so. Also, what do you use your desktop computer for in 2026? Yeah, exactly. One of the things"
+    },
+    {
+      "start": 3834.1,
+      "time": "1:03:54",
+      "text": "that people are surprised that I admit is when I'm not at work, I hate touching my laptop. If I have a weekend, I'm not touching that thing. It is so, and I love my job, but it is so a work device. Yes. So. So I strongly agree. And maybe it is distinctly more even than two or three years ago. Yeah. I mean, my favorite test is the Williamsburg coffee shop test. You go in a coffee shop,"
+    },
+    {
+      "start": 3857,
+      "time": "1:04:17",
+      "text": "it's a computer lab. It's legitimately during the day, a computer lab. And I walk around, hopefully not too creepy, and just like kind of glance from afar at like, what do they have open? Everyone has a browser open. If it's not a browser, and actually, they always have a browser and they're using it like an operating system. Like the thesis was correct is they're doing a video call,"
+    },
+    {
+      "start": 3875.2,
+      "time": "1:04:35",
+      "text": "but a video call is a tab in Chrome. Yep. And so, yeah, Yeah, it's full circle in a way. So I think this opens into a question that is worth, I mean, like the theme throughout all this has been the internet computer, bet on the cloud. It's not about the hardware. It's not about local. In at least the last couple of years, maybe since cloud code, for a certain kind of person,"
+    },
+    {
+      "start": 3901.3,
+      "time": "1:05:01",
+      "text": "it's been a total return to everything on device. And we'll see, like maybe Mark Zuckerberg's giving everybody a Muse cloud computer, but it's not quite so obvious as it was maybe two or three years ago that this like long tail bet was right, that the browser could be the home for the computer. Yeah. Do you have the same conviction you always had? I do. I have it more strongly."
+    },
+    {
+      "start": 3922.7,
+      "time": "1:05:22",
+      "text": "I think I read what's happening a little bit different than you. Okay, great. And that, and this is what I love about the, you know, what are the bets we made? We bet on Dia and bet on this new product because we felt three things are gonna be really important on desktop with AI. One, we thought your tools, the apps that you use, the ones you have up in the Williamsburg coffee shop,"
+    },
+    {
+      "start": 3942.1,
+      "time": "1:05:42",
+      "text": "weren't going anywhere anytime soon. I don't know what's gonna happen in 10 years. That's the whole theory of the company. But our belief was that you weren't gonna stop using Google Meet or Figma or any of these things. Even if you used AI for some part of it, you're gonna pop it into a Notion doc or a Confluence doc. or the second thing we believed was that AI, the most valuable thing"
+    },
+    {
+      "start": 3961.4,
+      "time": "1:06:01",
+      "text": "as the models commoditized and they all got really smart and cheap was gonna be the kind of personal context or the personal information and your work information that you brought to the model. You put in the input tokens to make the output tokens better because everyone's gonna have the same Nobel prize winner in their pocket. And so the browser had, in addition to all of your tools,"
+    },
+    {
+      "start": 3981,
+      "time": "1:06:21",
+      "text": "because that's where all your apps are now because of the move to the cloud, it didn't know just that there was a Notion doc or a Confluence doc and knew that you've opened it seven times in the past 48 hours. And you've actually written a bunch in it too. And then the third thing was that our belief was that we really wanted to try to build this Macintosh. We wanted to be the Macintosh moment"
+    },
+    {
+      "start": 4001.1,
+      "time": "1:06:41",
+      "text": "or the Macintosh product for the kind of command line interface that we saw, ChatGPT and Cloud. We have not done it yet, but that's how we think about it. What really can cross the chasm? How do you, what's the Susan Care icon desktop metaphor for this technology? And that without that, it'd be hard to cross the chasm. So let's replay the last year. You can look at Atlassian stock price."
+    },
+    {
+      "start": 4020.2,
+      "time": "1:07:00",
+      "text": "SaaS is dead, SaaS is dead. It's all going away. I actually, we checked the numbers. We're making all the same things we used to. And you go talk to your friends from college. Like, I don't think they're going to say their kind of stack of software tools at their job or school is any different than it was a year ago other than the addition of AI. So I don't think these tools are going anywhere,"
+    },
+    {
+      "start": 4036.4,
+      "time": "1:07:16",
+      "text": "at least not right now. Second, we've all learned, and I can't even say we appreciate it so strongly, that truly personally understanding your context is the differentiator between these tools being like kind of good and extremely good. And we have learned that actually the browser has a lot of that information. And I would argue that for how powerful Codex and Cloud Code and these tools are"
+    },
+    {
+      "start": 4058.2,
+      "time": "1:07:38",
+      "text": "for people that use them, it's really lopsided right now about who uses these and who don't. Like it's niche. It's niche because it's nerdy. Like I sent my wife a podcast the other day because I wanted to talk about what's going on with RL scale. And like, I wanted her to know. And she just couldn't stop cracking up in the car where the guy kept saying agent forking. And she's just like, this is insane."
+    },
+    {
+      "start": 4078.7,
+      "time": "1:07:58",
+      "text": "This is insane that you all got to get out of your hole. Agents fork and they share context windows. Like, what are you talking about? And so I would argue that the average person using AI or ChatGPT is still using it like a Google search replacement. Yep. And so now alongside of it, if you do look at the sort of insiders, let's say the software engineers that are, you know, Cloud Code and Codex Pilled,"
+    },
+    {
+      "start": 4100.7,
+      "time": "1:08:20",
+      "text": "I actually disagree. I think it's more compute, kind of cloud server based than ever. Look at Anthropics revenue. Look at OpenAI's revenue. Why? Because they can charge inference for a frontier model sitting on a bunch of GPU somewhere that is definitely not local. The model is cloud hosted, but the environment the person is running, and maybe to put what I'm trying to say a slightly different way,"
+    },
+    {
+      "start": 4120.7,
+      "time": "1:08:40",
+      "text": "at least the harnesses today are running on your computer. Yeah. So maybe that's just a, and I would argue that it's actually this trifecta of obviously a really good model, all of the context stuff, which I think undoubtedly a browser is an amazing place to access that. And then part three is the harness. Yeah, maybe here's a way I like to think about it. A year ago, OpenAI was ChatGPT,"
+    },
+    {
+      "start": 4144.5,
+      "time": "1:09:04",
+      "text": "a web app and a tab. Vast majority of their usage for ChatGPT was a web app and a tab or mobile. Yep, yep, yep, yep, yep. A year later, what are they talking about? Everything, ChatGPT now is Codex. Yep. Codex is a Mac application, just like a browser. Why? Because that gives you certain permissions. And Codex, what's the big center? Why do people keep asking me about Codex? Because they've realized,"
+    },
+    {
+      "start": 4167.9,
+      "time": "1:09:27",
+      "text": "oh, wow, you need a browser in order to be valuable for these things. So what did they do? They took their browser and they stuck it in Codex on a local Mac app and are making this super app Yeah. And then they're making these cloud computers so you can access that super app built on top of a browser anywhere on any device. They're just making the same internet computer thing. And the difference between OpenAI and us,"
+    },
+    {
+      "start": 4190.6,
+      "time": "1:09:50",
+      "text": "in addition to insane scale and a bunch of other things, is their belief is that we're going to jump to, chat is going to be the center of everything. And so their view is that, yeah, browsers are going to be really important. So important that we have a browser right here and we have a browser in the cloud. Browsers are going to underpin when you render an artifact or you make something."
+    },
+    {
+      "start": 4208.6,
+      "time": "1:10:08",
+      "text": "They just launched the slide deck thing. It's going to live on a server somewhere and we're going to render it in the browser. They are so browser-pilled. They're just sticking it under this chat interface and saying chat's going to be the interface. And we're the opposite. We're going, did we learn nothing from every other era of computing where whether it's the click wheel or multi-touch on the iPhone,"
+    },
+    {
+      "start": 4226.5,
+      "time": "1:10:26",
+      "text": "the big default iPhone apps, Macintosh and the desktop metaphor, our view is people are visual creatures. They want big buttons. They want a little bit of color. They want to move things around. They want it to be messy. It's amazing to me that people, there's something about coding that is really attuned to kind of a linear conversation. Hey, go, go fix this bug. Okay, now go do this thing."
+    },
+    {
+      "start": 4248,
+      "time": "1:10:48",
+      "text": "Have you ever, when you write, when you prepare for this, I would love to see a kind of, you know, a video of what that looks like. You're probably bouncing over here. There are notes here. You're looking at this. You're reading. And so our view is that where we're going to end up is we're going to have a graphical user interface that lets you be messy with buttons and widgets and apps,"
+    },
+    {
+      "start": 4269.6,
+      "time": "1:11:09",
+      "text": "whatever that means in the AI world. And underneath is going to be a browser. And so again, on the surface, if you listen to our internet computer video, we said, it's not going to look like the browsers that we had a blank, blank screen when we talked about the internet computer because we like, we said, we don't know what it's going to look like. So I actually think everything is converging"
+    },
+    {
+      "start": 4286.3,
+      "time": "1:11:26",
+      "text": "and everyone is going to realize that and has started to realize that the browser is central and the key disagreements are sort of artistic and cultural about what sort of environment do we want people, do people want to work in if you assume that you're going to have these LLM models and an agent harness and a web browser and, you know, SaaS apps and, you know, and the like. Yeah, yeah, yeah, yeah."
+    },
+    {
+      "start": 4308.5,
+      "time": "1:11:48",
+      "text": "By the way, that's very scary for us. Just to be really clear, I'm not saying this as we've made it. We all of a sudden are competing with, you know, all of the greatest companies in the world. So I'm not, I'm, there's a, was the thesis correct? Do you have any reason to believe the thesis is true? And will we win? But I actually think there's more consensus than ever that whether it's a local browser"
+    },
+    {
+      "start": 4326.6,
+      "time": "1:12:06",
+      "text": "or cloud browser, people are going to need browsers. And in fact, what people now believe is it's got to blur into one thing. That's the big thing in the moment right now is if I have a cloud agent doing something for me or my local agent, I don't, I shouldn't need to think about that. What is that describing? The original vision, of it doesn't matter if you're on your phone or your computer."
+    },
+    {
+      "start": 4345.5,
+      "time": "1:12:25",
+      "text": "That's the most annoying part of it right now, by the way. That was the whole theory was that if you open a Windows device at work and a Mac device at home and an iPhone in between, you should have your computer. Yes. That was the whole idea of an internet computer. Whereas there's two JGPTs for me actually, which is like the mobile one and then the codex like thing that has all my files."
+    },
+    {
+      "start": 4362.7,
+      "time": "1:12:42",
+      "text": "Because that wasn't what they believed 12 months ago. Yes. So actually, you look at the other market participants suggests to me that the thesis, fortunately and unfortunately, was more correct earlier than we expected and we have to run. Put it another way, it's like we're kind of, at least from my vantage point, the radical transformation of the last few months has been the quality"
+    },
+    {
+      "start": 4385.6,
+      "time": "1:13:05",
+      "text": "of computer use. And I guess what you're saying is that computer use, it's computer use right now, locally, but it will be computer use in the browser in the duration of time. Yeah, I think, and again, when I mean browser, I mean there is a, let's say, Chromium rendering engine, technically under the hood, that can render web applications like Google Meet and JIRA and insert the tools"
+    },
+    {
+      "start": 4407.4,
+      "time": "1:13:27",
+      "text": "you use at work. And run computer use over the top of that or effectively browser use over the top. Right, so when we say, hey, I think when we say, hey, the browser is going to be the future or the internet computer is going to be built on top of a browser, we don't mean like a horizontal tab strip. We just mean that if all of our applications are stored on computer servers, which that trend's accelerating,"
+    },
+    {
+      "start": 4424.2,
+      "time": "1:13:44",
+      "text": "and all of our files are stored on computer servers, which that trend's accelerating, and all the frontier AI models are stored on computer servers, that trend's accelerating, then actually, go back all the way to starting the company, the acceleration towards your computer lives off there somewhere, and it's streamed effectively to this little screen, and shouldn't you have the same thing"
+    },
+    {
+      "start": 4444.1,
+      "time": "1:14:04",
+      "text": "streamed to all the screens? It's just turning out to be more true. Yeah, that's part of the reason we picked Atlassian is we said, oh, we got to go. We said, Atlassian, this guy gets who we are. Yeah. He's as ambitious as we are, and he sees what we see. Let's go run as hard as possible and as inspired as possible. Like, how do we redo what a browser is, which brings us back to Arc versus Dia."
+    },
+    {
+      "start": 4465.9,
+      "time": "1:14:25",
+      "text": "If that's what we've always been trying to do, and we see that, we see it coming true. After years and years of working on it, we go, we're not gonna, we're not, we're competitors. Let's go win. Yeah. And we just had to have a pragmatic view that we're not gonna win at some dinky little startup called the browser company making YouTube videos. Like we need some firepower, we need some distribution,"
+    },
+    {
+      "start": 4483.9,
+      "time": "1:14:43",
+      "text": "we need a built-in business model and data and security agreements with enterprise companies and let's go actually try to win this thing. How do you win? As you can probably expect, my real answer is I don't know. You know, we have never, we are a company that assumes we don't know. There are three things that I've observed in the past year that make me more bullish that we're gonna be a seat at the table"
+    },
+    {
+      "start": 4506.5,
+      "time": "1:15:06",
+      "text": "and we have a real shot. The first is we still believe things that no one else believes. So if one of my codex-pilled friends was sitting right here, he'd go, yeah, sure, maybe it's technically a Chromium rendering engine, but you're not gonna see it and you're gonna chat with it. And so as much as we think the time is now for this opportunity and we think everyone has come to the party,"
+    },
+    {
+      "start": 4531.5,
+      "time": "1:15:31",
+      "text": "we look around and go, oh wait, we still believe very, very different things than everyone else, which means if we're wrong, we're boned. But if we're right, we have such a different perspective that we're gonna have a differentiated product for some period of time, even if everyone ends up copying it. The second thing we've observed is it's really market expanding. So I was an angel investor in Cursor"
+    },
+    {
+      "start": 4550.5,
+      "time": "1:15:50",
+      "text": "and one of the things that was fascinating is as Claude Code has this meteoric rise, numbers that are mind-boggling in terms of the speed of their ascent and all of a sudden Claude Code comes around and they do the same thing. You go, oh no, what about Cursor? Cursor was like this too. And so I think the thing people are sleeping on is our computers and what a computer is, which everyone has,"
+    },
+    {
+      "start": 4574.3,
+      "time": "1:16:14",
+      "text": "is going to completely change. So we're of the belief that there are basically a few categories of software that will eat most of the TAM, most of the opportunity. And so if you can be player number three, four, five in the primary way that people on their laptops get work done, market across that's effectively an operating system that apps and AI sit on top of, we think that's an"
+    },
+    {
+      "start": 4595.8,
+      "time": "1:16:35",
+      "text": "extremely lucrative opportunity for the same reason that Cursor, Codex, and Claude Code all coexist as legendarily fast growing companies. And then the final thing is why we did this deal in the first place, which is anyone that knows enterprise, which again, I'm new to, you start learning it's not just product that wins, it's trust, it's relationships, it's what they call enablement of employees."
+    },
+    {
+      "start": 4619.5,
+      "time": "1:16:59",
+      "text": "And so here's a company, Alassian, that's been around for decades that was in many ways one of the original SaaS companies and enterprise companies that both had great products and were embedded in companies. And so our belief is that if we can figure out that product and we can make something people love, it's not going to be what everyone else has built yet. It's going to be one of the greatest"
+    },
+    {
+      "start": 4640,
+      "time": "1:17:20",
+      "text": "TAM opportunities in our industry in decades. And we have a company that knows how to sell it and knows how to distribute it and has the embedded relationships with Mercedes-Benz or NVIDIA or insert your Alassian customer that hopefully Dia is the perfect tool for for their employees, especially for employees that are not software engineers, that are not Codex-pilled, that still find the same confusing"
+    },
+    {
+      "start": 4662.3,
+      "time": "1:17:42",
+      "text": "and quite frankly, don't like it. Like, have you noticed right now, people don't feel good about AI. Right? And so I think that's the thing too, is who do you trust? Whose future world do you want to live in? I'm not saying mine, but I just don't think... But am I going to be the portal through which you access all this magic? Can I actually deliver it to you in a way that... Yeah, and I think focus too."
+    },
+    {
+      "start": 4681,
+      "time": "1:18:01",
+      "text": "We just want to make your day at work better. Yeah. You know, I still get pushes from ChachiBT to like, check my credit score. I got that yesterday. I took over the screen, check your credit score. Good for them. This is not what we're doing. And I think as long as you're holding on to all these different goals, ChachiBT code, you know, so they're obviously an extraordinary company"
+    },
+    {
+      "start": 4698.5,
+      "time": "1:18:18",
+      "text": "that's been extraordinarily successful. But I think we look around and go like, we still have something to say that is different than I think what other people are saying right now. You had... I don't remember exactly what it was. Maybe it had been beginning of August. You had observed that the agent thing had not really hit the mainstream in any meaningful way. The difference between now and then."
+    },
+    {
+      "start": 4718.6,
+      "time": "1:18:38",
+      "text": "Obviously, instinct was a kind of first more Silicon Valley related moment. And then Muse has obviously grown like crazy. What about the agent side of things? I mean, obviously this ties a little bit into your kind of like, are you going to interact with everything through a text box? Yeah. I'm interested in this as a sort of like a gateway into like where are we going with what computers are?"
+    },
+    {
+      "start": 4739.3,
+      "time": "1:18:59",
+      "text": "Yeah. Once again, I don't know. But since that'll be a boring answer for everyone listening, the tweet in question, I called out that for all the talks of agents, there hadn't been an agent that had broken out in popularity. And that was the next big opportunity. Who was going to do it? Yeah. And so weeks later, it's maybe someone did it. So it was not a question of would it come?"
+    },
+    {
+      "start": 4760.1,
+      "time": "1:19:20",
+      "text": "It was saying that is the big opportunity. Do you have any observation on what caused the success that Muse has had? Oh, this is tricky. So we're recording this on October 1st. Yeah. I am skeptical of... is how durable this excitement is and where it is coming from. What I observe is what I observed with OpenClaw. When I tried OpenClaw and I saw people getting excited, I was"
+    },
+    {
+      "start": 4785.6,
+      "time": "1:19:45",
+      "text": "skeptical about who is getting excited and why. I think what it was masking was true architectural and kind of technical innovation. Someone had figured something out about how to take these large language models and hold them or extend them in a way that made something possible that wasn't possible before for people using it every day. People got really excited about that. But the form"
+    },
+    {
+      "start": 4807.7,
+      "time": "1:20:07",
+      "text": "factor didn't really change. It was still chatting. And I think Instinct and Muse are really, in my opinion-Muse is basically OpenClaw. And I think one of the things that really have made these products click in is now the computer use models are accurate and fast and cheap enough that now you can actually really use computer use. And so we're putting these labels on Instinct and Muse, it looks pretty like"
+    },
+    {
+      "start": 4826.8,
+      "time": "1:20:26",
+      "text": "everything I've been doing in the industry for a long time, which is chat, just empowered by these really clever and really miraculous new technical advancements. I look at that and go, I'm not sure that that means those products or that form factor is going to be successful. I'm much more bullish about it on mobile. I think if I'm a person that wants a restaurant reservation on my iPhone,"
+    },
+    {
+      "start": 4846.4,
+      "time": "1:20:46",
+      "text": "like even as a personal consumer, chat's amazing for that. But I'm not so convinced, especially on desktop, especially at work, which is messy and requires lots of tools and context switching, that form factor is going to be the final one. I have been blown away by Muse in particular. It's been the best fully formed AI product I've learned to use in a long time. But I'd say at least our"
+    },
+    {
+      "start": 4867.5,
+      "time": "1:21:07",
+      "text": "theories about the interfaces people want, the metaphor, the design metaphors and the buttons that they tap and the spaces they're in that are on top of these harnesses and models, including computer use. I'm not so sure that we've learned anything in the past couple weeks that suggest that might change. But I know that is a very, people are going to be like, man, he's two in his own little world."
+    },
+    {
+      "start": 4887.6,
+      "time": "1:21:27",
+      "text": "You referenced it earlier in the conversation in that kind of early video, your son was like one or two. Yeah. And you talked about this computer that he might use when he was 10. Yeah. I think he's five now. He turning six in January. Yeah. What will a computer be to him in the abstract? We could talk about it when he's 10 or we just like what he conceives of computer is as when"
+    },
+    {
+      "start": 4909.2,
+      "time": "1:21:49",
+      "text": "he's older. What do you think that do you have any hype? And this is obvious. I'm asking less about a strategic to the business, whatever. Just like, what do you think, to someone of his generation, what is a computer? It's funny you bring this up. It's very, I had two interactions with him in the past week that I honestly have not had time to reflect on. So I'm just going to leave him here."
+    },
+    {
+      "start": 4932.6,
+      "time": "1:22:12",
+      "text": "Okay. One is I was demoing something we had prototyped related to some of these themes. I said, hey, go, it was in my phone. Go tell your phone what you want. He said, a picture of a red giraffe and a red giraffe popped up. And I was like, oh my goodness. And he was like amused. But for him, it was like, that's just what a phone does. And there was this Delta between my own,"
+    },
+    {
+      "start": 4959.4,
+      "time": "1:22:39",
+      "text": "I'll never forget this moment. Computers are changing. The world's going to change. Oh my goodness. My son just read draft expectation. And he's just like, yeah, I guess that's what a phone does. And that led to another thought, which is my son, because probably his memory will be strong, start getting really strong in a year or two. We'll never know a world where humans were smarter"
+    },
+    {
+      "start": 4978,
+      "time": "1:22:58",
+      "text": "than computers. Yeah. Sam Altman said this too. Oh, maybe. Okay. Then I must've heard him say it on a podcast, but it just actually probably connected there. I just can't stop thinking about that in relation. So I have no idea. I mean, my, my, my wife's grandmother passed away a couple of years ago in her nineties and she grew up in you know, she was, you know, has memories of the era of world war II."
+    },
+    {
+      "start": 5004.8,
+      "time": "1:23:24",
+      "text": "That's how, you know, and she, she would tell the stories of you know, living in Paris for a job at the one of the first children's libraries in the world and like writing letters home to her family. And then she remember when the ATM was invented and she brought this up because at the time before she passed away, ChatGPT was everything in the news, even her news in Switzerland, watching on TV."
+    },
+    {
+      "start": 5022.9,
+      "time": "1:23:42",
+      "text": "I just can't help but think I'm 36. Like what, what when I'm 90? So I just, it's unfathomable to think about and exciting and scary. But I, I think the red giraffe can just appear on the screen that was in Papa's pocket just by uttering those words out loud, I think is suggestive directionally where we may be going. I also think it's worth calling out. That is something different than computers"
+    },
+    {
+      "start": 5047.6,
+      "time": "1:24:07",
+      "text": "being smarter than us. Like that, yes, of course, computers can be smarter than us, but also that is like a, that's a different kind of metaphysical magic. Well, and one of the things that I've been thinking about related to that is just this idea that wait, software is going to become art. Software is art now. And I mean the word art in terms of almost a commercial, from a commercial standpoint, I'm not talking about"
+    },
+    {
+      "start": 5067.2,
+      "time": "1:24:27",
+      "text": "like feelings here. I'm just very literally supply and demand. software for the first, I'm a sociology major. I met Hursh because I needed someone to help make my ideas. My whole career has been like, let's get money from venture capitalists to go hire software people to help me. - Yeah, you're a middle man. - Now, don't be wrong, the people's the best part of this. I don't think, I have no interest"
+    },
+    {
+      "start": 5087.4,
+      "time": "1:24:47",
+      "text": "in starting this one person billion dollar company. I think it's very dystopian. But if software is now approaching free, that sounds a lot like paint and canvases are approaching free and a midi keyboard and pick your music software and your computer is approaching free. And these camcorder, I actually think the profound shift, I don't hear people talking enough about"
+    },
+    {
+      "start": 5112.6,
+      "time": "1:25:12",
+      "text": "that is really kind of exciting to think about is not, oh, if software is free, I'm gonna make a better productivity tool just for me. People don't like, as my therapist likes to say, people weren't put on this earth to be productive. I get really excited that if software is as free as it is to make music and make movies and make visual art, then like, what are we gonna make and who's gonna make it and why?"
+    },
+    {
+      "start": 5135.8,
+      "time": "1:25:35",
+      "text": "And yes, some of those will be productive tools that make us better at work as utilities that solve this problem. But I think we're gonna see an explosion of software that is everything except something that makes us more productive and useful. And that, as someone who grew up, you know, love languages, seeing an indie movie film with my wife or family, like that is very exciting."
+    },
+    {
+      "start": 5154.6,
+      "time": "1:25:54",
+      "text": "So that's the other side of this is there's, what is a computer gonna look like? How are we gonna interact with it? How are you gonna get your job done? And there's this like, who's the Paul Thomas Anderson of software? You know, who's the insert your favorite, what are they gonna be able to do? You know, and what are they gonna make and where are they gonna come from? And optimizing for feelings."
+    },
+    {
+      "start": 5171.6,
+      "time": "1:26:11",
+      "text": "They're gonna be like, oh, that was really silly. Like, you know, I just, I think that's gonna be a pretty profound culture. What even mediums do we, what creative mediums do we enjoy? I mean, I've always been impressed and inspired by the way that you've kind of like danced to your own rhythm. And when you joined a hundred thieves, you know, you sort of saw something about video games culturally"
+    },
+    {
+      "start": 5191,
+      "time": "1:26:31",
+      "text": "that most people didn't see. Now everyone's like, oh, gaming, gaming, gaming, video games. Look at my, you know, Minecraft. But like you saw this before that was obvious to other people. And I think something similar is probably gonna happen with software that everyone's still thinking about productivity tools, but it's gonna be so much more than that. - The thing that really resonates is not only like,"
+    },
+    {
+      "start": 5210.7,
+      "time": "1:26:50",
+      "text": "who's the Paul Thomas Anderson of software, which is to say, there's something that comes to mind there, which is just like, yeah, we have never, we were in the twenties of film or whatever. Like we have no idea what the creativity is possible, but specifically who's the Romare of software and the Christopher Nolan of software. Like it's the, it's the spectrum. - That's what I mean."
+    },
+    {
+      "start": 5230.9,
+      "time": "1:27:10",
+      "text": "And that's why I think software is gonna become art is a little too like medium post headlining. - Right. - Like by that word, the art is doing a lot of work there. - Yeah. - Like what I mean by that is like literally, what do you red giraffe on a screen? Like what is-- We have a very consistent, and software is amazing, but we have a pretty like concrete sense of like what good software and"
+    },
+    {
+      "start": 5248.5,
+      "time": "1:27:28",
+      "text": "good software design is. Which by the way, why when you see the stuff someone like Nate makes, you're like, whoa, I didn't know this was allowed. - Yeah. - But that's like the trickle of that. - Yeah. And that's what personal computing opened up is like people, people always talk about the 1984 ad and they always talk about the Macintosh and the hello world and the, and the icons and I do a lot."
+    },
+    {
+      "start": 5269.6,
+      "time": "1:27:49",
+      "text": "People forget to contextualize what computing was. It looked a lot like right now, there are a couple of big companies, largely international business machines that made large, extremely expensive computers for corporations to count things and do very, very productivity centric tasks. And they try to dress it up and they hire Paul Rand and the Eameses and they try to make it friendly and the world's fair in 1980."
+    },
+    {
+      "start": 5296.2,
+      "time": "1:28:16",
+      "text": "It was fundamentally these kind of big corporations making expensive stuff for businesses. That's what a computer was. That's why they did the world's fair where they hired the Charles and Ray Eames 'cause they're like, we got to make this friendly for people 'cause people are not liking this computer thing. It's almost identical to what's going on with AI right now. And so to me, the answer is not, okay,"
+    },
+    {
+      "start": 5314.2,
+      "time": "1:28:34",
+      "text": "we're going to make a business machine that's, it's, it's actually sort of something you can't imagine and I can't imagine, which is like, what if you go really wide that way about what a computer is? It will need to come from somewhere else. Yeah, and it's just, I think it's going to be orthogonal to what we think it is and obvious in retrospect. And so to me, that's the art part of it,"
+    },
+    {
+      "start": 5332.5,
+      "time": "1:28:52",
+      "text": "which is like, there's some little Paul Thomas Anderson or Zadie Smith or insert your favorite kind of creative person somewhere. Yeah. That's like, that is going to have codex or cloud code and D or whatever it ends up. Didn't have this medium before and now has it. Yeah. And so I, I don't, I have no idea, but I'm, I'm, that's the optimistic. We have some hurdles from a culture standpoint."
+    },
+    {
+      "start": 5352.7,
+      "time": "1:29:12",
+      "text": "I think, unfortunately, creative people feel pretty disenfranchised. I think a certain kind of creative person feels pretty different, disenfranchised from these things right now. We have some things to. I think it's, I think it's understanding. There's an artist named David Sally, who I am obsessed with his work. And he, he's a really famous painter in the art world. You know, if you're an artist, you know"
+    },
+    {
+      "start": 5370.3,
+      "time": "1:29:30",
+      "text": "his work. If not, you may not. I didn't know him before. And he, despite being really famous for bringing painting back and painting technique back, he's famous for his like ability to wield a brush and sort of moving away from the conceptual art like Turrell that had sort of gained popularity. A few years ago, he took Stable Diffusion and made his own model for his own work. And what he did is he took the kind of"
+    },
+    {
+      "start": 5394.4,
+      "time": "1:29:54",
+      "text": "series that he is most known for, sort of like Turrell Sky Spaces or something. And he fed all of the artwork he's ever done in that series into a Stable Diffusion, you know, forked model. And he made this model that suggests what he should paint next. And hearing him talk about his relationship with the AI model is fascinating because he, he says it's like found objects or it's like a distance. And so he"
+    },
+    {
+      "start": 5421.3,
+      "time": "1:30:21",
+      "text": "doesn't use AI to paint, but it's sort of this new creative tool, professional tool in his toolkit. And, you know, he was just struck by how the art world just really is pretty allergic, is like very allergic to AI right now. So that is the thing that's new is I don't know enough about what the cultural climate was around computing in the 60s, but I got to assume it's not as negative as it is right now with AI."
+    },
+    {
+      "start": 5443.1,
+      "time": "1:30:43",
+      "text": "And so I do worry a little bit about that. We're so talking about bioterrorism and all these things, which are very scary and deserve the airtime that, unfortunately, I think it's pushing down in a way that future Paul Thomas Andrews and Zadie Smith, you know, that I think sees there are all these creative people and possibilities that are sort of like not being explored right now."
+    },
+    {
+      "start": 5463.9,
+      "time": "1:31:03",
+      "text": "Because it is so, we're in the international business machines phase. Well, not only that, I would argue it's both that and all the risk stuff and the fact that for lack of a better word, AI one shots, the output. We're probably going to need a paradigm update on what artistic output means. I was just talking with Clay, with Kareem from Clay about Solowit. I didn't know actually"
+    },
+    {
+      "start": 5484.7,
+      "time": "1:31:24",
+      "text": "anything about Solowit and I didn't know it was basically the prompts. It's not the artwork. One of my favorite, one of the few like really amazing things that came out of crypto was this thing called Artblocks, which is very similar. It's like this. It's not necessarily any individual piece. It's the algorithm that creates this body work. And my suspicion is the really interesting AI art, for lack of a better word, will"
+    },
+    {
+      "start": 5506.3,
+      "time": "1:31:46",
+      "text": "probably be more in that flavor, which is like, what can you uniquely do with this thing that isn't like, wow, you hand drew this picture and AI one shot it. And that's what currently people hate. And so it's like, we're, we're missing that update. And I think in terms of what software becomes or computer, you know, what do we do with our computers? I think it's going to be the era of what are the, we called mutts."
+    },
+    {
+      "start": 5528.8,
+      "time": "1:32:08",
+      "text": "So when I was, when we were early at the browser company, you know, we were trying to put language on, why did we hire Nate? Yeah. Why did we hire Adena? You know, and it was, it was, these were people that liked Turrell in very different ways, like sort of defied labels in a way, you know, it was like, Nate was an engineer and he was a designer, but he's also clearly like a product person."
+    },
+    {
+      "start": 5545.3,
+      "time": "1:32:25",
+      "text": "And he clearly has like kind of comical artsy side. He just made things. And I was just struck by Turrell. He'd walk in a room and people would introduce his work. It's like, is he an artist? Is he a architect? Is he an interior designer? Is he a perceptual psychologist? Is he a astrophysicist? Like he doesn't, he just says, wait, hold on. If we cut a hole in the ceiling and that, you know, and you're going to,"
+    },
+    {
+      "start": 5565.3,
+      "time": "1:32:45",
+      "text": "and then you're going to teach your brain, your eyes are going to get, and then it's going to be beautiful at sunset. It's like, what could we do? What could we do? And I think we just need new ideas. We were just in a moment in the tech industry, in our political class. We just, we're so in need of new ideas. And I think we will see most of the most compelling emerge, not from these"
+    },
+    {
+      "start": 5585.9,
+      "time": "1:33:05",
+      "text": "traditional verticals, even like software and computers, but hey, if the components of a computer are cheap and accessible and intelligence is free and accessible, and all of it's malleable, and you have these tools that, how does that stuff get combined in interesting ways? It sort of blurs the categories and labels we had put on it before. And so, yeah, I think it's going to be the air of the"
+    },
+    {
+      "start": 5606.8,
+      "time": "1:33:26",
+      "text": "mutts in some ways. And I think it'll be, I hope, and I think it'll be really cool to see what we come up with. We talked a bit earlier. One thing that I think almost anyone who knows you would say is that, probably largely because you're so attuned to it, you are really amazing at attracting great talent. Or I should say spotting it and ultimately attracting it. Aside from being able to"
+    },
+    {
+      "start": 5635.3,
+      "time": "1:33:55",
+      "text": "find it, what do you think attracts these people to want to come kind of like work on the, work under the Josh Miller umbrella? Oh, that's such a hard question to answer about yourself. Yes. But I'm going to make you try. Or maybe a, maybe easier way to answer would be like, is there anything you do? Are there any ways that you've obviously gotten better at it? There's something that someone said to me"
+    },
+    {
+      "start": 5659.4,
+      "time": "1:34:19",
+      "text": "a couple of weeks ago, actually, that was, actually, I should tell them that this meant so much to me. They said, I think you believe in me more than I do. And that really hit home because I do believe in them. And I actually do think, and I hope they don't mind me saying this, like they need to realize how gifted they are. And I feel like I got this gift from my mom and dad of like, to a fault, they sort of like,"
+    },
+    {
+      "start": 5686,
+      "time": "1:34:46",
+      "text": "you can do whatever you want. We believe in you. And so I just think probably intrinsic is yes, it's spotting talent and aligning it with some strategic priority and articulating and our ambitious vision, all that good stuff. But I think I'm at my best when I am really speaking from the heart and authentic. And I'm at my worst when I lose touch with that. And I do all the time."
+    },
+    {
+      "start": 5704.6,
+      "time": "1:35:04",
+      "text": "There are a lot of podcasts I've been on where like, man, I'm so embarrassed that I showed up with that energy that day. But I think that when I'm really, like it's really coming from the heart. I do think I believe in certain creative people and their gifts and see them sometimes earlier or more extensively than they do and sort of place them in places at the company that lets that,"
+    },
+    {
+      "start": 5724.8,
+      "time": "1:35:24",
+      "text": "like actually one of these prototypes I was talking about is from someone that I sort of plucked off of like our main, one of our main teams and say, I want to go in a corner with them and just sort of mess around some prototypes related to graphical user interfaces and duplex. Let's just go mess around. And so they obviously didn't arrive because they felt that, but I think probably creative people"
+    },
+    {
+      "start": 5743.6,
+      "time": "1:35:43",
+      "text": "that have worked at The Browser Company or do work at The Browser Company, I hope when they talk about the experience, say things like, yeah, it's like this campaign we just did is we're just like, let's go put up some art in some cities and, you know, make the message be like, we hope you have a good day to work and like, let's go, let's, hey, you want to go paint something? Go paint, go paint."
+    },
+    {
+      "start": 5760.6,
+      "time": "1:36:00",
+      "text": "Yeah, you go paint the murals. And so I think it's the like, you go paint the murals and we'll put them around the city and those stories getting out that probably lead to people, you know, believing it's a place they can express their creativity. But I, again, that's so, and it's hard to answer. I would be curious what Nash and Josh Lee and, you know, all these people would say."
+    },
+    {
+      "start": 5779.1,
+      "time": "1:36:19",
+      "text": "What is so special about Hursh? Very similar to the last question, Hursh is a brilliant software engineer, et cetera, et cetera. I think he's one of the people that is the most spiritual and in touch with who he is. Like when I met him, we, he actually let me come live on his, live in his apartment for the first,"
+    },
+    {
+      "start": 5804.7,
+      "time": "1:36:44",
+      "text": "you know, as we were starting the company and Hursh has meditated every day for 20 minutes, real intense meditation since I met him. And so there's just a soulfulness to Hursh and a depth to his, you know, so much of what people actually associate, like actually everything I'm saying right now, I realized that came from Hursh because I remember when we were talking about starting a company"
+    },
+    {
+      "start": 5825.2,
+      "time": "1:37:05",
+      "text": "or this idea of maybe getting the game back together was all about like, he had this whole thing about abundance versus scarcity and that so many of the places he'd worked and we'd worked were driven by this idea of scarcity and like a scarcity mindset and like, we just need to give, if we can create a working environment where people have their most abundant selves. And I was like,"
+    },
+    {
+      "start": 5843,
+      "time": "1:37:23",
+      "text": "man, what are you smoking these days? Like, this is just so hippy dippy. Like, what is scarcity versus abundant? Like, truly at the time, I was like-Few more thousand hours of meditation. Yeah, man, we gotta get you out of the silent meditation trips and like get back in the arena, man. This is like a little too much for me, but I love you. And he was so right in retrospect. So I think"
+    },
+    {
+      "start": 5858.9,
+      "time": "1:37:38",
+      "text": "what is so special about Hursh is despite being a technical genius that people associate with his engineering skills, I think he's like, almost like the most people of people I know that has informed so much about the company that we've built. You guys sold branch to Facebook. You were Facebook in like a pretty significant time leaving to go work on politics. Maybe you had the civic background,"
+    },
+    {
+      "start": 5883.8,
+      "time": "1:38:03",
+      "text": "but like, why did you leave? Yeah, it was the dumbest financial decision I've ever made in my life because you, you know, we cared about government ethics there. So I had to sell all my shares and forfeit, forfeit all of my Facebook stock from the deal. And so it was a very dumb, this was the stock price was, anyways, it was a poor financial decision in retrospect and actually a poor"
+    },
+    {
+      "start": 5904.3,
+      "time": "1:38:24",
+      "text": "financial, a poor professional decision. It didn't make a lot of sense other than I love the man. He inspired me. You know, I think it just, I, as someone that grew up around, you know, public servants and people that work for the government and personally view the government as like us, you know, like we, we are the government with, this is our government, our society. And so I've,"
+    },
+    {
+      "start": 5924,
+      "time": "1:38:44",
+      "text": "I've always grown up very interested in policy and politics and civic engagement. And Obama was the first politician. I grew up, it's too young for Clinton. Most of my adolescence was Bush and sort of honestly hating on Bush and, and being sad about our president. And then Obama comes around and I, he was the first president I ever voted for. So, you know, my former, really my first mentor"
+    },
+    {
+      "start": 5946.8,
+      "time": "1:39:06",
+      "text": "in this industry got hired by President Obama to report to him and create this new office in the White House that was gonna bring technology to the government and asked if I would come be the, you know, kind of lead product underneath him. And it was just such an obvious intuitive decision to say, of course you say, you don't think about that. You just do it. You just jump. But I remember"
+    },
+    {
+      "start": 5966.4,
+      "time": "1:39:26",
+      "text": "saying, Zuckerberg, who was so gracious and so generous to me while I was there, I had a call with him about the move, you know, the leaving. And he, he was very sweet about, you know, kind of asking if I would stay. And I remember him making this comment about, um, why would you go build software for one head of state when you could stay here and make software for all the heads"
+    },
+    {
+      "start": 5988.1,
+      "time": "1:39:48",
+      "text": "of state? Forever. And he meant it so sincerely as a, as a, as a, I'm giving you a cooler job. And in many ways he, for a lot of people he would, but it's so, he's such a competitor. The thing I learned from Zuck, I actually learned from Zuck that like, I would not be a good public company CEO. Like there's just something about the way he thought strategically, 3D chess scale, what's"
+    },
+    {
+      "start": 6010.4,
+      "time": "1:40:10",
+      "text": "worth, what's impactful or not. That was like, I just kind of like president Obama. It seems like a fun experience. Like I watched the West wing when I was a kid. Like I kind of want to know what the situation room looks like. Maybe it's like, it's not rational. It's not game theory optimal. Yeah. So like, um, wow. Yeah. So it was, it was definitely a hard decision. I'm so glad I"
+    },
+    {
+      "start": 6028.9,
+      "time": "1:40:28",
+      "text": "did it. And it definitely like changed the course of my career in so many ways in retrospect, but at the time, uh, definitely people were like, you just got it. Like what? You worked so hard. You got it. What are you doing? That is. Yeah. I mean, I guess Mark was right. Mark was, yeah. About the scale. Like, I remember around that time, actually before I started working closer with them towards the end of my"
+    },
+    {
+      "start": 6049.8,
+      "time": "1:40:49",
+      "text": "tenure, but at the beginning I had, and I, the social network came out in 2010. That was my sophomore year in college. So like, I really wanted to meet Mark Zuckerberg, you know, or like, I really wanted to, you know, and I was late one night. It was still when they're in the old, like hacker square campus. And, um, the point of that is just because of the way it's laid out, like Zuck was walking out"
+    },
+    {
+      "start": 6067.1,
+      "time": "1:41:07",
+      "text": "probably. And a few of us were there late and he came over, it was very great. You know, like you chat with us late and you're staying late, you know, we'll, we'll chat and people were asking questions and I forget what the question was, but basically Zuck's prediction for computing at the time was that one day sooner than we think computers would understand human personalities from an algorithmic"
+    },
+    {
+      "start": 6088.1,
+      "time": "1:41:28",
+      "text": "perspective. And I actually just looked it up the other day. It was actually, we were acquired, acquired right around the time they started FAIR with Jan LeCun. So secretly in the background, I think where that was coming from, though, it seemed random. I think someone's like, where do you think computers are going to be in 10 years? Actually, he was deep in 2013 or 12, I forget the exact year. Oh, like one day we're"
+    },
+    {
+      "start": 6112,
+      "time": "1:41:52",
+      "text": "going to have these AI, hey, there's going to be AI and it's going to be, and, but I thought what was so prescient about that is he focused on people's personalities. He didn't say computers would be smart. He didn't say, I'm sure he believed all those things, but the emphasis in his answer was human personalities. And that's the thing I think people still underappreciate about"
+    },
+    {
+      "start": 6130.6,
+      "time": "1:42:10",
+      "text": "large language models is our computers can now make us laugh. They can now give us constructive feedback that really burns a little bit. Sometimes they can hallucinate kind of like humans do and come up with kind of wacky ideas. And to me, that relates more to personality and sensibilities and preferences. And so I think once again, you can like him, you can dislike him, you can, but Zuck, you know, around"
+    },
+    {
+      "start": 6156.4,
+      "time": "1:42:36",
+      "text": "the time he was like, you know, I think that the more impactful thing is to make software for every head of state. And, you know, by a lot of measures, he was correct. Uh, he was also correct in saying the really profound shift that would come in computing is they're going to start being algorithms that resemble people and can understand people in a way that we don't comprehend. And so."
+    },
+    {
+      "start": 6174.1,
+      "time": "1:42:54",
+      "text": "Maybe it's good to do things because you want to, and you feel the need. I have no regrets. I made the right decision for me. If you're going to give a title to this chapter of your life, post acquisition, what feels, are there any words or ideas that feel descriptive of this, this moment? Well, in this exact moment, which is different than if we'd done this podcast six months ago,"
+    },
+    {
+      "start": 6193.7,
+      "time": "1:43:13",
+      "text": "I feel a kind of profound sense of listening and curiosity. I can run my mouth as you can probably tell in this podcast and it's, they're good and bad things about that sort of authenticity. Uh, but I, I'm after the deal closed, I felt this almost like, I think manic energy to like all these creative things I wanted to do at, at, at browser company now with Atlassian and how the,"
+    },
+    {
+      "start": 6215.7,
+      "time": "1:43:35",
+      "text": "and just sort of this explosion. Sorry for anyone listening that was on the recipient end of this, like of things that were possible. And I still feel that it's kind of how, but I, I just kind of want to go back into that kind of learning observation, curiosity. You asked how I developed my sensibilities, like going to a museum tonight with Valerie, you know, like I, I, I'm in that sort of,"
+    },
+    {
+      "start": 6236.7,
+      "time": "1:43:56",
+      "text": "you know, even at Atlassian and even post deals, like I was so, you know, I was so inspired. I got to meet with this woman that runs the, um, software for one of the largest grocery chains in Mexico that is a big user of Atlassian surprise, just hearing about they're super early on AI and they're trying all cloud code and, you know, and it was just, I just feel like I have so much to"
+    },
+    {
+      "start": 6257.7,
+      "time": "1:44:17",
+      "text": "learn. And in some ways my world was so small. It sounds like things are going great at Atlassian. You guys, as I understand you guys kind of have your own. And browser company is very much still its kind of own thing. I'm sure there's a lot of room to run. If you were to try to imagine what the next era or phase, whenever that phase is done, is there, yeah, do you have a sense?"
+    },
+    {
+      "start": 6280.1,
+      "time": "1:44:40",
+      "text": "Is it, is it another startup? Is it, are you finally going to be the artist? Yeah, I mean, I feel like hopefully the like, you know, input tokens in this conversation make the output tokens clear that I, I don't know and I've been wrong when I've made plans, but I'd say anyone that knows me really well is going to say, you have to tell them, I do want to make a public park one day."
+    },
+    {
+      "start": 6299.7,
+      "time": "1:44:59",
+      "text": "I've always wanted to help build a public park. I don't have any ambition of like how big or small or what's it like. I have some ideas, obviously I'm like, but I, you know, I would at some point love to play a small park. So that's, that's what people know. You ever seen the Noguchi park designs? Yeah. I actually just stumbled across it the other day. And actually someone I really respect"
+    },
+    {
+      "start": 6317.4,
+      "time": "1:45:17",
+      "text": "said that's a great example where it looks good on camera, but actually is very kind of inhumane as a parent with kids. Oh, interesting. So anyways, I like excitedly told her about it and she was like, come on, you're a parent, you know, this sucks. But that's the sort of, sort of exploration. Not a parent. Okay. So I had to say, I have to say Park because anyone who knows me knows that's on my list."
+    },
+    {
+      "start": 6338.3,
+      "time": "1:45:38",
+      "text": "I am, I do come back to my mom was a, is a big force in my life and has been a good, and just, and my godfather who's passed away, but he, seeing them like give, take their immense talents and, and EQ and IQ and, and put it into where we lived. And this, you know, it was almost like that same aspect of the web browser is it's a web browser, but it's really is like rectangle that we spend eight hours a day."
+    },
+    {
+      "start": 6364,
+      "time": "1:46:04",
+      "text": "And so shouldn't we like make the rectangle feel nice and look good. And like, why would we not want to live in a good rectangle? I think there's some part of me that there's this quote from an artist I love. And she says, you know, art is what I give back to the world for all that it gave to me. And I definitely am sitting here going, wow, browser company, if it gone five degrees that"
+    },
+    {
+      "start": 6385.3,
+      "time": "1:46:25",
+      "text": "way, it would have been nothing. You know, I wouldn't be on this podcast here. And I've gotten so much luck and good fortune to be here that I have no idea if that takes the form of a little park around the corner or something else. But I definitely feel this like indebtedness and sense of responsibility for what I have to somehow like channel it in some way. So again, I have no idea what that means."
+    },
+    {
+      "start": 6408.9,
+      "time": "1:46:48",
+      "text": "And it may just be something local, but I feel the need to go local. I think it might look more like what's around the corner than what's on the internet. But that might just be me exhaling from six years of getting punched in the face every day as her shed and saying, maybe we don't get punched in the face. Maybe there's something to the Gabe that we're talking about with Gabe Whaley."
+    },
+    {
+      "start": 6426.5,
+      "time": "1:47:06",
+      "text": "Like we, especially in tech, like scale is virtuous. And like, there are things that don't get better with scale. And things that actually get way better, like, so I also can't help but think of, as you were talking, granted, it's more in the scale end of things is like that old Steve Jobs thing, an old email to himself about like, I didn't make the clothing and I didn't do any"
+    },
+    {
+      "start": 6452.1,
+      "time": "1:47:32",
+      "text": "of this. And so I'm just trying to like add something back. Yeah. Which is. And I think the one thing that I'm now proud to say is that if you do look back, if I look back at my career, there's not a lot of patterns between sociology and then we're at, you know, here and then we're there and then we're there. But I think one of them is I followed my people. So like, yeah, I was at the"
+    },
+    {
+      "start": 6470.9,
+      "time": "1:47:50",
+      "text": "Obama White House from Facebook. What you don't see is Jason Goldman took a bet on me and in some ways us on him when I was 20 and dropped out. And then I followed him to the White House. Or you look at Hursh and Browser Company, I met him and we followed each other, you know, and I loved working for Josh at Thrive and they're just, I know, I hope, and this is a reminder to myself, like follow"
+    },
+    {
+      "start": 6493.5,
+      "time": "1:48:13",
+      "text": "the people, like follow your people. Cause that is definitely what is like brought me so much joy so far. And I hope that, hope that I still got, still got the crew, whatever that is, whoever they are, hopefully some of the same faces, whatever comes next. But I'll say I have a strong prediction. I will be Lassian longer than I ever thought I would be. And I definitely will not a lifer at Lassian."
+    },
+    {
+      "start": 6514.6,
+      "time": "1:48:34",
+      "text": "Sorry, Mike, I love you. But I will do something at some point. Yeah. I like to ask people, we talk about things we regret, to ask people what they're most glad that they did. I love that. I mean, it's gotta be Valerie. I know that's so cheesy, but it's gotta be marrying Valerie. I think a thing that I've always bonded with over other founder CEOs, especially folks that have been successful, even actually,"
+    },
+    {
+      "start": 6538,
+      "time": "1:48:58",
+      "text": "Henry, Henry, who's on this podcast and I was with him when you asked me to join, we've spoken about just like, oh, like Valerie and Chloe, they were co-CEOs of these companies and you may not have known their name. So, I mean, that's just at a professional level. I'm not gonna, I'll spare people all of the why I love my life partner so much and what she has done for me and each other."
+    },
+    {
+      "start": 6561.7,
+      "time": "1:49:21",
+      "text": "in many ways, Valerie and I are very opposites attract. And so I think it was, though it's obvious in hindsight, I think there were a lot of friends from college that were like, mostly what is she doing with him? But like, there was a lot of like, that pair, is it gonna work? So I, even just in, of the topics we've spoken here, like Valerie has been right there the whole time, you know, like out of frame."
+    },
+    {
+      "start": 6582.6,
+      "time": "1:49:42",
+      "text": "And so I think the best thing I ever did was marry this Swiss woman that made me promise not to live in California ever again, was the only kind of prenup thing we did. And my heart is in California. So like, there were a number of the things that like, were like, ooh, like, but it worked out. She doesn't like, she doesn't like sand in the beach. She doesn't like the beach, like red flag."
+    },
+    {
+      "start": 6603.4,
+      "time": "1:50:03",
+      "text": "- I don't know, like sand, beach, beaches stuff. How do you think she's most influenced you, at least in the kind of professional creatives part of your life? - Oh, it's the same, same, has been the same answer since day one. It's why I love, why I was first attracted to her and what I still struggle with to this day. And she keeps me honest, which is, Valerie has always known who she, I mean, there's,"
+    },
+    {
+      "start": 6620.5,
+      "time": "1:50:20",
+      "text": "there's a connection to Hursh, actually. They so are in touch with who they are and they are so comfortable in their own skin. And they were so driven by what's internal to them. And I am someone that at my worst has been someone that has been reactive and sort of looking for approval and love and like the things out there in the world. Like I want to be successful, you know? And so I think Valerie's the"
+    },
+    {
+      "start": 6641.5,
+      "time": "1:50:41",
+      "text": "person that always, I mean, put it like this, when I'm on the car ride home, right after this, I'm gonna think, would Valerie, if she listens to what I said, will she say that was the real me or did I show up? And again, it comes from a good place, but did I, out of social anxiety or wanting to sound smart, did I like put it on? And it's always a bit of both. It's one of the things that's"
+    },
+    {
+      "start": 6662.5,
+      "time": "1:51:02",
+      "text": "interesting about the behind the scenes era of the browser company is you're always performing a little bit, even if you try really hard not to, if there's a camera right in front of you. But Valerie's the one that has always and will always ground me in, wait, who am I? What do I really want? Cause she is so grounded in that way. And so very lucky. - Great to have somebody who can check you on that."
+    },
+    {
+      "start": 6682.5,
+      "time": "1:51:22",
+      "text": "Yeah. - Oh, and she checks. - Remind you who you are. - Very Swiss. We're rule followers. - No, California. One last thing. Obviously not rehashing something we've talked about plenty, but this, I believe it's possible I've made this up, but I really believe this is something you said to me several years ago that I wrote down. It all comes down to the crew. Who would you be fine"
+    },
+    {
+      "start": 6705.1,
+      "time": "1:51:45",
+      "text": "staring at a blank wall with? All the other stuff washes away. What do you hope these, so many of these people that we've talked about, what do you hope yours in the future, if I were to ask them about their time in the weeds with you, what do you hope they say about you? - I hope that they, more than anything, remember my smile and energy"
+    },
+    {
+      "start": 6738.5,
+      "time": "1:52:18",
+      "text": "on whatever it was we were working on together. I think I really hope, I think just, I was born this way. I'm just an optimistic, excitable, genuinely, like, let's go do something fun person. And I think I'm most proud of the ways that people have shared that I have in moments kind of like renewed their sense of possibilities, a sense of hope, sense of creativity, you know, and so, yeah."
+    },
+    {
+      "start": 6763,
+      "time": "1:52:43",
+      "text": "And so obviously there are many things I hope, but I really hope, especially for the sorts of people we've talked about today and the things that I've done, the people that are around those crew are like, kind of carry some of that with them. I get it as much back from them, but yeah, I hope, I hope it's the smile and the sense of like, we can do new, let's do something new. Let's just, why don't"
+    },
+    {
+      "start": 6780.4,
+      "time": "1:53:00",
+      "text": "we go, let's go do it. So yeah. - Thank you, Josh. That's all I got. - Thank you. - Thank you again for listening. You can find the transcript and all the linked references from our conversation with Josh at dialectic.fm/josh-miller. I'd also like to thank Notion one more time for presenting Dialectic. Notion has been involved since the beginning of Dialectic, becoming a business"
+    },
+    {
+      "start": 6802.8,
+      "time": "1:53:22",
+      "text": "and my full-time focus. And it is a product and platform that is focused on how we and our collaborators can think together and do great work while getting leverage from technology. Right now, obviously that is AI and agents. And Notion has been deeply thoughtful about the ways to integrate AI, whether it be new models the day they come out, whether that be frontier models or open weight models,"
+    },
+    {
+      "start": 6831,
+      "time": "1:53:51",
+      "text": "to agents as they get increasingly capable and allowing them to work with the documents, with the context, with the skills, with the memory that you and your team already use. Notion can act as a command center for all of the agents you work with too, whether that be custom agents and workers that you create from within Notion or any of the other agents you're working with. You can tag Claude, you can tag GrokBot,"
+    },
+    {
+      "start": 6854.4,
+      "time": "1:54:14",
+      "text": "you can tag any tool or agent that you are using and direct them right from within Notion where the work already lives. You can also use AI to set up your Notion workspace, even if you don't ever even look at some of those documents and context. I know people who literally just funnel anything that they do on a computer, all of their relevant information, into a hub so that all of the AI tools"
+    },
+    {
+      "start": 6877.6,
+      "time": "1:54:37",
+      "text": "and agents you're using have consistent context and access to them, even if you're changing tools constantly. In the conversation, Josh and I talk about what the future of an internet computer will be and what the future of a computer that is AI native will be. I can't help but think that Notion is a backbone for all of the ways we're going to use browsers and computers in the future, because"
+    },
+    {
+      "start": 6900.8,
+      "time": "1:55:00",
+      "text": "Notion holds all of the context that you and your team use to do the work. You can learn more at notion.com/dialectic. Thank you so much for listening. Again, if you enjoyed it, please share it with a friend. And my thanks to Josh for the wisdom, for the vulnerability, and for someone who I just find so energizing. I hope you feel the same. I will see you next time."
+    }
+  ]
+}

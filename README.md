@@ -72,6 +72,12 @@ node scripts/add-post.mjs <x url> ["optional note shown under the title"]
 
 The script fetches the title and author (via the FxTwitter API), captures a high-resolution preview thumbnail to `gallery/thumbs/posts/<slug>.jpg`, and appends the post to `gallery/posts.json`. Commit and push to publish it.
 
+## Good Folks
+
+The gallery includes a **Good Folks** section (`#/folks`), archiving people who speak and write with uncommon clarity, eloquence, and craft. Each entry features their profile portrait, social links, bio, and an indexed collection of their spoken words and talks complete with playable video embeds, searchable transcripts, clickable timestamp navigation, and one-click copy.
+
+Profiles and talk transcripts are defined in `gallery/folks.json` and compiled with `node scripts/build-folks.mjs`.
+
 ## Recreating another site
 
 Agents should follow the gated [website cloning workflow](./.agents/workflows/clone-perfectly.md). It turns a reference URL into a page inventory, self-contained implementation, fixed-viewport comparison loop, browser-health checks, and reusable handoff instead of relying on a one-shot visual guess.

@@ -1,0 +1,196 @@
+{
+  "folks": [
+    {
+      "slug": "josh-miller",
+      "no": "01",
+      "name": "Josh Miller",
+      "sortName": "Miller, Josh",
+      "location": "Brooklyn, New York",
+      "role": "Co-founder & CEO, The Browser Company",
+      "portrait": "thumbs/folks/josh-miller.jpg",
+      "focus": "50% 30%",
+      "thesis": "Optimize for feelings, not metrics.",
+      "label": "Sold his first company, Branch, to Facebook; worked in the Obama White House; invested at Thrive Capital; then founded The Browser Company, creators of Arc and Dia. Its core doctrine is to treat software as personal art and optimize for how an interface feels rather than what an analytics dashboard can measure.",
+      "labelBy": "T.N.",
+      "labelDate": "October 2026",
+      "startHere": {
+        "talkId": "npYk9iarhRU",
+        "at": 2298,
+        "time": "38:18",
+        "label": "The Ev Williams story: “No one has any idea”",
+        "context": "On meeting Twitter co-founder Ev Williams and learning why everyone in tech is making it up as they go along."
+      },
+      "passages": [
+        {
+          "talkId": "npYk9iarhRU",
+          "start": 244,
+          "time": "4:04",
+          "talkTitle": "Dialectic with Jackson Dahl",
+          "text": "We were a web browser company that pretended it was a consumer company that made behind the scenes YouTube videos and got really excited when we made the Spotify icon."
+        },
+        {
+          "talkId": "npYk9iarhRU",
+          "start": 264,
+          "time": "4:24",
+          "talkTitle": "Dialectic with Jackson Dahl",
+          "text": "One of the best compliments I think I ever received about our work was someone was like, I don’t know how you’re going to beat Chrome, but you seem like you’re having a lot of fun."
+        },
+        {
+          "talkId": "npYk9iarhRU",
+          "start": 2298,
+          "time": "38:18",
+          "talkTitle": "Dialectic with Jackson Dahl",
+          "text": "Beware of anyone you meet in Silicon Valley that purports to have the answers to all the questions. Because all of us who had made something like Twitter know we were all making it up as we went along."
+        }
+      ],
+      "social": [
+        {
+          "platform": "x",
+          "label": "Josh Miller on X",
+          "url": "https://x.com/joshm"
+        }
+      ],
+      "works": [
+        {
+          "type": "site",
+          "slug": "dia",
+          "title": "Dia",
+          "kind": "Interactive Recreation",
+          "note": "The AI-native web workspace by The Browser Company"
+        },
+        {
+          "type": "video",
+          "slug": "youtube-OfvkfnAQ3JQ",
+          "title": "Arc on Windows is here. Now what...",
+          "kind": "Good Video",
+          "note": "Behind-the-scenes launch video"
+        },
+        {
+          "type": "video",
+          "slug": "youtube-oHHM9A4jN_M",
+          "title": "We're giving students equity in The Browser Company?",
+          "kind": "Good Video",
+          "note": "Student ambassador program"
+        },
+        {
+          "type": "video",
+          "slug": "youtube-ddzLvRaBsAY",
+          "title": "Is this a good ad for Arc’s Split View?",
+          "kind": "Good Video",
+          "note": "Creative product demo"
+        }
+      ],
+      "talks": [
+        {
+          "id": "npYk9iarhRU",
+          "title": "Software as Art, Hiring Misfits, and Optimizing for Feelings",
+          "event": "Dialectic with Jackson Dahl",
+          "duration": 6925,
+          "durationFormatted": "1h 55m",
+          "startSeconds": 2298,
+          "note": "A wide-ranging two-hour masterclass on product taste, building consumer software, and company culture.",
+          "url": "https://www.youtube.com/watch?v=npYk9iarhRU",
+          "paragraphsCount": 328
+        },
+        {
+          "id": "lvw-85-6-4s",
+          "title": "Why Every AI Company Will Try to Build a Browser",
+          "event": "Keynote & Analysis",
+          "duration": 720,
+          "durationFormatted": "12:00",
+          "note": "Exploring the inevitable convergence of generative AI models and client-side browsing surfaces.",
+          "url": "https://www.youtube.com/watch?v=lvw-85-6-4s",
+          "paragraphsCount": 22
+        },
+        {
+          "id": "v0160IirdL4",
+          "title": "videofile_ : The Internet Computer",
+          "event": "Product Vision Essay",
+          "duration": 1084,
+          "durationFormatted": "18:04",
+          "note": "Reflections on reimagining the modern personal computer through the lens of web architecture.",
+          "url": "https://www.youtube.com/watch?v=v0160IirdL4",
+          "paragraphsCount": 36
+        },
+        {
+          "id": "izZqmklAOiY",
+          "title": "The 10 Key Moments That Led Us to Arc 1.0",
+          "event": "Internal Archival Footage",
+          "duration": 890,
+          "durationFormatted": "14:50",
+          "note": "Candid internal footage documenting pivotal product decisions and breakthrough iterations.",
+          "url": "https://www.youtube.com/watch?v=izZqmklAOiY",
+          "paragraphsCount": 23
+        },
+        {
+          "id": "V_VfRHS_K0o",
+          "title": "What’s New in Arc: Back to School, Competitors & More",
+          "event": "Company Update",
+          "duration": 615,
+          "durationFormatted": "10:15",
+          "note": "Feature breakdown with contributions from the product and storytelling team.",
+          "url": "https://www.youtube.com/watch?v=V_VfRHS_K0o",
+          "paragraphsCount": 13
+        }
+      ]
+    },
+    {
+      "slug": "nashilu-mouen-makoua",
+      "no": "02",
+      "name": "Nashilu Mouen-Makoua",
+      "sortName": "Mouen-Makoua, Nashilu",
+      "location": "Brooklyn, New York",
+      "role": "Storyteller & Writer · The Browser Company alumna",
+      "portrait": "thumbs/folks/nashilu-mouen-makoua.jpg",
+      "focus": "50% 25%",
+      "thesis": "Third places, physical presence, and the living internet.",
+      "label": "Born in South London, based in Brooklyn, and previously an investor at First Round Capital, Nashilu Mouen-Makoua served as Head of Storytelling at The Browser Company. Her observational documentary work explores internet culture through the tactile, hyper-local spaces where humans gather to share connection and digital life.",
+      "labelBy": "T.N.",
+      "labelDate": "October 2026",
+      "startHere": {
+        "talkId": "k8gbDNGpv-I",
+        "at": 235,
+        "time": "3:55",
+        "label": "Hyper-local spaces for regulars only",
+        "context": "Field inquiry into why people still travel to physical internet cafes when connectivity is everywhere."
+      },
+      "passages": [
+        {
+          "talkId": "k8gbDNGpv-I",
+          "start": 235,
+          "time": "3:55",
+          "talkTitle": "Inside the Secret World of NYC’s Last Internet Cafes",
+          "text": "When the internet is anywhere and everywhere, why do you go to one place? These are hyper-local spaces designed to serve specific people in specific neighborhoods with specific use cases, wants, and desires. These are spaces for regulars and regulars only."
+        },
+        {
+          "talkId": "k8gbDNGpv-I",
+          "start": 295,
+          "time": "4:55",
+          "talkTitle": "Inside the Secret World of NYC’s Last Internet Cafes",
+          "text": "These simple rooms reflect the neighborhoods they were built for and prompt us to reconsider how we think about the internet and what we take for granted."
+        }
+      ],
+      "social": [
+        {
+          "platform": "linkedin",
+          "label": "Nashilu Mouen-Makoua on LinkedIn",
+          "url": "https://www.linkedin.com/in/nashilu-mouen-makoua"
+        }
+      ],
+      "works": [],
+      "talks": [
+        {
+          "id": "k8gbDNGpv-I",
+          "title": "Inside the Secret World of NYC’s Last Internet Cafes",
+          "event": "Documentary Short",
+          "duration": 334,
+          "durationFormatted": "5:34",
+          "startSeconds": 235,
+          "note": "An intimate field study of Queens and Brooklyn cybercafes, cultural filters, and physical connection in the digital era.",
+          "url": "https://www.youtube.com/watch?v=k8gbDNGpv-I",
+          "paragraphsCount": 16
+        }
+      ]
+    }
+  ]
+}

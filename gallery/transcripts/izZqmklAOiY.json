@@ -1,0 +1,123 @@
+{
+  "id": "izZqmklAOiY",
+  "title": "The 10 Key Moments That Led Us to Arc 1.0 (Internal Footage)",
+  "folkSlug": "josh-miller",
+  "folkName": "Josh Miller",
+  "paragraphs": [
+    {
+      "start": 0,
+      "time": "0:00",
+      "text": "we really bet the company on 80k what if we build it this way no one's ever done it before like the company would have failed if this had failed our extension's even gonna work so two days ago we finally removed our wait lists and launched Arc 1.0 to the public to celebrate the occasion browser Company CEO Josh Miller called an all-team meeting to reminisce on the 10 key moments that got us here and some"
+    },
+    {
+      "start": 25.9,
+      "time": "0:25",
+      "text": "that almost derailed us along the way I I really for those of you who don't know the the probably the most important moment that carries through to this day is this company started with me wanting to work with Hersh again and Hirsch wanting to work with me again this is a photo of me and Samir at Hirsch's wedding in India three months before covet hit and as soon as the idea for"
+    },
+    {
+      "start": 49.6,
+      "time": "0:49",
+      "text": "the browser company came up Hersch got really excited but to me what's more special about that is the Chain Reaction since then Hirsch then went to get Samir Samir brought on Alexandra Alexandra and and just what it started with were people and I think it's gonna I hope it never ends but it'll end with people here's a photo of um after Hirsch got back from his honeymoon we're working"
+    },
+    {
+      "start": 69.9,
+      "time": "1:09",
+      "text": "out of a physical office pre-covered in New York that's obviously Samir and then look who it is our video editor Josh Lee who at the time was our temporary designer uh doing a little designs on the side for our prototypes so we started the browser Company of New York people are at its core nothing matters more than being in a room together a few weeks later of it hits and the browser"
+    },
+    {
+      "start": 90.7,
+      "time": "1:30",
+      "text": "Company of New York is now on Zoom so I mean Nate's face in the top left says it all uh you know and now it kind of it still feels awkward to this day sometimes being on All Hands uh zooms but it really felt odd then so as much as uh it was uh big in all of our Lives covet really shaped this company and I'm so grateful to this day I'm we're working with people from all over the"
+    },
+    {
+      "start": 112.5,
+      "time": "1:52",
+      "text": "country and world uh in retrospect such an obvious decision but like many things that the browser company assume you don't know was not part of the plan but I'm so glad that uh a consequence of it is we got to work with all of you and then this is the one that I I I you know we we sort of forget but we really bet the company on 80k I think we call it our core now maybe we call it both but"
+    },
+    {
+      "start": 135.3,
+      "time": "2:15",
+      "text": "uh we realized we couldn't build Arc and electron JavaScript was not going to be performant enough for secure enough and the crew said all right well what if we build it this way no one's ever done it before but like we'll figure it out we like the company would have failed if this had failed and I'm a sociology major I don't know really what's going on like I remember were like our"
+    },
+    {
+      "start": 155.9,
+      "time": "2:35",
+      "text": "extension's even gonna work that was such a existential moment for the company here's Connor uh in our office why is Kansas City Connor in our New York office I have no idea but I just that smile ah Conor at its best I I wanted to share it um so this is the office that we have today uh you know we were we were I think hoping that code was about to end definitely did not almost end but uh you"
+    },
+    {
+      "start": 179.2,
+      "time": "2:59",
+      "text": "know obviously this office has become such a special part of our journey now this is me and my in-laws yard in Suburban New Jersey uh half sad that I'm in Suburban New Jersey and half terrified that people are going to try our product for the first time so for the first I think couple dozen people hand recorded these videos for every single person uh welcoming them to what was not called Arc of the time the"
+    },
+    {
+      "start": 201.7,
+      "time": "3:21",
+      "text": "membership team for all of you that don't know every single human being that used our product got on a live Zoom call an Edina or someone else on the team walk them through how to use the product got to know them space to a name we would not be here without that love you see everything going on to Twitter today that contrace itself back to Adina and the crew who just like put a face to a"
+    },
+    {
+      "start": 226.1,
+      "time": "3:46",
+      "text": "company from day one we hand on boarded I think thousands of people hundreds of people for sure pretty remarkable uh this is the first meal we got together after covid mid covid sometime in covid but we hadn't gotten together this is uh by where I used to live in in Fort Greene uh but uh you can see the crews growing oh yeah it was a really special night and then there was the big boss we"
+    },
+    {
+      "start": 249.8,
+      "time": "4:09",
+      "text": "had been onboarding Everyone by hand we couldn't believe that retention was incredible it was incredible we like we we didn't even like the product that much and people were using it but we had all these caveats oh you know like the onboard people by hand it's not that um and so we said we got to beat the big boss you know we even had a we even had Bowser as a as a mascot and I thought we"
+    },
+    {
+      "start": 272.9,
+      "time": "4:32",
+      "text": "would never beat the big boss because we had to switch to the outer space architecture which is actually how the sidebar works today we had to do self-serve onboarding it seemed like an impossible number of things the big boss and that we wanted to get to 15K Dau you know how many Dau were at today we won 15K it felt so insurmountable and obviously we ended up being the big boss"
+    },
+    {
+      "start": 292.6,
+      "time": "4:52",
+      "text": "but that was a big moment okay so then there is this question of all right we we don't know we don't think our product's that good but we need to do self-serve onboarding and we don't even know how to describe the product yet how do we get people to give self-serve onboarding a try you know and this is where Omar Carla Christina and crew took inspiration from uh film uh and to this day I mean you"
+    },
+    {
+      "start": 314.5,
+      "time": "5:14",
+      "text": "think about how defining this little orb you know that came out of nowhere and that came out of our being scared that you know how how is anyone going to try this product that we can't even describe and obviously the member cards this set you know our little corner of the internet Ablaze uh with inspiration um and this is a chart that I think I you know we grew really quickly again"
+    },
+    {
+      "start": 336.5,
+      "time": "5:36",
+      "text": "it's pretty funny to see 15K and how quaint that feels but at the time it was just like oh my holy smokes we're growing as as fast as slack was in the early days um and then as we started growing and growing more and more 10 12 8 again and again uh so proud of the way that storytelling and crew really opened up this company and uh didn't just accept that we were going to be like the hot"
+    },
+    {
+      "start": 357.5,
+      "time": "5:57",
+      "text": "startup of the market we were going to be vulnerable we were going to put our team out there front and center we're going to try experiments I see Dustin right here we just we recorded a meeting of us saying nothing just to try it and so storytelling you know along that way really humanizing us as a company and doing a fantastic job and then this is obviously our offsite of the last year"
+    },
+    {
+      "start": 376.1,
+      "time": "6:16",
+      "text": "uh probably I I think it's Godad is like an iconic Timeless photo um but one of my faves um and then I'll just zoom through the last last two because they're not the most fun but I gotta submit our cash disappearing in thin air felt like a big moment in our history for better or worse I will not relive that with all of you but I will say I've never shared this photo before I pulled over to the"
+    },
+    {
+      "start": 397.6,
+      "time": "6:37",
+      "text": "side of the highway uh in the Mojave Desert because I lost service on a call with our lawyer or investor or someone as was the photo of me being like if it all explodes and my job goes away because of Bank runs like I want to remember the moment and where I was so that was very scary but I'm glad we got through it um and then I think the screen the past few months I I think in many ways the"
+    },
+    {
+      "start": 421.4,
+      "time": "7:01",
+      "text": "other the other moments are maybe more happy moments except you know kind of proud moments but to be honest I think for me personally the last three to six months have been very humbling and very motivating and I think in many ways have taught me personally more and I hope all of us than all of those great charts and um and so very proud of the work we've done in the past spring cleaning which"
+    },
+    {
+      "start": 442,
+      "time": "7:22",
+      "text": "brings us oops oh yeah no that's right and then obviously you all were here for this so I won't dwell on it but it's kind of cool to see the progression of the faces and the in the rooms get a little bit larger and that brings us to today Arc 1.0 um I just thought it was important obviously I skipped over a lot of photos in a lot of moments but it's pretty incredible what we've all put into this"
+    },
+    {
+      "start": 461.3,
+      "time": "7:41",
+      "text": "and I hope you all feel super super proud I know I do um and we're not announcing our 2.0 there are no dates but I just isn't it kind of cool to think about that feels like so and yet it wasn't that long in terms of time I can't wait to see what the next 10 moments are um and I'm so grateful that we got to do it with all of you so thank you thank you thank you and I want to end with"
+    },
+    {
+      "start": 485.8,
+      "time": "8:05",
+      "text": "where I started thank you also to our people team to Lauren to everyone there like to me this crew that's what makes it worth it um yeah to many more congratulations"
+    }
+  ]
+}
