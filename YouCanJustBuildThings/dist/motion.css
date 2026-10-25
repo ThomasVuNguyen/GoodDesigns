@@ -1,0 +1,50 @@
+:root{--motion-fast:140ms;--motion-state:220ms;--motion-layout:300ms;--motion-ease:cubic-bezier(.16,1,.3,1)}
+.header nav.has-selection-pill,.tabs.has-selection-pill,.filters.has-selection-pill{position:relative;isolation:isolate}
+.has-selection-pill>.selection-pill{position:absolute;z-index:0;pointer-events:none;transform-origin:0 0;border-radius:999px;background:#f0f0f0}
+.has-selection-pill>a,.has-selection-pill>button{position:relative;z-index:1}
+.header nav.has-selection-pill a.active,.tabs.has-selection-pill a.active{background:transparent}
+.filters.has-selection-pill>.selection-pill{background:#111}
+.filters.has-selection-pill .chip.selected{background:transparent;border-color:transparent}
+.header nav a,.tabs a,button.chip,.button,.vote,.device-guide,.plugin-devices-link,.learn-jump a,.resource-card a{transition:background-color var(--motion-state) var(--motion-ease),border-color var(--motion-state) var(--motion-ease),color var(--motion-fast) ease,opacity var(--motion-fast) ease,transform var(--motion-fast) var(--motion-ease)}
+.button:not(:disabled):not([aria-disabled=true]):active,.vote:not(:disabled):active,.chip:not(:disabled):active{transform:scale(.97)}
+.button[aria-disabled=true]{transform:none}
+.field input:not([type=checkbox]):not([type=radio]),.field textarea,.field select{transition:border-color var(--motion-fast) ease,background-color var(--motion-fast) ease,box-shadow var(--motion-state) var(--motion-ease)}
+.field input:focus-visible,.field textarea:focus-visible,.field select:focus-visible{box-shadow:0 0 0 4px #0066ff0d}
+.project-row .media-link img,.device-image img,.learn-card img{transition:transform var(--motion-layout) var(--motion-ease)}
+@media(hover:hover) and (pointer:fine){
+  .project-row .media-link:hover img{transform:scale(1.035)}
+  .device-row:hover .device-image img{transform:scale(1.025)}
+}
+#main{transition:opacity 180ms ease}
+#main[data-route-pending]{opacity:.6;cursor:progress}
+#results{transition:opacity 160ms ease;overflow-anchor:none}
+#results[aria-busy=true]{opacity:.58}
+.project-row{transform-origin:50% 50%}
+dialog[open]::backdrop{animation:backdrop-enter 200ms ease both}
+dialog[data-closing]::backdrop{animation:backdrop-exit 150ms ease both}
+dialog[data-closing]{pointer-events:none}
+.form-success,.form-error,.error-state,.review-error:not(:empty),.x-post-content>div:not(:empty){animation:state-arrive 220ms var(--motion-ease) both}
+.form-error a{text-decoration:underline;text-underline-offset:4px}
+.submission-actions .button{min-width:180px}
+button.button:disabled{gap:10px;cursor:progress}
+button.button:disabled::after{content:'';width:14px;height:14px;flex:0 0 14px;border:2px solid currentColor;border-right-color:transparent;border-radius:50%;animation:busy-spin 800ms linear infinite}
+.vote:disabled{opacity:1;cursor:pointer}
+/* The pressed state paints immediately, independent of network latency. */
+.vote{transition:transform var(--motion-fast) var(--motion-ease);-webkit-tap-highlight-color:transparent}
+.loading{animation:state-arrive 180ms ease both}
+@keyframes backdrop-enter{from{background-color:#0000}to{background-color:#0005}}
+@keyframes backdrop-exit{from{background-color:#0005}to{background-color:#0000}}
+@keyframes state-arrive{from{opacity:.25}to{opacity:1}}
+@keyframes busy-spin{to{transform:rotate(360deg)}}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  #main,#results,.button,.chip,.vote,.header nav a,.tabs a,.field input,.field textarea,.field select,.device-image img,.project-row img{transition:none!important}
+  .button:active,.vote:active,.chip:active,.device-row:hover .device-image img,.project-row .media-link:hover img{transform:none!important}
+  dialog::backdrop,.form-success,.form-error,.error-state,.review-error,.x-post-content>div,.loading,button.button:disabled::after{animation:none!important}
+}
+
+/* Immediate, noninteractive feedback for an intentional upvote. */
+.vote-arrow-burst{position:fixed;inset:0;overflow:hidden;pointer-events:none;user-select:none;z-index:40}
+.vote-arrow{position:absolute;left:0;top:0;color:var(--ink);width:22px;height:15px;line-height:1;pointer-events:none}
+.vote-arrow svg{display:block;width:100%;height:100%}
+@media(prefers-reduced-motion:reduce){.vote-arrow-burst{display:none}}

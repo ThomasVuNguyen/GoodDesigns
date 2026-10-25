@@ -1,0 +1,12 @@
+/* One semantic link covers each card's noninteractive area. Native controls
+   and creator profiles stay above it; no nested links or click-only cards. */
+[data-card-navigation]{position:relative;isolation:isolate}
+[data-card-navigation] [data-card-link]::after{content:"";position:absolute;inset:0;z-index:1;border-radius:inherit}
+[data-card-navigation] [data-card-link]:focus-visible{outline:none}
+[data-card-navigation] [data-card-link]:focus-visible::after{outline:3px solid var(--focus);outline-offset:3px}
+[data-card-navigation] :is(button,input,select,textarea,video,audio,summary,[role=button],a:not([data-card-link])){position:relative;z-index:2}
+/* The image's duplicate gallery anchor is already removed from the tab order. */
+[data-card-navigation] .media-link{z-index:0}
+[data-card-navigation] [data-card-link],[data-card-navigation] img{ -webkit-user-drag:none }
+[data-card-navigation] .creator-profiles{position:relative;z-index:2;pointer-events:none}
+[data-card-navigation] .creator-profiles .creator-profile{pointer-events:auto}

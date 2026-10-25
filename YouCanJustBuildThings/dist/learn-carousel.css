@@ -1,0 +1,70 @@
+/* Community projects on Learn use the same framing geometry as Explore. */
+.learn-page .learn-carousel{min-width:0}
+.learn-page .learn-carousel-toolbar{display:flex;align-items:center;justify-content:flex-end;gap:16px;margin-bottom:16px}
+.learn-page .learn-carousel-controls{display:flex;flex:none;gap:8px}
+.learn-page .learn-carousel-arrow{display:inline-flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;border:1px solid var(--control-border,var(--line));border-radius:50%;background:var(--white);color:var(--ink);font:inherit;font-size:1.25rem;line-height:1;cursor:pointer}
+.learn-page .learn-carousel-arrow:not(:disabled):hover{background:var(--soft)}
+.learn-page .learn-carousel-arrow:disabled{opacity:.35;cursor:default}
+.learn-page .learn-carousel-arrow svg,.learn-page .learn-carousel-arrow img{width:20px;height:20px;pointer-events:none}
+.learn-page .learn-carousel-arrow[data-carousel-prev] svg{transform:rotate(180deg)}
+.learn-page .learn-carousel-track{display:flex;gap:20px;align-items:stretch;list-style:none;margin:0;padding:4px 4px 16px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scroll-padding-inline:4px;scrollbar-width:thin;scroll-behavior:auto;-webkit-overflow-scrolling:touch}
+.learn-page .learn-project-card{flex:0 0 calc((100% - 40px)/3);min-width:0;scroll-snap-align:start;list-style:none}
+.learn-page .learn-project-link{display:flex;flex-direction:column;height:100%;padding:0 0 4px;border-radius:4px;color:var(--ink);text-decoration:none;overflow-wrap:anywhere}
+.learn-page .learn-project-image{display:block;width:100%;aspect-ratio:16/9;overflow:hidden;border:1px solid var(--line);border-radius:4px;background:var(--soft)}
+.learn-page .learn-project-image>.thumbnail-framing{width:100%;aspect-ratio:16/9;border-radius:0}
+.learn-page .learn-project-image>img{display:block;width:100%;height:100%;object-fit:contain;transform:none;transition:none}
+.learn-page .learn-project-no-image{display:flex;align-items:center;justify-content:center;width:100%;height:100%;padding:16px;color:var(--muted);font-size:.875rem;text-align:center}
+.learn-page .learn-project-image img[hidden],.learn-page .learn-project-image .thumbnail-framing[hidden],.learn-page .learn-project-no-image[hidden]{display:none}
+.learn-page .learn-project-card h3{font-size:1.25rem;line-height:1.25;letter-spacing:-.025em;margin:16px 0 0}
+.learn-page .learn-project-link:hover h3{text-decoration:underline;text-underline-offset:4px}
+.learn-page .learn-project-summary{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:3;overflow:hidden;color:var(--muted);font-size:.9375rem;line-height:1.5;margin:8px 0 0}
+.learn-page .learn-project-credit{display:block;color:var(--muted);font-size:.8125rem;line-height:1.45;margin:12px 0 0}
+.learn-page .learn-carousel-arrow:focus-visible,.learn-page .learn-project-link:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+.learn-page .learn-carousel-track:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:4px}
+.learn-page .learn-share-overview{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:32px;align-items:start;margin-bottom:24px}
+.learn-page .learn-share-tips{display:grid;gap:16px;min-width:0;margin:0;padding:0;list-style:none;color:var(--muted);font-size:.9375rem;line-height:1.5}
+.learn-page .learn-share-tips strong{display:flex;align-items:flex-start;gap:8px;margin-bottom:3px;color:var(--ink);font-size:1rem;font-weight:500}
+.learn-page .learn-share-tips strong>.oai-icon{width:18px;height:18px;flex:none;margin-top:3px}
+.learn-page .learn-share-tips strong>span{min-width:0}
+.learn-page .learn-share-examples{min-width:0}
+.learn-page .learn-share-example-label{margin:0 0 12px;color:var(--muted);font-size:.75rem;line-height:1.4;letter-spacing:.04em}
+.learn-page .learn-share-example-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.learn-page .learn-share-example{min-width:0;margin:0}
+.learn-page .learn-share-example img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--line);border-radius:8px;background:var(--white)}
+.learn-page .learn-share-example figcaption{margin-top:8px;color:var(--ink);font-size:.8125rem;line-height:1.4}
+.learn-page .learn-share-card{border:1px solid var(--line);border-radius:16px;background:var(--soft);overflow:hidden}
+.learn-page .learn-share-body{padding:28px}
+.learn-page .learn-share-card .learn-prompt-panel{background:var(--white)}
+.learn-page .learn-share-actions{display:flex;justify-content:flex-end;padding:20px 28px}
+.learn-page .learn-share-cta{min-height:48px;margin:0}
+@media(min-width:721px) and (max-width:1023px){
+ .learn-page .learn-share-overview{grid-template-columns:1fr;gap:24px}
+ .learn-page .learn-share-tips{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px}
+}
+@media(min-width:1280px){.learn-page .learn-project-card{flex-basis:calc((100% - 60px)/4)}}
+@media(min-width:721px) and (max-width:1023px){.learn-page .learn-project-card{flex-basis:calc((100% - 20px)/2)}}
+@media(max-width:720px){
+ .learn-page .learn-carousel-track{gap:16px}
+ .learn-page .learn-project-card{flex-basis:82%}
+ .learn-page .learn-project-card:only-child{flex-basis:100%}
+ .learn-page .learn-carousel-toolbar{gap:12px;margin-bottom:12px}
+ .learn-page .learn-project-card h3{font-size:1.125rem;margin-top:12px}
+ .learn-page .learn-project-summary{font-size:.875rem}
+ .learn-page .learn-share-overview{grid-template-columns:1fr;gap:24px}
+ .learn-page .learn-share-tips{gap:14px}
+ .learn-page .learn-share-body{padding:20px 16px}
+ .learn-page .learn-share-actions{padding:16px}
+ .learn-page .learn-share-cta{width:100%}
+}
+@media(prefers-reduced-motion:reduce){
+ .learn-page .learn-carousel-track{scroll-behavior:auto}
+ .learn-page .learn-carousel,.learn-page .learn-carousel *{animation:none!important;transition:none!important}
+}
+
+.learn-page .learn-project-card.has-creator-profile{display:flex;flex-direction:column}
+.learn-page .learn-project-card.has-creator-profile .learn-project-link{height:auto;flex:1}
+.learn-page .learn-project-card>.creator-profile{display:block;align-self:flex-start;margin:4px 0 0;padding-block:8px;min-height:36px}
+@media(max-width:720px){.learn-page .learn-project-card>.creator-profile{min-height:44px;padding-block:12px}}
+.learn-page .learn-project-card>.creator-profiles{margin:4px 0 0;gap:0 12px}
+.learn-page .learn-project-card>.creator-profiles .creator-profile{min-height:36px}
+@media(max-width:720px){.learn-page .learn-project-card>.creator-profiles .creator-profile{min-height:44px}}

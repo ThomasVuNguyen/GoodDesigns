@@ -1,0 +1,22 @@
+/* Preserve one uniform source scale and the exact chosen vertical band. */
+.thumbnail-framing{position:relative;display:block;width:100%;overflow:hidden;isolation:isolate;border-radius:4px}
+.thumbnail-framing .thumbnail-framing-image{position:absolute;display:block;max-width:none;max-height:none;object-fit:fill;object-position:0 0;padding:0;border:0;border-radius:0;image-orientation:from-image;transform:none;transition:none}
+.project-row .media-link.has-thumbnail-frame,.project-list.no-rank .project-row .media-link.has-thumbnail-frame{height:auto;aspect-ratio:16/9;align-self:center}
+.project-row .media-link .thumbnail-framing-image,.project-row .media-link:hover .thumbnail-framing-image{object-fit:fill;padding:0;border-radius:0;transform:none;transition:none}
+.thumbnail-pair{display:grid;grid-template-columns:minmax(0,16fr) minmax(0,9fr);gap:12px;width:100%;max-width:520px;align-items:start}
+.thumbnail-pair figure{min-width:0;margin:0}
+.thumbnail-pair figcaption{font-size:.8125rem;font-weight:500;margin:0 0 8px;color:var(--ink)}
+.thumbnail-pair .thumbnail-placeholder{display:grid;place-items:center;aspect-ratio:16/9;border:1px dashed var(--line);border-radius:5px;background:var(--soft);font-size:.75rem;color:var(--muted);text-align:center;padding:8px}
+.thumbnail-pair .thumbnail-box{border:0;box-shadow:inset 0 0 0 1px var(--line);background:#17191c}
+.thumbnail-export-warning{font-size:.8125rem;line-height:1.5;color:var(--muted);max-width:520px;margin:8px 0 0}
+.submission-preview .thumbnail-pair{margin:16px 0 22px}
+.submission-preview .thumbnail-pair .preview-thumbnail{display:block;width:100%;height:auto;aspect-ratio:1;border-radius:4px;object-fit:contain;background:#17191c}
+
+/* Switch only list thumbnails; saved source/crop and full media are unchanged. */
+.gallery-thumbnail-wide{display:block}
+.gallery-thumbnail-square{display:none}
+@media(max-width:720px),(max-width:900px) and (max-height:500px){
+  .project-row .media-link.has-thumbnail-frame,.project-list.no-rank .project-row .media-link.has-thumbnail-frame{height:auto;aspect-ratio:1;align-self:start}
+  .gallery-thumbnail-wide{display:none}
+  .gallery-thumbnail-square{display:block}
+}

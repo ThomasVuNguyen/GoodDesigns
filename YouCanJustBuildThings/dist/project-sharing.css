@@ -1,0 +1,74 @@
+.detail-actions{display:flex;gap:12px;align-items:center;flex-shrink:0}
+.detail-actions .button{white-space:nowrap}
+.project-share{width:min(1020px,calc(100vw - 32px));max-width:1020px;max-height:calc(100dvh - 32px);padding:24px;border:1px solid var(--line);border-radius:22px;background:#101216;color:var(--ink);overflow:auto}
+.project-share::backdrop{background:#000c;backdrop-filter:blur(6px)}
+.share-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;margin-bottom:20px}
+.share-heading .dialog-close{position:static;flex-shrink:0}
+.share-heading h2{font-size:32px;margin:3px 0 0;line-height:1.2;letter-spacing:-.035em}
+.share-eyebrow{margin:0;color:var(--muted);font-size:12px;letter-spacing:.07em;text-transform:uppercase}
+.share-layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(260px,1fr);gap:24px;align-items:start}
+.share-art,.share-controls{min-width:0}
+.share-preview{position:relative;aspect-ratio:1200/630;display:grid;place-items:center;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#080a0d}
+.share-image-slot{width:100%;height:100%;min-width:0;min-height:0}
+.share-preview img{display:block;width:100%;height:100%;object-fit:contain}
+.project-share [hidden]{display:none!important}
+.share-preview.is-portrait{aspect-ratio:4/5;width:100%;max-width:400px;margin-inline:auto}
+.share-image-status{position:absolute;inset:0;display:grid;place-items:center;padding:24px;margin:0;text-align:center;font-size:13px;line-height:1.5;color:#d7dce1;background:#080a0d99;pointer-events:none}
+.share-image-status:empty{display:none}
+.share-retry{margin-top:4px}
+.share-controls .field{margin:0 0 12px}
+.share-controls label{font-size:13px;font-weight:500}
+.share-controls select{width:100%;min-width:0;font-family:inherit}
+.share-metrics-option{display:flex;gap:10px;align-items:center;min-height:44px;cursor:pointer}
+.share-metrics-option input{width:18px;height:18px;margin:0;flex-shrink:0;accent-color:var(--ink)}
+.share-metrics-note{font-size:12px;line-height:1.5;color:var(--muted);margin:0 0 0 28px}
+.share-actions{display:grid;gap:8px;margin-top:12px}
+.share-actions .button{width:100%;justify-content:center;text-align:center;min-height:44px;gap:8px}
+.share-actions svg{width:18px;height:18px;flex:none}
+.share-official-profiles{display:flex;flex-wrap:wrap;align-items:center;gap:4px 12px;margin-top:14px;padding-top:10px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+.share-official-profiles>span{margin-right:auto}
+.share-official-profiles a{display:inline-flex;align-items:center;justify-content:center;gap:5px;min-width:36px;min-height:36px;color:var(--ink);text-decoration:none}
+.share-official-profiles a:hover{text-decoration:underline;text-underline-offset:3px}
+.share-official-profiles svg{width:16px;height:16px;flex:none}
+.project-share :is(button,a,select,input):focus-visible{outline:2px solid var(--focus);outline-offset:4px}
+.share-pending{font-size:13px;color:var(--muted);margin:12px 0}
+.review-card .share-submission-actions{display:flex;gap:10px;flex-wrap:wrap}
+@media(max-width:760px){
+  .project-share{padding:18px;width:calc(100vw - 20px);max-height:calc(100dvh - 20px)}
+  .share-layout{grid-template-columns:1fr;gap:14px}
+  .share-heading{margin-bottom:16px}
+  .share-heading h2{font-size:28px}
+  .share-preview.is-portrait{max-width:320px}
+  .share-actions{margin-top:12px}
+  .share-official-profiles>span{flex-basis:100%}
+  .share-official-profiles a{min-width:44px;min-height:44px}
+  .detail-title{flex-wrap:wrap}
+  .detail-actions{width:100%;justify-content:space-between}
+}
+
+.detail-title{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;gap:24px}
+.detail-byline{display:flex;flex-wrap:wrap;align-items:center;gap:4px 16px;min-width:0;max-width:750px;margin:20px 0 18px;padding-top:12px;border-top:1px solid var(--line)}
+.detail-byline .meta{margin:0;font-size:14px;color:var(--muted)}
+/* Resource identity stays identical in the draft and published project. */
+.detail-links li{padding-left:0}
+.detail-links a,.detail-links .detail-link-preview{display:flex;align-items:center;gap:10px;min-height:44px}
+.resource-link-label{min-width:0;overflow-wrap:anywhere}
+.resource-link-arrow{flex:none;margin-left:auto;color:var(--muted)}
+.detail-byline .creator-profiles{margin:0;gap:4px 14px}
+.detail-heading .detail-share-action{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;height:auto;margin:0;padding:8px 12px;border:1px solid #0190ff55;border-radius:10px;background:#0190ff1a;color:#8acbff;font-size:13px;line-height:1.4;white-space:nowrap}
+.detail-heading .detail-share-action:hover{background:#0190ff2e;border-color:#0190ff80;color:#c0e3ff}
+@media(max-width:900px){.detail-title{grid-template-columns:minmax(0,1fr)}.detail-title .detail-actions{width:100%;margin:0;justify-content:space-between;gap:14px}.detail-byline{margin:16px 0 16px;padding-top:8px}.detail-heading .detail-share-action{font-size:13px;padding:8px 12px}}
+
+.detail-heading{flex-wrap:wrap;align-items:center;justify-content:space-between;column-gap:32px;row-gap:12px;max-width:750px}.detail-heading h1{flex:1 1 0;min-width:0;margin:0}.detail-heading .detail-share-action{font-size:13px;flex:none;margin-left:auto}.detail-share-action svg{width:13px;height:13px}.project-heading{flex-wrap:wrap;gap:8px}.project-heading h3{flex:0 1 auto}.project-share-action svg{width:13px;height:13px}
+
+.share-preview.is-square{aspect-ratio:1/1}
+
+/* Let the post stand on the page without a second surrounding card. */
+.detail .x-post{border:0;border-radius:0;background:transparent;padding:0}
+
+@media(max-width:600px){.detail-heading h1{flex-basis:100%}.detail-heading .detail-share-action{margin-left:auto}}
+
+/* The existing share-card action uses a conventional share icon and a clear label. */
+.project-share-action[data-share-project],.detail-heading .detail-share-action{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:8px 12px;border:1px solid #0190ff55;border-radius:10px;background:#0190ff1a;color:#8acbff;font-size:13px;line-height:1.4;text-decoration:none;white-space:nowrap}
+.project-share-action[data-share-project]:hover,.detail-heading .detail-share-action:hover{background:#0190ff2e;border-color:#0190ff80;color:#c0e3ff}
+.project-share-action[data-share-project] svg,.detail-heading .detail-share-action svg{width:18px;height:18px;flex:none}

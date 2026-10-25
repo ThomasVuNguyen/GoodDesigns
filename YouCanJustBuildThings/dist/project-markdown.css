@@ -1,0 +1,13 @@
+.project-markdown{min-width:0;max-width:100%;overflow-wrap:anywhere;line-height:1.6}
+.project-description{max-width:750px;color:var(--muted);font-size:1.15rem}
+.project-markdown>p+p,.project-markdown>.project-note{margin-top:1em}
+.project-markdown :is(h3,h4,h5,h6){font-size:1.1em;line-height:1.4;letter-spacing:normal;margin:1.25em 0 .5em;font-weight:600}
+.project-markdown>:first-child{margin-top:0}
+.project-markdown a,.project-markdown .markdown-link{text-decoration:underline;text-underline-offset:3px}
+.project-markdown pre{max-width:100%;overflow:auto;padding:14px;border:1px solid var(--line);border-radius:6px;background:var(--soft);font-size:.875rem;line-height:1.5;margin:1em 0;white-space:pre}
+.project-markdown code{font-family:var(--font-ui);font-size:.9em}
+.project-markdown :not(pre)>code{background:var(--soft);border-radius:3px;padding:2px 4px;white-space:break-spaces;overflow-wrap:anywhere}
+.project-markdown pre code{font-size:inherit}
+.project-markdown pre:focus-visible{outline:3px solid var(--focus);outline-offset:3px}
+.build-demo-embed{display:block;width:100%;aspect-ratio:16/9;min-height:200px;border:0;background:var(--soft)}
+@media(max-width:720px){.project-description{font-size:1rem}}

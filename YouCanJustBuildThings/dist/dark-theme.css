@@ -1,0 +1,84 @@
+/* Dark review theme. Layout, artwork geometry, and interactions stay shared. */
+:root{
+  color-scheme:dark;
+  --white:#000000;
+  --ink:#f3f3f4;
+  --muted:#acafb7;
+  --line:#303237;
+  --soft:#1d1f23;
+  --surface-hover:#292c31;
+  --selected:#34373d;
+  --control-border:#6b7079;
+  --focus:#0190ff;
+  --accent:#0190ff;
+  --primary:#eeeef0;
+  --on-primary:#151618;
+  background:var(--white);
+  color:var(--ink);
+  scrollbar-color:#61656e var(--white);
+}
+body{background:var(--white);color:var(--ink)}
+::selection{background:#365b99;color:#fff}
+input,textarea{caret-color:var(--accent)}
+button,input,textarea,select{color:inherit}
+input::placeholder,textarea::placeholder{color:var(--muted);opacity:1}
+.oai-icon{filter:brightness(0) invert(1);opacity:.92}
+
+.header nav a:hover,.tabs a:hover,.header .account a:hover{background:var(--soft)}
+.header nav a.active,.tabs a.active{background:var(--selected);color:var(--ink)}
+.has-selection-pill>.selection-pill{background:var(--selected)}
+.header nav.has-selection-pill a.active,.tabs.has-selection-pill a.active{background:transparent}
+.filters.has-selection-pill>.selection-pill{background:var(--primary)}
+.filters.has-selection-pill .chip.selected{background:transparent;border-color:transparent}
+
+.button,button.chip,.tag-editor button{background:var(--soft);color:var(--ink);border-color:var(--control-border)}
+.button:not([aria-disabled=true]):not(:disabled):hover,button.chip:not(:disabled):hover,
+.resource-card a:hover,.learn-jump a:hover,.detail-links a:hover{background:var(--surface-hover);border-color:#858b96}
+.button.black,.chip.selected,.filters .chip.selected,.vote[aria-pressed=true]{background:var(--primary);color:var(--on-primary);border-color:var(--primary)}
+.button.black:not([aria-disabled=true]):not(:disabled):hover,.chip.selected:not(:disabled):hover,
+.filters .chip.selected:hover{background:#fff;color:var(--on-primary);border-color:#fff}
+@media(hover:hover) and (pointer:fine){.vote:hover{background:#fff;color:var(--on-primary);border-color:#fff}}
+.button[aria-disabled=true],.button:disabled,.plugin-download[aria-disabled=true]{background:#282b30;color:#a5a8b0;border-color:transparent}
+.filters .chip{background:var(--soft);color:var(--ink)}
+.filters .chip.selected{color:var(--on-primary)}
+.tag,.badge,.status-pill,.resource-api-grid h3 small{background:#282b30;color:#c8cbd2}
+.vote{background:var(--soft);color:var(--ink)}
+.project-row .rank{color:var(--muted)}
+.learn-jump a,.dialog-close{background:var(--soft);color:var(--ink)}
+.dialog-close:hover{background:var(--surface-hover)}
+
+.hardware-hero,.hardware-scene{background:var(--white)}
+.hardware-field{filter:brightness(.35) saturate(.95)}
+.hardware-scene::after{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse at 50% 44%,#000000 0%,#000000e6 24%,#00000000 75%)}
+.hardware-fallback{z-index:2}
+.hardware-copy h1{color:var(--ink)}
+.hardware-copy p{color:#d0d2d7}
+.hardware-copy .hardware-highlight{color:var(--accent)}
+.hardware-copy .button{border-color:var(--control-border)}
+.hardware-copy .button.black{border-color:var(--primary)}
+.hero-device-name{background:#25282e;color:#e8e9ec}
+
+.hardware-credit{color:#c8cbd2}
+.hero-device:focus-visible{background:#0190ff14}
+
+.project-row .media-link,.learn-card img,.detail-media,.device-image{background:var(--soft)}
+.resource-card p,.resource-number,.resource-api-grid p,.example-links small,.x-post small,
+.learn-intro .eyebrow,.concept-caption,.plugin-status,.device-features{color:var(--muted)}
+.device-support,.plugin-devices-link:hover,.device-guide:hover{color:var(--accent)}
+.device-features li::before{background:var(--muted)}
+.notice,.upload,.plugin-callout,.choice label,.x-post{background:var(--soft);color:var(--ink)}
+.field input:not([type=checkbox]):not([type=radio]),.field textarea,.field select{background:#17191d;color:var(--ink);border-color:var(--control-border)}
+.field input:hover,.field textarea:hover,.field select:hover{border-color:#858b96}
+.searchbar .field input:not([type=checkbox]):not([type=radio]),.searchbar .field select{background:var(--soft);color:var(--ink);border-color:var(--control-border)}
+.searchbar .field input:focus-visible,.searchbar .field select:focus-visible{background:#17191d}
+.field input:focus-visible,.field textarea:focus-visible,.field select:focus-visible{box-shadow:none}
+.field input::file-selector-button,.submission-page input[type=file]::file-selector-button{background:#292c31;color:var(--ink);border-color:var(--control-border)}
+.check input,.choice input{accent-color:var(--accent)}
+.form-error,.review-error:not(:empty){background:#382022;color:#ffc3c0;border-color:#ae6964}
+.error-state{background:var(--soft);color:var(--ink)}
+dialog{background:#202226;color:var(--ink);box-shadow:0 20px 64px #0009}
+dialog::backdrop{background:#000a}
+.toast,.skip{background:var(--primary);color:var(--on-primary)}
+.detail-links a,.detail-links .detail-link-preview,.choice label,.x-post{border-color:var(--control-border)}
+@keyframes backdrop-enter{from{background-color:#0000}to{background-color:#000a}}
+@keyframes backdrop-exit{from{background-color:#000a}to{background-color:#0000}}

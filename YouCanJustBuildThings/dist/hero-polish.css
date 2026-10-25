@@ -1,0 +1,63 @@
+/* Load after responsive.css. Keep the established OpenAI type and blue accent;
+   the hardware field is the only visual flourish. No animation on compact UI. */
+.hero-polished{--hero-blue:#008cff;--hero-grid:#087fcb;--hero-depth:#061722;--hero-mist:#80cfff}
+/* Keep the three campaign lines centered, unbroken, and equal in size. */
+.hero-polished .hardware-copy,.hero-polished .hardware-copy h1{text-align:center}
+.hero-polished .hardware-copy .hero-title-line{display:inline-block;white-space:nowrap;font-size:inherit}
+.hero-polished .hardware-copy .hardware-highlight{font-size:inherit;letter-spacing:-.035em}
+.hero-polished .hardware-scene{background:radial-gradient(ellipse at 20% 58%,#04243b66,transparent 40%),radial-gradient(ellipse at 86% 24%,#073b573d,transparent 35%),#000}
+.hero-cad-field{position:absolute;inset:0;z-index:0;pointer-events:none;color:var(--hero-grid);opacity:.65}
+.hero-cad-field svg{display:block;width:100%;height:100%}
+.hero-static-devices{position:absolute;inset:0;z-index:2;pointer-events:none;opacity:0;visibility:hidden}
+.hero-static-device{position:absolute;margin:0;left:var(--device-x);top:var(--device-y);width:var(--device-width);height:var(--device-height);transform:translate(-50%,-50%) rotate(var(--device-angle,0deg))}
+.hero-static-device img{display:block;width:100%;height:100%;object-fit:contain;image-rendering:auto;filter:drop-shadow(0 10px 24px #0009)}
+.hero-static-device--core{--device-x:18%;--device-y:45%;--device-width:170px;--device-height:170px;--device-angle:-8deg}
+.hero-static-device--pi{--device-x:83%;--device-y:69%;--device-width:185px;--device-height:140px;--device-angle:-12deg}
+.hero-static-device--stick{--device-x:85%;--device-y:29%;--device-width:114px;--device-height:114px;--device-angle:14deg}
+.hero-static-device--atom{--device-x:16%;--device-y:76%;--device-width:86px;--device-height:86px;--device-angle:9deg}
+/* Desktop must never show a product-photo placeholder while the CAD loads. */
+@media(min-width:1001px){
+ .hero-polished .hardware-copy{width:54%;max-width:760px}
+ .hero-polished .hardware-scene:not(.has-failed) .hero-static-devices{opacity:0;visibility:hidden}
+ .hero-polished .hardware-scene:not(.is-ready) .hardware-hero-canvas,.hero-polished .hardware-scene:not(.is-ready) .cad-overlay{visibility:hidden}
+ .hero-polished .hardware-scene.is-ready .hero-cad-field{opacity:0}
+ .hero-polished .hardware-scene.has-failed .hero-static-devices{opacity:1;visibility:visible}
+}
+@media(max-width:1000px){
+ .hero-polished{display:flex;flex-direction:column;align-items:center;height:auto;min-height:0;padding:42px 0 0;gap:0;margin-bottom:16px;background:#000}
+ .hero-polished .hero-desktop-intro{display:none}
+ .hero-polished .hardware-copy{position:relative;left:auto;top:auto;transform:none;order:0;width:calc(100% - 48px);max-width:580px;margin:0 auto;z-index:6}
+ .hero-polished .hardware-copy p{width:auto;max-width:34ch;margin:22px auto 0;color:#b6c3cc;font-size:1.0625rem;line-height:1.5}
+ .hero-polished .hardware-copy .hero-actions{margin:24px auto 0}
+ .hero-polished .hardware-scene{position:relative;inset:auto;order:1;width:100%;height:232px;aspect-ratio:auto;overflow:hidden;margin-top:8px;isolation:isolate;background:radial-gradient(ellipse at 50% 65%,#05385399,transparent 64%),#000}
+ .hero-polished .hardware-scene::after{z-index:4;background:linear-gradient(180deg,#000 0%,#0000 22%,#0000 80%,#000 100%)}
+ .hero-polished .hero-cad-field{inset:0;opacity:.8;max-width:780px;margin:auto}
+ .hero-polished .hero-cad-field svg{overflow:visible}
+ .hero-polished .hero-static-devices,.hero-polished .hardware-scene.is-ready .hero-static-devices{display:block;opacity:1;visibility:visible;inset:0;width:min(100%,680px);margin-inline:auto}
+ .hero-polished .hero-static-device--core{--device-x:18%;--device-y:50%;--device-width:112px;--device-height:112px;--device-angle:-12deg}
+ .hero-polished .hero-static-device--pi{--device-x:46%;--device-y:69%;--device-width:144px;--device-height:109px;--device-angle:-12deg}
+ .hero-polished .hero-static-device--stick{--device-x:81%;--device-y:52%;--device-width:94px;--device-height:94px;--device-angle:13deg}
+ .hero-polished .hero-static-device--atom{--device-x:61%;--device-y:31%;--device-width:70px;--device-height:70px;--device-angle:8deg}
+ .hero-polished .hardware-scene canvas,.hero-polished .hero-device{display:none!important}
+}
+@media(max-width:720px){
+ .hero-polished{padding-top:28px;margin-bottom:6px}
+ .hero-polished .hardware-copy{width:calc(100% - 40px);max-width:430px}
+ .hero-polished .hardware-copy h1{font-size:clamp(2rem,11.5vw,3.45rem);line-height:1;letter-spacing:-.045em}
+ .hero-polished .hardware-copy p{max-width:30ch;margin-top:18px;font-size:1rem;line-height:1.5}
+ .hero-polished .hardware-copy .hero-actions{max-width:320px;width:100%;margin-top:22px;gap:4px}
+ .hero-polished .hardware-scene{height:190px;margin-top:2px}
+ .hero-polished .hero-static-device--core{--device-x:16%;--device-y:49%;--device-width:clamp(68px,22vw,104px);--device-height:clamp(68px,22vw,104px)}
+ .hero-polished .hero-static-device--pi{--device-x:47%;--device-y:69%;--device-width:clamp(96px,29vw,135px);--device-height:clamp(72px,22vw,102px)}
+ .hero-polished .hero-static-device--stick{--device-x:83%;--device-y:53%;--device-width:clamp(60px,18vw,88px);--device-height:clamp(60px,18vw,88px)}
+ .hero-polished .hero-static-device--atom{--device-x:61%;--device-y:29%;--device-width:clamp(52px,15vw,66px);--device-height:clamp(52px,15vw,66px)}
+}
+@media(max-width:360px){
+ .hero-polished .hardware-copy{width:calc(100% - 32px)}
+ .hero-polished .hardware-copy p{max-width:28ch}
+ .hero-polished .hardware-scene{height:174px}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-polished *{scroll-behavior:auto}
+ .hero-polished .hero-cad-field,.hero-polished .hero-static-devices{transition:none;animation:none}
+}
