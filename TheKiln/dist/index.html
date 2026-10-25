@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Kiln: Automate Sales Flows & Save time</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700&display=swap" rel="stylesheet">
+<style>
+/* === RESET === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; color: #000; background: #fff; overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; height: auto; }
+ul { list-style: none; }
+
+/* === HEADER === */
+.header {
+  position: sticky; top: 0; z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 0 40px;
+  height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%;
+}
+.header-logo { display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 15px; white-space: nowrap; }
+.header-logo img { height: 20px; width: auto; }
+.header-logo .logo-text { font-size: 14px; font-weight: 700; }
+.header-logo .logo-sub { color: #999; font-weight: 400; font-size: 13px; margin-left: 4px; }
+.header-nav { display: flex; gap: 28px; }
+.header-nav a { font-size: 14px; font-weight: 500; color: #333; transition: color .2s; }
+.header-nav a:hover { color: #000; }
+.btn-talk {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #111; color: #fff;
+  padding: 10px 20px; border-radius: 100px;
+  font-size: 14px; font-weight: 500;
+  border: none; cursor: pointer; transition: opacity .2s;
+  white-space: nowrap;
+}
+.btn-talk:hover { opacity: .85; }
+
+/* === ANNOUNCEMENT BAR === */
+.announcement {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 14px 20px;
+  background: #fff;
+  flex-wrap: wrap;
+}
+.announcement .badge {
+  background: #111; color: #fff;
+  padding: 1px 8px; border-radius: 100px;
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px;
+}
+.announcement .text { font-size: 14px; font-weight: 500; color: #333; }
+.announcement .learn-more {
+  background: #015870; color: #fff;
+  padding: 3px 12px; border-radius: 100px;
+  font-size: 12px; font-weight: 600;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.announcement .learn-more img { width: 14px; height: 14px; }
+
+/* === HERO === */
+.hero {
+  padding: 60px 40px 50px;
+  text-align: center;
+  max-width: 1200px; margin: 0 auto;
+  position: relative;
+}
+.hero-content { position: relative; max-width: 800px; margin: 0 auto; }
+.hero-decorative-left {
+  position: absolute; left: -120px; top: 0;
+  width: 200px; pointer-events: none;
+}
+.hero-decorative-right {
+  position: absolute; right: -100px; top: -20px;
+  width: 160px; pointer-events: none;
+}
+.hero h1 {
+  font-size: 64px; font-weight: 700; line-height: 1;
+  letter-spacing: -3.2px;
+  margin-bottom: 20px;
+}
+.hero .hero-sub {
+  font-size: 16px; font-weight: 400; color: #666; line-height: 1.6;
+  max-width: 560px; margin: 0 auto 28px;
+}
+
+/* === SECTION LABEL === */
+.section-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 2.5px; color: #888; margin-bottom: 12px;
+}
+
+/* === SECTION HEADING === */
+.section-heading {
+  font-size: 48px; font-weight: 700; line-height: 1.05;
+  letter-spacing: -2.4px;
+}
+.section-heading em { font-style: italic; }
+
+/* === LOGO GRID === */
+.logo-grid-section {
+  padding: 50px 80px;
+  max-width: 1200px; margin: 0 auto;
+}
+.logo-grid {
+  display: flex; flex-wrap: wrap;
+  justify-content: center; align-items: center;
+  gap: 20px 40px;
+}
+.logo-grid img {
+  height: 28px; width: auto;
+  opacity: .65;
+  transition: opacity .3s;
+}
+.logo-grid img:hover { opacity: 1; }
+
+/* === SERVICES === */
+.services-section {
+  padding: 80px 80px;
+  max-width: 1200px; margin: 0 auto;
+  text-align: center;
+}
+.services-section .section-heading { margin: 0 auto 12px; max-width: 600px; }
+.services-sub { font-size: 16px; color: #666; margin-bottom: 48px; max-width: 500px; margin-left: auto; margin-right: auto; }
+.services-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 20px; text-align: left;
+}
+.service-card {
+  background: #f5f5f0; border-radius: 16px;
+  padding: 28px; display: flex; flex-direction: column;
+}
+.service-card-img {
+  width: 100%; height: 180px;
+  object-fit: contain; margin-bottom: 20px;
+}
+.service-card h3 {
+  font-size: 20px; font-weight: 700; line-height: 1.2;
+  letter-spacing: -0.8px; margin-bottom: 10px;
+}
+.service-card p {
+  font-size: 14px; color: #666; line-height: 1.6; margin-bottom: 16px; flex: 1;
+}
+.service-card ul { margin-bottom: 20px; }
+.service-card li {
+  font-size: 13px; color: #444; padding: 3px 0 3px 14px; position: relative;
+}
+.service-card li::before {
+  content: '•'; position: absolute; left: 0; color: #999;
+}
+.btn-outline {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  background: transparent; color: #000;
+  padding: 10px 20px; border-radius: 100px;
+  font-size: 13px; font-weight: 600;
+  border: 1.5px solid #ccc; cursor: pointer; transition: all .2s;
+  width: 100%;
+}
+.btn-outline:hover { border-color: #000; background: #fff; }
+
+/* === HOW WE WORK === */
+.how-section {
+  padding: 80px 80px;
+  max-width: 1200px; margin: 0 auto;
+  text-align: center;
+}
+.how-section .section-heading { margin: 0 auto 10px; max-width: 600px; }
+.how-sub { font-size: 16px; color: #666; margin-bottom: 48px; max-width: 500px; margin-left: auto; margin-right: auto; }
+.how-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.how-card {
+  background: #f5f5f0; border-radius: 16px;
+  padding: 36px 28px; text-align: left;
+  transform: rotate(-2deg);
+  transition: transform .3s;
+}
+.how-card:nth-child(2) { transform: rotate(1.5deg); }
+.how-card:nth-child(3) { transform: rotate(-1deg); }
+.how-card:hover { transform: rotate(0); }
+.how-card-icon { width: 48px; height: 48px; margin-bottom: 16px; }
+.how-card h3 {
+  font-size: 18px; font-weight: 700; letter-spacing: -0.6px; margin-bottom: 10px;
+}
+.how-card p { font-size: 14px; color: #666; line-height: 1.6; }
+
+/* === CASE STUDIES === */
+.casestudies-section {
+  padding: 80px 80px;
+  max-width: 1200px; margin: 0 auto;
+  text-align: center;
+}
+.casestudies-section .section-heading { margin: 0 auto 48px; }
+.case-card {
+  background: #f5f5f0; border-radius: 16px;
+  padding: 40px;
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+.case-left {}
+.case-right {
+  display: flex; flex-direction: column; justify-content: center;
+}
+.case-card-logo { height: 28px; margin-bottom: 16px; }
+.case-card h3 {
+  font-size: 22px; font-weight: 700; letter-spacing: -0.8px;
+  line-height: 1.3; margin-bottom: 20px;
+}
+.read-story {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 600; color: #000;
+  background: #000; color: #fff;
+  padding: 10px 20px; border-radius: 100px;
+}
+.read-story img { width: 14px; height: 14px; filter: invert(1); }
+.quote-text {
+  font-size: 14px; color: #444; line-height: 1.6;
+  font-style: italic; margin-bottom: 16px;
+}
+.quote-author {
+  display: flex; align-items: center; gap: 10px;
+}
+.quote-avatar { width: 36px; height: 36px; border-radius: 50%; object-fit: cover; }
+.quote-name { font-size: 13px; font-weight: 600; }
+.quote-title { font-size: 12px; color: #666; }
+
+/* === SERVICES DETAIL (TIMELINE) === */
+.detail-section {
+  padding: 80px 80px;
+  max-width: 1100px; margin: 0 auto;
+  text-align: center;
+}
+.detail-section .section-heading { margin: 0 auto 10px; }
+.detail-sub { font-size: 16px; color: #666; margin-bottom: 60px; }
+.timeline { position: relative; }
+.timeline::before {
+  content: ''; position: absolute;
+  left: 50%; top: 0; bottom: 0;
+  width: 2px; background: #e5e5e0;
+  transform: translateX(-50%);
+}
+.timeline-item {
+  display: flex; align-items: center;
+  margin-bottom: 48px; position: relative;
+}
+.timeline-item:nth-child(odd) { flex-direction: row; }
+.timeline-item:nth-child(even) { flex-direction: row-reverse; }
+.timeline-content {
+  width: 44%; text-align: left;
+}
+.timeline-content h3 {
+  font-size: 20px; font-weight: 700; letter-spacing: -0.8px; margin-bottom: 8px;
+}
+.timeline-content p { font-size: 14px; color: #666; line-height: 1.6; }
+.timeline-img {
+  width: 44%;
+  display: flex; justify-content: center;
+}
+.timeline-img img { max-width: 180px; max-height: 180px; object-fit: contain; }
+.timeline-separator {
+  position: absolute; left: 50%; transform: translateX(-50%);
+  width: 32px; height: 32px; background: #fff;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  z-index: 2;
+}
+.timeline-separator img { width: 24px; height: 24px; }
+
+/* === TESTIMONIALS === */
+.testimonials-section {
+  padding: 80px 40px;
+  max-width: 100%; margin: 0 auto;
+  text-align: center;
+  overflow: hidden;
+}
+.testimonials-section .section-heading { margin: 0 auto 48px; }
+.testimonials-track {
+  display: flex; gap: 16px;
+  overflow-x: auto; padding: 0 40px 20px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.testimonials-track::-webkit-scrollbar { height: 4px; }
+.testimonials-track::-webkit-scrollbar-thumb { background: #ccc; border-radius: 3px; }
+.testimonial-card {
+  flex: 0 0 300px; scroll-snap-align: start;
+  background: #f5f5f0; border-radius: 16px;
+  padding: 28px; text-align: left;
+}
+.testimonial-card .quote-icon { width: 24px; height: 24px; margin-bottom: 12px; opacity: .4; }
+.testimonial-card .testimonial-text {
+  font-size: 14px; color: #333; line-height: 1.6; margin-bottom: 20px;
+  min-height: 80px;
+}
+.testimonial-author {
+  display: flex; align-items: center; gap: 10px;
+}
+.testimonial-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+.testimonial-name { font-size: 13px; font-weight: 600; }
+.testimonial-title { font-size: 12px; color: #666; }
+
+/* === CTA === */
+.cta-section {
+  background: #1a1a1a; color: #fff;
+  padding: 100px 40px;
+  text-align: center;
+}
+.cta-section .section-label { color: #888; }
+.cta-section .section-heading { color: #fff; margin: 0 auto 16px; max-width: 600px; }
+.cta-sub { font-size: 16px; color: #999; margin-bottom: 36px; }
+.btn-talk-white {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #fff; color: #000;
+  padding: 12px 24px; border-radius: 100px;
+  font-size: 14px; font-weight: 600;
+  border: none; cursor: pointer; transition: opacity .2s;
+}
+.btn-talk-white:hover { opacity: .9; }
+
+/* === FOOTER === */
+.footer {
+  background: #1a1a1a; color: #fff;
+  padding: 48px 40px 36px;
+  border-top: 1px solid #333;
+}
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+.footer-brand p { font-size: 13px; color: #888; line-height: 1.6; margin-top: 12px; max-width: 320px; }
+.footer-brand img { height: 32px; }
+.footer-col h4 {
+  font-size: 12px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 1.5px; margin-bottom: 14px; color: #888;
+}
+.footer-col a {
+  display: block; font-size: 14px; color: #bbb;
+  padding: 3px 0; transition: color .2s;
+}
+.footer-col a:hover { color: #fff; }
+
+/* === MOBILE RESPONSIVE === */
+@media (max-width: 809px) {
+  .header { padding: 0 16px; height: 52px; }
+  .header-nav { display: none; }
+  .header-logo .logo-sub { display: none; }
+  .btn-talk { padding: 8px 16px; font-size: 13px; }
+
+  .announcement { padding: 10px 16px; gap: 6px; }
+  .announcement .text { font-size: 12px; }
+
+  .hero { padding: 40px 20px 30px; }
+  .hero h1 { font-size: 36px; letter-spacing: -1.8px; }
+  .hero .hero-sub { font-size: 14px; }
+  .hero-decorative-left { width: 80px; left: -10px; top: 10px; }
+  .hero-decorative-right { width: 60px; right: -5px; top: 0; }
+
+  .logo-grid-section { padding: 30px 20px; }
+  .logo-grid { gap: 12px 20px; }
+  .logo-grid img { height: 20px; }
+
+  .services-section, .how-section, .casestudies-section,
+  .detail-section, .testimonials-section { padding: 50px 20px; }
+
+  .section-heading { font-size: 32px; letter-spacing: -1.6px; }
+
+  .services-grid, .how-grid { grid-template-columns: 1fr; }
+
+  .how-card, .how-card:nth-child(2), .how-card:nth-child(3) { transform: rotate(0) !important; }
+
+  .case-card { grid-template-columns: 1fr; gap: 24px; padding: 28px; }
+
+  .timeline::before { left: 16px; }
+  .timeline-item, .timeline-item:nth-child(even) {
+    flex-direction: column; align-items: flex-start;
+    padding-left: 44px;
+  }
+  .timeline-content, .timeline-img { width: 100%; }
+  .timeline-img { justify-content: flex-start; margin-top: 16px; }
+  .timeline-img img { max-width: 120px; }
+  .timeline-separator { left: 16px; transform: translateX(-50%); }
+
+  .testimonials-track { padding: 0 20px 16px; }
+  .testimonial-card { flex: 0 0 260px; padding: 24px; }
+
+  .cta-section { padding: 60px 20px; }
+  .cta-section .section-heading { font-size: 28px; }
+
+  .footer { padding: 36px 20px 28px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+}
+</style>
+</head>
+<body>
+
+<!-- === HEADER === -->
+<header class="header">
+  <div class="header-logo">
+    <img src="assets/Hw0YffCzJiSNh6wcImEL86SRHJY.png" alt="The Kiln">
+    <span class="logo-text">The Kiln</span>
+    <span class="logo-sub">a 2X company</span>
+  </div>
+  <nav class="header-nav">
+    <a href="#">Case Studies</a>
+    <a href="#">Recruiting</a>
+    <a href="#">Newsletter</a>
+  </nav>
+  <a href="#" class="btn-talk">👋 Talk with us</a>
+</header>
+
+<!-- === ANNOUNCEMENT BAR === -->
+<div class="announcement">
+  <span class="badge">NEW</span>
+  <span class="text">The Kiln has been acquired by 2X!</span>
+  <a href="#" class="learn-more">
+    <img src="assets/8XWIXJtmXO7STedZbwi8rvVprig.png" alt="">
+    Learn More
+  </a>
+</div>
+
+<!-- === HERO === -->
+<section class="hero">
+  <div class="hero-content">
+    <img src="assets/y6qm7leGDMvqlDRbxQyrICgk.png" alt="" class="hero-decorative-left">
+    <img src="assets/mRF6pWmSgI1LGVPfA73Y7os7NM0.png" alt="" class="hero-decorative-right">
+    <h1>Expert GTM Engineers, at your fingertips.</h1>
+    <p class="hero-sub">The Kiln is a team of automation experts, data scientists, and early Clay employees that help build inbound, outbound, and RevOps systems that scale.</p>
+    <a href="#" class="btn-talk">👋 Talk with us</a>
+  </div>
+</section>
+
+<!-- === LOGO GRID === -->
+<section class="logo-grid-section">
+  <div class="logo-grid">
+    <img src="assets/EQpWJKXD76ioY9mCc483CpN1rA.png" alt="Notion">
+    <img src="assets/ejdkP2HEFBbZtom1fRbJdBibV0.png" alt="TwelveLabs">
+    <img src="assets/EjIzKqp6rfyiJenutQ6ZbijVmqA.png" alt="ReDocs">
+    <img src="assets/EFgX6QH3k2JRTonnRiBFl1Qf8.png" alt="Cognition">
+    <img src="assets/oO6pita4OIVpqMAOxlLnAZsgmg0.png" alt="Antimetal">
+    <img src="assets/NqSK1Xe0TH1Hkj4zCtWwzPfUNU.png" alt="LendingOne">
+    <img src="assets/UvBTHzikaXxf1C46qhe7sZulmM.png" alt="spot.ai">
+    <img src="assets/2zvdXDuJGfQihZpsJh1AZj50dDI.png" alt="loxo">
+    <img src="assets/ur0lauSdG7o2Xfe1hHpucPF6oQ.png" alt="Aligned">
+    <img src="assets/UG8NPOGerI3MSqhahHv9Sa0qxhI.png" alt="Hologram">
+    <img src="assets/UZezjZuM09AuSwmpFt6gWK7HuPY.png" alt="Integral">
+    <img src="assets/TkvwPqvH8hBQcmZ3BTDCxRyM.png" alt="Density">
+    <img src="assets/VLUGtQd8TtySXhal2na6rw34c.png" alt="Materialize">
+    <img src="assets/aEad00d2f23mDNRZvFS3G1sZJM.png" alt="captions">
+    <img src="assets/B6sOUBupp4W2OIcVWklweUtq9Rs.png" alt="daxko">
+    <img src="assets/DTIVD7w4DxIswu0KS9EWiG0SNs.png" alt="Client">
+    <img src="assets/liDX0SjpGaFEXWzliT8cgPoXdtc.png" alt="Client">
+    <img src="assets/b5Hc3o31cgiT302V8mNYXupYy4k.png" alt="Client">
+    <img src="assets/komkThFe3k2Ge41KKGo4FelozW4.png" alt="BUNKER">
+    <img src="assets/QpRvZh5NKULL21rg4s2SQd6SBeY.png" alt="RAFAY">
+    <img src="assets/gtYHmzWVg3Bzr8reNtoGPUqL4.png" alt="NEWSTORE">
+    <img src="assets/YwxsDVlByUh5KQpVpMbtwj9ordY.png" alt="Sendoso">
+    <img src="assets/H1VcTJY6E5L0RZaBW2xK49EL2U.png" alt="T-ROC">
+    <img src="assets/VQHlT7vi6qYWDAXSq0Ti8GgPQ.png" alt="Clientell">
+  </div>
+</section>
+
+<!-- === SERVICES === -->
+<section class="services-section">
+  <p class="section-label">SERVICES</p>
+  <h2 class="section-heading">All-in-one GTM services that <em>grow</em> with you</h2>
+  <p class="services-sub">From strategy to execution, we equip your team with the systems and expertise to move faster and scale smarter.</p>
+  <div class="services-grid">
+    <!-- Sales/GTM -->
+    <div class="service-card">
+      <img src="assets/4pHKlbvN5zu7RKMddq5MAbB5kI.png" alt="Sales & GTM" class="service-card-img">
+      <h3>Sales/GTM</h3>
+      <p>Our experts improve GTM efficiency through the sales funnel. We recommend best-in-class tools and build optimized GTM tech stacks.</p>
+      <ul>
+        <li>Clay table architecture</li>
+        <li>Outbound sequence design</li>
+        <li>Lead scoring &amp; enrichment</li>
+        <li>CRM integration</li>
+      </ul>
+      <a href="#" class="btn-outline">Talk with us</a>
+    </div>
+    <!-- Marketing -->
+    <div class="service-card">
+      <img src="assets/tXXQQBAJgd9dNConxgXnA3a5ifw.png" alt="Marketing & Growth" class="service-card-img">
+      <h3>Marketing/Growth</h3>
+      <p>We transform your marketing data into growth data for automated next steps, turning marketing activities into impactful sales data.</p>
+      <ul>
+        <li>Account-based marketing</li>
+        <li>Content personalization</li>
+        <li>Campaign automation</li>
+        <li>Analytics &amp; attribution</li>
+      </ul>
+      <a href="#" class="btn-outline">Talk with us</a>
+    </div>
+    <!-- RevOps -->
+    <div class="service-card">
+      <img src="assets/xE056aX7YuIChK3qjwj5JfLTSf0.png" alt="RevOps" class="service-card-img">
+      <h3>RevOps</h3>
+      <p>We help businesses transform their CRMs, strong CRMs are essential for success. We unlock your organization's sales operations.</p>
+      <ul>
+        <li>Tech stack optimization</li>
+        <li>Process automation</li>
+        <li>Data hygiene &amp; governance</li>
+        <li>Reporting &amp; dashboards</li>
+      </ul>
+      <a href="#" class="btn-outline">Talk with us</a>
+    </div>
+  </div>
+</section>
+
+<!-- === HOW WE WORK === -->
+<section class="how-section">
+  <p class="section-label">HOW WE WORK</p>
+  <h2 class="section-heading">Custom engineering for <em>unique</em> challenges</h2>
+  <p class="how-sub">We combine deep technical expertise with focused, bespoke execution — deploying our GTM engineers to a select few clients to tackle complex, custom projects.</p>
+  <div class="how-grid">
+    <div class="how-card">
+      <img src="assets/v3NlRVDjuoIfT3lMfcCLAERzg54.png" alt="" class="how-card-icon">
+      <h3>We invest deep time, not just hours</h3>
+      <p>Unlike traditional agencies, The Kiln GTM engineers only work on a few projects — spending time on your projects.</p>
+    </div>
+    <div class="how-card">
+      <img src="assets/EClIQ2707mAIbJBiMzlsuk9LE.png" alt="" class="how-card-icon">
+      <h3>Strategy that ships real solutions</h3>
+      <p>We're great at strategy, our team has actually helped in building out and actually shipped products focused on shipping.</p>
+    </div>
+    <div class="how-card">
+      <img src="assets/Dkw8sKYVk8seWswDyxHytQHE.png" alt="" class="how-card-icon">
+      <h3>Custom is our comfort zone</h3>
+      <p>We love complex, bespoke projects. We thrive on building custom solutions that nobody else could complete.</p>
+    </div>
+  </div>
+</section>
+
+<!-- === CASE STUDIES === -->
+<section class="casestudies-section">
+  <p class="section-label">CASE STUDIES</p>
+  <h2 class="section-heading">Trusted by <em>leading</em> companies</h2>
+  <p style="font-size:16px;color:#666;margin-bottom:48px;max-width:500px;margin-left:auto;margin-right:auto;">Real projects. Real impact. Explore how top companies partner with us to execute smarter and grow quicker.</p>
+
+  <!-- Azuga -->
+  <div class="case-card">
+    <div class="case-left">
+      <img src="assets/Vyjwm8PqoSMUn7bnbRsIULZRMTc.png" alt="Azuga" class="case-card-logo">
+      <h3>How Azuga Went From 640+ Hours of Manual Work Per Week to a Scalable Data Engine</h3>
+      <a href="#" class="read-story">
+        Read story
+        <img src="assets/W842iaurnoQg11E9EXsAgVn0Hw.png" alt="">
+      </a>
+    </div>
+    <div class="case-right">
+      <p class="quote-text">"This was supposed to be a basic automation project — what we got was a transformative partnership."</p>
+      <div class="quote-author">
+        <img src="assets/CQfHCV5lfzd8OP51p5zvM3f735o.jpeg" alt="Harish" class="quote-avatar">
+        <div>
+          <div class="quote-name">Harish Sitaram</div>
+          <div class="quote-title">VP of Sales, Azuga</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sendoso -->
+  <div class="case-card">
+    <div class="case-left">
+      <img src="assets/Y3iOPauG4SGuTYVNx5U02wyIE.png" alt="Sendoso" class="case-card-logo">
+      <h3>How Sendoso Created an AI-Forward, Scalable GTM Motion with The Kiln</h3>
+      <a href="#" class="read-story">
+        Read story
+        <img src="assets/W842iaurnoQg11E9EXsAgVn0Hw.png" alt="">
+      </a>
+    </div>
+    <div class="case-right">
+      <p class="quote-text">"The breadth of a dream. The Kiln built the infrastructure and analytics framework to run GTM engineering a completely new stage."</p>
+      <div class="quote-author">
+        <img src="assets/2jP51EpjMWaPOxDV2J7jLLL7XU.jpeg" alt="Katie Penner" class="quote-avatar">
+        <div>
+          <div class="quote-name">Katie Penner</div>
+          <div class="quote-title">Head of Growth, Sendoso</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p style="font-size:13px;color:#888;margin-top:16px;">More case studies →</p>
+</section>
+
+<!-- === SERVICES DETAIL (TIMELINE) === -->
+<section class="detail-section">
+  <p class="section-label">SERVICES</p>
+  <h2 class="section-heading">A full-suite of services to unlock your <em>growth</em></h2>
+  <p class="detail-sub">Leverage new sales tech the smart way.</p>
+  <div class="timeline">
+    <!-- Item 1 -->
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h3>GTM Engineering</h3>
+        <p>Build and optimize your entire go-to-market engine with custom-built Clay workflows, outbound sequences, and enrichment pipelines.</p>
+      </div>
+      <div class="timeline-separator">
+        <img src="assets/Hw0YffCzJiSNh6wcImEL86SRHJY.png" alt="">
+      </div>
+      <div class="timeline-img">
+        <img src="assets/QDxWjAjuuBKtxwRqerxGI4OIcM.png" alt="Gears">
+      </div>
+    </div>
+    <!-- Item 2 -->
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h3>Data Hygiene</h3>
+        <p>Clean, deduplicate, and standardize your CRM data. We ensure your database is accurate and actionable.</p>
+      </div>
+      <div class="timeline-separator">
+        <img src="assets/Hw0YffCzJiSNh6wcImEL86SRHJY.png" alt="">
+      </div>
+      <div class="timeline-img">
+        <img src="assets/my8o3MW6KcC2z4FMJgcfoUYQI1M.png" alt="Cleaning">
+      </div>
+    </div>
+    <!-- Item 3 -->
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h3>Performance Marketing</h3>
+        <p>Drive qualified pipeline with high-performing campaigns across paid, organic, and account-based channels.</p>
+      </div>
+      <div class="timeline-separator">
+        <img src="assets/Hw0YffCzJiSNh6wcImEL86SRHJY.png" alt="">
+      </div>
+      <div class="timeline-img">
+        <img src="assets/SuqHjchWgpryZCf7NKuGonRV34.png" alt="Stars & Trophies">
+      </div>
+    </div>
+    <!-- Item 4 -->
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h3>Tool Implementation</h3>
+        <p>Expert setup and configuration of the best GTM tools — Clay, Salesforce, HubSpot, Outreach, and more.</p>
+      </div>
+      <div class="timeline-separator">
+        <img src="assets/Hw0YffCzJiSNh6wcImEL86SRHJY.png" alt="">
+      </div>
+      <div class="timeline-img">
+        <img src="assets/W4TOUYglKMU3XgEE3XLfZ0X5LaQ.png" alt="Tools">
+      </div>
+    </div>
+    <!-- Item 5 -->
+    <div class="timeline-item">
+      <div class="timeline-content">
+        <h3>Research &amp; Insights</h3>
+        <p>Deep market and account research to power your prospecting and help your reps land bigger deals.</p>
+      </div>
+      <div class="timeline-separator">
+        <img src="assets/Hw0YffCzJiSNh6wcImEL86SRHJY.png" alt="">
+      </div>
+      <div class="timeline-img">
+        <img src="assets/52A6en3V1ymt8dq5MRHBWA5L4I.png" alt="Magnifying Glass">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === TESTIMONIALS === -->
+<section class="testimonials-section">
+  <p class="section-label">TESTIMONIALS</p>
+  <h2 class="section-heading">Leading GTM teams love The Kiln</h2>
+  <div class="testimonials-track">
+    <div class="testimonial-card">
+      <img src="assets/Ne1Ri5rzIZCW6zNiIv1B4JuaKEA.png" alt="" class="quote-icon">
+      <p class="testimonial-text">"The Kiln's team moved incredibly fast. Within weeks, we had a fully automated outbound system that was booking meetings on autopilot."</p>
+      <div class="testimonial-author">
+        <img src="assets/fs2YTluJ290XBNvBQTTJlEBdjs0.jpeg" alt="" class="testimonial-avatar">
+        <div>
+          <div class="testimonial-name">Daniel K.</div>
+          <div class="testimonial-title">Head of Revenue Ops</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <img src="assets/Ne1Ri5rzIZCW6zNiIv1B4JuaKEA.png" alt="" class="quote-icon">
+      <p class="testimonial-text">"We tried building Clay workflows in-house for months. The Kiln came in and built something 10x better in a fraction of the time."</p>
+      <div class="testimonial-author">
+        <img src="assets/Hb3Fk2puxFqF8RySnFHQQJJjuCU.jpeg" alt="" class="testimonial-avatar">
+        <div>
+          <div class="testimonial-name">Sarah M.</div>
+          <div class="testimonial-title">VP of Growth</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <img src="assets/Ne1Ri5rzIZCW6zNiIv1B4JuaKEA.png" alt="" class="quote-icon">
+      <p class="testimonial-text">"Their deep expertise in Clay and GTM tooling is unmatched. They're not just implementers — they're strategic partners."</p>
+      <div class="testimonial-author">
+        <img src="assets/hYwpQrUuDglPpaE8njic6n9y0.png" alt="" class="testimonial-avatar">
+        <div>
+          <div class="testimonial-name">Michael R.</div>
+          <div class="testimonial-title">CEO</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <img src="assets/Ne1Ri5rzIZCW6zNiIv1B4JuaKEA.png" alt="" class="quote-icon">
+      <p class="testimonial-text">"Working with The Kiln was great — lived with real test and advice. They helped us with Clay and moved our inbound dollars 87% further."</p>
+      <div class="testimonial-author">
+        <img src="assets/kRiTonGZJYeiarcncT2epmnlSk0.png" alt="" class="testimonial-avatar">
+        <div>
+          <div class="testimonial-name">Taylor Bond</div>
+          <div class="testimonial-title">Director of Sales</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <img src="assets/Ne1Ri5rzIZCW6zNiIv1B4JuaKEA.png" alt="" class="quote-icon">
+      <p class="testimonial-text">"What impressed me most was how well they understood our business. Every solution was tailored to our specific challenges."</p>
+      <div class="testimonial-author">
+        <img src="assets/a4lqflbX5Zr94YFW3scgBl8lc.png" alt="" class="testimonial-avatar">
+        <div>
+          <div class="testimonial-name">Jessica T.</div>
+          <div class="testimonial-title">COO</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <img src="assets/Ne1Ri5rzIZCW6zNiIv1B4JuaKEA.png" alt="" class="quote-icon">
+      <p class="testimonial-text">"They bring the kiln to not just the structure, and systems thinking for entrepreneurs. It's like they built a new level of GTM Engineering a completely new stage."</p>
+      <div class="testimonial-author">
+        <img src="assets/SpHcwMsLRCZBFZ2ZGqptGwOYg0.png" alt="" class="testimonial-avatar">
+        <div>
+          <div class="testimonial-name">Liam Mulcahy</div>
+          <div class="testimonial-title">Founder &amp; CEO</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <img src="assets/Ne1Ri5rzIZCW6zNiIv1B4JuaKEA.png" alt="" class="quote-icon">
+      <p class="testimonial-text">"Their Clay mastery is on another level. They built automations that saved our team 20+ hours per week."</p>
+      <div class="testimonial-author">
+        <img src="assets/bwbIS3CuoWMiZ9EOiXNcez0YU.png" alt="" class="testimonial-avatar">
+        <div>
+          <div class="testimonial-name">Ryan H.</div>
+          <div class="testimonial-title">Head of Sales</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <img src="assets/Ne1Ri5rzIZCW6zNiIv1B4JuaKEA.png" alt="" class="quote-icon">
+      <p class="testimonial-text">"We've worked with many agencies, but The Kiln is in a league of their own when it comes to GTM engineering."</p>
+      <div class="testimonial-author">
+        <img src="assets/BneCgfyVVG987fwGSIcaPtbeAgw.jpeg" alt="" class="testimonial-avatar">
+        <div>
+          <div class="testimonial-name">Jen Calimerot</div>
+          <div class="testimonial-title">VP of Marketing</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <img src="assets/Ne1Ri5rzIZCW6zNiIv1B4JuaKEA.png" alt="" class="quote-icon">
+      <p class="testimonial-text">"From strategy to execution, The Kiln delivered beyond our expectations. A true extension of our team."</p>
+      <div class="testimonial-author">
+        <img src="assets/PhZStCLdggw2WpNbSai6FBqiw.jpeg" alt="" class="testimonial-avatar">
+        <div>
+          <div class="testimonial-name">David W.</div>
+          <div class="testimonial-title">CRO</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <img src="assets/Ne1Ri5rzIZCW6zNiIv1B4JuaKEA.png" alt="" class="quote-icon">
+      <p class="testimonial-text">"The best investment we made this year. Our outbound reply rate went from 2% to 12% thanks to The Kiln."</p>
+      <div class="testimonial-author">
+        <img src="assets/mhvzYEcIOI1hOsPrUUKQucFSY4.jpeg" alt="" class="testimonial-avatar">
+        <div>
+          <div class="testimonial-name">Laura K.</div>
+          <div class="testimonial-title">Growth Lead</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <img src="assets/Ne1Ri5rzIZCW6zNiIv1B4JuaKEA.png" alt="" class="quote-icon">
+      <p class="testimonial-text">"Their process is incredibly smooth. They integrated with our team like they'd been working with us for years."</p>
+      <div class="testimonial-author">
+        <img src="assets/nJAKxip8CjZlGxAkGLqN3Q577E.png" alt="" class="testimonial-avatar">
+        <div>
+          <div class="testimonial-name">Mark B.</div>
+          <div class="testimonial-title">Sales Director</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <img src="assets/Ne1Ri5rzIZCW6zNiIv1B4JuaKEA.png" alt="" class="quote-icon">
+      <p class="testimonial-text">"The Kiln turned our messy CRM data into a clean, actionable database. Night and day difference."</p>
+      <div class="testimonial-author">
+        <img src="assets/NsUlCGHZ3osVupzQ8xoDPGgTDYY.jpeg" alt="" class="testimonial-avatar">
+        <div>
+          <div class="testimonial-name">Elena V.</div>
+          <div class="testimonial-title">RevOps Manager</div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonial-card">
+      <img src="assets/Ne1Ri5rzIZCW6zNiIv1B4JuaKEA.png" alt="" class="quote-icon">
+      <p class="testimonial-text">"If you're looking for GTM engineering experts who actually deliver, look no further than The Kiln."</p>
+      <div class="testimonial-author">
+        <img src="assets/yRs3Adu924hQOMwtCvCdl9qfc.png" alt="" class="testimonial-avatar">
+        <div>
+          <div class="testimonial-name">Tom P.</div>
+          <div class="testimonial-title">Head of Partnerships</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- === CTA === -->
+<section class="cta-section">
+  <p class="section-label">BOOK A DEMO</p>
+  <h2 class="section-heading">Get in touch today to level-up your processes</h2>
+  <p class="cta-sub">Partnered with leading go-to-market teams to automate outbound, create dashboards, and streamline operations.</p>
+  <a href="#" class="btn-talk-white">👋 Talk with us</a>
+</section>
+
+<!-- === FOOTER === -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/YLwP4kyyM1s6fcKAl00uLvuMhGg.png" alt="The Kiln">
+      <p>The Kiln is a team of GTM experts, data scientists, and former Clay employees that help the world's leading RevOps and growth teams scale their most creative ideas.</p>
+    </div>
+    <div class="footer-col">
+      <h4>About us</h4>
+      <a href="#">Home</a>
+      <a href="#">Case Studies</a>
+      <a href="#">Follow us on LinkedIn</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="#">Tutorials</a>
+      <a href="#">Tools</a>
+      <a href="#">Newsletter</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
