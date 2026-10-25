@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Learn to craft outbound that actually converts - The Kiln</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700&display=swap" rel="stylesheet">
+<style>
+/* === BASE RESET === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; color: #000; background: #fff; overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; height: auto; }
+ul { list-style: none; }
+
+.header {
+  position: sticky; top: 0; z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 0 40px;
+  height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%;
+}
+.header-logo { display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 15px; white-space: nowrap; }
+.header-logo img { height: 20px; width: auto; }
+.header-logo .logo-text { font-size: 14px; font-weight: 700; }
+.header-logo .logo-sub { color: #999; font-weight: 400; font-size: 13px; margin-left: 4px; }
+.header-nav { display: flex; gap: 28px; }
+.header-nav a { font-size: 14px; font-weight: 500; color: #333; transition: color .2s; }
+.header-nav a:hover { color: #000; }
+.btn-talk {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #111; color: #fff;
+  padding: 10px 20px; border-radius: 100px;
+  font-size: 14px; font-weight: 500;
+  border: none; cursor: pointer; transition: opacity .2s;
+  white-space: nowrap;
+}
+.btn-talk:hover { opacity: .85; }
+
+.announcement {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 14px 20px;
+  background: #fff;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #f0f0f0;
+}
+.announcement .badge {
+  background: #111; color: #fff;
+  padding: 1px 8px; border-radius: 100px;
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px;
+}
+.announcement .text { font-size: 14px; font-weight: 500; color: #333; }
+.announcement .learn-more {
+  background: #015870; color: #fff;
+  padding: 3px 12px; border-radius: 100px;
+  font-size: 12px; font-weight: 600;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.announcement .learn-more img { width: 14px; height: 14px; }
+
+.section-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 2.5px; color: #888; margin-bottom: 12px;
+}
+.section-heading {
+  font-size: 48px; font-weight: 700; line-height: 1.05;
+  letter-spacing: -2.4px;
+}
+.section-heading em { font-style: italic; }
+
+.read-story {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 600;
+  background: #000; color: #fff;
+  padding: 8px 18px; border-radius: 100px;
+  transition: opacity .2s;
+}
+.read-story:hover { opacity: .85; }
+.read-story img { width: 14px; height: 14px; filter: invert(1); }
+
+.cta-section {
+  background: #1a1a1a; color: #fff;
+  padding: 100px 40px;
+  text-align: center;
+}
+.cta-section .section-label { color: #888; }
+.cta-section .section-heading { color: #fff; margin: 0 auto 16px; max-width: 600px; }
+.cta-sub { font-size: 16px; color: #999; margin-bottom: 36px; }
+.btn-talk-white {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #fff; color: #000;
+  padding: 12px 24px; border-radius: 100px;
+  font-size: 14px; font-weight: 600;
+  border: none; cursor: pointer; transition: opacity .2s;
+}
+.btn-talk-white:hover { opacity: .9; }
+
+.footer {
+  background: #1a1a1a; color: #fff;
+  padding: 48px 40px 36px;
+  border-top: 1px solid #333;
+}
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+.footer-brand p { font-size: 13px; color: #888; line-height: 1.6; margin-top: 12px; max-width: 320px; }
+.footer-brand img { height: 32px; }
+.footer-col h4 {
+  font-size: 12px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 1.5px; margin-bottom: 14px; color: #888;
+}
+.footer-col a {
+  display: block; font-size: 14px; color: #bbb;
+  padding: 3px 0; transition: color .2s;
+}
+.footer-col a:hover { color: #fff; }
+
+@media (max-width: 809px) {
+  .header { padding: 0 16px; height: 52px; }
+  .header-nav { display: none; }
+  .header-logo .logo-sub { display: none; }
+  .btn-talk { padding: 8px 16px; font-size: 13px; }
+  .announcement { padding: 10px 16px; gap: 6px; }
+  .announcement .text { font-size: 12px; }
+  .section-heading { font-size: 32px; letter-spacing: -1.6px; }
+  .cta-section { padding: 60px 20px; }
+  .cta-section .section-heading { font-size: 28px; }
+  .footer { padding: 36px 20px 28px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+}
+
+
+.learn-hero {
+  padding: 80px 20px 40px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.learn-hero h1 {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -2.8px;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+.learn-hero p {
+  font-size: 16px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.learn-grid-section {
+  max-width: 1200px;
+  margin: 40px auto 100px;
+  padding: 0 20px;
+}
+.learn-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.learn-card {
+  background: #f5f5f0;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s, box-shadow .2s;
+}
+.learn-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+}
+.learn-card-top {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.learn-card-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.learn-play-icon {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  background: rgba(255,255,255,0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.learn-play-icon::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 7px 0 7px 12px;
+  border-color: transparent transparent transparent #111;
+  margin-left: 3px;
+}
+.learn-duration {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.learn-card-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.learn-tag {
+  display: inline-block;
+  background: #e5e5df;
+  color: #444;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  padding: 2px 8px;
+  border-radius: 100px;
+  align-self: flex-start;
+  margin-bottom: 12px;
+}
+.learn-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.35;
+  margin-bottom: 10px;
+  flex: 1;
+}
+.learn-card p.desc {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .learn-hero h1 { font-size: 34px; letter-spacing: -1.7px; }
+  .learn-grid { grid-template-columns: 1fr; }
+}
+
+</style>
+</head>
+<body>
+
+<header class="header">
+  <a href=".././" class="header-logo">
+    <img src="../assets/Hw0YffCzJiSNh6wcImEL86SRHJY.png" alt="The Kiln">
+    <span class="logo-text">The Kiln</span>
+    <span class="logo-sub">a 2X company</span>
+  </a>
+  <nav class="header-nav">
+    <a href="../case-studies/">Case Studies</a>
+    <a href="../recruiting/">Recruiting</a>
+    <a href="https://gtmcookbook.beehiiv.com/" target="_blank" rel="noopener">Newsletter</a>
+  </nav>
+  <a href="../contact/" class="btn-talk">👋 Talk with us</a>
+</header>
+
+<div class="announcement">
+  <span class="badge">NEW</span>
+  <span class="text">The Kiln has been acquired by 2X!</span>
+  <a href="https://www.globenewswire.com/news-release/2026/01/06/3213831/0/en/2X-Acquires-Leading-Clay-Partner-The-Kiln-Expands-Marketing-as-a-Service-to-Go-to-Market-Orchestration.html" target="_blank" rel="noopener" class="learn-more">
+    <img src="../assets/8XWIXJtmXO7STedZbwi8rvVprig.png" alt="">
+    Learn More
+  </a>
+</div>
+
+<main>
+  <section class="learn-hero">
+    <p class="section-label">FREE TUTORIALS & WEBINARS</p>
+    <h1>Learn to craft outbound that actually converts</h1>
+    <p>Master cold email copywriting, Clay table waterfall architecture, intent data signals, and scalable lead generation.</p>
+  </section>
+
+  <section class="learn-grid-section">
+    <div class="learn-grid">
+      
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">0:33</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>Zero to Outbound Hero Episode 8 : Wrapping Up</h3>
+          <p class="desc">Learn how to apply key insights for effective outbound campaigns in your next steps!</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">3:20</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Clay Tutorial</span>
+          <h3>Zero to Outbound Hero Episode 7 : Setting Up a Campaign</h3>
+          <p class="desc">Learn how to set up and run effective email campaigns using Smart Lead with Clay.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">8:10</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Clay Tutorial</span>
+          <h3>Zero to Outbound Hero Episode 6 : Enrichment and Personalization Overview</h3>
+          <p class="desc">Learn how to enrich data and personalize outreach at scale using Clay’s AI-driven tools.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">21:36</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>Zero to Outbound Hero Episode 5 : How to Write Effective Copy?</h3>
+          <p class="desc">Learn how to craft concise, compelling cold outbound emails that engage prospects and drive conversions.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">10:06</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>Zero to Outbound Hero Episode 4 : How to Find a Lead Source?</h3>
+          <p class="desc">Learn top lead sources for outbound campaigns, from LinkedIn to Google Maps and beyond.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">4:25</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>Zero to Outbound Hero Episode 3 : Which Channel You Should Choose For Your Outbound Initiative?</h3>
+          <p class="desc">Learn how to choose the best outreach channels—email, LinkedIn, Instagram, Twitter, or direct mail.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">4:49</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>Zero to Outbound Hero Episode 2 : What You Need To Run A Campaign?</h3>
+          <p class="desc">Learn how to launch effective outbound campaigns with key strategies for lead sourcing, messaging, and automation.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">1:52</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>Zero to Outbound Hero Episode 1 : Why Should You Do Outbound?</h3>
+          <p class="desc">Watch this to master cost-effective, scalable outbound campaigns and boost brand awareness with tailored outreach.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">11:11</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Clay Tutorial</span>
+          <h3>This AI Sales Trick Will 10x Your Outbound Sales Efficiency | Personalized Emails at Scale</h3>
+          <p class="desc">Learn how to leverage Clay to enhance your outbound sales efficiency through targeted email campaigns.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">12:48</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Clay Tutorial</span>
+          <h3>I Wrote 1000 Personalized Emails in 10 Minutes | AI Email Copywriting at Scale</h3>
+          <p class="desc">Watch this to learn how to write 1000 personalized emails in 10 minutes using automation.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">4:30</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>This Campaign Got Me a 43% Response Rate | Finding Local Sales Leads</h3>
+          <p class="desc">Learn how I secured clients with a 43% response rate using free tools and simple outreach.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">11:02</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>I Asked 500 Producers to Let Me Star in Their Movie</h3>
+          <p class="desc">Watch this to learn how to use Clay for personalized outreach and chase your dreams!</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">7:14</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Clay Tutorial</span>
+          <h3>Building a Money Generating Cold Email Campaign LIVE</h3>
+          <p class="desc">Learn how to automate and send 1,000+ personalized cold emails daily using Clay in minutes.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">10:19</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Clay Tutorial</span>
+          <h3>Streamlining Your Job Application Process with Clay</h3>
+          <p class="desc">Learn how to streamline your job applications using Clay’s LinkedIn and email integrations for outreach.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">7:48</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Clay Tutorial</span>
+          <h3>This Tool Will Change Sales Forever</h3>
+          <p class="desc">Learn how Claygent revolutionizes sales by automating research and delivering precise, data-driven insights.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">6:22</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Clay Tutorial</span>
+          <h3>How to Write the Best Cold Emails with AI</h3>
+          <p class="desc">Learn how to revolutionize cold emails using Clay's AI tool for seamless personalization and efficiency.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">7:59</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>How to Book 100 Sales Calls Every Month in 2024</h3>
+          <p class="desc">Learn how to book 100+ sales calls monthly using personalized email outreach and AI-driven tools.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">10:02</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Clay Tutorial</span>
+          <h3>How to Send 1,000+ Personalized Emails a Day on Autopilot</h3>
+          <p class="desc">Learn how to automate and send 1,000+ personalized cold emails daily using Clay!</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">6:48</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>I Emailed Influencers And 20 Responded</h3>
+          <p class="desc">Learn how to master influencer outreach with personalized strategies and effective tools for success!</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">5:19</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">GTM Strategy</span>
+          <h3>Find 1000s Of Companies' Data In Seconds!</h3>
+          <p class="desc">Learn how Claygent can revolutionize your data gathering and boost your lead generation!</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">9:12</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>How to write a killer cold email script (to blow up your business)</h3>
+          <p class="desc">Learn how to master cold emailing strategies that personalize outreach, address pain points, and convert.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">7:16</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>How to ACTUALLY Personalize Your Cold Emails</h3>
+          <p class="desc">Learn how to maximize cold email personalization for higher engagement and improved response rates!</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">7:45</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Clay Tutorial</span>
+          <h3>How to Personalize Cold Emails on Autopilot Using Instagram</h3>
+          <p class="desc">Learn how to personalize cold emails using Instagram data for more engaging outreach campaigns!</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">8:09</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>If I Were to Grow a Business in 2024, This Is What I'd Do</h3>
+          <p class="desc">Learn how to master cold email campaigns to grow your business with personalized outreach strategies!</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">5:31</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Clay Tutorial</span>
+          <h3>How to Scrape Data From Any Website</h3>
+          <p class="desc">Learn how to efficiently scrape and enrich data from any website using Clay's powerful tools!</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">5:14</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Clay Tutorial</span>
+          <h3>I Emailed 100 Celebrities. Here's Who Replied</h3>
+          <p class="desc">Watch this to discover how I emailed 100 LinkedIn influencers and gathered invaluable career advice.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">6:00</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>The Smartest Way to Get Clients in 2024</h3>
+          <p class="desc">Learn how to leverage Clay for personalized client acquisition using intent data and email outreach.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">4:26</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Clay Tutorial</span>
+          <h3>How to Scrape All of Your Target Audience's Data for Free</h3>
+          <p class="desc">Learn how to scrape and qualify your target audience data using Clay for free.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">7:22</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Clay Tutorial</span>
+          <h3>I Let AI Train Me For a Marathon</h3>
+          <p class="desc">Learn how I used AI to create a personalized ultra marathon training plan with automation.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">5:54</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>How I Write Cold-Emails That Actually Book calls</h3>
+          <p class="desc">Learn how to master cold email campaigns and boost reply rates with personalization and AI tools.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">7:05</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Clay Tutorial</span>
+          <h3>how to get b2b clients in your sleep (sales/business guide 2024)</h3>
+          <p class="desc">Learn how to automate B2B lead generation and boost outreach with personalized, AI-driven campaigns.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">5:13</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Clay Tutorial</span>
+          <h3>I Emailed 100 Famous Companies. Here's Who Replied</h3>
+          <p class="desc">Learn how to send personalized emails to fashion giants and get real responses in return.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">4:35</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Clay Tutorial</span>
+          <h3>How to Capture and Outreach to Website Visitors</h3>
+          <p class="desc">Learn how to leverage RB2B and Clay for effective website visitor outreach and lead generation.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">4:45</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">GTM Strategy</span>
+          <h3>The Only Lead Generation Video You'll Ever Need</h3>
+          <p class="desc">Learn how to master lead generation strategies and get quality leads.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">6:28</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">GTM Strategy</span>
+          <h3>My 20-Minute System To Book 100+ Calls On Autopilot</h3>
+          <p class="desc">Learn how to automate cold email outreach and book 100+ calls effortlessly!</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">3:30</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>How to Get a Client in The Next 5 Minutes</h3>
+          <p class="desc">Learn how to secure your next client with effective cold emailing in just five minutes!</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">5:55</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">GTM Strategy</span>
+          <h3>Sales Has Changed in 2024, Here's How to Win</h3>
+          <p class="desc">Learn how to master cold emailing and outreach strategies for successful sales today.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">9:02</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>How To Use Cold Email To ACTUALLY Get Clients (2024)</h3>
+          <p class="desc">Learn how to master cold emailing to attract new clients and grow your business.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">8:24</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Clay Tutorial</span>
+          <h3>How to Create a List of Any Contacts in 10 Minutes</h3>
+          <p class="desc">Learn how to streamline contact management, validate LinkedIn followers, and analyze website traffic.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">10:44</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>I Spent 1000+ Hours On This Lead Gen Strategy - Learn It in 11 Minutes</h3>
+          <p class="desc">Learn how to personalize and automate your lead generation strategy for maximum lead conversion.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">6:06</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">GTM Strategy</span>
+          <h3>3 Follow-Up Emails That Will 2x Your Conversion Rate</h3>
+          <p class="desc">Learn how to effectively structure follow-up emails for maximum engagement and conversion success.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">8:20</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>How to Make Every Lead Interested Using This Hack</h3>
+          <p class="desc">Learn how to harness intent signals to enhance your outbound sales strategies effectively.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">5:41</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">GTM Strategy</span>
+          <h3>Brutally Honest Advice for B2B Business Owners</h3>
+          <p class="desc">Learn how to effectively acquire and retain clients in the competitive B2B landscape.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">53:01</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Webinars</span>
+          <h3>Duplicate Your Favorite Customer | Clay + Ocean Webinar Live Recording</h3>
+          <p class="desc">Learn how to enhance customer acquisition strategies using lookalike audiences and data insights with Clay + Ocean.io.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">54:29</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Webinars</span>
+          <h3>Unlock Revenue from Signals: Converting Warm Prospects w/Clay + Sendspark + RB2B</h3>
+          <p class="desc">Learn how to leverage signals and personalized videos for higher outbound sales conversions.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">59:27</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Webinars</span>
+          <h3>LeadMagic x Clay Webinar | Featuring Jesse Ouellette and Patrick Spychalski</h3>
+          <p class="desc">Learn how LeadMagic and Clay transform lead generation with real-time data, enrichment, and outreach.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">1:02:12</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Webinars</span>
+          <h3>Creative Data Sources - Clay Experts Webinar | Feat. Fabian Herhold & Patrick Spychalski</h3>
+          <p class="desc">Learn how to unlock innovative data sources for effective outbound marketing strategies!</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">57:33</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Webinars</span>
+          <h3>10x LinkedIn Outreach | HeyReach x Clay Webinar</h3>
+          <p class="desc">Learn how to enhance your LinkedIn outreach with HeyReach and Clay for effective lead generation.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">47:15</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Webinars</span>
+          <h3>Precision Prospecting: How Oyster Scales with Madkudu and Clay</h3>
+          <p class="desc">Learn effective precision prospecting techniques to enhance your sales efficiency and lead quality.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">7:47</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">GTM Strategy</span>
+          <h3>The BEST B2B Lead Generation Tutorial in 2024</h3>
+          <p class="desc">Learn how to boost B2B lead generation in 2024 with top strategies, tools, and personalization.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">5:44</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>5 Email Marketing Secrets That Will Generate You More Leads</h3>
+          <p class="desc">Learn how to maximize your email marketing potential by using segmentation and crafting compelling offers."</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">7:26</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>7 Easy Ways To TRANSFORM Your Cold Email Campaigns</h3>
+          <p class="desc">Learn how cold email tools, testing, and follow-up strategies can enhance campaign effectiveness.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">4:52</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">GTM Strategy</span>
+          <h3>The Only B2B Marketing Strategy You Will EVER Need</h3>
+          <p class="desc">Discover top tools, personalized cold emails, and outreach strategies to optimize your B2B marketing.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">52:28</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Webinars</span>
+          <h3>Modern Day Sales Techstack: Tools to Book More Meetings in 2024 | ft. Calendly, Sendspark, & Clay</h3>
+          <p class="desc">Unlock the best sales tools and strategies of 2024 to boost your outreach and close more deals.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">7:59</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>The Easiest Way To Get B2B Clients In 2024</h3>
+          <p class="desc">Learn how to simplify B2B lead generation by integrating data enrichment, AI tools, and external technology connections.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">5:55</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>An Agency Would Charge You $10k For This Lead Gen System</h3>
+          <p class="desc">Learn how Clay simplifies B2B lead generation in 2024, automating prospecting, enriching data, and enhancing cold email strategies for sales teams.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">17:04</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">GTM Strategy</span>
+          <h3>10 Creative Personalizations to Use in Email Campaigns | AI Prospecting | Clay</h3>
+          <p class="desc">Watch this to learn 10 creative ways to personalize your cold email campaigns and boost engagement!</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">3:40</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>Any Beginner Can Grow Their Business Using This Lead Gen Strategy</h3>
+          <p class="desc">Learn how to grow your business using this simple, effective lead generation strategy!</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">6:06</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>I Tested Every Cold Email Script so You Don't Have To</h3>
+          <p class="desc">Watch this to master cold outreach with proven email strategies, templates, and best practices!</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">4:25</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>10 AI Tools That Every Business NEEDS in 2024</h3>
+          <p class="desc">Learn how to supercharge your outbound sales with 10 essential AI tools for 2024!</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">4:59</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>How to Make Lead Magnets That Generate INFINITE Leads</h3>
+          <p class="desc">Learn how to generate endless leads with powerful lead magnets that convert!</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">4:41</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>How to Book 3 Sales Calls in 1 Day if Your Calendar is Dry</h3>
+          <p class="desc">Learn how to book 3 sales meetings a day with proven cold outreach strategies.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">5:48</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>How to Scrape Leads That You KNOW Will Be Interested</h3>
+          <p class="desc">Learn how to scrape and generate qualified leads efficiently with expert strategies.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">10:54</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>The BEST Sales Tutorial For Businesses in 2024</h3>
+          <p class="desc">Learn how to build an effective outbound sales strategy with personalized messaging and targeted outreach.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">6:17</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>Inbound Sales vs Outbound Sales - Here's What You Need to Know</h3>
+          <p class="desc">Learn the key differences between inbound and outbound sales strategies to maximize your business success.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">6:56</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>Busting 10 Sales Myths That Are Holding Back Your Business</h3>
+          <p class="desc">Watch this to debunk 10 common sales myths and improve your business strategy for success.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">5:51</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>The Easy Way To Get Your First Client With Cold Email In 2024</h3>
+          <p class="desc">Learn how to master cold emailing and secure your first client with proven strategies for 2024.</p>
+        </div>
+      </div>
+    
+
+      <div class="learn-card">
+        <div class="learn-card-top">
+          <div class="learn-play-icon"></div>
+          <span class="learn-duration">4:13</span>
+        </div>
+        <div class="learn-card-content">
+          <span class="learn-tag">Outbound</span>
+          <h3>I Tried 128 Sales Tools, These Are The Best</h3>
+          <p class="desc">Discover the top sales tools to boost your cold email strategy and streamline lead generation efforts.</p>
+        </div>
+      </div>
+    
+    </div>
+  </section>
+</main>
+
+<section class="cta-section">
+  <p class="section-label">BOOK A DEMO</p>
+  <h2 class="section-heading">Get in touch today to level-up your processes</h2>
+  <p class="cta-sub">Partnered with leading go-to-market teams to automate outbound, create dashboards, and streamline operations.</p>
+  <a href="../contact/" class="btn-talk-white">👋 Talk with us</a>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="../assets/YLwP4kyyM1s6fcKAl00uLvuMhGg.png" alt="The Kiln">
+      <p>The Kiln is a team of GTM experts, data scientists, and former Clay employees that help the world's leading RevOps and growth teams scale their most creative ideas.</p>
+    </div>
+    <div class="footer-col">
+      <h4>About us</h4>
+      <a href=".././">Home</a>
+      <a href="../case-studies/">Case Studies</a>
+      <a href="https://www.linkedin.com/company/the-kiln-agency/" target="_blank" rel="noopener">Follow us on LinkedIn</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="../learn/">Tutorials</a>
+      <a href="../toolstack/">Tools</a>
+      <a href="https://gtmcookbook.beehiiv.com/" target="_blank" rel="noopener">Newsletter</a>
+    </div>
+  </div>
+</footer>
+</body></html>

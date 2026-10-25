@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hire world-class GTM Engineers the right way | TheKiln</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700&display=swap" rel="stylesheet">
+<style>
+/* === RESET === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; color: #000; background: #fff; overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; height: auto; }
+ul { list-style: none; }
+
+.header {
+  position: sticky; top: 0; z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 0 40px;
+  height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%;
+}
+.header-logo { display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 15px; white-space: nowrap; }
+.header-logo img { height: 20px; width: auto; }
+.header-logo .logo-text { font-size: 14px; font-weight: 700; }
+.header-logo .logo-sub { color: #999; font-weight: 400; font-size: 13px; margin-left: 4px; }
+.header-nav { display: flex; gap: 28px; }
+.header-nav a { font-size: 14px; font-weight: 500; color: #333; transition: color .2s; }
+.header-nav a:hover { color: #000; }
+.btn-talk {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #111; color: #fff;
+  padding: 10px 20px; border-radius: 100px;
+  font-size: 14px; font-weight: 500;
+  border: none; cursor: pointer; transition: opacity .2s;
+  white-space: nowrap;
+}
+.btn-talk:hover { opacity: .85; }
+
+.announcement {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 14px 20px;
+  background: #fff;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #f0f0f0;
+}
+.announcement .badge {
+  background: #111; color: #fff;
+  padding: 1px 8px; border-radius: 100px;
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px;
+}
+.announcement .text { font-size: 14px; font-weight: 500; color: #333; }
+.announcement .learn-more {
+  background: #015870; color: #fff;
+  padding: 3px 12px; border-radius: 100px;
+  font-size: 12px; font-weight: 600;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.announcement .learn-more img { width: 14px; height: 14px; }
+
+.section-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 2.5px; color: #888; margin-bottom: 12px;
+}
+.section-heading {
+  font-size: 48px; font-weight: 700; line-height: 1.05;
+  letter-spacing: -2.4px;
+}
+.section-heading em { font-style: italic; }
+
+.cta-section {
+  background: #1a1a1a; color: #fff;
+  padding: 100px 40px;
+  text-align: center;
+}
+.cta-section .section-label { color: #888; }
+.cta-section .section-heading { color: #fff; margin: 0 auto 16px; max-width: 600px; font-size: 48px; font-weight: 700; letter-spacing: -2.4px; }
+.cta-sub { font-size: 16px; color: #999; margin-bottom: 36px; }
+.btn-talk-white {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #fff; color: #000;
+  padding: 12px 24px; border-radius: 100px;
+  font-size: 14px; font-weight: 600;
+  border: none; cursor: pointer; transition: opacity .2s;
+}
+.btn-talk-white:hover { opacity: .9; }
+
+.footer {
+  background: #1a1a1a; color: #fff;
+  padding: 48px 40px 36px;
+  border-top: 1px solid #333;
+}
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+.footer-brand p { font-size: 13px; color: #888; line-height: 1.6; margin-top: 12px; max-width: 320px; }
+.footer-brand img { height: 32px; }
+.footer-col h4 {
+  font-size: 12px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 1.5px; margin-bottom: 14px; color: #888;
+}
+.footer-col a {
+  display: block; font-size: 14px; color: #bbb;
+  padding: 3px 0; transition: color .2s;
+}
+.footer-col a:hover { color: #fff; }
+
+@media (max-width: 809px) {
+  .header { padding: 0 16px; height: 52px; }
+  .header-nav { display: none; }
+  .header-logo .logo-sub { display: none; }
+  .btn-talk { padding: 8px 16px; font-size: 13px; }
+  .announcement { padding: 10px 16px; gap: 6px; }
+  .announcement .text { font-size: 12px; }
+  .section-heading { font-size: 32px; letter-spacing: -1.6px; }
+  .cta-section { padding: 60px 20px; }
+  .cta-section .section-heading { font-size: 28px; }
+  .footer { padding: 36px 20px 28px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+}
+
+
+.recruiting-hero {
+  padding: 80px 20px 60px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.recruiting-hero h1 {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -2.8px;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+.recruiting-hero p {
+  font-size: 16px;
+  color: #666;
+  max-width: 680px;
+  margin: 0 auto 32px;
+  line-height: 1.6;
+}
+
+.recruiting-problem-section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.recruiting-problem-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 48px;
+  text-align: left;
+}
+.problem-card {
+  background: #f5f5f0;
+  border-radius: 16px;
+  padding: 36px 32px;
+}
+.problem-card.dark {
+  background: #111;
+  color: #fff;
+}
+.problem-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  margin-bottom: 24px;
+}
+.problem-list-item {
+  margin-bottom: 20px;
+}
+.problem-list-item h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.problem-list-item p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+}
+.problem-card.dark .problem-list-item p {
+  color: #aaa;
+}
+
+.recruiting-steps-section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+  text-align: left;
+}
+.step-card {
+  background: #f5f5f0;
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+}
+.step-card.highlight {
+  background: #111;
+  color: #fff;
+}
+.step-card h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.step-card p {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.5;
+}
+.step-card.highlight p {
+  color: #aaa;
+}
+
+.recruiting-benefits-section {
+  padding: 80px 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 48px;
+  text-align: left;
+}
+.benefit-card {
+  background: #f5f5f0;
+  border-radius: 16px;
+  padding: 32px 28px;
+}
+.benefit-card h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.benefit-card p {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .steps-grid { grid-template-columns: 1fr; }
+  .recruiting-problem-grid { grid-template-columns: 1fr; }
+  .benefits-grid { grid-template-columns: 1fr; }
+  .recruiting-hero h1 { font-size: 34px; letter-spacing: -1.7px; }
+}
+
+</style>
+</head>
+<body>
+
+<header class="header">
+  <a href="../" class="header-logo">
+    <img src="../assets/Hw0YffCzJiSNh6wcImEL86SRHJY.png" alt="The Kiln">
+    <span class="logo-text">The Kiln</span>
+    <span class="logo-sub">a 2X company</span>
+  </a>
+  <nav class="header-nav">
+    <a href="../case-studies/">Case Studies</a>
+    <a href="./" style="color:#000;font-weight:600;">Recruiting</a>
+    <a href="https://gtmcookbook.beehiiv.com/" target="_blank" rel="noopener">Newsletter</a>
+  </nav>
+  <a href="../contact/" class="btn-talk">👋 Talk with us</a>
+</header>
+
+<div class="announcement">
+  <span class="badge">NEW</span>
+  <span class="text">The Kiln has been acquired by 2X!</span>
+  <a href="https://www.globenewswire.com/news-release/2026/01/06/3213831/0/en/2X-Acquires-Leading-Clay-Partner-The-Kiln-Expands-Marketing-as-a-Service-to-Go-to-Market-Orchestration.html" target="_blank" rel="noopener" class="learn-more">
+    <img src="../assets/8XWIXJtmXO7STedZbwi8rvVprig.png" alt="">
+    Learn More
+  </a>
+</div>
+
+<main>
+  <section class="recruiting-hero">
+    <h1>Hire world-class GTM Engineers the right way</h1>
+    <p>Our internal agency is made up of some of the world’s top GTMEs. We bring unmatched experience in hiring, training, and working alongside elite GTM talent -so you get the right person the first time.</p>
+    <a href="../contact/" class="btn-talk">👋 Talk with us</a>
+  </section>
+
+  <section class="recruiting-problem-section">
+    <p class="section-label">THE PROBLEM</p>
+    <h2 class="section-heading">Hiring a GTME isn’t like traditional recruiting</h2>
+    <p style="color:#666;max-width:600px;margin:12px auto 0;">The GTME role is new, specialized, and critical for growth. Conventional recruiting firms simply don’t know what to look for.</p>
+
+    <div class="recruiting-problem-grid">
+      <div class="problem-card">
+        <h3>Hiring firms aren’t well-suited for hiring GTMEs</h3>
+        <div class="problem-list-item">
+          <h4>1. Lack of role expertise</h4>
+          <p>We live and breathe GTME work, so we know what separates top talent from average performers.</p>
+        </div>
+        <div class="problem-list-item">
+          <h4>2. Can’t evaluate technical skills</h4>
+          <p>Traditional recruiters can't properly assess the tools, automations, and workflows a modern GTME needs to build.</p>
+        </div>
+        <div class="problem-list-item">
+          <h4>3. Slow & expensive</h4>
+          <p>Traditional agencies charge massive fees and deliver candidates who don't work out.</p>
+        </div>
+      </div>
+
+      <div class="problem-card dark">
+        <h3 style="color:#fff;">Why companies choose The Kiln to hire GTMEs</h3>
+        <div class="problem-list-item">
+          <h4 style="color:#fff;">1. GTMEs hiring GTMEs</h4>
+          <p>You’re guided by experts who do this work every day.</p>
+        </div>
+        <div class="problem-list-item">
+          <h4 style="color:#fff;">2. Deep technical vetting</h4>
+          <p>Every candidate is tested on actual GTM scenarios and tooling.</p>
+        </div>
+        <div class="problem-list-item">
+          <h4 style="color:#fff;">3. Fast & risk-free</h4>
+          <p>We source vetted talent quickly, and stand behind our placements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="recruiting-steps-section">
+    <p class="section-label">HOW IT WORKS</p>
+    <h2 class="section-heading">Skip the search - Hire vetted GTM operators</h2>
+    <p style="color:#666;max-width:600px;margin:12px auto 0;">At The Kiln, our internal agency is made up of the best GTMEs in the world. We know exactly what to look for.</p>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <h3>1. Initial Approach</h3>
+        <p>You reach out, and we align on your hiring needs — whether it’s scaling fast, filling a gap, or bringing in GTM leadership. No wasted time.</p>
+      </div>
+      <div class="step-card">
+        <h3>2. Description of Role Criteria</h3>
+        <p>You share what matters most: role requirements, challenges to solve, and cultural fit. This ensures we target the right candidates.</p>
+      </div>
+      <div class="step-card">
+        <h3>3. Candidate Selection</h3>
+        <p>We handpick top GTM engineers from our vetted network, interview them, and ensure they’re qualified before presenting them to you.</p>
+      </div>
+      <div class="step-card">
+        <h3>4. Company-Candidate Fit</h3>
+        <p>You interview shortlisted candidates to confirm skills and cultural alignment. We keep the process fast, simple, and focused.</p>
+      </div>
+      <div class="step-card highlight">
+        <h3 style="color:#fff;">5. Candidate Hired</h3>
+        <p>Once you hire, we can also provide onboarding and training (optional) to ensure your GTM executive hits the ground running.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="recruiting-benefits-section">
+    <p class="section-label">SKIP THE SEARCH</p>
+    <h2 class="section-heading">Hire vetted GTM operators in days</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <h3>Specialized expertise</h3>
+        <p>We live &amp; breathe GTME work, so we know what separates top talent from average performers.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Proven track record</h3>
+        <p>No one is more experienced in hiring world-class GTMEs than our team.</p>
+      </div>
+      <div class="benefit-card">
+        <h3>Beyond hiring</h3>
+        <p>We don’t just help you find the right GTME; we can also train them to ensure they’re operating at our standards.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="cta-section">
+  <p class="section-label">START TODAY</p>
+  <h2 class="section-heading">No more guesswork - Hire your next GTME today</h2>
+  <p class="cta-sub">We’ve already helped many happy customers</p>
+  <a href="../contact/" class="btn-talk-white">Talk with us</a>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="../assets/YLwP4kyyM1s6fcKAl00uLvuMhGg.png" alt="The Kiln">
+      <p>The Kiln is a team of GTM experts, data scientists, and former Clay employees that help the world's leading RevOps and growth teams scale their most creative ideas.</p>
+    </div>
+    <div class="footer-col">
+      <h4>About us</h4>
+      <a href="../">Home</a>
+      <a href="../case-studies/">Case Studies</a>
+      <a href="https://www.linkedin.com/company/the-kiln-agency/" target="_blank" rel="noopener">Follow us on LinkedIn</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="../learn/">Tutorials</a>
+      <a href="../toolstack/">Tools</a>
+      <a href="https://gtmcookbook.beehiiv.com/" target="_blank" rel="noopener">Newsletter</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

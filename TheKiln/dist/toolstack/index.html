@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The best GTM tool stack for your team - The Kiln</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700&display=swap" rel="stylesheet">
+<style>
+/* === BASE RESET === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; color: #000; background: #fff; overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; height: auto; }
+ul { list-style: none; }
+
+.header {
+  position: sticky; top: 0; z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 0 40px;
+  height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%;
+}
+.header-logo { display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 15px; white-space: nowrap; }
+.header-logo img { height: 20px; width: auto; }
+.header-logo .logo-text { font-size: 14px; font-weight: 700; }
+.header-logo .logo-sub { color: #999; font-weight: 400; font-size: 13px; margin-left: 4px; }
+.header-nav { display: flex; gap: 28px; }
+.header-nav a { font-size: 14px; font-weight: 500; color: #333; transition: color .2s; }
+.header-nav a:hover { color: #000; }
+.btn-talk {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #111; color: #fff;
+  padding: 10px 20px; border-radius: 100px;
+  font-size: 14px; font-weight: 500;
+  border: none; cursor: pointer; transition: opacity .2s;
+  white-space: nowrap;
+}
+.btn-talk:hover { opacity: .85; }
+
+.announcement {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 14px 20px;
+  background: #fff;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #f0f0f0;
+}
+.announcement .badge {
+  background: #111; color: #fff;
+  padding: 1px 8px; border-radius: 100px;
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px;
+}
+.announcement .text { font-size: 14px; font-weight: 500; color: #333; }
+.announcement .learn-more {
+  background: #015870; color: #fff;
+  padding: 3px 12px; border-radius: 100px;
+  font-size: 12px; font-weight: 600;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.announcement .learn-more img { width: 14px; height: 14px; }
+
+.section-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 2.5px; color: #888; margin-bottom: 12px;
+}
+.section-heading {
+  font-size: 48px; font-weight: 700; line-height: 1.05;
+  letter-spacing: -2.4px;
+}
+.section-heading em { font-style: italic; }
+
+.read-story {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 600;
+  background: #000; color: #fff;
+  padding: 8px 18px; border-radius: 100px;
+  transition: opacity .2s;
+}
+.read-story:hover { opacity: .85; }
+.read-story img { width: 14px; height: 14px; filter: invert(1); }
+
+.cta-section {
+  background: #1a1a1a; color: #fff;
+  padding: 100px 40px;
+  text-align: center;
+}
+.cta-section .section-label { color: #888; }
+.cta-section .section-heading { color: #fff; margin: 0 auto 16px; max-width: 600px; }
+.cta-sub { font-size: 16px; color: #999; margin-bottom: 36px; }
+.btn-talk-white {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #fff; color: #000;
+  padding: 12px 24px; border-radius: 100px;
+  font-size: 14px; font-weight: 600;
+  border: none; cursor: pointer; transition: opacity .2s;
+}
+.btn-talk-white:hover { opacity: .9; }
+
+.footer {
+  background: #1a1a1a; color: #fff;
+  padding: 48px 40px 36px;
+  border-top: 1px solid #333;
+}
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+.footer-brand p { font-size: 13px; color: #888; line-height: 1.6; margin-top: 12px; max-width: 320px; }
+.footer-brand img { height: 32px; }
+.footer-col h4 {
+  font-size: 12px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 1.5px; margin-bottom: 14px; color: #888;
+}
+.footer-col a {
+  display: block; font-size: 14px; color: #bbb;
+  padding: 3px 0; transition: color .2s;
+}
+.footer-col a:hover { color: #fff; }
+
+@media (max-width: 809px) {
+  .header { padding: 0 16px; height: 52px; }
+  .header-nav { display: none; }
+  .header-logo .logo-sub { display: none; }
+  .btn-talk { padding: 8px 16px; font-size: 13px; }
+  .announcement { padding: 10px 16px; gap: 6px; }
+  .announcement .text { font-size: 12px; }
+  .section-heading { font-size: 32px; letter-spacing: -1.6px; }
+  .cta-section { padding: 60px 20px; }
+  .cta-section .section-heading { font-size: 28px; }
+  .footer { padding: 36px 20px 28px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+}
+
+
+.ts-hero {
+  padding: 80px 20px 40px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.ts-hero h1 {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -2.8px;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+.ts-hero p {
+  font-size: 16px;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ts-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  max-width: 1000px;
+  margin: 32px auto 60px;
+  padding: 0 20px;
+}
+.ts-nav a {
+  background: #f5f5f0;
+  color: #333;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-size: 13px;
+  font-weight: 500;
+  transition: all .2s;
+}
+.ts-nav a:hover {
+  background: #111;
+  color: #fff;
+}
+
+.ts-container {
+  max-width: 1100px;
+  margin: 0 auto 100px;
+  padding: 0 20px;
+}
+.ts-cat-section {
+  margin-bottom: 80px;
+  scroll-margin-top: 80px;
+}
+.ts-cat-section h2 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -1.4px;
+  margin-bottom: 24px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #f0f0f0;
+}
+.ts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.ts-card {
+  background: #f5f5f0;
+  border-radius: 16px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ts-card h3 {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  margin-bottom: 14px;
+}
+.ts-card p.desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex: 1;
+}
+.ts-card-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #e5e5df;
+  padding-top: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.ts-btn {
+  display: inline-flex;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: opacity .2s;
+}
+.ts-btn:hover { opacity: .85; }
+.ts-pricing {
+  font-size: 12px;
+  color: #888;
+  font-weight: 500;
+}
+
+@media (max-width: 809px) {
+  .ts-hero h1 { font-size: 34px; letter-spacing: -1.7px; }
+  .ts-grid { grid-template-columns: 1fr; }
+  .ts-cat-section h2 { font-size: 24px; }
+}
+
+</style>
+</head>
+<body>
+
+<header class="header">
+  <a href=".././" class="header-logo">
+    <img src="../assets/Hw0YffCzJiSNh6wcImEL86SRHJY.png" alt="The Kiln">
+    <span class="logo-text">The Kiln</span>
+    <span class="logo-sub">a 2X company</span>
+  </a>
+  <nav class="header-nav">
+    <a href="../case-studies/">Case Studies</a>
+    <a href="../recruiting/">Recruiting</a>
+    <a href="https://gtmcookbook.beehiiv.com/" target="_blank" rel="noopener">Newsletter</a>
+  </nav>
+  <a href="../contact/" class="btn-talk">👋 Talk with us</a>
+</header>
+
+<div class="announcement">
+  <span class="badge">NEW</span>
+  <span class="text">The Kiln has been acquired by 2X!</span>
+  <a href="https://www.globenewswire.com/news-release/2026/01/06/3213831/0/en/2X-Acquires-Leading-Clay-Partner-The-Kiln-Expands-Marketing-as-a-Service-to-Go-to-Market-Orchestration.html" target="_blank" rel="noopener" class="learn-more">
+    <img src="../assets/8XWIXJtmXO7STedZbwi8rvVprig.png" alt="">
+    Learn More
+  </a>
+</div>
+
+<main>
+  <section class="ts-hero">
+    <p class="section-label">RECOMMENDED STACK</p>
+    <h1>The best GTM tool stack for your team</h1>
+    <p>Discover our vetted recommendations across lead enrichment, intent data, email sequencing, multi-channel outreach, and workflow automation.</p>
+  </section>
+
+  <nav class="ts-nav">
+    <a href="#best-tools-for-lead-enrichment">lead enrichment</a>
+<a href="#best-tools-for-intent-data">intent data</a>
+<a href="#best-tools-for-email-sequencing">Best tools for  email sequencing</a>
+<a href="#best-tools-for-multi-channel-campaigns">Best tools for  multi-channel campaigns</a>
+<a href="#best-tools-for-ai-copywriting">AI copywriting</a>
+<a href="#best-tools-for-linkedin-outreach">LinkedIn outreach</a>
+<a href="#best-tools-for-photo-image-personalization">photo/image personalization</a>
+<a href="#best-tools-for-lead-sourcing">lead sourcing</a>
+<a href="#best-tools-for-workflow-automation">workflow automation</a>
+  </nav>
+
+  <div class="ts-container">
+    
+      <div class="ts-cat-section" id="best-tools-for-lead-enrichment">
+        <h2>Best tools for lead enrichment</h2>
+        <div class="ts-grid">
+          
+      <div class="ts-card">
+        <div>
+          <h3>1. Clay</h3>
+          <p class="desc">The question you should be asking yourself about Clay is, what data can't it find? After using it for a while you'll see that the answer is, there isn't much. Clay can find essentially any publicly available data point about a person or company, using their aggregation of data sources all combined into one clean spreadsheet layout. It's the basis for nearly all of our lead enrichment projects and we can't recommend it enough.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://clay.com/?via=b8a689" target="_blank" rel="noopener" class="ts-btn">Get 2,000 free credits</a>
+          <span class="ts-pricing">Pricing starts at $134/month</span>
+        </div>
+      </div>
+    
+
+      <div class="ts-card">
+        <div>
+          <h3>2. LeadMagic</h3>
+          <p class="desc">LeadMagic is a low cost, credit-based enrichment tool that can help find a ton of niche data for people or companies. Our favorite element of LeadMagic is that it really gets into the nitty-gritty: their founder, Jesse Oulette, is incredible at digging for the newest and most effective data points to use in outbound copy and intent.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://leadmagic.io/" target="_blank" rel="noopener" class="ts-btn">Try it for free</a>
+          <span class="ts-pricing">Pricing starts at $25/month</span>
+        </div>
+      </div>
+    
+        </div>
+      </div>
+    
+
+      <div class="ts-cat-section" id="best-tools-for-intent-data">
+        <h2>Best tools for intent data</h2>
+        <div class="ts-grid">
+          
+      <div class="ts-card">
+        <div>
+          <h3>1. Commonroom</h3>
+          <p class="desc">Commonroom is an intent signal aggregator that creates maps of prospects' activity across all of your channels. By connecting your platforms such as LinkedIn, Twitter, Slack, and more, you can create intent mapping of prospects that provides invaluable data to your GTM motion. We almost think of it as Clay but for sourcing intent data- a medium by which you interact with the plethora of technology in the space.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="../contact/" target="_blank" rel="noopener" class="ts-btn">Try it for free</a>
+          <span class="ts-pricing">Pricing starts at $625/month</span>
+        </div>
+      </div>
+    
+
+      <div class="ts-card">
+        <div>
+          <h3>2. Trigify</h3>
+          <p class="desc">Trigify is an incredibly powerful tool that allows you to automate actions when an intent signal occurs. You can select one of many intent signals (job changes, fundraising, etc) and send that information to a tool like Clay for an automated outbound campaign. Listening tools like this perfect for optimizing your speed to outreach, as well as creating lists of intent-based qualified leads.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://www.trigify.io/" target="_blank" rel="noopener" class="ts-btn">Try it for free</a>
+          <span class="ts-pricing">Pricing starts at $90/month</span>
+        </div>
+      </div>
+    
+
+      <div class="ts-card">
+        <div>
+          <h3>3. RB2B</h3>
+          <p class="desc">RB2B de-anonymizes website visitors on the personal level, meaning you can literally see who is visiting your website. If you're based in the U.S and have any level of meaningful web traffic, this one is a no-brainer. You'd be hard-pressed to find a better signal than someone stopping by your site, and this data can be even more powerful when combined with a tool like Clay for automated site visitor campaigns.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://rb2b.com/?ref=patrick" target="_blank" rel="noopener" class="ts-btn">Try it for free</a>
+          <span class="ts-pricing">Pricing starts at $99/month</span>
+        </div>
+      </div>
+    
+
+      <div class="ts-card">
+        <div>
+          <h3>4. Clay</h3>
+          <p class="desc">Clay is a great tool for finding intent signals at scale by using the variety of intent data tools integrated within the plaform. The ability to waterfall completely different intent signals into one cohesive flow is something that was pretty much impossible before Clay developed it, and its ability to action upon those signals is amazing.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://clay.com/?via=b8a689" target="_blank" rel="noopener" class="ts-btn">Get 2,000 credits</a>
+          <span class="ts-pricing">Pricing starts at $134/month</span>
+        </div>
+      </div>
+    
+        </div>
+      </div>
+    
+
+      <div class="ts-cat-section" id="best-tools-for-email-sequencing">
+        <h2>Best tools for  email sequencing</h2>
+        <div class="ts-grid">
+          
+      <div class="ts-card">
+        <div>
+          <h3>1. Smartlead</h3>
+          <p class="desc">Smartlead, in short, is one of two email sequencing tools in the world that are even worth considering at the moment. The way in which the tool is structured perfectly suits the new wave of GTM motions- automated, scalable, and fully-integrated. You can connect unlimited email accounts to the tool, run high scale campaigns, take advantage of their robust unibox, and use their incredible API to create automations and reporting dashboards. It's effective, clean, and we love it.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://smartlead.ai/?via=patrick-spychalski" target="_blank" rel="noopener" class="ts-btn">Try it for free</a>
+          <span class="ts-pricing">Pricing starts at $39/month</span>
+        </div>
+      </div>
+    
+
+      <div class="ts-card">
+        <div>
+          <h3>2. Instantly</h3>
+          <p class="desc">If you're looking to start running your first automated outbound campaign, Instantly is your tool. Their easy-to-use interface, combined with all-in-one features like buying your own inboxes and warming up your inboxes, makes it a no brainer to get started with. They've got everything you need to run a great campaign with none of the technical headache.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://instantly.ai/?via=409f11" target="_blank" rel="noopener" class="ts-btn">Try it for free</a>
+          <span class="ts-pricing">Pricing starts at $49/month</span>
+        </div>
+      </div>
+    
+        </div>
+      </div>
+    
+
+      <div class="ts-cat-section" id="best-tools-for-multi-channel-campaigns">
+        <h2>Best tools for  multi-channel campaigns</h2>
+        <div class="ts-grid">
+          
+      <div class="ts-card">
+        <div>
+          <h3>1. LaGrowthMachine</h3>
+          <p class="desc">La Growth Machine (they're French, hence the name) is a true multi-channel tool that doesn't seem to take any shortcuts. They currently have email, LinkedIn, and Twitter functionality, and are constantly adding new features. They also have a LinkedIn voice notes feature, which we've found to be very effective with our LI campaigns so far. If you want to get fancy, LGM is the tool to do it with.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://lagrowthmachine.com/?ref=ngzjyjg" target="_blank" rel="noopener" class="ts-btn">Get 30 days free</a>
+          <span class="ts-pricing">Pricing starts at $50/month</span>
+        </div>
+      </div>
+    
+
+      <div class="ts-card">
+        <div>
+          <h3>2. Lemlist</h3>
+          <p class="desc">Lemlist has a TON of features, but their multi-channel functionality remains some of the best on the market. Lemlist currently supports email, phone, and LinkedIn functionality and their ability to add advanced conditions and super robust custom flows is what differentiates them the most,.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://www.lemlist.com/" target="_blank" rel="noopener" class="ts-btn">Try it for free</a>
+          <span class="ts-pricing">Pricing starts at $99/month</span>
+        </div>
+      </div>
+    
+        </div>
+      </div>
+    
+
+      <div class="ts-cat-section" id="best-tools-for-ai-copywriting">
+        <h2>Best tools for AI copywriting</h2>
+        <div class="ts-grid">
+          
+      <div class="ts-card">
+        <div>
+          <h3>1. Twain</h3>
+          <p class="desc">While we don't recommend using AI to write copy just yet, if you're going to, Twain is easily the best on the market. If you don't have a strong copywriter on your team or access to one through your network, we would highly recommend you check it out. It's ridiculously cheap to use, generates copy that follows many industry best practices, and overall can write better than 80% of outbound people we've seen. Our guess is that while it isn't better than the best copywriter you know, it'll be there soon, and at the very least is worth keeping your eye on.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://www.twain.ai/" target="_blank" rel="noopener" class="ts-btn">Try if for free</a>
+          <span class="ts-pricing">Pricing starts at $45/month</span>
+        </div>
+      </div>
+    
+
+      <div class="ts-card">
+        <div>
+          <h3>2. Anthropic</h3>
+          <p class="desc">Anthropic isn't made specifically for email copywriting, but across the board we've seen it write far better copy (when prompted correctly) than models like OpenAI or Gemini. If you're trying to build your own copywriter to emulate what you've been doing manually, we suggest attempting to do so with their LLMs.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://anthropic.com/" target="_blank" rel="noopener" class="ts-btn">Try it for free</a>
+          <span class="ts-pricing">Pricing starts at $0/month</span>
+        </div>
+      </div>
+    
+        </div>
+      </div>
+    
+
+      <div class="ts-cat-section" id="best-tools-for-linkedin-outreach">
+        <h2>Best tools for LinkedIn outreach</h2>
+        <div class="ts-grid">
+          
+      <div class="ts-card">
+        <div>
+          <h3>1. HeyReach</h3>
+          <p class="desc">We just had a webinar with the HeyReach team recently where they said that not a single person had gotten their LinkedIn account banned when using the tool and abiding by their best practices. This in itself is a reason to give it the number one spot, because everyone running LinkedIn automations knows how terrible it can be to get banned or restricted. On top of that, they have a clean and simple system with multi-variable functionality.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://heyreach.io/?via=patrick" target="_blank" rel="noopener" class="ts-btn">Try it for free</a>
+          <span class="ts-pricing">Pricing starts at $79/month</span>
+        </div>
+      </div>
+    
+
+      <div class="ts-card">
+        <div>
+          <h3>2. Lemlist</h3>
+          <p class="desc">While Lemlist has multi-channel functionality too, their pure LinkedIn automation features are not something to ignore. Your ability to send LinkedIn reactions, requests, follows, comments, and custom voice messages is uncanny, and you can create a flow that does it all very easily.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://www.lemlist.com/" target="_blank" rel="noopener" class="ts-btn">Try it for free</a>
+          <span class="ts-pricing">Pricing starts at $99/month</span>
+        </div>
+      </div>
+    
+        </div>
+      </div>
+    
+
+      <div class="ts-cat-section" id="best-tools-for-photo-image-personalization">
+        <h2>Best tools for photo/image personalization</h2>
+        <div class="ts-grid">
+          
+      <div class="ts-card">
+        <div>
+          <h3>1. Sendspark</h3>
+          <p class="desc">Sendspark is one of the hot new tools on the block that seems to actually be worth the hype- they've found a way to create engaging, personalized videos that you can send at scale using tools like Clay. Their "dynamic" templates feature lets you create videos with the prospect's website in the background, and they can clone your voice to say the prospect's first name in a video. They're early to the AI video game, and I'm bullish on them continuing to ride the wave until the entire video is able to be personalized.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://sendspark.com/?via=patrick45" target="_blank" rel="noopener" class="ts-btn">Try it for free</a>
+          <span class="ts-pricing">Pricing starts at $79/month</span>
+        </div>
+      </div>
+    
+
+      <div class="ts-card">
+        <div>
+          <h3>2. Dynapics</h3>
+          <p class="desc">Dynapics is the easiest and most effective way to send personalized images at scale. You can create a template on the platform, then use their API to send images and text to that template to create thousands of custom images. We've used them in several campaigns, and the tool is a great way to make your messaging stand out from competition.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://dynapictures.com/b/p/register" target="_blank" rel="noopener" class="ts-btn">Try it for free</a>
+          <span class="ts-pricing">Pricing starts at $99/month</span>
+        </div>
+      </div>
+    
+        </div>
+      </div>
+    
+
+      <div class="ts-cat-section" id="best-tools-for-lead-sourcing">
+        <h2>Best tools for lead sourcing</h2>
+        <div class="ts-grid">
+          
+      <div class="ts-card">
+        <div>
+          <h3>1. Clay</h3>
+          <p class="desc">Clay's lead sourcing functionality is next-to-none. There is no other platform currently out where you can import your entire TAM into an actionable spreadsheet without spending a dime on export credits. You can import leads from LinkedIn, Google Maps, Hubspot, Salesforce, Ocean.io and more all without leaving the platform. Even more, you can filter by any data point your imagination can conjure up. It's really that great.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://clay.com/?via=b8a689" target="_blank" rel="noopener" class="ts-btn">Get 2000 free credits</a>
+          <span class="ts-pricing">Pricing starts at $134/month</span>
+        </div>
+      </div>
+    
+
+      <div class="ts-card">
+        <div>
+          <h3>2. Ocean.io</h3>
+          <p class="desc">Ocean.io has easily the best company lookalikes function in the GTM space, bar none. They've scraped 300,000,000 websites, keyword indexed them all, and used AI to find lookalikes for any company on the web. They also have a lead sourcing tool that rivals (if not betters) Apollo's. They're an incredible B2B lead source and still deeply slept on.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://www.ocean.io/" target="_blank" rel="noopener" class="ts-btn">Try it for free</a>
+          <span class="ts-pricing">Pricing starts at $59/month</span>
+        </div>
+      </div>
+    
+
+      <div class="ts-card">
+        <div>
+          <h3>3. Apollo</h3>
+          <p class="desc">Apollo is a mainstay in the space, but still seems to keep up with the new players despite it's status as an "old" piece of tech. Their database is really solid for most B2B sectors, and their exports contain so many data points that sometimes it's worth just filtering down for the ones you want. Nonetheless, it's a great tech and one we would certainly recommend for lead sourcing in particular.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://get.apollo.io/ocu944y7mq41" target="_blank" rel="noopener" class="ts-btn">Try it for free</a>
+          <span class="ts-pricing">Pricing starts at $49/month</span>
+        </div>
+      </div>
+    
+
+      <div class="ts-card">
+        <div>
+          <h3>4. PhantomBuster</h3>
+          <p class="desc">Phantombuster has a variety of robust scrapers (they call them "phantoms" that are difficult to find anywhere else on the internet. This includes LinkedIn engagement scrapers, event attendees, Instagram followers, and more. If your conventional scraping tool or chrome extension can't get it, it's worth checking PhantomBuster to see if they can help out.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://phantombuster.com/" target="_blank" rel="noopener" class="ts-btn">Try it for free</a>
+          <span class="ts-pricing">Pricing starts at $56/month</span>
+        </div>
+      </div>
+    
+
+      <div class="ts-card">
+        <div>
+          <h3>5. Apify</h3>
+          <p class="desc">In the same vein as Phantombuster, Apify has hundreds of incredible scraping scripts that help you source lists that would otherwise take hours of manual work. Even better, users can create their own scrapers so if you're looking to collect data from a popular platform, there is probably an Apify actor for it. If you connect it to Clay, you can have leads live-streaming into a table for campaigns that never need refilling.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://apify.com/actors" target="_blank" rel="noopener" class="ts-btn">Try it for free</a>
+          <span class="ts-pricing">Pricing starts at $49/month</span>
+        </div>
+      </div>
+    
+        </div>
+      </div>
+    
+
+      <div class="ts-cat-section" id="best-tools-for-workflow-automation">
+        <h2>Best tools for workflow automation</h2>
+        <div class="ts-grid">
+          
+      <div class="ts-card">
+        <div>
+          <h3>1. Zapier</h3>
+          <p class="desc">Zapier is at the top of this list due to the ease of use- all of the other tools on here can essentially do the same thing, but it's unbelievably easy to make automations in Zapier, and for that it deserves the spot. While pricier, it takes very little time to put automations together so if you're willing to shoulder the increased cost, it can save you time and you can get back to the fun stuff.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://zapier.com/" target="_blank" rel="noopener" class="ts-btn">Try it for free</a>
+          <span class="ts-pricing">Pricing starts at $73/month</span>
+        </div>
+      </div>
+    
+
+      <div class="ts-card">
+        <div>
+          <h3>2. Make</h3>
+          <p class="desc">Make is a great middle ground to Zapier and N8N, as it's significantly less expensive than the former and way easier to use than the latter. It's a great way to create workflow automations and many automation experts that I've hired in the past use it as their tool of choice.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://www.make.com/en/register?pc=thekiln" target="_blank" rel="noopener" class="ts-btn">Try it for free</a>
+          <span class="ts-pricing">Pricing starts at $9/month</span>
+        </div>
+      </div>
+    
+
+      <div class="ts-card">
+        <div>
+          <h3>3. N8N</h3>
+          <p class="desc">If you're willing to put the time into learning it, N8N is by far the cheapest automation tool on the market. It's nearly free other than hosting costs, and you can automate pretty much anything you want to within reason. We use it at the Kiln for nearly all of our automation, as it's great for technical training and super flexible.</p>
+        </div>
+        <div class="ts-card-bottom">
+          <a href="https://n8n.io/" target="_blank" rel="noopener" class="ts-btn">Try it for free</a>
+          <span class="ts-pricing">Pricing starts at $20/month</span>
+        </div>
+      </div>
+    
+        </div>
+      </div>
+    
+  </div>
+</main>
+
+<section class="cta-section">
+  <p class="section-label">BOOK A DEMO</p>
+  <h2 class="section-heading">Get in touch today to level-up your processes</h2>
+  <p class="cta-sub">Partnered with leading go-to-market teams to automate outbound, create dashboards, and streamline operations.</p>
+  <a href="../contact/" class="btn-talk-white">👋 Talk with us</a>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="../assets/YLwP4kyyM1s6fcKAl00uLvuMhGg.png" alt="The Kiln">
+      <p>The Kiln is a team of GTM experts, data scientists, and former Clay employees that help the world's leading RevOps and growth teams scale their most creative ideas.</p>
+    </div>
+    <div class="footer-col">
+      <h4>About us</h4>
+      <a href=".././">Home</a>
+      <a href="../case-studies/">Case Studies</a>
+      <a href="https://www.linkedin.com/company/the-kiln-agency/" target="_blank" rel="noopener">Follow us on LinkedIn</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="../learn/">Tutorials</a>
+      <a href="../toolstack/">Tools</a>
+      <a href="https://gtmcookbook.beehiiv.com/" target="_blank" rel="noopener">Newsletter</a>
+    </div>
+  </div>
+</footer>
+</body></html>

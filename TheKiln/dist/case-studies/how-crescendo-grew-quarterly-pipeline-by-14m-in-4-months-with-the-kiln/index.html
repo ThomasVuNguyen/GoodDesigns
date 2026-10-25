@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Crescendo Grew Quarterly Pipeline By $14M In 4 Months With The Kiln - The Kiln</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700&display=swap" rel="stylesheet">
+<style>
+/* === BASE RESET === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; color: #000; background: #fff; overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; height: auto; }
+ul { list-style: none; }
+
+.header {
+  position: sticky; top: 0; z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 0 40px;
+  height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%;
+}
+.header-logo { display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 15px; white-space: nowrap; }
+.header-logo img { height: 20px; width: auto; }
+.header-logo .logo-text { font-size: 14px; font-weight: 700; }
+.header-logo .logo-sub { color: #999; font-weight: 400; font-size: 13px; margin-left: 4px; }
+.header-nav { display: flex; gap: 28px; }
+.header-nav a { font-size: 14px; font-weight: 500; color: #333; transition: color .2s; }
+.header-nav a:hover { color: #000; }
+.btn-talk {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #111; color: #fff;
+  padding: 10px 20px; border-radius: 100px;
+  font-size: 14px; font-weight: 500;
+  border: none; cursor: pointer; transition: opacity .2s;
+  white-space: nowrap;
+}
+.btn-talk:hover { opacity: .85; }
+
+.announcement {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 14px 20px;
+  background: #fff;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #f0f0f0;
+}
+.announcement .badge {
+  background: #111; color: #fff;
+  padding: 1px 8px; border-radius: 100px;
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px;
+}
+.announcement .text { font-size: 14px; font-weight: 500; color: #333; }
+.announcement .learn-more {
+  background: #015870; color: #fff;
+  padding: 3px 12px; border-radius: 100px;
+  font-size: 12px; font-weight: 600;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.announcement .learn-more img { width: 14px; height: 14px; }
+
+.section-label {
+  font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 2.5px; color: #888; margin-bottom: 12px;
+}
+.section-heading {
+  font-size: 48px; font-weight: 700; line-height: 1.05;
+  letter-spacing: -2.4px;
+}
+.section-heading em { font-style: italic; }
+
+.read-story {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 13px; font-weight: 600;
+  background: #000; color: #fff;
+  padding: 8px 18px; border-radius: 100px;
+  transition: opacity .2s;
+}
+.read-story:hover { opacity: .85; }
+.read-story img { width: 14px; height: 14px; filter: invert(1); }
+
+.cta-section {
+  background: #1a1a1a; color: #fff;
+  padding: 100px 40px;
+  text-align: center;
+}
+.cta-section .section-label { color: #888; }
+.cta-section .section-heading { color: #fff; margin: 0 auto 16px; max-width: 600px; }
+.cta-sub { font-size: 16px; color: #999; margin-bottom: 36px; }
+.btn-talk-white {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #fff; color: #000;
+  padding: 12px 24px; border-radius: 100px;
+  font-size: 14px; font-weight: 600;
+  border: none; cursor: pointer; transition: opacity .2s;
+}
+.btn-talk-white:hover { opacity: .9; }
+
+.footer {
+  background: #1a1a1a; color: #fff;
+  padding: 48px 40px 36px;
+  border-top: 1px solid #333;
+}
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+.footer-brand p { font-size: 13px; color: #888; line-height: 1.6; margin-top: 12px; max-width: 320px; }
+.footer-brand img { height: 32px; }
+.footer-col h4 {
+  font-size: 12px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 1.5px; margin-bottom: 14px; color: #888;
+}
+.footer-col a {
+  display: block; font-size: 14px; color: #bbb;
+  padding: 3px 0; transition: color .2s;
+}
+.footer-col a:hover { color: #fff; }
+
+@media (max-width: 809px) {
+  .header { padding: 0 16px; height: 52px; }
+  .header-nav { display: none; }
+  .header-logo .logo-sub { display: none; }
+  .btn-talk { padding: 8px 16px; font-size: 13px; }
+  .announcement { padding: 10px 16px; gap: 6px; }
+  .announcement .text { font-size: 12px; }
+  .section-heading { font-size: 32px; letter-spacing: -1.6px; }
+  .cta-section { padding: 60px 20px; }
+  .cta-section .section-heading { font-size: 28px; }
+  .footer { padding: 36px 20px 28px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+}
+
+
+.cs-detail-hero {
+  padding: 60px 20px 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.cs-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #666;
+  margin-bottom: 24px;
+}
+.cs-back:hover { color: #000; }
+.cs-logo-hero {
+  height: 36px;
+  max-width: 160px;
+  object-fit: contain;
+  margin-bottom: 24px;
+}
+.cs-detail-hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -2.4px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.cs-hero-sub {
+  font-size: 17px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 32px;
+}
+
+.cs-quote-box {
+  background: #f5f5f0;
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin-bottom: 40px;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+  border-left: 4px solid #111;
+}
+
+.cs-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 48px;
+}
+.cs-stat-card {
+  background: #f5f5f0;
+  border-radius: 16px;
+  padding: 28px 24px;
+  text-align: center;
+}
+.cs-stat-number {
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: -1.5px;
+  color: #111;
+  margin-bottom: 6px;
+}
+.cs-stat-label {
+  font-size: 13px;
+  color: #666;
+  font-weight: 500;
+}
+
+.cs-article {
+  max-width: 800px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+  font-size: 17px;
+  line-height: 1.75;
+  color: #222;
+}
+.cs-article h2 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  margin: 44px 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+.cs-article h3 {
+  font-size: 21px;
+  font-weight: 700;
+  letter-spacing: -0.6px;
+  margin: 32px 0 12px;
+}
+.cs-article p {
+  margin-bottom: 24px;
+}
+
+.more-cs-section {
+  background: #fafaf8;
+  padding: 80px 20px;
+  border-top: 1px solid #f0f0f0;
+}
+.more-cs-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.more-cs-inner h2 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: -1.2px;
+  margin-bottom: 32px;
+}
+.more-cs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.more-cs-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 28px;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform .2s, box-shadow .2s;
+}
+.more-cs-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.05);
+}
+.more-cs-card h3 {
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.35;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+@media (max-width: 809px) {
+  .cs-detail-hero h1 { font-size: 32px; letter-spacing: -1.4px; }
+  .cs-stats-grid { grid-template-columns: 1fr; }
+  .more-cs-grid { grid-template-columns: 1fr; }
+  .cs-article { font-size: 15px; line-height: 1.65; }
+}
+
+</style>
+</head>
+<body>
+
+<header class="header">
+  <a href="../.././" class="header-logo">
+    <img src="../../assets/Hw0YffCzJiSNh6wcImEL86SRHJY.png" alt="The Kiln">
+    <span class="logo-text">The Kiln</span>
+    <span class="logo-sub">a 2X company</span>
+  </a>
+  <nav class="header-nav">
+    <a href="../../case-studies/">Case Studies</a>
+    <a href="../../recruiting/">Recruiting</a>
+    <a href="https://gtmcookbook.beehiiv.com/" target="_blank" rel="noopener">Newsletter</a>
+  </nav>
+  <a href="../../contact/" class="btn-talk">👋 Talk with us</a>
+</header>
+
+<div class="announcement">
+  <span class="badge">NEW</span>
+  <span class="text">The Kiln has been acquired by 2X!</span>
+  <a href="https://www.globenewswire.com/news-release/2026/01/06/3213831/0/en/2X-Acquires-Leading-Clay-Partner-The-Kiln-Expands-Marketing-as-a-Service-to-Go-to-Market-Orchestration.html" target="_blank" rel="noopener" class="learn-more">
+    <img src="../../assets/8XWIXJtmXO7STedZbwi8rvVprig.png" alt="">
+    Learn More
+  </a>
+</div>
+
+<main>
+  <div class="cs-detail-hero">
+    <a href="../../case-studies/" class="cs-back">&larr; Back to all case studies</a>
+    <img src="../../assets/LkrVGJeHfgCMXwa8n2f9rBVg.jpg" alt="" class="cs-logo-hero">
+    <h1>How Crescendo Grew Quarterly Pipeline By $14M In 4 Months With The Kiln</h1>
+    
+    
+      <div class="cs-quote-box">
+        "The Kiln has been invaluable to the success of our GTM efforts"
+      </div>
+    
+    
+      <div class="cs-stats-grid">
+        
+          <div class="cs-stat-card">
+            <div class="cs-stat-number">$14M</div>
+            <div class="cs-stat-label">Performance Result</div>
+          </div>
+        
+
+          <div class="cs-stat-card">
+            <div class="cs-stat-number">67%</div>
+            <div class="cs-stat-label">Performance Result</div>
+          </div>
+        
+
+          <div class="cs-stat-card">
+            <div class="cs-stat-number">3x</div>
+            <div class="cs-stat-label">Performance Result</div>
+          </div>
+        
+      </div>
+    
+  </div>
+
+  <article class="cs-article">
+    
+      <h2>How Crescendo Grew Quarterly Pipeline By $14M  In 4 Months With The Kiln</h2>
+      
+    
+
+      <h2>How Crescendo Grew Quarterly Pipeline By $14M In 4 Months With The Kiln</h2>
+      
+    
+
+      <h2>Overview</h2>
+      <p>Crescendo, an AI customer-experience platform that automates support and contact-center work for mid-market and enterprise companies, is scaling fast and wanted a go-to-market engine built to match. Rather than run one-off campaigns, The Kiln built the system underneath the growth: an ICP model that scores the entire market, contact-level scoring that finds the right buyer, and a repeatable, automated multi-channel motion. Over the partnership, quarterly pipeline climbed from $21M to $35M.</p>
+<p>As a company building on frontier AI itself, Crescendo wanted the same from its GTM stack. Claude runs inside the live workflow, screening every sourced company before any paid enrichment, and Claude Code is how The Kiln builds, audits and tests every change to the engine.</p>
+    
+
+      <h2>The Challenge: Turning Strong Demand Into a Scalable Engine</h2>
+      <p>Crescendo had real demand and an ambitious growth target. The opportunity: turn a large addressable market into a systematic, data-driven motion, one that tells the team exactly which accounts to pursue, reaches the right people inside them, and launches new campaigns at speed. That meant three things: a scoring model that predicts revenue, precision at the contact level, and the automation to run it all at scale.</p>
+<p>Scoring an entire market also raises the stakes on getting it right. An AI step running on the wrong companies wastes enrichment spend, a scorer that drifts sends reps after the wrong accounts, and a CRM fault can quietly hold good leads back from sales.</p>
+    
+
+      <h2>The Kiln's Approach: Build the Engine, Not the Campaign</h2>
+      <p>An ICP model that scores the entire market. The Kiln built a multi-dimensional 1-to-100 scoring model and ran it across 50K+ companies in Crescendo's TAM, scoring the entire database overnight, with a tier and clear reasoning on every account. Validated against a year of closed deals, the top tier converts 3x better, with 6x the pipeline per account, so the team spends its time where it pays off.</p>
+<p>Claude as the first filter. Before any paid enrichment runs, Claude Sonnet 5 checks every sourced company's industry and business model against Crescendo's ICP. The Kiln tested models side by side and chose Claude for the steps that need to reason over rich, record-level context. In validation, the Claude screen matched 96 of 100 companies, with no disagreements on industry or competitors.</p>
+<p>Claude Code behind every change. The Kiln uses Claude Code to audit, fix and test the scoring engine. It traced a slow score inflation to the model calculating a weighted average by hand and moved the scorer to count-based tiering, removing the drift entirely. A full audit of the scoring sub-functions found matching bugs and dead prompts, and the refactor cut their cost by about 60% per row. To prove each change was safe, The Kiln built a code version of the scorer and shadow-ran it across 13,868 accounts: it matched production on 97.4%, and every difference traced back to a rule the original prompt was breaking. After every update, open opportunities are re-scored and compared so the team knows exactly which accounts moved, and why.</p>
+<p>Contact scoring that finds the right buyer. On top of the account score, The Kiln scores and ranks the people inside each account, so reps open with the buyers most likely to engage, not just the right company.</p>
+<p>A repeatable, automated campaign engine. Its always-on ABM motion, Map & Attack, runs email, LinkedIn, and calls together as one coordinated play, and event-scraping automation turns each event, speakers, attendees, and engagers, into a sourced, scored campaign in days. Consolidated workflows cut the time to launch a new campaign from weeks to days.</p>
+<p>A CRM Claude can read. The Kiln connects Claude directly to Crescendo's HubSpot and Salesforce to pull data, map fields and diagnose routing. That is how the team found a router fault that had stranded 2,654 contacts at MQL [confirm: and got them back to sales]. Scores, tiers and reasoning are written back to about 10,000 matched HubSpot companies, so reps see why each account ranks where it does.</p>
+    
+
+      <h2>The Results: A Compounding Pipeline Engine</h2>
+      
+    
+
+      <h2>Conclusion: The System Behind the Growth</h2>
+      <p>Crescendo no longer runs campaigns one at a time, it runs an engine that scores the market, finds the right buyers, and launches at speed, and it keeps compounding as the company grows. With Claude inside the workflow and Claude Code behind every change, it also keeps getting cheaper and more accurate, and Crescendo's own team now builds its own Claude tools on top of it.</p>
+    
+
+      <h2>How TwelveLabs Consolidated a Fragmented Revops Stack into an Efficient GTM Engine</h2>
+      
+    
+
+      <h2>How T-ROC Generated More Than $40m in Pipeline with The Kiln</h2>
+      
+    
+
+      <h2>How AdRoll Eliminated a 3-Day Signal Lag With a Scalable Signal Engine</h2>
+      
+    
+
+      <h2>How Azuga Went From 640+ Hours of Manual Work Per Week to a Scalable Data Engine</h2>
+      
+    
+
+      <h2>How Sendoso Created an AI-Forward, Scalable GTM Motion with The Kiln</h2>
+      
+    
+
+      <h2>How Hologram improved their GTM efficiency by 90% with The Kiln</h2>
+      
+    
+
+      <h2>How Daxko Completely Transformed Their GTM Motion with The Kiln</h2>
+      
+    
+
+      <h2>How Loxo Used AI-Powered Market Mapping to Prioritize 200,000+ Accounts</h2>
+      
+    
+
+      <h2>How Clientell Booked 30 Meetings in 3 Days with A Targeted Dreamforce Campaign</h2>
+      
+    
+
+      <h2>How Redocs Transformed Their Lead Enrichment & Outreach with The Kiln</h2>
+      
+    
+  </article>
+
+  <section class="more-cs-section">
+    <div class="more-cs-inner">
+      <h2>More case studies</h2>
+      <div class="more-cs-grid">
+        
+      <div class="more-cs-card">
+        <h3>How TwelveLabs Consolidated a Fragmented Revops Stack into an Efficient GTM Engine</h3>
+        <a href="../../case-studies/how-twelvelabs-consolidated-a-fragmented-revops-stack-into-an-efficient-gtm-engine/" class="read-story">
+          Read story
+          <img src="../../assets/W842iaurnoQg11E9EXsAgVn0Hw.png" alt="">
+        </a>
+      </div>
+    
+
+      <div class="more-cs-card">
+        <h3>How T-ROC Generated More Than $40m in Pipeline with The Kiln</h3>
+        <a href="../../case-studies/troc/" class="read-story">
+          Read story
+          <img src="../../assets/W842iaurnoQg11E9EXsAgVn0Hw.png" alt="">
+        </a>
+      </div>
+    
+
+      <div class="more-cs-card">
+        <h3>How AdRoll Eliminated a 3-Day Signal Lag With a Scalable Signal Engine</h3>
+        <a href="../../case-studies/how-adroll-eliminated-a-3-day-signal-lag-with-a-scalable-signal-engine/" class="read-story">
+          Read story
+          <img src="../../assets/W842iaurnoQg11E9EXsAgVn0Hw.png" alt="">
+        </a>
+      </div>
+    
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="cta-section">
+  <p class="section-label">BOOK A DEMO</p>
+  <h2 class="section-heading">Get in touch today to level-up your processes</h2>
+  <p class="cta-sub">Partnered with leading go-to-market teams to automate outbound, create dashboards, and streamline operations.</p>
+  <a href="../../contact/" class="btn-talk-white">👋 Talk with us</a>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="../../assets/YLwP4kyyM1s6fcKAl00uLvuMhGg.png" alt="The Kiln">
+      <p>The Kiln is a team of GTM experts, data scientists, and former Clay employees that help the world's leading RevOps and growth teams scale their most creative ideas.</p>
+    </div>
+    <div class="footer-col">
+      <h4>About us</h4>
+      <a href="../.././">Home</a>
+      <a href="../../case-studies/">Case Studies</a>
+      <a href="https://www.linkedin.com/company/the-kiln-agency/" target="_blank" rel="noopener">Follow us on LinkedIn</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="../../learn/">Tutorials</a>
+      <a href="../../toolstack/">Tools</a>
+      <a href="https://gtmcookbook.beehiiv.com/" target="_blank" rel="noopener">Newsletter</a>
+    </div>
+  </div>
+</footer>
+</body></html>

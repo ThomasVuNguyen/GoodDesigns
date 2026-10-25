@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kind Words - The Kiln: Automate Sales Flows & Save time</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500;1,9..40,600;1,9..40,700&display=swap" rel="stylesheet">
+<style>
+/* === RESET === */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; color: #000; background: #fff; overflow-x: hidden; }
+a { text-decoration: none; color: inherit; }
+img { display: block; max-width: 100%; height: auto; }
+ul { list-style: none; }
+
+.header {
+  position: sticky; top: 0; z-index: 100;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  padding: 0 40px;
+  height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+  width: 100%;
+}
+.header-logo { display: flex; align-items: center; gap: 6px; font-weight: 700; font-size: 15px; white-space: nowrap; }
+.header-logo img { height: 20px; width: auto; }
+.header-logo .logo-text { font-size: 14px; font-weight: 700; }
+.header-logo .logo-sub { color: #999; font-weight: 400; font-size: 13px; margin-left: 4px; }
+.header-nav { display: flex; gap: 28px; }
+.header-nav a { font-size: 14px; font-weight: 500; color: #333; transition: color .2s; }
+.header-nav a:hover { color: #000; }
+.btn-talk {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #111; color: #fff;
+  padding: 10px 20px; border-radius: 100px;
+  font-size: 14px; font-weight: 500;
+  border: none; cursor: pointer; transition: opacity .2s;
+  white-space: nowrap;
+}
+.btn-talk:hover { opacity: .85; }
+
+.announcement {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 14px 20px;
+  background: #fff;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #f0f0f0;
+}
+.announcement .badge {
+  background: #111; color: #fff;
+  padding: 1px 8px; border-radius: 100px;
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .5px;
+}
+.announcement .text { font-size: 14px; font-weight: 500; color: #333; }
+.announcement .learn-more {
+  background: #015870; color: #fff;
+  padding: 3px 12px; border-radius: 100px;
+  font-size: 12px; font-weight: 600;
+  display: inline-flex; align-items: center; gap: 6px;
+}
+.announcement .learn-more img { width: 14px; height: 14px; }
+
+.cta-section {
+  background: #1a1a1a; color: #fff;
+  padding: 100px 40px;
+  text-align: center;
+}
+.cta-section .section-label { color: #888; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 2.5px; margin-bottom: 12px; }
+.cta-section .section-heading { color: #fff; margin: 0 auto 16px; max-width: 600px; font-size: 48px; font-weight: 700; letter-spacing: -2.4px; }
+.cta-sub { font-size: 16px; color: #999; margin-bottom: 36px; }
+.btn-talk-white {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #fff; color: #000;
+  padding: 12px 24px; border-radius: 100px;
+  font-size: 14px; font-weight: 600;
+  border: none; cursor: pointer; transition: opacity .2s;
+}
+.btn-talk-white:hover { opacity: .9; }
+
+.footer {
+  background: #1a1a1a; color: #fff;
+  padding: 48px 40px 36px;
+  border-top: 1px solid #333;
+}
+.footer-inner {
+  max-width: 1100px; margin: 0 auto;
+  display: grid; grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+.footer-brand p { font-size: 13px; color: #888; line-height: 1.6; margin-top: 12px; max-width: 320px; }
+.footer-brand img { height: 32px; }
+.footer-col h4 {
+  font-size: 12px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 1.5px; margin-bottom: 14px; color: #888;
+}
+.footer-col a {
+  display: block; font-size: 14px; color: #bbb;
+  padding: 3px 0; transition: color .2s;
+}
+.footer-col a:hover { color: #fff; }
+
+@media (max-width: 809px) {
+  .header { padding: 0 16px; height: 52px; }
+  .header-nav { display: none; }
+  .header-logo .logo-sub { display: none; }
+  .btn-talk { padding: 8px 16px; font-size: 13px; }
+  .announcement { padding: 10px 16px; gap: 6px; }
+  .announcement .text { font-size: 12px; }
+  .cta-section { padding: 60px 20px; }
+  .cta-section .section-heading { font-size: 28px; }
+  .footer { padding: 36px 20px 28px; }
+  .footer-inner { grid-template-columns: 1fr; gap: 28px; }
+}
+
+
+.kw-hero {
+  padding: 80px 20px 40px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.kw-hero h1 {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: -2.8px;
+  line-height: 1.05;
+  margin-bottom: 20px;
+}
+.kw-hero h1 em { font-style: italic; }
+
+.kw-section {
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+}
+.kw-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -1.2px;
+  margin-bottom: 32px;
+}
+.kw-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.kw-card {
+  background: #f5f5f0;
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.kw-quote {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+.kw-author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.kw-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.kw-name {
+  font-size: 14px;
+  font-weight: 700;
+}
+.kw-role {
+  font-size: 12px;
+  color: #666;
+}
+
+@media (max-width: 900px) {
+  .kw-hero h1 { font-size: 34px; letter-spacing: -1.7px; }
+  .kw-grid { grid-template-columns: 1fr; }
+}
+
+</style>
+</head>
+<body>
+
+<header class="header">
+  <a href="../" class="header-logo">
+    <img src="../assets/Hw0YffCzJiSNh6wcImEL86SRHJY.png" alt="The Kiln">
+    <span class="logo-text">The Kiln</span>
+    <span class="logo-sub">a 2X company</span>
+  </a>
+  <nav class="header-nav">
+    <a href="../case-studies/">Case Studies</a>
+    <a href="../recruiting/">Recruiting</a>
+    <a href="https://gtmcookbook.beehiiv.com/" target="_blank" rel="noopener">Newsletter</a>
+  </nav>
+  <a href="../contact/" class="btn-talk">👋 Talk with us</a>
+</header>
+
+<div class="announcement">
+  <span class="badge">NEW</span>
+  <span class="text">The Kiln has been acquired by 2X!</span>
+  <a href="https://www.globenewswire.com/news-release/2026/01/06/3213831/0/en/2X-Acquires-Leading-Clay-Partner-The-Kiln-Expands-Marketing-as-a-Service-to-Go-to-Market-Orchestration.html" target="_blank" rel="noopener" class="learn-more">
+    <img src="../assets/8XWIXJtmXO7STedZbwi8rvVprig.png" alt="">
+    Learn More
+  </a>
+</div>
+
+<main>
+  <section class="kw-hero">
+    <h1>Here's what our <em>clients</em> (and the industry) say about us:</h1>
+  </section>
+
+  <section class="kw-section">
+    <h2>Kind words from our clients:</h2>
+    <div class="kw-grid">
+
+    <div class="kw-card">
+      <div class="kw-quote">"The Kiln are true Clay experts. They came up with new ideas for our business that were extremely valuable- everything exceeded our expectations and they went above and beyond to deliver the outcomes we are looking for. I could not recommend The Kiln more if you're looking for a Clay agency."</div>
+      <div class="kw-author">
+        <img src="../assets/Hb3Fk2puxFqF8RySnFHQQJJjuCU.jpeg" alt="Stehl Carriere" class="kw-avatar">
+        <div>
+          <div class="kw-name">Stehl Carriere</div>
+          <div class="kw-role">Head of Special Projects</div>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="kw-card">
+      <div class="kw-quote">"One of the biggest things I’ve learned in taking over our Clay motion at Sendoso is that partnering with the right agency really matters, and The Kiln has been incredible."</div>
+      <div class="kw-author">
+        <img src="../assets/Hb3Fk2puxFqF8RySnFHQQJJjuCU.jpeg" alt="Katie Penner" class="kw-avatar">
+        <div>
+          <div class="kw-name">Katie Penner</div>
+          <div class="kw-role">Head of Sender Relations at Sendoso</div>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="kw-card">
+      <div class="kw-quote">"The Kiln crushed it. We hired them to scale campaigns we were setting up manually, and it would take days to launch. They automated everything… it was magical to see. Patrick and Mathias are rockstars at this. If you have the chance to work with them, hire them!"</div>
+      <div class="kw-author">
+        <img src="../assets/fs2YTluJ290XBNvBQTTJlEBdjs0.jpeg" alt="Luiz Cent" class="kw-avatar">
+        <div>
+          <div class="kw-name">Luiz Cent</div>
+          <div class="kw-role">GTM at Terraboost</div>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="kw-card">
+      <div class="kw-quote">"The Kiln has been a game changer for our team! They helped us cut the learning curve in half, allowing us to hit the ground running much faster. If you're looking to implement Clay/AI solutions efficiently, The Kiln is the way to go. Highly recommend!"</div>
+      <div class="kw-author">
+        <img src="../assets/pTK4bOCHkCfAZKbGukXJPy2TfA.png" alt="Kate Hoffer" class="kw-avatar">
+        <div>
+          <div class="kw-name">Kate Hoffer</div>
+          <div class="kw-role">Marketing Director, ReDocs</div>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="kw-card">
+      <div class="kw-quote">"They took my whole TAM, put them into a Clay table and used AI to write 50,000 emails that people actually answer! Worth every dime."</div>
+      <div class="kw-author">
+        <img src="../assets/BneCgfyVVG987fwGSIcaPtbeAgw.jpeg" alt="Harrison Cuker" class="kw-avatar">
+        <div>
+          <div class="kw-name">Harrison Cuker</div>
+          <div class="kw-role">Head of Sales at Antimetal</div>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="kw-card">
+      <div class="kw-quote">"Working with The Kiln team was great - their work was fast and effective. They helped us set up several detailed waterfall tables in Clay and recorded detailed SOPs for our team to use after the engagement. They made everything so easy."</div>
+      <div class="kw-author">
+        <img src="../assets/kRiTonGZJYeiarcncT2epmnlSk0.png" alt="Jon Caldwell" class="kw-avatar">
+        <div>
+          <div class="kw-name">Jon Caldwell</div>
+          <div class="kw-role">Growth at Bunker</div>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="kw-card">
+      <div class="kw-quote">"The Kiln was extremely knowledgable and answered all of my questions. Really good agency who was willing to go above and beyond to make sure I was able to move forward. Would highly recommend their services!"</div>
+      <div class="kw-author">
+        <img src="../assets/zGw6fJhqPTCAoRwm1DYo6seXo.png" alt="Joachim Wernersson" class="kw-avatar">
+        <div>
+          <div class="kw-name">Joachim Wernersson</div>
+          <div class="kw-role">Founder of Weblify</div>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="kw-card">
+      <div class="kw-quote">"The Kiln has been incredible in mapping out and dialing in all of our Clay workflows for more automated outbound personalization. Huge fans!"</div>
+      <div class="kw-author">
+        <img src="../assets/Hb3Fk2puxFqF8RySnFHQQJJjuCU.jpeg" alt="Jack Shannon" class="kw-avatar">
+        <div>
+          <div class="kw-name">Jack Shannon</div>
+          <div class="kw-role">Founder and CEO of Recess</div>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="kw-card">
+      <div class="kw-quote">""We're spending so much more time selling now, instead of actively preparing to sell.”"</div>
+      <div class="kw-author">
+        <img src="../assets/Hb3Fk2puxFqF8RySnFHQQJJjuCU.jpeg" alt="Jonathan Rosenfeld" class="kw-avatar">
+        <div>
+          <div class="kw-name">Jonathan Rosenfeld</div>
+          <div class="kw-role">Head of Marketing at Hologram</div>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="kw-card">
+      <div class="kw-quote">"Before working with The Kiln, we were just blasting emails to everyone. It was a total shotgun approach. Now, we have a much more targeted approach, and it's making a real difference."</div>
+      <div class="kw-author">
+        <img src="../assets/Hb3Fk2puxFqF8RySnFHQQJJjuCU.jpeg" alt="Cynthia Barbarito" class="kw-avatar">
+        <div>
+          <div class="kw-name">Cynthia Barbarito</div>
+          <div class="kw-role">Director of Marketing at T-ROC</div>
+        </div>
+      </div>
+    </div>
+  
+    </div>
+  </section>
+
+  <section class="kw-section">
+    <h2>Quotes from Market Leaders:</h2>
+    <div class="kw-grid">
+
+    <div class="kw-card">
+      <div class="kw-quote">"I am completely in awe of the Clay tables that The Kiln effortlessly creates and what they can do. Who doesn’t want to be doing fully-automated, hyper-personalized, multi-channel outbound? If that’s what you want, The Kiln is your agency."</div>
+      <div class="kw-author">
+        <img src="../assets/fs2YTluJ290XBNvBQTTJlEBdjs0.jpeg" alt="Adam Robinson" class="kw-avatar">
+        <div>
+          <div class="kw-name">Adam Robinson</div>
+          <div class="kw-role">Founder of Retention.com and RB2B</div>
+        </div>
+      </div>
+    </div>
+  
+
+    <div class="kw-card">
+      <div class="kw-quote">"The Kiln is consistently building some of the highest-converting, most innovative Clay workflows in the entire outbound ecosystem."</div>
+      <div class="kw-author">
+        <img src="../assets/Hb3Fk2puxFqF8RySnFHQQJJjuCU.jpeg" alt="Eric Nowoslawski" class="kw-avatar">
+        <div>
+          <div class="kw-name">Eric Nowoslawski</div>
+          <div class="kw-role">Founder of Growth Engine X, Outbound Wizard</div>
+        </div>
+      </div>
+    </div>
+  
+    </div>
+  </section>
+</main>
+
+<section class="cta-section">
+  <p class="section-label">BOOK A DEMO</p>
+  <h2 class="section-heading">Get in touch today to level-up your processes</h2>
+  <p class="cta-sub">Partnered with leading go-to-market teams to automate outbound, create dashboards, and streamline operations.</p>
+  <a href="../contact/" class="btn-talk-white">👋 Talk with us</a>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="../assets/YLwP4kyyM1s6fcKAl00uLvuMhGg.png" alt="The Kiln">
+      <p>The Kiln is a team of GTM experts, data scientists, and former Clay employees that help the world's leading RevOps and growth teams scale their most creative ideas.</p>
+    </div>
+    <div class="footer-col">
+      <h4>About us</h4>
+      <a href="../">Home</a>
+      <a href="../case-studies/">Case Studies</a>
+      <a href="https://www.linkedin.com/company/the-kiln-agency/" target="_blank" rel="noopener">Follow us on LinkedIn</a>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <a href="../learn/">Tutorials</a>
+      <a href="../toolstack/">Tools</a>
+      <a href="https://gtmcookbook.beehiiv.com/" target="_blank" rel="noopener">Newsletter</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

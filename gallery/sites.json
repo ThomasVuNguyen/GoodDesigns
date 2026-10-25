@@ -44,6 +44,6 @@
     { "slug": "google-org", "name": "Google.org", "folder": "GoogleOrg", "reference": "https://www.google.org/", "tagline": "Unlocking potential for everyone, everywhere · project carousel with story modals, ambient video and focus cards", "captured": "2026-10-19" },
     { "slug": "wired-world-fair", "name": "WIRED World Fair", "folder": "WiredWorldFair", "reference": "https://www.wired.com/wiredworldfair/", "tagline": "A Festival of the Future · ASCII-drawn maps and portraits, lineup accordions, festival site plan and schedule grid", "captured": "2026-10-22" },
     { "slug": "you-can-just-build-things", "name": "You Can Just Build Things", "folder": "YouCanJustBuildThings", "reference": "https://youcanjustbuildthings.openai.chatgpt.site", "tagline": "OpenAI hardware community showcase · interactive hero with device parallax, ranked project gallery with search and upvotes", "captured": "2026-10-24" },
-    { "slug": "thekiln", "name": "The Kiln", "folder": "TheKiln", "reference": "https://thekiln.com/", "tagline": "Expert GTM Engineers, at your fingertips", "captured": "2026-10-25" }
+    { "slug": "thekiln", "name": "The Kiln", "folder": "TheKiln", "reference": "https://thekiln.com/", "tagline": "Expert GTM Engineers, at your fingertips · complete case studies, recruiting, toolstack, tutorials and blog", "captured": "2026-10-25" }
   ]
 }
