@@ -55,6 +55,16 @@ a { color: inherit; }
 .breakdown-button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 .foot { margin-top: 72px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
 
+/* Research cards: external bookmarks with a domain chip on the thumbnail. */
+.card--research .thumb { position: relative; }
+.card--research .thumb img { object-position: top; }
+.domain-chip { position: absolute; left: 10px; bottom: 10px; display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 999px; background: rgba(21, 20, 18, 0.55); color: var(--bg); font: 500 12px/1 var(--sans); backdrop-filter: blur(6px); transition: background .2s ease; }
+.card--research:hover .domain-chip { background: var(--accent); }
+.research-label { padding: 14px 2px 0; font: 600 11px/1 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+.card--research .meta { padding-top: 6px; }
+.card--research .meta h2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.card--research .tag { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
 .viewer { position: fixed; inset: 0; background: #fff; }
 #frame { display: block; width: 100%; height: 100%; border: 0; background: #fff; }
 /* Videos play centred on a dark ground: YouTube at the largest 16:9 that fits, an X post at its own width. */
@@ -251,7 +261,8 @@ a { color: inherit; }
 
 @media (max-width: 720px) {
   .gallery { padding: 40px 18px 28px; }
-  .tabs { top: 12px; margin-bottom: 40px; }
+  .tabs { top: 12px; margin-bottom: 40px; max-width: calc(100vw - 36px); overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .tabs::-webkit-scrollbar { display: none; }
   .grid { grid-template-columns: 1fr; }
   .grid--folks { grid-template-columns: 1fr; }
   .viewer[data-kind="youtube"] #frame { width: 100vw; border-radius: 0; }

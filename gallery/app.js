@@ -2,8 +2,9 @@
   const $ = (id) => document.getElementById(id);
   // The gallery shows one tab at a time: #/ is sites, #/videos is videos, #/posts is posts, #/folks is folks.
   const tabs = $('tabs');
-  const tabHash = { sites: '#/', videos: '#/videos', posts: '#/posts', folks: '#/folks' };
+  const tabHash = { sites: '#/', videos: '#/videos', posts: '#/posts', folks: '#/folks', research: '#/research' };
   const tabOf = (hash) => (
+    hash === 'research' || hash.startsWith('research/') ? 'research' :
     hash === 'folks' || hash.startsWith('folks/') ? 'folks' :
     hash === 'posts' || hash.startsWith('posts/') ? 'posts' :
     hash === 'videos' || hash.startsWith('videos/') ? 'videos' : 'sites'
@@ -20,8 +21,8 @@
   // Before the lists load, so a link to videos or posts never shows the sites heading first.
   showTab(tabOf(location.hash.replace(/^#\/?/, '')));
 
-  const [{ repo, branch, sites }, { videos }, { posts }, { folks }] = await Promise.all(
-    ['sites.json', 'videos.json', 'posts.json', 'folks.json'].map(async (f) => (await fetch(f)).json()),
+  const [{ repo, branch, sites }, { videos }, { posts }, { folks }, { research }] = await Promise.all(
+    ['sites.json', 'videos.json', 'posts.json', 'folks.json', 'research.json'].map(async (f) => (await fetch(f)).json()),
   );
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
   const srcUrl = (s) => `${repo}/tree/${branch}/${s.folder}`;
@@ -46,6 +47,7 @@
   $('n-videos').textContent = videos.length;
   $('n-posts').textContent = posts.length;
   $('n-folks').textContent = folks.length;
+  $('n-research').textContent = research.length;
 
   $('grid').innerHTML = sites.map((s) => `
     <li class="card">
@@ -116,6 +118,23 @@
       </div>
     </li>
   `).join('') || '<li class="empty">No folks yet.</li>';
+
+  const domainOf = (url) => { try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return ''; } };
+
+  $('research-grid').innerHTML = research.map((r) => `
+    <li class="card card--research">
+      <a class="thumb" href="${esc(r.url)}" target="_blank" rel="noopener" aria-label="Visit ${esc(r.title)}">
+        <img src="thumbs/research/${r.slug}.jpg?v=${r.captured}" alt="${esc(r.title)} preview" loading="lazy" width="1200" height="750">
+        <span class="domain-chip" aria-hidden="true">${esc(domainOf(r.url))} ↗</span>
+      </a>
+      <div class="research-label">${esc(r.org)} · ${esc(r.kind)}</div>
+      <div class="meta">
+        <h2><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a></h2>
+        <a class="src" href="${esc(r.url)}" target="_blank" rel="noopener">Visit ↗</a>
+      </div>
+      <p class="tag">${esc(r.note)}</p>
+      ${r.recreation ? `<a class="breakdown-button" href="#/${esc(r.recreation)}">Recreation</a>` : ''}
+    </li>`).join('') || '<li class="empty">No research yet.</li>';
 
   function renderPost(p) {
     const formattedText = esc(p.text || '')
@@ -540,7 +559,7 @@
     document.body.style.overflow = open ? 'hidden' : '';
     showTab(open ? (items[i].kind.startsWith('folk') ? 'folks' : items[i].kind === 'post' ? 'posts' : items[i].kind === 'video' ? 'videos' : 'sites') : tabOf(hash));
     if (!open) {
-      document.title = tab === 'folks' ? 'Good Folks · GoodDesigns' : tab === 'posts' ? 'Posts · GoodDesigns' : tab === 'videos' ? 'Videos · GoodDesigns' : 'GoodDesigns';
+      document.title = tab === 'research' ? 'Good Research · GoodDesigns' : tab === 'folks' ? 'Good Folks · GoodDesigns' : tab === 'posts' ? 'Posts · GoodDesigns' : tab === 'videos' ? 'Videos · GoodDesigns' : 'GoodDesigns';
       frame.removeAttribute('src');
       postView.hidden = true;
       postView.innerHTML = '';
