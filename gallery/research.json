@@ -9,6 +9,16 @@
       "note": "Building blocks for autonomous wet labs — AI agents grounded in biological reality",
       "captured": "2026-10-24",
       "added": "2026-10-24"
+    },
+    {
+      "slug": "alphagenome-atlas",
+      "title": "AlphaGenome Atlas",
+      "url": "https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/",
+      "org": "Google DeepMind",
+      "kind": "research post",
+      "note": "A predictive map of every possible DNA letter change in the human genome",
+      "captured": "2026-10-24",
+      "added": "2026-10-24"
     }
   ]
 }
