@@ -1,0 +1,17 @@
+.short-workspace { display: grid; grid-template-columns: minmax(260px, 420px) minmax(0, 1fr); gap: clamp(28px, 6vw, 88px); align-items: center; }
+.short-workspace .player-card video { width: 100%; aspect-ratio: 9 / 16; }
+.short-notes { max-width: 48ch; }
+.short-notes .eyebrow { color: var(--accent); font-size: 12px; font-weight: 650; letter-spacing: .1em; text-transform: uppercase; }
+.short-notes h2 { margin: 14px 0 22px; font: 400 clamp(32px, 4vw, 52px)/1.05 var(--serif); letter-spacing: -.02em; }
+.short-notes p { margin: 0 0 18px; color: var(--muted); font-size: 17px; }
+.frame-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.frame-card a, .frame-preview img { aspect-ratio: 9 / 16; }
+.frame-card figcaption button { opacity: 1; pointer-events: auto; }
+.frame-preview { width: min(300px, calc(100vw - 32px)); }
+@media (max-width: 900px) { .frame-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+@media (max-width: 650px) {
+  .short-workspace { grid-template-columns: 1fr; justify-items: center; }
+  .short-workspace .player-card { width: min(100%, 360px); }
+  .short-notes { max-width: 100%; }
+  .frame-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}

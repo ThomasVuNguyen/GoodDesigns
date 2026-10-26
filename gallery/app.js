@@ -1,13 +1,14 @@
 (async () => {
   const $ = (id) => document.getElementById(id);
-  // The gallery shows one tab at a time: #/ is sites, #/videos is videos, #/posts is posts, #/insta is Instagram, #/folks is folks.
+  // The gallery shows one tab at a time.
   const tabs = $('tabs');
-  const tabHash = { sites: '#/', videos: '#/videos', posts: '#/posts', insta: '#/insta', folks: '#/folks', research: '#/research' };
+  const tabHash = { sites: '#/', videos: '#/videos', shorts: '#/shorts', posts: '#/posts', insta: '#/insta', folks: '#/folks', research: '#/research' };
   const tabOf = (hash) => (
     hash === 'research' || hash.startsWith('research/') ? 'research' :
     hash === 'folks' || hash.startsWith('folks/') ? 'folks' :
     hash === 'insta' || hash.startsWith('insta/') ? 'insta' :
     hash === 'posts' || hash.startsWith('posts/') ? 'posts' :
+    hash === 'shorts' || hash.startsWith('shorts/') ? 'shorts' :
     hash === 'videos' || hash.startsWith('videos/') ? 'videos' : 'sites'
   );
   let tab;
@@ -22,8 +23,8 @@
   // Before the lists load, so a link to videos or posts never shows the sites heading first.
   showTab(tabOf(location.hash.replace(/^#\/?/, '')));
 
-  const [{ repo, branch, sites }, { videos }, { posts }, { insta }, { folks }, { research }] = await Promise.all(
-    ['sites.json', 'videos.json', 'posts.json', 'insta.json', 'folks.json', 'research.json'].map(async (f) => (await fetch(f)).json()),
+  const [{ repo, branch, sites }, { videos }, { shorts }, { posts }, { insta }, { folks }, { research }] = await Promise.all(
+    ['sites.json', 'videos.json', 'shorts.json', 'posts.json', 'insta.json', 'folks.json', 'research.json'].map(async (f) => (await fetch(f)).json()),
   );
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
   const srcUrl = (s) => `${repo}/tree/${branch}/${s.folder}`;
@@ -47,6 +48,7 @@
 
   $('n-sites').textContent = sites.length;
   $('n-videos').textContent = videos.length;
+  $('n-shorts').textContent = shorts.length;
   $('n-posts').textContent = posts.length;
   $('n-insta').textContent = insta.length;
   $('n-folks').textContent = folks.length;
@@ -77,6 +79,20 @@
       <p class="tag">${esc(v.note || v.author)}</p>
       ${v.breakdown ? `<a class="breakdown-button" href="breakdowns/${encodeURIComponent(v.breakdown)}.html">Breakdown</a>` : ''}
     </li>`).join('') || '<li class="empty">No videos yet.</li>';
+
+  $('short-grid').innerHTML = shorts.map((v) => `
+    <li class="card card--short">
+      <a class="thumb" href="#/shorts/${esc(v.slug)}" aria-label="Play ${esc(v.title)}">
+        <img src="thumbs/shorts/${esc(v.slug)}.jpg" alt="" loading="lazy" width="720" height="1280">
+        <span class="play" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+      </a>
+      <div class="meta">
+        <h2><a href="#/shorts/${esc(v.slug)}">${esc(v.title)}</a></h2>
+        <a class="src src--icon" href="${esc(v.url)}" target="_blank" rel="noopener" aria-label="Open on YouTube (opens in a new tab)" title="Open on YouTube">${ICON.youtube}</a>
+      </div>
+      <p class="tag">${esc(v.note || v.author)}</p>
+      ${v.breakdown ? `<a class="breakdown-button" href="shorts/${encodeURIComponent(v.breakdown)}.html">See more · ${v.frames} frames</a>` : ''}
+    </li>`).join('') || '<li class="empty">No shorts yet.</li>';
 
   $('post-grid').innerHTML = posts.map((p) => `
     <li class="card card--post">
@@ -628,6 +644,7 @@
   const items = [
     ...sites.map((s) => ({ hash: s.slug, kind: 'site', item: s })),
     ...videos.map((v) => ({ hash: `videos/${v.slug}`, kind: 'video', item: v })),
+    ...shorts.map((v) => ({ hash: `shorts/${v.slug}`, kind: 'short', item: v })),
     ...posts.map((p) => ({ hash: `posts/${p.slug}`, kind: 'post', item: p })),
     ...insta.map((p) => ({ hash: `insta/${p.slug}`, kind: 'insta', item: p })),
     ...folks.flatMap((f) => [
@@ -658,9 +675,9 @@
     $('gallery').hidden = open;
     $('viewer').hidden = !open;
     document.body.style.overflow = open ? 'hidden' : '';
-    showTab(open ? (items[i].kind.startsWith('folk') ? 'folks' : items[i].kind === 'post' ? 'posts' : items[i].kind === 'insta' ? 'insta' : items[i].kind === 'video' ? 'videos' : 'sites') : tabOf(hash));
+    showTab(open ? (items[i].kind.startsWith('folk') ? 'folks' : items[i].kind === 'post' ? 'posts' : items[i].kind === 'insta' ? 'insta' : items[i].kind === 'video' ? 'videos' : items[i].kind === 'short' ? 'shorts' : 'sites') : tabOf(hash));
     if (!open) {
-      document.title = tab === 'research' ? 'Good Research · GoodDesigns' : tab === 'folks' ? 'Good Folks · GoodDesigns' : tab === 'insta' ? 'Good Insta · GoodDesigns' : tab === 'posts' ? 'Posts · GoodDesigns' : tab === 'videos' ? 'Videos · GoodDesigns' : 'GoodDesigns';
+      document.title = tab === 'research' ? 'Good Research · GoodDesigns' : tab === 'folks' ? 'Good Folks · GoodDesigns' : tab === 'insta' ? 'Good Insta · GoodDesigns' : tab === 'posts' ? 'Posts · GoodDesigns' : tab === 'shorts' ? 'Good Shorts · GoodDesigns' : tab === 'videos' ? 'Videos · GoodDesigns' : 'GoodDesigns';
       frame.removeAttribute('src');
       postView.hidden = true;
       postView.innerHTML = '';
@@ -678,7 +695,7 @@
     const isFolk = isFolkProfile || isFolkTalk;
     const name = kind === 'site' ? item.name : isFolkProfile ? `${folk.name} · Archive Profile` : isFolkTalk ? `${talk.title} · ${folk.name}` : item.title;
     $('back').href = isFolkTalk ? `#/folks/${folk.slug}` : tabHash[tab];
-    $('viewer').dataset.kind = isFolk ? 'folk' : kind === 'site' ? 'site' : kind === 'post' ? 'post' : kind === 'insta' ? 'insta' : item.platform;
+    $('viewer').dataset.kind = isFolk ? 'folk' : kind === 'site' ? 'site' : kind === 'post' ? 'post' : kind === 'insta' ? 'insta' : kind === 'short' ? 'short' : item.platform;
     document.title = `${name} · GoodDesigns`;
     $('back').setAttribute('aria-label', isFolkTalk ? `Back to ${folk.name} Profile` : `Back to GoodDesigns from ${name}`);
     const out = kind === 'site' ? srcUrl(item) : isFolkProfile ? (folk.social && folk.social[0] ? folk.social[0].url : '#') : isFolkTalk ? talk.url : item.url;

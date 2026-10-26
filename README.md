@@ -62,6 +62,10 @@ The script fetches the title and author (YouTube oEmbed, or the FxTwitter API fo
 
 Videos with a `breakdown` field in `gallery/videos.json` show a Breakdown button. Their pages, transcripts, compact videos, and WebP frame sequences are committed under `gallery/breakdowns/`. The full-resolution working files stay in `notes/good-videos-video-study/` and are ignored by Git; `python3 scripts/publish-video-breakdowns.py` refreshes the gallery copy from that local study.
 
+## Good Shorts
+
+The **Good Shorts** tab (`#/shorts`) holds vertical motion references. Entries live in `gallery/shorts.json`, thumbnails in `gallery/thumbs/shorts/`, and the "See more" frame studies in `gallery/shorts/`. The first study, Cleo Abram’s *What If You Dove Into the Sun?*, includes a playable 44-second video and one frame per second. Commit these inputs to publish; CI copies them into the gallery.
+
 ## Good Posts
 
 The gallery also has a **Good Posts** tab of notable X and web posts, next to the sites and videos (`#/posts` links straight to it). They open in the same full-screen viewer, embedded from the platform. To add one:

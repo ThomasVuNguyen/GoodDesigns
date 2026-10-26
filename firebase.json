@@ -7,6 +7,7 @@
     "headers": [
       { "source": "/sites/**/*.@(woff2|woff|jpg|jpeg|png|webp|avif|svg|mp3|mp4|webm)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }] },
       { "source": "/breakdowns/**/*.@(jpg|jpeg|png|webp|vtt|mp4)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }] },
+      { "source": "/shorts/**/*.@(jpg|jpeg|png|webp|mp4)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=604800" }] },
       { "source": "/thumbs/**", "headers": [{ "key": "Cache-Control", "value": "public, max-age=86400" }] }
     ]
   }

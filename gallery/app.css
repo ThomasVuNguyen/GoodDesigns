@@ -14,9 +14,9 @@ a { color: inherit; }
 .masthead h1 span { font-style: italic; color: var(--accent); }
 .masthead p { max-width: 46ch; margin: 0 0 24px; color: var(--muted); font-size: 17px; }
 /* Sites or videos, one at a time. The switch stays pinned to the top and lifts once the page scrolls under it. */
-.tabs { position: sticky; top: 16px; z-index: 5; display: flex; gap: 2px; width: max-content; margin: 0 0 56px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); transition: border-color .2s ease, box-shadow .2s ease; }
+.tabs { position: sticky; top: 16px; z-index: 5; display: flex; gap: 2px; width: max-content; max-width: 100%; overflow-x: auto; margin: 0 0 56px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; background: var(--card); transition: border-color .2s ease, box-shadow .2s ease; }
 .tabs[data-stuck] { border-color: rgba(21, 20, 18, 0.1); box-shadow: 0 1px 2px rgba(21, 20, 18, 0.1), 0 6px 18px rgba(21, 20, 18, 0.16); }
-.tabs a { display: inline-flex; align-items: baseline; gap: 7px; padding: 6px 15px; border-radius: 999px; font-size: 14px; text-decoration: none; transition: background .15s ease, color .15s ease; }
+.tabs a { display: inline-flex; align-items: baseline; gap: 7px; flex: none; padding: 6px 15px; border-radius: 999px; font-size: 14px; white-space: nowrap; text-decoration: none; transition: background .15s ease, color .15s ease; }
 .tabs a span { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; transition: color .15s ease; }
 .tabs a:not([aria-current]):hover { color: var(--accent); }
 .tabs a[aria-current] { background: var(--ink); color: var(--bg); }
@@ -42,6 +42,11 @@ a { color: inherit; }
 /* Video and post cards: the title clamps to 2 lines so rows align. */
 .card--video .thumb { position: relative; aspect-ratio: 16 / 9; background: var(--ink); }
 .card--video .thumb img { object-position: center; }
+.grid--shorts { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.card--short .thumb { position: relative; aspect-ratio: 9 / 16; background: var(--ink); }
+.card--short .thumb img { object-position: center; }
+.card--short .meta h2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.card--short:hover .play, .card--short .thumb:focus-visible .play { background: var(--accent); transform: scale(1.1); }
 .card--post .thumb img { object-position: center; }
 .card--video .meta h2, .card--post .meta h2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 /* A small play mark in the corner, so the poster reads first; it warms to the accent on hover. */
@@ -69,6 +74,8 @@ a { color: inherit; }
 #frame { display: block; width: 100%; height: 100%; border: 0; background: #fff; }
 /* Videos play centred on a dark ground: YouTube at the largest 16:9 that fits, an X post at its own width. */
 .viewer[data-kind="youtube"], .viewer[data-kind="x"] { display: grid; place-items: center; background: #0d0c0b; }
+.viewer[data-kind="short"] { display: grid; place-items: center; background: #0d0c0b; }
+.viewer[data-kind="short"] #frame { width: min(calc(100vw - 32px), (100vh - 100px) * 9 / 16); height: auto; aspect-ratio: 9 / 16; border-radius: 10px; background: #000; }
 .viewer[data-kind="youtube"] #frame { width: min(100vw - 48px, (100vh - 112px) * 16 / 9); height: auto; aspect-ratio: 16 / 9; border-radius: 10px; background: #000; }
 .viewer[data-kind="x"] #frame { width: min(100vw - 24px, 560px); height: calc(100vh - 96px); margin-bottom: 48px; background: transparent; color-scheme: normal; }
 
