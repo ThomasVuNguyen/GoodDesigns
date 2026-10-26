@@ -283,5 +283,24 @@
       "text": "transcripts/17-youtube-dP_i7hRvGpE.transcript.txt",
       "kind": "local speech recognition"
     }
+  },
+  {
+    "number": 28,
+    "slug": "youtube-R2_V8Fe5-_A",
+    "title": "How I Master Solo Filmmaking: 3 Rules for Cinematic Videos in 2026",
+    "author": "kaye.creatives",
+    "url": "https://www.youtube.com/watch?v=R2_V8Fe5-_A",
+    "duration": 436.174,
+    "bytes": 51722571,
+    "width": 1920,
+    "height": 1080,
+    "fps": "24000/1001",
+    "second_frames": 436,
+    "scene_frames": 120,
+    "transcript": {
+      "vtt": "transcripts/28-youtube-R2_V8Fe5-_A.vtt",
+      "text": "transcripts/28-youtube-R2_V8Fe5-_A.transcript.txt",
+      "kind": "local speech recognition"
+    }
   }
 ]
