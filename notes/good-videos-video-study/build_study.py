@@ -16,7 +16,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 VIDEOS = json.loads((REPO / "gallery/videos.json").read_text())["videos"]
-NUMBERS = [*range(1, 14), 16, 17, 28]
+NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 34)]
 TAG = re.compile(r"<[^>]*>")
 TIMING = re.compile(r"^((?:\d\d:)?\d\d:\d\d\.\d+)\s+-->")
 SCENE_LOG = re.compile(r"n:\s*(\d+)\s+pts:\s*\d+\s+pts_time:([\d.]+)")
@@ -140,7 +140,7 @@ def transcript(number):
     if vtt.name.endswith(".ja.vtt"):
         kind = "Japanese speech recognition"
     elif vtt.name.endswith(".en.vtt"):
-        kind = "creator captions" if number in (1, 7, 9) else "YouTube auto captions"
+        kind = "creator captions" if number in (1, 7, 9, 29, 30, 32, 33) else "YouTube auto captions"
     else:
         kind = "local speech recognition"
     return {"vtt": str(vtt.relative_to(HERE)), "text": str(out.relative_to(HERE)), "kind": kind}
@@ -184,11 +184,14 @@ def write_pages(items):
         shutil.copy2(REPO / "gallery/thumbs/videos" / f'{item["slug"]}.jpg', HERE / thumb)
         page = f"{name}.html"
 
+        player = (f'<div id="study-video" class="youtube-player" data-youtube-id="{html.escape(item["slug"].removeprefix("youtube-"))}"></div>'
+                  if number >= 29 else
+                  f'<video id="study-video" controls preload="metadata" poster="{thumb}" src="source/{name}.mp4"></video>')
         detail = [topbar(),
                   f'<div class="detail-head"><div><h1>{title}</h1><p>{author} · {format_time(item["duration"])} film</p></div>'
                   f'<a class="source-link" href="{html.escape(item["url"])}" target="_blank" rel="noopener">Watch original ↗</a></div>',
                   '<div class="workspace"><div class="player-card">',
-                  f'<video id="study-video" controls preload="metadata" poster="{thumb}" src="source/{name}.mp4"></video>',
+                  player,
                   '</div>']
 
         tr = item.get("transcript")

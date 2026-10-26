@@ -1,0 +1,1050 @@
+[00:00:00] There is a microscopic technology that now gives
+[00:00:00] us the power to edit our own genes while we're
+[00:00:07] alive to cure certain diseases, possibly prevent
+[00:00:07] others, maybe boost what our bodies can do, or even
+[00:00:15] one day give our kids abilities that nobody has
+[00:00:15] ever had before, effectively putting evolution
+[00:00:21] into our hands. And this is not some sci-fi
+[00:00:21] future. We are already using this technology
+[00:00:27] in real medicines in plants to grow new crops
+[00:00:27] in animals to create new species. It's called
+[00:00:34] "CRISPR" "CRISPR-Cas9" and Jennifer Doudna won the
+[00:00:34] Nobel Prize for discovering it. "It's incredible!
+[00:00:41] It's extraordinary." So deciding how we should use
+[00:00:41] this new superpower will be one of the greatest
+[00:00:47] challenges we have ever faced and one of the
+[00:00:47] biggest opportunities to reduce human suffering
+[00:00:52] So in this video we're going to use specific
+[00:00:52] examples to help you see how gene editing is
+[00:00:58] already affecting your life and help
+[00:00:58] you decide: How should we use it? When
+[00:01:03] is it wrong... and when is it wrong not to?
+[00:01:03] This is Huge Conversations.
+[00:01:09] Genetics! Secret of life! DNA. What does it mean
+[00:01:09] that we have this new power? To eliminate
+[00:01:14] diseases like hemophilia, sickle cell, Alzheimer's,
+[00:01:14] Huntington's, it would almost be unethical not to use it...
+[00:01:27] It's great to be here! Thank you so much for doing
+[00:01:27] this I'm really looking forward to it My goal for
+[00:01:32] this conversation is to work together to explain
+[00:01:32] how this new power to edit DNA might really impact
+[00:01:40] this audience's lives What's possible and how
+[00:01:40] can we help this gene editing future go right
+[00:01:48] the audience that you're talking to is great. They
+[00:01:48] are smart and optimistic and also because we cover
+[00:01:55] so many different things this might be the first
+[00:01:55] time they're ever hearing about CRISPR. For myself
+[00:02:00] I have now done months worth of research for this
+[00:02:00] conversation but I'm no expert. Our bigger goal
+[00:02:06] for this show Huge If True is to explore better
+[00:02:06] futures because we believe that when people are
+[00:02:13] able to see them, they help build them. What's your
+[00:02:13] goal in this conversation? Why do this interview?
+[00:02:19] I share your goals! I think CRISPR is such an
+[00:02:19] exciting technology and it's the beginning of what
+[00:02:26] will be possible in the future with genome editing
+[00:02:26] and how we can manipulate our environment and our
+[00:02:32] bodies to maximize our health and maximize our
+[00:02:32] experience in life and and to really understand
+[00:02:38] our role in the world. So I'd love to share that
+[00:02:38] with everybody in the audience. And I imagine
+[00:02:44] incredible insights and science coming from all
+[00:02:44] of them in the future. I love that. That's Huge If True!
+[00:02:50] To explain why this is a huge moment in human
+[00:02:50] history we need to explain why CRISPR-Cas9 was
+[00:03:00] such a big leap. My understanding is that we've
+[00:03:00] known for over a century that there are specific
+[00:03:05] molecules inside our cells that carry information
+[00:03:05] in a four-part code. And then our cells use groups
+[00:03:11] of that code as a blueprint for how to make the
+[00:03:11] proteins that govern so much about us. From how
+[00:03:17] we look to how we think to how we get or fight
+[00:03:17] disease. But for most of that century we could only
+[00:03:23] read this genetic code. We couldn't change it. Could
+[00:03:23] you help me understand how what you pioneered
+[00:03:29] with Emmanuelle Charpentier was different from the gene
+[00:03:29] therapies and other gene editing systems that
+[00:03:36] came before? What was the big insight and why is it
+[00:03:36] so important? CRISPR is a technology that came out
+[00:03:44] of fundamental science. The very first tool that
+[00:03:44] was used for gene manipulation really was coming
+[00:03:50] from the natural world and that was viruses. Some
+[00:03:50] viruses naturally insert into the human DNA in
+[00:03:57] our cells, HIV is one example of a virus that
+[00:03:57] does that. By studying how viruses manipulate
+[00:04:03] DNA and how they get into DNA there were a lot
+[00:04:03] of insights about how we could potentially as
+[00:04:09] scientists change DNA sequences but we didn't
+[00:04:09] have the tools to do it. And so what happened next
+[00:04:15] was that there were a series of tools developed to
+[00:04:15] find a particular set of letters in the DNA of say
+[00:04:22] a human cell and alter them using tools that
+[00:04:22] were generated for that specific purpose. For the
+[00:04:29] the the wonkier folks in the in the audience
+[00:04:29] these include Zinc-finger nucleases and TALEN
+[00:04:35] proteins. These showed that DNA manipulation
+[00:04:35] was possible and also could be very powerful.
+[00:04:42] But what was challenging with those tools is that
+[00:04:42] they were bespoke meaning you had to make one of
+[00:04:47] them for every single change that you might want
+[00:04:47] to produce in a cell for example. And that meant
+[00:04:53] that they were expensive. They took a long time to
+[00:04:53] produce and then to to deploy. And this is where
+[00:05:00] CRISPR comes in because what viruses and bacteria
+[00:05:00] over eons interacting in nature had figured out is
+[00:05:07] that they could use proteins that were directed
+[00:05:07] by molecules of RNA which are chemical cousins
+[00:05:14] of DNA. They interact with DNA So they look at
+[00:05:14] the DNA sequence on a letter by basis but they
+[00:05:21] allow easy recoding. And so scientists once we
+[00:05:21] understood how that recoding works with RNA we
+[00:05:28] could easily manipulate and change the sequences
+[00:05:28] in DNA that CRISPR can recognize. And that's
+[00:05:33] really the crux of the technology. It becomes
+[00:05:33] a a programmable tool that can be directed to
+[00:05:40] essentially any DNA sequence where it can make
+[00:05:40] a change in a targeted way and in a way that is
+[00:05:46] easily controlled in the lab. So the big change is
+[00:05:46] that within the last few decades we've gone from
+[00:05:52] observing our genes to trying to change them but
+[00:05:52] slowly and with one-off tools to now with CRISPR
+[00:05:58] we have quick precise editing like a text editor
+[00:05:58] for the instruction manual of life. What does it
+[00:06:05] mean for us that we have this new power? What
+[00:06:05] are the stakes here? Well it's kind of profound
+[00:06:11] I think because if you if you start imagining what
+[00:06:11] you can do when you have that kind of capability
+[00:06:18] to manipulate DNA sequences it's everything
+[00:06:18] from changing the ability of crops to resist
+[00:06:25] drought or to produce more tomatoes to changing
+[00:06:25] sequences in a human embryo that alter heritable
+[00:06:34] traits that get passed on for future generations.
+[00:06:34] And so especially the latter application has truly
+[00:06:41] profound implications. It means that if you think
+[00:06:41] about it now as human beings we have in our hands
+[00:06:47] the technology to change chemically fundamentally
+[00:06:47] who and what we are. It's quite extraordinary. Huge
+[00:06:56] if true! Huge! Yes! Thank you. You talk in your
+[00:06:56] book about you say, the question is not whether
+[00:07:05] we can change our genes anymore it's how should
+[00:07:05] we? My understanding is that within that debate
+[00:07:13] there's a big divide between whether we're editing
+[00:07:13] cells that are not involved in reproduction so
+[00:07:18] the change would end with us versus cells
+[00:07:18] that are in which case they would get passed
+[00:07:23] down to our kids and our kids' kids and maybe
+[00:07:23] even a whole population depending on the gene
+[00:07:27] Why is that distinction so important? It goes back
+[00:07:27] to concepts like eugenics and thinking about
+[00:07:34] even even the Mary Shelley's Frankenstein you know
+[00:07:34] thinking about what we can do when we have the
+[00:07:40] power to alter who we are fundamentally And to
+[00:07:40] me it's and I think in general it's just
+[00:07:47] very it's a very different set of concerns
+[00:07:47] when you're thinking about changing DNA in an
+[00:07:54] individual which of course has safety and ethical
+[00:07:54] considerations but nothing like if we're changing
+[00:08:00] DNA in a heritable way in embryos. The embryos
+[00:08:00] can't make that decision for one thing and once
+[00:08:07] that change is made it's permanent and it gets
+[00:08:07] passed on to all future generations. And so you can
+[00:08:12] imagine starting to change the you know the
+[00:08:12] the whole genetic makeup of human populations if
+[00:08:20] this were to go far enough. If I'm imagining this
+[00:08:20] as you know two columns, one is somatic and one
+[00:08:25] is germline then there's also the type of change
+[00:08:25] itself sort of with a spectrum between treating
+[00:08:34] diseases that we would all agree are diseases to
+[00:08:34] prevention of future diseases to what some people
+[00:08:42] might call enhancements or moving someone or their
+[00:08:42] descendants into a new part of what is possible
+[00:08:50] for humans... And I've even because this is a show
+[00:08:50] called Huge If True heard people talk about changes
+[00:08:56] that might move people out of what is now normal
+[00:08:56] for others. So super enhancements. And in fact in
+[00:09:02] order to keep us grounded I have prepared some
+[00:09:02] specific examples. I'd love to use each of these
+[00:09:09] examples and get your help to understand where
+[00:09:09] do they fit into this debate? How real or not real
+[00:09:16] are they scientifically, how could they actually
+[00:09:16] impact the audience's lives or not? And what gets
+[00:09:22] you most excited in these different categories?
+[00:09:22] Okay so my first example is curing sickle cell
+[00:09:30] in one individual. Could you tell me the story of
+[00:09:30] Victoria Gray and what's happening with CRISPR
+[00:09:35] right now in sickle cell disease? Well this is a
+[00:09:35] big success of of the CRISPR field. In the I think
+[00:09:42] late fall it was November and December of 2023
+[00:09:42] the food and drug administration in the US and the
+[00:09:49] their counterpart in UK approved a crisper-based
+[00:09:49] therapy for sickle cell disease patients So these
+[00:09:56] are people that have a single genetic um mutation
+[00:09:56] that gives them a very severe blood disease that
+[00:10:05] results in frequent you know requirements for
+[00:10:05] frequent blood transfusions and if they don't have
+[00:10:10] those they have organ failure over time They have
+[00:10:10] u very um severe crises that happen frequently
+[00:10:18] that are very painful for them So you can imagine
+[00:10:18] extremely disruptive to their lives And with this
+[00:10:24] CRISPR-based treatment it's a one and done therapy
+[00:10:24] that doesn't exactly cure the disease at the
+[00:10:32] genetic level but what it does is suppress
+[00:10:32] the effect of the disease-causing mutation
+[00:10:37] And it does that by turning on the production
+[00:10:37] of a protein normally only made when we're
+[00:10:43] uh developing in the womb which is a protein
+[00:10:43] called fetal hemoglobin that when turned back
+[00:10:48] on using crisper can suppress the effect of the
+[00:10:48] disease-causing mutation in adult hemoglobin And
+[00:10:55] as a result people like Victoria Gray and she was
+[00:10:55] the first US patient to receive this therapeutic
+[00:11:01] have not had another sickle cell crisis since
+[00:11:01] receiving this one and done therapy. So it's
+[00:11:08] incredible! It's extraordinary and having talked to
+[00:11:08] her and a couple of other folks that participated
+[00:11:13] in that very first clinical trial I've heard
+[00:11:13] their stories about being just you know their
+[00:11:19] lives being completely transformed by this and
+[00:11:19] their ability to then function in a way that they
+[00:11:25] never imagined to be possible given their previous
+[00:11:25] disease experience. So it's amazing I would put
+[00:11:31] this in the category of I'd call it a treatment
+[00:11:31] and I'd call it a treatment for an individual
+[00:11:36] Right now we're not using it in the human germ
+[00:11:36] line but it's it's a clearly a a very exciting
+[00:11:43] advance for the field with some caveats Right now
+[00:11:43] this therapy is very expensive meaning that most
+[00:11:50] people who could benefit from it globally can't
+[00:11:50] get access to it. It also requires hospitalization
+[00:11:55] because they have to go through a bone marrow
+[00:11:55] transplant And that's something we're working very
+[00:12:00] hard on here in our institute to overcome We'd
+[00:12:00] love to have this therapy ultimately deliverable
+[00:12:06] in a in an easy format that doesn't require
+[00:12:06] hospitalization How should I think about the fact
+[00:12:11] that this treatment for cickle cell is based on
+[00:12:11] the fact that cickle cell is related to one gene
+[00:12:17] Well you put your finger on a really good point
+[00:12:17] Cleo That's that's exactly right So this is a
+[00:12:21] disease that results from one gene that's gone ary
+[00:12:21] and right now crisper is is well suited to treat
+[00:12:28] that type of disorder It's a lot harder to think
+[00:12:28] about how you would treat a disease like let's say
+[00:12:33] schizophrenia which almost certainly results from
+[00:12:33] maybe hundreds of mutations in the human genome
+[00:12:38] So those are going to be a lot harder to treat And
+[00:12:38] as I understand it castvi requires removing blood
+[00:12:46] from the patient making those changes in a lab
+[00:12:46] and then putting blood back in If we wanted to use
+[00:12:54] crisper for single gene or maybe very small number
+[00:12:54] of gene changes for treatments in individuals but
+[00:13:01] those treatments needed to be in our lungs or our
+[00:13:01] liver or our brain how would that work yeah it's
+[00:13:08] that's a lot harder It would work with difficulty
+[00:13:08] We don't have a good uh strategy in general for
+[00:13:14] getting the crisper molecules into particular
+[00:13:14] cells in the body Although again that's something
+[00:13:20] that's changing quickly It's an area to really
+[00:13:20] keep an eye on over the next few years because
+[00:13:24] many many uh scientists appreciate that this is
+[00:13:24] an important challenge not only for crisper by
+[00:13:30] the way but also for any kind of human therapy is
+[00:13:30] how do you do the therapy in the right cell type
+[00:13:35] or the right tissue in the body how do you get it
+[00:13:35] there in in a safe and effective way and that's
+[00:13:41] clearly a challenge with crisper I think that
+[00:13:41] over time what we're going to see is increasingly
+[00:13:47] uh sophisticated technologies for doing exactly
+[00:13:47] that We're already at a point where for a disease
+[00:13:53] like cickle cell uh I think we're you know maybe
+[00:13:53] within a few years of having that capability to
+[00:14:02] deliver in the body and safely and I think at
+[00:14:02] a cost that would make this therapy much more
+[00:14:08] widely available and I can't tell you how excited
+[00:14:08] I am about that Me too just to be even more um
+[00:14:15] nerd out on this point a little bit more because
+[00:14:15] I know that delivery is a big interest area for
+[00:14:20] a lot of people that are working on this um what
+[00:14:20] what are the actual challenges with the delivery
+[00:14:27] is it that our immune system attacks it well let's
+[00:14:27] think about how the body is put together We have a
+[00:14:34] lot of different kinds of cells that make up our
+[00:14:34] bodies and even within one particular organ like
+[00:14:40] let's say our brain many different kinds of cells
+[00:14:40] are required to form the human brain But when we
+[00:14:46] have a disease that affects our brain like let's
+[00:14:46] say Alzheimer's disease that disease is primarily
+[00:14:52] affecting only some of the cells we think not
+[00:14:52] all of them And so ideally what one would like
+[00:14:56] to be able to do is you'd like to get the genome
+[00:14:56] editor into just those cells where a change to the
+[00:15:03] DNA sequence could have a positive effect on the
+[00:15:03] patient and not bother any of the other cells in
+[00:15:08] the body But doing that as you can imagine is very
+[00:15:08] tricky And that's partly because the cells are all
+[00:15:15] growing together So you have to have a sort of a
+[00:15:15] chemical mechanism of distinguishing one cell type
+[00:15:21] from another Fortunately cells often have little
+[00:15:21] zip code molecules on the surface that mark them
+[00:15:27] as different cell types but so far science is
+[00:15:27] still trying to figure out what they are and
+[00:15:32] figure out which zip codes go with which cell
+[00:15:32] types So that's something that's very much work
+[00:15:37] in progress And even once we know that then the
+[00:15:37] challenge is how do we recognize one particular
+[00:15:43] set of molecules on certain cells and ignore
+[00:15:43] all the others That's something that viruses
+[00:15:48] are actually very good at doing So one of the
+[00:15:48] motivators and and and sort of inspirations in the
+[00:15:55] delivery field right now is looking at how viruses
+[00:15:55] do that kind of recognition and delivery and then
+[00:16:00] taking advantage of it for delivering other
+[00:16:00] molecules rather than delivering a virus Can we
+[00:16:05] deliver our our crisper cargo i know you've used
+[00:16:05] the analogy of we now have the ability to cut and
+[00:16:11] paste DNA like a text editor And so I'm imagining
+[00:16:11] if I play this analogy out a little bit it's like
+[00:16:16] I we now have the ability to cut and paste and
+[00:16:16] create new letters but we are still inventing
+[00:16:23] the postal system We're still trying to figure
+[00:16:23] out how to send the letters Exactly Interesting
+[00:16:27] That's right Got it Yep My second example is
+[00:16:27] curing Huntingtons or al removing Huntingtons
+[00:16:33] from all your future descendants What do I need to
+[00:16:33] know about this example and this general category
+[00:16:40] well Huntington's disease is a is an interesting
+[00:16:40] example because it often does run in families and
+[00:16:46] as some folks in the audience may know it's a
+[00:16:46] neurodeenerative disease So it causes severe
+[00:16:53] degeneration of the brain over time It often uh
+[00:16:53] doesn't begin until somebody is in their midlife
+[00:17:00] somewhere Uh so 20s 30s 40s depending on the
+[00:17:00] exact uh detail of the mutation they have It's an
+[00:17:07] interesting target for crisper because like cickle
+[00:17:07] cell disease it's a single gene that causes the
+[00:17:12] disorder that's very well defined And furthermore
+[00:17:12] we know of families in the world where this
+[00:17:19] disease gene is inherited by by by kids you know
+[00:17:19] from their parents And so it's a it's terrible in
+[00:17:26] the sense that they can see what's coming and know
+[00:17:26] that they have this genetic dis predisposition
+[00:17:33] but they can't do anything to prevent it So
+[00:17:33] it's you know it's really sort of a horrible
+[00:17:37] thing to contemplate And with crisper one could
+[00:17:37] imagine at some point being able to remove that
+[00:17:44] disease-causing mutation from an embryo such that
+[00:17:44] not only does the individual once they're born not
+[00:17:52] bear the Huntington trait but they also don't pass
+[00:17:52] that trait on to their kids It would be amazing
+[00:17:57] and change a lot of people's lives It could change
+[00:17:57] a lot of people's lives and and I I certainly
+[00:18:02] think that if and when that capability is in our
+[00:18:02] hands that it would almost be unethical not to use
+[00:18:08] it for that purpose But we're not there yet And
+[00:18:08] the reason is that it's very tricky to control
+[00:18:14] the way that DNA repair which is really part of
+[00:18:14] the whole editing process The way that that is
+[00:18:20] conducted uh especially in embryos is still very
+[00:18:20] much under uh you know investigation And so I
+[00:18:26] think until we have a good handle on how it works
+[00:18:26] and then how to do it safely it will remain a you
+[00:18:32] know future aspiration but not something that
+[00:18:32] I think should be done today That brings us to
+[00:18:37] my third example which is preventing something
+[00:18:37] like HIV in your future descendants There was
+[00:18:45] a scientist in 2018 that edited human embryos and
+[00:18:45] those embryos were born into babies who as far as
+[00:18:51] I can tell are still alive and many scientists
+[00:18:51] including yourself opposed that decision My
+[00:18:56] understanding from your book is that you opposed
+[00:18:56] it because you felt the risks to those kids were
+[00:19:01] greater than the rewards Um could you explain
+[00:19:01] why that was the case in that example but also
+[00:19:06] more generally what are the other options besides
+[00:19:06] crisper for many of these diseases and how should
+[00:19:13] we think about when a use of crisper is actually
+[00:19:13] necessary and and therefore potentially has a much
+[00:19:22] greater incentive to use it i think with any
+[00:19:22] therapy you have to ask yourself do the risks
+[00:19:27] outweigh the benefits or not and with crisper and
+[00:19:27] especially if we're using it in embryos or the
+[00:19:34] germ line um the risks are are quite significant
+[00:19:34] in the sense that any change that gets made is
+[00:19:41] is permanent and it gets passed on to future
+[00:19:41] generations So you want to be very confident
+[00:19:46] that those changes are going to have a positive
+[00:19:46] impact and have the desired outcome And so in
+[00:19:52] the example that you cited yeah it was a very you
+[00:19:52] know very um kind of alarming case because it was
+[00:20:00] a situation where a scientist informed parents
+[00:20:00] that they were uh going to receive a treatment
+[00:20:08] for their unborn children that would prevent HIV
+[00:20:08] transmission to those kids during birth and later
+[00:20:16] in their lives and furthermore that that trait
+[00:20:16] would then be transmissible to their kids But I
+[00:20:23] don't think from what I understand that the those
+[00:20:23] parents in the trial really understood the risks
+[00:20:29] of the technology and that for example it had
+[00:20:29] never even been tested in in animals prior to
+[00:20:36] putting into into people which you know is one
+[00:20:36] really big ethical concern Furthermore with the
+[00:20:43] the example of HIV there already are well-known
+[00:20:43] treatments that can prevent transmission in kids
+[00:20:50] even if they have an HIV positive parent as was
+[00:20:50] the case in that situation So given that there
+[00:20:57] was already a you know very wellested and safe
+[00:20:57] way to prevent transmission arguably it's pretty
+[00:21:04] unethical to then apply an untested un untried
+[00:21:04] uh new technology to to do this in in people And
+[00:21:14] um and then the third uh issue kind of gets in
+[00:21:14] a little bit more in the weeds of what actually
+[00:21:18] happened that when it was revealed how the genome
+[00:21:18] editing was done in those embryos it was clear
+[00:21:25] that it wasn't a clean edit In other words it
+[00:21:25] wasn't a uh a way of making a a very precise
+[00:21:33] manipulation to the DNA That instead what probably
+[00:21:33] happened was that multiple different kinds of
+[00:21:39] edits happened in the cells of those embryos
+[00:21:39] So that those kids were actually born chimeas
+[00:21:47] meaning they had a mixture of different kinds of
+[00:21:47] uh genetic makeup in their cells Would that be
+[00:21:53] harmful or not the answer is we don't know because
+[00:21:53] it had never been tested before So these are all
+[00:21:59] things that I think are are really um important
+[00:21:59] to understand when people evaluate whether a new
+[00:22:05] technology especially something to be used
+[00:22:05] in embryos would be allowed to to go forward
+[00:22:11] It seems like a really hard challenge especially
+[00:22:11] as someone who's a pioneer in the field because
+[00:22:17] we talk a lot on the show about how the status
+[00:22:17] quo the world that we live in right now is sucks
+[00:22:24] in all kinds of ways right like it is just as bad
+[00:22:24] to you know allow the existence of a huge amount
+[00:22:32] of suffering when you could change it as it is to
+[00:22:32] you know cause that suffering by changing it Right
+[00:22:38] this is a classic human problem that we deal with
+[00:22:38] in so many different ways And one of the things
+[00:22:43] that I found incredibly powerful in your book
+[00:22:43] there's this quote... this is Charles Sabine a
+[00:22:50] victim of Huntington's And he says "Anyone who has
+[00:22:50] had to actually face the reality of one of these
+[00:22:56] diseases is not going to have a remote compunction
+[00:22:56] about thinking there is any moral issue at all."
+[00:23:02] And the reason why that has really stuck with
+[00:23:02] me is because I think it's one thing to talk
+[00:23:06] about these weights and counterweights in
+[00:23:06] theory and then you talk to someone whose
+[00:23:10] life could actually be changed and you come away
+[00:23:10] feeling like "Holy cow how can we how can we help
+[00:23:18] as quickly as we can in the way that you know
+[00:23:18] keeps them safe and keeps the rest of us safe?"
+[00:23:24] What's that actually like for you when you hear
+[00:23:24] from people who are experiencing diseases that
+[00:23:29] you feel crisper could be really good candidates
+[00:23:29] to help solve it's really getting to the heart of
+[00:23:34] what it means to suffer from a disease like that
+[00:23:34] and then to have the opportunity to have a a cure
+[00:23:41] for it something that might have been unimaginable
+[00:23:41] even a few years ago And you're right I hear from
+[00:23:47] people uh pretty much now it's probably at least
+[00:23:47] once a week that write to me about diseases in
+[00:23:53] their families that are of genetic origin Often
+[00:23:53] it's disease affecting kids and asking you know
+[00:24:00] when and how will Crisper be able to make a change
+[00:24:00] and it's a it's a really big challenge I I feel
+[00:24:07] um I'm I'm humbled by it I'm honored that people
+[00:24:07] share their their personal uh stories with me And
+[00:24:13] I I have to admit I sometimes feel a little
+[00:24:13] bit helpless because I I I realize the the
+[00:24:19] challenges still that lie ahead scientifically and
+[00:24:19] technically to make it possible But at the at the
+[00:24:25] same time I feel an incredible sense of motivation
+[00:24:25] and passion because you can see how especially
+[00:24:32] with the cickle cell story how it can be so
+[00:24:32] positive and so beneficial So it's a you know it's
+[00:24:39] a real motivator getting out of bed every day Yeah
+[00:24:39] I bet Speaking of good health I want to show you
+[00:24:44] something I'm wearing the Whoop MG It just came
+[00:24:44] out and I've been testing it over the last month
+[00:24:49] So let me show you what I find most interesting
+[00:24:49] My goal is to just feel great I want to wake up
+[00:24:53] and I want to have energy and I don't want to feel
+[00:24:53] tired and I want to be able to make this show and
+[00:24:58] learn and I want to feel strong and I want to feel
+[00:24:58] that way for as many days as I can for the rest
+[00:25:03] of my life So I use Whoop to set a goal to feel
+[00:25:03] better and then to keep track of my daily habits
+[00:25:09] It uses these sensors to measure among other
+[00:25:09] things nine biometrics that have a long-term
+[00:25:14] impact on my health outcomes And it combines them
+[00:25:14] into what Whoop calls my health span And that
+[00:25:18] helps me understand how my habits right now affect
+[00:25:18] my long-term ability to have as many healthy days
+[00:25:24] as possible One thing I found helpful is the Whoop
+[00:25:24] AI coach Today for example I was feeling tired so
+[00:25:29] I just asked it I'm feeling tired Why then it
+[00:25:29] analyzed my real data from the last month and
+[00:25:35] helped me understand a couple things that I could
+[00:25:35] do especially around hydration and workouts And it
+[00:25:40] also has sensors that measure electrical activity
+[00:25:40] from my heart through my skin So I can do an ECG
+[00:25:46] All of this just helps me feel better dayto-day
+[00:25:46] and hopefully longterm too So if you want to try
+[00:25:51] it go to this link right here or click the link
+[00:25:51] in the description Now back to gene editing As
+[00:25:56] someone who is lucky enough not to be currently
+[00:25:56] struggling with disease when I think about how
+[00:26:02] crisper might most directly impact my life I think
+[00:26:02] about the genes that correlate to future disease
+[00:26:11] and how we might prevent future disease I think
+[00:26:11] about reducing Alzheimer's risk which I understand
+[00:26:18] relates to APOE4 or heart disease um and PCSK9
+[00:26:18] or cancer and BA um that would completely change
+[00:26:30] my life and I'm curious what what are the most
+[00:26:30] interesting relevant examples in this category
+[00:26:37] that you think about i think those are three
+[00:26:37] great ones And in fact it's probably worth
+[00:26:42] pointing out that there's already a clinical trial
+[00:26:42] running for people uh who have the gene that makes
+[00:26:49] them susceptible to high cholesterol buildup and
+[00:26:49] hence to cardiovascular disease Yes many of us do
+[00:26:56] uh have this and um and the idea in that clinical
+[00:26:56] trial is to use crisper as a preventative So can
+[00:27:03] you make edits in the DNA of the liver that would
+[00:27:03] prevent cholesterol accumulation in people that
+[00:27:09] are otherwise susceptible to this if it works
+[00:27:09] it would be incredible because again it's a you
+[00:27:15] know it's a one-time therapy that avoids the you
+[00:27:15] know the need to take drugs daily or weekly or or
+[00:27:21] monthly to control cholesterol levels and would
+[00:27:21] give people freedom from worrying about you know
+[00:27:28] heart attacks at a young age if that would
+[00:27:28] be otherwise something they might experience
+[00:27:32] So I think that's really exciting It also you know
+[00:27:32] raises uh the bar I think for what we would demand
+[00:27:38] in terms of safety because probably none of us
+[00:27:38] would want to you know if we're not currently
+[00:27:43] ill we don't want to take something that might
+[00:27:43] make us ill and and we want to take something
+[00:27:47] only if it can really improve our health Does
+[00:27:47] that study that you just mentioned relate to what
+[00:27:52] we talked about with the challenge of delivery
+[00:27:52] because if they're delivering it to the liver
+[00:27:55] that implies that they are they editing it in a
+[00:27:55] lab in the liver are they also trying to find a
+[00:28:01] delivery mechanism that works amazing They are
+[00:28:01] Yeah Amazing Right now here's the thing So the
+[00:28:06] liver is an organ that naturally filters toxins
+[00:28:06] in our body So a lot of molecules will end up
+[00:28:12] in the liver quite naturally So it's a bit of a
+[00:28:12] unique organ in that regard And so it means that
+[00:28:18] for a lot of the interest in crisper at least
+[00:28:18] in the very early days before there were many
+[00:28:25] strategies for delivery it was you know people
+[00:28:25] kind of recognized that the liver would be a great
+[00:28:31] uh organ to target because it's it very naturally
+[00:28:31] accumulates molecules including crisper So that's
+[00:28:38] been um the the basis for this ongoing trial And
+[00:28:38] they're actually using uh little greasy blobs
+[00:28:46] that are known as lipid nano particles These are
+[00:28:46] known to any of us that have had the COVID vaccine
+[00:28:51] because that's the the basis for delivering the
+[00:28:51] the COVID vaccine is using these little lipid
+[00:28:56] nano particles And those particles will naturally
+[00:28:56] traffic to the liver in the body and they'll carry
+[00:29:01] along other molecules like crisper So that's been
+[00:29:01] the basis for for that trial Cool Yeah Um okay So
+[00:29:09] now we're getting into the category that I think
+[00:29:09] people would call enhancements Here people talk a
+[00:29:16] lot about eye color and height and things like
+[00:29:16] that but there are also and these are the ones
+[00:29:21] I find most interesting genes that might relate
+[00:29:21] to enhancements for health that are not related
+[00:29:27] to disease So genes for example like the MSTN
+[00:29:27] gene associated with building larger muscles
+[00:29:37] or and this one I get very excited about uh DEEC2
+[00:29:37] which I understand is associated with needing less
+[00:29:43] sleep What examples do you think about in this
+[00:29:43] category that are most genuinely interesting and
+[00:29:49] what should people know about what's realistic
+[00:29:49] here well I think those two you brought up are
+[00:29:53] are interesting There's also a gene that was
+[00:29:53] identified by a colleague of ours at uh UC San
+[00:29:58] Francisco In fact he won the Nobel Prize for that
+[00:29:58] work that is involved in pain perception And so
+[00:30:04] you could imagine you know in in fact there are
+[00:30:04] natural uh variations of that gene in the human
+[00:30:08] population And people that have a certain type
+[00:30:08] a certain format of that gene are naturally uh
+[00:30:16] pain tolerant And so you could imagine ways that
+[00:30:16] you might use that type of genetic manipulation to
+[00:30:23] remove experience of pain in you know say cancer
+[00:30:23] patients or you know people that have a chronic
+[00:30:29] uh uh pain uh causing disease and so um I think
+[00:30:29] those are all extremely interesting and yeah do
+[00:30:37] we you know it's a little bit this starts to get
+[00:30:37] into to me a bit of a gray area those enhancements
+[00:30:42] like if we're talking about pain perception that's
+[00:30:42] you know it's really a health related thing but It
+[00:30:47] it's an important uh aspect of of thinking about
+[00:30:47] genetic manipulation because it forces us to you
+[00:30:54] know to really ask ourselves where do we draw that
+[00:30:54] line and I argue that it's very hard to do that I
+[00:31:00] think it's you know there's a kind of a continuum
+[00:31:00] and uh there's certain certain modifications
+[00:31:05] that some of us might call enhancements and the
+[00:31:05] rest of us might call health related So who who
+[00:31:10] decides and I think those are those are some
+[00:31:10] of the real issues that we're grappling with
+[00:31:15] This is the area if I'm honest I started to
+[00:31:15] struggle with a concern that came up a lot and
+[00:31:20] I'm sure is coming up right now for the audience
+[00:31:20] as they're watching this is that we move into a
+[00:31:24] world more like the movie Gatka that there is
+[00:31:24] a divide between what people can and can't get
+[00:31:30] um maybe based on wealth maybe based on other
+[00:31:30] factors that that harms society because there
+[00:31:36] is a a gene gap as you call it at the same time
+[00:31:36] I've and I think everyone has witnessed over and
+[00:31:44] over again an expensive technology becoming less
+[00:31:44] expensive over time as it's used by more people
+[00:31:50] Um a sort of sub subsidy maybe of that technology
+[00:31:50] early on that then ends up benefiting the rest of
+[00:31:58] us because it gets time to develop and exist
+[00:31:58] and and just sort of comes into the world Um
+[00:32:04] and I have a hard time with the argument that we
+[00:32:04] shouldn't use something because only a few people
+[00:32:10] could use it in the short term when the the hope
+[00:32:10] right is that everyone can use it And I I wonder
+[00:32:19] you know why do we care about this when it is a
+[00:32:19] huge opportunity to reduce human suffering but
+[00:32:26] not when it's our iPhones how do you think about
+[00:32:26] something like that i think I'm with you Cleo I I
+[00:32:33] really it it doesn't sit right with me to argue
+[00:32:33] that we shouldn't develop a technology because
+[00:32:39] today it's only available to a few And as you said
+[00:32:39] that's that's often true When new technologies
+[00:32:45] come along they're not easily uh distributed early
+[00:32:45] on typically and they often are expensive in in
+[00:32:51] the early days I mean think of even personal
+[00:32:51] computers kind of went through that transition
+[00:32:56] And so I think that we have to be very forward
+[00:32:56] thinking and we have to be imagining what could
+[00:33:03] be possible in the future I'm highly motivated for
+[00:33:03] example by the idea that crisper although today as
+[00:33:10] a therapy it's only available to a few That's
+[00:33:10] not going to be true forever It's clearly not
+[00:33:16] And also I'm I'm a big believer in you have to
+[00:33:16] you have to imagine the future to create it You
+[00:33:22] have to think about where you want to go and then
+[00:33:22] work to get there Me too My understanding is that
+[00:33:29] one of the ways that people can get some of these
+[00:33:29] all the above prevention enhancements treatments
+[00:33:36] um is through selection of the embryos that
+[00:33:36] they actually end up using in the first place
+[00:33:44] PGD Could you explain how that works and how the
+[00:33:44] existence of that option influences how we might
+[00:33:51] or might not find it appropriate to use crisper
+[00:33:51] so one thing that's important to point out with
+[00:33:55] crisper when we think about using it in embryos is
+[00:33:55] that it would be done in the context of in vitro
+[00:33:59] fertilization Maybe that's obvious but you know
+[00:33:59] in vitro fertilization or IVF technology has come
+[00:34:05] a long way from you know where it started And
+[00:34:05] uh today it's possible to for people that are
+[00:34:11] are having a child using invitro fertilization
+[00:34:11] to actually conduct embryo selection if they
+[00:34:17] want to They can identify embryos that have
+[00:34:17] certain traits or avoid certain traits that
+[00:34:22] they otherwise might inherit And so that's been
+[00:34:22] a great way uh for families to screen out uh
+[00:34:27] disease-causing mutations For example I think
+[00:34:27] that with crisper you could imagine using it
+[00:34:33] similarly where you could use it to remove a trait
+[00:34:33] and then screen embryos for the ones that have uh
+[00:34:39] you know where you've successfully done that Yeah
+[00:34:39] And also the key difference would be that crisper
+[00:34:46] can actually make changes that might be present
+[00:34:46] in all embryos for that specific couple Chris
+[00:34:51] work could edit whereas PGD merely selects Correct
+[00:34:51] Yeah I also think an important thing to talk about
+[00:34:58] with respect to PGD is none of this is easy I did
+[00:34:58] the egg freezing process and I can tell you that
+[00:35:05] getting that number of eggs out is hard That's the
+[00:35:05] first step in IVF It's difficult and timeconuming
+[00:35:12] and expensive no matter what And so you know
+[00:35:12] we're we're dealing with a lot of different
+[00:35:16] weights and counterweights about what might be
+[00:35:16] easy or difficult for people in different ways
+[00:35:21] Yeah absolutely You know I think there going to be
+[00:35:21] some interesting changes over time Again I don't
+[00:35:26] think they're happening you know immediately but
+[00:35:26] I do think that there's a lot of work being done
+[00:35:30] on human reproduction um about gameamtes you know
+[00:35:30] eggs and sperm that are you know going to probably
+[00:35:38] change the landscape of what's possible in the
+[00:35:38] future And I'm talking about over the coming
+[00:35:44] decades right so you know for folks that are you
+[00:35:44] know very young kids right now you know this might
+[00:35:49] be something that would be become possible in
+[00:35:49] their lifetime or something they would want to
+[00:35:53] consider doing Um so that's an area definitely to
+[00:35:53] keep an eye on because I do think there's a lot of
+[00:35:58] activity Before we move into plants and animals
+[00:35:58] which I really want to get to because I think
+[00:36:02] it's one of the biggest ways crisper might impact
+[00:36:02] people's lives Um there is one additional category
+[00:36:09] here um within humans The final category and this
+[00:36:09] is a show called Huge If True is as we understand
+[00:36:19] more about our genes there could potentially be
+[00:36:19] ways to move people beyond what is possible for
+[00:36:25] anyone right now Helping you heal faster extending
+[00:36:25] your life beyond what's normal giving your kids
+[00:36:32] abilities that seem like superpowers I don't
+[00:36:32] know what's possible How do you think about
+[00:36:36] this i had a call years ago now from a reporter
+[00:36:36] at Sports Illustrated They wanted to do a story
+[00:36:42] on enhancements or maybe even you could call
+[00:36:42] them super enhancements that would create
+[00:36:46] super athletes You know imagine basketball players
+[00:36:46] that were eight feet tall or you know could jump
+[00:36:52] uh jump unreasonably high or uh people that
+[00:36:52] had and I guess this is already one thing that
+[00:36:58] is theoretically possible having you know very
+[00:36:58] very well-developed muscles and muscle structure
+[00:37:04] I think these are are fascinating I think for
+[00:37:04] the most part they're not really realistic at
+[00:37:10] the moment Mostly because we don't understand
+[00:37:10] the genetics well enough to understand how
+[00:37:15] manipulating those genes would affect our health
+[00:37:15] in other ways And we know for sure that you know
+[00:37:21] our genes are interconnected So when you tweak one
+[00:37:21] thing you're probably not just changing one effect
+[00:37:27] you're you're changing lots of other things So I
+[00:37:27] think that for any of those kinds of manipulations
+[00:37:32] clearly a lot of research would need to be done
+[00:37:32] But um but I'll just mention that since I know
+[00:37:37] we're going to get to plants and animals in the
+[00:37:37] plant world we're already seeing just incredible
+[00:37:42] advances using crisper to create the type of
+[00:37:42] plants that you know certainly breeders have
+[00:37:50] never had success in creating and that if you
+[00:37:50] tried to do it with traditional breeding would
+[00:37:55] take inordinate amounts of time probably
+[00:37:55] decades that increase the yields of crops
+[00:38:00] that increase the nutritional value of crops
+[00:38:00] in ways that could be incredibly uh valuable
+[00:38:06] and exciting for probably all of us and probably
+[00:38:06] not in the distant future So I think that's an
+[00:38:11] example of the kinds of super enhancements in
+[00:38:11] organisms that we're going to see with crisper
+[00:38:18] So play that out for me What happens next in
+[00:38:18] the world of plants and animals using crisper
+[00:38:24] i've thought for a long time that that uh
+[00:38:24] that the the extraordinary global impact of
+[00:38:29] crisper will probably happen first with plant and
+[00:38:29] animal manipulations And the reason is when we're
+[00:38:36] talking about making changes in human beings that
+[00:38:36] obviously requires a lot of testing to make sure
+[00:38:41] that it's safe We have to do a lot of research
+[00:38:41] so we understand how a genetic manipulation
+[00:38:45] will affect our health Whereas uh if we're do if
+[00:38:45] we're making changes in let's say a plant you know
+[00:38:51] we can conduct that as an experiment and many of
+[00:38:51] those can be performed at the same time and with
+[00:38:57] crisper you now have a tool that allows the kind
+[00:38:57] of precise manipulation that plantreeders could
+[00:39:03] only dream of in the past So maybe just to explain
+[00:39:03] how traditional plant breeding works for people
+[00:39:09] Traditionally plantreeders would introduce random
+[00:39:09] changes into the DNA of plants And they would do
+[00:39:15] it by um using chemicals that would change DNA
+[00:39:15] sequences randomly or even exposing seeds to
+[00:39:23] radiation that would also lead to random genetic
+[00:39:23] changes then planting the seeds and allowing
+[00:39:29] them to grow up and looking for plants that had
+[00:39:29] changes to their traits that were desirable and
+[00:39:34] then picking those and breeding them and you know
+[00:39:34] and so you can start to think about that There's
+[00:39:38] a there's a few issues there right first of all
+[00:39:38] it takes a long time Secondly the changes are
+[00:39:43] are really random So if you wonder why is it that
+[00:39:43] we have roses that are thornless which might be a
+[00:39:49] desirable trait but they've lost their nice smell
+[00:39:49] Well it's because you know traits are coupled
+[00:39:54] right and so you you tweak one thing and you you
+[00:39:54] get something that comes along with it that maybe
+[00:39:59] you don't didn't want but you now can't get rid
+[00:39:59] of And we see that over and over again So with
+[00:40:05] crisper we truly now have an opportunity to make
+[00:40:05] targeted precise changes that only alter one trait
+[00:40:11] and don't affect other things So I think that's
+[00:40:11] really exciting And another uh aspect of crisper
+[00:40:17] in plants that is just truly mind-blowing for me
+[00:40:17] is that you can use crisper in multiple genes at
+[00:40:24] one time Now you could do that in humans too and
+[00:40:24] I'm sure that will come But today in plants it's
+[00:40:30] already possible to change 5 10 15 genes at
+[00:40:30] a time And that means that we can make really
+[00:40:37] quite sophisticated alterations to to plant traits
+[00:40:37] in one shot and do it safely and do it precisely
+[00:40:45] And the more that we learn about the genetics
+[00:40:45] of plants and that's a whole separate area of
+[00:40:50] research for sure but you know it it just they
+[00:40:50] kind of go hand inand We learn which genes we can
+[00:40:55] tweak and then we have the tool to tweak them Is
+[00:40:55] that happening right now in a way that I might not
+[00:41:02] notice when I'm at the grocery store am I eating
+[00:41:02] plants that have been edited with crisper or not
+[00:41:06] yet only if you're in Japan Interesting Well
+[00:41:06] in Japan there's a there's a tomato that's been
+[00:41:12] approved that has a crisper change that makes it
+[00:41:12] are they argue more have higher nutritional value
+[00:41:19] Um will that happen in the US oh yeah I mean it's
+[00:41:19] certainly coming and already there are changes in
+[00:41:27] um plants like well fungi like like mushrooms
+[00:41:27] where there are non-browning mushrooms that were
+[00:41:34] created using crisper and um a colleague of ours
+[00:41:34] has created tomatoes here in in his lab in in the
+[00:41:42] US that are much higher yielding than uh normal
+[00:41:42] unedited tomato plants but they don't have any
+[00:41:49] other differences in the taste or the look or the
+[00:41:49] you know the the sort of properties of the tomato
+[00:41:55] So again something potentially very exciting and
+[00:41:55] very desirable Right now um there's a there's an
+[00:42:02] ongoing uh sort of debate in different countries
+[00:42:02] around the world about how those types of crops
+[00:42:07] will be regulated And here in the United States
+[00:42:07] the US Department of Agriculture has re has ruled
+[00:42:13] that when changes are made to the DNA of plants
+[00:42:13] that could be done by traditional breeding if
+[00:42:20] you took the decades to do it but are sped up by
+[00:42:20] using crisper Those are not considered genetically
+[00:42:26] modified and they're not regulated Whoa Which is
+[00:42:26] so interesting right yeah So I think absolutely
+[00:42:32] in that regard at some point in the notistant
+[00:42:32] future we could see these types of of crops in the
+[00:42:38] grocery store Fascinating I al I also know the two
+[00:42:38] other categories that I want to talk about here
+[00:42:45] are related to climate change and related to human
+[00:42:45] health by virtue of editing other animals So on
+[00:42:52] climate change the example that I have is making
+[00:42:52] cows fart less methane Could you tell me about
+[00:42:57] that one yeah that's a good one That's a good
+[00:42:57] one So the uh yeah this is this is a a project
+[00:43:03] that um you know a lot of scientists have come
+[00:43:03] to recognize that one of the most uh significant
+[00:43:09] contributors to global carbon emissions in the
+[00:43:09] form of methane which is a powerful greenhouse
+[00:43:14] gas is the um is the farming of animals and in
+[00:43:14] particular is cattle And they produce a lot of
+[00:43:21] methane and they produce it primarily from bugs
+[00:43:21] in their gut that are methane makers and that uh
+[00:43:29] that uh you know produce this this gas instead of
+[00:43:29] using food that the cattle are eating to make more
+[00:43:36] milk or more meat So wouldn't it be great if there
+[00:43:36] were were a way to alter the metabolism of those
+[00:43:42] organisms those bacteria we call it the microbiome
+[00:43:42] in these cattle that are producing methane dial
+[00:43:49] that down and turn up the ability of their of the
+[00:43:49] these metabolic pathways to uh generate nutrients
+[00:43:56] that are actually valuable to the animal and and
+[00:43:56] valuable to the farmer and to the consumers of
+[00:44:01] of these products That's exactly what we're doing
+[00:44:01] now with crisper because again crisper is a great
+[00:44:08] tool for this It's a tool that has the ability to
+[00:44:08] go into the DNA of just one type of bacterium to
+[00:44:14] one gene in that type of bacterium and make the
+[00:44:14] kinds of changes that will alter their metabolism
+[00:44:21] permanently We've got some of the best uh cattle
+[00:44:21] biologists in the in the world who are working at
+[00:44:27] Davis and they had already shown that if you
+[00:44:27] change the cow microbiome by altering their
+[00:44:34] diet that you could have a very profound effect on
+[00:44:34] methane production So that's very exciting We know
+[00:44:40] this is an approach that can work The challenge
+[00:44:40] there is that altering the cow diet is not an
+[00:44:45] approach that's inexpensive and it's not easily
+[00:44:45] deployed to farmers around the world Whereas if
+[00:44:51] we had a very easy let's say it was a pill that
+[00:44:51] you could give once to cows when they're born
+[00:44:57] that would edit their microbiome in a way that
+[00:44:57] was sustainable over their lifetime You could
+[00:45:02] imagine that type of change being incredibly
+[00:45:02] profound and also easy to deploy And that's
+[00:45:07] exactly what we're working on And again you're
+[00:45:07] editing the microorganisms inside the cow not
+[00:45:13] the cow itself So it's a different category of
+[00:45:13] assistance for the animal That's right Yeah How
+[00:45:18] can we do that in humans and how might that help
+[00:45:18] us without editing us editing the microorganisms
+[00:45:23] in us This is such an interesting as uh area of
+[00:45:23] medicine I think it's it's early days but I think
+[00:45:29] there's a lot of evidence pointing to our own uh
+[00:45:29] microbiome the human microbiome having a profound
+[00:45:36] impact on our health in ways that we're only
+[00:45:36] starting to appreciate Now we have a colleague
+[00:45:41] uh at University of California San Francisco
+[00:45:41] who has shown that in people especially in
+[00:45:47] kids that are susceptible to asthma they tend to
+[00:45:47] have molecule produced in their own microbiome
+[00:45:55] that's not present in people that don't have
+[00:45:55] asthma And she's shown a correlation between
+[00:46:00] the concentration of that you know microbiome
+[00:46:00] produced molecule and disease susceptibility
+[00:46:08] So again we see a really exciting opportunity to
+[00:46:08] use crisper to turn down the production of that
+[00:46:14] molecule and potentially prevent asthma in kids
+[00:46:14] So that's something that we're currently testing
+[00:46:20] with her laboratory in animals and if it works
+[00:46:20] then we hope to test it in humans Wow What are
+[00:46:26] the other examples that you think about often that
+[00:46:26] I haven't asked you about there are areas of sort
+[00:46:31] of um understanding microbial human health biology
+[00:46:31] where I think there's a lot of a lot of exciting
+[00:46:39] potential and one is is really understanding the
+[00:46:39] connection between our microbiome and our brain
+[00:46:45] and another is thinking about the connection
+[00:46:45] between our microbiome and our immune system
+[00:46:50] So imagine that you know when when when we're
+[00:46:50] born we have our our immune system is developing
+[00:46:57] we're also becoming uh you know hosts to lots of
+[00:46:57] different kinds of of microbes So there has to be
+[00:47:02] a an interplay there And we know that uh there's
+[00:47:02] a relationship between inflammation in the brain
+[00:47:10] which often involves microbial activity and
+[00:47:10] and activity of our our immune system and later
+[00:47:16] susceptibility to diseases like Alzheimer's So I
+[00:47:16] think as the genetics of those interactions become
+[00:47:23] better understood over time and by the way that's
+[00:47:23] something that crisper can help with is really
+[00:47:27] dissecting the the genes that are involved in
+[00:47:27] those interactions we now have the ability to to
+[00:47:33] change those uh those genes whether it's changing
+[00:47:33] them in the microbiome uh of of an affected person
+[00:47:39] or as we talked about with prevention potentially
+[00:47:39] doing it before we're susceptible to disease
+[00:47:47] If someone is coming to the end of a story about
+[00:47:47] crisper what do you want them to know well we've
+[00:47:51] talked about a lot of great applications of
+[00:47:51] crisper I guess I I want to circle back to
+[00:47:55] maybe where we started in the conversation because
+[00:47:55] I find that a lot of students today will ask me
+[00:48:02] um the questions about you know how did I get
+[00:48:02] interested in this area of science or how did
+[00:48:07] I how did I you know how did I start working
+[00:48:07] on on crisper in the first place did I know
+[00:48:12] that it was going to be you know a really exciting
+[00:48:12] technology when we got started and the answer is
+[00:48:17] no And I I think it's important to to emphasize
+[00:48:17] a couple of things here that are are I feel and
+[00:48:25] especially at in this moment that we're in and in
+[00:48:25] our country and in the world that that I think has
+[00:48:30] been perhaps missed by a lot of people and that
+[00:48:30] is that you know science is really a it's a it's
+[00:48:36] a process and it's a process that's very very much
+[00:48:36] a human endeavor Now maybe AI will change that at
+[00:48:43] some point I'm I'm sure it will will assist us
+[00:48:43] But fundamentally my experience is that it's
+[00:48:49] very much driven by human curiosity It's a person
+[00:48:49] or a few people wondering I wonder how something
+[00:48:56] works and then digging in to figure it out And
+[00:48:56] if you look at the fundamental breakthroughs
+[00:49:01] that have happened over time in the biological
+[00:49:01] sciences certainly the vast majority of those
+[00:49:07] have come about from that type of question and
+[00:49:07] answer And crisper is very much in that category
+[00:49:12] So I think it's great for people to appreciate
+[00:49:12] that that's kind of how science works And so I I
+[00:49:18] I always encourage students to think about what
+[00:49:18] they're curious about what they're interested
+[00:49:22] in what do they find fascinating what's so
+[00:49:22] what's something that they've experienced
+[00:49:27] in their lives where they have no idea how it
+[00:49:27] works and they wonder what the heck right and
+[00:49:31] and they want to figure it out because that's
+[00:49:31] always how I've I've directed my research And
+[00:49:37] um there's real value to that and that's really
+[00:49:37] how fundamental breakthroughs are made So I I
+[00:49:42] think we have to first of all appreciate that
+[00:49:42] and secondly I hope agree that we're going to
+[00:49:48] continue to support that kind of curiositydriven
+[00:49:48] science for the next generation hopefully who are
+[00:49:52] listening to this I hope so too What are some
+[00:49:52] of the what the heck curiosities for you right
+[00:49:58] now feel free to get as nerdy and specific and
+[00:49:58] maybe don't explain like just what are some of
+[00:50:05] the things that are that feel what the heck to
+[00:50:05] you well I mean I'm curious about all kinds of
+[00:50:10] crazy things like I heard about a great project um
+[00:50:10] to investigate how bipeedalism emerged how how it
+[00:50:17] evolved You know why are we bipedal whereas our uh
+[00:50:17] ancestral apes were originally not bipedal and so
+[00:50:27] uh there's actually a scientist that I know
+[00:50:27] who's using crisper to try to figure this out
+[00:50:31] in rodents because there are related rodents
+[00:50:31] some of which are bipedal naturally and some
+[00:50:35] of which are not So she's trying to figure out
+[00:50:35] the genetics of that So there's a that's a kind
+[00:50:40] of a cool one What the heck uh what the heck um
+[00:50:40] in our own research I'm you know very interested
+[00:50:46] in well as we discussed this connection between
+[00:50:46] microbiomes and our health So there's a there's
+[00:50:52] a number of things that we're investigating
+[00:50:52] there by tweaking the genes of microbes and
+[00:50:57] then asking how does that affect the behavior of
+[00:50:57] human cells So I think that's a you know that's a
+[00:51:02] an area that there continues to be lots of kind
+[00:51:02] of curiosities to to explore And then the third
+[00:51:08] thing is more applied but a big area that we're
+[00:51:08] focused on in my own laboratory and here at our
+[00:51:14] institute is this question of how we deliver
+[00:51:14] molecules specifically into cells because that
+[00:51:20] that's really going to be transformative when
+[00:51:20] we have that that capability more broadly And
+[00:51:26] so I'm curious about how this happens in nature
+[00:51:26] and of course viruses do it But it turns out so
+[00:51:31] do bacteria You know certain bacteria have the
+[00:51:31] capability to get into particular cell types
+[00:51:36] So we continue to investigate those fundamental
+[00:51:36] processes hoping that we can uh you know learn
+[00:51:42] from them and and learn how to do it ourselves
+[00:51:42] What the heck what the heck can I ask you what
+[00:51:47] does it feel like to have been such an important
+[00:51:47] part of bringing this new power into the world
+[00:51:53] humbling I guess is the first word that comes to
+[00:51:53] mind I feel grateful too I feel so excited to be
+[00:51:58] part of it You know I feel um uh you know when I
+[00:51:58] was a kid growing up I just could dream of doing
+[00:52:05] science in the future and imagine myself as a
+[00:52:05] scientist but I had no idea really what I would
+[00:52:10] work on or where where I would end up I could have
+[00:52:10] never in a million years and you know imagined
+[00:52:16] um all of this coming to pass But it's been
+[00:52:16] such an incredibly interesting journey and I
+[00:52:21] also feel that I'm always learning you know so
+[00:52:21] it's a it's it's given me great opportunities
+[00:52:25] to learn new things My last question for you
+[00:52:25] is could you read this you wrote it That last
+[00:52:35] paragraph few technologies are inherently
+[00:52:35] good or bad What matters is how we use them
+[00:52:40] And when it comes to crisper the possibilities of
+[00:52:40] this new technology good and bad are limited only
+[00:52:46] by our imaginations I firmly believe we can use
+[00:52:46] it for the former and not the latter But I'm also
+[00:52:52] cognizant that this will require determination
+[00:52:52] from us individually and collectively As a
+[00:52:57] species we have never done anything like this
+[00:52:57] before But then again we've never had the tools
+[00:53:02] to do it The power to control our species
+[00:53:02] genetic future is awesome and terrifying
+[00:53:07] deciding how to handle it may be the biggest
+[00:53:07] challenge we have ever faced I hope I believe that
+[00:53:13] we're up to the task Thank you so much for your
+[00:53:13] time I really appreciate it Awesome Yeah Oh this
+[00:53:20] is very fun Thank you Boy I'm really impressed
+[00:53:20] You did a you clearly did a lot of homework
+[00:53:26] and uh you had great questions Thank you We got
+[00:53:26] more deeply into this than is usually possible
+[00:53:32] in this type of a conversation So that's great
+[00:53:32] Really means a lot to me Yeah for saying that

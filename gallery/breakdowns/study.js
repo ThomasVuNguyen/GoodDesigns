@@ -3,28 +3,66 @@ const video = document.getElementById('study-video');
 if (video) {
   const lines = [...document.querySelectorAll('.transcript-line')];
   let active = -1;
+  let youtubePlayer = null;
+  let pendingSeek = null;
+  const isYouTube = Boolean(video.dataset.youtubeId);
 
-  document.addEventListener('click', (event) => {
-    const seek = event.target.closest('[data-seek]');
-    if (!seek) return;
-    video.currentTime = Number(seek.dataset.seek);
-    video.play().catch(() => {});
-    if (!seek.classList.contains('transcript-line')) {
-      video.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
-    }
-  });
+  if (isYouTube) {
+    window.onYouTubeIframeAPIReady = () => {
+      youtubePlayer = new YT.Player(video, {
+        videoId: video.dataset.youtubeId,
+        playerVars: { playsinline: 1 },
+        events: { onReady: () => {
+          if (pendingSeek !== null) {
+            youtubePlayer.seekTo(pendingSeek, true);
+            youtubePlayer.playVideo();
+            pendingSeek = null;
+          }
+        } },
+      });
+    };
+    const script = document.createElement('script');
+    script.src = 'https://www.youtube.com/iframe_api';
+    document.head.append(script);
+  }
 
-  video.addEventListener('timeupdate', () => {
+  function currentTime() {
+    return isYouTube ? (youtubePlayer?.getCurrentTime?.() || 0) : video.currentTime;
+  }
+
+  function updateTranscript() {
+    const time = currentTime();
     let next = -1;
     for (let i = 0; i < lines.length; i++) {
-      if (Number(lines[i].dataset.time) > video.currentTime) break;
+      if (Number(lines[i].dataset.time) > time) break;
       next = i;
     }
     if (next === active) return;
     if (active >= 0) lines[active].classList.remove('is-active');
     active = next;
     if (active >= 0) lines[active].classList.add('is-active');
+  }
+
+  document.addEventListener('click', (event) => {
+    const seek = event.target.closest('[data-seek]');
+    if (!seek) return;
+    const time = Number(seek.dataset.seek);
+    if (isYouTube) {
+      if (youtubePlayer?.seekTo) {
+        youtubePlayer.seekTo(time, true);
+        youtubePlayer.playVideo();
+      } else pendingSeek = time;
+    } else {
+      video.currentTime = time;
+      video.play().catch(() => {});
+    }
+    if (!seek.classList.contains('transcript-line')) {
+      document.getElementById('study-video').scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'center' });
+    }
   });
+
+  if (isYouTube) setInterval(updateTranscript, 500);
+  else video.addEventListener('timeupdate', updateTranscript);
 
   const tabs = [...document.querySelectorAll('[data-tab]')];
   function selectTab(tab) {

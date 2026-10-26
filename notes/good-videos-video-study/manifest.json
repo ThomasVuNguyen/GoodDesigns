@@ -302,5 +302,100 @@
       "text": "transcripts/28-youtube-R2_V8Fe5-_A.transcript.txt",
       "kind": "local speech recognition"
     }
+  },
+  {
+    "number": 29,
+    "slug": "youtube-YkEwyFpxWFc",
+    "title": "The Most Likely Place to Find Aliens",
+    "author": "Cleo Abram",
+    "url": "https://www.youtube.com/watch?v=YkEwyFpxWFc",
+    "duration": 2345.885208,
+    "bytes": 125472957,
+    "width": 1280,
+    "height": 720,
+    "fps": "24000/1001",
+    "second_frames": 2346,
+    "scene_frames": 482,
+    "transcript": {
+      "vtt": "transcripts/29-youtube-YkEwyFpxWFc.en.vtt",
+      "text": "transcripts/29-youtube-YkEwyFpxWFc.transcript.txt",
+      "kind": "creator captions"
+    }
+  },
+  {
+    "number": 30,
+    "slug": "youtube-XfGEMCb6BQU",
+    "title": "What's Hidden Under Antarctica?",
+    "author": "Cleo Abram",
+    "url": "https://www.youtube.com/watch?v=XfGEMCb6BQU",
+    "duration": 1128.585792,
+    "bytes": 63714899,
+    "width": 1280,
+    "height": 720,
+    "fps": "24000/1001",
+    "second_frames": 1129,
+    "scene_frames": 318,
+    "transcript": {
+      "vtt": "transcripts/30-youtube-XfGEMCb6BQU.en.vtt",
+      "text": "transcripts/30-youtube-XfGEMCb6BQU.transcript.txt",
+      "kind": "creator captions"
+    }
+  },
+  {
+    "number": 31,
+    "slug": "youtube-C0gErQtnNFE",
+    "title": "The Hardest Problem AI Ever Solved, with Google DeepMind CEO",
+    "author": "Cleo Abram",
+    "url": "https://www.youtube.com/watch?v=C0gErQtnNFE",
+    "duration": 3910.907,
+    "bytes": 132777514,
+    "width": 1280,
+    "height": 720,
+    "fps": "24000/1001",
+    "second_frames": 3911,
+    "scene_frames": 604,
+    "transcript": {
+      "vtt": "transcripts/31-youtube-C0gErQtnNFE.en.vtt",
+      "text": "transcripts/31-youtube-C0gErQtnNFE.transcript.txt",
+      "kind": "YouTube auto captions"
+    }
+  },
+  {
+    "number": 32,
+    "slug": "youtube-p60I9LNHNxg",
+    "title": "Why This Olympic Sport Bothers Physicists",
+    "author": "Cleo Abram",
+    "url": "https://www.youtube.com/watch?v=p60I9LNHNxg",
+    "duration": 975.72475,
+    "bytes": 63249897,
+    "width": 1280,
+    "height": 720,
+    "fps": "24000/1001",
+    "second_frames": 976,
+    "scene_frames": 396,
+    "transcript": {
+      "vtt": "transcripts/32-youtube-p60I9LNHNxg.en.vtt",
+      "text": "transcripts/32-youtube-p60I9LNHNxg.transcript.txt",
+      "kind": "creator captions"
+    }
+  },
+  {
+    "number": 33,
+    "slug": "youtube-0OXaanDHENI",
+    "title": "Editing Your DNA, with Nobel Prize Winner Dr. Jennifer Doudna",
+    "author": "Cleo Abram",
+    "url": "https://www.youtube.com/watch?v=0OXaanDHENI",
+    "duration": 3225.47225,
+    "bytes": 102065500,
+    "width": 1280,
+    "height": 720,
+    "fps": "24000/1001",
+    "second_frames": 3225,
+    "scene_frames": 463,
+    "transcript": {
+      "vtt": "transcripts/33-youtube-0OXaanDHENI.en.vtt",
+      "text": "transcripts/33-youtube-0OXaanDHENI.transcript.txt",
+      "kind": "creator captions"
+    }
   }
 ]

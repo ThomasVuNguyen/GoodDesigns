@@ -1,0 +1,1934 @@
+[00:00:01] Something's obviously not quite right
+[00:00:01] about the definition of intelligence.
+[00:00:03] >> If we play this out, what's the limit
+[00:00:05] here?
+[00:00:05] >> The best use case of AI was to improve
+[00:00:08] uh human health. It was the moment I've
+[00:00:10] been waiting for that could achieve
+[00:00:12] something no other system could. [music]
+[00:00:13] I want to use AI as a tool to help us
+[00:00:16] understand the nature of reality around
+[00:00:18] it.
+[00:00:18] >> Governments are going to use AI. What
+[00:00:19] would you hope that they use it [music]
+[00:00:21] for? There's two things to worry about.
+[00:00:23] One is
+[00:00:25] That's Demis Hassabis, the CEO of Google
+[00:00:28] DeepMind.
+[00:00:28] >> Nobel Prize winner. He is one of the
+[00:00:31] most important people alive on what is
+[00:00:33] quickly becoming the biggest
+[00:00:35] technological leap in our lifetime.
+[00:00:37] Because the biggest way that AI is going
+[00:00:39] to impact our lives isn't something that
+[00:00:41] we can see. It's not a chatbot, it's not
+[00:00:44] an image generator. It's tools that are
+[00:00:46] invisible to us in drug design and
+[00:00:49] natural disaster detection and nuclear
+[00:00:52] fusion and quantum computing. [music]
+[00:00:54] Tools that he and his team are building.
+[00:00:56] Here he is winning the Nobel Prize for
+[00:00:59] just one of those tools. So, who he is
+[00:01:02] and what he chooses to build [music]
+[00:01:04] matters a lot for you and me. And he's
+[00:01:08] fascinating. He's a childhood chess
+[00:01:10] prodigy who at 17 turned down a
+[00:01:12] reportedly [music]
+[00:01:13] million-dollar job offer from a gaming
+[00:01:15] company to go to college instead and
+[00:01:17] then got a PhD in cognitive
+[00:01:19] neuroscience. He founded his company
+[00:01:22] DeepMind with a mission [music]
+[00:01:23] to solve intelligence starting with
+[00:01:26] beating video games. He then sold that
+[00:01:28] company to Google specifically because
+[00:01:30] they promised to let DeepMind focus on
+[00:01:33] scientific research. But, as this has
+[00:01:36] turned into the most intense
+[00:01:37] technological battle in recent history,
+[00:01:40] Demis is now in charge of much, much
+[00:01:43] more. He's now behind basically
+[00:01:46] everything Google does in AI. He's
+[00:01:48] making decisions that affect your life
+[00:01:51] and millions of other lives every single
+[00:01:54] day. So, what is he planning to do with
+[00:01:57] all of that power? My goal is to show
+[00:02:00] you the future that Demis Hassabis wants
+[00:02:03] [music] to build so that you can decide
+[00:02:04] for yourself what you think of it.
+[00:02:07] Welcome to Huge Conversations.
+[00:02:17] >> Thanks so much for doing [music] this.
+[00:02:17] It's great.
+[00:02:18] >> appreciate it. You already know that
+[00:02:20] Huge Conversations is a different kind
+[00:02:21] of interview. I'm not going to ask you
+[00:02:23] about [music] financials, I'm not going
+[00:02:25] to ask you about your management style.
+[00:02:26] I All well covered elsewhere.
+[00:02:29] What I'm hoping to do in this
+[00:02:30] conversation is think about it more like
+[00:02:32] an explainer that we're making live
+[00:02:34] [music] together.
+[00:02:36] And I have some props. This was not
+[00:02:38] actually meant to be a Jenga game.
+[00:02:39] >> [laughter]
+[00:02:41] >> Um each block represents a project or a
+[00:02:43] model and I want to talk about them and
+[00:02:45] how they fit together. And so they were
+[00:02:47] meant to be visual aids, but as we were
+[00:02:48] setting up, we started playing Jenga
+[00:02:50] with them and it turned out to be way
+[00:02:51] more fun than anything I had planned.
+[00:02:53] Also, I know that you like games.
+[00:02:55] >> Yes, I love games. So, this is great.
+[00:02:56] First in an interview anyway. So, yeah.
+[00:02:58] Well, so my hope in this conversation is
+[00:03:00] to make this explainer together
+[00:03:03] and [music] to help people see what's
+[00:03:05] happening right now in AI really
+[00:03:08] and what is the future that you see
+[00:03:09] coming? What are you hoping to do in
+[00:03:11] this conversation? Yeah, a lot of the
+[00:03:13] reasons that I got into AI 30-plus years
+[00:03:15] ago now is to
+[00:03:18] um advance science and medicine and I've
+[00:03:21] [music] always thought of AI as
+[00:03:22] potentially the ultimate tool to do
+[00:03:24] that. So, I'm hoping we're going to talk
+[00:03:25] about that today [music] and really
+[00:03:27] that's been my passion for what to apply
+[00:03:29] AI to. But of course it can be applied
+[00:03:31] to many things. [music] Oh, this is
+[00:03:32] going to be a lot of fun. Yeah.
+[00:03:33] So, in this Jenga game that we have, a
+[00:03:36] lot of these are blocks that people will
+[00:03:38] have heard of, right? These are, you
+[00:03:39] know, this one is Gemini.
+[00:03:42] >> Right. But I would argue that the ways
+[00:03:45] in which AI is meaningfully shaping
+[00:03:46] people's lives [music]
+[00:03:48] most are the things that are invisible
+[00:03:50] to them most of the time.
+[00:03:51] >> [music]
+[00:03:52] >> So, I want to start by talking about the
+[00:03:53] project that you won the Nobel Prize
+[00:03:56] for. Mhm.
+[00:03:57] AlphaFold. Yeah.
+[00:03:59] Good [music] Jenga play.
+[00:04:01] I want to tell the story of AlphaFold
+[00:04:02] with all of its drama because some
+[00:04:04] people might not have heard it. But then
+[00:04:05] I want [music] to get really quickly to
+[00:04:06] the cutting edge of this sort of
+[00:04:08] category of science.
+[00:04:09] Why did you decide to tackle this
+[00:04:11] problem out of all of the many? Mhm.
+[00:04:13] Well, I came across it actually uh as an
+[00:04:15] undergrad in Cambridge. So, I had a lot
+[00:04:17] of biologist friends and one of them
+[00:04:19] specifically was obsessed with [music]
+[00:04:21] what's called the protein folding
+[00:04:22] problem. So, proteins are what
+[00:04:25] everything in your body relies on. They
+[00:04:26] make biology possible and living
+[00:04:28] possible. And what's important about
+[00:04:30] them is their 3D structure. So, in the
+[00:04:33] body they fold up into kind of 3D
+[00:04:35] structures and those structures
+[00:04:37] determine what function they have or
+[00:04:39] partially determine what function they
+[00:04:40] have. And so, the protein folding
+[00:04:42] problem is really about can you predict
+[00:04:44] this 3D structure just from the
+[00:04:46] one-dimensional amino acid sequence? So,
+[00:04:49] that's the kind of 50-year grand
+[00:04:51] challenge of protein folding. So, I love
+[00:04:53] challenges, I love puzzles. So, I
+[00:04:54] couldn't resist it from a scientific
+[00:04:56] point of view as this probably, you
+[00:04:58] know, is described [music] to me as the
+[00:04:59] equivalent of Fermat's Last Theorem but
+[00:05:01] for biology. So, who couldn't be
+[00:05:02] interested in that? But also, when I
+[00:05:04] first heard it, I I thought um the kind
+[00:05:06] of problem it was would be suitable for
+[00:05:09] AI one day. Even though we of course
+[00:05:11] this is in the late '90s, we didn't have
+[00:05:13] any kind of AI that would be possible to
+[00:05:15] work on this. But I thought one day that
+[00:05:17] would be possible. And then the final
+[00:05:18] thing was just the impact it would make
+[00:05:20] if you cracked it because it would open
+[00:05:23] up all these downstream possibilities
+[00:05:25] for research and especially in things
+[00:05:27] like drug discovery and understanding
+[00:05:29] disease. So, which I think is, you know,
+[00:05:31] the most important thing to apply AI to
+[00:05:32] is improving human health. And the
+[00:05:34] reason that this would be huge for human
+[00:05:37] health is that up until now, in order to
+[00:05:40] develop new medicines, we'd have to
+[00:05:42] spend hundreds of thousands of dollars
+[00:05:44] and years of human effort to find out
+[00:05:47] the structure of a single protein by
+[00:05:49] shooting X-rays at it. So, we had
+[00:05:52] figured out some protein structures,
+[00:05:54] >> [music]
+[00:05:54] >> but it was slow and expensive.
+[00:05:56] So, I'm skipping over an enormous amount
+[00:05:58] of hard work [music] here by you and
+[00:05:59] your team. But I think by the way that
+[00:06:02] I'm asking the questions,
+[00:06:03] >> [music]
+[00:06:03] >> it is very obvious to people that you
+[00:06:05] solved it. Yeah. So, there's this moment
+[00:06:07] where you realize that it is genuinely
+[00:06:10] useful and you have solved what had been
+[00:06:11] called one of the most important
+[00:06:13] unsolved problems in modern medicine.
+[00:06:15] >> Mhm.
+[00:06:16] And it's 2021.
+[00:06:17] >> Mhm. You're in a meeting. Mhm.
+[00:06:19] I am so glad that there was a camera in
+[00:06:21] this meeting because it is one of the
+[00:06:23] most incredible moments I have ever
+[00:06:25] seen. Can we use AlphaFold to to solve
+[00:06:27] it? I think you're talking with your
+[00:06:29] team about setting up a system where
+[00:06:31] scientists could send in a request for a
+[00:06:34] specific protein, like a website, and
+[00:06:36] then get the protein folded. Yes.
+[00:06:39] And then someone else has a very
+[00:06:40] different idea. Yes. Can you walk me
+[00:06:42] through what happens in that meeting?
+[00:06:43] [laughter] And then you your reaction is
+[00:06:45] incredible uh and I really want to know
+[00:06:47] what you were thinking.
+[00:06:48] >> Yeah. Sure. Well, look, we we
+[00:06:50] it's it was funny that the cameras were
+[00:06:52] there happened to be in that in that
+[00:06:53] particular meeting. It's crazy that was
+[00:06:55] that day, you know, they very rarely
+[00:06:56] followed us, but it was fit for that
+[00:06:57] meeting. And um normally what happens
+[00:07:00] for these sorts of uh prediction models
+[00:07:03] is you the traditional thing is you kind
+[00:07:05] of set up a server and then other
+[00:07:07] scientists send you their protein
+[00:07:09] sequences and they say, "Oh, I'm
+[00:07:11] interested in this protein. Can you send
+[00:07:13] me back the the predicted structure?"
+[00:07:15] So, you know, uh and that's how it's
+[00:07:17] been done in the whole field for the
+[00:07:19] last 40-plus years.
+[00:07:21] Um and the reason is is because most of
+[00:07:23] the prediction algorithms are quite
+[00:07:24] slow. So, maybe it would take a few days
+[00:07:27] and then you'd get back the, you know,
+[00:07:28] you'd email your email back the
+[00:07:30] structure
+[00:07:31] um and then you'd ask for, you know,
+[00:07:32] you'd ask for the next one. But once I
+[00:07:34] realized sort of in that meeting
+[00:07:36] actually that how quickly uh not only
+[00:07:38] how accurately we could fold the
+[00:07:39] proteins but how quickly, you know, in a
+[00:07:41] matter of seconds. And then I was just
+[00:07:43] sort of doing the back-of-the-envelope
+[00:07:44] calculation like how many proteins are
+[00:07:46] there known to science, known in nature?
+[00:07:48] 200 million. And then how many computers
+[00:07:50] do we have? And uh how many would we
+[00:07:52] need? And then, you know, put and then
+[00:07:54] if we folded one every 10 seconds, and I
+[00:07:57] sort of realized sort of in the middle
+[00:07:59] of that meeting while I was fiddling on
+[00:08:00] my phone that it would be possible in a
+[00:08:02] year. And so, why go to all the effort
+[00:08:05] of building the servers and the
+[00:08:06] databases and and, you know, the emails
+[00:08:09] uh uh um client and all of that when we
+[00:08:12] could just actually fold everything
+[00:08:14] ourselves, everything anyone could ever
+[00:08:16] request and ever want, and then put it
+[00:08:19] on a database somewhere for free for all
+[00:08:22] the scientists in the world to use. So,
+[00:08:24] it just suddenly hit me. We should just
+[00:08:25] do that.
+[00:08:27] Now you can really Why don't we just do
+[00:08:29] that? Well, so that's one of the options
+[00:08:30] like we Right. Uh you know, there's this
+[00:08:32] We should just run We should That's a
+[00:08:34] That's a great idea. We should just run
+[00:08:36] every protein in existence.
+[00:08:38] And then release that. Suddenly, all
+[00:08:40] these things must have been going on in
+[00:08:41] the back of my mind and I suddenly
+[00:08:43] realized that that would be the obvious
+[00:08:45] thing to do and it would be actually
+[00:08:46] probably less effort than standing up
+[00:08:48] the server. So, [laughter]
+[00:08:49] actually it would save us time. And you
+[00:08:52] in that meeting, your reaction is
+[00:08:53] something like, "Why don't we just do
+[00:08:55] that? That would be way better. We
+[00:08:57] should clearly do that." And then you
+[00:08:59] do. All of a sudden this crucial process
+[00:09:01] that had been so hard is suddenly fast
+[00:09:04] [music] and easy. And it's being used by
+[00:09:07] scientists all over the world. This huge
+[00:09:09] unsolved problem now [music] solved.
+[00:09:13] Is it correct to say that we have now
+[00:09:16] predicted the structure of
+[00:09:18] almost all proteins known [music] to
+[00:09:20] science?
+[00:09:20] >> Yes. And we keep updating it. So, every
+[00:09:22] time, you know, somebody scoops a pail
+[00:09:25] out of the ocean somewhere and then, you
+[00:09:27] know, there's loads of sort of different
+[00:09:29] types of organisms in that bucket of
+[00:09:31] water seawater and then they sequence
+[00:09:32] them all. And so, the sequencing
+[00:09:34] technology has obviously uh improved
+[00:09:37] many orders of magnitude since the human
+[00:09:39] genome was sequenced. So, now the
+[00:09:41] problem was the structural biology, the
+[00:09:42] finding these 3D structures was taking
+[00:09:45] was far lacking far behind the genetic
+[00:09:47] sequencing. So, now with these
+[00:09:49] computational resources like AlphaFold
+[00:09:51] 2, we can actually keep up with, "Oh,
+[00:09:53] here's a new million uh genetic
+[00:09:56] sequences from some new strange
+[00:09:57] organisms we found, uh oh, here are the
+[00:10:00] structures. And so, uh we have a kind of
+[00:10:03] a small team uh at the the at the
+[00:10:05] European Bioinformatics Institute that
+[00:10:07] keeps updating every year, you know, all
+[00:10:10] the new sequences that have been found
+[00:10:11] that year. So, we're we're now, you
+[00:10:13] know, always at the cutting edge. Like,
+[00:10:15] we know what all of these different uh
+[00:10:18] protein structures mostly uh
+[00:10:20] look like. That's so awesome. It is
+[00:10:22] pretty amazing. It's especially amazing,
+[00:10:24] actually, for the people uh researchers
+[00:10:26] that work on um slightly more obscure,
+[00:10:29] you know, organisms or animals and
+[00:10:32] things like uh for example, wheat. I
+[00:10:34] found out that a lot of plants have way
+[00:10:36] more uh genomic data than mammals and
+[00:10:39] humans, which is very strange. They seem
+[00:10:41] to have multiple copies of of of of
+[00:10:43] their genome and things. And it's uh
+[00:10:46] it's it's it's it's a kind of strange
+[00:10:48] and bizarre world, I think, the plant
+[00:10:49] world. But um my plant scientist friends
+[00:10:52] of mine is like, you know, they they
+[00:10:53] they don't have the resources um like
+[00:10:56] with, you know, the human genome,
+[00:10:57] there's a lot of work's been done on
+[00:10:59] that. But some of these more obscure
+[00:11:00] organisms um that still really important
+[00:11:03] for humanity, you know, like crops and
+[00:11:04] things like that, uh now we're able to
+[00:11:07] um immediately jump to the science
+[00:11:09] around what they want to do with the
+[00:11:11] proteins, um maybe, you know, help them
+[00:11:13] be more resilient to to climate change,
+[00:11:15] things like that. And uh and and they
+[00:11:18] can jump straight to the problem they're
+[00:11:19] actually interested in rather than
+[00:11:21] getting bogged down with trying to
+[00:11:22] crystallize the proteins that they're
+[00:11:24] interested in. Another boon is for um
+[00:11:27] researchers who work on neglected
+[00:11:29] diseases uh that affect primarily the
+[00:11:32] more developing parts of the world,
+[00:11:33] things like malaria or Chagas disease or
+[00:11:36] leishmaniasis. These they affect, you
+[00:11:37] know, hundreds of millions of people
+[00:11:39] around the world. And um but there's not
+[00:11:42] uh a lot of money in that if if big
+[00:11:45] pharma um tried to research that and
+[00:11:47] find cures cuz they're in the more
+[00:11:48] poorer parts of the world. So, they tend
+[00:11:50] to be neglected, the research that goes
+[00:11:52] into that. So, there's these amazing uh
+[00:11:54] non-profit organizations that do the
+[00:11:56] research on that.
+[00:11:58] Uh um but they don't have a lot of money
+[00:12:00] or resources, so um giving them the
+[00:12:02] structures of the proteins that are
+[00:12:03] involved in, say, malaria virus
+[00:12:06] uh is a huge boon for them, too, cuz
+[00:12:07] they can go straight to the drug
+[00:12:09] discovery phase. That was one of the
+[00:12:11] hardest things to figure out as I was
+[00:12:12] doing this research because there's this
+[00:12:14] moment where scientists all around the
+[00:12:16] world have access to AlphaFold. You can
+[00:12:18] see like the map lights up. You can see
+[00:12:20] that people are using it. But I wasn't
+[00:12:22] easily able to figure out what, and a
+[00:12:25] great example would be to talk to you
+[00:12:26] about of a scientist using AlphaFold and
+[00:12:28] then that speeding up a drug process
+[00:12:31] that results in a drug that I could now
+[00:12:33] take. What is your favorite example of a
+[00:12:35] scientist using AlphaFold for something
+[00:12:37] the audience might understand or have
+[00:12:39] seen. So, over 3 million scientists are
+[00:12:42] now using AlphaFold. We think it's
+[00:12:44] pretty much every biologist in the world
+[00:12:46] at this point.
+[00:12:47] Uh and one actually scientist at uh at a
+[00:12:50] pharma company said to me
+[00:12:52] that you know, almost every drug
+[00:12:55] developed from now on will have probably
+[00:12:57] used AlphaFold in its
+[00:13:00] in its process, which is sort of, you
+[00:13:02] know, mind-blowing, really, and amazing
+[00:13:04] that that's that that that that impact
+[00:13:06] it's having. So, um but it still takes
+[00:13:09] time with drug discovery. So, we're
+[00:13:11] we're still mostly in the fundamental
+[00:13:12] biology stage of understanding the
+[00:13:14] disease, what is the protein we're
+[00:13:15] targeting, is that the right biological
+[00:13:17] mechanism. And then
+[00:13:19] uh as I understand it, some of these
+[00:13:21] drugs are now in kind of the the the the
+[00:13:23] clinical trials phase. And then uh
+[00:13:26] hopefully we'll see in a few years' time
+[00:13:28] mir you know, a whole dozens of drugs
+[00:13:30] that were partially helped by at least
+[00:13:33] AlphaFold. And um in terms of my
+[00:13:35] favorite breakthrough is more on that so
+[00:13:38] far has happened with the help of
+[00:13:39] AlphaFold is there's this protein in
+[00:13:41] called the nuclear pore complex, and
+[00:13:43] it's one of the biggest proteins in the
+[00:13:45] body. It's huge for a protein. And what
+[00:13:47] it does, a very important job, it's
+[00:13:48] basically the gateway that opens up and
+[00:13:50] closes to let nutrients come in and out
+[00:13:53] of the cell nucleus. So, it's it's
+[00:13:55] basically the gate It's like a big donut
+[00:13:57] ring that opens and closes. And um but
+[00:13:59] we didn't know until very recently what
+[00:14:01] the structure of this was cuz it's so
+[00:14:02] big and complicated. Uh it's pretty hard
+[00:14:05] to crystallize and actually see. And so,
+[00:14:08] uh
+[00:14:09] almost I think it was pretty much 6
+[00:14:10] months or year after we put AlphaFold
+[00:14:12] out, uh some teams used it along with
+[00:14:15] experimental data to finally work out
+[00:14:17] what this beautiful shape was of this uh
+[00:14:20] this gateway protein. And uh that was
+[00:14:23] amazing to me. It's, you know, one of
+[00:14:24] the biggest proteins in the body that's
+[00:14:26] um and and AlphaFold was was was very
+[00:14:28] useful in helping determining that
+[00:14:30] structure. And so, perhaps we can design
+[00:14:33] drugs or treatments that better
+[00:14:36] that that use that somehow that better
+[00:14:38] access the Yes, potentially. I think I
+[00:14:40] think that was more for fundamental
+[00:14:41] biology understanding, but but obviously
+[00:14:44] there is uh I mean, we ourselves, we've
+[00:14:47] spun out a new company, Isomorphic Labs,
+[00:14:50] that uh actually uh tries to build on
+[00:14:53] AlphaFold and uses it to indeed in this
+[00:14:56] in this block here, uses it to uh as as
+[00:14:59] one of the pieces of the puzzle to um
+[00:15:02] massively speed up drug discovery. So,
+[00:15:05] on average, you know, it takes like 10
+[00:15:07] years to uh to to kind of develop a
+[00:15:10] drug. It's crazy long time, unbelievable
+[00:15:12] amount of hard work, very expensive, and
+[00:15:14] huge failure rates. You know, only about
+[00:15:16] 10% of drugs actually get through all
+[00:15:18] the clinical stages. So, it we need to
+[00:15:20] vastly improve that if we want to
+[00:15:22] improve human health, I think. And I
+[00:15:24] think the way to do that is by using
+[00:15:27] uh in silico methods, AlphaFold 2 being
+[00:15:30] uh one of those components. Um but
+[00:15:32] knowing the structure of a protein is
+[00:15:33] only one small part of the drug
+[00:15:35] discovery process. You need a lot of
+[00:15:37] chemistry, like what compound should you
+[00:15:39] design to bind to it, all of these
+[00:15:40] things. So, we're trying to Isomorphic
+[00:15:44] um build these, you can think of them as
+[00:15:46] uh adjacent systems that work with
+[00:15:49] AlphaFold, more advanced AlphaFold,
+[00:15:51] AlphaFold 3, AlphaFold 4, you could call
+[00:15:53] it. And um and then uh end-to-end
+[00:15:57] basically create these drugs that have,
+[00:16:00] you know, very minimal kind of side
+[00:16:02] effects and uh and incredibly effective
+[00:16:04] at addressing uh the type of disease
+[00:16:06] we're we're we're trying to help with.
+[00:16:08] And we're working on, you know, I think
+[00:16:10] at this point at like 18, 19 different
+[00:16:12] drug programs um across the gamut of
+[00:16:15] things, from cardiovascular heart
+[00:16:17] disease to cancer to immunology. So, um
+[00:16:21] I think eventually these these types of
+[00:16:22] technologies should be able to help um
+[00:16:24] across almost every therapeutic area. In
+[00:16:27] prep for this, I did a background
+[00:16:28] interview with your fellow Nobel Prize
+[00:16:30] winner, John Jumper. He really stressed
+[00:16:32] that it's one part of a larger problem
+[00:16:35] of drug discovery. And so, that brings
+[00:16:36] us to the cutting edge today. I've taken
+[00:16:39] some of [laughter] the some of the
+[00:16:41] examples that I want to talk about. Um
+[00:16:43] what is the cutting edge now? Sure. So,
+[00:16:45] we're we're we're building many
+[00:16:47] different components that can kind of go
+[00:16:48] together. So,
+[00:16:50] AlphaFold is one of the linchpins, so
+[00:16:52] that's the structure of the protein. But
+[00:16:54] if you think about it, let's say you
+[00:16:56] understand what the shape of the protein
+[00:16:58] is. Okay? And then now you know which
+[00:17:00] bit of the protein is the important part
+[00:17:03] that does its function. So, now, if you
+[00:17:05] think about drug discovery, so say you
+[00:17:07] want to block the effect of that protein
+[00:17:08] or enhance it in some way, you know you
+[00:17:10] need which part of the protein surface
+[00:17:12] do you have to bind to. So, now you have
+[00:17:14] to discover a chemical compound that
+[00:17:17] will that will attach to the right place
+[00:17:19] on the protein, right? And and you want
+[00:17:22] to know how strong will it attach, and
+[00:17:24] will it And then on top of that, even
+[00:17:26] more important is not just will it
+[00:17:28] attach to the thing you're interested
+[00:17:29] in, make sure it doesn't attach to other
+[00:17:31] things because if it does, that would be
+[00:17:33] toxic, toxicity. So, you don't want it
+[00:17:35] to have these side effects, we call it
+[00:17:37] side effects with drugs. So, you want to
+[00:17:38] minimize those. So, but because now we
+[00:17:41] have all of these amazing um
+[00:17:44] algorithmic tools, we can sort of do a
+[00:17:46] virtual screen of like, oh, here's a
+[00:17:48] compound one of our AI systems has
+[00:17:50] designed. It binds This is our
+[00:17:52] prediction of how strong it binds to the
+[00:17:54] protein surface. And then we can check
+[00:17:57] that very quickly, like in a matter of
+[00:17:59] hours, that particular compound, how
+[00:18:01] does it attach to any of the other
+[00:18:03] 20,000 proteins in the human body? And
+[00:18:06] so, we can just do it like that, you
+[00:18:08] know, within a few a few minutes, and
+[00:18:10] then um modify keep modifying the
+[00:18:12] compound so that it has less and less
+[00:18:15] side effects ideally none on any of the
+[00:18:18] other proteins, but increasingly strong
+[00:18:20] effect on the one that you want. So, you
+[00:18:22] can see I've just outlined a
+[00:18:24] self-improvement process or
+[00:18:25] self-modification process. And this is
+[00:18:27] extremely fast and efficient if you can
+[00:18:29] do it in silico. And then um you know,
+[00:18:32] on on on on on computers, and then at
+[00:18:34] the last stage, um only at the final
+[00:18:36] stage do you check it in the wet lab.
+[00:18:38] So, you still have to validate it. You
+[00:18:39] can't You make all these predictions,
+[00:18:41] you do all your search in silicon, but
+[00:18:43] then at the final stage, you check your
+[00:18:45] final uh uh
+[00:18:47] proposed compounds in the wet lab. Um
+[00:18:50] and then check it really does what the
+[00:18:51] predictions say. But that, you can
+[00:18:54] imagine, would save you can search
+[00:18:56] thousands of times more compounds, or
+[00:18:57] maybe even millions at some point, more
+[00:18:59] quickly and efficiently that way, and
+[00:19:01] then just at the end check that they're
+[00:19:03] correct. That's so much more efficient
+[00:19:04] than doing the search in in the wet lab,
+[00:19:06] which is what effectively is done today.
+[00:19:09] Uh one of my favorites also is
+[00:19:11] AlphaGenome.
+[00:19:12] >> Yes. So, I reached out to yet another
+[00:19:15] Nobel Prize winner, good grief.
+[00:19:16] >> [laughter]
+[00:19:17] >> Um Dr. Jennifer Doudna, who I've had on
+[00:19:19] the show.
+[00:19:20] And she sent a question for you. So, I'm
+[00:19:22] going to read this question from
+[00:19:23] >> [clears throat]
+[00:19:23] >> Dr. Doudna.
+[00:19:24] Okay. So, she says, "CRISPR, the
+[00:19:27] gene-editing technology that she
+[00:19:29] pioneered, can now target nearly any DNA
+[00:19:31] sequence. But for most genetic diseases,
+[00:19:33] we still don't fully understand which
+[00:19:35] changes in the DNA are actually driving
+[00:19:37] the problem, especially in the 98% of
+[00:19:40] the genome that doesn't code for
+[00:19:41] proteins. With tools like AlphaGenome
+[00:19:43] starting to decode that 98%, how close
+[00:19:46] do you think we are to the moment where
+[00:19:48] AI can reliably point to the exact
+[00:19:50] genetic change causing a patient's
+[00:19:52] disease so the technologies like CRISPR
+[00:19:54] can fix it.
+[00:19:55] >> Yeah, what an awesome question. So, um
+[00:19:58] you know, I've discussed this with her
+[00:19:59] actually in the past and and it is
+[00:20:01] really exciting. I think with
+[00:20:02] AlphaGenome which is exactly that kind
+[00:20:04] of technology, it takes the big long
+[00:20:06] genetic sequences and then it tries to
+[00:20:09] predict, you know, if you had made a
+[00:20:11] mutation to this particular single
+[00:20:12] letter single position in the genetic
+[00:20:14] sequence, will that be a harmful, you
+[00:20:17] know, mutation that might cause disease
+[00:20:18] or is it benign and it won't and
+[00:20:21] AlphaGenome which we just released is
+[00:20:23] the best system in the world for
+[00:20:24] predicting that. So, that's exactly what
+[00:20:27] you then want if it got it's still not
+[00:20:29] probably good enough yet, but you can
+[00:20:31] imagine a future version of AlphaGenomes
+[00:20:33] that are accurate enough to sort of
+[00:20:34] really know like oh, that particular
+[00:20:36] mutation in combination with this other
+[00:20:38] one, that's the hard part is what if
+[00:20:40] they're multigenic diseases where
+[00:20:42] there's cascades of mutations cause the
+[00:20:45] problem. Those are even harder to
+[00:20:46] detect, but actually perfect for sort of
+[00:20:48] AI to try and help with. Then,
+[00:20:51] you could go in with something like
+[00:20:52] CRISPR maybe one day and go in and fix
+[00:20:55] that mutation. Um and then fix the
+[00:20:57] problem. So, that would be so a kind of
+[00:21:00] combination of things like AlphaGenome
+[00:21:02] and CRISPR could be incredibly powerful
+[00:21:05] and hopefully one day will be you know,
+[00:21:07] collaborating with with with the likes
+[00:21:08] of Jennifer on that. Last year you said
+[00:21:10] something to the Guardian that I found
+[00:21:12] really interesting. You said that if I'd
+[00:21:14] had my way, I would have left AI in the
+[00:21:16] lab for longer. And the quote is done
+[00:21:19] more things like AlphaFold, maybe cured
+[00:21:21] cancer or something like that. From the
+[00:21:23] outside, it looks like the story goes
+[00:21:26] you found DeepMind with the mission to
+[00:21:29] solve intelligence and use it to solve
+[00:21:31] everything else.
+[00:21:33] And then you sell to Google specifically
+[00:21:36] because they will allow the freedom to
+[00:21:38] explore science in this way.
+[00:21:41] And for a long time that's your
+[00:21:43] exclusive focus.
+[00:21:45] And then ChatGPT comes out, Google goes
+[00:21:48] code red, and you become the head of all
+[00:21:50] Google AI including the consumer
+[00:21:52] products that you weren't spending as
+[00:21:54] much time on before.
+[00:21:55] And it feels to me like watching that
+[00:21:57] from afar, it mirrors somewhat the
+[00:21:59] larger experience of AI which is just
+[00:22:01] this incredible change
+[00:22:03] in the last couple of years.
+[00:22:05] What was
+[00:22:07] gained and what was lost in that change?
+[00:22:10] Yeah, I think
+[00:22:12] um
+[00:22:12] that's exactly right what you described
+[00:22:14] is is sort of what how it felt from the
+[00:22:16] inside too. And
+[00:22:19] for me uh as I mentioned earlier was
+[00:22:22] that the AI
+[00:22:24] the the best use case of AI was to
+[00:22:26] improve uh human health and accelerate
+[00:22:29] scientific discovery. In fact, for me I
+[00:22:31] I I've got I got into AI in the first
+[00:22:33] place because I was interested in all
+[00:22:34] the big questions in the world, the
+[00:22:36] nature of reality, nature of
+[00:22:37] consciousness, these kinds of things and
+[00:22:40] I felt we needed a tool to help us even
+[00:22:42] the best scientist to help us make sense
+[00:22:44] of the amount of data and information
+[00:22:46] out there and find insights in that. And
+[00:22:48] that's happening which is amazing and
+[00:22:49] obviously AlphaFold was the our first
+[00:22:51] and you know, so far best expression of
+[00:22:53] that let's say.
+[00:22:55] And I always had that on my mind and
+[00:22:56] many
+[00:22:57] other problems like that.
+[00:22:59] So, it would have been great I think to
+[00:23:02] and and given how important AGI is and
+[00:23:04] how transformative a technology is,
+[00:23:05] maybe the most transformative one in
+[00:23:07] human history,
+[00:23:09] then I thought it would be best to
+[00:23:11] approach these kinds of the the the sort
+[00:23:14] of latter stages of building it which
+[00:23:16] we're in now in we're using the
+[00:23:17] scientific method very carefully, very
+[00:23:20] precisely, very thoughtfully
+[00:23:22] and rigorously with all the best
+[00:23:24] scientists kind of in my ideal world
+[00:23:27] collaborating on
+[00:23:29] in kind of CERN-like way effort
+[00:23:32] on making sure each step we understood
+[00:23:34] each step each as we got to the final
+[00:23:36] goal of of building AGI. Um seems to me
+[00:23:40] like that would make the most sense with
+[00:23:41] a technology like this.
+[00:23:43] And then and of course you don't have to
+[00:23:45] wait so that might take a lot longer,
+[00:23:47] maybe a decade even a two decades
+[00:23:49] longer, but I think that would make
+[00:23:50] sense given the enormity of of what
+[00:23:52] we're dealing with. And
+[00:23:54] and then my other idea was but we don't
+[00:23:56] have to wait till AGI arrives to get
+[00:23:58] start getting the benefits of AI. We
+[00:24:00] could use more specialized systems that
+[00:24:03] maybe make use of the general
+[00:24:04] technologies, the general algorithms
+[00:24:06] we're developing for AGI, but are not in
+[00:24:08] themselves general intelligences.
+[00:24:10] They're they're narrow AIs if you if you
+[00:24:12] want to call them like AlphaFold which
+[00:24:14] does a specific purpose and and only
+[00:24:15] that purpose. And we could we could have
+[00:24:18] we could and we still are I'm still
+[00:24:19] doing this
+[00:24:21] create you know, many types of
+[00:24:22] AlphaFolds and isomorphics while we're
+[00:24:25] building AGI in this careful scientific
+[00:24:27] way and then benefit the humanity could
+[00:24:30] benefit from the from the proceeds of
+[00:24:31] that like cures for cancer
+[00:24:34] or maybe new energy sources or new
+[00:24:36] materials. And so, I felt that that
+[00:24:39] would be you know, maybe looking at this
+[00:24:41] from 20-30 years ago when I started out
+[00:24:42] on all of this, that would have been the
+[00:24:44] ideal way for it to play out
+[00:24:47] in my opinion. Now, it didn't happen
+[00:24:49] like that because technology is
+[00:24:50] unpredictable and in fact, it turns out
+[00:24:53] that things like language were a lot
+[00:24:56] easier than we were all expecting even
+[00:24:58] those of us who were obviously optimists
+[00:25:01] about the whole technology and
+[00:25:02] eventually we'll crack language, but it
+[00:25:04] seems funny to think of it now, but
+[00:25:06] language and concepts and abstractions,
+[00:25:08] things that the current models
+[00:25:09] foundation models like Gemini do
+[00:25:11] incredibly well, we thought that maybe
+[00:25:13] there would be one or two or three more
+[00:25:15] breakthroughs needed before we could get
+[00:25:16] there. But it turned out transformers
+[00:25:18] which my Google colleagues invented and
+[00:25:21] some reinforcement learning as well on
+[00:25:22] top was enough to crack things like
+[00:25:25] language. And and we were sort of
+[00:25:28] playing around with that so with the
+[00:25:29] other leading labs, but
+[00:25:31] of course with ChatGPT and fair play to
+[00:25:33] OpenAI, they scaled it and then they put
+[00:25:35] it out there and I think even they say
+[00:25:37] it was a sort of science it was kind of
+[00:25:39] a research experiment. They didn't
+[00:25:40] realize it would go so viral and I think
+[00:25:43] none of us did and we had sort of fairly
+[00:25:44] equivalent systems at the time because I
+[00:25:47] think when you're building that
+[00:25:48] technology,
+[00:25:50] you are so close to it, you you're very
+[00:25:53] aware of the things it can't do, the
+[00:25:55] flaws it has and you don't realize that
+[00:25:57] actually people out there would find use
+[00:26:00] even though it was hallucinating and
+[00:26:03] doing other things that we're obviously
+[00:26:04] all still trying to improve on now,
+[00:26:06] still not completely fixed,
+[00:26:08] but there's still interesting use cases
+[00:26:10] like summarizing things or you know,
+[00:26:12] brainstorming things like that that
+[00:26:14] people use, you know, everyone uses
+[00:26:15] chatbots for today. Now, the downside of
+[00:26:19] it is is that
+[00:26:20] we're in this sort of ferocious
+[00:26:23] commercial pressure race that that that
+[00:26:26] everyone's sort of locked into
+[00:26:28] currently. And then on top of that
+[00:26:30] there's geopolitical issues like the
+[00:26:32] US-China race and so on. So, there's
+[00:26:34] sort of multiple levels of of of of
+[00:26:37] pressure to sort of move fast. So, the
+[00:26:39] benefit of that is of course you get
+[00:26:41] faster progress obviously. So, you know,
+[00:26:43] the progress is just like at lightning
+[00:26:45] speed at these days.
+[00:26:47] Um
+[00:26:47] so that's good for all the good use
+[00:26:49] cases.
+[00:26:50] The second benefit is that
+[00:26:52] everybody all of the viewers out there
+[00:26:54] everyone, you're all getting to use the
+[00:26:57] most cutting-edge AI technology perhaps
+[00:26:59] only three to six months behind what is
+[00:27:02] actually in the labs. So, that's kind of
+[00:27:04] mind-blowing. It's also great because I
+[00:27:06] think it gives everyone a feeling for
+[00:27:08] it's democratizing AI. It's giving
+[00:27:10] everyone a feeling for what it's like to
+[00:27:12] interact with cutting-edge AI and what
+[00:27:16] it can do and what it can't do. And I
+[00:27:18] think that's good for society to start
+[00:27:21] getting normalizing itself to what is
+[00:27:23] going to be an enormous change with this
+[00:27:25] technology coming. So, it's probably
+[00:27:26] better that we get to sample that in
+[00:27:29] incremental steps rather than it's just
+[00:27:31] a shock to the system. Here's a you
+[00:27:33] know, there's no AGI and then here's AGI
+[00:27:34] one day. Probably that that that's not
+[00:27:37] good although I think there could have
+[00:27:38] been many ways it could have rolled out.
+[00:27:40] And then the final thing that's actually
+[00:27:42] on the benefit side is that
+[00:27:45] you you can't really fully understand
+[00:27:49] your systems until they're stress tested
+[00:27:51] by millions of people. So, it doesn't
+[00:27:53] matter how good your testing
+[00:28:03] is and you know, your in-house testing
+[00:28:03] obviously millions of smart people
+[00:28:05] trying out things and then you seeing
+[00:28:07] what bubbles to the top or the feedback
+[00:28:09] you get is really important for building
+[00:28:13] more robust systems and better systems.
+[00:28:16] So, I think there's positives about and
+[00:28:19] negatives about how the way it's gone.
+[00:28:22] It's not the way I dreamed about years
+[00:28:24] ago where we would be sort of
+[00:28:25] contemplating this philosophically and
+[00:28:27] and and sort of
+[00:28:29] so,
+[00:28:30] we we you know, we have to deal with the
+[00:28:32] world as we find it and make the best of
+[00:28:34] that. And we try to do that by advancing
+[00:28:36] the frontier, but also trying to be as
+[00:28:38] responsible as we can with doing that as
+[00:28:40] we deploy these you know, very powerful
+[00:28:42] technologies
+[00:28:44] like Gemini and AlphaFold.
+[00:28:46] There's another story happening at the
+[00:28:48] same time as this and I want to get back
+[00:28:50] to your concerns and how you weight
+[00:28:52] those concerns and the cost.
+[00:28:54] Um
+[00:28:55] in order to understand that, I think we
+[00:28:57] need to tell a story about AI being very
+[00:29:00] creative, unexpectedly creative.
+[00:29:02] And that story begins let me find my
+[00:29:06] Jenga block. That story begins here.
+[00:29:11] So, let's go back to March 10, 2016.
+[00:29:16] There's a very famous Go [music] player
+[00:29:18] that sits down to play against a system
+[00:29:20] that you designed.
+[00:29:22] And at this point computers have beat
+[00:29:24] humans at all kinds of games, [music]
+[00:29:25] but Go is really interesting because
+[00:29:27] there are more
+[00:29:28] potential moves in Go than atoms in the
+[00:29:30] universe.
+[00:29:32] They're they go back [music] and forth,
+[00:29:33] they're playing. And then your system
+[00:29:35] makes a move
+[00:29:37] that is so surprising because it is
+[00:29:39] incredibly unlikely that a human would
+[00:29:42] figure out a move like that, move 37.
+[00:29:44] >> Yes.
+[00:29:45] And you see Lisa Doll sitting there,
+[00:29:47] He's just got this shock on his face.
+[00:29:49] He's got his head in his hands like
+[00:29:51] this. And it really was this moment
+[00:29:53] where I think people like yourself saw
+[00:29:56] ahead to the creativity that we would
+[00:29:58] find in [music] AI systems that are very
+[00:30:00] different than the systems that we've
+[00:30:01] talked about so far. So, there's a
+[00:30:03] category where you're giving a huge
+[00:30:05] amount of data and you're asking to make
+[00:30:07] new predictions. And I understand this
+[00:30:08] is much more complicated than this
+[00:30:09] oversimplification. But then there's a
+[00:30:11] category where you're not giving data,
+[00:30:13] you're giving rules.
+[00:30:14] >> Mhm. Like with math or physics [music]
+[00:30:16] or games like Go. And it has this
+[00:30:19] incredible opportunity for creativity.
+[00:30:21] [music]
+[00:30:22] >> Yeah. Where were you when that moment
+[00:30:24] happened?
+[00:30:25] >> [laughter]
+[00:30:25] >> And what future did you see ahead? Yeah,
+[00:30:28] it was an incredible moment that you're
+[00:30:30] describing and it's actually almost
+[00:30:31] exactly 10 years ago now, which is feels
+[00:30:33] like a century ago actually, but I think
+[00:30:36] in many ways it was the dawn of the
+[00:30:37] modern AI era because until that point
+[00:30:41] there were many AI programs that could
+[00:30:42] [music] be world champions at games,
+[00:30:44] things like chess, but they were done
+[00:30:46] with what's called expert systems. So,
+[00:30:48] they were systems where the a team of
+[00:30:50] smart programmers with a team of smart,
+[00:30:52] in that case chess grandmasters, came
+[00:30:54] together, [music] tried to distill the
+[00:30:56] knowledge the chess grandmasters have
+[00:30:57] into a set of rules and system, kind of
+[00:30:59] a brute force [music] system, that would
+[00:31:01] use a lot of compute like on a
+[00:31:03] supercomputer like IBM [music]
+[00:31:07] did with Deep Blue
+[00:31:08] to beat Garry Kasparov, and they would
+[00:31:11] in
+[00:31:11] sort of encapsulate the rules they were
+[00:31:13] given by the chess experts, and then the
+[00:31:16] the system would sort of dumbly execute
+[00:31:18] those those rules and heuristics and do
+[00:31:20] [music] a millions and millions of
+[00:31:21] searching of of moves, and then try and
+[00:31:24] work out against those heuristics which
+[00:31:26] is the best one to do. Now, the thing
+[00:31:28] with that is,
+[00:31:29] for me that was not satisfactory when I
+[00:31:31] saw that in the '90s.
+[00:31:33] I was doing my undergrad at the time. I
+[00:31:35] didn't feel like that was proper AI
+[00:31:37] because that system, let's take Deep
+[00:31:39] Blue, okay, it's it's it's world
+[00:31:41] champion level at at chess, but
+[00:31:45] it can't do anything else. Not only
+[00:31:47] can't it do, you know, language and
+[00:31:49] robotics or any of those kind of things,
+[00:31:50] it it can't even play strictly simpler
+[00:31:53] game like tic-tac-toe, right? So,
+[00:31:56] something's obviously not quite right
+[00:31:57] about the definition of intelligence,
+[00:31:59] right? In the sense of like no human,
+[00:32:01] you could imagine a human grandmaster
+[00:32:03] not being able to learn how to play
+[00:32:05] tic-tac-toe. It would make no sense cuz
+[00:32:06] it's strictly simpler. So, so there's
+[00:32:09] something sort of wrong about its
+[00:32:10] generalization capability and the fact
+[00:32:14] that it didn't learn. It was just given
+[00:32:16] the answer, right? So, where if you
+[00:32:18] could ask for something like Deep Blue,
+[00:32:20] where did the intelligence reside of the
+[00:32:22] system? Well, it wasn't in the system,
+[00:32:24] it was in the minds of the chess
+[00:32:25] grandmasters and the and the
+[00:32:27] programmers. They solved the problem of
+[00:32:29] chess and then implement and then
+[00:32:31] implemented the solution. The the
+[00:32:33] program just dumbly executed the
+[00:32:34] solution. Now, Go, as you mentioned, is
+[00:32:38] the sort of final frontier for games.
+[00:32:40] It's it's the most complex game humans
+[00:32:42] have ever invented. It's also the oldest
+[00:32:44] game, so it's just amazing in many ways.
+[00:32:46] And it's also very beautiful. So, in
+[00:32:48] Asia where they play in China and Japan,
+[00:32:50] Korea, instead of, you know, it takes
+[00:32:52] all of it they play instead of chess
+[00:32:53] basically, occupies that intellectual
+[00:32:55] echelon. But it's a much more intuitive
+[00:32:57] game, sort of artistic game almost. So,
+[00:32:59] you you play patterns that look
+[00:33:01] beautiful and they turn out to be, you
+[00:33:03] know, really strong, which is why the
+[00:33:05] game has a little bit of a mystical
+[00:33:06] element to it. Like almost encapsu- the
+[00:33:08] top Go players would say to you
+[00:33:09] encapsulates the mysteries of the
+[00:33:10] universe in the game. I think that's how
+[00:33:12] the ancient
+[00:33:14] Chinese thought about it. And so,
+[00:33:17] and and also just its raw complexity, as
+[00:33:19] as you mentioned, has more possible
+[00:33:21] board positions, 10 to the power 170,
+[00:33:24] than there are atoms in the universe.
+[00:33:26] So, what that means is there's no way
+[00:33:28] you can brute force it in the way that
+[00:33:30] we did with chess.
+[00:33:31] And furthermore, because the game's so
+[00:33:33] intuitive and so esoteric,
+[00:33:36] there aren't really these rules that you
+[00:33:39] can encapsulate easily for a machine to
+[00:33:41] follow. So, when you talk to a Go
+[00:33:42] master, unlike a chess master, they'll
+[00:33:45] tell you things like, "Why did you play
+[00:33:47] there?" They'll say, "It felt right."
+[00:33:49] Okay? That But as a chess player will
+[00:33:51] never say that. They would say like, "I
+[00:33:52] did it cuz I'm calculating this, this."
+[00:33:54] And then they'll tell you the
+[00:33:54] calculation. So, that intuitive
+[00:33:57] intuitive feeling is obviously very hard
+[00:33:59] to encapsulate in a system. You can't
+[00:34:01] really program that directly. So, it's
+[00:34:03] the perfect proving ground, I would say,
+[00:34:06] for these new techniques that we were
+[00:34:07] pioneering in the early days of DeepMind
+[00:34:10] of deep reinforcement learning. Can you
+[00:34:13] use build systems that learn from
+[00:34:15] themselves directly from experience? So,
+[00:34:18] in the in the in the case of AlphaGo,
+[00:34:20] AlphaGo started by looking at all the
+[00:34:23] games on the internet that humans have
+[00:34:24] played and learning the types of moves
+[00:34:26] humans would do, but then we overlaid it
+[00:34:28] with a Monte Carlo tree search that
+[00:34:31] allowed it to sort of discover new
+[00:34:34] branches of the tree of knowledge, if
+[00:34:35] you like, in Go. Starting with what
+[00:34:37] humans knew and then going beyond that.
+[00:34:40] And that's what we hoped was going to
+[00:34:41] happen. So, so the amazing thing about
+[00:34:43] that match, which was ended up being
+[00:34:45] watched by 200 million people around the
+[00:34:46] world, was that not only did we win the
+[00:34:49] match 4-1, that was the main objective,
+[00:34:51] but in game two, specifically, it played
+[00:34:54] this famous move 37 that you talk about,
+[00:34:56] this creative move that was it was on
+[00:34:59] the fifth line of the board and it early
+[00:35:01] in the game and it's it's sort of a big
+[00:35:03] no-no to do that in Go, right? Like Go
+[00:35:05] if you were being taught by a Go master,
+[00:35:07] they would slap your wrist playing on
+[00:35:09] that because it's just regarded as a bad
+[00:35:11] move. And and and but not only was that
+[00:35:14] great move, it ended up winning the game
+[00:35:16] for AlphaGo. Like 100 moves, 200 moves
+[00:35:19] later, it was in the right place. As if
+[00:35:21] it sort of presciently put the stone
+[00:35:23] there. So, it was a critical, not only
+[00:35:24] was it a surprising move, it was the
+[00:35:26] critical move for later for it to be
+[00:35:28] exactly in the right place to decide the
+[00:35:30] game. So, obviously it's changed the way
+[00:35:32] all Go players play Go, but for me it
+[00:35:35] was
+[00:35:36] the moment I'd been waiting for
+[00:35:39] in terms of building a system that we'd
+[00:35:41] already spent six years by then building
+[00:35:43] these types of learning systems that
+[00:35:45] could achieve something no other system
+[00:35:46] could, you know, this sort of Mount
+[00:35:48] Everest of games AI, you know, the final
+[00:35:51] frontier, if you like, of can you beat
+[00:35:52] the Go world champion.
+[00:35:54] But also, not only did it win the match,
+[00:35:56] but it was how it won and with these
+[00:35:58] creative new ideas like move 37. And
+[00:36:02] that for me was the signal that we were
+[00:36:03] ready to turn it to scientific problems
+[00:36:05] like AlphaFold.
+[00:36:07] To say this back to you, the reason why
+[00:36:10] it's important that this audience that
+[00:36:12] wants to understand the future
+[00:36:14] understand what happened with move 37
+[00:36:16] and Go
+[00:36:16] >> Yeah. is because the implication is if
+[00:36:19] DeepMind can build a system that can do
+[00:36:21] that, it can also perhaps build a system
+[00:36:24] that can play any game.
+[00:36:25] >> Yes. It can also perhaps build systems
+[00:36:28] that can
+[00:36:31] figure out in real world problems what
+[00:36:33] is the best solution in
+[00:36:36] quantum computing or in nuclear fusion
+[00:36:39] or in matrix multiplication or what else
+[00:36:41] do I have? Chip design.
+[00:36:44] >> Or
+[00:36:45] >> [laughter]
+[00:36:45] >> etc., etc. Could you tell me about the
+[00:36:48] cutting edge here? Yes. Pick one of
+[00:36:50] these systems. What is the move 37 of
+[00:36:54] Yeah. the surprising creative element
+[00:36:56] going on?
+[00:36:57] >> Yeah. I think AlphaZero is very
+[00:36:59] interesting to talk about, which was the
+[00:37:00] evolution of AlphaGo. So, after we we we
+[00:37:03] we won,
+[00:37:04] you know, got to the pinnacle of Go and
+[00:37:06] showed that it could come up with new
+[00:37:09] ideas, at least in Go, move 37 and
+[00:37:12] actually many other ideas that it came
+[00:37:14] up with, which has revolutionized how
+[00:37:15] people, professionals, play Go now. We
+[00:37:18] then generalized it further to a system
+[00:37:20] called AlphaZero, which I think is going
+[00:37:21] to turn out to be a very important
+[00:37:23] system
+[00:37:24] for today as well, where with AlphaGo,
+[00:37:27] we started with all the human games that
+[00:37:29] that we could find on the internet. And
+[00:37:32] also there were a few other couple of
+[00:37:33] things that were specific about Go that
+[00:37:36] we were built into the AlphaGo system
+[00:37:37] like the symmetry of the board and
+[00:37:39] things like that. So, we wanted to get
+[00:37:41] rid of all of those assumptions
+[00:37:42] completely and actually start from
+[00:37:43] scratch as if the the the the program
+[00:37:47] and the algorithm didn't know anything
+[00:37:49] about what it was trying to do to start
+[00:37:51] off with. And that's why this is what
+[00:37:53] the zero refers to in AlphaZero is sort
+[00:37:56] of like AlphaGo, but now removing any
+[00:37:58] knowledge, human-crafted knowledge, both
+[00:38:00] in the data and in the any of the kind
+[00:38:03] of heuristics that we'd given the
+[00:38:04] system. So, AlphaZero starts like Tabula
+[00:38:07] Rasa almost. Obviously, it's a has a
+[00:38:09] learning system. It's a it's got a
+[00:38:11] neural network. We we set up the
+[00:38:13] parameters, but we didn't give it any
+[00:38:15] domain-specific knowledge about Go or
+[00:38:17] any other game. And then what we tested
+[00:38:19] AlphaZero on was first of all, could it
+[00:38:23] learn Go from scratch and then beat
+[00:38:25] AlphaGo, right? So, and we managed to do
+[00:38:27] that. So, it takes 17 evolutions of the
+[00:38:31] program. So, you can imagine what
+[00:38:32] happens is
+[00:38:34] AlphaZero starts off random to begin
+[00:38:36] with. It just it only has the rules of
+[00:38:38] the game, plays randomly. Obviously,
+[00:38:40] it's terrible at playing.
+[00:38:42] It creates its own data set by playing
+[00:38:44] 100,000 games against itself, right? And
+[00:38:47] then it can see what which moves won or
+[00:38:48] lost. And even though it's playing more
+[00:38:50] or less randomly to begin with, there'll
+[00:38:51] be some moves that are slightly better
+[00:38:52] than other moves, okay? So, now it takes
+[00:38:55] the 100,000 it it we train a new version
+[00:38:57] of itself on version two now of
+[00:38:59] AlphaZero with that new data. That
+[00:39:02] version two is slightly better than
+[00:39:04] version one. So, now it's not random
+[00:39:05] anymore, but it's not great, it's not
+[00:39:07] good, but it's playing like okay moves.
+[00:39:10] And then those okay moves end up
+[00:39:13] being better. And so then a version two
+[00:39:15] gets trained a version three, a version
+[00:39:16] four. And so, each time that new system
+[00:39:19] gets played against the old system and
+[00:39:21] sees is it significantly better or not.
+[00:39:24] And it turns out that at least in Go and
+[00:39:27] chess and things like that, around 16,
+[00:39:29] 17 generations of that is enough to go
+[00:39:32] from random to better than world
+[00:39:33] champion. And at least in the case of
+[00:39:35] chess, which I actually once watched
+[00:39:37] live happen cuz I was fascinated by I
+[00:39:39] was even playing chess myself, is, you
+[00:39:41] know, it starts in the morning random,
+[00:39:43] then, you know, by lunchtime I could
+[00:39:46] still just about compete with it myself,
+[00:39:48] and then by tea time it's better than
+[00:39:50] all grandmasters, and then by dinner
+[00:39:52] time it's better than the world
+[00:39:53] champion. And you've just seen the
+[00:39:55] entire evolution of that from scratch.
+[00:39:56] And also it's playing interesting new
+[00:39:58] chess that that even chess computers
+[00:40:00] like Stockfish,
+[00:40:02] um, you know, with the more the kind of
+[00:40:03] expert system brute force ones, uh,
+[00:40:05] haven't discovered those types of new
+[00:40:07] types of moves. So, AlphaZero was the
+[00:40:10] full generalization of the AlphaGo
+[00:40:12] ideas. And interestingly, I think we
+[00:40:15] need these types of ideas back here now
+[00:40:17] with, um,
+[00:40:18] our foundation models, the new, you
+[00:40:20] know, Gemini and these kinds of things,
+[00:40:22] which you can think of a generalized
+[00:40:23] models of everything, language, the
+[00:40:25] world around us, not just a game,
+[00:40:27] obviously like Go, um, but we still need
+[00:40:29] [clears throat]
+[00:40:29] the this ability to search and think and
+[00:40:32] reason on top of those models. And, uh,
+[00:40:35] sometimes we call those world models.
+[00:40:37] And, um, I think that's still hasn't
+[00:40:39] fully been cracked yet how to do that.
+[00:40:41] Bring back Bringing back some of these
+[00:40:42] AlphaGo ideas, but now instead of just a
+[00:40:45] narrow game applying it to that, but to
+[00:40:48] the whole world, and maybe,
+[00:40:49] interestingly, parts of science, uh,
+[00:40:51] too, like material design, um, and
+[00:40:55] things like chip design, and, uh,
+[00:40:57] quantum computers, all of these cool
+[00:40:59] projects that, you know, there's so many
+[00:41:01] I just want to see all these bricks. I
+[00:41:02] can't believe we're actually working on
+[00:41:03] all these things, but it's true. Is And
+[00:41:05] this is sort of the dream is like I get
+[00:41:07] to I love all so much of so I mean I
+[00:41:09] love every branch of science, and I get
+[00:41:11] to, um, indulge myself in all these
+[00:41:13] different areas of science because AI is
+[00:41:15] such a general tool, it can really, uh,
+[00:41:18] make a huge difference to all these
+[00:41:19] areas. So, maybe at one example I give
+[00:41:21] is just designing new materials.
+[00:41:24] You know, if you want a material with a
+[00:41:25] special type of property, can we go
+[00:41:27] beyond, uh, what is currently known, uh,
+[00:41:30] in material science? And I think
+[00:41:32] AlphaGo-like processors could be very
+[00:41:34] useful there. And the equivalent of a
+[00:41:37] move 37 would be like AlphaTensor
+[00:41:39] finding a new
+[00:41:41] algorithm that makes, you know, matrix
+[00:41:44] multiplication better.
+[00:41:45] >> faster. Exactly. Exactly. So, you can
+[00:41:46] apply it in algorithmic space, which is
+[00:41:49] quite exciting cuz then the algorithm
+[00:41:50] itself gets faster, so there's some
+[00:41:52] circular circular sort of improvement
+[00:41:54] there. And, yes, AlphaTensor, just
+[00:41:56] making the matrix multiplication, which
+[00:41:57] is the the basis of all neural networks.
+[00:42:00] It turns out everything's matrix
+[00:42:01] multiplication. Uh, you know, if you
+[00:42:03] just make that 5% faster, that's a huge,
+[00:42:05] you know, the tens of billions being
+[00:42:07] spent on training, that's a huge cost
+[00:42:09] saving. And, uh, and so these are good
+[00:42:11] examples of of of, um,
+[00:42:14] ideas in And I think we're still early,
+[00:42:16] you know, also like things like the
+[00:42:17] design of chips on a on a on a uh, on a
+[00:42:21] on a die, you know, making it as
+[00:42:23] efficient as possible the routing. You
+[00:42:25] know, it's a kind of,
+[00:42:26] uh, NP-hard problem, you know, in terms
+[00:42:28] of like the the traveling salesman, like
+[00:42:30] what's the shortest distance you can
+[00:42:31] wire up all of these things. And
+[00:42:33] AlphaChepan programs like that are
+[00:42:34] really good, better in some cases than
+[00:42:36] human chip designers at dealing with
+[00:42:38] that. So, I think we're just scratching
+[00:42:40] the surface, I would say, of what's
+[00:42:42] going to be possible in the next few
+[00:42:44] years with, um, today's kind of more
+[00:42:47] general systems, uh, combined with these
+[00:42:49] types of ideas from from AlphaGo I and
+[00:42:51] and AlphaZero I think are going to come
+[00:42:53] back.
+[00:42:54] These two categories, the story that
+[00:42:57] starts with AlphaFold, the story that
+[00:42:58] starts with AlphaGo, these are the kinds
+[00:43:00] of AI that make me feel really
+[00:43:01] optimistic.
+[00:43:02] >> Mhm.
+[00:43:03] I also think that being really
+[00:43:04] optimistic, and you do this a lot in
+[00:43:06] public, which I appreciate, is
+[00:43:09] fully thinking through the ways in which
+[00:43:11] something can go wrong and what we can
+[00:43:13] do to prevent that.
+[00:43:14] >> Yeah. So, I want to insert one other in
+[00:43:17] here. Sure. What are we doing?
+[00:43:20] >> [laughter]
+[00:43:24] >> This one. Yes. And the reason why I
+[00:43:24] bring up this game [music] is this is a
+[00:43:27] real-time war game. Yeah. And in the
+[00:43:30] videos where this system is absolutely
+[00:43:33] crushing humans,
+[00:43:34] >> Mhm. you can see the engineers cheering
+[00:43:36] for the victory of their system.
+[00:43:43] But of course, as someone who didn't
+[00:43:43] build the system, I'm thinking to
+[00:43:44] myself,
+[00:43:46] what if that's real?
+[00:43:47] >> Mhm.
+[00:43:48] And we're speaking right now during a
+[00:43:50] time when the debate about militaries
+[00:43:53] and governments using AI is
+[00:43:57] a huge topic of conversation.
+[00:43:59] >> I want this conversation to last for 10
+[00:44:01] years. I want it to be useful for that
+[00:44:02] long. So, I don't want to talk about
+[00:44:04] specific companies, specific terms of
+[00:44:06] service.
+[00:44:07] >> I also think people are in some way
+[00:44:09] missing the forest for the trees here.
+[00:44:11] Because bigger picture, governments are
+[00:44:14] going to use AI.
+[00:44:15] >> And so,
+[00:44:17] what I want to know from you as someone
+[00:44:19] building these systems is if you could
+[00:44:21] wave your magic wand,
+[00:44:22] >> Mhm.
+[00:44:23] what would you hope that they use it
+[00:44:25] for? Well, look, I think governments,
+[00:44:27] uh, and governments should be using, uh,
+[00:44:29] um, AI, and, you know, we want to
+[00:44:32] support all sort of democratically
+[00:44:33] elected governments. And I think, um,
+[00:44:37] the things I would love to see them use
+[00:44:38] it for and what we're trying to build
+[00:44:39] our systems to be good for is, uh,
+[00:44:42] things like improving public health,
+[00:44:44] uh, education. I mean, all of these
+[00:44:46] things need to be rethought. The
+[00:44:47] efficiency gains and the amount of good
+[00:44:50] we can,
+[00:44:51] uh, do with it, governments could do
+[00:44:52] with it for their citizens could be
+[00:44:54] incredible. And I think some countries
+[00:44:55] are doing it like Singapore and UAE, I
+[00:44:57] think are leaning into,
+[00:44:59] uh, these types of use cases. I would
+[00:45:01] love to see it being used for, uh,
+[00:45:03] things like energy, like optimizing
+[00:45:05] energy grids.
+[00:45:07] Um, we did that with our data centers
+[00:45:08] and save 30% of the, you know, energy
+[00:45:10] used for the cooling systems. I think
+[00:45:12] there's enormous societal gain from
+[00:45:14] applying AI at scale to these types of
+[00:45:18] areas. So, that's what we, you know, um,
+[00:45:20] I've always thought about and and and
+[00:45:22] and, um,
+[00:45:23] hope that, um, governments will pick up
+[00:45:26] and use for and we we, you know, want to
+[00:45:27] support all of that. Um, of course, you
+[00:45:30] know, the geopolitics of the of of the
+[00:45:32] world is very complicated right now, and
+[00:45:35] these are dual-purpose technologies.
+[00:45:37] And, um, you know, I worry about a
+[00:45:39] couple of use case things that can go
+[00:45:41] wrong with AI that, you know, in the
+[00:45:43] bigger picture, as you say, I think
+[00:45:44] sometimes the the is the the the kind of
+[00:45:46] details are
+[00:45:48] get people get bogged down in the
+[00:45:49] details, but actually there's big the
+[00:45:50] big picture, there's two things to worry
+[00:45:52] about. One is
+[00:45:54] bad actors, whether that's individuals
+[00:45:56] or all the way up to nation states,
+[00:45:58] using, uh, repurposing these
+[00:46:01] technologies that we're trying to build
+[00:46:02] for good, like curing diseases and
+[00:46:04] advancing material science and energy
+[00:46:06] and so on, um, for harmful ends, right?
+[00:46:09] And whether that's, uh, inadvertently or
+[00:46:12] intentionally. Uh, and then the second
+[00:46:14] branch of things I worry about, uh, is
+[00:46:17] the AI itself, uh, going rogue, um, or
+[00:46:20] going off the rails it it it if as they
+[00:46:23] get more powerful. That's not today's
+[00:46:24] systems, but maybe in the next two,
+[00:46:26] three, four years, uh, especially as we
+[00:46:28] go towards more of the agentic era,
+[00:46:31] which we're entering now. And by agents
+[00:46:33] I mean systems that are capable of
+[00:46:34] completing entire tasks on their own.
+[00:46:36] So, you can Of course, we want those cuz
+[00:46:38] they'll be very useful, like as an
+[00:46:39] assistant or something like that. But
+[00:46:41] also that means they'll be increasingly
+[00:46:43] capable and autonomous. And so, um, how
+[00:46:46] do we make sure as as one of the
+[00:46:48] frontier labs, and the frontier labs all
+[00:46:49] have to think about this, is the
+[00:46:51] guardrails are put in place that they
+[00:46:53] end that we can ensure that they do
+[00:46:55] exactly what they've been told to do or
+[00:46:57] the goals they've been given, and
+[00:46:58] they've been specified clearly enough,
+[00:47:00] and there's no way of them circumventing
+[00:47:02] that or accidentally, uh, breaching
+[00:47:04] those guardrails. And that's going to
+[00:47:06] get That's an incredibly hard technical
+[00:47:09] challenge if you think about how
+[00:47:10] powerful and how smart and capable these
+[00:47:13] systems eventually going to get. So, I
+[00:47:15] tend to worry about those You could call
+[00:47:17] them medium term now, even though three,
+[00:47:18] four years is not really medium term,
+[00:47:20] but those are the things I think people
+[00:47:22] are perhaps not paying enough attention
+[00:47:24] to at the moment. And I think we'll, um,
+[00:47:26] be the biggest, uh, issues that we're
+[00:47:28] going to have to contend with if we're
+[00:47:30] going to get through the the AGI moment
+[00:47:32] in in a in a in a way that's beneficial
+[00:47:34] for for humanity. Yeah, one of the
+[00:47:36] biggest questions I came in for you
+[00:47:38] with, you know, if I get an hour with
+[00:47:40] you in my life, was next time I read a
+[00:47:43] headline, how do I weight the concerns
+[00:47:47] that we're all going to have over the
+[00:47:48] next 30 years? You know, like what are
+[00:47:50] the
+[00:47:51] things that people are worrying too much
+[00:47:54] about, and what are the things that they
+[00:47:55] are not worrying en- enough about?
+[00:47:58] >> Yeah. So, I think the two things I just
+[00:48:00] mentioned are the things that maybe the
+[00:48:01] average person is not worrying enough
+[00:48:03] about, but even I think some of the
+[00:48:05] experts and the scientists in the field.
+[00:48:08] I feel like those are the key things
+[00:48:09] that are more societal affecting, um,
+[00:48:12] that if we if we There are other things
+[00:48:13] that we need to worry about, too, like
+[00:48:15] deepfakes and and we and we try to help
+[00:48:17] Those are immediate term worries, right?
+[00:48:19] Misinformation, deepfakes, these kinds
+[00:48:20] of things. And, you know, we work on
+[00:48:22] this system called SynthID, which is,
+[00:48:24] uh, you know, a watermarking system,
+[00:48:26] actually an AI watermark, probably
+[00:48:28] somewhere one of these bricks. Yeah, one
+[00:48:29] of them. And and and, uh, we need AI to
+[00:48:32] sort through them. And and and it's it's
+[00:48:35] it's uses AI to actually digitally
+[00:48:37] watermark any generated image. So, all
+[00:48:39] the things all the Google technologies,
+[00:48:41] VO and everything else and nanabanana,
+[00:48:43] uh, they all they all they all have
+[00:48:45] this, uh,
+[00:48:46] um,
+[00:48:47] watermarking technology. So, we can
+[00:48:50] detect and flag to the user or or
+[00:48:53] government or whoever that these are
+[00:48:54] fake. Um, and I think actually I would
+[00:48:57] advocate all, uh, companies working on
+[00:49:00] generative, uh, AI, uh, should build in
+[00:49:03] something some kind of technology like
+[00:49:05] that. So, at least, uh, it can be
+[00:49:07] detected or they can detect which things
+[00:49:10] have been built with their, uh,
+[00:49:11] technologies. And I think that's going
+[00:49:13] to be increasingly important. But I
+[00:49:15] think that still pales in into into, you
+[00:49:18] know, as as a small issue compared to
+[00:49:19] some of these bigger issues around, um,
+[00:49:22] AGI itself,
+[00:49:24] um,
+[00:49:25] becoming very capable and how do we put
+[00:49:27] make sure that, you know, guardrails are
+[00:49:29] put in place that we understand, uh,
+[00:49:31] what that those types of systems are are
+[00:49:33] capable of as we get towards AGI. And,
+[00:49:36] you know, I think a lot more research, a
+[00:49:37] lot more effort needs to go into that
+[00:49:39] from from everyone. And actually, I
+[00:49:40] would love to see international
+[00:49:42] cooperation and cooperation around
+[00:49:45] amongst the you know, leading labs
+[00:49:46] around the safety issues. And and
+[00:49:49] including you know, with with with
+[00:49:51] places like the AI safety institutes and
+[00:49:54] and also academia
+[00:49:55] to help kind of work out how we navigate
+[00:49:58] that next step cuz it's unprecedented to
+[00:50:00] create technology like that. If we play
+[00:50:02] this out, what's the limit here?
+[00:50:06] What are the things that you think
+[00:50:09] AI cannot do that humans can do? You've
+[00:50:12] called this the central question of your
+[00:50:14] life.
+[00:50:15] >> it is and it's very related to
+[00:50:17] um you know, some some scientific
+[00:50:21] thinking of some of my all-time heroes
+[00:50:22] like Alan Turing. You know, he described
+[00:50:24] Turing machines which were these
+[00:50:26] theoretical constructs that actually all
+[00:50:28] modern computers are basically Turing
+[00:50:29] machines that are able to compute
+[00:50:32] anything that's computable.
+[00:50:34] So, anything that can be described as an
+[00:50:36] algorithm
+[00:50:38] this this type of machine can compute.
+[00:50:40] And I think that the systems we're
+[00:50:41] building are approximate Turing machines
+[00:50:44] and potentially a lot of neuroscientists
+[00:50:47] including me think that maybe the brain
+[00:50:48] a good model for the brain is an
+[00:50:50] approximate Turing machine. So, the
+[00:50:52] question is and but there are others
+[00:50:53] like
+[00:50:54] friends of mine like Roger Penrose
+[00:50:57] and who you know, believes there might
+[00:50:59] be some quantum effect in the brain,
+[00:51:01] right? And I'm sure you probably done
+[00:51:02] videos about it that that and he you
+[00:51:05] know, we've had some very good-natured
+[00:51:07] debates about this. But so far
+[00:51:09] neuroscience hasn't found any
+[00:51:13] quantum effects in the brain. Doesn't
+[00:51:15] mean they won't be found, but so far
+[00:51:17] people have looked quite carefully and
+[00:51:19] they haven't we haven't found any. So,
+[00:51:20] it looks like most of what's going on in
+[00:51:22] the brain is kind of classical
+[00:51:24] computation. And so therefore,
+[00:51:26] it's not clear what the limit would be
+[00:51:28] in terms eventually what an AI system
+[00:51:31] could do and could mimic. But um you
+[00:51:34] know, I think that's an empirical
+[00:51:35] question. I think that's one of the
+[00:51:37] you know, the questions around
+[00:51:38] consciousness. I mean, I don't think
+[00:51:40] it's very well defined what it is, but
+[00:51:42] we all intuit what it is. And
+[00:51:45] I think this journey we're on of
+[00:51:46] building an intelligent artifact, I
+[00:51:49] think we'll have almost like a
+[00:51:50] controlled study comparison to the human
+[00:51:52] mind and then I think we'll see in this
+[00:51:55] journey like what are the differences
+[00:51:57] and what's unique about the mind. And
+[00:51:59] I'm very open-minded about that. I think
+[00:52:00] there could be unique things and
+[00:52:03] certainly unique connections between
+[00:52:05] humans that will never be replicated by
+[00:52:09] you know, these AI systems. But I think
+[00:52:11] a lot of things that
+[00:52:13] we currently are not in reach
+[00:52:15] like long-term planning and reasoning
+[00:52:17] and maybe some forms of creativity, I
+[00:52:19] think eventually AI systems will be able
+[00:52:21] to do.
+[00:52:22] I want to be honest about what's
+[00:52:23] happening in my mind right now and it is
+[00:52:25] that I am doing exactly the thing that
+[00:52:28] humans have done throughout history. I
+[00:52:29] am trying to find the reason why we are
+[00:52:31] special.
+[00:52:32] It is that we have to be at the center
+[00:52:34] of the universe. Oh wait, we're not. We
+[00:52:36] have to be the ones that are emotionally
+[00:52:38] attuned. Oh wait, elephants have
+[00:52:40] funerals. Oh we must be the ones that
+[00:52:42] can be creative and create art. Oh wait,
+[00:52:44] Gemini can do that or like what Oh, we
+[00:52:48] must be special. Do you find yourself
+[00:52:50] doing that as well? That's my reaction
+[00:52:51] as you're describing the future of AI.
+[00:52:53] Yeah, no. I think I think we are special
+[00:52:55] and I think there is some there's a lot
+[00:52:58] of deep mysteries about how the universe
+[00:53:00] works and including a lot of things that
+[00:53:03] that are in our minds, but also are
+[00:53:05] things out there in physics. You know, I
+[00:53:07] I I I think that's why I got I think I
+[00:53:09] decided from a very young age to do AI
+[00:53:12] is because I was obsessed when I was a
+[00:53:13] kid at school with with with the big
+[00:53:16] questions. And normally when you you
+[00:53:18] know, physics was my favorite subject at
+[00:53:19] school because that is the subject
+[00:53:21] you're supposed to study when you're
+[00:53:22] interested in all the big questions. And
+[00:53:25] but the thing was I just realized
+[00:53:29] I guess as a young teenager reading all
+[00:53:30] these science books and biographies on
+[00:53:33] the best scientists. Richard Feynman is
+[00:53:34] one of you know, my all-time heroes at
+[00:53:36] that they actually although they we
+[00:53:38] discovered a lot and we know a lot about
+[00:53:40] the world, there's so much we don't
+[00:53:42] know. Like there's just incredible like
+[00:53:43] we don't know what time is. I mean, this
+[00:53:45] is this is insane to me. Like we you
+[00:53:47] know, we don't we can't even describe
+[00:53:48] something as that. It's just we're
+[00:53:49] swimming in it, but what is it? We you
+[00:53:51] know, of course it's you know, entropy
+[00:53:53] and things like that. But it's nothing
+[00:53:54] it's nothing satisfactory about what it
+[00:53:56] really is. And
+[00:53:58] you know, we don't understand a lot of
+[00:54:00] quantum effects and gravity properly and
+[00:54:02] and consciousness all actually most of
+[00:54:04] the things we we care about. And and but
+[00:54:06] we just sort of I feel like most people
+[00:54:08] we just distract ourselves all day with
+[00:54:10] you know, TV shows and games and things
+[00:54:12] and don't worry too much about it. But
+[00:54:13] I'm I've never been like that. I've it's
+[00:54:15] just it it sort of
+[00:54:17] it's it's it's these deep mysteries kind
+[00:54:19] of play on my mind all the time. And I
+[00:54:22] think um I'm quite open-minded about
+[00:54:24] what the answers might be eventually
+[00:54:25] about what's going on here, the nature
+[00:54:28] of reality. I think that's ultimately
+[00:54:29] what I'm after and I want to use AI as a
+[00:54:32] tool to help us understand the nature of
+[00:54:34] reality around it. And I'm quite
+[00:54:36] sanguine about whatever the answer might
+[00:54:38] be. I'm not you know, I'm I guess I'm a
+[00:54:39] true scientist in that sense of like I
+[00:54:41] don't actually I don't really have any
+[00:54:44] prescribed notion of what the answer
+[00:54:45] should be. I just want to know the
+[00:54:47] answer. Me, too.
+[00:54:49] >> [laughter]
+[00:54:49] >> One way to describe what you're trying
+[00:54:52] to do is effectively
+[00:54:56] this.
+[00:54:58] Which is to say to create a system that
+[00:55:01] wouldn't be especially good at one thing
+[00:55:03] or another thing, but rather to create
+[00:55:05] as you've been saying AGI, artificial
+[00:55:07] general intelligence that would be good
+[00:55:08] at it all. Yes.
+[00:55:10] I know you're a fan of sci-fi. I am,
+[00:55:11] too.
+[00:55:16] Could you play out for me
+[00:55:16] the plot of the sci-fi movie in your
+[00:55:18] head that is the future where you
+[00:55:20] actually do this? Yeah. I can. I I think
+[00:55:23] I love sci-fi, too and I probably I read
+[00:55:26] too much of it when I was when I was a
+[00:55:27] kid might explain a few things, but one
+[00:55:29] of my favorite series was the Culture
+[00:55:31] series by Iain Banks.
+[00:55:34] I think it just paints a really
+[00:55:35] interesting actually post-AGI world. He
+[00:55:38] didn't call it AGI, but that's what it
+[00:55:39] we've describing like a thousand years
+[00:55:41] in the future. But I think even 50 years
+[00:55:43] some of this could happen where we've
+[00:55:45] we've got through the AGI moment safely.
+[00:55:48] It's built. It's it's it's
+[00:55:50] helpful for society and it's it's and
+[00:55:53] and you know, it's it's here and maybe
+[00:55:54] we will have it in our pockets even. And
+[00:55:57] um
+[00:55:58] we've used it to crack some of these
+[00:56:01] what I call root node problems in
+[00:56:02] science. AlphaFold was one of those,
+[00:56:04] right? So, these are problems if you
+[00:56:05] think of the tree of all knowledge,
+[00:56:07] these are kind of root node problems
+[00:56:09] which if you cracked it, it would unlock
+[00:56:11] a whole branch of new research or new
+[00:56:13] applications. And I think there are
+[00:56:15] other things like fusion we briefly
+[00:56:16] mentioned
+[00:56:17] or better maybe room temperature
+[00:56:19] superconductors at atmospheric pressure
+[00:56:21] that you could then combine with optimal
+[00:56:23] batteries and things like that. I think
+[00:56:25] though there will be a solution to the
+[00:56:27] energy problem. So, free pretty much
+[00:56:29] free renewable clean energy one way or
+[00:56:32] another fusion or you know, better
+[00:56:34] solar. And then that will unlock us to
+[00:56:38] really travel the stars because the main
+[00:56:40] cost of you know, Elon does amazing work
+[00:56:43] with SpaceX and those things, but the
+[00:56:44] main cost is still the rocket fuel,
+[00:56:45] right? The energy cost. So, if that's
+[00:56:48] sort of zero somehow
+[00:56:49] because we can just make infinite rocket
+[00:56:52] fuel out of seawater because we have we
+[00:56:54] cracked fusion. So, we can have you
+[00:56:55] know, catalyst plants and desalination
+[00:56:57] everywhere,
+[00:56:59] then [music]
+[00:56:59] you know, that unlocks the
+[00:57:01] really unlock space. And then we'll
+[00:57:04] be able to get a lot more resources
+[00:57:06] because we can mine asteroids. All of
+[00:57:08] these things that the purview of science
+[00:57:09] fiction become I think very plausible in
+[00:57:12] the next 50 years. Dyson spheres [music]
+[00:57:14] around the sun.
+[00:57:16] Mercury's sort of conveniently in the
+[00:57:18] right place actually made of the right
+[00:57:20] material which is kind of amazing if you
+[00:57:22] think about what's going on in the
+[00:57:23] universe. And [music]
+[00:57:25] and and then that should hopefully to
+[00:57:28] you know, maximum human flourishing and
+[00:57:30] we help cure [music] all these terrible
+[00:57:32] diseases. So, we live much longer
+[00:57:34] healthier lives and traveling to the
+[00:57:36] stars bringing consciousness to [music]
+[00:57:38] the rest of the galaxy. That would be I
+[00:57:40] think an amazing outcome and I think
+[00:57:43] could happen within the next 50 years.
+[00:57:44] [music]
+[00:57:46] I believe you.
+[00:57:48] You're saying these things and I like
+[00:57:49] when you're saying that my belief you.
+[00:57:51] That's the that's what I'm trying to do
+[00:57:53] at least.
+[00:57:55] Yeah, so this is my last question.
+[00:57:58] If I were a fly on the wall at my own
+[00:57:59] funeral
+[00:58:01] after they said she loved her husband
+[00:58:03] and her family and her friends
+[00:58:04] I would hope that they would say
+[00:58:06] >> [music]
+[00:58:06] >> that she spent her life trying to help
+[00:58:09] people see
+[00:58:10] optimistic futures so that they can be
+[00:58:12] part of making them happen. That they
+[00:58:14] can make them happen [music] more
+[00:58:15] quickly or better for more people or
+[00:58:17] whatever it is that people decide to do
+[00:58:19] with the vision that they see. And so my
+[00:58:20] last question for you is
+[00:58:23] what do you hope that they say about
+[00:58:25] you? I would hope that they would
+[00:58:26] [music] say that you know, my life was
+[00:58:29] of benefit and service to humanity.
+[00:58:31] That's I think what I'm trying to do.
+[00:58:33] So, that's maybe would be the best
+[00:58:35] thing.
+[00:58:36] Thank you so much for your time. Thank
+[00:58:37] you. Really appreciate it.
+[00:58:39] >> Thanks.
+[00:58:41] Awesome. If you want to play Jenga
+[00:58:42] anytime we can play we have a modified
+[00:58:44] version of Jenga.
+[00:58:45] >> You did that very well. So, yeah, this
+[00:58:46] is actually awesome. I can't believe how
+[00:58:47] many projects we've got. It's really
+[00:58:49] [laughter] crazy when I saw the bricks.
+[00:58:50] So, they all got up. Yeah, they have all
+[00:58:51] got our projects on them. Did you
+[00:58:53] memorize where everything was? Okay. Of
+[00:58:55] course. So, [laughter] the the game is
+[00:58:57] you pull it out and we were playing
+[00:58:59] this. It It's unfair to play with you,
+[00:59:01] but [laughter] it would be you have to
+[00:59:02] say what that project was. You don't get
+[00:59:05] the point if you get it wrong.
+[00:59:06] >> [laughter]
+[00:59:07] >> So, for example, it would be gnome this
+[00:59:10] is
+[00:59:11] material science.
+[00:59:13] Yeah, it's it's a little bit unfair on
+[00:59:14] you. I mean, I would hope I would win
+[00:59:15] this game,
+[00:59:16] >> [laughter]
+[00:59:16] >> but
+[00:59:18] you're probably a way better at Jenga
+[00:59:19] than me. Yeah, let's see let's do this
+[00:59:20] one. There you go. Okay, alpha code.
+[00:59:23] Yeah. That one that one's clearer,
+[00:59:25] right? Code code forces. Yeah. From a
+[00:59:27] sense. This is
+[00:59:29] genetics, but the 2% that codes for
+[00:59:32] proteins?
+[00:59:32] >> Yes.
+[00:59:33] We have to do this now.
+[00:59:35] I've got time. [laughter] I can push
+[00:59:36] back my next
+[00:59:36] >> Great.
+[00:59:37] Wait, wait, I have one I have one more
+[00:59:39] question. You know AlphaFold? AlphaFold
+[00:59:41] is coding. Yeah, we can be used for
+[00:59:43] coding.
+[00:59:44] >> programming? It's it's combining genetic
+[00:59:46] algorithms with
+[00:59:48] with Gemini. So, this is this is our
+[00:59:51] this is one attempt at doing like
+[00:59:53] AlphaGo stuff beyond what is known. So,
+[00:59:56] I wouldn't get a point for that one.
+[00:59:57] >> No, half a point, half a point. Okay,
+[00:59:58] one more question for you then. While I
+[01:00:00] have I'm just going to keep going while
+[01:00:01] I have you cuz why not?
+[01:00:02] >> we're still rolling. Uh obviously.
+[01:00:05] >> [laughter]
+[01:00:06] >> Okay, what did I not ask you that you
+[01:00:08] think is important for people to know?
+[01:00:09] Um what did I not ask me? I think we
+[01:00:11] covered a lot actually.
+[01:00:13] Um
+[01:00:14] GenCast, this is weather prediction.
+[01:00:17] >> Yes. Oh, yeah, we didn't cover that.
+[01:00:18] Navier-Stokes, I completely forgot about
+[01:00:19] solving solving that whole branch of
+[01:00:21] things.
+[01:00:22] >> forgot about that thing you did solving
+[01:00:23] So, that was one interesting thing is
+[01:00:24] simulations. We didn't talk much about
+[01:00:26] that or Genie, which is
+[01:00:29] the the role of simulations to
+[01:00:32] DQN, of course, started it all off, the
+[01:00:34] Atari stuff.
+[01:00:37] Simulations to help you
+[01:00:40] understand some area of science that or
+[01:00:43] even social science like economics that
+[01:00:46] you can't a very hard to run either
+[01:00:48] expensive to run experiments or you
+[01:00:49] can't run controlled experiments in. So,
+[01:00:52] I've always loved simulation. Oh, yeah,
+[01:00:53] I said there we go.
+[01:00:58] We're both very competitive, I think.
+[01:00:58] So, this is going to this is
+[01:01:01] be quite serious. Actually, are you in
+[01:01:03] Jenga, are you is the rules that if you
+[01:01:05] touch it, you have to move it, do you or
+[01:01:06] not? We are playing a a loose a loose
+[01:01:08] version.
+[01:01:08] >> The easier version.
+[01:01:10] >> Also, because we we were doing a
+[01:01:11] creative thing where you're allowed to
+[01:01:12] like push them together, you can use two
+[01:01:14] hands also.
+[01:01:15] >> Oh, okay, you're not allowed to normally
+[01:01:17] do that, right?
+[01:01:18] I'm just going to take this one. I'm
+[01:01:19] going to cheat with AlphaCode again.
+[01:01:21] One of the um questions I think people
+[01:01:24] will have for you is if they're watching
+[01:01:27] this and they
+[01:01:29] you know, are are
+[01:01:30] very optimistic. Gemini, everybody is.
+[01:01:33] They're very optimistic about the
+[01:01:35] futures that you've described. They're
+[01:01:37] they have all of your same concerns.
+[01:01:38] They generally have gotten to the end of
+[01:01:40] this conversation and they're thinking
+[01:01:43] I believe in this future and I want to
+[01:01:46] be part of it.
+[01:01:47] How would you Code Mentor? I think that
+[01:01:49] finds bugs in code.
+[01:01:51] >> Yes. Very good. How would you advise
+[01:01:53] them to participate if this is all about
+[01:01:55] helping people participate in the
+[01:01:56] future?
+[01:01:57] >> I would
+[01:01:58] when I do sort of talks at at
+[01:02:00] universities and schools,
+[01:02:02] I would say
+[01:02:04] they you've got to just go with the flow
+[01:02:06] of the direction. I would immerse myself
+[01:02:09] in every tool available and just become
+[01:02:12] almost like super powered, fantastic
+[01:02:15] super powered with
+[01:02:17] those tools and those um
+[01:02:20] uh
+[01:02:21] those capabilities cuz I think my
+[01:02:24] impression is even at the frontier labs,
+[01:02:26] we are
+[01:02:28] um
+[01:02:29] the so much work has to go into just
+[01:02:31] making the next versions of these
+[01:02:33] frontier models and then all the
+[01:02:34] adjacent models. So, for us like VO and
+[01:02:36] Nano Banana and Gemini
+[01:02:39] that we even we can only explore a
+[01:02:42] fraction of what the the applied things
+[01:02:44] you could do with it, the applications
+[01:02:46] you could you could make with it. So,
+[01:02:48] and I think that gap's getting bigger
+[01:02:49] and bigger in terms of like the overhang
+[01:02:51] of the capabilities, all the cool stuff
+[01:02:53] on the latest models and that that time
+[01:02:55] the the release schedules are getting
+[01:02:57] faster and faster on that. So, I think
+[01:02:58] the opportunity space is getting huge if
+[01:03:01] for people who are really expert and at
+[01:03:04] using those tools and then apply it to
+[01:03:06] some new domain. So, I think a a kid
+[01:03:10] these days could probably start a
+[01:03:12] multi-billion dollar business in some
+[01:03:13] ways using these tools in some new way
+[01:03:16] that no one had thought about. And I
+[01:03:18] think things like Open Claw is a good
+[01:03:21] example of that. Yeah.
+[01:03:24] Maybe we should call it a draw cuz I
+[01:03:25] think I think I don't think I don't
+[01:03:27] think either of us could bear to lose
+[01:03:28] that, right? So, It's your move.
+[01:03:30] [laughter]
+[01:03:30] It's your move.
+[01:03:31] Yeah, it's your move. We can I will try
+[01:03:33] my my inner my move. Go on then.
+[01:03:38] >> [laughter]
+[01:03:38] >> You're going to make me make a fool of
+[01:03:39] myself.
+[01:03:40] In 2016, you had a sticky note on your
+[01:03:43] board that said solve protein folding
+[01:03:46] smiley face.
+[01:03:46] >> Yeah. What is
+[01:03:47] >> [laughter]
+[01:03:47] >> Did I Yes. Okay. What is on the board
+[01:03:50] now in your proverbial sticky notes?
+[01:03:53] >> To answer it, I've got a pile of about a
+[01:03:55] hundred sticky notes on my desk, so
+[01:03:57] What's what's on it?
+[01:03:59] Alpha This is What's on it? What's in
+[01:04:01] it? I can't actually remember. It will
+[01:04:03] be a list of
+[01:04:05] about 30 things that need to be done by
+[01:04:08] like this evening. So,
+[01:04:10] >> [laughter]
+[01:04:10] >> I better probably get to them.
+[01:04:12] But look, great. Should we Do you want
+[01:04:14] to you want to actually
+[01:04:16] I'm going to keep going until you stop.
+[01:04:18] So, you can stop whenever
+[01:04:19] >> Yeah, let us about to What time is it?
+[01:04:21] Okay, I'll I'll do one more move. But
+[01:04:23] now we're now we're kind of cheating.
+[01:04:24] We're we're using our the pieces that
+[01:04:26] already
+[01:04:31] I'm going to I'm going to try and be I'm
+[01:04:31] going to go ambitious in the last
+[01:04:33] Oh, come on. Come on. Come on. If I get
+[01:04:35] this one, I get another question. Yeah,
+[01:04:36] okay. [laughter]
+[01:04:38] That seems fair. Oh, god.
+[01:04:46] How is that going to balance? Surely
+[01:04:46] not.
+[01:04:47] No.
+[01:04:49] Yes.
+[01:04:50] >> [laughter]
+[01:04:53] >> That was awesome.
+[01:04:53] Thanks. That was a great great idea to
+[01:04:55] have that.

@@ -1,0 +1,834 @@
+[00:00:00] Since I was a little kid, I've had a big
+[00:00:00] question...where are all the aliens? And still,
+[00:00:07] as an adult, I desperately want to be alive
+[00:00:07] when we actually discover extraterrestrial
+[00:00:13] life. And I don't mean all of the conspiracy
+[00:00:13] theories or the well-meaning but totally wrong
+[00:00:19] science fiction or even the math that says,
+[00:00:19] "Well, there should be someone somewhere." No,
+[00:00:26] I want to know the real science. How are we
+[00:00:26] actually going to discover aliens? Because
+[00:00:33] if we want to be alive when that happens,
+[00:00:33] cosmically, we don't have that much time. So,
+[00:00:38] I reached out to one of the most important
+[00:00:38] scientists in the search for intelligent life
+[00:00:43] outside our solar system and who is leading a new
+[00:00:43] effort to find alien life inside our solar system,
+[00:00:51] too. In this episode, we're going to show
+[00:00:51] you the real science and tech behind the
+[00:00:56] incredible push happening right now
+[00:00:56] to actually find aliens. Let's go.
+[00:01:10] It's clear that step one to finding real aliens is
+[00:01:10] finding their home. So, this is every exoplanet,
+[00:01:19] meaning planets outside our solar system that we
+[00:01:19] have ever found. Amazing. Isn't this cool? It's
+[00:01:24] just incredible just how many there are. Like
+[00:01:24] countless, you'd say. That is Professor Sarah
+[00:01:29] Seager. She is arguably the most important person
+[00:01:29] in the hunt to find aliens today. She invented
+[00:01:35] some of the key methods that we've already
+[00:01:35] used to understand what's out there, and she's
+[00:01:40] now working on brand new ones that she's going to
+[00:01:40] show us. But what blows my mind about this map is
+[00:01:46] that when I was born, it was...blank. Back then, we
+[00:01:46] weren't even sure that there were planets around
+[00:01:54] other stars. And what else is really amazing
+[00:01:54] is this is still nothing. So, take us back to
+[00:02:00] 1995 when the first exoplanet was discovered.
+[00:02:00] It was incredibly controversial. It was a big
+[00:02:06] deal. What did you think about that as a graduate
+[00:02:06] student? We were just simply searching for solar
+[00:02:11] system copies. That's like a Jupiter very far from
+[00:02:11] the star and no one could really believe it. But
+[00:02:17] the reason it was controversial, the signal was
+[00:02:17] incontrovertible. So the signal was definitely
+[00:02:21] real. But whether that signal was from a planet
+[00:02:21] or a different phenomenon on the star itself, that
+[00:02:28] was what was in question. And when you started
+[00:02:28] your PhD and you decided to study exoplanets,
+[00:02:34] you've said that people tried to dissuade you.
+[00:02:34] They tried to say it was a waste of your time. Oh,
+[00:02:38] totally. I mean there were many people. We're born
+[00:02:38] to be skeptics and scientists were trained to kind
+[00:02:44] of build on that skepticism like you want proof.
+[00:02:44] Many people would be say well you should talk
+[00:02:48] to my adviser he'll tell you why it's not it's
+[00:02:48] not a planet, so there's just this like constant
+[00:02:54] constant push back from most people. When we look
+[00:02:54] at something like this I want to explain to people
+[00:02:59] how we got from nothing to this and then how we're
+[00:02:59] going to get far beyond this as you said. Okay,
+[00:03:06] here's our star. What are the different methods
+[00:03:06] for filling in the map already? And then we'll get
+[00:03:11] to the ones that we are going to use next. Well,
+[00:03:11] the most popular method used today is called the
+[00:03:15] transit method. And if this is our star and this
+[00:03:15] is a planet orbiting that star for some systems,
+[00:03:22] we're just lucky. The planet happens to orbit
+[00:03:22] the star right along our line of sight. So,
+[00:03:28] the planet goes in front of the star as seen
+[00:03:28] from our telescope. You have to understand that
+[00:03:32] it's all random. So some may be orbiting the star
+[00:03:32] like this with respect to our viewpoint. But for
+[00:03:36] the ones that go in front of the star as seen
+[00:03:36] from us, the starlight drops by a tiny amount
+[00:03:42] every time the planet goes in front. Yeah. And
+[00:03:42] then it goes back to normal brightness and then
+[00:03:47] drops again. And the biggest drop could be 1 or
+[00:03:47] 2% for example. Fascinating. Yeah, the smallest
+[00:03:53] drops are like many decimal places over. Or, the star
+[00:03:53] itself could be wobbling. Technically speaking,
+[00:04:01] the planet and star are orbiting the common
+[00:04:01] center of mass. So as the planet goes around,
+[00:04:06] like when the planet's here, the star is wobbled a
+[00:04:06] bit this way and it just kind of keeps wobbling as
+[00:04:11] the planet's orbiting cause it's kind of moving its
+[00:04:11] own orbit around its common center of mass.
+[00:04:16] And we detect in the point of... We detect the line of sight
+[00:04:16] motion moving towards you, moving away from you.
+[00:04:21] I mean, it's crazy, right? So that's the Doppler
+[00:04:21] method? Yes. And you know with the Doppler method,
+[00:04:25] astronomers can measure velocities down to
+[00:04:25] like 10 tens of centimeters a second. Think
+[00:04:32] about that. Incredibly precise. Okay, so we've
+[00:04:32] got transit, we've got Doppler. What's direct
+[00:04:39] imaging? Direct imaging is where we can see
+[00:04:39] the planet directly. So if this were here and
+[00:04:47] it were big enough and bright enough compared
+[00:04:47] to its star, we could see light directly from
+[00:04:52] this planet. Yes. And that is really hard to do
+[00:04:52] because stars are incredibly bright. In fact,
+[00:04:59] the definition of a star is that it has fusion
+[00:04:59] and has created its own energy. Planets don't do
+[00:05:04] that. They never create energy. They just energy
+[00:05:04] just passes through them or reflects off of them.
+[00:05:09] So they're going to be much much fainter. And so
+[00:05:09] this would be reflected light, in the best case of direct imaging? It
+[00:05:14] could be it could be reflected light. It could be
+[00:05:14] absorbed energy that's re-emitted as heat. Got it.
+[00:05:20] Okay. So we've got transit, we've got Doppler, and
+[00:05:20] we've got direct imaging. Am I missing anything
+[00:05:26] else? Well, there are other methods, they're just
+[00:05:26] not as popular right now. There's also motion on
+[00:05:30] the plane of the sky itself. And that is called
+[00:05:30] astrometry. It's measuring very precise positions
+[00:05:35] of stars. And again, all stars are moving like
+[00:05:35] with respect to us, but they're kind of moving
+[00:05:40] in a straight line, but if there's a planet around
+[00:05:40] it, it kind of is doing like a loop-de-loop because
+[00:05:45] it's the planet is causing it to move in three
+[00:05:45] dimensions, the wobbles in three dimensions.
+[00:05:49] And then one more method that honestly never gets
+[00:05:49] airtime because it's very complicated to describe,
+[00:05:55] but it's incredibly powerful and it is called
+[00:05:55] gravitational microlensing. When we monitor stars,
+[00:06:00] bright stars very far away, and in between us and
+[00:06:00] that far away star, an unseen star on planet just
+[00:06:06] happened to drift by perfectly between us and that
+[00:06:06] background star. And from Einstein, we know mass
+[00:06:13] bends space. Light rays that would normally going
+[00:06:13] off into outer directions, they get bent around to
+[00:06:18] us and it acts like a lens, hence the word microlens, and magnifies the background star
+[00:06:24] sometimes to several times. So, enough that we
+[00:06:24] could see some kind of difference or spot that we
+[00:06:29] couldn't see before. All of these methods together
+[00:06:29] are how we've been able in my lifetime to fill in
+[00:06:34] over 6,000 exoplanets. But, um, what is that?
+[00:06:34] See this weird cone-like shape? Yeah, what is...
+[00:06:44] Isn't that just so bizarre? Like, let me ask you, do you
+[00:06:44] think there are more planets in that direction or
+[00:06:48] is it just that's the direction we have sampled?
+[00:06:48] I have to say no. I have to say that has to be the
+[00:06:54] direction that we have just pointed a telescope. It doesn't
+[00:06:54] make any sense if only planets formed along
+[00:06:57] there. This must be the direction where the Kepler
+[00:06:57] Space Telescope stared for 3 years, 3 plus years,
+[00:07:03] right? I mean, that is insane. So NASA launched
+[00:07:03] the Kepler Space Telescope in 2009. And if you
+[00:07:09] look inside it, you can see exactly this grid
+[00:07:09] shape. It used the transit method to find all of
+[00:07:15] these planets. But that means that if we pointed
+[00:07:15] Kepler or another telescope like it in a different
+[00:07:21] direction, it would find another cone-shaped chunk
+[00:07:21] of these exoplanets. Just think about what's out there.
+[00:07:29] This is just a small tiny tiny sample and
+[00:07:29] it's everywhere. Yeah. Okay. So, that's Kepler.
+[00:07:36] What's that one? Oh my gosh, this is so cool. This
+[00:07:36] has to be microlensing. Awesome. Because microlensing
+[00:07:41] requires really really bright stars in
+[00:07:41] the bulge really far away to be the source star.
+[00:07:48] Awesome. So in just the last few decades we've
+[00:07:48] gone from not knowing if there were planets around
+[00:07:54] other stars to knowing that they are everywhere.
+[00:07:54] But now, once we know a planet is there the next
+[00:08:03] step is to figure out what it's like. What's its
+[00:08:03] atmosphere like? Who theoretically could be living
+[00:08:08] there depending on what signatures are in that
+[00:08:08] atmosphere because at the end of the day what we
+[00:08:12] want to know is is anyone out there. You developed
+[00:08:12] a way to do that and it was totally groundbreaking
+[00:08:17] at the time and then you were proven right and
+[00:08:17] now it's being used in so many different ways.
+[00:08:22] Could you explain to me how transit transmission
+[00:08:22] spectroscopy helps us see in the atmospheres of
+[00:08:27] exoplanets? Well, when the planet goes in front
+[00:08:27] of the star, some of the starlight shines through
+[00:08:33] the atmosphere if the planet has an atmosphere.
+[00:08:33] But not all of the light makes it through. Like
+[00:08:38] imagine shining a flashlight through a fog.
+[00:08:38] Some light makes it through, some doesn't. So
+[00:08:43] we can take a spectrum of the star by itself
+[00:08:43] and then take a spectrum during transit. And
+[00:08:49] the difference in those two essentially tells us
+[00:08:49] what's in the planet atmosphere because the planet
+[00:08:53] atmosphere is blocking some of the starlight
+[00:08:53] at very specific wavelengths. You wrote a paper
+[00:08:58] that explained how to do this with one of the
+[00:08:58] early exoplanets that we discovered. One of the
+[00:09:03] early stars. The first one. The first one. So, this is HD 209458 b.
+[00:09:03] That's right. Yeah. And then they actually did it
+[00:09:11] and you were proven right. Correct. I was taken
+[00:09:11] aside and told that they couldn't include me on
+[00:09:16] the team because I was too young. You're like,
+[00:09:16] but here's the method of exactly what you should
+[00:09:22] do. And then when they went out and tried it, it
+[00:09:22] worked. You have to understand just how early the
+[00:09:28] days were. It wasn't like we could now race out
+[00:09:28] and and observe a whole bunch of other planets.
+[00:09:33] There literally weren't any. There may be two or
+[00:09:33] three transient planets, maybe two. And instead,
+[00:09:38] I just got this giant push back because at the
+[00:09:38] time I was applying to become a professor and
+[00:09:44] people would just be, well, it's interesting, but
+[00:09:44] it's a one object, one method success. Meaning
+[00:09:50] that it's cute, but we're never going to have
+[00:09:50] enough transiting planets. But because I had been
+[00:09:57] working in this race to find transiting planets
+[00:09:57] by just looking at tons of stars at one time,
+[00:10:01] I actually knew how close we were. Yeah. It's very
+[00:10:01] very satisfying when nature behaves how you think
+[00:10:07] it should behave. Yeah. You know, if you want to
+[00:10:07] think about it, think about like a ball of gas at
+[00:10:12] chemical equilibrium with the radiation hitting
+[00:10:12] it. And you could then be well, what are the
+[00:10:16] elements that are there? And then you can kind of
+[00:10:16] go down that list of elements and say which one is
+[00:10:20] the strong absorber and so it's just very I just
+[00:10:20] feel happy that nature agrees. This is crazy to me
+[00:10:26] because I have always heard that our atmosphere is
+[00:10:26] like the skin of an apple on an apple. Like it's
+[00:10:34] just incredible. We think of it as so thick. It's
+[00:10:34] incredibly thin. But you're telling me that we can
+[00:10:39] look at a star that's a tiny point of light. We
+[00:10:39] can see when something changes in that point of
+[00:10:45] light and we can see the light passing through
+[00:10:45] basically the skin part of the apple on its way
+[00:10:52] to us. Yes, we can. However, not for all kinds of
+[00:10:52] planets. Right now, it doesn't work for an Earth-Sun
+[00:10:59] twin. Okay? Because our sun, that backdrop
+[00:10:59] star, is so big and so bright and our Earth's
+[00:11:06] atmosphere is so tiny. Do none of the methods work
+[00:11:06] for Earth-like planets? Not yet. So, that whole map
+[00:11:12] that we just looked at, none of those are really
+[00:11:12] like Earth. None of them are Earth twins. No. So,
+[00:11:18] any headline that we've ever seen about Earth-like
+[00:11:18] planets being discovered has been using a really,
+[00:11:24] really broad, not super scientific definition of
+[00:11:24] what that means. Those ones are either the right
+[00:11:29] size, but they're around much smaller stars, which
+[00:11:29] changes what could be alive there, or actually
+[00:11:35] way, way bigger than Earth. We can't find an Earth
+[00:11:35] twin yet. We're trying. And we're trying because
+[00:11:40] we think maybe that's the best shot at finding
+[00:11:40] life or at least life that we can recognize. For
+[00:11:46] finding Earth twins, why is it so hard? It's so
+[00:11:46] hard because planets are so small, so low mass,
+[00:11:54] and so dim compared to the adjacent host star.
+[00:11:54] Yeah. Our Earth is hundreds of thousands of
+[00:12:00] times less massive than our sun. But our Earth
+[00:12:00] is 10 billion B, billion times fainter than our
+[00:12:06] sun. Yeah. In reflected light. So, I don't know if
+[00:12:06] you've come across anything where you have to go
+[00:12:12] to 10 or more decimal places to get the job done.
+[00:12:12] Never in my life. It's tough. There's no way to
+[00:12:16] sugarcoat how hard it is to find an Earth twin.
+[00:12:16] So, what could we do about that? What we want to
+[00:12:22] do, and this idea has been around for decades,
+[00:12:22] is to go to space above the blurring effects of
+[00:12:27] Earth's atmosphere and to be able to block out
+[00:12:27] the starlight so we can see the planet light
+[00:12:32] directly. Like putting my thumb against the sun. Sure, it could
+[00:12:32] be like putting your thumb against the sun. How
+[00:12:36] do we do that? So, it turns out, crazily enough,
+[00:12:36] but in the 1920s, a French optical physicist named
+[00:12:42] Lyot, he actually invented a device called the
+[00:12:42] coronagraph about our sun. Have you ever seen
+[00:12:48] a total solar eclipse? Yeah. When you block
+[00:12:48] out the bright part of the sun, you can see
+[00:12:52] the fainter but hot plasma in the corona. So,
+[00:12:52] he invented something called a coronagraph where
+[00:12:57] anytime you want, you can block out the sunlight
+[00:12:57] and see the corona. People had that idea. Well,
+[00:13:01] why don't we use this device inside the telescope?
+[00:13:01] We can block out starlight and separate out the
+[00:13:05] planet light. It's tricky. Let's imagine you
+[00:13:05] brought me some banana bread and I say, "Thank
+[00:13:10] you so much, Cleo. I forgot to mention I don't
+[00:13:10] eat cinnamon." "Oh no." Meanwhile, there's you put cinnamon
+[00:13:16] in and there's a lot of flour. There's say 10
+[00:13:16] billion parts flour um and one part cinnamon.
+[00:13:22] "And can you please take that cinnamon out?" "Yes,
+[00:13:22] absolutely." No. No. I think the answer is no. So,
+[00:13:28] that stuff 100,000 years. What if I said "I knew you're coming to visit me and that you had
+[00:13:34] been trying to make this banana bread 100 times
+[00:13:34] better." I'd say, "I know you're trying to make this
+[00:13:37] great banana bread. Please bring the cinnamon
+[00:13:37] in a separate dish. So if the others want, they
+[00:13:41] can put it on top. I don't I don't eat cinnamon."
+[00:13:41] Yeah. So now remember the cinnamon is representing
+[00:13:45] the planet light and the banana bread and all the
+[00:13:45] flour is representing the starlight. There's way
+[00:13:50] more flour than cinnamon. Now they're separate.
+[00:13:50] They never get mixed and it's very easy to keep
+[00:13:56] them separated. So we need a technology that
+[00:13:56] separates the planet light so that a telescope can
+[00:14:02] analyze either just that light or just the star's
+[00:14:02] light, but not mix them up. Cause the problem is when
+[00:14:08] they're mixed up it's just hard to separate them
+[00:14:08] again and inside the telescope the light bounces
+[00:14:12] around and you have to make the telescope very
+[00:14:12] stable. So, I love the way where we always keep
+[00:14:17] them separated. How do we do it? We do it with something
+[00:14:17] called Starshade? Awesome. Can I go grab that?
+[00:14:23] You can. You can be careful. Be careful. The edges
+[00:14:23] are very sharp. I've wanted to play with this ever
+[00:14:28] since I got this office. Starshade. Okay, I'll be
+[00:14:28] careful. Is a giant specially shaped screen. Okay,
+[00:14:34] this is a 1% scale model that. So, this is huge.
+[00:14:34] Well, imagine if it's 100 times bigger. Awesome.
+[00:14:41] Starshade would have its own spacecraft and it
+[00:14:41] would formation fly with a space telescope. So,
+[00:14:47] they'll both be operating in space far away from
+[00:14:47] Earth's gravity cause they have to line up extremely
+[00:14:51] precisely. Mhm. And Starshade would be blocking
+[00:14:51] out a known star to search for planets around that
+[00:14:57] star. The starlight will be blocked and only
+[00:14:57] the planet light will enter the telescope. And
+[00:15:02] why is it shaped like this? Well, that's a great
+[00:15:02] question. You know, if you were to put a circular
+[00:15:06] screen or a square screen in space and block out a
+[00:15:06] star, you would have rings, ripples because light
+[00:15:12] can act like a wave. Yeah. And it actually bends
+[00:15:12] around the edges of a giant circular screen and it
+[00:15:18] will create ripples just like dropping a pebble in
+[00:15:18] a pond. And those ripples are light ripples. And
+[00:15:22] the light ripples are way brighter than any
+[00:15:22] planet you're looking for. Spitzer invented
+[00:15:26] this special shape in the 1960s. And what he
+[00:15:26] realized was that this shape, what it enables is
+[00:15:33] the starlight still acts like a wave and bends
+[00:15:33] around, but it interacts with itself.
+[00:15:38] So Cleo, do you see this black thing behind me? Do you
+[00:15:38] want to guess what it is? I think that should be
+[00:15:42] a full-size version of just this little piece. It
+[00:15:42] is. It is just a single petal. Just that. Correct.
+[00:15:49] Cool. And it's it gives you a sense of just
+[00:15:49] how giant this this screen could be? What's the
+[00:15:54] status of it right now? Like would Starshade be
+[00:15:54] something that I could see? Starshade, you know,
+[00:15:58] was invented in the 1960s and every decade it
+[00:15:58] has been revived and shelved and we had a real
+[00:16:03] heyday since about 2013 when Starshade has been moving
+[00:16:03] forward very rapidly. We had directed funding. We
+[00:16:11] solved a lot of hard problems. We have large radio
+[00:16:11] deployables in space that we have heritage for to
+[00:16:16] build how Starshade will stow and deploy.
+[00:16:16] But unfortunately, right now, the Starshade
+[00:16:22] funding is on hold and so we're trying to keep
+[00:16:22] Starshade alive. Right now, NASA has plans to
+[00:16:28] build the Habitable Worlds Observatory using
+[00:16:28] the coronagraph on the inside. And that's the
+[00:16:32] one where it's possible but it's hard to separate out the cinnamon. Very hard to separate
+[00:16:37] the cinnamon. And the coronagraph still has a
+[00:16:37] ways to go for lab demo. Starshade has been
+[00:16:41] demonstrated to work to the contrast needed. And
+[00:16:41] big picture to remind people of you know why if
+[00:16:47] if this show is all about participating in those
+[00:16:47] futures and caring about them to try and make them
+[00:16:51] happen. The reason to care about Starshade is,
+[00:16:51] if, we can separate out the stars' light we have
+[00:16:58] a chance at detecting more Earth-like planets.
+[00:16:58] So let's assume that some of these methods
+[00:17:03] happen and we are looking at Earth-like planets
+[00:17:03] around sun-like stars. What are we looking for?
+[00:17:11] That's a great question and to be frankly as
+[00:17:11] honest as possible, we are still working on that.
+[00:17:17] Awesome. What are the options? Well, one option is
+[00:17:17] the Earth twin. Literally carbon dioxide and yeah,
+[00:17:23] a tiny bit of carbon dioxide, a lot of water
+[00:17:23] vapor. On Earth, oxygen is made by plants and
+[00:17:28] photosynthetic bacteria. It's highly reactive.
+[00:17:28] It wouldn't be in our atmosphere unless it's
+[00:17:32] continually produced. That's life as we know it
+[00:17:32] on Earth. But alien planets could work completely
+[00:17:39] differently. So, we're also trying to get better
+[00:17:39] at understanding what life could be like that's
+[00:17:45] really different from us. Life as we don't know
+[00:17:45] it. Let's imagine for a moment there's a Cleo and
+[00:17:52] there's a professor Seager on an alien world and
+[00:17:52] they don't have oxygen. And they're talking about
+[00:17:59] the same conversation and they're saying, "What
+[00:17:59] kind of planet do you think could support life?"
+[00:18:03] They might even say, "Well, we found this planet
+[00:18:03] has a lot of oxygen. It's terrible. Has so much
+[00:18:08] oxygen. No one. How could anyone live there? We'd
+[00:18:08] have large regional fires at any time. We'll find
+[00:18:13] a bunch of things. We'll be like, "Wow, this has
+[00:18:13] oxygen or this has this gas or this has another
+[00:18:17] gas," but we won't be sure because there will
+[00:18:17] always be the opposing view. A lot of people
+[00:18:22] have their favorites. One of my favorite gases is
+[00:18:22] phosphine. It has a unique spectral signature that
+[00:18:28] doesn't overlap with any other major gases like
+[00:18:28] carbon dioxide or methane or anything. On Earth,
+[00:18:34] it shouldn't exist because it takes energy
+[00:18:34] to make it. Mhm. Yet on Earth, it does exist,
+[00:18:40] but it's only associated with life. Okay, so
+[00:18:40] those could be signs of microbes. But what about
+[00:18:45] intelligent life? When we search for intelligent
+[00:18:45] life, are we searching for different things? Are
+[00:18:51] we searching for the same biosignatures? And when
+[00:18:51] we say intelligent, what do we actually mean? Like
+[00:18:58] if we found dogs on another planet, I'm pretty
+[00:18:58] sure we would go, "Oh my god, intelligent life.
+[00:19:03] This is incredible." Yeah. Like imagine if you
+[00:19:03] found a dog on an alien planet. This is my dog,
+[00:19:09] Thor. He's a 10-lb mini Australian Shepherd.
+[00:19:09] He's a big fan of Hill's Pet Nutrition, and he's
+[00:19:15] 12 years old, but I think he still looks like a
+[00:19:15] puppy. Thor has been my guy since long before I
+[00:19:20] started HUGE*. And he's been with me every step
+[00:19:20] of making this show. But this show also means that
+[00:19:25] I need to leave him sometimes. The longest was a
+[00:19:25] trip to Antarctica for 3 weeks. I feel so guilty
+[00:19:31] when I'm gone. Like, he's 12 years old. I want
+[00:19:31] every moment with him and I want to try to give
+[00:19:36] him the best of everything that I possibly can.
+[00:19:36] The big one is his food. Thor really likes this
+[00:19:41] one from Hill's, which is why I'm so excited to
+[00:19:41] partner with them. What he likes is the taste.
+[00:19:44] What I like is the science. Because Thor's gut is
+[00:19:44] home to trillions of microbes that help digest
+[00:19:49] his food and support his immune system. And
+[00:19:49] prebiotic fiber is food for the good ones. So,
+[00:19:54] Hill's uses two kinds that work in different parts
+[00:19:54] of his gut. So when those bacteria break the fiber
+[00:19:59] down, they make helpful compounds that support
+[00:19:59] his organs like his heart and his kidneys. And
+[00:20:03] every time Thor turns food into energy, he makes
+[00:20:03] free radicals, which are these unstable molecules
+[00:20:09] that can damage his cells. Antioxidants are the
+[00:20:09] cleanup crew. Vitamins C and E help neutralize
+[00:20:14] those free radicals before they do harm. The older
+[00:20:14] Thor gets, the more free radicals his body makes,
+[00:20:19] so the antioxidants in his food matter more.
+[00:20:19] No food is magic, but giving his body the right
+[00:20:24] building blocks backed by real research, that's
+[00:20:24] something I can do. I want the science to help
+[00:20:28] him live longer so that I can have more time to
+[00:20:28] love him. Discover the science behind a long,
+[00:20:33] healthy life for your pet at hillspet.com/science
+[00:20:33] doesmore. Okay, back to intelligent aliens.
+[00:20:39] Are we talking about any kind of sentience? Are we
+[00:20:39] talking about little green men? How does the
+[00:20:46] field think about the range from microbial life to
+[00:20:46] intelligent extraterrestrial civilizations? When
+[00:20:52] it comes to gases, of course, we humans give off
+[00:20:52] gas. We're breathing out carbon dioxide. We have,
+[00:20:57] you know, cows giving off methane. Like there
+[00:20:57] are gases that intelligent life does produce,
+[00:21:02] but we can't separate out with basic gases,
+[00:21:02] whether it's microbes or intelligent life.
+[00:21:08] And when it does come to gases though, there is
+[00:21:08] a category called technosignature gases. Like we
+[00:21:13] produce some complicated gases like, we produce
+[00:21:13] chlorofluorocarbons and there are some gases
+[00:21:19] um it's going to sound a bit obscure, SF6, sulfur
+[00:21:19] tetrafluoride. We have...NF3. Like we have some
+[00:21:26] gases that are only used industrially that
+[00:21:26] life never makes and then people love technosignatures
+[00:21:30] in general, like purposeful radio
+[00:21:30] communications or crazy large structures aliens
+[00:21:36] may have built so there's sort of the full
+[00:21:36] range out there of what people think about
+[00:21:40] but it's hard really hard. Like from afar, aliens
+[00:21:40] with telescopes more sophisticated than ours,
+[00:21:47] like just more, like what we're trying to build,
+[00:21:47] like Starshade, they would see oxygen. They might
+[00:21:53] infer there's oceans and continents. Would they
+[00:21:53] see city lights or pollution? No. Would they see
+[00:21:58] the Great Wall of China? No. So, it's like a whole
+[00:21:58] other level to find technosignatures. Yeah. So,
+[00:22:05] we're not going to see dogs. We're not going to
+[00:22:05] see humanoids, unfortunately, right now, that's
+[00:22:10] way beyond what we can do. I have a question from
+[00:22:10] someone who I have previously interviewed on this
+[00:22:16] show. "Project Hail Mary" author Andy Weir, right?
+[00:22:16] Yeah. He wrote a story about one of my favorite
+[00:22:22] aliens of all time. His name is Rocky. "Hi, Grace."
+[00:22:22] He asks, "Earth converted sunlight into fossil
+[00:22:27] fuels for millions of years. Would that energy
+[00:22:27] discrepancy be detectable comparing a planet's
+[00:22:32] energy radiation to its presumed energy absorption
+[00:22:32] of the star? Or would it be lost in the noise of
+[00:22:38] normal variance?" I think he's asking could some
+[00:22:38] alien civilization very far away see that we are
+[00:22:45] giving off more energy than we should be currently
+[00:22:45] absorbing from the sun therefore we are here. Well
+[00:22:50] that's a good question. Right now we can't detect
+[00:22:50] that you have to think about it we can it sounds
+[00:22:55] like grand and incredible all the things we can
+[00:22:55] do but if you wanted to really analyze that like
+[00:23:02] under a microscope so to speak we can barely do
+[00:23:02] anything. So you know how our planet's heating
+[00:23:07] up and we have forest fires and we have climate
+[00:23:07] change. We couldn't detect that from afar. Like
+[00:23:11] there's no way they could, if they're lucky,
+[00:23:11] they could see we have carbon dioxide at all,
+[00:23:15] let alone that it's going up parts per million
+[00:23:15] every year. Thinking about that map and thinking
+[00:23:21] about now we're in a world where we've filled
+[00:23:21] it even more in. Mhm. Where do you think we're
+[00:23:26] most likely to find intelligent alien life?
+[00:23:26] First, we asked, are there exoplanets? Check.
+[00:23:32] Are there rocky exoplanets in the habitable
+[00:23:32] zone where they might host life? Check.
+[00:23:37] Now we're on to is there going to be water vapor
+[00:23:37] or liquids where life could exist? We're still
+[00:23:41] working on that. It sounds like you're outlining
+[00:23:41] popularly the Drake equation. Those are the the
+[00:23:46] variables in what I understand to be the Drake
+[00:23:46] equation, but I also know you have the Seager
+[00:23:50] equation. Yes. Yes. And I by the way...What are the differences?
+[00:23:50] Drake's equation is broken down into terms. The
+[00:23:58] search for extraterrestrial intelligence by way of
+[00:23:58] radio communication. How many stars are being born
+[00:24:04] each year? What fraction of them have planets in
+[00:24:04] the habitable zone? What fraction have intelligent
+[00:24:09] life? How long do civilizations last? And I took
+[00:24:09] the Drake equation and recast it, for the search
+[00:24:15] for not intelligent life, but any life by way of
+[00:24:15] biosignature gases. And I did this considering
+[00:24:22] a few different cases, but one case was what we
+[00:24:22] talked about transmission spectra. And I said,
+[00:24:28] if you have a certain number of stars, here are
+[00:24:28] the factors that are important. We have to get
+[00:24:32] really lucky in the time boxed period of when
+[00:24:32] they're alive. The time. Yeah. But one concept I do love,
+[00:24:39] I've really glommed onto. It's a really scary concept. Okay. Do you want to hear it? Yes. I'm ready. Well, AI is starting to
+[00:24:47] pervade our life. Yes. And we we only have a glimpse of
+[00:24:47] where it's heading. Yes. And there's a big fear,
+[00:24:53] rightly so, that a few generations from now
+[00:24:53] or sooner or sooner, right? Could be 10 years,
+[00:24:57] could be a generation or two, AI is our boss.
+[00:24:57] Mhm. And it it kind of has taken over. We also
+[00:25:03] in parallel have data farms being considered for
+[00:25:03] space. Have you heard of those? Yeah. This would
+[00:25:09] ruin our night sky. So it's very depressing for
+[00:25:09] astronomy. But imagine for a moment that you have
+[00:25:14] AI in space. So they're getting solar energy and
+[00:25:14] they're giving off heat to space. But they also
+[00:25:19] have the ability to reproduce because on Earth
+[00:25:19] there are a lot of big startups with big money
+[00:25:24] about robotic self-driven AI. Have you heard of
+[00:25:24] that? Yeah. Self-driven labs, rather. So, now let's put
+[00:25:29] all that together. AI is taking over. It's in
+[00:25:29] space. It can self-produce. It's getting energy
+[00:25:33] from the sun. It has intelligence. It wants more
+[00:25:33] energy. Where's it going to go? The sun. Okay.
+[00:25:39] It'll orbit our sun. Maybe that's what we should
+[00:25:39] be looking for. Yeah. Intelligent AI. Yeah. Maybe
+[00:25:44] it's not just our sun. And I can't take claim for this idea. Maybe now it's moving to a local
+[00:25:49] black hole where there's more energy. Maybe now
+[00:25:49] it's moving to our galactic black hole. I mean,
+[00:25:53] there's a lot of ideas out there. But if you
+[00:25:53] want to think about how long we've been here,
+[00:25:58] uh, really just the blink of an eye and the
+[00:25:58] sort of exponential we're on for AI, you know,
+[00:26:04] maybe that's what we should be looking for. What
+[00:26:04] are your I want to know what your thoughts are. I
+[00:26:07] just outlined a scenario. I didn't say whether I
+[00:26:07] totally buy into it, but what are your thoughts?
+[00:26:11] I am less scared of that than I thought I
+[00:26:11] was going to be. Um, I would not assume in
+[00:26:18] either direction about the way that AI is either
+[00:26:18] constrained here on Earth or treats us. I see. So
+[00:26:24] in either so there within that hypothetical there
+[00:26:24] are still a lot of options where humanity is happy
+[00:26:29] um or you know supported by the AI and yes the
+[00:26:29] AI is self-replicating and going toward the black
+[00:26:35] holes and maybe on behalf of humanity looking
+[00:26:35] for other contact with other AIs. I absolutely
+[00:26:41] buy that we've only been around for a short period
+[00:26:41] of time. We're trying to find civilizations that
+[00:26:47] are either just below us or just way above us
+[00:26:47] because we assume that, you know, we've only
+[00:26:53] started being able to detect or being able to emit
+[00:26:53] ways that they could detect fairly recently. So,
+[00:26:58] we need to find somebody older than us basically.
+[00:26:58] Right. Um, and if that's the case, then it seems
+[00:27:05] to me plausible that the first thing that we
+[00:27:05] would encounter are their forms of technology
+[00:27:11] that they have created somehow. Maybe. I buy that.
+[00:27:11] I like it. What are your thoughts on it? Well,
+[00:27:15] I think we should definitely add it to the list
+[00:27:15] of something we're looking for. Yeah. Because
+[00:27:19] that could be a sign of intelligent life. And you
+[00:27:19] know, do you know what I'm saying? Like they might
+[00:27:23] not send us a radio signal. Maybe they don't want
+[00:27:23] to or can't. But I easily see it as not too far of
+[00:27:28] a leap from where we're heading. We've only been
+[00:27:28] talking about exoplanets so far. Right. Right.  It seems to me
+[00:27:34] that it's still possible to find microbial life
+[00:27:34] somewhere in our solar system. Why not? Why not?
+[00:27:38] Why not? You're working on a way to do this.
+[00:27:38] I definitely am. But not on the planet that
+[00:27:42] most people think. People know about Mars. Venus
+[00:27:42] sometimes gets called Earth's evil twin. How did
+[00:27:47] it get that nickname? Well, Venus itself is about
+[00:27:47] Earth's size and about Earth's mass. And many
+[00:27:53] people think it was born like Earth with water
+[00:27:53] oceans. Maybe it had continents and like a nice
+[00:27:58] atmosphere. But Venus is just that much closer
+[00:27:58] to the sun and it had volcanoes and it's hotter
+[00:28:04] and it had a greenhouse atmosphere. And eventually
+[00:28:04] it just got too hot. Venus went through a tipping
+[00:28:09] point and got too hot for water to be sustainable.
+[00:28:09] So then that carbon dioxide that supposedly was
+[00:28:14] dissolved in the ocean came back to the atmosphere
+[00:28:14] and made it even hotter. And eventually it's just
+[00:28:19] way too hot on the surface anyway for any kind
+[00:28:19] of life we could imagine. In the 70s and early
+[00:28:23] 80s over a dozen former Soviet Union missions went
+[00:28:23] to Venus. NASA sent Pioneer Venus. So where could
+[00:28:29] there possibly be life on Venus? Well, not on the
+[00:28:29] surface, which is too hot. But just like on Earth,
+[00:28:34] when you go in the airplane. Yeah. Or you hike up
+[00:28:34] a mountain, it gets colder and colder. And that
+[00:28:39] also happens on Venus on most planets actually.
+[00:28:39] On Venus about 50 km above the surface. Okay,
+[00:28:45] it's the right temperature for life. So there
+[00:28:45] could be life in the clouds of Venus. There could be
+[00:28:49] life in the clouds and this by no means was my
+[00:28:49] idea. Carl Sagan, we think, was the first one to
+[00:28:54] propose this. I remember. "It is just possible that
+[00:28:54] the hot region exists at a high altitude in the
+[00:29:00] ionosphere of Venus. The surface temperature could
+[00:29:00] then be almost earth-like and life as we know it
+[00:29:05] could exist there." So how are we going to find
+[00:29:05] out? I know about missions to Mars. You're leading
+[00:29:09] a mission called the Morning Star mission. Could you tell me about it? Yes, I can tell you about that.
+[00:29:13] So, we want to go to Venus. It's still too crazy.
+[00:29:13] It's too taboo for NASA and large government
+[00:29:18] agencies. So, we're trying to do a series of
+[00:29:18] missions. Each builds on the one before that
+[00:29:24] are largely privately funded. And we call ourselves the Morning Star Missions to Venus.
+[00:29:29] We're also trying to get this message across of
+[00:29:29] like a new dawn is rising for space missions.
+[00:29:35] Instead of waiting over four decades to go
+[00:29:35] back to the atmosphere of Venus or a planet,
+[00:29:40] let's shift gears. Let's complement the NASA
+[00:29:40] missions and have small very very focused
+[00:29:45] missions that just have like a single goal. So the
+[00:29:45] goal would be of the Morning Star Missions. Well,
+[00:29:50] the eventual goal eventually in time is a sample
+[00:29:50] return. Awesome. Is that the pieces that we should
+[00:29:57] talk about. Yes. Why don't we talk about that?
+[00:29:57] Yeah, let's bring that over. Okay, this is for you. Thank
+[00:30:01] you. I'll get this one. So, this is a 3D printed
+[00:30:01] model of the actual size of Morning Star's first
+[00:30:10] mission to Venus called the Rocket Lab Mission to
+[00:30:10] Venus. It's beautiful. And this first mission is
+[00:30:15] like a small cheap mission. Mhm. So, this is the
+[00:30:15] entry capsule, but it's also the probe shell. So,
+[00:30:21] normally the entry capsule like opens up, but
+[00:30:21] this is just going to be it. It's just this.
+[00:30:25] It'll just get dropped off. It'll slow down based
+[00:30:25] on its own drag and it will have five minutes in
+[00:30:31] the clouds to perform its job and it'll keep going
+[00:30:31] and slow down and eventually it will crash land on
+[00:30:37] the surface. Will it send back enough data for us
+[00:30:37] to understand? Well, it has to. So, it's kind of
+[00:30:41] like all like a puzzle. You have to make sure it's
+[00:30:41] all tied together properly. Would you like to open
+[00:30:45] it? Yeah. I didn't know that was an option. Yeah.
+[00:30:45] It's right here. Just put your hand like in the
+[00:30:50] and see what's inside. And this is a 3D printed
+[00:30:50] model. Cool. You have the best toys. Would you like
+[00:30:55] to take it out? Yes. And this, you know, kind of
+[00:30:55] looks like a little alien. Doesn't it look kind
+[00:30:59] of like an R2-D2? Yep. It's not. Is that R2-D2?
+[00:30:59] Inside would be like the computer, the radio,
+[00:31:07] the batteries, you know, inside would be like the
+[00:31:07] mission itself. So, what we're going to do is we
+[00:31:12] have a laser that we're going to be shining
+[00:31:12] through this window. And not shown on here,
+[00:31:17] but one of these will have a hole. One of these
+[00:31:17] side things will have a hole. So, the laser will
+[00:31:21] shine out and it will hit the cloud particles. And
+[00:31:21] so from the information that it sends back, we'll
+[00:31:26] find out more about what's hidden in those clouds.
+[00:31:26] This is part one of the Morning Star Missions.
+[00:31:31] Part one. I think in latter parts, you're going
+[00:31:31] to use this. What is this? So, okay. I want you
+[00:31:37] to know that when you build things for space,
+[00:31:37] there's like 100 steps. Yeah. So, this would be
+[00:31:42] about step say three out of 100. Okay. Maybe step five.
+[00:31:42] Okay. Well, what we'd like to do eventually is
+[00:31:47] capture the cloud particles of Venus and have like
+[00:31:47] literally liquid to analyze in the atmosphere.
+[00:31:54] And so the first step in doing that, we call it
+[00:31:54] our cloud catcher. You know how when you're in
+[00:31:58] a foggy environment and the fog collects on your
+[00:31:58] jacket? It's like that only there are these wire
+[00:32:02] mesh layers. But there's still a big problem
+[00:32:02] with these clouds. The clouds aren't made of
+[00:32:07] water, that's the problem. What are they made of?
+[00:32:07] Acid. Concentrated sulfuric acid. Can life survive
+[00:32:13] in concentrated sulfuric acid? Our life cannot
+[00:32:13] survive. It just cannot. There's no way it can.
+[00:32:18] So one thing my lab does is we study molecules in
+[00:32:18] concentrated sulfuric acid. And so while our life
+[00:32:24] can never survive, our DNA is completely unstable.
+[00:32:24] It turns out that some molecules are stable like
+[00:32:30] our amino acids stable in sulfuric acid. Huh? Our
+[00:32:30] nucleic acid bases, stable. Small peptides, stable,
+[00:32:38] lipids, stable. We put a lot of molecules
+[00:32:38] in sulfuric acid. We study other non-water
+[00:32:43] solvents. But it's actually pretty remarkable
+[00:32:43] that you can just do this in the lab and find out
+[00:32:49] um amazing things. We're trying to find a DNA like
+[00:32:49] molecule that's stable in concentrated sulfuric
+[00:32:55] acid and we have a big milestone in that direction
+[00:32:55] already. Can you tell us what the milestone is?
+[00:32:59] Sure. We have found that a molecule like DNA,
+[00:32:59] it's not DNA itself. Oddly, it's called PNA,
+[00:33:05] peptide nucleic acid. It's different from DNA.
+[00:33:05] It has the same latter part, but a different
+[00:33:10] backbone. And we have demonstrated that up to
+[00:33:10] about 50° C, it's stable in like pure concentrated
+[00:33:16] sulfuric acid. So, this would tell me on the
+[00:33:16] clouds of Venus, for example, that there could be
+[00:33:22] uh built using similar building blocks building
+[00:33:22] different things, not DNA, but other things.
+[00:33:27] That's right. Life made out of those things there.
+[00:33:27] Right. Cool. As proven by it surviving in these
+[00:33:33] jars. One of the things that has always struck me
+[00:33:33] about this is people are just so interested in the
+[00:33:39] topic of finding aliens. You know, the Pentagon
+[00:33:39] releases UAP information. And I went to Antarctica
+[00:33:46] recently and you would be surprised at the number
+[00:33:46] of people who genuinely told me that they thought
+[00:33:51] I'd find aliens there. And it's it feels like
+[00:33:51] this subject is either taken over by theories
+[00:34:00] about unproven encounters or well-meaning science
+[00:34:00] fiction that represents a very different world
+[00:34:10] than the one that we're living in and sometimes
+[00:34:10] gives misimpressions about how this might happen.
+[00:34:15] And then there's you and scientists like you
+[00:34:15] that are trying to say here are the actual
+[00:34:20] ways in which we would realistically find aliens.
+[00:34:20] Here's the human work that needs to go into that,
+[00:34:25] right? If you're talking to millions of people,
+[00:34:25] which I hope we are on this episode, what would
+[00:34:32] you encourage them to direct their attention to?
+[00:34:32] There's so many things scientifically. Yeah. Two
+[00:34:37] things that are my personal favorites. One is the
+[00:34:37] upcoming Nancy Grace Roman Space Telescope launch
+[00:34:43] because out of all those planets out there, we
+[00:34:43] still don't know how common or rare our solar
+[00:34:49] system is. It's very hard to find. We know
+[00:34:49] it's rare cause we found all the other systems,
+[00:34:54] but we don't know how common it is. And the new
+[00:34:54] telescope should answer that. And by that you mean
+[00:34:59] the particular kind of arrangement of planets we
+[00:34:59] have? Yeah. Got it. Yeah. And the other thing that I've
+[00:35:04] been really intrigued with lately, too, is we're
+[00:35:04] not kidding. The ingredients for life are found
+[00:35:09] everywhere. So, this isn't about aliens, but
+[00:35:09] honestly, the more chance for aliens to be out
+[00:35:13] there is if there are more chances for life to be
+[00:35:13] out there. All the TESS data, all the Kepler data,
+[00:35:18] all the data made by the James Webb Space
+[00:35:18] Telescope because it's all taxpayer funded. All
+[00:35:23] the data is public and it's not only public, but
+[00:35:23] there are different levels of data product. You
+[00:35:27] could be brave and like take the almost raw data
+[00:35:27] or you could take the light curve that's already
+[00:35:31] made and look for unusual things. You can get
+[00:35:31] your hands dirty as well as learning more domain
+[00:35:36] knowledge along the way. In preparation for this,
+[00:35:36] I read your amazing book. Oh, thank you. It's
+[00:35:44] called "The Smallest Lights in the Universe." And
+[00:35:44] if you don't mind, I'm going to ask you a personal
+[00:35:48] question about it. We can skip right over it if
+[00:35:48] you're uncomfortable. The title of this book,
+[00:35:54] I think, refers to the fact that you're a
+[00:35:54] scientist who is looking at these tiny little
+[00:36:00] lights made by planets and they're the smallest,
+[00:36:00] they're so faint. Um, and also you talk about how
+[00:36:07] your husband died when both of you were very
+[00:36:07] young and you had young kids. Yeah. And you're
+[00:36:14] looking for hope in small things. You're
+[00:36:14] dealing with grief. Could you tell me about what
+[00:36:20] your personal motivation was to continue this work
+[00:36:20] and how you think this has personally played out
+[00:36:26] for you? Well, I'm really pleased you understood
+[00:36:26] the title because it does have the dual meaning
+[00:36:30] of personal where when you're really down in the
+[00:36:30] bottom of despair, you have to hold on to those
+[00:36:36] small sights of hope. And in the other sense, they
+[00:36:36] are the small sights as Earths. They're 10 billion
+[00:36:41] times fainter than the sun's. But what happened
+[00:36:41] was this, and I'm going to try to say it for
+[00:36:45] you. You know, the human mind is an amazing thing.
+[00:36:45] We don't understand why we have consciousness. We
+[00:36:49] don't understand why we feel the way we do. But
+[00:36:49] I'll tell you one thing, when my first husband,
+[00:36:54] Mike, died, it was an incredible journey. You can
+[00:36:54] die well, and it's a really special journey. It's
+[00:37:00] very, very important as a culture that we can be
+[00:37:00] open-minded to that. And after he died, he had the
+[00:37:05] perfect death. I just want you to know. Yeah.
+[00:37:05] I was by his side and everything. And after that,
+[00:37:12] uh, life was meaningless all of a sudden
+[00:37:12] because that's like if you have anything in
+[00:37:19] your life that's so momentous, what's the point
+[00:37:19] of living? Yeah. And I really held on to those
+[00:37:25] smallest lights and decided my life was going to
+[00:37:25] have purpose. And that purpose comes on many axes.
+[00:37:32] One axis is it is my dream to find another Earth.
+[00:37:32] And that is that is my purpose. And after he died,
+[00:37:39] I had a wonderful few years of discovery. But it's
+[00:37:39] not just finding another Earth. It's finding life
+[00:37:45] out there. It's finding ways to get job done.
+[00:37:45] And it's inspiring the next generation and
+[00:37:51] giving everyone permission. I don't want you to
+[00:37:51] have a catastrophe to like get on your big thing.
+[00:37:56] But the point of this story is also that we can
+[00:37:56] do great things and we do have resilience and
+[00:38:02] there is a path forward if you can strategize and
+[00:38:02] get on that path and have help from your teachers
+[00:38:07] and friends and hopefully parents or like others
+[00:38:07] to help you get there. We all have a way to get
+[00:38:12] the job done. Thank you for the job that you're
+[00:38:12] doing. I think a lot of people are like me who
+[00:38:18] feel personally inspired by you and know about
+[00:38:18] the work that you're doing and feel that from
+[00:38:24] PhD onward you have struck this very risk-taking
+[00:38:24] um path on behalf of all of us that has a lot of
+[00:38:33] human benefits right I think you personally are
+[00:38:33] inspiring and also I think there are lots of
+[00:38:38] people who maybe until now did not know about this
+[00:38:38] work and now can see how you've been benefiting
+[00:38:44] them all along. So, thank you so much for your time and for your work. Thank you, Cleo. And really it's been a pleasure.
