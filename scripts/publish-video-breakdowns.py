@@ -27,7 +27,8 @@ def publish_frame(source):
         return
     target.parent.mkdir(parents=True, exist_ok=True)
     temporary = target.with_name(target.stem + ".tmp.webp")
-    long_video = int(relative.parts[1].split("-", 1)[0]) >= 29
+    long_video = next(item["number"] >= 29 and item["duration"] > 600 for item in ITEMS
+                      if relative.parts[1] == f"{item['number']:02d}-{item['slug']}")
     subprocess.run(
         ["magick", str(source), "-resize", "720x405>" if long_video else "960x540>", "-quality", "58" if long_video else "68",
          "-define", "webp:method=4", str(temporary)],
@@ -37,7 +38,7 @@ def publish_frame(source):
 
 
 def publish_video(item):
-    if item["number"] >= 29:
+    if item["number"] >= 29 and item["duration"] > 600:
         return  # Long videos use the original YouTube player on their breakdown pages.
     name = f"{item['number']:02d}-{item['slug']}"
     source = STUDY / "source" / f"{name}.mp4"

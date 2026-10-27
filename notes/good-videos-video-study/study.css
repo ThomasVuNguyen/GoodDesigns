@@ -35,6 +35,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .detail-head p { margin: 0; color: var(--muted); font-size: 16px; }
 .detail-head .source-link { flex: none; border-bottom: 1px solid var(--line); padding-bottom: 3px; color: var(--muted); text-decoration: none; }
 .detail-head .source-link:hover { color: var(--accent); border-color: var(--accent); }
+.study-note { max-width: 68ch; margin: -10px 0 28px; color: var(--muted); font-size: 16px; }
 .workspace { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(310px, 1fr); gap: 22px; align-items: stretch; }
 .player-card { min-width: 0; }
 .player-card video { display: block; width: 100%; aspect-ratio: 16/9; object-fit: contain; background: var(--ink); border-radius: 10px; }
@@ -66,8 +67,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .frame-card a { display: block; overflow: hidden; border: 1px solid var(--line); border-radius: 7px; background: var(--card); aspect-ratio: 16/9; }
 .frame-card img { display: block; width: 100%; height: 100%; object-fit: cover; }
 .frame-card figcaption { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 5px 1px 0; color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
-.frame-card figcaption button { padding: 0; border: 0; background: none; color: var(--muted); cursor: pointer; opacity: 0; pointer-events: none; transition: opacity .15s ease; }
-.frame-card:hover figcaption button, .frame-card:focus-within figcaption button { opacity: 1; pointer-events: auto; }
+.frame-card figcaption button { padding: 0; border: 0; background: none; color: var(--muted); cursor: pointer; }
 .frame-card figcaption button:hover { color: var(--accent); }
 .frame-preview { position: fixed; z-index: 20; width: min(520px, calc(100vw - 32px)); overflow: hidden; pointer-events: none; border: 1px solid var(--line); border-radius: 10px; background: var(--card); box-shadow: 0 18px 48px #15141238; }
 .frame-preview img { display: block; width: 100%; aspect-ratio: 16/9; object-fit: contain; background: var(--ink); }

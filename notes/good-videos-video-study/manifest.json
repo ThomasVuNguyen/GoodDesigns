@@ -397,5 +397,24 @@
       "text": "transcripts/33-youtube-0OXaanDHENI.transcript.txt",
       "kind": "creator captions"
     }
+  },
+  {
+    "number": 34,
+    "slug": "youtube-xWfNhWn88Bc",
+    "title": "The new 14” MacBook Pro with M6",
+    "author": "Apple",
+    "url": "https://www.youtube.com/watch?v=xWfNhWn88Bc",
+    "duration": 53.414,
+    "bytes": 3567843,
+    "width": 1920,
+    "height": 1080,
+    "fps": "24000/1001",
+    "second_frames": 53,
+    "scene_frames": 10,
+    "transcript": {
+      "vtt": "transcripts/34-youtube-xWfNhWn88Bc.en.vtt",
+      "text": "transcripts/34-youtube-xWfNhWn88Bc.transcript.txt",
+      "kind": "YouTube auto captions"
+    }
   }
 ]

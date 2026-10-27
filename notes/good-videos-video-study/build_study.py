@@ -16,7 +16,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 VIDEOS = json.loads((REPO / "gallery/videos.json").read_text())["videos"]
-NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 34)]
+NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 35)]
 TAG = re.compile(r"<[^>]*>")
 TIMING = re.compile(r"^((?:\d\d:)?\d\d:\d\d\.\d+)\s+-->")
 SCENE_LOG = re.compile(r"n:\s*(\d+)\s+pts:\s*\d+\s+pts_time:([\d.]+)")
@@ -185,7 +185,7 @@ def write_pages(items):
         page = f"{name}.html"
 
         player = (f'<div id="study-video" class="youtube-player" data-youtube-id="{html.escape(item["slug"].removeprefix("youtube-"))}"></div>'
-                  if number >= 29 else
+                  if number >= 29 and item["duration"] > 600 else
                   f'<video id="study-video" controls preload="metadata" poster="{thumb}" src="source/{name}.mp4"></video>')
         detail = [topbar(),
                   f'<div class="detail-head"><div><h1>{title}</h1><p>{author} · {format_time(item["duration"])} film</p></div>'
@@ -193,6 +193,10 @@ def write_pages(items):
                   '<div class="workspace"><div class="player-card">',
                   player,
                   '</div>']
+
+        note = VIDEOS[number - 1].get("note")
+        if number == 34 and note:
+            detail.insert(2, f'<p class="study-note">{html.escape(note)}</p>')
 
         tr = item.get("transcript")
         if tr:
