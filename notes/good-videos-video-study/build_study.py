@@ -17,6 +17,11 @@ HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 VIDEOS = json.loads((REPO / "gallery/videos.json").read_text())["videos"]
 NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 35)]
+CURATED_FRAMES = {
+    # Apple MacBook Pro M6: selected by reviewing the one-second contact sheet.
+    # The cut detector misses the film's shifting masks and typography.
+    34: [0, 2, 4, 6, 7, 8, 10, 11, 14, 16, 17, 19, 20, 22, 23, 27, 29, 32, 36, 39],
+}
 TAG = re.compile(r"<[^>]*>")
 TIMING = re.compile(r"^((?:\d\d:)?\d\d:\d\d\.\d+)\s+-->")
 SCENE_LOG = re.compile(r"n:\s*(\d+)\s+pts:\s*\d+\s+pts_time:([\d.]+)")
@@ -222,19 +227,28 @@ def write_pages(items):
             detail.append('<aside class="transcript"><div class="transcript-head"><h2>Transcript</h2></div><p>Transcript pending.</p></aside>')
         detail.append('</div>')
 
+        selected = item.get("selected_frames")
+        frame_intro = ('Handpicked compositions from the film. Open a frame at full size or play from its timestamp.'
+                       if selected else
+                       'Hover over a frame to preview it larger. Select a frame for full size, or play from its timestamp.')
         detail.append(
             '<section class="study-section" aria-labelledby="frames-title"><div class="frame-tools">'
             '<h2 id="frames-title">Frame library</h2><div class="frame-tabs" role="tablist" aria-label="Frame collection">'
             f'<button type="button" id="tab-scenes" role="tab" data-tab="scenes" aria-controls="panel-scenes" aria-selected="true">'
-            f'Scene changes <span>{item["scene_frames"]}</span></button>'
+            f'{"Selected frames" if selected else "Scene changes"} <span>{len(selected) if selected else item["scene_frames"]}</span></button>'
             f'<button type="button" id="tab-seconds" role="tab" data-tab="seconds" aria-controls="panel-seconds" aria-selected="false">'
             f'Every second <span>{item["second_frames"]}</span></button></div></div>'
-            '<p>Hover over a frame to preview it larger. Select a frame for full size, or play from its timestamp.</p>')
+            f'<p>{frame_intro}</p>')
         detail.append('<div class="frame-grid" id="panel-scenes" role="tabpanel" aria-labelledby="tab-scenes">')
-        with (HERE / "frames" / name / "scene-cuts.csv").open() as f:
-            for row in csv.DictReader(f):
-                path = f"frames/{name}/scene-cuts/{row['filename']}"
-                detail.append(frame_card(path, float(row["time_seconds"])))
+        if selected:
+            for second in selected:
+                path = f"frames/{name}/seconds/second-{second + 1:05d}.jpg"
+                detail.append(frame_card(path, second))
+        else:
+            with (HERE / "frames" / name / "scene-cuts.csv").open() as f:
+                for row in csv.DictReader(f):
+                    path = f"frames/{name}/scene-cuts/{row['filename']}"
+                    detail.append(frame_card(path, float(row["time_seconds"])))
         detail.append('</div><div class="frame-grid" id="panel-seconds" role="tabpanel" aria-labelledby="tab-seconds" hidden>')
         for n in range(1, item["second_frames"] + 1):
             path = f"frames/{name}/seconds/second-{n:05d}.jpg"
@@ -299,7 +313,8 @@ def one(number):
     make_overview(number)
     return {"number": number, "slug": video["slug"], "title": video["title"],
             "author": video["author"], "url": video["url"], **info,
-            "second_frames": seconds, "scene_frames": scenes, "transcript": transcript(number)}
+            "second_frames": seconds, "scene_frames": scenes, "transcript": transcript(number),
+            **({"selected_frames": CURATED_FRAMES[number]} if number in CURATED_FRAMES else {})}
 
 
 if __name__ == "__main__":

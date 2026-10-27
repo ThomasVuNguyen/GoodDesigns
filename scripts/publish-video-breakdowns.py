@@ -84,9 +84,12 @@ def main():
     shutil.copy2(STUDY / "study.js", DEST / "study.js")
     for item in ITEMS:
         publish_page(item)
+        if item.get("selected_frames"):
+            shutil.rmtree(DEST / "frames" / f"{item['number']:02d}-{item['slug']}" / "scene-cuts", ignore_errors=True)
 
     frames = [source for item in ITEMS
-              for source in (STUDY / "frames" / f"{item['number']:02d}-{item['slug']}").rglob("*.jpg")]
+              for source in (STUDY / "frames" / f"{item['number']:02d}-{item['slug']}").rglob("*.jpg")
+              if not item.get("selected_frames") or source.parent.name != "scene-cuts"]
     with ThreadPoolExecutor(max_workers=8) as pool:
         list(pool.map(publish_frame, frames))
     print(f"Published {len(frames)} WebP frames")

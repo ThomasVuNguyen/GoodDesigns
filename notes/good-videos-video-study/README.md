@@ -8,6 +8,8 @@ The published copy lives in `gallery/breakdowns/`. Run `python3 scripts/publish-
 
 Each video page has playback, a timestamped transcript, one frame per second, and extra frames at detected scene cuts. The local study also has a ten-second visual overview. The one-second source frames are 1280 pixels wide at most. Scene cuts use FFmpeg's scene score threshold of 0.30. This selection is intended for visual and pacing analysis; it does not represent every decoded video frame.
 
+Video 34, Apple's MacBook Pro M6 film, opens with 20 handpicked frames from the one-second sequence instead of detected cuts. Its moving masks and typography rarely trigger the cut detector, so the automatic set misses most of the visual ideas. The exhaustive every-second view remains available in the second tab. The curated timestamps live in `build_study.py` and the generated `manifest.json`.
+
 `source/` contains the downloaded clips. `frames/` contains the image sequences and `scene-cuts.csv` files. `transcripts/` contains source WebVTT captions where available and locally recognized speech for the other videos. Video 11 is spoken in Japanese, so its transcript is in Japanese. The `.transcript.txt` files are cleaned, timestamped reading copies. Speech recognition can mishear words and names; the `.vtt` files retain the original timing.
 
 The media and generated pages are local study materials. They are excluded from Git so the GoodDesigns gallery release does not accidentally include a large video archive. To rebuild the study after updating the media or transcripts, run `python3 notes/good-videos-video-study/build_study.py` from the repository root.
