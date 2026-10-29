@@ -1,0 +1,10 @@
+/* Local overrides for the Jules clone (not part of the reference stylesheet). */
+
+/* At exactly the xl breakpoint (1280px) the hero's "don't want to do" card uses
+   xl:translate-x-1/2, which pushes its 16px shadow pad 30px past the viewport and
+   makes the live page scroll sideways. Clip at the body edge instead: nothing
+   visible at scroll 0 changes, the page just can't be dragged sideways. */
+html,
+body {
+  overflow-x: clip;
+}

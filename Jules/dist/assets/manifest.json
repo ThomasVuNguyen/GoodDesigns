@@ -1,0 +1,198 @@
+{
+ "reference": "https://jules.google/",
+ "captured": "2026-10-29",
+ "files": [
+  {
+   "file": "index.html",
+   "bytes": 34859,
+   "role": "Astro server HTML: GTM script/noscript and the GA meta removed, duplicate <title> dropped, every path made relative",
+   "source": "https://jules.google/"
+  },
+  {
+   "file": "assets/css/index.ly5R4s0Y.css",
+   "bytes": 40857,
+   "role": "compiled Tailwind v4 stylesheet: tokens, pixel patterns, keyframes; font urls point to ../fonts/, non-Latin Roboto Mono subsets dropped",
+   "source": "https://jules.google/_astro/index.ly5R4s0Y.css"
+  },
+  {
+   "file": "assets/css/local.css",
+   "bytes": 437,
+   "role": "local override: clips the 30px horizontal overflow the live page has at exactly 1280px",
+   "source": null
+  },
+  {
+   "file": "assets/js/Capabilities.XuWWWfyn.js",
+   "bytes": 7527,
+   "role": "island: squid with brain, four capability bubbles, squid-eye and brain-label hover states, pixel wave background with fish (image paths rewritten to assets/img/)",
+   "source": "https://jules.google/_astro/Capabilities.XuWWWfyn.js"
+  },
+  {
+   "file": "assets/js/CodeEditorViewport2.BDL9D_vE.js",
+   "bytes": 15575,
+   "role": "island: code editor where the squid agent moves, thinks and rewrites lines (desktop); status bar with typing text (mobile) (image paths rewritten to assets/img/)",
+   "source": "https://jules.google/_astro/CodeEditorViewport2.BDL9D_vE.js"
+  },
+  {
+   "file": "assets/js/FooterActions.Cj4HX8AF.js",
+   "bytes": 1189,
+   "role": "island: \"Try Jules\" and \"Documentation\" buttons on a pixel wave background (unchanged)",
+   "source": "https://jules.google/_astro/FooterActions.Cj4HX8AF.js"
+  },
+  {
+   "file": "assets/js/HeroLogo.z4ZiRdeJ.js",
+   "bytes": 10443,
+   "role": "island: ASCII \"jules\" canvas logo, ejected letters, \"@\" robot that puts them back, \"p\" pauses it (unchanged)",
+   "source": "https://jules.google/_astro/HeroLogo.z4ZiRdeJ.js"
+  },
+  {
+   "file": "assets/js/client.EMS6r-n1.js",
+   "bytes": 2290,
+   "role": "Astro Preact renderer (client:only hydration) (unchanged)",
+   "source": "https://jules.google/_astro/client.EMS6r-n1.js"
+  },
+  {
+   "file": "assets/js/general.SDNfqQDG.js",
+   "bytes": 32275,
+   "role": "shared chunk: PixelBackground (wave and fish canvas), class helper, URL constants (unchanged)",
+   "source": "https://jules.google/_astro/general.SDNfqQDG.js"
+  },
+  {
+   "file": "assets/js/hooks.module.B8-SMkWr.js",
+   "bytes": 3441,
+   "role": "Preact hooks (unchanged)",
+   "source": "https://jules.google/_astro/hooks.module.B8-SMkWr.js"
+  },
+  {
+   "file": "assets/js/index.DNy-AhEG.js",
+   "bytes": 1982,
+   "role": "shared chunk: IntersectionObserver visibility hook (unchanged)",
+   "source": "https://jules.google/_astro/index.DNy-AhEG.js"
+  },
+  {
+   "file": "assets/js/jsxRuntime.module.Cr_7eFrB.js",
+   "bytes": 9726,
+   "role": "Preact JSX runtime + compat (unchanged)",
+   "source": "https://jules.google/_astro/jsxRuntime.module.Cr_7eFrB.js"
+  },
+  {
+   "file": "assets/js/preact.module.CzIF3XV7.js",
+   "bytes": 11411,
+   "role": "Preact core (unchanged)",
+   "source": "https://jules.google/_astro/preact.module.CzIF3XV7.js"
+  },
+  {
+   "file": "assets/js/signals.module.2CeQdR_U.js",
+   "bytes": 6836,
+   "role": "Preact signals (loaded by the renderer) (unchanged)",
+   "source": "https://jules.google/_astro/signals.module.2CeQdR_U.js"
+  },
+  {
+   "file": "assets/img/comic-bike.png",
+   "bytes": 477,
+   "role": "comic panel: bike riding",
+   "source": "https://jules.google/comic-bike.png"
+  },
+  {
+   "file": "assets/img/comic-book.png",
+   "bytes": 360,
+   "role": "comic panel: reading a book (desktop only)",
+   "source": "https://jules.google/comic-book.png"
+  },
+  {
+   "file": "assets/img/comic-computer.png",
+   "bytes": 401,
+   "role": "comic panel: writing software (112x112)",
+   "source": "https://jules.google/comic-computer.png"
+  },
+  {
+   "file": "assets/img/comic-tennis.png",
+   "bytes": 317,
+   "role": "comic panel: playing tennis",
+   "source": "https://jules.google/comic-tennis.png"
+  },
+  {
+   "file": "assets/img/favicon.svg",
+   "bytes": 1314,
+   "role": "favicon",
+   "source": "https://jules.google/favicon.svg"
+  },
+  {
+   "file": "assets/img/jules-avatar-profile.png",
+   "bytes": 194,
+   "role": "Jules chat avatar (30x30)",
+   "source": "https://jules.google/jules-avatar-profile.png"
+  },
+  {
+   "file": "assets/img/jules-pixelated.png",
+   "bytes": 260,
+   "role": "squid agent sprite in the code editor (30x30)",
+   "source": "https://jules.google/jules-pixelated.png"
+  },
+  {
+   "file": "assets/img/og-image.png",
+   "bytes": 11886,
+   "role": "og:image share card",
+   "source": "https://jules.google/og-image.png"
+  },
+  {
+   "file": "assets/img/plan-01.png",
+   "bytes": 263,
+   "role": "Jules plan meter (static on the live page too)",
+   "source": "https://jules.google/plan-01.png"
+  },
+  {
+   "file": "assets/img/plan-02.gif",
+   "bytes": 1393,
+   "role": "Pro plan meter, animated",
+   "source": "https://jules.google/plan-02.gif"
+  },
+  {
+   "file": "assets/img/plan-02.png",
+   "bytes": 270,
+   "role": "Pro plan meter, reduced-motion fallback",
+   "source": "https://jules.google/plan-02.png"
+  },
+  {
+   "file": "assets/img/plan-03.gif",
+   "bytes": 1418,
+   "role": "Ultra plan meter, animated",
+   "source": "https://jules.google/plan-03.gif"
+  },
+  {
+   "file": "assets/img/plan-03.png",
+   "bytes": 270,
+   "role": "Ultra plan meter, reduced-motion fallback",
+   "source": "https://jules.google/plan-03.png"
+  },
+  {
+   "file": "assets/img/squid.png",
+   "bytes": 2121,
+   "role": "capabilities squid with brain (180x180)",
+   "source": "https://jules.google/squid.png"
+  },
+  {
+   "file": "assets/img/thought-bubble.png",
+   "bytes": 139,
+   "role": "squid thinking bubble (17x17)",
+   "source": "https://jules.google/thought-bubble.png"
+  },
+  {
+   "file": "assets/img/you-avatar.png",
+   "bytes": 210,
+   "role": "\"you\" chat avatar (30x30)",
+   "source": "https://jules.google/you-avatar.png"
+  },
+  {
+   "file": "assets/fonts/roboto-mono-latin-ext-wght-normal.BWJwKVm9.woff2",
+   "bytes": 22872,
+   "role": "Roboto Mono variable (Fontsource), latin-ext subset",
+   "source": "https://jules.google/_astro/roboto-mono-latin-ext-wght-normal.BWJwKVm9.woff2"
+  },
+  {
+   "file": "assets/fonts/roboto-mono-latin-wght-normal.DGRqvGGI.woff2",
+   "bytes": 32936,
+   "role": "Roboto Mono variable (Fontsource), latin subset",
+   "source": "https://jules.google/_astro/roboto-mono-latin-wght-normal.DGRqvGGI.woff2"
+  }
+ ]
+}
