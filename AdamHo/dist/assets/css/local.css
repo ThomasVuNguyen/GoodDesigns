@@ -1,0 +1,10 @@
+/* Local overrides for the Adam Ho, I.S.P. homepage clone.
+   The live page embeds five looping Vimeo players (muted, no controls).
+   They are replaced by local H.264 files that fill the same embed box. */
+.video-code-embed .local-vimeo {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: none;
+}

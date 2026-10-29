@@ -1,0 +1,11 @@
+/* Local additions to the captured stylesheets. */
+
+/* "agree!" turns its label black on hover, as the reference's per-box hover script does. */
+#agree-btn .hbc:hover .bxl { color: #000 !important; }
+
+/* Keep keyboard focus visible on the dark page. */
+a:focus-visible, button:focus-visible, input:focus-visible {
+  outline: 1px solid #f1f2f2;
+  outline-offset: 2px;
+}
+#header foreignObject a:focus-visible, #header foreignObject button:focus-visible { outline-offset: -1px; }

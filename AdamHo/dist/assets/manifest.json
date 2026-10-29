@@ -1,0 +1,650 @@
+{
+ "assets/css/adamho.css": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/css/adam-ho-portfolio-3.shared.ddd958121.min.css",
+  "role": "Webflow site stylesheet (font urls localised, unused families/backgrounds removed)"
+ },
+ "assets/css/local.css": {
+  "source": "authored for this clone",
+  "role": "local overrides (Vimeo replacement videos)"
+ },
+ "assets/fonts/649f3a738fb4b0e61f82a020_Herbik-Regular.otf": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/649f3a738fb4b0e61f82a020_Herbik-Regular.otf",
+  "role": "web font"
+ },
+ "assets/fonts/649f3a7e2422534166a73b0a_Herbik-RegularItalic.woff2": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/649f3a7e2422534166a73b0a_Herbik-RegularItalic.woff2",
+  "role": "web font"
+ },
+ "assets/fonts/64a2489c612c9db05d3b62eb_ASThermalRegular.otf": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/64a2489c612c9db05d3b62eb_ASThermalRegular.otf",
+  "role": "web font"
+ },
+ "assets/fonts/64a2489fb5f10321a6d2efcf_ASThermalItalic.otf": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/64a2489fb5f10321a6d2efcf_ASThermalItalic.otf",
+  "role": "web font"
+ },
+ "assets/fonts/651f6e9bfdd81b215b577bc9_InputCipher-ATBS-DCOD-RDCT-RT05-RT13-RT47-wdth-wght-.min.woff2": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/651f6e9bfdd81b215b577bc9_InputCipher%5BATBS%2CDCOD%2CRDCT%2CRT05%2CRT13%2CRT47%2Cwdth%2Cwght%5D.min.woff2",
+  "role": "web font"
+ },
+ "assets/fonts/65289042057200ddd4f2c038_ABCOraclePlusVariable-Regular.woff2": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/65289042057200ddd4f2c038_ABCOraclePlusVariable-Regular.woff2",
+  "role": "web font"
+ },
+ "assets/img/64ab0bfc44ef515609ffd10a_df3-full.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/64ab0bfc44ef515609ffd10a_df3-full.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/64ab3b0b912a1056bfc9cd76_ezgif-5-d9bdf9ee47.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/64ab3b0b912a1056bfc9cd76_ezgif-5-d9bdf9ee47.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/64ab426ebee09c2fc1db331b_asset-12.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/64ab426ebee09c2fc1db331b_asset%2012.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/64ab4385304942f119bceb45_asset-26-p-1080.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/64ab4385304942f119bceb45_asset%2026-p-1080.webp",
+  "role": "project image"
+ },
+ "assets/img/64b6ed1df7cbaaafe5bf8ee8_UNKNOWN.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/64b6ed1df7cbaaafe5bf8ee8_UNKNOWN.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/64bacca25709380cc54e2848_shaken.gif": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/64bacca25709380cc54e2848_shaken.gif",
+  "role": "project image"
+ },
+ "assets/img/64e536018aa2a0673e9b2c9d_6035e4e2afd6d780e2a2a366_logged-out-p-1600-p-1080.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/64e536018aa2a0673e9b2c9d_6035e4e2afd6d780e2a2a366_logged-out-p-1600-p-1080.webp",
+  "role": "project image"
+ },
+ "assets/img/64e64670c3be715ae194af5f_5ea6749c49d1a76bf5197fbb_print-layout-p-1600-p-1080.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/64e64670c3be715ae194af5f_5ea6749c49d1a76bf5197fbb_print-layout-p-1600-p-1080.webp",
+  "role": "project image"
+ },
+ "assets/img/64e6470f3f7fc4b078df8fec_62e3402014b8d402980b474f_FVu67KdXwAAb_8j-p-800.jpeg": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/64e6470f3f7fc4b078df8fec_62e3402014b8d402980b474f_FVu67KdXwAAb_8j-p-800.jpeg",
+  "role": "project image"
+ },
+ "assets/img/64e6568036f9a574249e3d21_cb-card-port-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/64e6568036f9a574249e3d21_cb-card-port-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/64e66462434df9df81418248_cb-card-port-2-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/64e66462434df9df81418248_cb-card-port-2-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/64e6ec0a6e6ad43bbfbf19be_5ea1d1cac6b4c18d8541daf7_DSCF0235-p-1600-p-1080.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/64e6ec0a6e6ad43bbfbf19be_5ea1d1cac6b4c18d8541daf7_DSCF0235-p-1600-p-1080.webp",
+  "role": "project image"
+ },
+ "assets/img/64e6ec0ace88f4f5123e06b2_5ea1d5a406d5f830d628548d_tall-bd-1-p-1600-p-1080.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/64e6ec0ace88f4f5123e06b2_5ea1d5a406d5f830d628548d_tall-bd-1-p-1600-p-1080.webp",
+  "role": "project image"
+ },
+ "assets/img/64f16057e36d8960668cd17c_63c7b4e6bc45dd22a0882a6e_lilboi-mona-full.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/64f16057e36d8960668cd17c_63c7b4e6bc45dd22a0882a6e_lilboi-mona-full.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/64f162e6a1681bab1fb75a4a_626a45fc61073c04e51ca950_liquidities-wordmark-1--p-800.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/64f162e6a1681bab1fb75a4a_626a45fc61073c04e51ca950_liquidities-wordmark%20(1)-p-800.webp",
+  "role": "project image"
+ },
+ "assets/img/64f1630ab7bd18d4e05121d1_asset-99.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/64f1630ab7bd18d4e05121d1_asset%2099.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/64f6acfe41e2ad605688718c_mona-guidelines-tall-scene-1-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/64f6acfe41e2ad605688718c_mona-guidelines-tall-scene-1-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/64fc1734f3e576a13b032cd9_619c768dd8ad3fe90bedff08_felt-logo-chaser-p-1600-p-1080.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/64fc1734f3e576a13b032cd9_619c768dd8ad3fe90bedff08_felt-logo-chaser-p-1600-p-1080.webp",
+  "role": "project image"
+ },
+ "assets/img/65009cee3e54d96b9e6d08a9_artifact-for-site.gif": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/65009cee3e54d96b9e6d08a9_artifact-for-site.gif",
+  "role": "project image"
+ },
+ "assets/img/65012c13380c6155c33d0c51_6414b614cb04e940181c223d_ARTD-SFLA-Poster-029-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/65012c13380c6155c33d0c51_6414b614cb04e940181c223d_ARTD-SFLA-Poster-029-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/6502a4a8e0a72ede5b6cad0a_nike-ispa-preview-2020-2.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/6502a4a8e0a72ede5b6cad0a_nike-ispa-preview-2020-2.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/6504ca7c3d794f2a3bf0e294_lattice-preview-2.gif": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/6504ca7c3d794f2a3bf0e294_lattice-preview-2.gif",
+  "role": "project image"
+ },
+ "assets/img/6521caa8073d9af515b97b71_asset-22.png": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/6521caa8073d9af515b97b71_asset%2022.png",
+  "role": "project image"
+ },
+ "assets/img/6521cef01d84c43a878755b3_asset-35-min.gif": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/6521cef01d84c43a878755b3_asset%2035-min.gif",
+  "role": "project image"
+ },
+ "assets/img/6521d448686da0abecfbaec9_asset-48-min.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/6521d448686da0abecfbaec9_asset-48-min.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/6521d53aa978c4192cfa1e17_asset-32.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/6521d53aa978c4192cfa1e17_asset-32.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/6521d6ad9d2009286dc730fd_asset-52-min.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/6521d6ad9d2009286dc730fd_asset%2052-min.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/6521d8cff4f258d6621de58b_asset-15-min.gif": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/6521d8cff4f258d6621de58b_asset%2015-min.gif",
+  "role": "project image"
+ },
+ "assets/img/6521fb6d24a3bd0b7e83e60c_asset-47.jpg": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/6521fb6d24a3bd0b7e83e60c_asset-47.jpg",
+  "role": "project image"
+ },
+ "assets/img/6521fd22d58d152a12be3cdd_1-asset-20-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/6521fd22d58d152a12be3cdd_1-asset-20-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/6521feef7c50d455ebaceac9_2-asset-60-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/6521feef7c50d455ebaceac9_2-asset-60-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/6521ff1124a3bd0b7e85fd83_3-asset-62-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/6521ff1124a3bd0b7e85fd83_3-asset-62-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/652233e4df9740b2447dcc00_asset-58-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/652233e4df9740b2447dcc00_asset-58-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/65224639d7cd843a5da69843_62848384eec090bf3a8ce893_product-p-1600-1--p-1080.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/65224639d7cd843a5da69843_62848384eec090bf3a8ce893_product-p-1600%20(1)-p-1080.webp",
+  "role": "project image"
+ },
+ "assets/img/652ad9b6675e9e3c34b717c4_abs---asset-4-p-1080.jpeg": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/652ad9b6675e9e3c34b717c4_abs%20-%20asset%204-p-1080.jpeg",
+  "role": "project image"
+ },
+ "assets/img/652b8800cd21e84660b8faf6_abs---asset-3-p-1080.jpeg": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/652b8800cd21e84660b8faf6_abs%20-%20asset%203-p-1080.jpeg",
+  "role": "project image"
+ },
+ "assets/img/652b8879161daabd6ba868ba_5e9a94d84c5ff96280bb5b98_meteor-gif.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/652b8879161daabd6ba868ba_5e9a94d84c5ff96280bb5b98_meteor-gif.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/6530abb34e3f567d69baa8db_coll---1-p-1080.png": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/6530abb34e3f567d69baa8db_coll%20-%201-p-1080.png",
+  "role": "project image"
+ },
+ "assets/img/6530ad319d7661968834bc9b_5e9a8f031b847fc75049e229_vg-identity-4-p-1600-p-1080.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/6530ad319d7661968834bc9b_5e9a8f031b847fc75049e229_vg-identity-4-p-1600-p-1080.webp",
+  "role": "project image"
+ },
+ "assets/img/6530adf819fe0366b3978536_629d6b046e12ef12724699f9_horizontal-sizer-bf-site-2.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/6530adf819fe0366b3978536_629d6b046e12ef12724699f9_horizontal-sizer-bf-site-2.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/653991d9ffe6ea60e60f3614_brandguide-artifact-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/653991d9ffe6ea60e60f3614_brandguide-artifact-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/653b2679c2335dffa8a6f5b1_Liquidities--Art----Glimmer.gif": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/653b2679c2335dffa8a6f5b1_Liquidities-(Art)---Glimmer.gif",
+  "role": "project image"
+ },
+ "assets/img/653f4b5616fc05c43c7cde93_1-artefacts-03-opt-p-1080.png": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/653f4b5616fc05c43c7cde93_1-artefacts-03-opt-p-1080.png",
+  "role": "project image"
+ },
+ "assets/img/654008cad3400a2ad9f053a1_compression-45-p-1080.jpeg": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/654008cad3400a2ad9f053a1_compression-45-p-1080.jpeg",
+  "role": "project image"
+ },
+ "assets/img/65400a86d4c70f226b9e5e1d_3232.png": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/65400a86d4c70f226b9e5e1d_3232.png",
+  "role": "favicon"
+ },
+ "assets/img/65400a89aeef7cafe3d5d7b2_256.png": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/65400a89aeef7cafe3d5d7b2_256.png",
+  "role": "favicon"
+ },
+ "assets/img/654100b8b593bdb0952dd59f_2-isp-cover.png": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/654100b8b593bdb0952dd59f_2-isp-cover.png",
+  "role": "social share image"
+ },
+ "assets/img/654173ebe1a2b175c1f9249a_isp-mint.gif": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/654173ebe1a2b175c1f9249a_isp-mint.gif",
+  "role": "project image"
+ },
+ "assets/img/65b0227759aed1b6c30386f3_riso-acid.gif": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/65b0227759aed1b6c30386f3_riso-acid.gif",
+  "role": "project image"
+ },
+ "assets/img/65cffc884f68b9a1d1d5c449_val-refresh-23-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/65cffc884f68b9a1d1d5c449_val-refresh-23-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/65cffc9df47783af165f9831_val-spark.gif": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/65cffc9df47783af165f9831_val-spark.gif",
+  "role": "project image"
+ },
+ "assets/img/65cffc9f39bf87efe3222549_val-crosshair.gif": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/65cffc9f39bf87efe3222549_val-crosshair.gif",
+  "role": "project image"
+ },
+ "assets/img/65d2f771e96ecdcc19713558_val-refresh-24-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/65d2f771e96ecdcc19713558_val-refresh-24-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/65d2f7731720575678d06a0f_val-refresh-07-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/65d2f7731720575678d06a0f_val-refresh-07-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/65d2f773a85e4ba8c8c8834f_val-refresh-11-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/65d2f773a85e4ba8c8c8834f_val-refresh-11-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/65d2f773ec36cc2296ab1ac4_val-refresh-04.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/65d2f773ec36cc2296ab1ac4_val-refresh-04.jpg",
+  "role": "project image"
+ },
+ "assets/img/65d2f775804d4d93395734db_03030303-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/65d2f775804d4d93395734db_03030303-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/65d2f775aed03ff47425291e_02020202-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/65d2f775aed03ff47425291e_02020202-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/65d2f775c632acda9cc65cfb_val-refresh-09-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/65d2f775c632acda9cc65cfb_val-refresh-09-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/65dff1cae2cbdc28b6bb5698_common---rebrand---case-study---20-p-1080.png": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/65dff1cae2cbdc28b6bb5698_common%20-%20rebrand%20-%20case%20study%20-%2020-p-1080.png",
+  "role": "project image"
+ },
+ "assets/img/65e791ad1262e675658a7970_0.5-hyperfuturism---1-1-.jpg": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/65e791ad1262e675658a7970_0.5-hyperfuturism%20-%201%20(1).jpg",
+  "role": "project image"
+ },
+ "assets/img/65e797c1caaaaa635c1fd2fa_val-changers01-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/65e797c1caaaaa635c1fd2fa_val-changers01-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/65efd39305fb7b0bf388d323_eigenlabs-shorter.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/65efd39305fb7b0bf388d323_eigenlabs-shorter.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/65efd39635baee2b42a7a395_eigenlabs-website.gif": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/65efd39635baee2b42a7a395_eigenlabs-website.gif",
+  "role": "project image"
+ },
+ "assets/img/66032c71a27cd4ca59b7e2ce_for-webflow-valhalla-poster-00001.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/66032c71a27cd4ca59b7e2ce_for-webflow-valhalla-poster-00001.jpg",
+  "role": "video poster"
+ },
+ "assets/img/66704c424322c1fda24606e5_grand-buidelines-matrix.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/66704c424322c1fda24606e5_grand-buidelines-matrix.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/668e1e1d496305016ffd3bfb_ens-site-gif.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/668e1e1d496305016ffd3bfb_ens-site-gif.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/668e22ac96b6ea8ef2da8783_ens-case-study_12-poster-00001.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c%2F668e22ac96b6ea8ef2da8783_ens-case-study_12-poster-00001.jpg",
+  "role": "video poster"
+ },
+ "assets/img/668e23258bbef917ac3c9cf3_ens-logo.gif": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/668e23258bbef917ac3c9cf3_ens-logo.gif",
+  "role": "project image"
+ },
+ "assets/img/668e2330e20e9675e412698f_ens-eth-names.gif": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/668e2330e20e9675e412698f_ens-eth-names.gif",
+  "role": "project image"
+ },
+ "assets/img/668e23f28780412f6eddf051_ens-guidelines-gif.gif": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/668e23f28780412f6eddf051_ens-guidelines-gif.gif",
+  "role": "project image"
+ },
+ "assets/img/668e24b1b846db28c03394fb_ens-application-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/668e24b1b846db28c03394fb_ens-application-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/668e24e928cd42f08e1750a9_2-pathways-ens-guidelines-gif.gif": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/668e24e928cd42f08e1750a9_2-pathways-ens-guidelines-gif.gif",
+  "role": "project image"
+ },
+ "assets/img/66957e51045dbd75a76658fa_rome---preview.gif": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/66957e51045dbd75a76658fa_rome---preview.gif",
+  "role": "project image"
+ },
+ "assets/img/66e2665838dea3ef23e79981_paradigm---cs---site.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/66e2665838dea3ef23e79981_paradigm---cs---site.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/66ece258cb13a1e0195b3638_fal---type--1-.gif": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/66ece258cb13a1e0195b3638_fal---type-(1).gif",
+  "role": "project image"
+ },
+ "assets/img/66f378b261a90f310ae5635c_fal---case-study---2024---adam-ho---6-1--poster-00001.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c%2F66f378b261a90f310ae5635c_fal%20-%20case%20study%20-%202024%20-%20adam%20ho%20-%206%20%281%29-poster-00001.jpg",
+  "role": "video poster"
+ },
+ "assets/img/66f3792f4367a3be3f1ceed0_fal---case-study---03-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/66f3792f4367a3be3f1ceed0_fal%20-%20case%20study%20-%2003-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/66f3792fcb79eed3bbe503a9_fal---case-study---01.png": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/66f3792fcb79eed3bbe503a9_fal%20-%20case%20study%20-%2001.png",
+  "role": "project image"
+ },
+ "assets/img/66f379345abc0214073a91a7_fal---type.gif": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/66f379345abc0214073a91a7_fal---type.gif",
+  "role": "project image"
+ },
+ "assets/img/66f3793472e235a5290eefea_fal--type---2.gif": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/66f3793472e235a5290eefea_fal--type---2.gif",
+  "role": "project image"
+ },
+ "assets/img/66f37934d48d217d93446a19_fal---apps.webp": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/66f37934d48d217d93446a19_fal---apps.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/6700b2657acad9de183dc32d_paradigm-adamho-case-study-poster-00001.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c%2F6700b2657acad9de183dc32d_paradigm-adamho-case-study-poster-00001.jpg",
+  "role": "video poster"
+ },
+ "assets/img/6700b3cee02e89725a375752_Redo---Stationery-Standard-X-Mockup-01-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/6700b3cee02e89725a375752_Redo---Stationery-Standard-X-Mockup-01-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/6700b476e02e89725a37e686_social-ex-1--p-1080.png": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/6700b476e02e89725a37e686_social%20ex%20(1)-p-1080.png",
+  "role": "project image"
+ },
+ "assets/img/6700b501dc8550a44bb243bd_usage-ex-1--p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/6700b501dc8550a44bb243bd_usage%20ex%20(1)-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/6700b72bff0f2f3035314f41_paradigm---shapes.webp": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/6700b72bff0f2f3035314f41_paradigm---shapes.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/6700bbf63622e22dbd3a467f_paradigm---shapes.gif": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/6700bbf63622e22dbd3a467f_paradigm---shapes.gif",
+  "role": "project image"
+ },
+ "assets/img/670fff995fa272f3cdbebc8f_cgq-3.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/670fff995fa272f3cdbebc8f_cgq-3.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/673ceef7c51a9baa7814b714_fal---logo-p-1080.png": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/673ceef7c51a9baa7814b714_fal%20-%20logo-p-1080.png",
+  "role": "project image"
+ },
+ "assets/img/67a1bcc3ef9bd01daa64791d_succinct-casestudy-ah-isp-4-poster-00001.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c%2F67a1bcc3ef9bd01daa64791d_succinct-casestudy-ah-isp-4-poster-00001.jpg",
+  "role": "video poster"
+ },
+ "assets/img/67a1be5d1384702917178e9e_case-post-succinct-202503-p-1600.png": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/67a1be5d1384702917178e9e_case-post-succinct-202503-p-1600.png",
+  "role": "project image"
+ },
+ "assets/img/67a1be5d97e681d9e504d71c_case-post-succinct-202502-p-1080.png": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/67a1be5d97e681d9e504d71c_case-post-succinct-202502-p-1080.png",
+  "role": "project image"
+ },
+ "assets/img/67a1be5da9f4bdb4c4c825a9_case-post-succinct-202501-p-1080.png": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/67a1be5da9f4bdb4c4c825a9_case-post-succinct-202501-p-1080.png",
+  "role": "project image"
+ },
+ "assets/img/67a1bfca3a914c5a8030471e_succinct---bill-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/67a1bfca3a914c5a8030471e_succinct%20-%20bill-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/67a1bfe08892706477375a98_succinct-square-p-1080.png": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/67a1bfe08892706477375a98_succinct-square-p-1080.png",
+  "role": "project image"
+ },
+ "assets/img/67a1c15174bf431c19bc050c_brandguide-succinct.webp": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/67a1c15174bf431c19bc050c_brandguide-succinct.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/67a1c198e3f001d9e8bb98b8_succinct---card-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/67a1c198e3f001d9e8bb98b8_succinct%20-%20card-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/67a1c212ef9bd01daa6a7ce2_crystal-case-post-succinct-202503-p-1600.png": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/67a1c212ef9bd01daa6a7ce2_crystal-case-post-succinct-202503-p-1600.png",
+  "role": "project image"
+ },
+ "assets/img/67a1c226aff260dfaecf7794_succinct-grid-p-1080.png": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/67a1c226aff260dfaecf7794_succinct-grid-p-1080.png",
+  "role": "project image"
+ },
+ "assets/img/67a1c26cc3c14c1173af211a_2blue-p-1080.png": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/67a1c26cc3c14c1173af211a_2blue-p-1080.png",
+  "role": "project image"
+ },
+ "assets/img/67a1c315be2941012c8ae4f9_social-ex-succinct-p-1080.png": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/67a1c315be2941012c8ae4f9_social-ex-succinct-p-1080.png",
+  "role": "project image"
+ },
+ "assets/img/67a1c38e177f03a3108e6b91_brandguide-succinct.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/67a1c38e177f03a3108e6b91_brandguide-succinct.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/67a1c49045c60cd91fa6a731_succinct---broad-p-1080.png": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/67a1c49045c60cd91fa6a731_succinct%20-%20broad-p-1080.png",
+  "role": "project image"
+ },
+ "assets/img/67a1c59fef9bd01daa6e3ce5_sp1-p-1080.png": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/67a1c59fef9bd01daa6e3ce5_sp1-p-1080.png",
+  "role": "project image"
+ },
+ "assets/img/67c6616a3751483e4fa2ce87_hat-2-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/67c6616a3751483e4fa2ce87_hat-2-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/685b7a44dfeae08802062761_jasper-site-case-logo-opt.webp": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/685b7a44dfeae08802062761_jasper-site-case-logo-opt.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/685b7b621289708ed7fd07c4_jasper-case-1-p-1080.png": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/685b7b621289708ed7fd07c4_jasper-case-1-p-1080.png",
+  "role": "project image"
+ },
+ "assets/img/685b7dc7ac97397567402c2f_jasper-site-case-2-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/685b7dc7ac97397567402c2f_jasper-site-case-2-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/685b80262d1b74aff78d414a_jasper-site-case-7-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/685b80262d1b74aff78d414a_jasper-site-case-7-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/685b8029bad2c538ca20f305_jasper-site-case-6-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/685b8029bad2c538ca20f305_jasper-site-case-6-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/685b80b27d96092652e7ab9f_jasper-site-case-10-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/685b80b27d96092652e7ab9f_jasper-site-case-10-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/685b81f1ed4806ce7f0bb5b3_jasper-site-case-11-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/685b81f1ed4806ce7f0bb5b3_jasper-site-case-11-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/685c49b0927cf6eeb80fce27_webflow-jasper-4-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/685c49b0927cf6eeb80fce27_webflow-jasper-4-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/68648ab51776e6399763ce5e_archetype---web---10-p-1080.png": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/68648ab51776e6399763ce5e_archetype%20-%20web%20-%2010-p-1080.png",
+  "role": "project image"
+ },
+ "assets/img/68648ab51ff0a4b79c320aa4_archetype---web---13-p-1080.png": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/68648ab51ff0a4b79c320aa4_archetype%20-%20web%20-%2013-p-1080.png",
+  "role": "project image"
+ },
+ "assets/img/68648ab5e68ea04339137a8a_archetype---web---03-p-1080.png": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/68648ab5e68ea04339137a8a_archetype%20-%20web%20-%2003-p-1080.png",
+  "role": "project image"
+ },
+ "assets/img/68648ab679db55d14b1c47dc_archetype---web---05.png": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/68648ab679db55d14b1c47dc_archetype%20-%20web%20-%2005.png",
+  "role": "project image"
+ },
+ "assets/img/68648ab6fe2652fce3784fd1_archetype---web---01-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/68648ab6fe2652fce3784fd1_archetype%20-%20web%20-%2001-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/68648ab7f950ed562eb4b724_archetype---web---04-p-1080.png": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/68648ab7f950ed562eb4b724_archetype%20-%20web%20-%2004-p-1080.png",
+  "role": "project image"
+ },
+ "assets/img/68648c413781f992fd8f3afd_jasper-ig-11-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/68648c413781f992fd8f3afd_jasper-ig-11-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/68648c5a7add55bcb9628333_drafting-table---1920x1080---jasper---casestudy---everything-else.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/68648c5a7add55bcb9628333_drafting-table---1920x1080---jasper---casestudy---everything-else.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/68648ced878f6084f86ec7a5_archetype---web---12-p-1080.png": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/68648ced878f6084f86ec7a5_archetype%20-%20web%20-%2012-p-1080.png",
+  "role": "project image"
+ },
+ "assets/img/68648e0aa93904f2958d99cf_archetype-website-brand.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/68648e0aa93904f2958d99cf_archetype-website-brand.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/686940e43b72adb273bbffbe_4-archetype-lightbox-tifi-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/686940e43b72adb273bbffbe_4-archetype-lightbox-tifi-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/686a251efff14c231da89b33_archetype-square-applications-6-poster-00001.jpg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c%2F686a251efff14c231da89b33_archetype-square-applications-6-poster-00001.jpg",
+  "role": "video poster"
+ },
+ "assets/img/697295d3f662256595faa6f5_ware2-p-1080.jpg": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/697295d3f662256595faa6f5_ware2-p-1080.jpg",
+  "role": "project image"
+ },
+ "assets/img/69b9bc812f7f2368cf6647c3_plaid.webp": {
+  "source": "https://cdn.prod.website-files.com/64a24e93b5f10321a6d81aa6/69b9bc812f7f2368cf6647c3_plaid.gif",
+  "role": "project image (animated GIF re-encoded as animated WebP, max 1000px)"
+ },
+ "assets/img/6a28c9513482d37be6d00ea8_a.svg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/6a28c9513482d37be6d00ea8_a.svg",
+  "role": "project image"
+ },
+ "assets/img/6a28cb5dafc8866d772a4d4c_c.svg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/6a28cb5dafc8866d772a4d4c_c.svg",
+  "role": "project image"
+ },
+ "assets/img/6a28cbf1210f70568a999ecb_d.svg": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/6a28cbf1210f70568a999ecb_d.svg",
+  "role": "project image"
+ },
+ "assets/js/adam-ho-portfolio-3.70e3dbe6.2e0343a7e38f5cbb.js": {
+  "source": "Webflow runtime / jQuery 3.5.1 (cdn.prod.website-files.com, d3e54v103j8qbb.cloudfront.net)",
+  "role": "Webflow IX2 interactions"
+ },
+ "assets/js/adam-ho-portfolio-3.schunk.36b8fb49256177c8.js": {
+  "source": "Webflow runtime / jQuery 3.5.1 (cdn.prod.website-files.com, d3e54v103j8qbb.cloudfront.net)",
+  "role": "Webflow IX2 interactions"
+ },
+ "assets/js/adam-ho-portfolio-3.schunk.c803941e12f0b6b4.js": {
+  "source": "Webflow runtime / jQuery 3.5.1 (cdn.prod.website-files.com, d3e54v103j8qbb.cloudfront.net)",
+  "role": "Webflow IX2 interactions"
+ },
+ "assets/js/color-cycle.js": {
+  "source": "inline <script> in https://www.adamho.com/",
+  "role": "page behaviour"
+ },
+ "assets/js/cursor-trail.js": {
+  "source": "inline <script> in https://www.adamho.com/",
+  "role": "page behaviour"
+ },
+ "assets/js/drag-reorder.js": {
+  "source": "inline <script> in https://www.adamho.com/",
+  "role": "page behaviour"
+ },
+ "assets/js/folio-script.js": {
+  "source": "https://adamho91.github.io/adamho91/folio-script.js",
+  "role": "click ripple + #bellissimo p5 dither (vizceral loader removed)"
+ },
+ "assets/js/jquery-3.5.1.min.js": {
+  "source": "Webflow runtime / jQuery 3.5.1 (cdn.prod.website-files.com, d3e54v103j8qbb.cloudfront.net)",
+  "role": "Webflow IX2 interactions"
+ },
+ "assets/js/p5-1.9.0.min.js": {
+  "source": "https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js",
+  "role": "p5.js for the #bellissimo dither sketch"
+ },
+ "assets/js/pixelizer.js": {
+  "source": "https://adamho91.github.io/adamho91/pixelizer.js",
+  "role": "image placeholder fade-in"
+ },
+ "assets/js/preview-stack-serials-xp.js": {
+  "source": "inline <script> in https://www.adamho.com/",
+  "role": "page behaviour"
+ },
+ "assets/js/random-colors.js": {
+  "source": "inline <script> in https://www.adamho.com/",
+  "role": "page behaviour"
+ },
+ "assets/js/shuffle.js": {
+  "source": "inline <script> in https://www.adamho.com/",
+  "role": "page behaviour"
+ },
+ "assets/video/66032c71a27cd4ca59b7e2ce_for-webflow-valhalla-transcode.mp4": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c/66032c71a27cd4ca59b7e2ce_for-webflow-valhalla-transcode.mp4",
+  "role": "case-study background video (re-encoded H.264, 960px max, CRF 30, no audio)"
+ },
+ "assets/video/668e22ac96b6ea8ef2da8783_ens-case-study_12-transcode.mp4": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c%2F668e22ac96b6ea8ef2da8783_ens-case-study_12-transcode.mp4",
+  "role": "case-study background video (re-encoded H.264, 960px max, CRF 30, no audio)"
+ },
+ "assets/video/66f378b261a90f310ae5635c_fal---case-study---2024---adam-ho---6-1--transcode.mp4": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c%2F66f378b261a90f310ae5635c_fal%20-%20case%20study%20-%202024%20-%20adam%20ho%20-%206%20%281%29-transcode.mp4",
+  "role": "case-study background video (re-encoded H.264, 960px max, CRF 30, no audio)"
+ },
+ "assets/video/6700b2657acad9de183dc32d_paradigm-adamho-case-study-transcode.mp4": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c%2F6700b2657acad9de183dc32d_paradigm-adamho-case-study-transcode.mp4",
+  "role": "case-study background video (re-encoded H.264, 960px max, CRF 30, no audio)"
+ },
+ "assets/video/67a1bcc3ef9bd01daa64791d_succinct-casestudy-ah-isp-4-transcode.mp4": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c%2F67a1bcc3ef9bd01daa64791d_succinct-casestudy-ah-isp-4-transcode.mp4",
+  "role": "case-study background video (re-encoded H.264, 960px max, CRF 30, no audio)"
+ },
+ "assets/video/686a251efff14c231da89b33_archetype-square-applications-6-transcode.mp4": {
+  "source": "https://cdn.prod.website-files.com/5e24e976cc9ad761634d007c%2F686a251efff14c231da89b33_archetype-square-applications-6-transcode.mp4",
+  "role": "case-study background video (re-encoded H.264, 960px max, CRF 30, no audio)"
+ },
+ "assets/video/vimeo-708531017.mp4": {
+  "source": "https://player.vimeo.com/video/708531017 (HLS rendition, re-encoded H.264, 720px max, no audio)",
+  "role": "project-card loop (replaces the Vimeo iframe)"
+ },
+ "assets/video/vimeo-708533702.mp4": {
+  "source": "https://player.vimeo.com/video/708533702 (HLS rendition, re-encoded H.264, 720px max, no audio)",
+  "role": "project-card loop (replaces the Vimeo iframe)"
+ },
+ "assets/video/vimeo-709088118.mp4": {
+  "source": "https://player.vimeo.com/video/709088118 (HLS rendition, re-encoded H.264, 720px max, no audio)",
+  "role": "project-card loop (replaces the Vimeo iframe)"
+ },
+ "assets/video/vimeo-898212327.mp4": {
+  "source": "https://player.vimeo.com/video/898212327 (HLS rendition, re-encoded H.264, 720px max, no audio)",
+  "role": "project-card loop (replaces the Vimeo iframe)"
+ }
+}

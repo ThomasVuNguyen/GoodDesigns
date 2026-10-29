@@ -1,0 +1,356 @@
+{
+ "reference": "https://teenage.engineering/products/ep-35",
+ "captured": "2026-10-29",
+ "files": [
+  {
+   "file": "assets/css/app-context.css",
+   "bytes": 9587,
+   "role": "captured stylesheet (font urls rewritten to ../fonts/)",
+   "source": "https://teenage.engineering/assets/app-context.BmQEkhCy.css"
+  },
+  {
+   "file": "assets/css/block.css",
+   "bytes": 638,
+   "role": "captured stylesheet (font urls rewritten to ../fonts/)",
+   "source": "https://teenage.engineering/assets/block.2tPiDhcW.css"
+  },
+  {
+   "file": "assets/css/button.css",
+   "bytes": 2256,
+   "role": "captured stylesheet (font urls rewritten to ../fonts/)",
+   "source": "https://teenage.engineering/assets/button.B8x4Racb.css"
+  },
+  {
+   "file": "assets/css/container.css",
+   "bytes": 329,
+   "role": "captured stylesheet (font urls rewritten to ../fonts/)",
+   "source": "https://teenage.engineering/assets/container.dVm2W4Ta.css"
+  },
+  {
+   "file": "assets/css/error-page.css",
+   "bytes": 150,
+   "role": "captured stylesheet (font urls rewritten to ../fonts/)",
+   "source": "https://teenage.engineering/assets/error-page.8k_twQst.css"
+  },
+  {
+   "file": "assets/css/flex.css",
+   "bytes": 1513,
+   "role": "captured stylesheet (font urls rewritten to ../fonts/)",
+   "source": "https://teenage.engineering/assets/flex.C4wW179p.css"
+  },
+  {
+   "file": "assets/css/form.css",
+   "bytes": 5817,
+   "role": "captured stylesheet (font urls rewritten to ../fonts/)",
+   "source": "https://teenage.engineering/assets/form.DWmR17wv.css"
+  },
+  {
+   "file": "assets/css/grid.css",
+   "bytes": 4218,
+   "role": "captured stylesheet (font urls rewritten to ../fonts/)",
+   "source": "https://teenage.engineering/assets/grid.BPtO4oiR.css"
+  },
+  {
+   "file": "assets/css/image.css",
+   "bytes": 106,
+   "role": "captured stylesheet (font urls rewritten to ../fonts/)",
+   "source": "https://teenage.engineering/assets/image.B2cBDLbL.css"
+  },
+  {
+   "file": "assets/css/layout.css",
+   "bytes": 14233,
+   "role": "captured stylesheet (font urls rewritten to ../fonts/)",
+   "source": "https://teenage.engineering/assets/layout.DeChRR7W.css"
+  },
+  {
+   "file": "assets/css/link.css",
+   "bytes": 306,
+   "role": "captured stylesheet (font urls rewritten to ../fonts/)",
+   "source": "https://teenage.engineering/assets/link.vCOxmn-l.css"
+  },
+  {
+   "file": "assets/css/local.css",
+   "bytes": 477,
+   "role": "local overrides (agree hover, focus rings)"
+  },
+  {
+   "file": "assets/css/not-found-page.css",
+   "bytes": 150,
+   "role": "captured stylesheet (font urls rewritten to ../fonts/)",
+   "source": "https://teenage.engineering/assets/not-found-page.Cbb_jp4j.css"
+  },
+  {
+   "file": "assets/css/root.css",
+   "bytes": 13771,
+   "role": "captured stylesheet (font urls rewritten to ../fonts/)",
+   "source": "https://teenage.engineering/assets/root.CyKTWa8o.css"
+  },
+  {
+   "file": "assets/css/spinner.css",
+   "bytes": 926,
+   "role": "captured stylesheet (font urls rewritten to ../fonts/)",
+   "source": "https://teenage.engineering/assets/spinner.CDDf_qcL.css"
+  },
+  {
+   "file": "assets/css/te013.css",
+   "bytes": 17632,
+   "role": "captured stylesheet (font urls rewritten to ../fonts/)",
+   "source": "https://teenage.engineering/assets/te013.EFV_ohh2.css"
+  },
+  {
+   "file": "assets/js/page.js",
+   "bytes": 26271,
+   "role": "the page's own hold-on / sign-up scripts with a local newsletter stub"
+  },
+  {
+   "file": "assets/js/site.js",
+   "bytes": 9128,
+   "role": "local re-implementation of site chrome interactions"
+  },
+  {
+   "file": "assets/img/6ada1e46982c0e6e3c49faf7_1024.webp",
+   "bytes": 29388,
+   "role": "desktop background tile 1 (EP-35 hero render, top of the shadow)",
+   "source": "https://assets.teenage.engineering/_img/6ada1e46982c0e6e3c49faf7_1024.webp"
+  },
+  {
+   "file": "assets/img/6ada1e46982c0e6e3c49faf7_2048.webp",
+   "bytes": 235044,
+   "role": "desktop background tile 1 (EP-35 hero render, top of the shadow)",
+   "source": "https://assets.teenage.engineering/_img/6ada1e46982c0e6e3c49faf7_2048.webp"
+  },
+  {
+   "file": "assets/img/6ada1e46982c0e6e3c49faf7_512.webp",
+   "bytes": 9370,
+   "role": "desktop background tile 1 (EP-35 hero render, top of the shadow)",
+   "source": "https://assets.teenage.engineering/_img/6ada1e46982c0e6e3c49faf7_512.webp"
+  },
+  {
+   "file": "assets/img/6ada1e511588cd68653a8ed9_1024.webp",
+   "bytes": 13148,
+   "role": "desktop background tile 2 (shadow)",
+   "source": "https://assets.teenage.engineering/_img/6ada1e511588cd68653a8ed9_1024.webp"
+  },
+  {
+   "file": "assets/img/6ada1e511588cd68653a8ed9_2048.webp",
+   "bytes": 201694,
+   "role": "desktop background tile 2 (shadow)",
+   "source": "https://assets.teenage.engineering/_img/6ada1e511588cd68653a8ed9_2048.webp"
+  },
+  {
+   "file": "assets/img/6ada1e511588cd68653a8ed9_512.webp",
+   "bytes": 2338,
+   "role": "desktop background tile 2 (shadow)",
+   "source": "https://assets.teenage.engineering/_img/6ada1e511588cd68653a8ed9_512.webp"
+  },
+  {
+   "file": "assets/img/6ada1e5a153add6dc1ad8754_1024.webp",
+   "bytes": 7728,
+   "role": "desktop background tile 3 (shadow)",
+   "source": "https://assets.teenage.engineering/_img/6ada1e5a153add6dc1ad8754_1024.webp"
+  },
+  {
+   "file": "assets/img/6ada1e5a153add6dc1ad8754_2048.webp",
+   "bytes": 97084,
+   "role": "desktop background tile 3 (shadow)",
+   "source": "https://assets.teenage.engineering/_img/6ada1e5a153add6dc1ad8754_2048.webp"
+  },
+  {
+   "file": "assets/img/6ada1e5a153add6dc1ad8754_512.webp",
+   "bytes": 1794,
+   "role": "desktop background tile 3 (shadow)",
+   "source": "https://assets.teenage.engineering/_img/6ada1e5a153add6dc1ad8754_512.webp"
+  },
+  {
+   "file": "assets/img/6ada1e62bd7c5766c0fd2219_1024.webp",
+   "bytes": 3774,
+   "role": "desktop background tile 4 (shadow end)",
+   "source": "https://assets.teenage.engineering/_img/6ada1e62bd7c5766c0fd2219_1024.webp"
+  },
+  {
+   "file": "assets/img/6ada1e62bd7c5766c0fd2219_2048.webp",
+   "bytes": 40906,
+   "role": "desktop background tile 4 (shadow end)",
+   "source": "https://assets.teenage.engineering/_img/6ada1e62bd7c5766c0fd2219_2048.webp"
+  },
+  {
+   "file": "assets/img/6ada1e62bd7c5766c0fd2219_512.webp",
+   "bytes": 1112,
+   "role": "desktop background tile 4 (shadow end)",
+   "source": "https://assets.teenage.engineering/_img/6ada1e62bd7c5766c0fd2219_512.webp"
+  },
+  {
+   "file": "assets/img/6ada22f71092e771c47a74fe_1024.webp",
+   "bytes": 49880,
+   "role": "mobile background tile 1 (EP-35 hero render)",
+   "source": "https://assets.teenage.engineering/_img/6ada22f71092e771c47a74fe_1024.webp"
+  },
+  {
+   "file": "assets/img/6ada22f71092e771c47a74fe_512.webp",
+   "bytes": 12636,
+   "role": "mobile background tile 1 (EP-35 hero render)",
+   "source": "https://assets.teenage.engineering/_img/6ada22f71092e771c47a74fe_512.webp"
+  },
+  {
+   "file": "assets/img/6ada230506b0be71c5d64991_1024.webp",
+   "bytes": 40000,
+   "role": "mobile background tile 2",
+   "source": "https://assets.teenage.engineering/_img/6ada230506b0be71c5d64991_1024.webp"
+  },
+  {
+   "file": "assets/img/6ada230506b0be71c5d64991_512.webp",
+   "bytes": 4368,
+   "role": "mobile background tile 2",
+   "source": "https://assets.teenage.engineering/_img/6ada230506b0be71c5d64991_512.webp"
+  },
+  {
+   "file": "assets/img/6ada2312f3cc7171c56f5522_1024.webp",
+   "bytes": 15924,
+   "role": "mobile background tile 3",
+   "source": "https://assets.teenage.engineering/_img/6ada2312f3cc7171c56f5522_1024.webp"
+  },
+  {
+   "file": "assets/img/6ada2312f3cc7171c56f5522_512.webp",
+   "bytes": 1776,
+   "role": "mobile background tile 3",
+   "source": "https://assets.teenage.engineering/_img/6ada2312f3cc7171c56f5522_512.webp"
+  },
+  {
+   "file": "assets/img/6ada232143f2a971c4dd2a2a_1024.webp",
+   "bytes": 3386,
+   "role": "mobile background tile 5",
+   "source": "https://assets.teenage.engineering/_img/6ada232143f2a971c4dd2a2a_1024.webp"
+  },
+  {
+   "file": "assets/img/6ada232143f2a971c4dd2a2a_512.webp",
+   "bytes": 858,
+   "role": "mobile background tile 5",
+   "source": "https://assets.teenage.engineering/_img/6ada232143f2a971c4dd2a2a_512.webp"
+  },
+  {
+   "file": "assets/img/6ada232c03f2ae71c5475261_1024.webp",
+   "bytes": 2682,
+   "role": "mobile background tile 6",
+   "source": "https://assets.teenage.engineering/_img/6ada232c03f2ae71c5475261_1024.webp"
+  },
+  {
+   "file": "assets/img/6ada232c03f2ae71c5475261_512.webp",
+   "bytes": 666,
+   "role": "mobile background tile 6",
+   "source": "https://assets.teenage.engineering/_img/6ada232c03f2ae71c5475261_512.webp"
+  },
+  {
+   "file": "assets/img/6ada234cf663dc71c40afb6b_1024.webp",
+   "bytes": 3926,
+   "role": "mobile background tile 4",
+   "source": "https://assets.teenage.engineering/_img/6ada234cf663dc71c40afb6b_1024.webp"
+  },
+  {
+   "file": "assets/img/6ada234cf663dc71c40afb6b_512.webp",
+   "bytes": 940,
+   "role": "mobile background tile 4",
+   "source": "https://assets.teenage.engineering/_img/6ada234cf663dc71c40afb6b_512.webp"
+  },
+  {
+   "file": "assets/img/6ada2eeb86dd0c795533d648_opt.svg",
+   "bytes": 2653,
+   "role": "desktop \"LIFE IS FANTASTIC!\" headline (SVG outlines)",
+   "source": "https://assets.teenage.engineering/_img/6ada2eeb86dd0c795533d648_opt.svg"
+  },
+  {
+   "file": "assets/img/6ada2f2357f1907ccd9cef75_opt.svg",
+   "bytes": 2811,
+   "role": "mobile \"LIFE IS FANTASTIC!\" headline (SVG outlines)",
+   "source": "https://assets.teenage.engineering/_img/6ada2f2357f1907ccd9cef75_opt.svg"
+  },
+  {
+   "file": "assets/img/fader.B-K-ADTU.png",
+   "bytes": 59409,
+   "role": "te013.css component texture (not used by this page; kept so the stylesheet has no dangling url)",
+   "source": "https://teenage.engineering/assets/fader.B-K-ADTU.png"
+  },
+  {
+   "file": "assets/img/favicon.png",
+   "bytes": 1332,
+   "role": "favicon",
+   "source": "https://teenage.engineering/favicon.png"
+  },
+  {
+   "file": "assets/img/joystick_shadow.Dh5SPi3A.png",
+   "bytes": 102924,
+   "role": "te013.css component texture (not used by this page; kept so the stylesheet has no dangling url)",
+   "source": "https://teenage.engineering/assets/joystick_shadow.Dh5SPi3A.png"
+  },
+  {
+   "file": "assets/fonts/TE20L.B96qqQct.woff2",
+   "bytes": 23472,
+   "role": "web font declared in root.css",
+   "source": "https://teenage.engineering/assets/TE20L.B96qqQct.woff2"
+  },
+  {
+   "file": "assets/fonts/TE20T.C-qNTEkY.woff2",
+   "bytes": 18936,
+   "role": "web font declared in root.css",
+   "source": "https://teenage.engineering/assets/TE20T.C-qNTEkY.woff2"
+  },
+  {
+   "file": "assets/fonts/TE40L.BfLkqdKa.woff2",
+   "bytes": 23828,
+   "role": "web font declared in root.css",
+   "source": "https://teenage.engineering/assets/TE40L.BfLkqdKa.woff2"
+  },
+  {
+   "file": "assets/fonts/TE40T.B7PiUso2.woff2",
+   "bytes": 18924,
+   "role": "web font declared in root.css",
+   "source": "https://teenage.engineering/assets/TE40T.B7PiUso2.woff2"
+  },
+  {
+   "file": "assets/fonts/franxurter.C1q8NaJu.woff2",
+   "bytes": 19180,
+   "role": "web font declared in root.css",
+   "source": "https://teenage.engineering/assets/franxurter.C1q8NaJu.woff2"
+  },
+  {
+   "file": "assets/fonts/riddim.BoKztqHZ.woff2",
+   "bytes": 5448,
+   "role": "web font declared in root.css",
+   "source": "https://teenage.engineering/assets/riddim.BoKztqHZ.woff2"
+  },
+  {
+   "file": "assets/fonts/riddimscript.Cc36I1Hv.woff2",
+   "bytes": 15372,
+   "role": "web font declared in root.css",
+   "source": "https://teenage.engineering/assets/riddimscript.Cc36I1Hv.woff2"
+  },
+  {
+   "file": "assets/fonts/swingus.D6zQKm3-.woff2",
+   "bytes": 55716,
+   "role": "web font declared in root.css",
+   "source": "https://teenage.engineering/assets/swingus.D6zQKm3-.woff2"
+  },
+  {
+   "file": "assets/fonts/technotype-bold.D1bK9_6H.woff2",
+   "bytes": 38276,
+   "role": "web font declared in root.css",
+   "source": "https://teenage.engineering/assets/technotype-bold.D1bK9_6H.woff2"
+  },
+  {
+   "file": "assets/fonts/technotype-medium.CbGgKYp9.woff2",
+   "bytes": 39656,
+   "role": "web font declared in root.css",
+   "source": "https://teenage.engineering/assets/technotype-medium.CbGgKYp9.woff2"
+  },
+  {
+   "file": "assets/fonts/technotype-regular.Du4IkkVb.woff2",
+   "bytes": 39172,
+   "role": "web font declared in root.css",
+   "source": "https://teenage.engineering/assets/technotype-regular.Du4IkkVb.woff2"
+  },
+  {
+   "file": "assets/data/search-index.json",
+   "bytes": 16343,
+   "role": "search labels and hrefs collected from the live search UI on the capture date"
+  }
+ ]
+}
