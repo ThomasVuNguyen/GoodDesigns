@@ -10,6 +10,8 @@ Each video page has playback, a timestamped transcript, one frame per second, an
 
 Video 34, Apple's MacBook Pro M6 film, opens with 20 handpicked frames from the one-second sequence instead of detected cuts. Its moving masks and typography rarely trigger the cut detector, so the automatic set misses most of the visual ideas. The exhaustive every-second view remains available in the second tab. The curated timestamps live in `build_study.py` and the generated `manifest.json`.
 
+Video 35, Google Labs’ Playground launch film, opens with 30 handpicked shots, each with a note on camera position, lens and movement. The film reuses a few locked-off frames and swaps the room into different games inside them, so the notes call out those match frames. The notes live in `SHOT_NOTES` in `build_study.py`.
+
 `source/` contains the downloaded clips. `frames/` contains the image sequences and `scene-cuts.csv` files. `transcripts/` contains source WebVTT captions where available and locally recognized speech for the other videos. Video 11 is spoken in Japanese, so its transcript is in Japanese. The `.transcript.txt` files are cleaned, timestamped reading copies. Speech recognition can mishear words and names; the `.vtt` files retain the original timing.
 
 The media and generated pages are local study materials. They are excluded from Git so the GoodDesigns gallery release does not accidentally include a large video archive. To rebuild the study after updating the media or transcripts, run `python3 notes/good-videos-video-study/build_study.py` from the repository root.

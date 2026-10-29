@@ -16,11 +16,46 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 VIDEOS = json.loads((REPO / "gallery/videos.json").read_text())["videos"]
-NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 35)]
+NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36)]
 CURATED_FRAMES = {
     # Apple MacBook Pro M6: selected by reviewing the one-second contact sheet.
     # The cut detector misses the film's shifting masks and typography.
     34: [0, 2, 4, 6, 7, 8, 10, 11, 14, 16, 17, 19, 20, 22, 23, 27, 29, 32, 36, 39],
+}
+SHOT_NOTES = {
+    # Google Labs Playground: one shot per camera idea, with its position, lens and move.
+    35: {
+        0: "Screen POV. A wide lens sits where the laptop is and looks up at her; the arched window frames her head.",
+        2: "Same POV. Chat bubbles are composited in screen space, as if the lens is the phone receiving them.",
+        5: "High over-the-shoulder onto the laptop, her hair soft in the foreground. First look at the product.",
+        6: "Extreme macro on the screen, tilted. The pixel grid and cursor turn the prompt box into texture.",
+        10: "Macro along the keyboard at key height. Fingers enter from frame right with very shallow focus.",
+        12: "High three-quarter angle across the laptop. The ube latte jar in the foreground ties prop to prompt.",
+        14: "Close side profile from below on a wide lens, lit by the window. A reaction beat.",
+        15: "Locked-off, symmetrical wide of the brick nook. The mug on the table is the prop the game will reuse.",
+        16: "Same lock-off, re-dressed as the game. The match frame is the transformation: nothing moves but the world.",
+        18: "Worm's-eye wide from under the desk. Her foot on the desk forces deep perspective toward her knitting.",
+        21: "Tabletop height. A yarn ball flies into the lens while the prompt UI floats beside her.",
+        22: "Same camera; the wall bursts open into a racetrack. A cartoon cutaway inside the live set.",
+        25: "Insert of her real cat on the cat tree, composited in front of the game world.",
+        28: "Identical framing, now the illustrated giant-boss cat. Second match-frame transformation.",
+        29: "Phone screen fills the frame. Pure gameplay, no room.",
+        30: "First-person POV down at the phone in her hands, knitting on her lap.",
+        33: "High-angle medium as she eats a sandwich in the hallway. Sets up the next prompt.",
+        34: "One-point-perspective hallway, deep and centered, with her at the far end.",
+        36: "Same hallway frame turned into a tower-defense lane; olives march along the real floor.",
+        40: "Front-on lock-off of the living room as a haunted endless runner, HUD over the plate.",
+        43: "Same plate swapped to a western level. The genre changes, the camera does not.",
+        46: "Same plate again as a city platformer. Three genres from one locked-off shot.",
+        50: "Eye-level, centered medium close-up on the orange sofa, eyes off camera. A thinking beat.",
+        54: "Full-screen title card of the game she made. Push-in on the Share button.",
+        55: "New character, same screen-POV grammar: phone held to the lens with a share notification.",
+        57: "Locked-off centered wide of his room, window light from frame right.",
+        58: "Same frame; the wall cracks into voxel blocks and the room starts to break apart.",
+        60: "Full transformation into the ocean battle, with pixel-type tagline over the live plate.",
+        63: "Glitch transition: RGB pixel smear collapses the image to black.",
+        65: "End card. Pixel wordmark and line on black, the type style borrowed from the games.",
+    },
 }
 TAG = re.compile(r"<[^>]*>")
 TIMING = re.compile(r"^((?:\d\d:)?\d\d:\d\d\.\d+)\s+-->")
@@ -171,12 +206,14 @@ def write_pages(items):
                 '<a href="index.html#videos">Back to videos</a>'
                 '</nav></header>')
 
-    def frame_card(path, seconds):
+    def frame_card(path, seconds, note=None):
         label = format_time(seconds)
+        note = f'<p class="frame-note">{html.escape(note)}</p>' if note else ''
+
         return (f'<figure class="frame-card"><a href="{path}" target="_blank" rel="noopener" '
                 f'aria-label="Open frame at {label}"><img loading="lazy" src="{path}" alt="Frame at {label}"></a>'
                 f'<figcaption><span class="frame-label">{label}</span><button class="frame-play" type="button" '
-                f'data-seek="{seconds:.3f}" aria-label="Play video at {label}">Play frame</button></figcaption></figure>')
+                f'data-seek="{seconds:.3f}" aria-label="Play video at {label}">Play frame</button></figcaption>{note}</figure>')
 
     thumbs = HERE / "thumbs"
     thumbs.mkdir(exist_ok=True)
@@ -200,7 +237,7 @@ def write_pages(items):
                   '</div>']
 
         note = VIDEOS[number - 1].get("note")
-        if number == 34 and note:
+        if number in (34, 35) and note:
             detail.insert(2, f'<p class="study-note">{html.escape(note)}</p>')
 
         tr = item.get("transcript")
@@ -228,14 +265,17 @@ def write_pages(items):
         detail.append('</div>')
 
         selected = item.get("selected_frames")
-        frame_intro = ('Handpicked compositions from the film. Open a frame at full size or play from its timestamp.'
+        notes = SHOT_NOTES.get(number, {})
+        frame_intro = ('One frame per shot idea, with where the camera sits and how it moves. Open a frame at full size or play from its timestamp.'
+                       if notes else
+                       'Handpicked compositions from the film. Open a frame at full size or play from its timestamp.'
                        if selected else
                        'Hover over a frame to preview it larger. Select a frame for full size, or play from its timestamp.')
         detail.append(
             '<section class="study-section" aria-labelledby="frames-title"><div class="frame-tools">'
             '<h2 id="frames-title">Frame library</h2><div class="frame-tabs" role="tablist" aria-label="Frame collection">'
             f'<button type="button" id="tab-scenes" role="tab" data-tab="scenes" aria-controls="panel-scenes" aria-selected="true">'
-            f'{"Selected frames" if selected else "Scene changes"} <span>{len(selected) if selected else item["scene_frames"]}</span></button>'
+            f'{"Shots and angles" if notes else "Selected frames" if selected else "Scene changes"} <span>{len(selected) if selected else item["scene_frames"]}</span></button>'
             f'<button type="button" id="tab-seconds" role="tab" data-tab="seconds" aria-controls="panel-seconds" aria-selected="false">'
             f'Every second <span>{item["second_frames"]}</span></button></div></div>'
             f'<p>{frame_intro}</p>')
@@ -243,7 +283,7 @@ def write_pages(items):
         if selected:
             for second in selected:
                 path = f"frames/{name}/seconds/second-{second + 1:05d}.jpg"
-                detail.append(frame_card(path, second))
+                detail.append(frame_card(path, second, notes.get(second)))
         else:
             with (HERE / "frames" / name / "scene-cuts.csv").open() as f:
                 for row in csv.DictReader(f):
@@ -314,7 +354,8 @@ def one(number):
     return {"number": number, "slug": video["slug"], "title": video["title"],
             "author": video["author"], "url": video["url"], **info,
             "second_frames": seconds, "scene_frames": scenes, "transcript": transcript(number),
-            **({"selected_frames": CURATED_FRAMES[number]} if number in CURATED_FRAMES else {})}
+            **({"selected_frames": CURATED_FRAMES[number]} if number in CURATED_FRAMES else {}),
+            **({"selected_frames": sorted(SHOT_NOTES[number])} if number in SHOT_NOTES else {})}
 
 
 if __name__ == "__main__":

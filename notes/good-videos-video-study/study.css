@@ -69,6 +69,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .frame-card figcaption { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 5px 1px 0; color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
 .frame-card figcaption button { padding: 0; border: 0; background: none; color: var(--muted); cursor: pointer; }
 .frame-card figcaption button:hover { color: var(--accent); }
+.frame-note { margin: 4px 1px 0; color: var(--ink); font-size: 13px; line-height: 1.4; }
 .frame-preview { position: fixed; z-index: 20; width: min(520px, calc(100vw - 32px)); overflow: hidden; pointer-events: none; border: 1px solid var(--line); border-radius: 10px; background: var(--card); box-shadow: 0 18px 48px #15141238; }
 .frame-preview img { display: block; width: 100%; aspect-ratio: 16/9; object-fit: contain; background: var(--ink); }
 .frame-preview-label { display: flex; justify-content: space-between; gap: 12px; padding: 9px 12px; color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }

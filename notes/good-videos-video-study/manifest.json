@@ -438,5 +438,56 @@
       36,
       39
     ]
+  },
+  {
+    "number": 35,
+    "slug": "youtube-Dxvrvfyicp0",
+    "title": "Introducing Playground: If you can think it, you can play it.",
+    "author": "Google Labs",
+    "url": "https://www.youtube.com/watch?v=Dxvrvfyicp0",
+    "duration": 68.080907,
+    "bytes": 24604645,
+    "width": 1920,
+    "height": 1080,
+    "fps": "65240/2721",
+    "second_frames": 68,
+    "scene_frames": 21,
+    "transcript": {
+      "vtt": "transcripts/35-youtube-Dxvrvfyicp0.en.vtt",
+      "text": "transcripts/35-youtube-Dxvrvfyicp0.transcript.txt",
+      "kind": "YouTube auto captions"
+    },
+    "selected_frames": [
+      0,
+      2,
+      5,
+      6,
+      10,
+      12,
+      14,
+      15,
+      16,
+      18,
+      21,
+      22,
+      25,
+      28,
+      29,
+      30,
+      33,
+      34,
+      36,
+      40,
+      43,
+      46,
+      50,
+      54,
+      55,
+      57,
+      58,
+      60,
+      63,
+      65
+    ]
   }
 ]
