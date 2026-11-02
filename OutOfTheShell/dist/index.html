@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Out of the shell</title>
+<meta name="description" content="Seventeen days of brine shrimp under a Pi camera, drawn as a statechart in simulated pencil, pastel and gel pen.">
+<meta name="theme-color" content="#191614">
+<link rel="preload" href="fonts/KevinSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/KevinSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face { font-family: "Kevin Sans"; src: url(fonts/KevinSans-Regular.woff2) format("woff2"); font-weight: 400; font-display: block; }
+@font-face { font-family: "Kevin Sans"; src: url(fonts/KevinSans-Bold.woff2) format("woff2"); font-weight: 700; font-display: block; }
+:root { color-scheme: dark; --page: #191614; --paper: #f5f1e7; --text: #efe6d6; --soft: #d8cfc0; --muted: #b3a99a; --gold: #f0c86a; --red: #c4453a; }
+* { box-sizing: border-box; }
+html { background: var(--page); color: var(--text); font: 400 1.0625rem/1.65 "Kevin Sans", "Avenir Next", system-ui, sans-serif; -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--page); }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.wall { position: relative; max-width: 960px; margin: 0 auto; background: var(--paper); box-shadow: 0 0 0 1px #2c2622, 0 30px 90px rgba(0, 0, 0, 0.5); container-type: inline-size; }
+.sheet { position: relative; display: block; width: 100%; height: auto; }
+.sheet canvas { display: block; width: 100%; height: 100%; }
+.sheet .wait { position: absolute; inset: 0; display: grid; place-items: center; font-size: 0.85rem; color: rgba(60, 50, 40, 0.45); transition: opacity 0.6s; pointer-events: none; }
+.sheet.dark .wait { color: rgba(240, 230, 214, 0.35); }
+.sheet.done .wait { opacity: 0; }
+.sheet canvas { opacity: 0; transition: opacity 0.7s; }
+.sheet.done canvas { opacity: 1; }
+.field { position: absolute; margin: 0; overflow: hidden; background: #0c0a09; z-index: 1; }
+.field img, .field video { display: block; width: 100%; height: 100%; object-fit: cover; }
+.field.lens { border-radius: 50%; }
+.field.lens img, .field.lens video { transform: scale(1.16); }
+.field.film img { transform: scale(1.45); }
+.field.print img { filter: contrast(1.04) saturate(0.92) sepia(0.06); }
+.field[role="button"] { cursor: pointer; }
+.field[role="button"]:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.credits { list-style: none; margin: 0; padding: 0; }
+.credits li { position: absolute; margin: 0; white-space: nowrap; line-height: 1; color: transparent; letter-spacing: 0.06em; }
+.credits a { color: transparent; text-decoration: none; border-radius: 2px; }
+.credits a:hover { background: rgba(196, 69, 58, 0.12); }
+.credits a:focus-visible { outline: 2px solid #933323; outline-offset: 2px; }
+.credits ::selection { color: transparent; background: rgba(226, 179, 63, 0.4); }
+.step-open { position: absolute; margin: 0; padding: 0; border: 0; border-radius: 3px; background: transparent; color: transparent; font: inherit; font-size: 1px; cursor: pointer; z-index: 3; }
+.step-open:hover { background: rgba(226, 179, 63, 0.14); }
+.step-open:focus-visible { outline: 2px solid #933323; outline-offset: 3px; }
+.step-marks { position: absolute; inset: 0; z-index: 2; pointer-events: none; }
+.step-marks[hidden] { display: none; }
+.step-marks svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.step-spot { position: absolute; border-radius: 8px; box-shadow: 0 0 0 3px rgba(240, 200, 106, 0.95), 0 0 22px 8px rgba(240, 200, 106, 0.4), 0 0 0 300vmax rgba(14, 11, 9, 0.34); transition: left 0.9s, top 0.9s, width 0.9s, height 0.9s; transition-timing-function: cubic-bezier(0.45, 0, 0.55, 1); }
+.step-route { fill: none; stroke: #f6d27a; stroke-width: 0.9; stroke-linecap: round; stroke-linejoin: round; opacity: 0; transition: opacity 0.7s; }
+.step-token { filter: drop-shadow(0 0 3px rgba(246, 210, 122, 0.95)); }
+.step-token circle { fill: #3b2b21; stroke: #f3d58c; stroke-width: 0.7; }
+.stepper { position: fixed; z-index: 20; background: #1d1917; color: var(--text); box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.45); }
+.stepper[hidden] { display: none; }
+.scope { position: relative; aspect-ratio: 1; border-radius: 50%; background: #0c0a09; box-shadow: 0 0 0 6px #0c0a09, 0 0 0 7px #4a413a; overflow: hidden; }
+.scope canvas { display: block; width: 100%; height: 100%; }
+.scope::after { content: ""; position: absolute; inset: 0; border-radius: 50%; background: radial-gradient(circle, transparent 58%, rgba(40, 30, 15, 0.25) 80%, rgba(10, 8, 5, 0.7) 100%); pointer-events: none; }
+.step-chapter { margin: 0; font-size: 0.85rem; color: #c9bfae; }
+.step-now { font-weight: 700; font-size: 1.3rem; line-height: 1.25; margin: 2px 0 4px; }
+.step-now:focus { outline: none; }
+.step-cell-note { margin: 0; font-size: 0.85rem; color: var(--gold); }
+.step-ask { margin: 12px 0 8px; color: var(--soft); }
+.step-moves { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.move { display: grid; grid-template-columns: 24px 1fr; column-gap: 10px; align-items: center; width: 100%; text-align: left; font: inherit; font-size: 1rem; line-height: 1.3; color: #1d1a1e; background: #fbf6ea; border: 1px solid #6f655a; border-radius: 2px; box-shadow: 2px 3px 0 #0b0a0b; padding: 9px 12px; cursor: pointer; }
+.move .swatch { grid-row: span 2; width: 24px; height: 6px; border-radius: 3px; background: #e6dcc6; box-shadow: 0 0 0 1px #2e2a26; }
+.move.gold .swatch { background: repeating-linear-gradient(90deg, #d9a43a 0 4px, #f7e6b0 4px 7px); box-shadow: 0 0 0 1px #3a2a14; }
+.move.red .swatch { background: repeating-linear-gradient(90deg, #c4453a 0 4px, #f2a596 4px 7px); box-shadow: 0 0 0 1px #3d1410; }
+.move.red .what { color: #8f2a20; }
+.move .to { font-size: 0.85rem; color: #5b5046; }
+.move:hover { background: #fffaf0; }
+.move:active { transform: translate(1px, 2px); box-shadow: 1px 1px 0 #0b0a0b; }
+.move:focus-visible, .step-controls button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+.step-controls { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.step-controls button { font: inherit; font-size: 0.9rem; color: var(--text); background: transparent; border: 1px solid #5a5048; border-radius: 2px; padding: 6px 12px; min-height: 36px; cursor: pointer; }
+.step-controls button:disabled { opacity: 0.45; cursor: default; }
+.step-controls button:hover:not(:disabled) { border-color: var(--gold); }
+.step-trail-box { margin-top: 16px; font-size: 0.85rem; color: #c9bfae; }
+.step-trail-box summary { cursor: pointer; padding: 4px 0; }
+.step-trail { margin: 6px 0 0; padding-left: 1.4em; }
+.step-trail li[aria-current] { color: var(--gold); }
+@media (min-width: 900px) {
+  .stepper { top: 0; right: 0; bottom: 0; width: 360px; overflow-y: auto; padding: 28px 24px 32px; border-left: 1px solid #2c2622; }
+  .scope { width: 240px; margin: 6px auto 20px; }
+  body.stepping main { margin-right: 360px; }
+}
+@media (max-width: 899px) {
+  .stepper { left: 0; right: 0; bottom: 0; max-height: 52vh; overflow-y: auto; padding: 14px 16px 18px; border-top: 1px solid #2c2622; display: grid; grid-template-columns: 104px 1fr; column-gap: 14px; align-items: center; }
+  .scope { width: 104px; margin: 6px 0; }
+  .step-now { font-size: 1.1rem; }
+  .step-body, .step-controls, .step-trail-box { grid-column: 1 / -1; }
+  body.stepping main { padding-bottom: 54vh; }
+}
+@media (prefers-reduced-motion: reduce) { .step-spot, .step-route, .sheet canvas, .sheet .wait { transition: none; } }
+.text { max-width: 44rem; margin: 56px auto 80px; padding: 0 20px 0 36px; }
+.text h2 { display: inline; font-weight: 700; font-size: 1.35rem; margin: 0; }
+.text summary { cursor: pointer; padding: 10px 0; list-style-position: outside; }
+.text summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+.text h3 { font-weight: 700; font-size: 1.15rem; margin: 28px 0 6px; }
+.text p { margin: 8px 0; color: var(--soft); }
+.text dl { margin: 0; }
+.text dt { margin-top: 10px; font-weight: 700; }
+.text dd { margin: 2px 0 0 1.2em; color: var(--soft); }
+.text .breaks { color: #f0a493; font-weight: 400; }
+.text ul { padding-left: 1.2em; }
+.text li { margin: 6px 0; color: var(--soft); }
+a { color: var(--gold); text-underline-offset: 0.18em; }
+a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+</style>
+</head>
+<body>
+<main>
+<h1 class="sr-only">Out of the shell</h1>
+<div class="wall" id="wall">
+<div class="step-marks" id="step-marks" hidden aria-hidden="true">
+<div class="step-spot" id="step-spot"></div>
+<svg id="step-svg" preserveAspectRatio="none"><path class="step-route" id="step-route"/><g class="step-token" id="step-token"><circle r="1.9"/></g></svg>
+</div>
+</div>
+<section class="text">
+<details>
+<summary><h2>Read the chart as text</h2></summary>
+<div id="chart-text"></div>
+</details>
+</section>
+</main>
+<aside class="stepper" id="stepper" aria-labelledby="step-now" hidden>
+<div class="scope"><canvas id="step-cell" role="img" aria-label=""></canvas></div>
+<div class="step-head">
+<p class="step-chapter" id="step-chapter"></p>
+<h2 class="step-now" id="step-now" tabindex="-1"></h2>
+<p class="step-cell-note" id="step-cell-note"></p>
+</div>
+<div class="step-body">
+<p class="step-ask" id="step-ask"></p>
+<ul class="step-moves" id="step-moves"></ul>
+</div>
+<div class="step-controls">
+<button type="button" id="step-back">Back</button>
+<button type="button" id="step-play" aria-pressed="false">Play</button>
+<button type="button" id="step-again">Start again</button>
+<button type="button" id="step-close">Close</button>
+</div>
+<details class="step-trail-box"><summary>The path so far</summary><ol class="step-trail" id="step-trail"></ol></details>
+<p class="sr-only" aria-live="polite" id="step-live"></p>
+</aside>
+<script src="kit.js"></script>
+<script src="chart.js"></script>
+<script src="wall.js"></script>
+<script src="page.js"></script>
+</body>
+</html>
