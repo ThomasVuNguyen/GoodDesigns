@@ -1,6 +1,6 @@
 # Video frame and transcript study
 
-The local `index.html` previews the current GoodDesigns gallery with a **Breakdown** button on videos 1–13, 16, 17, and 28–33. Other video cards have no breakdown button. The individual breakdown pages show video playback beside a clickable transcript and a frame library with scene-change and one-second views. Hovering over a frame shows a larger preview and its **Play frame** control; keyboard focus shows the preview too. On touch screens, the play control remains visible.
+The local `index.html` previews the current GoodDesigns gallery with a **Breakdown** button on videos 1–13, 16, 17, 28–35, and 41–46. Other video cards have no breakdown button. The individual breakdown pages show video playback beside a clickable transcript and a frame library with scene-change and one-second views. Hovering over a frame shows a larger preview and its **Play frame** control; keyboard focus shows the preview too. On touch screens, the play control remains visible.
 
 For local review, serve the repository root with `npx -y http-server . -p 8766 -a 127.0.0.1 -c-1` and open `http://127.0.0.1:8766/notes/good-videos-video-study/index.html#videos`. This server supports video byte ranges, so frame timestamps seek reliably.
 
@@ -11,6 +11,8 @@ Each video page has playback, a timestamped transcript, one frame per second, an
 Video 34, Apple's MacBook Pro M6 film, opens with 20 handpicked frames from the one-second sequence instead of detected cuts. Its moving masks and typography rarely trigger the cut detector, so the automatic set misses most of the visual ideas. The exhaustive every-second view remains available in the second tab. The curated timestamps live in `build_study.py` and the generated `manifest.json`.
 
 Video 35, Google Labs’ Playground launch film, opens with 30 handpicked shots, each with a note on camera position, lens and movement. The film reuses a few locked-off frames and swaps the room into different games inside them, so the notes call out those match frames. The notes live in `SHOT_NOTES` in `build_study.py`.
+
+Videos 41–46 are Kevin Ngo's animations drawn frame by frame in JavaScript by Claude: “What do you love?”, the fruit fly and honey bee life cycles, an untitled riso-print sound piece, the Sonnet 5 versus Sonnet 5.5 dinosaur split screen, and “Thanks @claudeai”. Each opens on handpicked **Key frames** with a note on style, composition or transition, also kept in `SHOT_NOTES`. Their soundtracks are music only. Whisper produced nothing but hallucinated lines, so their pages say there is no narration instead of showing a transcript. Most are square, so their frame grids use square cards. The dinosaur film has no hard cuts, so its scene-cut list is empty.
 
 `source/` contains the downloaded clips. `frames/` contains the image sequences and `scene-cuts.csv` files. `transcripts/` contains source WebVTT captions where available and locally recognized speech for the other videos. Video 11 is spoken in Japanese, so its transcript is in Japanese. The `.transcript.txt` files are cleaned, timestamped reading copies. Speech recognition can mishear words and names; the `.vtt` files retain the original timing.
 

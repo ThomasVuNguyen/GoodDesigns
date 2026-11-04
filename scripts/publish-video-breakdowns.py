@@ -30,7 +30,8 @@ def publish_frame(source):
     long_video = next(item["number"] >= 29 and item["duration"] > 600 for item in ITEMS
                       if relative.parts[1] == f"{item['number']:02d}-{item['slug']}")
     subprocess.run(
-        ["magick", str(source), "-resize", "720x405>" if long_video else "960x540>", "-quality", "58" if long_video else "68",
+        # 960x960 keeps 16:9 frames at 960x540 and lets square frames reach 960 pixels.
+        ["magick", str(source), "-resize", "720x405>" if long_video else "960x960>", "-quality", "58" if long_video else "68",
          "-define", "webp:method=4", str(temporary)],
         check=True,
     )

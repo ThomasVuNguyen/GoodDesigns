@@ -16,7 +16,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 VIDEOS = json.loads((REPO / "gallery/videos.json").read_text())["videos"]
-NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36)]
+NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 47)]
 CURATED_FRAMES = {
     # Apple MacBook Pro M6: selected by reviewing the one-second contact sheet.
     # The cut detector misses the film's shifting masks and typography.
@@ -56,7 +56,145 @@ SHOT_NOTES = {
         63: "Glitch transition: RGB pixel smear collapses the image to black.",
         65: "End card. Pixel wordmark and line on black, the type style borrowed from the games.",
     },
+    # Kevin Ngo's JavaScript animations: one frame per visual idea, transition or style move.
+    41: {
+        0: "Opening wide in torn paper and crayon: the girl in her lit window, the Claude spark in the night sky, paper planes climbing toward it.",
+        3: "Insert on her notepad. The question appears word by word in hand lettering, her green sleeve entering from frame right.",
+        5: "Warm reverse inside her room: yellow wall, pink curtains, her drawing of the spark pinned up. She lifts the folded note to send it.",
+        6: "Back to the night sky. Her plane is one of many, each trailing a dashed flight line.",
+        8: "Centered character shot. The spark holds her note like a sign, eyes closed, thinking.",
+        10: "The answer becomes a list. Each love gets a flat color field and a lowercase caption: a newsprint book with letters floating up, 'words'.",
+        11: "'the sea' on pink: the spark rides a newspaper boat over torn-paper waves. Subject and caption keep the same positions card to card.",
+        13: "'rain': a cloud cut from newsprint over a green umbrella. Found paper keeps every card in one material.",
+        14: "'the stars' breaks the square into a round night sky, with a planet, comet and spiral galaxy around the spark.",
+        17: "Every card collapses into one heart collage around the spark, on a background of handwritten-letter texture.",
+        19: "The spark folds its reply into a plane and sends it back down, reversing the opening flight.",
+        22: "Her hands hold the reply: her own question with 'you' circled in red and a small spark drawn in the corner.",
+        23: "Reaction close-up, eyes closed, wide smile. The ink shows through the paper backwards.",
+        26: "She pins the note to her window, 'you' still circled, next to her drawing of the spark.",
+        27: "The last frame matches the first. She writes again while new planes leave the other windows in town.",
+    },
+    42: {
+        0: "Top-down specimen view of a fly on an orange. Fine cross-hatching and diagonal cream stripes give it the look of a natural-history engraving.",
+        2: "Cut to a dark navy diagram: the egg as a thin outline with a dividing nucleus. A small lineage tree sketches itself in the corner.",
+        3: "Nuclei multiply into a dotted lattice, and the tree in the corner branches with them.",
+        6: "Green bands paint the body plan onto the embryo. Development reads as graphic design, with no labels.",
+        7: "Back in warm paper: the larva breaks out of its egg onto fruit flesh drawn as pebble-like cells.",
+        8: "The larva grows across the frame in one long diagonal.",
+        9: "Pupal stage, back on navy: the adult forms inside the case as spiral clusters of cells.",
+        10: "The adult climbs out of the brown pupal case onto the same orange as the first frame, wings still pale.",
+        12: "Fly's-eye view: the world through a fisheye circle with faint hexagonal facets. Bananas, a window, a lamp, a spider and a cloud cut past.",
+        13: "Inside the head: the brain as a glowing wiring diagram, the second science interlude.",
+        14: "Top-down plate of fruit. Colored rings around the peach show the smell the fly is following.",
+        15: "A fast top-down flight across the kitchen in two-frame hops: plate, lampshade, rug, tiles, curtain, window.",
+        18: "Danger: a hatched shadow sweeps in, and red arcs and an arrow plot the fly's escape.",
+        20: "Two flies face to face on the fruit at sunset. The male's wing song is drawn as a fan of lines with a target ring.",
+        21: "Courtship as a diagram: pink and yellow looping paths trace the dance around the pair.",
+        23: "Night, with tally marks counting days in the sky as she lays a neat row of eggs.",
+        24: "A water drop on a leaf works as a lens. The window and sun bend inside it, with the fly at its edge.",
+        26: "Back to the navy egg diagram with one dividing nucleus, so the cycle restarts. Signed 'opus 5'.",
+    },
+    43: {
+        0: "Cream paper, one blue dot, one ring. The whole film grows from this mark.",
+        1: "Arcs ripple out from the dot like sound waves. The graphic motif doubles as the soundtrack.",
+        3: "The ring turns into a porthole onto a riso-printed jellyfish scene.",
+        5: "Full-bleed riso scene: a temple bell struck, its rings echoing over halftone water. The pink and yellow inks sit slightly out of register.",
+        7: "Montage of things that make sound: record, phone, frogs, bats, wave, a cat in the rain, a bee. Every subject sits on the same center dot.",
+        8: "The wave curls around the center point. Each scene is composed around the dot, not around its subject.",
+        10: "A Ferris wheel with its hub exactly on the dot, so the cut reads almost like a dissolve.",
+        11: "Piano strings from above, curving like ripples. From here the cuts land every six frames.",
+        13: "A snowflake at night. Even the quiet subjects are radial.",
+        14: "Second pass: the same scenes return with a white ring drawn over them, now cutting every three frames.",
+        15: "The cat at the rainy window again, inside the ring.",
+        16: "Everything shrinks into a grid of round thumbnails around the dot: the whole montage at once.",
+        17: "The thumbnails drain to blue dots and scatter, clearing the page.",
+        20: "A pink dot appears and orbits the blue one: a second voice.",
+        22: "A riso flower blooms where the two orbits meet.",
+        24: "Night version: two ringed dots, blue and pink, circling each other.",
+        25: "A sky full of ringed dots, many voices.",
+        27: "End card: 'opus 5', a blue and a pink dot, and 'claude' below, all in the same hand lettering.",
+    },
+    44: {
+        0: "Top-down specimen view of a bee on comb, the cells filled with different colors of pollen. The engraved, cross-hatched style of the fruit fly film.",
+        1: "The bee drops to bare line work for a beat, showing the drawing underneath.",
+        2: "Dark brown interlude: a seed-of-life rosette in thin blue line, geometry the film returns to at the end.",
+        4: "The egg as a diagram, nuclei multiplying into a dotted lattice. The fruit fly film's template, recolored for the hive.",
+        6: "Green and magenta bands paint the body plan onto the egg.",
+        8: "Back in the comb: a curled larva in its cell, a worker leaning in to feed it.",
+        10: "The pupa mounted in a wooden specimen frame, flanked by ghosted silhouettes of the stages before and after.",
+        11: "Same frame, now holding the grey adult forming inside. One fixed layout works as a slideshow of stages.",
+        12: "Emergence from inside the cell: only the mandibles break through the wax cap.",
+        13: "Freshly emerged and still grey. A second later she is fully colored, so the color arriving is the bee maturing.",
+        15: "Building comb: hexagons drawn first as construction geometry, then filled in as solid wax.",
+        17: "The bee heads toward a bright opening, light falling in rays: the first flight out.",
+        18: "Bee's-eye view: a sunflower rendered through hexagonal facets in a round vignette.",
+        20: "Top-down map of the meadow, the flight path traced between flower patches.",
+        21: "Side view of a blossoming apple branch against the sky, the longest-held composition in the film.",
+        24: "A round inset diagrams the flower in cross-section as the bee works the blossom.",
+        30: "Time-lapse in one held frame: petals drop and the blossoms swell into green apples while the bee keeps visiting.",
+        38: "End of the hold: the branch is heavy with ripening fruit.",
+        40: "Waggle dance on the dark comb. A red line traces the run and its angle to a small sun icon.",
+        42: "The dance decoded: the same angle laid over the meadow map, with distance ticks pointing to the flowers.",
+        43: "Two bees face to face, mirrored from above, passing food.",
+        45: "Capping honey: amber cells under fine hatching.",
+        46: "The hive entrance in a hollow tree at night. Tally marks in the sky count the days.",
+        47: "Same framing by day, with more tallies. A locked-off match cut passes time.",
+        48: "Inside the hive: a symmetrical one-point view out through the entrance.",
+        49: "Push-in to the bee's face, the outside world reflected upside down in its eye.",
+        52: "Ends on the seed-of-life geometry, signed 'op'.",
+    },
+    45: {
+        0: "Split screen, same prompt. Left, Sonnet 5: flat silhouettes on blocks of color. Right, Sonnet 5.5: ballpoint and crayon on cream, an eye peering out of a cracked egg.",
+        2: "Sonnet 5.5 hatches its character and adds a running caption, '230 million years ago'. The left panel never uses text.",
+        5: "The hatchling chases a dragonfly. The right panel gives its character something to want.",
+        8: "160 million years ago: teal-striped sauropod legs fill the frame, with the little dinosaur underneath for scale.",
+        14: "68 million years ago: a scribbled orange sun with the little dinosaur in front of it.",
+        15: "The sun becomes a T. rex eye, a match cut on the circle. The left panel never changes its framing.",
+        17: "Both models reach for the same beat, a volcano and a T. rex: a black triangle on the left, a snarling crayon drawing on the right.",
+        19: "The busiest frame: T. rex, Triceratops and pterosaurs overlapping in loose ballpoint.",
+        25: "A red target ring marks the asteroid before impact.",
+        27: "Impact. The right panel shatters into a yellow scribbled starburst; the left goes black with embers.",
+        29: "Graphite scribbles fill the sky with ash. The caption ticks to '66 million years ago'.",
+        32: "Black crayon sky drips down over an empty white ground. Texture carries the mood instead of color.",
+        35: "A small survivor curls up next to a skeleton under a pale moon.",
+        39: "Life returns as ferns unfurl, '40 million years ago'.",
+        41: "'5 million years ago': a shaggy mammal among the ferns. On the left, a flock of bird silhouettes.",
+        43: "'0 million years ago': a robin on a branch, eyeing a worm.",
+        44: "Same branch, same worm, the robin swapped for a T. rex. The match cut makes the film's point: birds are dinosaurs.",
+        46: "The caption types 'still here.' under an egg in a nest. The film ends on an egg, as it began.",
+    },
+    46: {
+        0: "Opens on the finished picture: a sunrise meadow, the orange block creature, a rainbow pond, and a dip pen at frame right. Signed 'opus 5'.",
+        1: "The same picture flips to night, a preview of the middle of the story.",
+        3: "Back to a blank page. The pen sets the horizon, with Bézier handles, construction circles and a grid over cross-hatched paper.",
+        5: "The body is blocked in as a rectangle and scribbled in with orange-red crayon.",
+        7: "Legs, side nubs and closed eyes. A spark is drawn above the head, the construction guides still showing.",
+        8: "The eyes open. The character comes alive the moment its eyes are drawn.",
+        11: "Cut to the finished night scene. The pen leans in from the top right as a character in its own right.",
+        13: "Close on the creature as the pen points at a star, a dandelion clock beside them.",
+        15: "The pen connects stars freehand on a hatched navy sky.",
+        17: "The constellation turns out to be the creature.",
+        18: "A spirograph rose drawn by the pen on teal, a show-off flourish.",
+        19: "A Lissajous figure on a blueprint grid, the creature watching from the corner.",
+        20: "The creature gets dizzy: spiral eyes.",
+        21: "It tips over and a small block falls off.",
+        28: "Happy '^ ^' eyes as the pen taps the ground and a sparkle pops.",
+        30: "A '> <' squint as the pen pokes the ground beside it. A comic beat between two characters.",
+        33: "A gold star pops out of the constellation.",
+        37: "Dawn wipes in across the night sky.",
+        40: "The pen paints a butterfly and flowers into the grass.",
+        41: "Low angle up at the pen as it draws a cloud and birds.",
+        47: "The pen signs 'opus 5' on a torn paper scrap while the creature squints.",
+        48: "The film closes on its opening picture, so it loops.",
+    },
 }
+FRAME_COPY = {
+    # Tab label and intro for videos with SHOT_NOTES. Others fall back to DEFAULT_FRAME_COPY.
+    35: ("Shots and angles", "One frame per shot idea, with where the camera sits and how it moves."),
+}
+DEFAULT_FRAME_COPY = ("Key frames", "One frame per visual idea, with a note on its style, composition or transition.")
+# Music-only soundtracks. Whisper returns only hallucinated lines for these, so no transcript is kept.
+NO_NARRATION = set(range(41, 47))
 TAG = re.compile(r"<[^>]*>")
 TIMING = re.compile(r"^((?:\d\d:)?\d\d:\d\d\.\d+)\s+-->")
 SCENE_LOG = re.compile(r"n:\s*(\d+)\s+pts:\s*\d+\s+pts_time:([\d.]+)")
@@ -101,9 +239,15 @@ def extract_frames(number, source):
                     str(seconds / "second-%05d.jpg")])
         (base / ".seconds-done").touch()
     if not (base / ".scenes-done").exists():
-        log = run_ffmpeg(["ffmpeg", "-hide_banner", "-loglevel", "info", "-y", "-i", str(source),
-                          "-vf", "select='gt(scene,0.30)',showinfo,scale='min(1280,iw)':-2",
-                          "-fps_mode", "vfr", "-q:v", "4", str(scenes / "scene-%05d.jpg")])
+        try:
+            log = run_ffmpeg(["ffmpeg", "-hide_banner", "-loglevel", "info", "-y", "-i", str(source),
+                              "-vf", "select='gt(scene,0.30)',showinfo,scale='min(1280,iw)':-2",
+                              "-fps_mode", "vfr", "-q:v", "4", str(scenes / "scene-%05d.jpg")])
+        except RuntimeError as error:
+            # A film with no hard cuts selects no frames, and FFmpeg treats the empty output as an error.
+            if "No filtered frames" not in str(error):
+                raise
+            log = ""
         matches = [(int(n) + 1, float(t)) for n, t in SCENE_LOG.findall(log)]
         with (base / "scene-cuts.csv").open("w", newline="") as f:
             w = csv.writer(f)
@@ -237,7 +381,7 @@ def write_pages(items):
                   '</div>']
 
         note = VIDEOS[number - 1].get("note")
-        if number in (34, 35) and note:
+        if note:
             detail.insert(2, f'<p class="study-note">{html.escape(note)}</p>')
 
         tr = item.get("transcript")
@@ -261,12 +405,15 @@ def write_pages(items):
                     f'<span class="transcript-words">{html.escape(words)}</span></button>')
             detail.append('</div></aside>')
         else:
-            detail.append('<aside class="transcript"><div class="transcript-head"><h2>Transcript</h2></div><p>Transcript pending.</p></aside>')
+            missing = 'No narration. The soundtrack is music only.' if number in NO_NARRATION else 'Transcript pending.'
+            detail.append(f'<aside class="transcript"><div class="transcript-head"><h2>Transcript</h2></div><p>{missing}</p></aside>')
         detail.append('</div>')
 
         selected = item.get("selected_frames")
         notes = SHOT_NOTES.get(number, {})
-        frame_intro = ('One frame per shot idea, with where the camera sits and how it moves. Open a frame at full size or play from its timestamp.'
+        tab_label, note_intro = FRAME_COPY.get(number, DEFAULT_FRAME_COPY)
+        grid_class = "frame-grid is-square" if item["width"] == item["height"] else "frame-grid"
+        frame_intro = (f'{note_intro} Open a frame at full size or play from its timestamp.'
                        if notes else
                        'Handpicked compositions from the film. Open a frame at full size or play from its timestamp.'
                        if selected else
@@ -275,11 +422,11 @@ def write_pages(items):
             '<section class="study-section" aria-labelledby="frames-title"><div class="frame-tools">'
             '<h2 id="frames-title">Frame library</h2><div class="frame-tabs" role="tablist" aria-label="Frame collection">'
             f'<button type="button" id="tab-scenes" role="tab" data-tab="scenes" aria-controls="panel-scenes" aria-selected="true">'
-            f'{"Shots and angles" if notes else "Selected frames" if selected else "Scene changes"} <span>{len(selected) if selected else item["scene_frames"]}</span></button>'
+            f'{tab_label if notes else "Selected frames" if selected else "Scene changes"} <span>{len(selected) if selected else item["scene_frames"]}</span></button>'
             f'<button type="button" id="tab-seconds" role="tab" data-tab="seconds" aria-controls="panel-seconds" aria-selected="false">'
             f'Every second <span>{item["second_frames"]}</span></button></div></div>'
             f'<p>{frame_intro}</p>')
-        detail.append('<div class="frame-grid" id="panel-scenes" role="tabpanel" aria-labelledby="tab-scenes">')
+        detail.append(f'<div class="{grid_class}" id="panel-scenes" role="tabpanel" aria-labelledby="tab-scenes">')
         if selected:
             for second in selected:
                 path = f"frames/{name}/seconds/second-{second + 1:05d}.jpg"
@@ -289,7 +436,7 @@ def write_pages(items):
                 for row in csv.DictReader(f):
                     path = f"frames/{name}/scene-cuts/{row['filename']}"
                     detail.append(frame_card(path, float(row["time_seconds"])))
-        detail.append('</div><div class="frame-grid" id="panel-seconds" role="tabpanel" aria-labelledby="tab-seconds" hidden>')
+        detail.append(f'</div><div class="{grid_class}" id="panel-seconds" role="tabpanel" aria-labelledby="tab-seconds" hidden>')
         for n in range(1, item["second_frames"] + 1):
             path = f"frames/{name}/seconds/second-{n:05d}.jpg"
             detail.append(frame_card(path, n - 1))
