@@ -1,0 +1,1 @@
+import{Z as e,j as s,v as t,w as o,x as n,$ as g}from"./index-BzmH5Arr.js";function r(){const a=e.useLoaderData();return s.jsx(t,{data:a,basePath:"/blog",graph:o({path:g("/blog",a.page),name:"The Dessn blog",description:n,items:a.items,crumbs:[{name:"Dessn",path:"/"},{name:"Blog",path:"/blog"}]})})}export{r as component};

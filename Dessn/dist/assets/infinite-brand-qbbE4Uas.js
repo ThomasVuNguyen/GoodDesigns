@@ -1,0 +1,1 @@
+import{Q as a,o as c,r as n,j as e,O as u}from"./index-BzmH5Arr.js";import{L as p,S as m}from"./LatentSpacePage-1VhGLJzT.js";function f(){const s=a.useLoaderData(),t=a.useSearch(),o=c(t),r=n.useMemo(()=>t,[o]);return e.jsx(p,{data:s,search:r,paths:m,children:e.jsx(u,{})})}export{f as component};

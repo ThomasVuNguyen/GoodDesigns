@@ -1,0 +1,1 @@
+import{M as o,j as t}from"./index-BzmH5Arr.js";import{P as i}from"./PieceView-F4PUaXKE.js";import"./LatentSpacePage-1VhGLJzT.js";function m(){const{piece:e}=o.useLoaderData();return t.jsx(i,{piece:e},e.id)}export{m as component};
