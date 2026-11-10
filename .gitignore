@@ -7,3 +7,5 @@ public/
 .firebase/
 
 .cache/
+.claude/
+scripts/.tmp-*
