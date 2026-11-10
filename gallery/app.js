@@ -113,7 +113,7 @@
   $('email-grid').innerHTML = emails.map((m) => `
     <li class="card card--email">
       <a class="thumb email-thumb" href="#/emails/${esc(m.slug)}" aria-label="Read ${esc(m.subject)}">
-        <span class="email-thumb-from"><span class="email-initial" aria-hidden="true">${esc(m.fromName[0])}</span><b>${esc(m.fromName)}</b><span>${esc(m.date.split(',')[0])}</span></span>
+        <span class="email-thumb-from"><b>${esc(m.fromName)}</b><span>${esc(m.date.split(',')[0])}</span></span>
         <span class="email-thumb-subject">${esc(m.subject)}</span>
         <span class="email-thumb-body">${esc(emailText(m.html))}</span>
       </a>
@@ -245,10 +245,8 @@
       <article class="post-card email-card">
         <h1 class="email-subject">${esc(m.subject)}</h1>
         <header class="email-header">
-          <span class="email-initial email-initial--lg" aria-hidden="true">${esc(m.fromName[0])}</span>
           <div class="email-from">
             <div><b>${esc(m.fromName)}</b> <span class="email-address">&lt;${esc(m.fromAddress)}&gt;</span></div>
-            <div class="email-to">to me</div>
           </div>
           <time class="email-date">${esc(m.date)}</time>
         </header>

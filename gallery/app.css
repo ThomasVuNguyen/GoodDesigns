@@ -108,25 +108,22 @@ a { color: inherit; }
 .email-thumb { position: relative; display: flex; flex-direction: column; gap: 10px; padding: 22px 24px 0; background: #fff; text-decoration: none; transition: border-color .2s ease; }
 .email-thumb::after { content: ""; position: absolute; inset: auto 0 0; height: 45%; background: linear-gradient(transparent, #fff); }
 .card--email:hover .email-thumb { border-color: var(--accent); }
-.email-thumb-from { display: flex; align-items: center; gap: 10px; font-size: 13px; color: var(--muted); }
+.email-thumb-from { display: flex; align-items: baseline; gap: 10px; font-size: 13px; color: var(--muted); }
 .email-thumb-from b { color: var(--ink); font-weight: 600; }
 .email-thumb-from span:last-child { margin-left: auto; font-variant-numeric: tabular-nums; }
 .email-thumb-subject { font: 400 22px/1.15 var(--serif); letter-spacing: -0.01em; color: var(--ink); }
 .email-thumb-body { font-size: 13.5px; line-height: 1.55; color: #3d3a35; }
-.email-initial { flex: none; width: 26px; height: 26px; display: grid; place-items: center; border-radius: 50%; background: var(--ink); color: var(--bg); font: 600 12px/1 var(--sans); }
-.email-initial--lg { width: 40px; height: 40px; font-size: 16px; }
 .card--email .meta h2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
 
 /* The email reader: a letter on paper, with the reason it's here set beneath it. */
 .viewer[data-kind="email"] { display: flex; justify-content: center; align-items: flex-start; overflow-y: auto; -webkit-overflow-scrolling: touch; background: var(--bg); padding: 56px 20px 120px; }
 .email-card { background: #fff; }
 .email-subject { margin: 0 0 24px; font: 400 clamp(28px, 4vw, 36px)/1.1 var(--serif); letter-spacing: -0.02em; }
-.email-header { display: flex; align-items: center; gap: 12px; padding-bottom: 20px; margin-bottom: 24px; border-bottom: 1px solid var(--line); font-size: 14px; }
+.email-header { display: flex; align-items: baseline; gap: 12px; padding-bottom: 20px; margin-bottom: 24px; border-bottom: 1px solid var(--line); font-size: 14px; }
 .email-from { min-width: 0; flex: 1; }
-.email-address, .email-to, .email-date { color: var(--muted); }
+.email-address, .email-date { color: var(--muted); }
 .email-address { overflow-wrap: anywhere; }
-.email-to { font-size: 13px; }
-.email-date { align-self: flex-start; font-size: 13px; white-space: nowrap; }
+.email-date { font-size: 13px; white-space: nowrap; }
 .email-body { font-size: 16px; line-height: 1.65; }
 .email-body p { margin: 0 0 1em; }
 .email-body ul { margin: 0 0 1em; padding-left: 1.4em; }
@@ -338,7 +335,7 @@ a { color: inherit; }
   .viewer[data-kind="youtube"] #frame { width: 100vw; border-radius: 0; }
   .viewer[data-kind="post"], .viewer[data-kind="insta"], .viewer[data-kind="email"] { padding: 24px 14px 100px; }
   .email-header { flex-wrap: wrap; }
-  .email-date { flex-basis: 100%; padding-left: 52px; }
+  .email-date { flex-basis: 100%; }
   .email-address { display: block; }
   .insta-media { margin: 0 -18px; }
   .viewer[data-kind="folk"] { padding: 24px 14px 100px; }
