@@ -2,11 +2,12 @@
   const $ = (id) => document.getElementById(id);
   // The gallery shows one tab at a time.
   const tabs = $('tabs');
-  const tabHash = { sites: '#/', videos: '#/videos', shorts: '#/shorts', posts: '#/posts', insta: '#/insta', folks: '#/folks', research: '#/research' };
+  const tabHash = { sites: '#/', videos: '#/videos', shorts: '#/shorts', posts: '#/posts', emails: '#/emails', insta: '#/insta', folks: '#/folks', research: '#/research' };
   const tabOf = (hash) => (
     hash === 'research' || hash.startsWith('research/') ? 'research' :
     hash === 'folks' || hash.startsWith('folks/') ? 'folks' :
     hash === 'insta' || hash.startsWith('insta/') ? 'insta' :
+    hash === 'emails' || hash.startsWith('emails/') ? 'emails' :
     hash === 'posts' || hash.startsWith('posts/') ? 'posts' :
     hash === 'shorts' || hash.startsWith('shorts/') ? 'shorts' :
     hash === 'videos' || hash.startsWith('videos/') ? 'videos' : 'sites'
@@ -23,8 +24,8 @@
   // Before the lists load, so a link to videos or posts never shows the sites heading first.
   showTab(tabOf(location.hash.replace(/^#\/?/, '')));
 
-  const [{ repo, branch, sites }, { videos }, { shorts }, { posts }, { insta }, { folks }, { research }] = await Promise.all(
-    ['sites.json', 'videos.json', 'shorts.json', 'posts.json', 'insta.json', 'folks.json', 'research.json'].map(async (f) => (await fetch(f)).json()),
+  const [{ repo, branch, sites }, { videos }, { shorts }, { posts }, { emails }, { insta }, { folks }, { research }] = await Promise.all(
+    ['sites.json', 'videos.json', 'shorts.json', 'posts.json', 'emails.json', 'insta.json', 'folks.json', 'research.json'].map(async (f) => (await fetch(f)).json()),
   );
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
   const srcUrl = (s) => `${repo}/tree/${branch}/${s.folder}`;
@@ -50,6 +51,7 @@
   $('n-videos').textContent = videos.length;
   $('n-shorts').textContent = shorts.length;
   $('n-posts').textContent = posts.length;
+  $('n-emails').textContent = emails.length;
   $('n-insta').textContent = insta.length;
   $('n-folks').textContent = folks.length;
   $('n-research').textContent = research.length;
@@ -105,6 +107,22 @@
       </div>
       <p class="tag">${esc(p.note || p.author)}</p>
     </li>`).join('') || '<li class="empty">No posts yet.</li>';
+
+  // Email cards show the top of the letter itself: sender, subject and the opening lines, fading out.
+  const emailText = (html) => html.replace(/<\/(p|li)>/g, ' ').replace(/<[^>]+>/g, '').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+  $('email-grid').innerHTML = emails.map((m) => `
+    <li class="card card--email">
+      <a class="thumb email-thumb" href="#/emails/${esc(m.slug)}" aria-label="Read ${esc(m.subject)}">
+        <span class="email-thumb-from"><span class="email-initial" aria-hidden="true">${esc(m.fromName[0])}</span><b>${esc(m.fromName)}</b><span>${esc(m.date.split(',')[0])}</span></span>
+        <span class="email-thumb-subject">${esc(m.subject)}</span>
+        <span class="email-thumb-body">${esc(emailText(m.html))}</span>
+      </a>
+      <div class="meta">
+        <h2><a href="#/emails/${esc(m.slug)}">${esc(m.subject)}</a></h2>
+        <a class="src" href="${esc(m.link.url)}" target="_blank" rel="noopener">Visit ↗</a>
+      </div>
+      <p class="tag">${esc(m.note || m.fromName)}</p>
+    </li>`).join('') || '<li class="empty">No emails yet.</li>';
 
   // Instagram cards are square like the feed; a carousel gets Instagram's stacked-squares mark in the corner.
   $('insta-grid').innerHTML = insta.map((p) => `
@@ -217,6 +235,27 @@
           </div>
         </footer>
       </article>`;
+  }
+
+  // The email reads like a letter: who sent it, the subject, the body as sent, then the sender's postal line.
+  // The body is curated HTML from emails.json; its links open in a new tab.
+  function renderEmail(m) {
+    const body = m.html.replace(/<a href="(?!mailto:)/g, '<a target="_blank" rel="noopener" href="');
+    return `
+      <article class="post-card email-card">
+        <h1 class="email-subject">${esc(m.subject)}</h1>
+        <header class="email-header">
+          <span class="email-initial email-initial--lg" aria-hidden="true">${esc(m.fromName[0])}</span>
+          <div class="email-from">
+            <div><b>${esc(m.fromName)}</b> <span class="email-address">&lt;${esc(m.fromAddress)}&gt;</span></div>
+            <div class="email-to">to me</div>
+          </div>
+          <time class="email-date">${esc(m.date)}</time>
+        </header>
+        <div class="email-body">${body}</div>
+        ${m.footer ? `<p class="email-footer">${esc(m.footer)}</p>` : ''}
+      </article>
+      ${m.note ? `<aside class="email-note"><span>Why it's good</span>${esc(m.note)}</aside>` : ''}`;
   }
 
   // Captions link their bare domains, #hashtags and @handles the way Instagram does.
@@ -646,6 +685,7 @@
     ...videos.map((v) => ({ hash: `videos/${v.slug}`, kind: 'video', item: v })),
     ...shorts.map((v) => ({ hash: `shorts/${v.slug}`, kind: 'short', item: v })),
     ...posts.map((p) => ({ hash: `posts/${p.slug}`, kind: 'post', item: p })),
+    ...emails.map((m) => ({ hash: `emails/${m.slug}`, kind: 'email', item: m })),
     ...insta.map((p) => ({ hash: `insta/${p.slug}`, kind: 'insta', item: p })),
     ...folks.flatMap((f) => [
       { hash: `folks/${f.slug}`, kind: 'folk-profile', folk: f },
@@ -675,9 +715,9 @@
     $('gallery').hidden = open;
     $('viewer').hidden = !open;
     document.body.style.overflow = open ? 'hidden' : '';
-    showTab(open ? (items[i].kind.startsWith('folk') ? 'folks' : items[i].kind === 'post' ? 'posts' : items[i].kind === 'insta' ? 'insta' : items[i].kind === 'video' ? 'videos' : items[i].kind === 'short' ? 'shorts' : 'sites') : tabOf(hash));
+    showTab(open ? (items[i].kind.startsWith('folk') ? 'folks' : items[i].kind === 'post' ? 'posts' : items[i].kind === 'email' ? 'emails' : items[i].kind === 'insta' ? 'insta' : items[i].kind === 'video' ? 'videos' : items[i].kind === 'short' ? 'shorts' : 'sites') : tabOf(hash));
     if (!open) {
-      document.title = tab === 'research' ? 'Good Research · GoodDesigns' : tab === 'folks' ? 'Good Folks · GoodDesigns' : tab === 'insta' ? 'Good Insta · GoodDesigns' : tab === 'posts' ? 'Posts · GoodDesigns' : tab === 'shorts' ? 'Good Shorts · GoodDesigns' : tab === 'videos' ? 'Videos · GoodDesigns' : 'GoodDesigns';
+      document.title = tab === 'research' ? 'Good Research · GoodDesigns' : tab === 'folks' ? 'Good Folks · GoodDesigns' : tab === 'insta' ? 'Good Insta · GoodDesigns' : tab === 'posts' ? 'Posts · GoodDesigns' : tab === 'emails' ? 'Good Emails · GoodDesigns' : tab === 'shorts' ? 'Good Shorts · GoodDesigns' : tab === 'videos' ? 'Videos · GoodDesigns' : 'GoodDesigns';
       frame.removeAttribute('src');
       postView.hidden = true;
       postView.innerHTML = '';
@@ -693,13 +733,13 @@
     const isFolkProfile = kind === 'folk-profile';
     const isFolkTalk = kind === 'folk-talk';
     const isFolk = isFolkProfile || isFolkTalk;
-    const name = kind === 'site' ? item.name : isFolkProfile ? `${folk.name} · Archive Profile` : isFolkTalk ? `${talk.title} · ${folk.name}` : item.title;
+    const name = kind === 'site' ? item.name : isFolkProfile ? `${folk.name} · Archive Profile` : isFolkTalk ? `${talk.title} · ${folk.name}` : kind === 'email' ? item.subject : item.title;
     $('back').href = isFolkTalk ? `#/folks/${folk.slug}` : tabHash[tab];
-    $('viewer').dataset.kind = isFolk ? 'folk' : kind === 'site' ? 'site' : kind === 'post' ? 'post' : kind === 'insta' ? 'insta' : kind === 'short' ? 'short' : item.platform;
+    $('viewer').dataset.kind = isFolk ? 'folk' : kind === 'site' ? 'site' : kind === 'post' ? 'post' : kind === 'email' ? 'email' : kind === 'insta' ? 'insta' : kind === 'short' ? 'short' : item.platform;
     document.title = `${name} · GoodDesigns`;
     $('back').setAttribute('aria-label', isFolkTalk ? `Back to ${folk.name} Profile` : `Back to GoodDesigns from ${name}`);
-    const out = kind === 'site' ? srcUrl(item) : isFolkProfile ? (folk.social && folk.social[0] ? folk.social[0].url : '#') : isFolkTalk ? talk.url : item.url;
-    const label = kind === 'site' ? 'View source' : isFolkProfile ? (folk.social && folk.social[0] ? (folk.social[0].platform === 'x' ? 'Open on X' : 'View Profile') : 'Good Folks') : isFolkTalk ? 'Open on YouTube' : `Open on ${PLATFORM[item.platform] || 'platform'}`;
+    const out = kind === 'site' ? srcUrl(item) : isFolkProfile ? (folk.social && folk.social[0] ? folk.social[0].url : '#') : isFolkTalk ? talk.url : kind === 'email' ? item.link.url : item.url;
+    const label = kind === 'site' ? 'View source' : isFolkProfile ? (folk.social && folk.social[0] ? (folk.social[0].platform === 'x' ? 'Open on X' : 'View Profile') : 'Good Folks') : isFolkTalk ? 'Open on YouTube' : kind === 'email' ? item.link.label : `Open on ${PLATFORM[item.platform] || 'platform'}`;
     $('v-src').href = out;
     $('v-src-label').textContent = label;
     $('v-src-icon').setAttribute('d', kind === 'site' ? 'M7 6 3 10l4 4M13 6l4 4-4 4' : 'M8.5 4.5H4.5v11h11v-4M11.5 3.5h5v5M16.5 3.5l-7.5 7.5');
@@ -721,13 +761,14 @@
       instaView.innerHTML = renderInsta(item);
       $('viewer').scrollTop = 0;
       initInsta();
-    } else if (kind === 'post') {
+    } else if (kind === 'post' || kind === 'email') {
       frame.hidden = true;
       frame.removeAttribute('src');
       folkView.hidden = true;
       folkView.innerHTML = '';
       postView.hidden = false;
-      postView.innerHTML = renderPost(item);
+      postView.innerHTML = kind === 'email' ? renderEmail(item) : renderPost(item);
+      $('viewer').scrollTop = 0;
     } else if (isFolkProfile) {
       frame.hidden = true;
       frame.removeAttribute('src');
