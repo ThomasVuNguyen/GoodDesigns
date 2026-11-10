@@ -7,9 +7,26 @@
       "fromAddress": "privacy@posthog.com",
       "date": "Nov 8, 2026, 2:50 PM",
       "note": "A notice the law requires, written as if nobody wants it. One date, two changes, who they affect and how to opt out. Signed by the lawyers.",
-      "link": { "url": "https://posthog.com/subprocessors", "label": "Visit PostHog" },
+      "link": {
+        "url": "https://posthog.com/subprocessors",
+        "label": "Visit PostHog"
+      },
       "html": "<p>Hey there,</p><p>Nobody likes boring legal emails, including us, but we have to send them by law. So we'll keep this brief like always.</p><p>On <strong>November 23, 2026</strong> we're making two changes to our AI subprocessors:</p><ul><li>AWS Bedrock. We're adding it to run AI inference. AWS already hosts PostHog, but Bedrock inference is processed globally, so if you use our AI tools it may happen outside the region where your PostHog data is hosted.</li><li>OpenAI. Again, we already work with OpenAI as a subprocessor, but we're adding the EU (EEA + Switzerland) as a processing location, alongside the US.</li></ul><p>These changes only affect you if you use PostHog's AI features. If you're on EU Cloud, your PostHog data is still hosted in EU region. AI inference is the only part that may happen elsewhere. If that doesn't work for you, you can turn AI features off.</p><p>You can review all subprocessors at <a href=\"https://posthog.com/subprocessors\">posthog.com/subprocessors</a>, or if you have questions, send them to <a href=\"mailto:privacy@posthog.com\">privacy@posthog.com</a>.</p><p>Thanks</p><p>PostHog's Lawyers</p>",
       "footer": "PostHog, 2261 Market Street #4008, San Francisco, CA 94114",
+      "added": "2026-11-10"
+    },
+    {
+      "slug": "posthog-subprocessor-update",
+      "subject": "Subprocessor Update: Baseten, Modal, Fireworks, Runpod",
+      "fromName": "PostHog",
+      "fromAddress": "hey@posthog.com",
+      "date": "Oct 10, 2026, 7:10 AM",
+      "note": "The same legal notice, even shorter. Four new vendors, one line each, and the jokes land in the list itself: \"Modal. You guessed it, to host and run open source AI models.\"",
+      "link": {
+        "url": "https://posthog.com/subprocessors",
+        "label": "Visit PostHog"
+      },
+      "html": "<p>Hi,</p><p>Nobody likes T&amp;C update emails, including us, but we have to send them by law. So we'll keep this brief.</p><p>On <strong>October 25, 2026</strong> we're adding the following new subprocessors:</p><ul><li>RunPod. We'll use them to help with inference.</li><li>Baseten. We'll use them to host and run open source AI models.</li><li>Fireworks. We'll use them to host and run open source AI models too.</li><li>Modal. You guessed it, to host and run open source AI models.</li></ul><p>You can <a href=\"https://posthog.com/subprocessors\">review all subprocessors</a>, or if you have questions (or good lawyer jokes), send them to <a href=\"mailto:legal@posthog.com\">legal@posthog.com</a>.</p><p>Thanks<br>PostHog's Lawyers</p>",
       "added": "2026-11-10"
     }
   ]
