@@ -23,11 +23,13 @@ const server = http.createServer((req, res) => {
 const base = `http://localhost:${server.address().port}`;
 
 const browser = await chromium.launch();
+// Cards that share a folder live under the first card's slug, at their own entry route.
+const siteUrl = (s) => `${base}/sites/${(sites.find((x) => x.folder === s.folder) ?? s).slug}${s.entry ?? '/'}`;
 for (const s of sites.filter((x) => !only.length || only.includes(x.slug))) {
   const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
   const failed = [];
   page.on('response', (r) => { if (r.status() >= 400 && r.url().startsWith(base)) failed.push(`${r.status()} ${r.url().replace(base, '')}`); });
-  await page.goto(`${base}/sites/${s.slug}/`, { waitUntil: 'load' });
+  await page.goto(siteUrl(s), { waitUntil: 'load' });
   await page.waitForTimeout(2500);
   await page.screenshot({ path: path.join(root, `gallery/thumbs/${s.slug}.jpg`), type: 'jpeg', quality: 82 });
   console.log(`${s.slug}: ${failed.length} failed request(s)`, failed.slice(0, 5));

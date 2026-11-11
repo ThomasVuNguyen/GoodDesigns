@@ -28,6 +28,10 @@
   );
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
   const srcUrl = (s) => `${repo}/tree/${branch}/${s.folder}`;
+  // Several cards can share one folder, each opening a different route inside it
+  // (buildspace's six pages). The first card for a folder is the one that gets built.
+  const siteRoot = (s) => sites.find((x) => x.folder === s.folder) ?? s;
+  const siteUrl = (s) => `sites/${siteRoot(s).slug}${s.entry ?? '/'}`;
   const PLATFORM = { youtube: 'YouTube', x: 'X', linkedin: 'LinkedIn', instagram: 'Instagram' };
   const ICON = {
     youtube: '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.8 15.1V8.9l5.8 3.1-5.8 3.1Z"/></svg>',
@@ -378,7 +382,7 @@
       postView.innerHTML = '';
       frame.hidden = false;
       frame.title = kind === 'site' ? `${name} preview` : name;
-      const target = kind === 'site' ? `sites/${item.slug}/` : embedUrl(item);
+      const target = kind === 'site' ? siteUrl(item) : embedUrl(item);
       if (frame.getAttribute('src') !== target) frame.src = target;
     }
   }

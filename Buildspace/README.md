@@ -2,16 +2,18 @@
 
 Six pages of [buildspace.so](https://buildspace.so/) kept as they were after the school shut down: the homepage, the final letter, the season 5 spectator page, the FAQs, the 2023 recap and the s4 demo day.
 
-| Page | Route | Reference | Title |
+| Gallery card | Route | Reference | Title |
 | --- | --- | --- | --- |
-| Homepage | `/` | https://buildspace.so/ | buildspace |
-| Final letter | `/letter` | https://buildspace.so/letter | a letter to you. |
-| Spectate s5 | `/nw` | https://buildspace.so/nw | spectate s5 |
-| FAQs | `/faq` | https://buildspace.so/faq | frequently asked questions \| buildspace |
-| 2023 recap | `/hyper` | https://buildspace.so/hyper | hyper honest. |
-| s4 demo day | `/s4/demoday` | https://buildspace.so/s4/demoday | s4 demo day \| buildspace |
+| `buildspace` | `/` | https://buildspace.so/ | buildspace |
+| `buildspace-letter` | `/letter` | https://buildspace.so/letter | a letter to you. |
+| `buildspace-spectate-s5` | `/nw` | https://buildspace.so/nw | spectate s5 |
+| `buildspace-faq` | `/faq` | https://buildspace.so/faq | frequently asked questions \| buildspace |
+| `buildspace-2023-recap` | `/hyper` | https://buildspace.so/hyper | hyper honest. |
+| `buildspace-s4-demoday` | `/s4/demoday` | https://buildspace.so/s4/demoday | s4 demo day \| buildspace |
 
 Captured 2026-11-10 from the live Framer build (`script_main.N6QPR2NJ.mjs`).
+
+**In the gallery this is six cards, not one.** Each page has its own entry in `gallery/sites.json` (`buildspace`, `buildspace-letter`, `buildspace-spectate-s5`, `buildspace-faq`, `buildspace-2023-recap`, `buildspace-s4-demoday`) and its own thumbnail. All six share the `Buildspace` folder and point at their own route through `"entry"`, so the capture stays one build while every page is directly reachable. The pages also still navigate to each other in place.
 
 ## Run locally
 
@@ -121,6 +123,7 @@ The "2023 recap." article by farza majeed (feb 4, 2024) with a full-bleed video 
 - 178 project videos have been deleted from YouTube. The live page paints YouTube's 120×90 "unavailable" image, which arrives with a 404 status but a valid body; those exact bytes are saved locally, so the cards look the same.
 - The demo day page is 28 MB of server-rendered HTML, the same as the original, because all 1,051 cards (four breakpoint variants each) are in the document.
 - `dist/assets` was trimmed from 3,149 to 1,566 files: anything no page or interaction requested was removed. `tools/build.py` restores the full set, and `check.mjs --prune` trims it again.
+- The six gallery cards share one folder, so `/sites/buildspace-letter/` and friends do not exist: those cards open `/sites/buildspace/letter`, `/sites/buildspace/faq`, and so on.
 
 ## Licensing
 

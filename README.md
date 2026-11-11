@@ -50,6 +50,8 @@ A push to `main` runs that build and publishes the `gooddesigns` site. The workf
 
 To add a site, append it to `gallery/sites.json` and refresh thumbnails with `npx -p playwright node scripts/capture-thumbs.mjs <slug>` (needs Chrome installed), then commit and push. The build script rewrites root-absolute asset paths (`/assets/...`) so every site works under `/sites/<slug>/`.
 
+A site that is several pages gets one card per page: give every entry the same `folder` and an `entry` route inside it (`"entry": "/letter"`). The folder is built once, under the first entry's slug, and each card's viewer opens its own route. Buildspace is the example.
+
 ## Good Videos
 
 The gallery also has a **Good Videos** tab of YouTube and X videos, next to the sites (`#/videos` links straight to it). They play in the same full-screen viewer, embedded from the platform. To add one:

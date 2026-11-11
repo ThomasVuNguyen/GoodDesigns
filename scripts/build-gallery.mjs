@@ -54,9 +54,17 @@ await cp(path.join(root, 'gallery'), out, { recursive: true });
 
 let rewritten = 0;
 let tracked = 0;
+const built = new Set();
 for (const site of manifest.sites) {
   const dist = path.join(root, site.folder, 'dist');
   if (!existsSync(dist)) throw new Error(`Missing ${site.folder}/dist`);
+  // Several cards can share one folder, each opening a different route inside it.
+  // Copy and rewrite it once, under the first card's slug.
+  if (built.has(site.folder)) {
+    console.log(`✓ ${site.slug} (shares ${site.folder})`);
+    continue;
+  }
+  built.add(site.folder);
   const dest = path.join(out, 'sites', site.slug);
   await cp(dist, dest, { recursive: true });
 
