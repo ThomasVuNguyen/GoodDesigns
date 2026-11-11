@@ -9,3 +9,7 @@ public/
 .cache/
 .claude/
 scripts/.tmp-*
+
+# Buildspace: raw Framer modules are re-downloaded by tools/build.py, local screenshots by check.mjs
+Buildspace/source/modules/
+Buildspace/reference/local-*

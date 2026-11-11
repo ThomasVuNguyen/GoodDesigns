@@ -1,0 +1,2 @@
+import{_a as r}from"./chunk-CECOSYCP.mjs";r.loadWebFontsFromSelectors([]);var n=[],s=[".framer-qvQrD .framer-styles-preset-1q99i7t:not(.rich-text-wrapper), .framer-qvQrD .framer-styles-preset-1q99i7t.rich-text-wrapper a { --framer-link-current-text-color: rgba(255, 255, 255, 0.75); --framer-link-hover-text-color: #ffffff; --framer-link-hover-text-decoration: none; --framer-link-text-color: rgba(255, 255, 255, 0.5); --framer-link-text-decoration: none; }"],f="framer-qvQrD";export{n as a,s as b,f as c};
+//# sourceMappingURL=chunk-MN4WOYJ7.mjs.map

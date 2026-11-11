@@ -1,0 +1,2 @@
+import{_a as r}from"./chunk-CECOSYCP.mjs";r.loadWebFontsFromSelectors([]);var n=[],s=[".framer-zP2UH .framer-styles-preset-xyori1:not(.rich-text-wrapper), .framer-zP2UH .framer-styles-preset-xyori1.rich-text-wrapper a { --framer-link-hover-text-color: #ffffff; --framer-link-text-color: #ffffff; --framer-link-text-decoration: underline; }"],f="framer-zP2UH";export{n as a,s as b,f as c};
+//# sourceMappingURL=chunk-WDKXMDVU.mjs.map
