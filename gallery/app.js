@@ -165,7 +165,7 @@
       <div class="meta">
         <h2><a href="#/cards/${esc(c.slug)}">${esc(c.title)}</a></h2>
       </div>
-      <p class="tag">${esc(c.note)}</p>
+      ${c.note ? `<p class="tag">${esc(c.note)}</p>` : ''}
     </li>`).join('') || '<li class="empty">No cards yet.</li>';
 
   // The card reader shows each face at full size, side by side, with the reason it's here beneath.
