@@ -2,8 +2,9 @@
   const $ = (id) => document.getElementById(id);
   // The gallery shows one tab at a time.
   const tabs = $('tabs');
-  const tabHash = { sites: '#/', videos: '#/videos', shorts: '#/shorts', posts: '#/posts', emails: '#/emails', insta: '#/insta', research: '#/research' };
+  const tabHash = { sites: '#/', videos: '#/videos', shorts: '#/shorts', posts: '#/posts', emails: '#/emails', insta: '#/insta', research: '#/research', cards: '#/cards' };
   const tabOf = (hash) => (
+    hash === 'cards' || hash.startsWith('cards/') ? 'cards' :
     hash === 'research' || hash.startsWith('research/') ? 'research' :
     hash === 'insta' || hash.startsWith('insta/') ? 'insta' :
     hash === 'emails' || hash.startsWith('emails/') ? 'emails' :
@@ -23,8 +24,8 @@
   // Before the lists load, so a link to videos or posts never shows the sites heading first.
   showTab(tabOf(location.hash.replace(/^#\/?/, '')));
 
-  const [{ repo, branch, sites }, { videos }, { shorts }, { posts }, { emails }, { insta }, { research }] = await Promise.all(
-    ['sites.json', 'videos.json', 'shorts.json', 'posts.json', 'emails.json', 'insta.json', 'research.json'].map(async (f) => (await fetch(f)).json()),
+  const [{ repo, branch, sites }, { videos }, { shorts }, { posts }, { emails }, { insta }, { research }, { cards }] = await Promise.all(
+    ['sites.json', 'videos.json', 'shorts.json', 'posts.json', 'emails.json', 'insta.json', 'research.json', 'cards.json'].map(async (f) => (await fetch(f)).json()),
   );
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
   const srcUrl = (s) => `${repo}/tree/${branch}/${s.folder}`;
@@ -52,6 +53,7 @@
   $('n-emails').textContent = emails.length;
   $('n-insta').textContent = insta.length;
   $('n-research').textContent = research.length;
+  $('n-cards').textContent = cards.length;
 
   $('grid').innerHTML = sites.map((s) => `
     <li class="card">
@@ -152,6 +154,36 @@
       <p class="tag">${esc(r.note)}</p>
       ${r.recreation ? `<a class="breakdown-button" href="#/${esc(r.recreation)}">Recreation</a>` : ''}
     </li>`).join('') || '<li class="empty">No research yet.</li>';
+
+  // Card thumbs lay the front face on a plain ground, so portrait and landscape cards sit in the same square.
+  $('card-grid').innerHTML = cards.map((c) => `
+    <li class="card card--card">
+      <a class="thumb card-thumb" href="#/cards/${esc(c.slug)}" aria-label="View ${esc(c.title)}">
+        <img src="${esc(c.faces[0].src)}" alt="" loading="lazy" width="${c.faces[0].width}" height="${c.faces[0].height}">
+      </a>
+      <div class="research-label">${esc(c.org)} · ${esc(c.kind)}</div>
+      <div class="meta">
+        <h2><a href="#/cards/${esc(c.slug)}">${esc(c.title)}</a></h2>
+      </div>
+      <p class="tag">${esc(c.note)}</p>
+    </li>`).join('') || '<li class="empty">No cards yet.</li>';
+
+  // The card reader shows each face at full size, side by side, with the reason it's here beneath.
+  function renderCard(c) {
+    return `
+      <div class="card-faces">
+        ${c.faces.map((f) => `
+          <figure class="card-face">
+            <img src="${esc(f.src)}" alt="${esc(`${f.label} of ${c.title}'s ${c.kind.toLowerCase()}`)}" width="${f.width}" height="${f.height}" style="aspect-ratio: ${f.width} / ${f.height}">
+            ${c.faces.length > 1 ? `<figcaption>${esc(f.label)}</figcaption>` : ''}
+          </figure>`).join('')}
+      </div>
+      <header class="card-caption">
+        <div class="research-label">${esc(c.org)} · ${esc(c.kind)}</div>
+        <h1>${esc(c.title)}</h1>
+        ${c.note ? `<p>${esc(c.note)}</p>` : ''}
+      </header>`;
+  }
 
   function renderPost(p) {
     const formattedText = esc(p.text || '')
@@ -312,6 +344,7 @@
     ...posts.map((p) => ({ hash: `posts/${p.slug}`, kind: 'post', item: p })),
     ...emails.map((m) => ({ hash: `emails/${m.slug}`, kind: 'email', item: m })),
     ...insta.map((p) => ({ hash: `insta/${p.slug}`, kind: 'insta', item: p })),
+    ...cards.map((c) => ({ hash: `cards/${c.slug}`, kind: 'card', item: c })),
   ];
   let current = -1;
   const scrolls = {}; // where each tab was left, restored when it comes back
@@ -333,9 +366,9 @@
     $('gallery').hidden = open;
     $('viewer').hidden = !open;
     document.body.style.overflow = open ? 'hidden' : '';
-    showTab(open ? (items[i].kind === 'post' ? 'posts' : items[i].kind === 'email' ? 'emails' : items[i].kind === 'insta' ? 'insta' : items[i].kind === 'video' ? 'videos' : items[i].kind === 'short' ? 'shorts' : 'sites') : tabOf(hash));
+    showTab(open ? (items[i].kind === 'card' ? 'cards' : items[i].kind === 'post' ? 'posts' : items[i].kind === 'email' ? 'emails' : items[i].kind === 'insta' ? 'insta' : items[i].kind === 'video' ? 'videos' : items[i].kind === 'short' ? 'shorts' : 'sites') : tabOf(hash));
     if (!open) {
-      document.title = tab === 'research' ? 'Good Research · GoodDesigns' : tab === 'insta' ? 'Good Insta · GoodDesigns' : tab === 'posts' ? 'Posts · GoodDesigns' : tab === 'emails' ? 'Good Emails · GoodDesigns' : tab === 'shorts' ? 'Good Shorts · GoodDesigns' : tab === 'videos' ? 'Videos · GoodDesigns' : 'GoodDesigns';
+      document.title = tab === 'cards' ? 'Good Cards · GoodDesigns' : tab === 'research' ? 'Good Research · GoodDesigns' : tab === 'insta' ? 'Good Insta · GoodDesigns' : tab === 'posts' ? 'Posts · GoodDesigns' : tab === 'emails' ? 'Good Emails · GoodDesigns' : tab === 'shorts' ? 'Good Shorts · GoodDesigns' : tab === 'videos' ? 'Videos · GoodDesigns' : 'GoodDesigns';
       frame.removeAttribute('src');
       postView.hidden = true;
       postView.innerHTML = '';
@@ -348,11 +381,11 @@
     const { kind, item } = items[i];
     const name = kind === 'site' ? item.name : kind === 'email' ? item.subject : item.title;
     $('back').href = tabHash[tab];
-    $('viewer').dataset.kind = kind === 'site' ? 'site' : kind === 'post' ? 'post' : kind === 'email' ? 'email' : kind === 'insta' ? 'insta' : kind === 'short' ? 'short' : item.platform;
+    $('viewer').dataset.kind = kind === 'site' ? 'site' : kind === 'card' ? 'card' : kind === 'post' ? 'post' : kind === 'email' ? 'email' : kind === 'insta' ? 'insta' : kind === 'short' ? 'short' : item.platform;
     document.title = `${name} · GoodDesigns`;
     $('back').setAttribute('aria-label', `Back to GoodDesigns from ${name}`);
-    const out = kind === 'site' ? srcUrl(item) : kind === 'email' ? item.link.url : item.url;
-    const label = kind === 'site' ? 'View source' : kind === 'email' ? item.link.label : `Open on ${PLATFORM[item.platform] || 'platform'}`;
+    const out = kind === 'site' ? srcUrl(item) : kind === 'card' ? item.faces[0].src : kind === 'email' ? item.link.url : item.url;
+    const label = kind === 'site' ? 'View source' : kind === 'card' ? 'Open image' : kind === 'email' ? item.link.label : `Open on ${PLATFORM[item.platform] || 'platform'}`;
     $('v-src').href = out;
     $('v-src-label').textContent = label;
     $('v-src-icon').setAttribute('d', kind === 'site' ? 'M7 6 3 10l4 4M13 6l4 4-4 4' : 'M8.5 4.5H4.5v11h11v-4M11.5 3.5h5v5M16.5 3.5l-7.5 7.5');
@@ -372,11 +405,11 @@
       instaView.innerHTML = renderInsta(item);
       $('viewer').scrollTop = 0;
       initInsta();
-    } else if (kind === 'post' || kind === 'email') {
+    } else if (kind === 'post' || kind === 'email' || kind === 'card') {
       frame.hidden = true;
       frame.removeAttribute('src');
       postView.hidden = false;
-      postView.innerHTML = kind === 'email' ? renderEmail(item) : renderPost(item);
+      postView.innerHTML = kind === 'card' ? renderCard(item) : kind === 'email' ? renderEmail(item) : renderPost(item);
       $('viewer').scrollTop = 0;
     } else {
       postView.hidden = true;

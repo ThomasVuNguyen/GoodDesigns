@@ -164,6 +164,27 @@ a { color: inherit; }
 .insta-caption { margin-top: 18px; }
 .insta-caption .mention { color: #00376b; }
 
+/* Card thumbs: the card itself, lifted off a plain ground like a card on a table. */
+.grid--cards { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.card-thumb { position: relative; aspect-ratio: 1 / 1; background: #e9e5dc; }
+.card-thumb img { position: absolute; inset: 28px; width: calc(100% - 56px); height: calc(100% - 56px); object-fit: contain; object-position: center; filter: drop-shadow(0 2px 3px rgba(21, 20, 18, 0.18)) drop-shadow(0 12px 22px rgba(21, 20, 18, 0.22)); }
+.card--card .thumb img { transition: transform .5s cubic-bezier(.2,.7,.2,1); }
+.card--card:hover .thumb img, .card--card .thumb:focus-visible img { transform: translateY(-4px) rotate(-1.5deg) scale(1.02); }
+.card--card .meta { padding-top: 6px; }
+.card--card .tag { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+/* The card reader: each face as large as the window allows, then its caption. */
+.viewer[data-kind="card"] { display: flex; justify-content: center; align-items: flex-start; overflow-y: auto; -webkit-overflow-scrolling: touch; background: var(--bg); padding: 56px 20px 120px; }
+.viewer[data-kind="card"] .post-reader { max-width: 1080px; }
+.card-faces { display: flex; flex-wrap: wrap; justify-content: center; gap: 32px; }
+.card-face { margin: 0; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.card-face img { display: block; width: auto; height: auto; max-width: min(100%, 860px); max-height: 78vh; border-radius: 10px; box-shadow: 0 2px 4px rgba(21, 20, 18, 0.12), 0 24px 48px rgba(21, 20, 18, 0.22); }
+.card-face figcaption { font-size: 13px; color: var(--muted); }
+.card-caption { max-width: 560px; margin: 36px auto 0; text-align: center; }
+.card-caption .research-label { padding: 0; }
+.card-caption h1 { margin: 10px 0 0; font: 400 clamp(28px, 4vw, 36px)/1.1 var(--serif); letter-spacing: -0.02em; }
+.card-caption p { margin: 12px 0 0; font: italic 400 17px/1.5 var(--serif); color: var(--muted); }
+
 /* Two floating buttons over the full-screen preview. */
 .float { position: fixed; left: 20px; bottom: 20px; z-index: 10; display: flex; gap: 8px; }
 .fab { display: inline-flex; align-items: center; gap: 7px; height: 40px; padding: 0 16px 0 13px; border-radius: 999px; font: 500 14px/1 var(--sans); text-decoration: none; background: var(--card); color: var(--ink); border: 1px solid rgba(21, 20, 18, 0.1); box-shadow: 0 1px 2px rgba(21, 20, 18, 0.1), 0 6px 18px rgba(21, 20, 18, 0.16); transition: background .15s ease, color .15s ease, transform .15s ease; }
@@ -180,7 +201,8 @@ a { color: inherit; }
   .tabs::-webkit-scrollbar { display: none; }
   .grid { grid-template-columns: 1fr; }
   .viewer[data-kind="youtube"] #frame { width: 100vw; border-radius: 0; }
-  .viewer[data-kind="post"], .viewer[data-kind="insta"], .viewer[data-kind="email"] { padding: 24px 14px 100px; }
+  .viewer[data-kind="post"], .viewer[data-kind="insta"], .viewer[data-kind="email"], .viewer[data-kind="card"] { padding: 24px 14px 100px; }
+  .card-face img { max-height: 70vh; }
   .email-header { flex-wrap: wrap; }
   .email-date { flex-basis: 100%; }
   .email-address { display: block; }
