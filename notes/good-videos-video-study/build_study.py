@@ -16,7 +16,9 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 VIDEOS = json.loads((REPO / "gallery/videos.json").read_text())["videos"]
-NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 47)]
+NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 48)]
+# Seconds between library frames. Short clips are sampled more densely than one per second.
+FRAME_STEP = {47: 0.25}
 CURATED_FRAMES = {
     # Apple MacBook Pro M6: selected by reviewing the one-second contact sheet.
     # The cut detector misses the film's shifting masks and typography.
@@ -187,11 +189,30 @@ SHOT_NOTES = {
         47: "The pen signs 'opus 5' on a torn paper scrap while the creature squints.",
         48: "The film closes on its opening picture, so it loops.",
     },
+    # Kimi Code tutorial #4: only the first eight seconds, the cold open, sampled every quarter second.
+    47: {
+        0: "Establishing wide from behind the black spiral-stair railing. A tall, quiet loft with her small at the far desk; only the K mark sits in the corner.",
+        1: "Cut to an eye-level medium in warm window light as she writes. 'Build' sets in a light serif in the empty wall above her shoulder.",
+        1.75: "'3D' and 'Websites' land, the second word on the red panel at right. Each word takes its own patch of empty wall, so the title wraps around her and never crosses her.",
+        2.25: "'With' fills the gap at left. The whole title is set in about a second and a half, word by word.",
+        2.75: "A punch-in as she turns the page. The title is already typing itself out letter by letter ('Build 3D' is down to 'B') while 'Kimi Code' arrives low at right by the laptop.",
+        3.25: "Cut to a lateral move behind a red pillar, the room empty. 'Kimi [Quick G' types in at left over the KIMI Academy series mark.",
+        3.5: "'Kimi Cod [Quick Guide]'. Both lines type at once, each at its own pace.",
+        4: "The brackets drop away, leaving a plain two-line series card. A small type edit, timed as its own beat.",
+        4.25: "The camera keeps moving while the card holds still; the blurred pillar slides across the frame and sells the depth.",
+        4.75: "Cut back to her, now looking straight into the lens. The b-roll ends and she starts talking to you.",
+        5.5: "The name label decodes in from glyph noise, still reading 'R0quel', as the small caption 'Hi, I'm Raquel' appears below.",
+        6.25: "It settles to 'Raquel, KIMI Global Team' in the same serif as the title, tying the lower third to the opening type.",
+        7.25: "Hard switch to a paper-texture board. Her shot shrinks into a framed card as two AI-built ceramics sites slide in at left.",
+        7.75: "The settled layout: two sites stacked at left, her card at right, and the caption 'Both of these websites were built with AI' sets up the tutorial's comparison.",
+    },
 }
 FRAME_COPY = {
     # Tab label and intro for videos with SHOT_NOTES. Others fall back to DEFAULT_FRAME_COPY.
     35: ("Shots and angles", "One frame per shot idea, with where the camera sits and how it moves."),
+    47: ("Beats", "One frame per beat of the cold open: each cut, title move and type change."),
 }
+TRANSCRIPT_KIND = {47: "YouTube auto captions, trimmed to the opening and corrected to the on-screen name"}
 DEFAULT_FRAME_COPY = ("Key frames", "One frame per visual idea, with a note on its style, composition or transition.")
 # Music-only soundtracks. Whisper returns only hallucinated lines for these, so no transcript is kept.
 NO_NARRATION = set(range(41, 47))
@@ -235,7 +256,7 @@ def extract_frames(number, source):
     scenes.mkdir(parents=True, exist_ok=True)
     if not (base / ".seconds-done").exists():
         run_ffmpeg(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", str(source),
-                    "-vf", "fps=1:start_time=0,scale='min(1280,iw)':-2", "-q:v", "4",
+                    "-vf", f"fps={1 / FRAME_STEP.get(number, 1):g}:start_time=0,scale='min(1280,iw)':-2", "-q:v", "4",
                     str(seconds / "second-%05d.jpg")])
         (base / ".seconds-done").touch()
     if not (base / ".scenes-done").exists():
@@ -263,6 +284,13 @@ def format_time(seconds):
     return f"{seconds // 60:02d}:{seconds % 60:02d}"
 
 
+def format_frame_time(seconds, step=1):
+    """Whole seconds as 00:05; quarter-second frames as 00:05.25."""
+    if step >= 1:
+        return format_time(seconds)
+    return f"{int(seconds) // 60:02d}:{seconds % 60:05.2f}"
+
+
 def make_overview(number):
     name = stem(number)
     out = HERE / "overviews" / f"{name}.jpg"
@@ -285,8 +313,8 @@ def make_overview(number):
         x, y = (i % cols) * thumb_w, (i // cols) * (thumb_h + label_h)
         with Image.open(path) as im:
             canvas.paste(ImageOps.fit(im.convert("RGB"), (thumb_w, thumb_h)), (x, y))
-        second = int(path.stem.split("-")[-1]) - 1
-        draw.text((x + 7, y + thumb_h + 3), format_time(second), fill="white", font=font)
+        second = (int(path.stem.split("-")[-1]) - 1) * FRAME_STEP.get(number, 1)
+        draw.text((x + 7, y + thumb_h + 3), format_frame_time(second, FRAME_STEP.get(number, 1)), fill="white", font=font)
     canvas.save(out, quality=85, optimize=True)
 
 
@@ -321,7 +349,9 @@ def transcript(number):
         previous = current
     out = folder / f"{name}.transcript.txt"
     out.write_text("\n".join(lines).strip() + "\n")
-    if vtt.name.endswith(".ja.vtt"):
+    if number in TRANSCRIPT_KIND:
+        kind = TRANSCRIPT_KIND[number]
+    elif vtt.name.endswith(".ja.vtt"):
         kind = "Japanese speech recognition"
     elif vtt.name.endswith(".en.vtt"):
         kind = "creator captions" if number in (1, 7, 9, 29, 30, 32, 33) else "YouTube auto captions"
@@ -350,8 +380,8 @@ def write_pages(items):
                 '<a href="index.html#videos">Back to videos</a>'
                 '</nav></header>')
 
-    def frame_card(path, seconds, note=None):
-        label = format_time(seconds)
+    def frame_card(path, seconds, note=None, step=1):
+        label = format_frame_time(seconds, step)
         note = f'<p class="frame-note">{html.escape(note)}</p>' if note else ''
 
         return (f'<figure class="frame-card"><a href="{path}" target="_blank" rel="noopener" '
@@ -409,6 +439,7 @@ def write_pages(items):
             detail.append(f'<aside class="transcript"><div class="transcript-head"><h2>Transcript</h2></div><p>{missing}</p></aside>')
         detail.append('</div>')
 
+        step = FRAME_STEP.get(number, 1)
         selected = item.get("selected_frames")
         notes = SHOT_NOTES.get(number, {})
         tab_label, note_intro = FRAME_COPY.get(number, DEFAULT_FRAME_COPY)
@@ -424,13 +455,13 @@ def write_pages(items):
             f'<button type="button" id="tab-scenes" role="tab" data-tab="scenes" aria-controls="panel-scenes" aria-selected="true">'
             f'{tab_label if notes else "Selected frames" if selected else "Scene changes"} <span>{len(selected) if selected else item["scene_frames"]}</span></button>'
             f'<button type="button" id="tab-seconds" role="tab" data-tab="seconds" aria-controls="panel-seconds" aria-selected="false">'
-            f'Every second <span>{item["second_frames"]}</span></button></div></div>'
+            f'{"Every second" if step == 1 else "Every quarter second" if step == 0.25 else f"Every {step:g} s"} <span>{item["second_frames"]}</span></button></div></div>'
             f'<p>{frame_intro}</p>')
         detail.append(f'<div class="{grid_class}" id="panel-scenes" role="tabpanel" aria-labelledby="tab-scenes">')
         if selected:
             for second in selected:
-                path = f"frames/{name}/seconds/second-{second + 1:05d}.jpg"
-                detail.append(frame_card(path, second, notes.get(second)))
+                path = f"frames/{name}/seconds/second-{round(second / step) + 1:05d}.jpg"
+                detail.append(frame_card(path, second, notes.get(second), step))
         else:
             with (HERE / "frames" / name / "scene-cuts.csv").open() as f:
                 for row in csv.DictReader(f):
@@ -439,7 +470,7 @@ def write_pages(items):
         detail.append(f'</div><div class="{grid_class}" id="panel-seconds" role="tabpanel" aria-labelledby="tab-seconds" hidden>')
         for n in range(1, item["second_frames"] + 1):
             path = f"frames/{name}/seconds/second-{n:05d}.jpg"
-            detail.append(frame_card(path, n - 1))
+            detail.append(frame_card(path, (n - 1) * step, step=step))
         detail.append('</div></section>')
         (HERE / page).write_text(document(item["title"], ''.join(detail)))
 

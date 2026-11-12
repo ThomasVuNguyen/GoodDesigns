@@ -40,8 +40,9 @@
     instagram: '<svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.25" fill="currentColor"/></svg>',
   };
   // The player each platform offers for embedding; YouTube's privacy-enhanced domain sets no cookies until play.
+  // An `end` in seconds limits a YouTube entry to its opening, for videos kept only for their first moments.
   const embedUrl = (v) => v.platform === 'youtube'
-    ? `https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1&rel=0&playsinline=1`
+    ? `https://www.youtube-nocookie.com/embed/${v.id}?autoplay=1&rel=0&playsinline=1${v.end ? `&end=${v.end}` : ''}`
     : `https://platform.twitter.com/embed/Tweet.html?id=${v.id}&dnt=true`;
 
   $('n-sites').textContent = sites.length;
