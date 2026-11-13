@@ -1,0 +1,168 @@
+{
+  "reference": "https://www.diabrowser.com/release-notes/1-57-find-your-flow",
+  "captured": "2026-11-12",
+  "assets": [
+    {
+      "file": "assets/lately/figma-design.webp",
+      "role": "Dia can now design in Figma",
+      "source": "https://cdn.sanity.io/images/e5fj2khm/production/448c3ce2ae1849d39d2348ead438f7a67b1b2c53-3585x2167.png?w=1400&q=80&fm=webp",
+      "bytes": 105564
+    },
+    {
+      "file": "assets/lately/figma-fill-in-the-blanks.webp",
+      "role": "Fill in the blanks",
+      "source": "https://cdn.sanity.io/images/e5fj2khm/production/918c447f1dafa5f88ee57b79d3fdb328434e8292-961x734.png?w=1400&q=80&fm=webp",
+      "bytes": 37116
+    },
+    {
+      "file": "assets/lately/figma-read-between-layers.webp",
+      "role": "Read between the layers",
+      "source": "https://cdn.sanity.io/images/e5fj2khm/production/d21e2fdecb1a9f97039603d05e3fb1267469aa19-1247x665.png?w=1400&q=80&fm=webp",
+      "bytes": 89844
+    },
+    {
+      "file": "assets/lately/avatar-connor.webp",
+      "role": "Shipped-by avatar: connor",
+      "source": "https://cdn.sanity.io/images/e5fj2khm/production/06556ae2d0fc617e7f285f1a0c5b8bf7bd1a3bf7-512x512.png?w=96&h=96&fit=crop&dpr=2&q=80&fm=webp",
+      "bytes": 7598
+    },
+    {
+      "file": "assets/lately/avatar-farah.webp",
+      "role": "Shipped-by avatar: Farah",
+      "source": "https://cdn.sanity.io/images/e5fj2khm/production/0ac13aa4da7f87eb69009915887ae80adf9bd694-512x512.jpg?w=96&h=96&fit=crop&dpr=2&q=80&fm=webp",
+      "bytes": 6376
+    },
+    {
+      "file": "assets/lately/avatar-jane.webp",
+      "role": "Shipped-by avatar: jane",
+      "source": "https://cdn.sanity.io/images/e5fj2khm/production/99ed257f1cdd4eb11546e8773df4c76b189eea96-512x512.jpg?w=96&h=96&fit=crop&dpr=2&q=80&fm=webp",
+      "bytes": 6200
+    },
+    {
+      "file": "assets/lately/avatar-ali.webp",
+      "role": "Shipped-by avatar: Ali",
+      "source": "https://cdn.sanity.io/images/e5fj2khm/production/3c3fe161a775db7e838d240f550ece730a8b579c-72x72.jpg?w=96&h=96&fit=crop&dpr=2&q=80&fm=webp",
+      "bytes": 5656
+    },
+    {
+      "file": "assets/lately/signature-connor.webp",
+      "role": "Signature: connor",
+      "source": "https://cdn.sanity.io/images/e5fj2khm/production/506814f04c3c344d8c919a8a732b4ac5e451703a-1174x353.png?h=40&dpr=2&q=80&fm=webp",
+      "bytes": 4362
+    },
+    {
+      "file": "assets/lately/signature-jane.webp",
+      "role": "Signature: jane",
+      "source": "https://cdn.sanity.io/images/e5fj2khm/production/deeb186a67e859026bb07eba617f3cc44e7530b9-1814x1311.png?h=40&dpr=2&q=80&fm=webp",
+      "bytes": 1176
+    },
+    {
+      "file": "assets/lately/past-1-56-make-yourself-at-home.webp",
+      "role": "Past issue No. 44",
+      "source": "https://cdn.sanity.io/images/e5fj2khm/production/4fd29864bad555cffbae635fb077d5639f319582-964x1168.png?w=600&dpr=2&q=80&fm=webp",
+      "bytes": 33640
+    },
+    {
+      "file": "assets/lately/past-1-50-sunglow.webp",
+      "role": "Past issue No. 43",
+      "source": "https://cdn.sanity.io/images/e5fj2khm/production/a5d2037d302bc5bbe890794a0aa9c324f5af026f-1805x786.png?w=600&dpr=2&q=80&fm=webp",
+      "bytes": 51826
+    },
+    {
+      "file": "assets/lately/past-1-49-microsoft-tools.webp",
+      "role": "Past issue No. 42",
+      "source": "https://cdn.sanity.io/images/e5fj2khm/production/5accd10ec739666d194050f6d81a0e4aad03bfb6-944x628.png?w=600&dpr=2&q=80&fm=webp",
+      "bytes": 23184
+    },
+    {
+      "file": "assets/lately/past-tools.webp",
+      "role": "Past issue No. 41",
+      "source": "https://cdn.sanity.io/images/e5fj2khm/production/fbf93081daa240521dbb9edae4e195f60ca7d4c4-3352x2100.png?w=600&dpr=2&q=80&fm=webp",
+      "bytes": 50370
+    },
+    {
+      "file": "assets/lately/past-notion.webp",
+      "role": "Past issue No. 40",
+      "source": "https://cdn.sanity.io/images/e5fj2khm/production/5cdf5af49d01a1b410a59a171df0420c05533afe-3352x2100.png?w=600&dpr=2&q=80&fm=webp",
+      "bytes": 76982
+    },
+    {
+      "file": "assets/lately/past-linear.webp",
+      "role": "Past issue No. 39",
+      "source": "https://cdn.sanity.io/images/e5fj2khm/production/b647c3fa71fe3da11cec43761539b8682907a2e1-6704x4199.png?w=600&dpr=2&q=80&fm=webp",
+      "bytes": 35618
+    },
+    {
+      "file": "assets/lately/past-security.webp",
+      "role": "Past issue No. 38",
+      "source": "https://cdn.sanity.io/images/e5fj2khm/production/fa9343034be7a497781d1b4959589622c42d3d49-3352x2100.png?w=600&dpr=2&q=80&fm=webp",
+      "bytes": 32336
+    },
+    {
+      "file": "assets/lately/past-linkedin.webp",
+      "role": "Past issue No. 37",
+      "source": "https://cdn.sanity.io/images/e5fj2khm/production/c5072225693ef17dc07b6388e70c1758ab04d23c-3352x2100.png?w=600&dpr=2&q=80&fm=webp",
+      "bytes": 31050
+    },
+    {
+      "file": "assets/lately/past-context-switching.webp",
+      "role": "Past issue No. 36",
+      "source": "https://cdn.sanity.io/images/e5fj2khm/production/f50fe1121a81e33e8425ca27e0d7ae4d99b71abb-2534x1400.png?w=600&dpr=2&q=80&fm=webp",
+      "bytes": 62054
+    },
+    {
+      "file": "assets/lately/header-painting.webp",
+      "role": "Header painting, 2400w (\"Final Goodbye\" by An Huynh)",
+      "source": "https://www.diabrowser.com/images/lately/header-painting.webp",
+      "bytes": 314356
+    },
+    {
+      "file": "assets/lately/header-painting-1200.webp",
+      "role": "Header painting, 1200w",
+      "source": "https://www.diabrowser.com/images/lately/header-painting-1200.webp",
+      "bytes": 91576
+    },
+    {
+      "file": "assets/lately/nest-tab-groups.mp4",
+      "role": "Nest your tab groups video, re-encoded to 1600w H.264 without audio",
+      "source": "https://stream.mux.com/ESbCwwlMyrIGrLo3WLoDbcNF5cfKtThxQtu7YqD4Cq00/highest.mp4",
+      "bytes": 2473247
+    },
+    {
+      "file": "assets/lately/nest-tab-groups-poster.webp",
+      "role": "Nest your tab groups video poster",
+      "source": "https://image.mux.com/ESbCwwlMyrIGrLo3WLoDbcNF5cfKtThxQtu7YqD4Cq00/thumbnail.webp?width=1200&fit_mode=preserve",
+      "bytes": 55940
+    },
+    {
+      "file": "assets/fonts/205TF-Exposure-ExposureVAR.woff2",
+      "role": "Font used by the Dia Lately stylesheet",
+      "source": "https://www.diabrowser.com/fonts/205TF-Exposure-ExposureVAR.woff2",
+      "bytes": 718332
+    },
+    {
+      "file": "assets/fonts/ABCOracleTriple-Regular.woff2",
+      "role": "Font used by the Dia Lately stylesheet",
+      "source": "https://www.diabrowser.com/fonts/ABCOracleTriple-Regular.woff2",
+      "bytes": 18108
+    },
+    {
+      "file": "assets/fonts/AmmerHandwriting-Regular.latin.woff2",
+      "role": "Font used by the Dia Lately stylesheet",
+      "source": "https://www.diabrowser.com/fonts/AmmerHandwriting-Regular.latin.woff2",
+      "bytes": 664884
+    },
+    {
+      "file": "assets/fonts/QuadrantTextMono-Regular.woff2",
+      "role": "Font used by the Dia Lately stylesheet",
+      "source": "https://www.diabrowser.com/fonts/QuadrantTextMono-Regular.woff2",
+      "bytes": 19164
+    },
+    {
+      "file": "assets/fonts/SFProText-Regular.latin.woff2",
+      "role": "Font used by the Dia Lately stylesheet",
+      "source": "https://www.diabrowser.com/fonts/SFProText-Regular.latin.woff2",
+      "bytes": 14768
+    }
+  ]
+}
