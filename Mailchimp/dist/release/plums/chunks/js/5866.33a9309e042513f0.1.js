@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmailchimp_monolith_root=self.webpackChunkmailchimp_monolith_root||[]).push([["5866"],{3493:function(e,a,t){t.r(a),t.d(a,{default:()=>n});var i=t(991);let n={start:function(){i.ZP.start({apiKey:window.bugsnagConfig.apiKey,releaseStage:window.bugsnagConfig.releaseStage})}}}}]);
+//# sourceMappingURL=5866.33a9309e042513f0.1.js.map

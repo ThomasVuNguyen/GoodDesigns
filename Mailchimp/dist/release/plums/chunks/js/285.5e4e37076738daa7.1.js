@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmailchimp_monolith_root=self.webpackChunkmailchimp_monolith_root||[]).push([["285"],{4889:function(i,t,e){function n(i){"table"===i.nextSibling.tagName.toLowerCase()&&i.appendChild(i.nextSibling)}e.r(t),e.d(t,{tableLimitedHeight:()=>n})}}]);
+//# sourceMappingURL=285.5e4e37076738daa7.1.js.map

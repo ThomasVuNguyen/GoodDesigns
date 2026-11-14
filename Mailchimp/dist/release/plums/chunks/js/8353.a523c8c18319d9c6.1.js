@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkmailchimp_monolith_root=self.webpackChunkmailchimp_monolith_root||[]).push([["8353"],{6753:function(t,n,o){o.r(n),o.d(n,{default:()=>i});var a=o(6285),i=function t(n){!function(t,n){if(!(t instanceof n))throw TypeError("Cannot call a class as a function")}(this,t),(0,a.h)()&&n.classList.contains("backgroundBrandYellow")&&n.querySelectorAll(".copy-large p").forEach(function(t,n){n>0&&t.setAttribute("aria-hidden","true")})}}}]);
+//# sourceMappingURL=8353.a523c8c18319d9c6.1.js.map
