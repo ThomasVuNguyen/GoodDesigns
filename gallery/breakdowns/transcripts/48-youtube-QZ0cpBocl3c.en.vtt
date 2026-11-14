@@ -1,0 +1,1584 @@
+WEBVTT
+Kind: captions
+Language: en
+
+00:00:00.500 --> 00:00:01.535
+[♪ "Danse Macabre" by
+Camille Saint-Saens ♪]
+
+00:00:01.535 --> 00:00:04.304
+[Narrator] In 1736, a
+young Benjamin Franklin
+
+00:00:04.304 --> 00:00:07.007
+established the first
+volunteer fire department,
+
+00:00:07.007 --> 00:00:10.644
+before America had even
+declared independence.
+
+00:00:10.644 --> 00:00:12.346
+The first automatic
+sprinkler system
+
+00:00:12.346 --> 00:00:14.081
+was invented in 1872
+
+00:00:14.081 --> 00:00:15.015
+[sprinkler pops]
+
+00:00:15.015 --> 00:00:17.184
+and perfected a decade later.
+
+00:00:17.184 --> 00:00:20.053
+After 100 years, the
+smoke alarm came along,
+
+00:00:20.053 --> 00:00:22.389
+shortening the time for
+fire detection dramatically.
+
+00:00:22.389 --> 00:00:24.524
+[fire alarm beeping]
+
+00:00:24.524 --> 00:00:26.360
+Humans have created
+measures like these
+
+00:00:26.360 --> 00:00:29.096
+to protect those things that
+are most precious to us:
+
+00:00:29.096 --> 00:00:30.030
+our homes,
+
+00:00:30.030 --> 00:00:30.864
+valuables,
+
+00:00:30.864 --> 00:00:32.032
+vital documents,
+
+00:00:32.032 --> 00:00:33.333
+irreplaceable relics,
+
+00:00:33.333 --> 00:00:35.235
+priceless memories.
+
+00:00:35.235 --> 00:00:37.871
+But today, many of our
+most precious items
+
+00:00:37.871 --> 00:00:39.039
+have moved online.
+
+00:00:41.408 --> 00:00:44.011
+So what do you do to
+stop digital fires?
+
+00:00:44.011 --> 00:00:47.080
+The code, viruses, malware
+and suspicious links
+
+00:00:47.080 --> 00:00:49.082
+sent by arsonists that
+ignite with a click?
+
+00:00:51.551 --> 00:00:53.720
+You do what you've always done.
+
+00:00:53.720 --> 00:00:55.355
+You call in the experts—
+
+00:00:55.355 --> 00:00:58.125
+the people trained in
+putting digital fires out.
+
+00:01:03.864 --> 00:01:04.631
+[♪ anthemic music ♪]
+
+00:01:04.631 --> 00:01:07.768
+When it's your job to keep
+billions of people safe online,
+
+00:01:08.902 --> 00:01:10.537
+you have to live and breathe
+
+00:01:10.537 --> 00:01:13.140
+and see the internet just
+like the attackers do,
+
+00:01:14.308 --> 00:01:16.977
+because the only
+way to stop a hacker
+
+00:01:17.411 --> 00:01:19.112
+is to think like one.
+
+00:01:38.332 --> 00:01:40.267 align:right size:35% position:95%,middle
+[Matt] I think if you were
+to ask any of my coworkers
+
+00:01:40.267 --> 00:01:41.935 align:right size:35% position:95%,middle
+they would probably
+tell you that I use
+
+00:01:41.935 --> 00:01:44.438 align:right size:35% position:95%,middle
+fire department analogies
+a little overbearingly.
+
+00:01:44.438 --> 00:01:45.939
+[Narrator] Meet Matt Linton.
+
+00:01:45.939 --> 00:01:48.742
+He heads up a security
+response team at Google.
+
+00:01:48.742 --> 00:01:50.444
+If you asked him
+what his team does,
+
+00:01:50.444 --> 00:01:52.679
+he often starts at
+the very beginning.
+
+00:01:52.679 --> 00:01:53.413
+[Matt] When I was a kid,
+
+00:01:53.413 --> 00:01:55.849
+I wanted nothing to do
+with computers as a career.
+
+00:01:55.849 --> 00:01:58.618
+I had a laser focus
+on emergency response.
+
+00:01:58.618 --> 00:02:00.988
+I got my EMT license at 16,
+
+00:02:00.988 --> 00:02:03.623
+technically, before I
+got my driver's license.
+
+00:02:04.591 --> 00:02:05.592
+[sunglass chime]
+
+00:02:05.592 --> 00:02:08.028
+From there I got my
+firefighting certification,
+
+00:02:08.028 --> 00:02:10.197
+my hazardous
+material certification.
+
+00:02:10.197 --> 00:02:11.365
+And I just kept going.
+
+00:02:15.168 --> 00:02:16.636
+[Narrator] Before
+coming to Google,
+
+00:02:16.636 --> 00:02:18.038
+Matt clocked over a decade
+
+00:02:18.038 --> 00:02:20.640
+conducting specialized
+rescue missions,
+
+00:02:20.640 --> 00:02:22.709
+responding to
+hazardous disasters
+
+00:02:22.709 --> 00:02:24.945
+and fighting fires at NASA.
+
+00:02:25.345 --> 00:02:27.014
+Yep... NASA.
+
+00:02:28.281 --> 00:02:31.284
+But what does firefighting
+have to do with cybersecurity?
+
+00:02:31.284 --> 00:02:32.819
+[Matt] A way that
+security at Google
+
+00:02:32.819 --> 00:02:35.489
+is an awful lot like
+fire department response...
+
+00:02:35.489 --> 00:02:36.490
+You have a
+fire department
+
+00:02:36.490 --> 00:02:38.125
+because even though
+we have
+
+00:02:38.492 --> 00:02:39.826
+fire sprinklers,
+
+00:02:39.826 --> 00:02:40.994
+fire alarms,
+
+00:02:40.994 --> 00:02:41.862
+fire inspections
+
+00:02:41.862 --> 00:02:43.730
+to prevent fires
+from breaking out,
+
+00:02:43.730 --> 00:02:47.134
+eventually protections fail
+and people make mistakes.
+
+00:02:47.134 --> 00:02:49.336
+You need people whose
+expertise and specialty
+
+00:02:49.336 --> 00:02:51.838
+is in responding to bad
+things once they've happened,
+
+00:02:51.838 --> 00:02:53.840
+specifically dealing
+with the problem at hand
+
+00:02:53.840 --> 00:02:55.575
+and not causing a lot
+of collateral damage.
+
+00:02:55.976 --> 00:02:57.911
+[Narrator] Just as communities
+have fire departments
+
+00:02:57.911 --> 00:03:00.580
+to protect those things that
+are most precious to us,
+
+00:03:00.580 --> 00:03:03.350
+Google has its own set
+of safety measures—
+
+00:03:03.350 --> 00:03:06.019
+the emergency responders,
+systems and people
+
+00:03:06.019 --> 00:03:07.687
+who are responsible
+for protecting parts
+
+00:03:07.687 --> 00:03:09.723
+of our digital lives.
+
+00:03:09.723 --> 00:03:11.725
+They protect our
+childhood photos,
+
+00:03:11.925 --> 00:03:12.826
+cherished memories
+
+00:03:12.826 --> 00:03:14.061
+and family recipes,
+
+00:03:14.327 --> 00:03:15.395
+big ideas,
+
+00:03:15.595 --> 00:03:17.330
+blueprints
+and business plans,
+
+00:03:17.330 --> 00:03:18.031
+finances,
+
+00:03:18.031 --> 00:03:19.900
+customer lists and inventories,
+
+00:03:20.567 --> 00:03:21.435
+math homework,
+
+00:03:21.835 --> 00:03:22.869
+dissertations,
+
+00:03:23.437 --> 00:03:25.439
+that one thing you
+want no one seeing
+
+00:03:26.239 --> 00:03:28.341
+and the billions of things
+people and businesses
+
+00:03:28.341 --> 00:03:31.011
+use Google for every day.
+
+00:03:31.011 --> 00:03:32.179
+[Boy] Happy New Year!
+
+00:03:32.179 --> 00:03:33.713
+[Narrator] Now, how
+does someone begin
+
+00:03:33.713 --> 00:03:36.416
+to handle the pressure
+of defending all of that?
+
+00:03:37.684 --> 00:03:42.022 align:right size:35% position:95%,middle
+[Royal] I started
+cultivating bonsai trees.
+
+00:03:42.522 --> 00:03:44.191
+[Narrator] This is Royal Hansen.
+
+00:03:44.191 --> 00:03:47.227
+When he is not calming his
+nerves with the art of bonsai,
+
+00:03:47.227 --> 00:03:48.462
+he's running the entire
+
+00:03:48.462 --> 00:03:51.565
+ Privacy, Safety and Security
+Team at Google.
+
+00:03:51.932 --> 00:03:53.633
+Royal and his team
+are responsible
+
+00:03:53.633 --> 00:03:56.470
+for the security of
+every single Google user,
+
+00:03:56.470 --> 00:03:58.371
+which is something he
+doesn't take lightly.
+
+00:03:59.206 --> 00:04:02.809
+[Royal] Your interaction
+with YouTube, Maps,
+
+00:04:02.809 --> 00:04:07.114
+websites and companies, it's
+literally the way you know
+
+00:04:07.114 --> 00:04:09.583
+and live your life
+day in and day out.
+
+00:04:09.583 --> 00:04:12.752
+There's an enormous
+responsibility on us
+
+00:04:13.386 --> 00:04:15.288
+to protect user data,
+
+00:04:15.288 --> 00:04:17.090
+keep it private.
+
+00:04:17.090 --> 00:04:19.759
+And keeping it private
+means keeping it safe.
+
+00:04:19.759 --> 00:04:21.895
+[Narrator] And to keep
+all that information safe
+
+00:04:21.895 --> 00:04:24.431
+you need more than an
+ordinary fire department.
+
+00:04:24.431 --> 00:04:26.066
+Because, well—
+
+00:04:26.066 --> 00:04:28.468 align:right size:35% position:95%,middle
+[Fatima] Right now there
+are thousands of attacks
+
+00:04:28.468 --> 00:04:31.138 align:right size:35% position:95%,middle
+being launched against Google
+and against Google customers.
+
+00:04:31.605 --> 00:04:33.140
+[Narrator] This
+is Fatima Rivera.
+
+00:04:33.140 --> 00:04:34.808
+She leads a team
+that specializes
+
+00:04:34.808 --> 00:04:36.643
+in detecting all those attacks.
+
+00:04:37.244 --> 00:04:39.346
+Every single one of them.
+
+00:04:39.346 --> 00:04:41.982
+Each with the potential
+to start a fire.
+
+00:04:41.982 --> 00:04:43.350
+[Fatima] There is no break.
+
+00:04:43.350 --> 00:04:45.752
+These attackers that
+are all over the world
+
+00:04:45.752 --> 00:04:47.287
+are highly skilled.
+
+00:04:47.287 --> 00:04:48.922
+It's their job
+
+00:04:48.922 --> 00:04:52.259
+24/7 to try to break
+into places like Google.
+
+00:04:53.260 --> 00:04:58.265
+[Tim] Google is a target of
+attack by literally everybody.
+
+00:04:58.965 --> 00:05:01.034 align:right size:35% position:95%,middle
+[Narrator] You probably
+remember Tim Nguyen
+
+00:05:01.034 --> 00:05:02.936 align:right size:35% position:95%,middle
+[Tim voiceover] Hi, this
+is Tim. How can I help?
+
+00:05:02.936 --> 00:05:05.872 align:right size:35% position:95%,middle
+[Narrator] He may run one of
+Google's detection teams now
+
+00:05:05.872 --> 00:05:07.440
+but he first got his feet wet
+
+00:05:07.440 --> 00:05:09.209
+during the single
+greatest digital fire
+
+00:05:09.209 --> 00:05:11.845
+ever to hit Google:
+Operation Aurora.
+
+00:05:11.845 --> 00:05:14.014
+[Tim] All you really
+need is one hook,
+
+00:05:14.014 --> 00:05:15.782
+and you could do
+some real damage.
+
+00:05:18.118 --> 00:05:20.654
+[Narrator] And in January 2021,
+
+00:05:20.654 --> 00:05:22.022
+a group of digital arsonists
+
+00:05:22.022 --> 00:05:24.624
+started shooting sparks
+across the internet
+
+00:05:24.624 --> 00:05:26.626
+trying to get a fire to ignite.
+
+00:05:26.626 --> 00:05:29.296 align:right size:35% position:95%,middle
+The Threat Analysis Group
+was watching closely.
+
+00:05:29.296 --> 00:05:31.464 align:right size:35% position:95%,middle
+[Shane] We started
+seeing North Korea
+
+00:05:31.464 --> 00:05:34.501 align:right size:35% position:95%,middle
+who instead of targeting
+their normal targets,
+
+00:05:34.501 --> 00:05:38.238
+which is generally, governments
+and cryptocurrency,
+
+00:05:38.238 --> 00:05:41.808
+they were starting to directly
+trick security researchers.
+
+00:05:41.808 --> 00:05:44.844
+[Narrator] Out of all the
+possible targets to attack
+
+00:05:44.844 --> 00:05:47.747
+the North Korean government
+took aim at the very people
+
+00:05:47.747 --> 00:05:50.684
+trying to keep the internet
+safe from attackers.
+
+00:05:50.684 --> 00:05:52.319
+[♪ "Trust in Me"
+by Etta James ♪]
+
+00:05:52.319 --> 00:05:55.088
+So how do you hack an expert?
+
+00:05:55.855 --> 00:05:58.658
+Well, you start with
+a convincing name.
+
+00:05:58.658 --> 00:06:00.360
+Nothing too generic.
+
+00:06:01.761 --> 00:06:02.362
+Ugh...
+
+00:06:02.362 --> 00:06:03.763
+too obscure.
+
+00:06:04.097 --> 00:06:05.732
+Yeah. Carter.
+
+00:06:06.866 --> 00:06:08.668
+Now, what does Carter look like?
+
+00:06:10.604 --> 00:06:13.340
+There. That could be a Carter.
+
+00:06:13.340 --> 00:06:17.043
+♪ Why don't you,
+you trust me? ♪
+
+00:06:17.043 --> 00:06:18.712
+[Narrator] Hmm…
+Let’s put him at DEF CON.
+
+00:06:18.712 --> 00:06:23.717
+♪ Oh, we can get along,
+we can get along ♪
+
+00:06:24.451 --> 00:06:27.354
+♪ if only you trust in me ♪
+
+00:06:27.354 --> 00:06:28.355
+[Narrator] And
+there you have it.
+
+00:06:29.556 --> 00:06:31.558
+Meet Carter Edwards.
+
+00:06:31.558 --> 00:06:34.628
+[Shane] They created fake
+social media profiles,
+
+00:06:34.628 --> 00:06:36.062
+some websites,
+
+00:06:36.062 --> 00:06:38.098
+they created what
+looked like a blog.
+
+00:06:38.098 --> 00:06:41.768
+♪ Why don't you trust in me? ♪
+
+00:06:41.768 --> 00:06:43.703
+[Shane] Trying to sort of
+like build up this reputation,
+
+00:06:43.703 --> 00:06:46.373
+so they look like a fellow
+security researcher.
+
+00:06:46.373 --> 00:06:47.607
+[Narrator] The North
+Korean government
+
+00:06:47.607 --> 00:06:50.577
+fabricated a security
+researcher out of nothing.
+
+00:06:50.877 --> 00:06:53.146
+But they didn't stop
+at Carter Edwards.
+
+00:06:53.146 --> 00:06:55.815
+There was James Willy,
+Billy Brown,
+
+00:06:55.815 --> 00:06:58.618
+Zhang Guo,
+Piper Webster.
+
+00:06:58.618 --> 00:07:00.553
+North Korea built an entire army
+
+00:07:00.553 --> 00:07:02.389
+of fake security researchers
+
+00:07:02.389 --> 00:07:04.324
+and deployed them
+across the internet
+
+00:07:04.324 --> 00:07:07.227
+to become trusted members
+of the security community.
+
+00:07:07.227 --> 00:07:09.796
+[Tim] The information security
+community is fairly small.
+
+00:07:09.796 --> 00:07:13.233
+When you gain some
+notoriety in the community,
+
+00:07:13.233 --> 00:07:15.602
+it's easier to get that
+hook into other people.
+
+00:07:15.969 --> 00:07:17.070
+[Shane] When they
+were emailing or
+
+00:07:17.070 --> 00:07:18.605
+contacting these researchers,
+
+00:07:18.605 --> 00:07:20.940
+they'd start this
+conversation and they'd say,
+
+00:07:20.940 --> 00:07:23.777
+"Hey, come check out this
+great exploit I found.
+
+00:07:23.777 --> 00:07:24.944
+Can you help me look at it?"
+
+00:07:24.944 --> 00:07:28.748
+[distorted hissing]
+
+00:07:28.748 --> 00:07:30.750 align:right size:35% position:95%,middle
+[Toni] And then what
+they would try and do...
+
+00:07:30.750 --> 00:07:32.319 align:right size:35% position:95%,middle
+establish a rapport,
+
+00:07:32.319 --> 00:07:34.321
+talk about what they
+were working on.
+
+00:07:34.321 --> 00:07:37.190
+[Narrator] But this wasn't
+just water cooler small talk.
+
+00:07:37.190 --> 00:07:38.925
+These were calculated
+conversations
+
+00:07:38.925 --> 00:07:40.360
+about obscure topics
+
+00:07:40.360 --> 00:07:43.096
+that only security
+researchers care about.
+
+00:07:43.496 --> 00:07:45.365 align:right size:35% position:95%,middle
+[Heather] Tricking
+security researchers
+
+00:07:45.365 --> 00:07:47.100 align:right size:35% position:95%,middle
+into visiting their website,
+
+00:07:47.100 --> 00:07:48.968
+and that website would
+have an exploit on it.
+
+00:07:48.968 --> 00:07:49.936
+And that would give them access
+
+00:07:49.936 --> 00:07:51.438
+to the researcher's machine.
+
+00:07:51.438 --> 00:07:53.773
+Guess what's on the
+researcher's machine?
+
+00:07:53.773 --> 00:07:55.809
+Really awesome
+security research.
+
+00:07:55.809 --> 00:07:58.678
+[Narrator] That research was
+highly coveted information,
+
+00:07:58.678 --> 00:08:02.048
+like vulnerability libraries
+and indexes of exploits.
+
+00:08:02.048 --> 00:08:03.316
+They were trying to find out
+
+00:08:03.316 --> 00:08:05.719
+how the locksmiths
+made their locks.
+
+00:08:05.719 --> 00:08:08.121
+And how they could break them.
+
+00:08:08.121 --> 00:08:09.656
+[Toni] And one of
+the last people
+
+00:08:09.656 --> 00:08:11.958
+you want having their hands
+on this kind of information
+
+00:08:11.958 --> 00:08:13.860
+is the North Korean government.
+
+00:08:14.294 --> 00:08:16.629
+[Narrator] If a security
+researcher was tricked,
+
+00:08:16.629 --> 00:08:19.866
+North Korea could gain
+unfettered access to the tools
+
+00:08:19.866 --> 00:08:22.569
+needed to steal
+user data, passwords
+
+00:08:22.569 --> 00:08:24.471
+and personal information.
+
+00:08:24.471 --> 00:08:26.539
+They could cause real damage.
+
+00:08:27.841 --> 00:08:30.043
+[Shane] North Korea as
+an actor is really scary,
+
+00:08:30.043 --> 00:08:32.846
+because they have pretty
+good capabilities,
+
+00:08:32.846 --> 00:08:35.482
+but they have no restraint
+in how they use it.
+
+00:08:35.482 --> 00:08:36.983
+[Narrator] So when the
+Threat Analysis Group
+
+00:08:36.983 --> 00:08:40.520
+noticed security researchers
+at Google might be a target,
+
+00:08:40.520 --> 00:08:41.988
+they had to investigate.
+
+00:08:41.988 --> 00:08:45.158
+[Tim] I think we all
+took a pause and we knew
+
+00:08:45.158 --> 00:08:47.160
+we really have to
+answer that question of
+
+00:08:47.160 --> 00:08:48.762
+is Google affected by this?
+
+00:08:49.429 --> 00:08:51.097
+[Matt] When we
+investigated further,
+
+00:08:51.097 --> 00:08:54.167
+we found attacks against
+Google's security researchers.
+
+00:08:54.167 --> 00:08:55.568
+[Narrator] The North
+Korean attackers
+
+00:08:55.568 --> 00:08:57.737
+had been messaging
+Google researchers,
+
+00:08:57.737 --> 00:09:00.507
+and some even started
+to gain their trust.
+
+00:09:00.507 --> 00:09:02.208
+[Matt] We had a conversation
+with the Googlers
+
+00:09:02.208 --> 00:09:04.444
+who potentially interacted
+with the attackers.
+
+00:09:04.444 --> 00:09:06.346
+We said, "Hey, have
+you seen this person?"
+
+00:09:06.346 --> 00:09:07.781
+And we held up the milk jug.
+
+00:09:07.781 --> 00:09:09.449
+[Director] Have you
+talked to Piper Webster?
+
+00:09:09.449 --> 00:09:11.184
+[Heather] Piper Webster?
+I don't know.
+
+00:09:11.184 --> 00:09:12.285
+[Director] How about
+Zhang Guo?
+
+00:09:12.519 --> 00:09:12.886
+[Matt] Nope.
+
+00:09:12.886 --> 00:09:13.686
+[Director] James Willy?
+
+00:09:13.686 --> 00:09:14.687
+[Heather] I don't
+know James Willy.
+
+00:09:14.687 --> 00:09:15.622
+[Director] Billy Brown?
+
+00:09:15.622 --> 00:09:16.189
+[Matt] Nope.
+
+00:09:16.189 --> 00:09:16.923
+[Narrator] But then—
+
+00:09:16.923 --> 00:09:18.725
+[Matt] Yes, they had
+been interacting.
+
+00:09:18.725 --> 00:09:20.193
+[Narrator] A Google
+employee confirmed
+
+00:09:20.193 --> 00:09:22.462
+they'd been messaging
+one of the attackers.
+
+00:09:22.862 --> 00:09:24.464
+Carter Edwards.
+
+00:09:24.464 --> 00:09:24.898
+[wink chime]
+
+00:09:25.565 --> 00:09:28.268
+That's the spark. It's
+time to sound the alarm.
+
+00:09:28.268 --> 00:09:29.235
+[fire alarm rings]
+
+00:09:29.235 --> 00:09:30.737
+[Matt] I view us
+as a lot like
+
+00:09:30.737 --> 00:09:31.938
+the 911 system.
+[♪ anthemic music ♪]
+
+00:09:31.938 --> 00:09:35.041
+We can be a full 24-hour,
+7 day a week
+
+00:09:35.041 --> 00:09:36.576
+massive force
+
+00:09:36.576 --> 00:09:38.278
+against whatever it
+is that we're facing.
+
+00:09:38.278 --> 00:09:39.879
+[Narrator] Their first move,
+
+00:09:39.879 --> 00:09:40.947
+analyze the breach
+
+00:09:40.947 --> 00:09:44.050
+to understand what kind of
+fire they're dealing with.
+
+00:09:44.050 --> 00:09:46.052
+[Matt] We do a complete
+forensic analysis
+
+00:09:46.052 --> 00:09:47.287
+on the workstation
+of the Googler,
+
+00:09:47.754 --> 00:09:49.622
+we have people that
+understand attack code.
+
+00:09:49.622 --> 00:09:51.090
+They reverse it.
+
+00:09:51.090 --> 00:09:54.394
+They provide us with signals
+that we can look for elsewhere.
+
+00:09:54.394 --> 00:09:57.096
+Who on the internet does
+this malicious code talk to?
+
+00:09:57.096 --> 00:09:59.065
+What domain names does it use?
+
+00:09:59.065 --> 00:10:01.901
+What does it do to the system
+while it's embedding itself?
+
+00:10:01.901 --> 00:10:03.570
+[Narrator] That initial
+breach allows them
+
+00:10:03.570 --> 00:10:06.573
+to identify the mechanics
+of the North Korean attack.
+
+00:10:07.273 --> 00:10:09.476
+But is this breach the only one?
+
+00:10:09.476 --> 00:10:12.579
+Or have the North Korean
+attackers found another way in?
+
+00:10:15.949 --> 00:10:18.418
+[♪ soft music ♪]
+
+00:10:19.519 --> 00:10:21.521 align:right size:35% position:95%,middle
+This is Alex Stamos.
+
+00:10:21.521 --> 00:10:24.624 align:right size:35% position:95%,middle
+He's the director of the
+Stanford Internet Observatory,
+
+00:10:24.624 --> 00:10:28.194
+a research program devoted
+to studying safety online.
+
+00:10:28.194 --> 00:10:30.430
+Knowing the scope of
+Google’s cybersecurity
+
+00:10:30.430 --> 00:10:31.764
+comes with a job.
+
+00:10:31.764 --> 00:10:33.633
+[Alex] When you're defending
+millions of computers
+
+00:10:33.633 --> 00:10:35.702
+from tens of
+thousands of attackers
+
+00:10:35.702 --> 00:10:39.138
+you have to have a huge amount
+of data at your fingertips,
+
+00:10:39.138 --> 00:10:40.940
+but then also the ability
+to sift through it
+
+00:10:40.940 --> 00:10:42.308
+really, really quickly.
+
+00:10:42.308 --> 00:10:43.943
+Google's Detection and
+Response Team
+
+00:10:43.943 --> 00:10:45.345
+has been at the forefront
+
+00:10:45.345 --> 00:10:47.780
+of using big data tooling
+
+00:10:47.780 --> 00:10:49.782
+to gather up petabytes
+and petabytes
+
+00:10:49.782 --> 00:10:51.284
+of security relevant data
+
+00:10:51.284 --> 00:10:53.553
+and to very quickly
+look for anomalies.
+
+00:10:53.987 --> 00:10:55.822
+[Matt] Once we have indicators
+
+00:10:55.822 --> 00:10:57.957
+from that one laptop
+we've analyzed—
+
+00:10:57.957 --> 00:10:59.526
+[Tim] We run what's
+called the fleet check,
+
+00:10:59.526 --> 00:11:02.829
+which is, checking literally
+every single machine
+
+00:11:02.829 --> 00:11:04.797
+for these types of indicators.
+
+00:11:04.797 --> 00:11:05.798
+[Narrator] Every.
+
+00:11:05.798 --> 00:11:06.833
+Single.
+
+00:11:06.833 --> 00:11:08.301
+Google machine.
+
+00:11:08.301 --> 00:11:10.203
+Every server and every computer
+
+00:11:10.203 --> 00:11:12.171
+on Google's internal network.
+
+00:11:12.171 --> 00:11:13.406
+[Matt] We find
+any other computer
+
+00:11:13.406 --> 00:11:15.742
+that has downloaded
+the same package,
+
+00:11:15.742 --> 00:11:17.510
+executed something
+similar to it,
+
+00:11:17.510 --> 00:11:19.379
+executed something
+from the same person,
+
+00:11:19.379 --> 00:11:21.981
+and all of the ways that it
+possibly could have made its way
+
+00:11:21.981 --> 00:11:23.883
+into Google, we can
+look for all of those.
+
+00:11:24.317 --> 00:11:25.518
+[Narrator] They take
+all the evidence
+
+00:11:25.518 --> 00:11:27.086
+from the initial breach,
+
+00:11:27.086 --> 00:11:29.989
+the code signatures, domain
+names and IP addresses.
+
+00:11:29.989 --> 00:11:30.857
+[indistinct talking]
+
+00:11:30.857 --> 00:11:32.759
+And run them through
+the automated systems
+
+00:11:32.759 --> 00:11:35.061
+that scan the entire
+Google network.
+
+00:11:35.662 --> 00:11:36.596
+[Tim] From the billions of logs
+
+00:11:36.596 --> 00:11:37.764
+we'll start to pattern match
+
+00:11:37.764 --> 00:11:40.700
+against our many
+thousands of signals.
+
+00:11:40.700 --> 00:11:44.404
+It actually really boils down
+to a very small number
+
+00:11:44.404 --> 00:11:45.705
+of what we call true positives,
+
+00:11:45.705 --> 00:11:48.408
+and that's where we see
+something bad happening.
+
+00:11:48.408 --> 00:11:51.344
+And from there a human
+being will start to analyze
+
+00:11:51.344 --> 00:11:52.412
+and dig deeper.
+
+00:11:52.779 --> 00:11:55.415
+[Matt] Watching analysts
+build a cohesive picture
+
+00:11:55.415 --> 00:11:57.383
+of what happened and
+when, it's like watching
+
+00:11:57.383 --> 00:11:59.586
+one of those professional
+Rubik's Cube solvers at work.
+
+00:12:00.520 --> 00:12:01.888
+It's just this
+jumble of garbage,
+
+00:12:01.888 --> 00:12:03.856
+and then these nimble
+hands are working,
+
+00:12:03.856 --> 00:12:06.359
+and then suddenly it's clear.
+
+00:12:06.359 --> 00:12:08.294
+There's this clear
+picture of what happened.
+
+00:12:08.962 --> 00:12:11.864
+They were gaining a foothold
+on a Googler's machine.
+
+00:12:11.864 --> 00:12:14.367
+We actually do
+find malicious code
+
+00:12:14.367 --> 00:12:16.436
+that the attacker has been
+serving to the Googler.
+
+00:12:17.770 --> 00:12:19.772
+[Fatima] We assume the
+worst case scenario.
+
+00:12:19.772 --> 00:12:22.308
+So there's definitely
+that moment of panic
+
+00:12:22.308 --> 00:12:23.476
+where you just don't know.
+
+00:12:23.476 --> 00:12:24.978
+It's all the unknown.
+
+00:12:25.378 --> 00:12:28.247
+But you have to
+reel yourself in.
+
+00:12:28.247 --> 00:12:32.085
+You really cannot think properly
+and take the right steps
+
+00:12:32.085 --> 00:12:33.286
+if you're panicked.
+
+00:12:33.286 --> 00:12:34.988
+[Narrator] Sparks are
+starting to catch.
+
+00:12:34.988 --> 00:12:36.155
+The North Korean government
+
+00:12:36.155 --> 00:12:38.625
+has compromised
+a second machine.
+
+00:12:38.625 --> 00:12:41.060
+These hackers are
+fast and precise.
+
+00:12:41.327 --> 00:12:43.596
+If they get further
+inside Google,
+
+00:12:43.596 --> 00:12:45.131
+who knows what they could do.
+
+00:12:45.732 --> 00:12:48.101
+It's time to start
+putting this fire out.
+
+00:12:48.101 --> 00:12:49.235
+[Commentator] This
+calls for precision
+
+00:12:49.235 --> 00:12:50.603
+and fire fighting teamwork.
+
+00:12:50.603 --> 00:12:52.672
+Wasted seconds
+could prove fatal.
+
+00:12:52.672 --> 00:12:56.943
+[Tim] The next step is to
+hunt for where the attacker
+
+00:12:56.943 --> 00:12:58.678
+may still be on the network.
+
+00:12:58.678 --> 00:13:01.147
+Part of that is not
+letting the attacker know
+
+00:13:01.147 --> 00:13:02.148
+that you're onto them.
+
+00:13:02.148 --> 00:13:03.683
+The one thing we don't do
+
+00:13:03.683 --> 00:13:06.085
+is we don't start to shut
+down machines right away.
+
+00:13:06.085 --> 00:13:07.587
+[Fatima] We don't
+want them to pivot.
+
+00:13:07.587 --> 00:13:09.856
+We don't want them to use a
+different attack technique
+
+00:13:09.856 --> 00:13:11.024
+than what we know.
+
+00:13:11.024 --> 00:13:13.192
+So the goal when we're
+hunting them down
+
+00:13:13.192 --> 00:13:17.030
+is that we're keeping up
+pace and really luring them
+
+00:13:17.030 --> 00:13:20.633
+into a position that
+allows us to block them out
+
+00:13:20.633 --> 00:13:21.634
+in one step.
+
+00:13:21.968 --> 00:13:24.170
+[Matt] Once we're certain
+about where they've been,
+
+00:13:24.170 --> 00:13:26.372
+that's when we
+start to act in ways
+
+00:13:26.372 --> 00:13:28.007
+that are visible
+to the attacker.
+
+00:13:30.009 --> 00:13:31.511
+[Fatima] We're
+gonna box them in.
+
+00:13:31.511 --> 00:13:32.679
+[Tim] We'll start to try
+
+00:13:32.679 --> 00:13:34.714
+and cut off their
+connections. And then—
+
+00:13:34.714 --> 00:13:37.216
+[Matt] We yank the rug out
+from them all at once,
+
+00:13:37.216 --> 00:13:40.353
+all within the same
+short period of time
+
+00:13:40.353 --> 00:13:42.355
+by a group of people
+acting in concert.
+
+00:13:42.355 --> 00:13:44.724
+[Narrator] They patch every
+hole the attackers have made.
+
+00:13:44.724 --> 00:13:47.160
+Sometimes that's all it
+takes to seal them off.
+
+00:13:47.160 --> 00:13:49.128
+But in the case of
+an advanced threat,
+
+00:13:49.128 --> 00:13:50.797
+like the North
+Korean government—
+
+00:13:50.797 --> 00:13:52.632
+[Tim] The only way to assure
+
+00:13:52.632 --> 00:13:54.634
+that a threat does
+not exist anymore
+
+00:13:54.634 --> 00:13:58.838
+is by actually having a fresh
+installation on that machine.
+
+00:13:58.838 --> 00:14:00.640
+[Fatima] We have to burn
+it all down to the ground
+
+00:14:00.640 --> 00:14:02.308
+and start from scratch.
+
+00:14:02.308 --> 00:14:03.309
+[Matt] Burn it down.
+
+00:14:03.309 --> 00:14:05.511
+Why take the risk that
+you missed a back door?
+
+00:14:05.511 --> 00:14:06.813
+[Tim] I don't like
+burning things down
+
+00:14:06.813 --> 00:14:08.481
+because it's really disruptive.
+
+00:14:08.481 --> 00:14:09.916
+It's a bad day for everybody.
+
+00:14:09.916 --> 00:14:12.218
+[Matt] I love it. [laughs]
+
+00:14:12.218 --> 00:14:13.553
+[explosion booms]
+
+00:14:13.553 --> 00:14:14.854
+[explosion booms]
+[laughs]
+
+00:14:14.854 --> 00:14:16.189
+[Narrator] And just like that,
+
+00:14:16.189 --> 00:14:19.192
+the North Korean attackers
+were kicked out of Google.
+
+00:14:19.192 --> 00:14:21.761
+A campaign that waged
+for weeks was foiled
+
+00:14:21.761 --> 00:14:25.031
+by the Detection and Response
+Team in just a few hours.
+
+00:14:25.331 --> 00:14:27.500
+Only two computers
+were compromised.
+
+00:14:27.500 --> 00:14:30.336
+No users were affected,
+and thankfully—
+
+00:14:30.336 --> 00:14:32.872
+[Fatima] They weren't
+able to cause any damage.
+
+00:14:32.872 --> 00:14:35.108
+That's a good moment when
+you realize that everything
+
+00:14:35.108 --> 00:14:37.744
+that you have put in
+place, all the hard work,
+
+00:14:37.744 --> 00:14:38.845
+that it just pays off.
+
+00:14:39.345 --> 00:14:41.114
+[Narrator] And to
+really seal the deal—
+
+00:14:41.114 --> 00:14:43.116
+[Matt] We were able to
+make sure we take the tools
+
+00:14:43.116 --> 00:14:43.783
+and the indicators
+
+00:14:43.783 --> 00:14:45.518
+and roll them back into
+our detection pipeline.
+
+00:14:45.718 --> 00:14:47.286
+[Narrator] Every
+piece of evidence,
+
+00:14:47.286 --> 00:14:49.922
+the URLs, domain names
+and code signatures
+
+00:14:49.922 --> 00:14:51.457
+from the North Korean attack
+
+00:14:51.457 --> 00:14:54.460
+were loaded back into
+Google's detection system.
+
+00:14:54.460 --> 00:14:56.462
+With every fire
+the team puts out
+
+00:14:56.462 --> 00:14:58.865
+Google's defenses
+become stronger.
+
+00:14:58.865 --> 00:15:01.234
+[Alex] The difference
+between a company that can
+
+00:15:01.234 --> 00:15:02.201
+protect itself
+
+00:15:02.201 --> 00:15:03.569
+versus the ones that can't,
+
+00:15:03.569 --> 00:15:07.073
+is having a team that
+is constantly responding
+
+00:15:07.073 --> 00:15:09.976
+and assuming that the
+attackers are on the inside
+
+00:15:09.976 --> 00:15:12.612
+instead of just building
+a hard outside shell
+
+00:15:12.612 --> 00:15:14.113
+and pretending that
+that's good enough
+
+00:15:14.113 --> 00:15:15.882
+to keep people from getting in.
+
+00:15:15.882 --> 00:15:18.484
+[Narrator] But these responders
+don't just answer the call
+
+00:15:18.484 --> 00:15:21.154
+when Google's own
+walls are threatened.
+
+00:15:21.154 --> 00:15:22.722
+The teams and
+sophisticated tools
+
+00:15:22.722 --> 00:15:25.258
+protecting against the
+North Korean attackers
+
+00:15:25.258 --> 00:15:28.327
+are the same ones protecting
+you and your data.
+
+00:15:28.327 --> 00:15:30.663
+[Royal] Every year the
+amount of data created,
+
+00:15:30.663 --> 00:15:32.398
+the amount of digital journeys
+
+00:15:32.398 --> 00:15:34.167
+that a consumer will
+have on the internet
+
+00:15:34.167 --> 00:15:36.969
+have just exploded, and with it
+
+00:15:36.969 --> 00:15:38.437
+the opportunity for hacking.
+
+00:15:38.771 --> 00:15:41.440
+[Tim] The North Korea attack,
+it really reiterated to me
+
+00:15:41.440 --> 00:15:43.075
+the importance of our mission.
+
+00:15:43.075 --> 00:15:46.445
+If you interact with
+Google in any way,
+
+00:15:46.445 --> 00:15:50.283
+we are here to keep your
+information, your data safe
+
+00:15:50.283 --> 00:15:53.653
+from those that would
+sometimes wish to do you harm.
+
+00:15:54.854 --> 00:15:56.689
+[Matt] We really do
+care about your data
+
+00:15:56.689 --> 00:15:58.357
+being protected so much
+
+00:15:58.357 --> 00:16:00.092
+that we have the fire department
+
+00:16:00.092 --> 00:16:02.094
+for your systems and your data.
+
+00:16:02.094 --> 00:16:04.130
+And we're always on duty.
+
+00:16:09.969 --> 00:16:12.305
+[♪ anthemic music ♪]
+
+00:16:12.305 --> 00:16:14.707
+[Daniel] My team likes
+to set stuff on fire.
+
+00:16:14.707 --> 00:16:16.309
+[Heather] The Red Team
+are my favorite enemies.
+
+00:16:16.309 --> 00:16:19.011
+[Daniel] We basically take
+the role of an attacker
+
+00:16:19.011 --> 00:16:20.446
+and hack into Google.
+
+00:16:20.446 --> 00:16:22.215
+[Niru] The car companies
+crash their cars
+
+00:16:22.215 --> 00:16:23.516
+to make sure they're safe.
+
+00:16:23.883 --> 00:16:24.617
+So do we.
+
+00:16:24.617 --> 00:16:25.685
+[Daniel] That you would see for
+
+00:16:25.685 --> 00:16:27.320
+like about a 10th of a second
+
+00:16:27.320 --> 00:16:29.555
+a black window flash
+up on the screen
+
+00:16:29.555 --> 00:16:31.224
+[beep]
+and that is that.
+
+00:16:31.224 --> 00:16:33.192
+[Niru] Yes, we are in! [laughs]

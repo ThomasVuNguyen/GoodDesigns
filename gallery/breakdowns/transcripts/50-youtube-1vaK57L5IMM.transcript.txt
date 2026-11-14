@@ -1,0 +1,31 @@
+[00:00:00] With all the moving parts for a bakery and a coffee shop,
+[00:00:04] it's quite challenging to operate globally.
+[00:00:07] We do have a pretty big operation, our roastery, which is here in Brooklyn.
+[00:00:11] We also have our headquarters in Denmark.
+[00:00:13] So we are coordinating a lot between multiple locations,
+[00:00:17] a lot of large teams, a lot of different departments.
+[00:00:20] And a lot of that is done in Notion.
+[00:00:23] With our new upcoming opening in Chelsea,
+[00:00:26] the critical path or the roadmap, we manage by Notion.
+[00:00:29] And there's so many moving parts to this.
+[00:00:31] Every week we have a huddle within the team, project managers, architects,
+[00:00:35] and I manage all the punch lists via Notion.
+[00:00:38] Actually, I was the worst in the team when we introduced Notion
+[00:00:43] because I default to my old ways.
+[00:00:46] I'm not going to say what my old ways are in managing things,
+[00:00:49] which is a Google sheet.
+[00:00:51] I'm also not the most tech savvy, but it is actually user-friendly
+[00:00:54] when you start really looking into it and understanding it.
+[00:00:58] And now you have that AI feature, which you just type what you want
+[00:01:02] and then it makes it happen for you.
+[00:01:04] Everything is so centralized and it's really easy to find things
+[00:01:07] and really easy to contact people and really easy to track everything that you're doing.
+[00:01:11] It does make it a lot easier to be collaborating with other team members.
+[00:01:15] You don't go into an opening thinking,
+[00:01:17] everything's going to be perfect.
+[00:01:19] Something's going to go wrong.
+[00:01:20] It's just all about being ready.
+[00:01:22] Notion becomes the resource for truth for us
+[00:01:26] because that's where we feed all the information
+[00:01:28] and that's where we also pull the information from.
+[00:01:30] And that's how we stay consistent.

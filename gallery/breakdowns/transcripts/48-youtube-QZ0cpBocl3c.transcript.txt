@@ -1,0 +1,434 @@
+[00:00:00] [♪ "Danse Macabre" by Camille Saint-Saens ♪]
+[00:00:01] [Narrator] In 1736, a young Benjamin Franklin
+[00:00:04] established the first volunteer fire department,
+[00:00:07] before America had even declared independence.
+[00:00:10] The first automatic sprinkler system
+[00:00:12] was invented in 1872
+[00:00:14] [sprinkler pops]
+[00:00:15] and perfected a decade later.
+[00:00:17] After 100 years, the smoke alarm came along,
+[00:00:20] shortening the time for fire detection dramatically.
+[00:00:22] [fire alarm beeping]
+[00:00:24] Humans have created measures like these
+[00:00:26] to protect those things that are most precious to us:
+[00:00:29] our homes,
+[00:00:30] valuables,
+[00:00:30] vital documents,
+[00:00:32] irreplaceable relics,
+[00:00:33] priceless memories.
+[00:00:35] But today, many of our most precious items
+[00:00:37] have moved online.
+[00:00:41] So what do you do to stop digital fires?
+[00:00:44] The code, viruses, malware and suspicious links
+[00:00:47] sent by arsonists that ignite with a click?
+[00:00:51] You do what you've always done.
+[00:00:53] You call in the experts—
+[00:00:55] the people trained in putting digital fires out.
+[00:01:03] [♪ anthemic music ♪]
+[00:01:04] When it's your job to keep billions of people safe online,
+[00:01:08] you have to live and breathe
+[00:01:10] and see the internet just like the attackers do,
+[00:01:14] because the only way to stop a hacker
+[00:01:17] is to think like one.
+[00:01:38] [Matt] I think if you were to ask any of my coworkers
+[00:01:40] they would probably tell you that I use
+[00:01:41] fire department analogies a little overbearingly.
+[00:01:44] [Narrator] Meet Matt Linton.
+[00:01:45] He heads up a security response team at Google.
+[00:01:48] If you asked him what his team does,
+[00:01:50] he often starts at the very beginning.
+[00:01:52] [Matt] When I was a kid,
+[00:01:53] I wanted nothing to do with computers as a career.
+[00:01:55] I had a laser focus on emergency response.
+[00:01:58] I got my EMT license at 16,
+[00:02:00] technically, before I got my driver's license.
+[00:02:04] [sunglass chime]
+[00:02:05] From there I got my firefighting certification,
+[00:02:08] my hazardous material certification.
+[00:02:10] And I just kept going.
+[00:02:15] [Narrator] Before coming to Google,
+[00:02:16] Matt clocked over a decade
+[00:02:18] conducting specialized rescue missions,
+[00:02:20] responding to hazardous disasters
+[00:02:22] and fighting fires at NASA.
+[00:02:25] Yep... NASA.
+[00:02:28] But what does firefighting have to do with cybersecurity?
+[00:02:31] [Matt] A way that security at Google
+[00:02:32] is an awful lot like fire department response...
+[00:02:35] You have a fire department
+[00:02:36] because even though we have
+[00:02:38] fire sprinklers,
+[00:02:39] fire alarms,
+[00:02:40] fire inspections
+[00:02:41] to prevent fires from breaking out,
+[00:02:43] eventually protections fail and people make mistakes.
+[00:02:47] You need people whose expertise and specialty
+[00:02:49] is in responding to bad things once they've happened,
+[00:02:51] specifically dealing with the problem at hand
+[00:02:53] and not causing a lot of collateral damage.
+[00:02:55] [Narrator] Just as communities have fire departments
+[00:02:57] to protect those things that are most precious to us,
+[00:03:00] Google has its own set of safety measures—
+[00:03:03] the emergency responders, systems and people
+[00:03:06] who are responsible for protecting parts
+[00:03:07] of our digital lives.
+[00:03:09] They protect our childhood photos,
+[00:03:11] cherished memories
+[00:03:12] and family recipes,
+[00:03:14] big ideas,
+[00:03:15] blueprints and business plans,
+[00:03:17] finances,
+[00:03:18] customer lists and inventories,
+[00:03:20] math homework,
+[00:03:21] dissertations,
+[00:03:23] that one thing you want no one seeing
+[00:03:26] and the billions of things people and businesses
+[00:03:28] use Google for every day.
+[00:03:31] [Boy] Happy New Year!
+[00:03:32] [Narrator] Now, how does someone begin
+[00:03:33] to handle the pressure of defending all of that?
+[00:03:37] [Royal] I started cultivating bonsai trees.
+[00:03:42] [Narrator] This is Royal Hansen.
+[00:03:44] When he is not calming his nerves with the art of bonsai,
+[00:03:47] he's running the entire
+[00:03:48] Privacy, Safety and Security Team at Google.
+[00:03:51] Royal and his team are responsible
+[00:03:53] for the security of every single Google user,
+[00:03:56] which is something he doesn't take lightly.
+[00:03:59] [Royal] Your interaction with YouTube, Maps,
+[00:04:02] websites and companies, it's literally the way you know
+[00:04:07] and live your life day in and day out.
+[00:04:09] There's an enormous responsibility on us
+[00:04:13] to protect user data,
+[00:04:15] keep it private.
+[00:04:17] And keeping it private means keeping it safe.
+[00:04:19] [Narrator] And to keep all that information safe
+[00:04:21] you need more than an ordinary fire department.
+[00:04:24] Because, well—
+[00:04:26] [Fatima] Right now there are thousands of attacks
+[00:04:28] being launched against Google and against Google customers.
+[00:04:31] [Narrator] This is Fatima Rivera.
+[00:04:33] She leads a team that specializes
+[00:04:34] in detecting all those attacks.
+[00:04:37] Every single one of them.
+[00:04:39] Each with the potential to start a fire.
+[00:04:41] [Fatima] There is no break.
+[00:04:43] These attackers that are all over the world
+[00:04:45] are highly skilled.
+[00:04:47] It's their job
+[00:04:48] 24/7 to try to break into places like Google.
+[00:04:53] [Tim] Google is a target of attack by literally everybody.
+[00:04:58] [Narrator] You probably remember Tim Nguyen
+[00:05:01] [Tim voiceover] Hi, this is Tim. How can I help?
+[00:05:02] [Narrator] He may run one of Google's detection teams now
+[00:05:05] but he first got his feet wet
+[00:05:07] during the single greatest digital fire
+[00:05:09] ever to hit Google: Operation Aurora.
+[00:05:11] [Tim] All you really need is one hook,
+[00:05:14] and you could do some real damage.
+[00:05:18] [Narrator] And in January 2021,
+[00:05:20] a group of digital arsonists
+[00:05:22] started shooting sparks across the internet
+[00:05:24] trying to get a fire to ignite.
+[00:05:26] The Threat Analysis Group was watching closely.
+[00:05:29] [Shane] We started seeing North Korea
+[00:05:31] who instead of targeting their normal targets,
+[00:05:34] which is generally, governments and cryptocurrency,
+[00:05:38] they were starting to directly trick security researchers.
+[00:05:41] [Narrator] Out of all the possible targets to attack
+[00:05:44] the North Korean government took aim at the very people
+[00:05:47] trying to keep the internet safe from attackers.
+[00:05:50] [♪ "Trust in Me" by Etta James ♪]
+[00:05:52] So how do you hack an expert?
+[00:05:55] Well, you start with a convincing name.
+[00:05:58] Nothing too generic.
+[00:06:01] Ugh...
+[00:06:02] too obscure.
+[00:06:04] Yeah. Carter.
+[00:06:06] Now, what does Carter look like?
+[00:06:10] There. That could be a Carter.
+[00:06:13] ♪ Why don't you, you trust me? ♪
+[00:06:17] [Narrator] Hmm… Let’s put him at DEF CON.
+[00:06:18] ♪ Oh, we can get along, we can get along ♪
+[00:06:24] ♪ if only you trust in me ♪
+[00:06:27] [Narrator] And there you have it.
+[00:06:29] Meet Carter Edwards.
+[00:06:31] [Shane] They created fake social media profiles,
+[00:06:34] some websites,
+[00:06:36] they created what looked like a blog.
+[00:06:38] ♪ Why don't you trust in me? ♪
+[00:06:41] [Shane] Trying to sort of like build up this reputation,
+[00:06:43] so they look like a fellow security researcher.
+[00:06:46] [Narrator] The North Korean government
+[00:06:47] fabricated a security researcher out of nothing.
+[00:06:50] But they didn't stop at Carter Edwards.
+[00:06:53] There was James Willy, Billy Brown,
+[00:06:55] Zhang Guo, Piper Webster.
+[00:06:58] North Korea built an entire army
+[00:07:00] of fake security researchers
+[00:07:02] and deployed them across the internet
+[00:07:04] to become trusted members of the security community.
+[00:07:07] [Tim] The information security community is fairly small.
+[00:07:09] When you gain some notoriety in the community,
+[00:07:13] it's easier to get that hook into other people.
+[00:07:15] [Shane] When they were emailing or
+[00:07:17] contacting these researchers,
+[00:07:18] they'd start this conversation and they'd say,
+[00:07:20] "Hey, come check out this great exploit I found.
+[00:07:23] Can you help me look at it?"
+[00:07:24] [distorted hissing]
+[00:07:28] [Toni] And then what they would try and do...
+[00:07:30] establish a rapport,
+[00:07:32] talk about what they were working on.
+[00:07:34] [Narrator] But this wasn't just water cooler small talk.
+[00:07:37] These were calculated conversations
+[00:07:38] about obscure topics
+[00:07:40] that only security researchers care about.
+[00:07:43] [Heather] Tricking security researchers
+[00:07:45] into visiting their website,
+[00:07:47] and that website would have an exploit on it.
+[00:07:48] And that would give them access
+[00:07:49] to the researcher's machine.
+[00:07:51] Guess what's on the researcher's machine?
+[00:07:53] Really awesome security research.
+[00:07:55] [Narrator] That research was highly coveted information,
+[00:07:58] like vulnerability libraries and indexes of exploits.
+[00:08:02] They were trying to find out
+[00:08:03] how the locksmiths made their locks.
+[00:08:05] And how they could break them.
+[00:08:08] [Toni] And one of the last people
+[00:08:09] you want having their hands on this kind of information
+[00:08:11] is the North Korean government.
+[00:08:14] [Narrator] If a security researcher was tricked,
+[00:08:16] North Korea could gain unfettered access to the tools
+[00:08:19] needed to steal user data, passwords
+[00:08:22] and personal information.
+[00:08:24] They could cause real damage.
+[00:08:27] [Shane] North Korea as an actor is really scary,
+[00:08:30] because they have pretty good capabilities,
+[00:08:32] but they have no restraint in how they use it.
+[00:08:35] [Narrator] So when the Threat Analysis Group
+[00:08:36] noticed security researchers at Google might be a target,
+[00:08:40] they had to investigate.
+[00:08:41] [Tim] I think we all took a pause and we knew
+[00:08:45] we really have to answer that question of
+[00:08:47] is Google affected by this?
+[00:08:49] [Matt] When we investigated further,
+[00:08:51] we found attacks against Google's security researchers.
+[00:08:54] [Narrator] The North Korean attackers
+[00:08:55] had been messaging Google researchers,
+[00:08:57] and some even started to gain their trust.
+[00:09:00] [Matt] We had a conversation with the Googlers
+[00:09:02] who potentially interacted with the attackers.
+[00:09:04] We said, "Hey, have you seen this person?"
+[00:09:06] And we held up the milk jug.
+[00:09:07] [Director] Have you talked to Piper Webster?
+[00:09:09] [Heather] Piper Webster? I don't know.
+[00:09:11] [Director] How about Zhang Guo?
+[00:09:12] [Matt] Nope.
+[00:09:12] [Director] James Willy?
+[00:09:13] [Heather] I don't know James Willy.
+[00:09:14] [Director] Billy Brown?
+[00:09:15] [Matt] Nope.
+[00:09:16] [Narrator] But then—
+[00:09:16] [Matt] Yes, they had been interacting.
+[00:09:18] [Narrator] A Google employee confirmed
+[00:09:20] they'd been messaging one of the attackers.
+[00:09:22] Carter Edwards.
+[00:09:24] [wink chime]
+[00:09:25] That's the spark. It's time to sound the alarm.
+[00:09:28] [fire alarm rings]
+[00:09:29] [Matt] I view us as a lot like
+[00:09:30] the 911 system. [♪ anthemic music ♪]
+[00:09:31] We can be a full 24-hour, 7 day a week
+[00:09:35] massive force
+[00:09:36] against whatever it is that we're facing.
+[00:09:38] [Narrator] Their first move,
+[00:09:39] analyze the breach
+[00:09:40] to understand what kind of fire they're dealing with.
+[00:09:44] [Matt] We do a complete forensic analysis
+[00:09:46] on the workstation of the Googler,
+[00:09:47] we have people that understand attack code.
+[00:09:49] They reverse it.
+[00:09:51] They provide us with signals that we can look for elsewhere.
+[00:09:54] Who on the internet does this malicious code talk to?
+[00:09:57] What domain names does it use?
+[00:09:59] What does it do to the system while it's embedding itself?
+[00:10:01] [Narrator] That initial breach allows them
+[00:10:03] to identify the mechanics of the North Korean attack.
+[00:10:07] But is this breach the only one?
+[00:10:09] Or have the North Korean attackers found another way in?
+[00:10:15] [♪ soft music ♪]
+[00:10:19] This is Alex Stamos.
+[00:10:21] He's the director of the Stanford Internet Observatory,
+[00:10:24] a research program devoted to studying safety online.
+[00:10:28] Knowing the scope of Google’s cybersecurity
+[00:10:30] comes with a job.
+[00:10:31] [Alex] When you're defending millions of computers
+[00:10:33] from tens of thousands of attackers
+[00:10:35] you have to have a huge amount of data at your fingertips,
+[00:10:39] but then also the ability to sift through it
+[00:10:40] really, really quickly.
+[00:10:42] Google's Detection and Response Team
+[00:10:43] has been at the forefront
+[00:10:45] of using big data tooling
+[00:10:47] to gather up petabytes and petabytes
+[00:10:49] of security relevant data
+[00:10:51] and to very quickly look for anomalies.
+[00:10:53] [Matt] Once we have indicators
+[00:10:55] from that one laptop we've analyzed—
+[00:10:57] [Tim] We run what's called the fleet check,
+[00:10:59] which is, checking literally every single machine
+[00:11:02] for these types of indicators.
+[00:11:04] [Narrator] Every.
+[00:11:05] Single.
+[00:11:06] Google machine.
+[00:11:08] Every server and every computer
+[00:11:10] on Google's internal network.
+[00:11:12] [Matt] We find any other computer
+[00:11:13] that has downloaded the same package,
+[00:11:15] executed something similar to it,
+[00:11:17] executed something from the same person,
+[00:11:19] and all of the ways that it possibly could have made its way
+[00:11:21] into Google, we can look for all of those.
+[00:11:24] [Narrator] They take all the evidence
+[00:11:25] from the initial breach,
+[00:11:27] the code signatures, domain names and IP addresses.
+[00:11:29] [indistinct talking]
+[00:11:30] And run them through the automated systems
+[00:11:32] that scan the entire Google network.
+[00:11:35] [Tim] From the billions of logs
+[00:11:36] we'll start to pattern match
+[00:11:37] against our many thousands of signals.
+[00:11:40] It actually really boils down to a very small number
+[00:11:44] of what we call true positives,
+[00:11:45] and that's where we see something bad happening.
+[00:11:48] And from there a human being will start to analyze
+[00:11:51] and dig deeper.
+[00:11:52] [Matt] Watching analysts build a cohesive picture
+[00:11:55] of what happened and when, it's like watching
+[00:11:57] one of those professional Rubik's Cube solvers at work.
+[00:12:00] It's just this jumble of garbage,
+[00:12:01] and then these nimble hands are working,
+[00:12:03] and then suddenly it's clear.
+[00:12:06] There's this clear picture of what happened.
+[00:12:08] They were gaining a foothold on a Googler's machine.
+[00:12:11] We actually do find malicious code
+[00:12:14] that the attacker has been serving to the Googler.
+[00:12:17] [Fatima] We assume the worst case scenario.
+[00:12:19] So there's definitely that moment of panic
+[00:12:22] where you just don't know.
+[00:12:23] It's all the unknown.
+[00:12:25] But you have to reel yourself in.
+[00:12:28] You really cannot think properly and take the right steps
+[00:12:32] if you're panicked.
+[00:12:33] [Narrator] Sparks are starting to catch.
+[00:12:34] The North Korean government
+[00:12:36] has compromised a second machine.
+[00:12:38] These hackers are fast and precise.
+[00:12:41] If they get further inside Google,
+[00:12:43] who knows what they could do.
+[00:12:45] It's time to start putting this fire out.
+[00:12:48] [Commentator] This calls for precision
+[00:12:49] and fire fighting teamwork.
+[00:12:50] Wasted seconds could prove fatal.
+[00:12:52] [Tim] The next step is to hunt for where the attacker
+[00:12:56] may still be on the network.
+[00:12:58] Part of that is not letting the attacker know
+[00:13:01] that you're onto them.
+[00:13:02] The one thing we don't do
+[00:13:03] is we don't start to shut down machines right away.
+[00:13:06] [Fatima] We don't want them to pivot.
+[00:13:07] We don't want them to use a different attack technique
+[00:13:09] than what we know.
+[00:13:11] So the goal when we're hunting them down
+[00:13:13] is that we're keeping up pace and really luring them
+[00:13:17] into a position that allows us to block them out
+[00:13:20] in one step.
+[00:13:21] [Matt] Once we're certain about where they've been,
+[00:13:24] that's when we start to act in ways
+[00:13:26] that are visible to the attacker.
+[00:13:30] [Fatima] We're gonna box them in.
+[00:13:31] [Tim] We'll start to try
+[00:13:32] and cut off their connections. And then—
+[00:13:34] [Matt] We yank the rug out from them all at once,
+[00:13:37] all within the same short period of time
+[00:13:40] by a group of people acting in concert.
+[00:13:42] [Narrator] They patch every hole the attackers have made.
+[00:13:44] Sometimes that's all it takes to seal them off.
+[00:13:47] But in the case of an advanced threat,
+[00:13:49] like the North Korean government—
+[00:13:50] [Tim] The only way to assure
+[00:13:52] that a threat does not exist anymore
+[00:13:54] is by actually having a fresh installation on that machine.
+[00:13:58] [Fatima] We have to burn it all down to the ground
+[00:14:00] and start from scratch.
+[00:14:02] [Matt] Burn it down.
+[00:14:03] Why take the risk that you missed a back door?
+[00:14:05] [Tim] I don't like burning things down
+[00:14:06] because it's really disruptive.
+[00:14:08] It's a bad day for everybody.
+[00:14:09] [Matt] I love it. [laughs]
+[00:14:12] [explosion booms]
+[00:14:13] [explosion booms] [laughs]
+[00:14:14] [Narrator] And just like that,
+[00:14:16] the North Korean attackers were kicked out of Google.
+[00:14:19] A campaign that waged for weeks was foiled
+[00:14:21] by the Detection and Response Team in just a few hours.
+[00:14:25] Only two computers were compromised.
+[00:14:27] No users were affected, and thankfully—
+[00:14:30] [Fatima] They weren't able to cause any damage.
+[00:14:32] That's a good moment when you realize that everything
+[00:14:35] that you have put in place, all the hard work,
+[00:14:37] that it just pays off.
+[00:14:39] [Narrator] And to really seal the deal—
+[00:14:41] [Matt] We were able to make sure we take the tools
+[00:14:43] and the indicators
+[00:14:43] and roll them back into our detection pipeline.
+[00:14:45] [Narrator] Every piece of evidence,
+[00:14:47] the URLs, domain names and code signatures
+[00:14:49] from the North Korean attack
+[00:14:51] were loaded back into Google's detection system.
+[00:14:54] With every fire the team puts out
+[00:14:56] Google's defenses become stronger.
+[00:14:58] [Alex] The difference between a company that can
+[00:15:01] protect itself
+[00:15:02] versus the ones that can't,
+[00:15:03] is having a team that is constantly responding
+[00:15:07] and assuming that the attackers are on the inside
+[00:15:09] instead of just building a hard outside shell
+[00:15:12] and pretending that that's good enough
+[00:15:14] to keep people from getting in.
+[00:15:15] [Narrator] But these responders don't just answer the call
+[00:15:18] when Google's own walls are threatened.
+[00:15:21] The teams and sophisticated tools
+[00:15:22] protecting against the North Korean attackers
+[00:15:25] are the same ones protecting you and your data.
+[00:15:28] [Royal] Every year the amount of data created,
+[00:15:30] the amount of digital journeys
+[00:15:32] that a consumer will have on the internet
+[00:15:34] have just exploded, and with it
+[00:15:36] the opportunity for hacking.
+[00:15:38] [Tim] The North Korea attack, it really reiterated to me
+[00:15:41] the importance of our mission.
+[00:15:43] If you interact with Google in any way,
+[00:15:46] we are here to keep your information, your data safe
+[00:15:50] from those that would sometimes wish to do you harm.
+[00:15:54] [Matt] We really do care about your data
+[00:15:56] being protected so much
+[00:15:58] that we have the fire department
+[00:16:00] for your systems and your data.
+[00:16:02] And we're always on duty.
+[00:16:09] [♪ anthemic music ♪]
+[00:16:12] [Daniel] My team likes to set stuff on fire.
+[00:16:14] [Heather] The Red Team are my favorite enemies.
+[00:16:16] [Daniel] We basically take the role of an attacker
+[00:16:19] and hack into Google.
+[00:16:20] [Niru] The car companies crash their cars
+[00:16:22] to make sure they're safe.
+[00:16:23] So do we.
+[00:16:24] [Daniel] That you would see for
+[00:16:25] like about a 10th of a second
+[00:16:27] a black window flash up on the screen
+[00:16:29] [beep] and that is that.
+[00:16:31] [Niru] Yes, we are in! [laughs]

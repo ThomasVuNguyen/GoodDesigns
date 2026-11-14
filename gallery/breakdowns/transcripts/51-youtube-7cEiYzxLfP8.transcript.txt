@@ -1,0 +1,16 @@
+[00:00:00] We're bringing back a renaissance in stonecraft, de-extincting a craft that has basically just
+[00:00:05] been dying for the last 80 to 100 years. I started carving for four hours a day starting in 2019,
+[00:00:10] learning the hard way with a hammer and chisel. Pretty soon I was wondering how do we speed this
+[00:00:14] up? I realized we could bring robots in to make this happen and we could actually use AI to
+[00:00:19] automate robots. The part we hadn't automated until we were using Notion is how do we get all
+[00:00:23] this stuff into the hands of clients very quickly. Let's look at an example project here and it's
+[00:00:32] actually the one that's right behind me which is recreation of ancient Greek Athena sculpture.
+[00:00:38] Previously somebody has to type up a proposal that takes a long time and what we wanted to do was
+[00:00:47] create an agent that could finish this last step for us. It looks at all the categories that we've
+[00:00:52] broken down. It references that against the opportunity and it references it against a
+[00:00:58] template that we've already created and it rewrites our first draft of what a proposal
+[00:01:04] that will go to the client will look like. The aha moment for us was honestly just using the little
+[00:01:11] agent in the corner. The agent is nine times out of ten able to accomplish exactly what we want
+[00:01:16] rather than constantly switching between programs to try to accomplish tasks. I can find all those
+[00:01:22] answers out honestly within the Notion AI. From the moment a client comes in everything is tracked in
+[00:01:28] Notion we put craftsmen to work working on what they do best which is the craft. Let Notion take care of the rest.

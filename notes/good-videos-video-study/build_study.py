@@ -16,7 +16,7 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 VIDEOS = json.loads((REPO / "gallery/videos.json").read_text())["videos"]
-NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 48)]
+NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 52)]
 # Seconds between library frames. Short clips are sampled more densely than one per second.
 FRAME_STEP = {47: 0.25}
 CURATED_FRAMES = {
@@ -206,13 +206,129 @@ SHOT_NOTES = {
         7.25: "Hard switch to a paper-texture board. Her shot shrinks into a framed card as two AI-built ceramics sites slide in at left.",
         7.75: "The settled layout: two sites stacked at left, her card at right, and the caption 'Both of these websites were built with AI' sets up the tutorial's comparison.",
     },
+    # HACKING GOOGLE EP002: one frame per visual idea across a 16-minute documentary.
+    48: {
+        5: "The cold open starts in history: engraved Victorian firemen in red, the fire-department metaphor set up before a single computer appears.",
+        10: "A sprinkler patent drawing on cream paper. Each invention in the timeline gets its own period material.",
+        30: "The 'precious things' montage: warm, shallow-focus inserts of heirlooms, photos and kids, the things a fire would take.",
+        45: "The spark: an extreme close-up on an email, 'Check out this exploit'. A digital arson that ignites with a click.",
+        50: "The click detonates into a red and pink pixel mosaic, the series' glitch transition.",
+        65: "First look at the set: a subject sits small in front of a huge LED wall showing the red warning triangle.",
+        95: "Episode card in monospace on the dark LED wall, the subject still seated beneath it. Title and interview share one space.",
+        100: "Matt Linton's interview look: standing, mohawk, black tee, flat pale dotted backdrop. The lower third is set in small spaced caps.",
+        120: "His backstory is hung like a gallery: a framed portrait on a mint wall.",
+        130: "Certificates in gilt frames on navy. The camera dollies across each one like a museum wall.",
+        145: "A real résumé screen for the punchline, 'Yep... NASA.'",
+        225: "Royal Hansen introduced through bonsai, the hobby before the job title. Each new voice gets a human detail first.",
+        255: "The internet drawn as a white voxel city of app icons. This 3D block world carries every abstract idea in the film.",
+        270: "Fatima Rivera interviewed in front of that same block world on the LED wall, so the graphic and the person share the frame.",
+        300: "Tim Nguyen on stage while a video call plays on the wall behind him, a callback to his role in episode one.",
+        355: "The heist becomes a recipe: a screen-recorded search for 'popular mens name in US', cut to Etta James' 'Trust in Me'.",
+        365: "The list scrolls and stops on '30. Carter'. A highlighted pick, played for comedy.",
+        410: "The finished fake, Carter Edwards, on a tilted white plane. The UI is tipped into 3D rather than shown flat.",
+        420: "The camera pulls back to an entire network of invented researchers, the army spreading across the plane.",
+        455: "The approach as chat bubbles: 'Can you look at my work?' Plain message UI, no device chrome.",
+        470: "The vulnerability report glitches apart mid-read: the attack shown as corrupted text.",
+        500: "Archival footage of North Korean computer labs, used sparingly against the clean studio look.",
+        550: "The lineup: each fake profile projected huge behind the interviewee as he's asked 'Have you talked to Piper Webster?'",
+        565: "Carter Edwards' profile, with a wink chime. 'That's the spark.'",
+        585: "The fire as a red voxel sculpture flickering on the wall beside Matt. The metaphor stays in the block-world style.",
+        620: "Alex Stamos, the outside voice, gets a different set: a warm, dark room with lockers instead of the LED stage.",
+        660: "The fleet check: Tim sits small in a white void while laptops float around him, every machine at Google checked.",
+        680: "A globe of data points on the LED wall, the subject tiny at its base. Scale shown with one person.",
+        720: "Rubik's cube macro for Matt's analogy about analysts solving a jumble into a clear picture.",
+        795: "The hunt as a top-down maze, a red attacker boxed in by the white walls.",
+        815: "A red trail snaking through the voxel world: the attacker's path, then the fire spreading.",
+        855: "The reveal wide: Matt seated before a full LED wall of fire. The stage is the effect.",
+        860: "A high angle shows the LED volume and its rig, admitting how the film is made.",
+        895: "Blue blocks close over the red: the fire is out, in the same visual language.",
+        920: "Epilogue in real offices: handheld, candid, warm light after the controlled stage.",
+        980: "Next-episode tease framed as a 'PLEASE STAND BY' TV test card in pixel blocks.",
+    },
+    # Notion x La Cabra: the Chelsea flagship opening.
+    49: {
+        0: "Opening on the High Line through the slanted window frames of the empty shell.",
+        2: "'just off the manhattan high line' handwritten in white, staggered over three lines. Handwriting is the film's only type.",
+        3: "The caption holds across the cut into the construction site, linking place to project.",
+        8: "Esben Piper walks into the raw space and across frame before he ever speaks.",
+        11: "The interview set is a wide of him at a table of plans in the unfinished shell, a white sheet as backdrop.",
+        13: "The Notion mark rides a whip-blurred brownstone, a logo bug set into the city.",
+        14: "Steel bridge truss from below, a restless handheld city montage at the pace of the music.",
+        20: "His name handwritten beside him as he drinks: 'Esben Piper'.",
+        21: "Cut back to the wide for 'La Cabra'. The name and the company land on two different shots.",
+        23: "Photos of the plans laid out in a row on pale blue, like a Notion gallery view without the interface.",
+        27: "Barista tamping, a matcha whisk in the foreground. Craft inserts at counter height.",
+        36: "A pour-over framed through flowers and stems. Foreground layers in almost every café shot.",
+        40: "The room seen through a round window, a porthole frame.",
+        45: "Esben tasting at the bar, staff and guests soft behind him. Long lens, shallow focus.",
+        51: "The roaster's cooling tray, beans stirred in macro.",
+        57: "Notion appears only as a laptop on a café table, no screen recording.",
+        61: "Back to Esben at the window seat, smiling into his cup.",
+        65: "The wide in the raw shell returns: the film ends where it began, before the opening.",
+        66: "Notion end card on off-white: the cube icon first, then the wordmark.",
+    },
+    # Notion x La Cabra: operations across locations.
+    50: {
+        0: "Cyril Alcazar on a white bouclé sofa against tall windows, a locked-off, bright interview wide.",
+        2: "Pastry macro through glass, gloved hands. Short craft inserts carry the pace.",
+        6: "The Notion mark floats over the Manhattan skyline from a rooftop.",
+        9: "The La Cabra flag fills the frame, the brand's own line drawing.",
+        11: "Product UI on a brand-yellow field: the 'La Cabra Locations' map in Notion, shown as a clean card.",
+        13: "The card zooms out from New York to the world map: Brooklyn, Denmark, the Middle East.",
+        16: "Following a barista into the café from behind, a walk-in establishing shot.",
+        22: "Espresso pulling into a steel cup, low and close.",
+        24: "Name in the same white handwriting as the Grand Opening film, with the title in small caps: 'Cyril Alcazar, Managing Director'.",
+        27: "'chelsea, new york' written over the build site, reusing footage from the opening film.",
+        33: "A tighter angle for the confession about Google Sheets.",
+        38: "Roaster drum and beans in macro.",
+        42: "A queue outside, seen through the café window.",
+        51: "Overhead of the café floor down the stair.",
+        56: "Guests seen through the porthole window again, a shot shared with the companion film.",
+        60: "The Notion AI face pops in beside him on 'you just type what you want'.",
+        61: "Three prompt chips stack above the face: expenses, the weekly huddle summary, missed emails. UI as a caption.",
+        63: "The same chips hold over the cut to the wide.",
+        64: "La Cabra's raised letters on painted brick.",
+        66: "Liz Whitman's handwritten lower third at the roastery.",
+        70: "Overhead of a laptop on a round café table, the only product shot.",
+        81: "Symmetrical wide of the bar: three baristas, one counter.",
+        85: "A tight closing interview: Notion as the one place the team feeds and pulls from.",
+        93: "Notion wordmark on cream, a warmer end card than the first film.",
+    },
+    # Notion x Monumental Labs: proposals drafted by a Notion agent.
+    51: {
+        0: "Micah Springut on a phone-style front camera: a yellow wall, a white angel sculpture and a carver at work behind him.",
+        2: "Cool teal light on a huge marble figure in the warehouse, two people for scale.",
+        4: "A carver in a respirator sands stone, lit with the same teal cast.",
+        8: "Lower third in small white sans: 'Micah Springut, Founder & CEO'. Plain, unlike Notion's handwritten captions.",
+        10: "Macro of a gloved hand and a chisel in stone.",
+        20: "A robot arm cutting marble through spray, the turn from hand craft to automation.",
+        24: "Three app icons pop around his head, the tools the agent will replace.",
+        26: "Co-brand card: 'Notion × Monumental Labs' in black on white.",
+        28: "Chet Lubarsky, Lead Estimator, in the same selfie framing, the sculpture behind him.",
+        32: "Screen recording of the Opportunities database, shown full-frame and unstyled.",
+        39: "Scrolling the meeting notes and project info the agent will read.",
+        45: "A punch-in on the sidebar's agents: Proposal Generator, GPCalc, Slacker Sales Guy.",
+        48: "The Proposal Generator prompt is typed in with the project and template mentioned.",
+        57: "The result: 'Proposal – Athena Sculpture' under the Monumental Labs logo.",
+        62: "A long scroll through the generated scope, terms and timeline.",
+        72: "The Notion AI face sits beside Chet as he talks about 'the little agent in the corner'.",
+        81: "Drive, Jira, Slack, Asana, Zendesk, GitHub and Teams icons orbit on white.",
+        83: "The icons draw in and tighten into a ring.",
+        84: "They collapse into the Notion cube.",
+        89: "Walking through the stone yard among blocks and robots.",
+        90: "A carver's eyes over a dust mask and headphones, 'what they do best'.",
+        94: "Notion wordmark end card.",
+    },
 }
 FRAME_COPY = {
     # Tab label and intro for videos with SHOT_NOTES. Others fall back to DEFAULT_FRAME_COPY.
     35: ("Shots and angles", "One frame per shot idea, with where the camera sits and how it moves."),
     47: ("Beats", "One frame per beat of the cold open: each cut, title move and type change."),
 }
-TRANSCRIPT_KIND = {47: "YouTube auto captions, trimmed to the opening and corrected to the on-screen name"}
+TRANSCRIPT_KIND = {
+    47: "YouTube auto captions, trimmed to the opening and corrected to the on-screen name",
+    49: "Local speech recognition, corrected to the on-screen names",
+}
 DEFAULT_FRAME_COPY = ("Key frames", "One frame per visual idea, with a note on its style, composition or transition.")
 # Music-only soundtracks. Whisper returns only hallucinated lines for these, so no transcript is kept.
 NO_NARRATION = set(range(41, 47))
@@ -337,7 +453,7 @@ def transcript(number):
             timestamp = "00:" + timestamp
         current = [html.unescape(TAG.sub("", line)).strip() for line in raw[pos + 1:]]
         current = [line for line in current if line]
-        if vtt.name.endswith(".en.vtt") and number in (1, 7, 9):
+        if vtt.name.endswith(".en.vtt") and number in (1, 7, 9, 48):
             current = [" ".join(current)] if current else []
         overlap = 0
         for n in range(min(len(previous), len(current)), 0, -1):
@@ -354,7 +470,7 @@ def transcript(number):
     elif vtt.name.endswith(".ja.vtt"):
         kind = "Japanese speech recognition"
     elif vtt.name.endswith(".en.vtt"):
-        kind = "creator captions" if number in (1, 7, 9, 29, 30, 32, 33) else "YouTube auto captions"
+        kind = "creator captions" if number in (1, 7, 9, 29, 30, 32, 33, 48) else "YouTube auto captions"
     else:
         kind = "local speech recognition"
     return {"vtt": str(vtt.relative_to(HERE)), "text": str(out.relative_to(HERE)), "kind": kind}
