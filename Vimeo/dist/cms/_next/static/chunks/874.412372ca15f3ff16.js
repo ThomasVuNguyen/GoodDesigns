@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[874],{90874:(e,t,s)=>{s.r(t),s.d(t,{default:()=>a});var l=s(54568),r=s(98494);let a=e=>{let{title:t,cards:s,theme:a,hideTopMargin:h}=e;return(0,l.jsxs)(r.I.Base,{theme:a,hideTopMargin:h,children:[t&&(0,l.jsx)(r.I.Title,{title:t,theme:a}),s&&(0,l.jsx)(r.I.Cards,{cards:s,title:t})]})}}}]);

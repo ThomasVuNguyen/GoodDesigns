@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[8458],{88458:(e,l,s)=>{s.r(l),s.d(l,{default:()=>r});var a=s(54568),d=s(87832);let r=e=>{let{content:l}=e,s=(0,d.Ay)(null!=l?l:"");return(0,a.jsx)("div",{className:"rounded-standard",children:s})}}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[6572],{6572:(e,l,t)=>{t.r(l),t.d(l,{default:()=>r});var s=t(54568),a=t(25150),n=t.n(a);let r=e=>{let{id:l,additionalClasses:t,element:a="section",children:r,style:c}=e;return(0,s.jsx)(a,{id:l,style:c,className:n()("container-v3 w-full flex flex-col relative bg-transparent",{[t]:t}),children:r})}}}]);

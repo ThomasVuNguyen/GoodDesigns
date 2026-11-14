@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
+<!-- Local stand-in for player.vimeo.com/video/{id}: the same film, from a local file, in the browser's own player.
+     player/api.js drives it the way Vimeo's Player API drives the real embed (play on open, pause on close). -->
+<style>
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+  video { display: block; width: 100%; height: 100%; object-fit: contain; background: #000; }
+</style>
+</head>
+<body>
+<video src="../video/{id}-720p.mp4" poster="{poster}" controls playsinline preload="metadata" data-title="{title}" data-id="{id}"></video>
+</body>
+</html>
