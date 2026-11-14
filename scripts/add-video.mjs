@@ -1,5 +1,7 @@
 // Adds a YouTube or X video to gallery/videos.json and saves its thumbnail to gallery/thumbs/videos/<slug>.jpg.
-// Usage: node scripts/add-video.mjs <url> ["optional note"]
+// Usage: node scripts/add-video.mjs <url> ["optional note"] [--category <slug>]...
+//   --category files the video under a category from the "categories" list in gallery/videos.json
+//   (customer-stories, security-incidents, …); repeat it for more than one.
 //   https://www.youtube.com/watch?v=ID, https://youtu.be/ID, https://www.youtube.com/shorts/ID
 //   https://x.com/<user>/status/ID, https://twitter.com/<user>/status/ID
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
@@ -8,8 +10,15 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const listPath = path.join(root, 'gallery/videos.json');
-const [input, note] = process.argv.slice(2);
-if (!input) { console.error('Usage: node scripts/add-video.mjs <youtube or x url> ["note"]'); process.exit(1); }
+const args = process.argv.slice(2);
+const categories = [];
+for (let i = args.indexOf('--category'); i >= 0; i = args.indexOf('--category')) categories.push(...args.splice(i, 2).slice(1));
+const [input, note] = args;
+if (!input || categories.some((c) => !c)) { console.error('Usage: node scripts/add-video.mjs <youtube or x url> ["note"] [--category <slug>]...'); process.exit(1); }
+const list = JSON.parse(await readFile(listPath, 'utf8').catch(() => '{"categories":[],"videos":[]}'));
+list.categories ??= [];
+const unknown = categories.filter((c) => !list.categories.some((k) => k.slug === c));
+if (unknown.length) throw new Error(`Unknown category ${unknown.join(', ')}. Known: ${list.categories.map((k) => k.slug).join(', ') || 'none'} (add new ones to "categories" in gallery/videos.json)`);
 
 const url = new URL(input);
 const host = url.hostname.replace(/^(www|m|mobile)\./, '');
@@ -38,6 +47,7 @@ if (host === 'youtube.com' || host === 'youtu.be') {
   throw new Error(`Only YouTube and X links are supported (got ${host})`);
 }
 if (note) video.note = note;
+if (categories.length) video.categories = categories;
 video.added = today;
 
 let thumb;
@@ -46,9 +56,8 @@ if (!thumb) throw new Error('Could not download a thumbnail');
 await mkdir(path.join(root, 'gallery/thumbs/videos'), { recursive: true });
 await writeFile(path.join(root, `gallery/thumbs/videos/${video.slug}.jpg`), thumb);
 
-const list = JSON.parse(await readFile(listPath, 'utf8').catch(() => '{"videos":[]}'));
 const at = list.videos.findIndex((v) => v.slug === video.slug);
 if (at >= 0) list.videos[at] = { ...list.videos[at], ...video, added: list.videos[at].added };
 else list.videos.push(video);
-await writeFile(listPath, `{\n  "videos": [\n${list.videos.map((v) => `    ${JSON.stringify(v)}`).join(',\n')}\n  ]\n}\n`);
+await writeFile(listPath, `{\n  "categories": [\n${list.categories.map((c) => `    ${JSON.stringify(c)}`).join(',\n')}\n  ],\n  "videos": [\n${list.videos.map((v) => `    ${JSON.stringify(v)}`).join(',\n')}\n  ]\n}\n`);
 console.log(`${at >= 0 ? 'Updated' : 'Added'} ${video.slug}: ${video.title} — ${video.author}`);

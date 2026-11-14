@@ -22,9 +22,9 @@
     for (const el of document.querySelectorAll('.section')) el.hidden = el.dataset.tab !== next;
   }
   // Before the lists load, so a link to videos or posts never shows the sites heading first.
-  showTab(tabOf(location.hash.replace(/^#\/?/, '')));
+  showTab(tabOf(location.hash.replace(/^#\/?/, '').split('?')[0]));
 
-  const [{ repo, branch, sites }, { videos }, { shorts }, { posts }, { emails }, { insta }, { research }, { cards }] = await Promise.all(
+  const [{ repo, branch, sites }, { videos, categories: videoCategories = [] }, { shorts }, { posts }, { emails }, { insta }, { research }, { cards }] = await Promise.all(
     ['sites.json', 'videos.json', 'shorts.json', 'posts.json', 'emails.json', 'insta.json', 'research.json', 'cards.json'].map(async (f) => (await fetch(f)).json()),
   );
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
@@ -67,7 +67,8 @@
       <p class="tag">${s.tagline}</p>
     </li>`).join('');
 
-  $('video-grid').innerHTML = videos.map((v) => `
+  // Videos can belong to categories (Customer Stories, Security Incidents…); #/videos?category=<slug> shows one.
+  const videoCard = (v) => `
     <li class="card card--video">
       <a class="thumb" href="#/videos/${v.slug}" aria-label="Play ${esc(v.title)}">
         <img src="thumbs/videos/${v.slug}.jpg" alt="" loading="lazy" width="1280" height="720">
@@ -79,7 +80,24 @@
       </div>
       <p class="tag">${esc(v.note || v.author)}</p>
       ${v.breakdown ? `<a class="breakdown-button" href="breakdowns/${encodeURIComponent(v.breakdown)}.html">Breakdown</a>` : ''}
-    </li>`).join('') || '<li class="empty">No videos yet.</li>';
+    </li>`;
+  const categoryOf = (slug) => videoCategories.find((c) => c.slug === slug);
+  const inCategory = (v, slug) => !slug || (v.categories || []).includes(slug);
+  const categoryHash = (slug) => (slug ? `#/videos?category=${slug}` : '#/videos');
+  let videoCategory = null;
+  $('video-filter').innerHTML = [{ slug: null, name: 'All' }, ...videoCategories].map((c) => `
+    <a href="${categoryHash(c.slug)}" data-category="${esc(c.slug || '')}">${esc(c.name)} <span>${videos.filter((v) => inCategory(v, c.slug)).length}</span></a>`).join('');
+  $('video-filter').hidden = !videoCategories.length;
+  function showVideoCategory(slug) {
+    videoCategory = categoryOf(slug) ? slug : null;
+    tabHash.videos = categoryHash(videoCategory);
+    for (const a of $('video-filter').querySelectorAll('a')) {
+      if (a.dataset.category === (videoCategory || '')) a.setAttribute('aria-current', 'true');
+      else a.removeAttribute('aria-current');
+    }
+    $('video-grid').innerHTML = videos.filter((v) => inCategory(v, videoCategory)).map(videoCard).join('') || '<li class="empty">No videos yet.</li>';
+  }
+  showVideoCategory(null);
 
   $('short-grid').innerHTML = shorts.map((v) => `
     <li class="card card--short">
@@ -356,7 +374,8 @@
   }
 
   function route() {
-    const hash = location.hash.replace(/^#\/?/, '').split('?')[0];
+    const [hash, query = ''] = location.hash.replace(/^#\/?/, '').split('?');
+    if (hash === 'videos') showVideoCategory(new URLSearchParams(query).get('category'));
     const i = items.findIndex((x) => x.hash === hash);
     const open = i >= 0;
     const wasOpen = $('gallery').hidden;
@@ -368,7 +387,7 @@
     document.body.style.overflow = open ? 'hidden' : '';
     showTab(open ? (items[i].kind === 'card' ? 'cards' : items[i].kind === 'post' ? 'posts' : items[i].kind === 'email' ? 'emails' : items[i].kind === 'insta' ? 'insta' : items[i].kind === 'video' ? 'videos' : items[i].kind === 'short' ? 'shorts' : 'sites') : tabOf(hash));
     if (!open) {
-      document.title = tab === 'cards' ? 'Good Cards · GoodDesigns' : tab === 'research' ? 'Good Research · GoodDesigns' : tab === 'insta' ? 'Good Insta · GoodDesigns' : tab === 'posts' ? 'Posts · GoodDesigns' : tab === 'emails' ? 'Good Emails · GoodDesigns' : tab === 'shorts' ? 'Good Shorts · GoodDesigns' : tab === 'videos' ? 'Videos · GoodDesigns' : 'GoodDesigns';
+      document.title = tab === 'cards' ? 'Good Cards · GoodDesigns' : tab === 'research' ? 'Good Research · GoodDesigns' : tab === 'insta' ? 'Good Insta · GoodDesigns' : tab === 'posts' ? 'Posts · GoodDesigns' : tab === 'emails' ? 'Good Emails · GoodDesigns' : tab === 'shorts' ? 'Good Shorts · GoodDesigns' : tab === 'videos' ? `${videoCategory ? `${categoryOf(videoCategory).name} · ` : ''}Videos · GoodDesigns` : 'GoodDesigns';
       frame.removeAttribute('src');
       postView.hidden = true;
       postView.innerHTML = '';
@@ -430,7 +449,7 @@
     const cur = items[current];
     if (!cur) return;
     const kind = cur.kind;
-    const list = items.filter((x) => x.kind === kind);
+    const list = items.filter((x) => x.kind === kind && (kind !== 'video' || !inCategory(cur.item, videoCategory) || inCategory(x.item, videoCategory)));
     const step = (d) => {
       const at = list.indexOf(cur);
       location.hash = `#/${list[(at + d + list.length) % list.length].hash}`;

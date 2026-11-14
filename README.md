@@ -57,10 +57,12 @@ A site that is several pages gets one card per page: give every entry the same `
 The gallery also has a **Good Videos** tab of YouTube and X videos, next to the sites (`#/videos` links straight to it). They play in the same full-screen viewer, embedded from the platform. To add one:
 
 ```bash
-node scripts/add-video.mjs <youtube or x url> ["optional note shown under the title"]
+node scripts/add-video.mjs <youtube or x url> ["optional note shown under the title"] [--category <slug>]
 ```
 
 The script fetches the title and author (YouTube oEmbed, or the FxTwitter API for X posts). It saves the poster to `gallery/thumbs/videos/<slug>.jpg` and appends the video to `gallery/videos.json`. Commit and push to publish it.
+
+Videos can be filed under categories, which show as filters under the Good Videos heading (`#/videos?category=customer-stories`). The categories are listed under `"categories"` in `gallery/videos.json`: today **Customer Stories** (`customer-stories`) and **Security Incidents** (`security-incidents`). Pass `--category <slug>` to `add-video.mjs` (repeat it for several), or add a `"categories"` array to an existing entry. A new category needs only a `{ "slug", "name" }` entry in that list.
 
 Videos with a `breakdown` field in `gallery/videos.json` show a Breakdown button. Their pages, transcripts, compact videos, and WebP frame sequences are committed under `gallery/breakdowns/`. The full-resolution working files stay in `notes/good-videos-video-study/` and are ignored by Git; `python3 scripts/publish-video-breakdowns.py` refreshes the gallery copy from that local study.
 
