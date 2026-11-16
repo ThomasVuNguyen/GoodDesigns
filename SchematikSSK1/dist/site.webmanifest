@@ -1,0 +1,20 @@
+{
+  "name": "Schematik: Cursor for Hardware",
+  "short_name": "Schematik",
+  "description": "Anyone can build hardware now. Tell Schematik what you want to build for Arduino, ESP32, or Raspberry Pi.",
+  "icons": [
+    {
+      "src": "/favicon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#111111",
+  "background_color": "#111111",
+  "display": "standalone"
+}

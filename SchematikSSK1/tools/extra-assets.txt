@@ -1,0 +1,17 @@
+/favicon.svg
+/ssk1/black/back.svg
+/ssk1/black/front.svg
+/ssk1/black/lid_exterior.webp
+/ssk1/black/wall_exterior.svg
+/ssk1/light-green/back.svg
+/ssk1/light-green/front.svg
+/ssk1/light-green/lid_exterior.webp
+/ssk1/light-green/wall_exterior.svg
+/ssk1/light-orange/back.svg
+/ssk1/light-orange/front.svg
+/ssk1/light-orange/lid_exterior.webp
+/ssk1/light-orange/wall_exterior.svg
+/ssk1/white/back.svg
+/ssk1/white/front.svg
+/ssk1/white/lid_exterior.webp
+/ssk1/white/wall_exterior.svg
