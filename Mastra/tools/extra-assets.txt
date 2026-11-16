@@ -1,0 +1,7 @@
+/brand/mastra-logo-morphing.json
+/favicon/new-brand/icon.svg
+/icons/sprite.svg
+/images/observability/signals-panel.svg
+/logos-centered.svg
+/logos-full.svg
+/new-brand/footer-shader-fallback-gray.jpg
