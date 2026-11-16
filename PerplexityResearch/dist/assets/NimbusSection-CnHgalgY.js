@@ -1,0 +1,1 @@
+import{B as e}from"./vendors-D1Zalr9i.js";var t=e();function n({colorScheme:e,headerColorMode:n=e,as:r=`section`,children:i,...a}){return(0,t.jsx)(r,{...a,"data-color-scheme":e,"data-header-color-mode":n,children:i})}export{n as t};

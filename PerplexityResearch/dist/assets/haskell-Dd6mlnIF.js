@@ -1,0 +1,1 @@
+import{t as e}from"./haskell-CwJ1_edT.js";export default e();

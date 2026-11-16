@@ -1,0 +1,1 @@
+import{a as e}from"./rolldown-runtime-B0Z9INg1.js";import{z as t}from"./vendors-D1Zalr9i.js";var n=e(t(),1),r={submitQuery:()=>!1,submitQueryWithOpaqueBackendRedirect:()=>!1,quote:null,setQuote:()=>void 0,updateLocalStatePostStream:()=>void 0,submissionQueryCount:0},i=(0,n.createContext)(r),a=()=>(0,n.useContext)(i);export{r as n,a as r,i as t};

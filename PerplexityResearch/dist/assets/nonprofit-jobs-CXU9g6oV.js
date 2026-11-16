@@ -1,0 +1,1 @@
+import{t as e}from"./career-BB4Njr4b.js";var t=e({slug:`nonprofit-jobs`,heroTitle:`Find your nonprofit job in minutes`,roleLabel:`nonprofit`,inputUrlCta:`Find my nonprofit roles`});export{t as default};

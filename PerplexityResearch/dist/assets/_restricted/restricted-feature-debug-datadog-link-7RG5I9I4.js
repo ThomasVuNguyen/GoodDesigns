@@ -1,0 +1,1 @@
+import{a as e}from"../rolldown-runtime-B0Z9INg1.js";import{B as t,z as n}from"../vendors-D1Zalr9i.js";import{n as r,t as i}from"./restricted-feature-debug-datadog-link-ETI1RAn9.js";var a=t(),o=e(n(),1).memo(function(e){return(0,a.jsx)(i,{...e})});o.displayName=r();export{o as DebugDatadogLink};

@@ -1,0 +1,1 @@
+function e(){let e=new Map,t=new Set;return{beginRevalidation:t=>{e.delete(t)},resolve:async(n,r,i)=>{e.set(n,r),t.delete(n)&&r&&await i(n,r)},request:(n,r)=>{let i=e.get(n);return i?r(n,i):(e.has(n)||t.add(n),Promise.resolve())}}}export{e as createApiOrgAttributionEvents};

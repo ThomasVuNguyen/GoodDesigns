@@ -1,0 +1,1 @@
+import{n as e,t}from"./gen-api-platform-CwtogjkC.js";export{e as LogoTicker,t as default};

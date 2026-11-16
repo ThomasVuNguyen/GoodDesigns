@@ -1,0 +1,1 @@
+import{a as e}from"./rolldown-runtime-B0Z9INg1.js";import{z as t}from"./vendors-D1Zalr9i.js";import"./aether-core-QcG0bkmv.js";var n=e(t(),1),r=(0,n.createContext)({logger:{warn:()=>{},error:()=>{}},isMobileStyle:!1,isMobileUserAgent:!1});r.displayName=`AetherContext`;function i(){return(0,n.useContext)(r)}export{i as n,r as t};

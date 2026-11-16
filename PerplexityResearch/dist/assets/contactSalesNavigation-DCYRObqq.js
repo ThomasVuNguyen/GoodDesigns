@@ -1,0 +1,1 @@
+import{H as e}from"./platform-core-dnAkd-8v.js";import{r as t}from"./attribution-CUjTAxbx.js";var n=`/contact-sales`,r=`https://perplexity.typeform.com/to/m3WnMaG6`;function i({email:r}={}){let i=r?`${n}?${new URLSearchParams({email:r}).toString()}`:n;e(t(i))}export{n,i as r,r as t};

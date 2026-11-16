@@ -1,0 +1,9 @@
+{
+ "tracking_policy": "nonblocking",
+ "advertising_backend_eligibility": {
+  "reason": "eligible",
+  "conversion_reason": "identity_unresolved",
+  "policy_version": "advertising-eligibility-v1",
+  "expires_at": "2026-11-16T19:33:27.553681Z"
+ }
+}

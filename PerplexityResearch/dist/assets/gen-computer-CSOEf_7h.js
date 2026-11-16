@@ -1,0 +1,1 @@
+import"./rolldown-runtime-B0Z9INg1.js";import{B as e,z as t}from"./vendors-D1Zalr9i.js";import{P as n}from"./platform-core-dnAkd-8v.js";var r=e();t();function i(){return(0,r.jsx)(n,{to:`/gen/computer/main`,replace:!0})}export{i as default};

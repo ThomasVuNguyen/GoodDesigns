@@ -1,0 +1,1 @@
+import{a as e,i as t}from"./vendors-D1Zalr9i.js";export{t as DEFAULT_RUM_PROFILER_CONFIGURATION,e as createRumProfiler};

@@ -1,0 +1,1 @@
+import{n as e}from"./experimentation-BdgAAaNf.js";import{s as t}from"./platform-components-BAchP3tK.js";var n=e(`marketing-gen-computer-prereport`),r=600,i=300;async function a(e,n){await new Promise(e=>setTimeout(e,r)),document.body.classList.add(`animate-out`,`fade-out`,`fill-mode-forwards`,`duration-300`),await new Promise(e=>setTimeout(e,i)),t(e,n)}export{n,a as t};

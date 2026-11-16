@@ -1,0 +1,1 @@
+import{a as e}from"./rolldown-runtime-B0Z9INg1.js";import{w as t,x as n,z as r}from"./vendors-D1Zalr9i.js";import{D as i}from"./platform-core-dnAkd-8v.js";var a=e(r(),1),o=(0,a.createContext)(void 0);o.displayName=`ToastStoreContext`;var s=`ToastStoreContext must be used within a ToastStoreProvider`,c=e=>{let r=(0,a.useContext)(o);return i(r,s),t(r,n(e))};export{o as n,c as t};

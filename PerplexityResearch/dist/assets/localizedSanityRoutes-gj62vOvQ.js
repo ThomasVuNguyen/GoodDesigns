@@ -1,0 +1,1 @@
+import{c as e}from"./marketingHostRouteAliases-C9ECm_mk.js";function t(t,n){if(!t.startsWith(`/`))throw Error(`Expected an absolute Sanity route path, received ${t}`);let r=e(n);return r===void 0?t:`${r}${t}`}export{t};

@@ -1,0 +1,16 @@
+{
+ "heroImage": {
+  "_type": "image",
+  "alt": "Abstract illustration of iridescent light streams connecting glowing grids and reflective spheres against a dark background.",
+  "asset": {
+   "_ref": "image-36654e2d143af738c2d0b402288a4aa62f30e861-1920x1080-png",
+   "_type": "reference",
+   "url": "/sanity/images/aqo64vfr/production/36654e2d143af738c2d0b402288a4aa62f30e861-1920x1080.png"
+  },
+  "crop": null,
+  "hotspot": null
+ },
+ "slug": "computer-adds-automations-for-ongoing-work",
+ "summary": "Schedule tasks or trigger them with events in Perplexity Computer, with each run building on previous work.",
+ "title": "Computer adds Automations for ongoing work"
+}

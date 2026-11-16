@@ -1,0 +1,1 @@
+var e=/-(\d+)x(\d+)-[a-z0-9]+$/;function t(t,{area:n,maxWidth:r,maxHeight:i}){let a=e.exec(t),o=Number(a?.[1]),s=Number(a?.[2]);if(!(o>0&&s>0))return;let c=o/s,l=Math.min(Math.sqrt(n*c),r,i*c);return{width:Math.round(l),height:Math.round(l/c)}}export{t};

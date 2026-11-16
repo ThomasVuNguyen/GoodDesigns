@@ -1,0 +1,1 @@
+import"./rolldown-runtime-B0Z9INg1.js";import{B as e,z as t}from"./vendors-D1Zalr9i.js";import{n,t as r}from"./BlogGridCategoryPageShared-Dk900C2j.js";var i=e();t();function a(e){return r(`News`,e)}function o(e){return(0,i.jsx)(n,{...e,category:`News`})}export{o as default,a as loadServerData};

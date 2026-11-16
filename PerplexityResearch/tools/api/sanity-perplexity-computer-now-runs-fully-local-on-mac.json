@@ -1,0 +1,16 @@
+{
+ "heroImage": {
+  "_type": "image",
+  "alt": "Mac mini against a glowing planetary backdrop",
+  "asset": {
+   "_ref": "image-f1a61df4d8a457f8dee90c42e98b486dafd51324-1920x1080-png",
+   "_type": "reference",
+   "url": "https://cdn.sanity.io/images/aqo64vfr/production/f1a61df4d8a457f8dee90c42e98b486dafd51324-1920x1080.png"
+  },
+  "crop": null,
+  "hotspot": null
+ },
+ "slug": "perplexity-computer-now-runs-fully-local-on-mac",
+ "summary": "Perplexity Computer runs fully local on Mac: Work across private files and native apps with AI that stays on your device",
+ "title": "Perplexity Computer now runs fully local on Mac"
+}

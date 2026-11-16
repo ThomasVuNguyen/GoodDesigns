@@ -1,0 +1,1 @@
+import{t as e}from"./basic-BmOmmpZH.js";export default e();

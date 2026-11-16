@@ -1,0 +1,1 @@
+import{r as e}from"./routes-BnUa4iVJ.js";function t(t){switch(t){case`Developers`:return e[`/hub/blog/category/developers`].href();case`Ideas`:return e[`/hub/blog/category/ideas`].href();case`News`:return e[`/hub/blog/category/news`].href();case`Research`:return e[`/hub/blog/category/research`].href()}}function n(t){return e[`/hub/blog/:slug`].href({path:{slug:t}})}export{n,t};

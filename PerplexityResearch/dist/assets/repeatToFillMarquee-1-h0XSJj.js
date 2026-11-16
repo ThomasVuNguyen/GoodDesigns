@@ -1,0 +1,1 @@
+function e(e,{minItems:t=24,secondsPerItem:n=3}={}){if(e.length===0)return{items:[],durationSeconds:0};let r=Math.max(2,Math.ceil(t/e.length)),i=Array.from({length:r},(t,n)=>e.map((e,t)=>({item:e,isRepetition:n>0,key:`${t}-${n}`}))).flat();return{items:i,durationSeconds:i.length*n}}export{e as t};

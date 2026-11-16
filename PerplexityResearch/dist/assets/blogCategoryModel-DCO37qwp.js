@@ -1,0 +1,1 @@
+function e(e){return[e?.featured,e?.subFeaturedOne,e?.subFeaturedTwo,e?.subFeaturedThree].filter(e=>e!=null&&e.slug!==null)}function t(e,t){let n=t===`News`?e?.news?.featured:t===`Ideas`?e?.ideas?.featured:e?.developers?.featured;return n?.slug?n:null}export{e as n,t};

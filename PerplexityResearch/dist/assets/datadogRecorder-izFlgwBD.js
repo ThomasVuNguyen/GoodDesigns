@@ -1,0 +1,1 @@
+import{o as e}from"./vendors-D1Zalr9i.js";export{e as startRecording};
