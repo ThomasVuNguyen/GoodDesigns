@@ -86,9 +86,10 @@ Images the pages reference directly, such as blog post bodies, are the original 
   - The capture strips the preload hints for those scripts from the HTML.
   - Sentry's DSN is blanked. Sentry sends through a native `fetch` taken from a hidden iframe, which goes past the shim.
   - Vercel BotID's client and the analytics scripts are not saved.
-- **Clone canaries:** granola.ai carries two clone-detection beacons.
-  - A component loads `https://api.granola.ai/v1/static-assets/payments.js?l=<page URL>&h=<host>…` on any HTTPS host other than granola.ai. The shim's third-party blocking stops it, like any other script from another host.
-  - The global stylesheet has a `background: url(https://api.granola.ai/v1/static-assets/payments.gif?source=css-integrity…)` rule. The capture replaces that `url()` with `none`.
+- **Clone canaries:** granola.ai carries two clone-detection beacons on every page. Despite the file names, neither has anything to do with payments.
+  - **Script:** an effect in the root layout's `GoogleTagManagerInit` component runs on any HTTPS host other than granola.ai. It loads `https://api.granola.ai/v1/static-assets/payments.js?l=<page URL>&r=<referrer>&h=<host>&p=<path>`. The capture removes that code from the chunk (`CANARY_JS` in `capture.py`), so the effect is empty.
+  - **Stylesheet:** the global stylesheet has a `background: url(https://api.granola.ai/v1/static-assets/payments.gif?source=css-integrity…)` rule. The capture replaces that `url()` with `none`.
+  - **Check:** after a rebuild, `capture.py` scans every saved HTML, JS and CSS file and stops with an error if any trace of either remains. Pages loaded with `shim.js` switched off make no request to `api.granola.ai`. The shim's blocking of other hosts is a second layer.
 - **Forms:**
   - Forms post to `/api/sendEmail`. `shim.js` answers 503, so nothing is sent, and the form shows its own error.
   - The "Send link" field in the mobile download dialog behaves the same way.

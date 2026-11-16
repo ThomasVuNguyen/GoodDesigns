@@ -215,7 +215,16 @@ def links(text, routes):
     return re.sub(r'(\bhref:")(/[^"]*)(?=")', repl, text)
 
 
+# granola.ai's clone canaries. A component in the root layout runs, on any HTTPS host other than granola.ai, an IIFE that
+# loads api.granola.ai/v1/static-assets/payments.js?l=<page URL>&r=<referrer>&h=<host>&p=<path>. The global stylesheet
+# has a background url(api.granola.ai/v1/static-assets/payments.gif?source=css-integrity...). Both are removed from the
+# files; CANARY then checks that nothing of them is left anywhere in dist/.
+CANARY_JS = re.compile(r'\(\(\)=>\{let \w+=window\.location\.hostname\.toLowerCase\(\).*?granolaCloneCanary="1".*?\}\)\(\)', re.S)
+CANARY = re.compile(rb'granolaCloneCanary|clone-canary|api\.granola\.ai/v1/static-assets|css-integrity')
+
+
 def patch_js(text, routes):
+    text = CANARY_JS.sub('void 0', text)
     # Sentry stays off: with no DSN it sends nothing. (It fetches through a native fetch taken from a hidden iframe,
     # past shim.js, to the /api/monitoring tunnel.)
     text = re.sub(r'dsn:"https://[^"]*@[^"]*\.sentry\.io/\d+"', 'dsn:""', text)
@@ -278,7 +287,7 @@ def crawl(paths, routes):
                 if p.endswith(('.js', '.mjs')):
                     text = patch_js(text, routes)
                 else:
-                    # A tracking pixel in the global stylesheet (api.granola.ai/v1/static-assets/payments.gif).
+                    # The stylesheet's clone canary (see CANARY_JS).
                     text = re.sub(r'url\(https://api\.granola\.ai/[^)]*\)', 'none', text)
                 body = text.encode()
             save(p, body, BASE + p)
@@ -319,6 +328,10 @@ def main():
     crawl({p for p in asset_paths | set(extra) if not p.startswith(EXT_DIR)}, routes)
 
     shutil.copy(os.path.join(TOOLS, 'shim.js'), os.path.join(OUT, 'shim.js'))
+    left = [os.path.relpath(os.path.join(d, f), OUT) for d, _, fs in os.walk(OUT) for f in fs
+            if f.endswith(('.html', '.js', '.css')) and CANARY.search(open(os.path.join(d, f), 'rb').read())]
+    if left:
+        raise SystemExit('clone canary still present (granola.ai changed it; update CANARY_JS): ' + ', '.join(left))
     json.dump(dict(sorted(manifest.items())), open(os.path.join(ROOT, 'assets-manifest.json'), 'w'), indent=1)
     if missing:
         print('not saved:', len(missing), *sorted(missing)[:60], sep='\n  ')
