@@ -8,15 +8,18 @@ import json
 import re
 import shutil
 import subprocess
+import sys
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont, ImageOps
+
+import motion_sequences
 
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 VIDEOS = json.loads((REPO / "gallery/videos.json").read_text())["videos"]
-NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 52)]
+NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 54)]
 # Seconds between library frames. Short clips are sampled more densely than one per second.
 FRAME_STEP = {47: 0.25}
 CURATED_FRAMES = {
@@ -319,6 +322,88 @@ SHOT_NOTES = {
         90: "A carver's eyes over a dust mask and headphones, 'what they do best'.",
         94: "Notion wordmark end card.",
     },
+    # Google Gemini, Tasks: one "Right now, I'm…" line per person, each in their own world.
+    52: {
+        0: "Cold open on a long lens down a Harlem street at golden hour, the 158th Street corner in frame. Deep, compressed perspective.",
+        2: "Side-on tracking shot as she runs past construction barriers: 'Right now, I'm reworking my business plan.' Gemini works while she doesn't.",
+        5: "Handheld close-up mid-run as she talks to us. Every character gets the same 'Right now…' line in a different world.",
+        7: "Hard cut from the city to a dairy farm: a wide with a pickup in the foreground and cows across the field.",
+        9: "Medium on the farmer at a fence post. A cow moos and he answers, 'Yeah, I hear ya.' The film's comic rhythm in one beat.",
+        11: "Product in situ: Gemini's task list on a phone propped on a saddle, finished steps in grey, the live step in white with animated dots.",
+        13: "Pink tiled bathroom, a woman in a headwrap painting her toenails as she glances to camera.",
+        16: "Her phone among the makeup: 'Checking marketplaces for used c…' at the foot of a vertical timeline of steps. Each phone insert is dressed with its owner's things.",
+        17: "Pool shot from lane-line height for 'I'm planning my semester abroad.'",
+        21: "Restaurant kitchen through foreground clutter, steam and flame: 'comparing 15 different napkin suppliers.'",
+        24: "A cyclist under the elevated tracks, taxis passing: the start of a fast, motion-blurred city montage.",
+        28: "Locked-off wide of a sunroom full of cats. She reads the paper as a second voice adds, 'I'm also doing that.'",
+        31: "Genre parody: a storm reporter in the rain under a full news lower third, 'STORM MAKES LANDFALL'.",
+        38: "Close on a partygoer in a giraffe costume, red cup in hand. The gag is the gap between the setting and the task.",
+        40: "Low, dark bedroom shot of someone asleep: 'I'm keeping an eye on Doja Cat tickets.'",
+        42: "Symmetrical wide of an empty ice rink under an arched roof, a Zamboni mid-frame: 'I'm researching vacations.'",
+        44: "Hotel room wide, a man bent over his ironing board: 'I'm ironing my tie… but I'm also revising my presentation.'",
+        48: "The payoff insert: a notification on his phone, 'Presentation Formatting: Updated styles across all slides.'",
+        50: "Back to the bathroom phone: 'Car Listings Found: Added four more vehicles near you.' The setups pay off in order.",
+        51: "She looks up from her toes: 'I did it.'",
+        52: "Back to the opening street, now from the ground: the runner jumps in the middle of the road, 'I did it!'",
+        55: "'LOOK' lands in heavy condensed white caps over the street, with no animation on the word itself.",
+        56: "'LOOK WHAT YOU CAN DO.' The jumping runner stays in front of the 'U', so the type sits inside the shot.",
+        57: "End card on black: a Chat/Task toggle, the white pill on Task with a soft glow.",
+        59: "Google Gemini lockup, with 'Try Tasks for free in the Gemini app' in small type below.",
+    },
+    # TED-Ed, 4 ways to tell a great story: flat dots on flat color, animated by Kozmonot Animation Studio.
+    53: {
+        2: "A quote card in thin grey type, Audre Lorde's 'What is most important to me must be spoken…'. Four seconds of stillness before the animation.",
+        9: "The visual system in one frame: flat dots on cream, the red dot at the center, five friends on spring-like lines. People are dots for the rest of the film.",
+        14: "A pull-back through type: the network turns out to sit inside the O of 'STORY'. Lime type on salmon.",
+        18: "'Stories helped make us who we are…' in a rounded sans, the last line in lime. The ellipsis is three red dots, and they will move.",
+        23: "Cave painting in white line on red: hunters, a canoe, a spiral. Inside the circle the camera just dived through.",
+        29: "Dots queue into a cloud outline that grows brain folds: ideas entering a mind.",
+        33: "Campfire on purple, ringed by dashed circles and rows of dots. The fire is the film's one textured, hand-animated element.",
+        42: "The fire flares into a vortex of flame bands inside the rings, the start of a transition rather than a scene.",
+        47: "The same fire relit on green, yellow-green dots for the people around it.",
+        53: "A red dot by the fire grows a tiny speech bubble. The camera is about to dive into it.",
+        57: "Inside the bubble, the next red dot opens like a porthole onto a lime disc with the fire.",
+        63: "Near and far as scale: a huge green disc, a small dot, a speck with a ripple ring.",
+        68: "Dots become emoji faces for laughter, tension and amazement.",
+        76: "Stories spread: a dense constellation of dots and lines, big dots passing close as the camera pulls back.",
+        79: "The constellation resolves into a world map made of the same dots.",
+        84: "The storyteller as the red dot on top of a pyramid of purple listeners.",
+        92: "Hearts in a six-fold pattern: the listeners' response.",
+        97: "Dots smear and stretch like liquid while they rearrange.",
+        102: "The amphitheater: a speaker dot at the top, listeners in a fan, red arcs as sound waves. The layout returns three times.",
+        114: "Story structure as a physics toy: a ball with a goal (the flag in its thought bubble) against a triangle obstacle.",
+        119: "A plank turns the obstacle into a seesaw, and the ball rides it over the top.",
+        126: "'4 keys' in a purple badge on sky blue.",
+        131: "Key 1, character: a red dot ringed by cyan listeners. Number and label in a heavy rounded sans.",
+        133: "Center and ring turn the same blue. Empathy is shown as shared color.",
+        137: "Key 2, tension: the dot on a seesaw against a question mark.",
+        142: "The question mark becomes a warning sign, the danger version of tension.",
+        145: "Key 3, detail: a circle packed with fine hatching, too much detail.",
+        151: "The hatching thins and the circle fills solid: the right amount.",
+        155: "Key 4, conclusion: one dot has divided into three.",
+        158: "The third dot cycles through the kinds of ending: funny, moving, surprising. Here, the heart.",
+        169: "The journey: icons strung on one white line that climbs to a peak and falls, a talk's throughline as a plot graph.",
+        175: "A ring of triangles around a purple center, about to fold into the compass.",
+        179: "The compass travels and draws the line behind it.",
+        184: "The trap: a tightrope that hinges open under the dot.",
+        185: "A glitch between scenes: vertical streaks and a muddy color shift, the film's only rough texture.",
+        192: "The gift: a light-blue circle whose three dots turn into faces.",
+        200: "What the audience takes away, one icon at a time: an eye for a new way of understanding.",
+        203: "A play button: actionable information.",
+        205: "A dove: hope.",
+        208: "Rambling: the ellipsis inside a sun of rays that keep turning.",
+        213: "'meaning' handwritten in one continuous red line, confetti all around.",
+        226: "The compass needle swings toward a fist, 'powerful'. Each value is a direction.",
+        232: "A purple heart pulses by the needle: vulnerability.",
+        245: "Three dots with checkmarks: the story has to be true.",
+        250: "Exaggeration: the dots inflate, their red cores draining to empty orange halos.",
+        257: "A spotlight on a stage. The dot grows while it stands in the light.",
+        264: "A reputation drawn as a star that cracks before it shatters.",
+        275: "The gift sends out sound-wave arcs on both sides.",
+        279: "Callback: the campfire network from the opening returns.",
+        284: "'Let it mean something…', the red ellipsis ticking in.",
+        298: "The credits bar slides up under a recap of the triangle ring.",
+    },
 }
 FRAME_COPY = {
     # Tab label and intro for videos with SHOT_NOTES. Others fall back to DEFAULT_FRAME_COPY.
@@ -453,7 +538,7 @@ def transcript(number):
             timestamp = "00:" + timestamp
         current = [html.unescape(TAG.sub("", line)).strip() for line in raw[pos + 1:]]
         current = [line for line in current if line]
-        if vtt.name.endswith(".en.vtt") and number in (1, 7, 9, 48):
+        if vtt.name.endswith(".en.vtt") and number in (1, 7, 9, 48, 53):
             current = [" ".join(current)] if current else []
         overlap = 0
         for n in range(min(len(previous), len(current)), 0, -1):
@@ -470,7 +555,7 @@ def transcript(number):
     elif vtt.name.endswith(".ja.vtt"):
         kind = "Japanese speech recognition"
     elif vtt.name.endswith(".en.vtt"):
-        kind = "creator captions" if number in (1, 7, 9, 29, 30, 32, 33, 48) else "YouTube auto captions"
+        kind = "creator captions" if number in (1, 7, 9, 29, 30, 32, 33, 48, 52, 53) else "YouTube auto captions"
     else:
         kind = "local speech recognition"
     return {"vtt": str(vtt.relative_to(HERE)), "text": str(out.relative_to(HERE)), "kind": kind}
@@ -557,6 +642,13 @@ def write_pages(items):
 
         step = FRAME_STEP.get(number, 1)
         selected = item.get("selected_frames")
+        if number in motion_sequences.MOTION:
+            seqs = motion_sequences.MOTION[number]
+            data = json.loads((HERE / "frames" / name / "energy.json").read_text())
+            detail.append(motion_sequences.section(number, name, item, seqs, data, frame_card))
+            key_frames = sorted(SHOT_NOTES.get(number, {}).items())
+            (HERE / "frames" / name / "motion.md").write_text(
+                motion_sequences.markdown(number, name, item, seqs, data, key_frames))
         notes = SHOT_NOTES.get(number, {})
         tab_label, note_intro = FRAME_COPY.get(number, DEFAULT_FRAME_COPY)
         grid_class = "frame-grid is-square" if item["width"] == item["height"] else "frame-grid"
@@ -645,6 +737,10 @@ def one(number):
     info = probe(source)
     seconds, scenes = extract_frames(number, source)
     make_overview(number)
+    if number in motion_sequences.MOTION:
+        base = HERE / "frames" / stem(number)
+        motion_sequences.energy(source, base, info["fps"])
+        motion_sequences.extract(source, base, motion_sequences.MOTION[number], run_ffmpeg)
     return {"number": number, "slug": video["slug"], "title": video["title"],
             "author": video["author"], "url": video["url"], **info,
             "second_frames": seconds, "scene_frames": scenes, "transcript": transcript(number),
@@ -653,9 +749,14 @@ def one(number):
 
 
 if __name__ == "__main__":
+    # `build_study.py 52 53` rebuilds only those videos, for when the other sources are no longer
+    # on disk. Their manifest entries replace the old ones; the rest of the manifest is kept.
+    only = [int(n) for n in sys.argv[1:]]
     with concurrent.futures.ThreadPoolExecutor(max_workers=2) as pool:
-        items = sorted(pool.map(one, NUMBERS), key=lambda item: item["number"])
-    (HERE / "manifest.json").write_text(json.dumps(items, indent=2, ensure_ascii=False) + "\n")
+        items = sorted(pool.map(one, only or NUMBERS), key=lambda item: item["number"])
+    manifest = HERE / "manifest.json"
+    kept = [item for item in json.loads(manifest.read_text()) if item["number"] not in only] if only else []
+    manifest.write_text(json.dumps(sorted(kept + items, key=lambda item: item["number"]), indent=2, ensure_ascii=False) + "\n")
     write_pages(items)
     for item in items:
         print(f"#{item['number']:02d}: {item['second_frames']} second frames, {item['scene_frames']} cuts, transcript={bool(item['transcript'])}")
