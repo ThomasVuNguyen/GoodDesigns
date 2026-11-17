@@ -1,0 +1,553 @@
+{
+ "captured_from": "https://scribe.com/optimize",
+ "resolved_versions": {
+  "gh/nocodesupplyco/mast": "@latest (untagged; the default branch on the capture date)",
+  "npm/swiper": "11.2.10"
+ },
+ "files": {
+  "assets/css/marketing-mast.webflow.shared.789427f07.min.css": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/css/marketing-mast.webflow.shared.789427f07.min.css",
+   "role": "Webflow site stylesheet"
+  },
+  "assets/fonts/6a217e0d2c40d2fdb63e9555_ABCDiatype-Medium.woff2": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a217e0d2c40d2fdb63e9555_ABCDiatype-Medium.woff2",
+   "role": "font"
+  },
+  "assets/fonts/6a217e0db0d4e1b378d29b34_ABCDiatype-RegularItalic.woff2": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a217e0db0d4e1b378d29b34_ABCDiatype-RegularItalic.woff2",
+   "role": "font"
+  },
+  "assets/fonts/6a217e0dc5e335f2a844cf56_ABCDiatype-Regular.woff2": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a217e0dc5e335f2a844cf56_ABCDiatype-Regular.woff2",
+   "role": "font"
+  },
+  "assets/fonts/6a217e2581ac9f5dad23f579_ABCMarist-Regular.woff2": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a217e2581ac9f5dad23f579_ABCMarist-Regular.woff2",
+   "role": "font"
+  },
+  "assets/fonts/6a3297a97dcd7f76fc388981_ABCDiatype-Bold.woff2": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a3297a97dcd7f76fc388981_ABCDiatype-Bold.woff2",
+   "role": "font"
+  },
+  "assets/images/6a0c94b551f88b926e7c6abd_bg-margin.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a0c94b551f88b926e7c6abd_bg-margin.svg",
+   "role": "image"
+  },
+  "assets/images/6a0c94b551f88b926e7c6abe_bg-padding.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a0c94b551f88b926e7c6abe_bg-padding.svg",
+   "role": "image"
+  },
+  "assets/images/6a0c94b551f88b926e7c6ad5_checkbox-check.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a0c94b551f88b926e7c6ad5_checkbox-check.svg",
+   "role": "image"
+  },
+  "assets/images/6a10c48f07898fdbaef05649_hero-play-button.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a10c48f07898fdbaef05649_hero-play-button.avif",
+   "role": "image"
+  },
+  "assets/images/6a1765673b109f5aabc97926_Imagery_grey.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a1765673b109f5aabc97926_Imagery_grey.avif",
+   "role": "image"
+  },
+  "assets/images/6a176567e900a98e33978127_Imagery_orange.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a176567e900a98e33978127_Imagery_orange.avif",
+   "role": "image"
+  },
+  "assets/images/6a1f3ef7de8cc2b3bbbcde13_chevron-black-right.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a1f3ef7de8cc2b3bbbcde13_chevron%20black%20right.svg",
+   "role": "image"
+  },
+  "assets/images/6a1f3ef7de8cc2b3bbbcde14_chevron-white-right.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a1f3ef7de8cc2b3bbbcde14_chevron%20white%20right.svg",
+   "role": "image"
+  },
+  "assets/images/6a1f3ef7de8cc2b3bbbcde31_nyl-blue.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a1f3ef7de8cc2b3bbbcde31_nyl%20blue.svg",
+   "role": "image"
+  },
+  "assets/images/6a203d9d7f4dd237be63eb23_artwork-blue-sm.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a203d9d7f4dd237be63eb23_artwork-blue-sm.avif",
+   "role": "image"
+  },
+  "assets/images/6a2182f41f6c2983226db93b_Shield.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a2182f41f6c2983226db93b_Shield.svg",
+   "role": "image"
+  },
+  "assets/images/6a2182f4bcd373fadd665be5_SOCs.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a2182f4bcd373fadd665be5_SOCs.svg",
+   "role": "image"
+  },
+  "assets/images/6a2182f59f629343005c1822_Blur.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a2182f59f629343005c1822_Blur.svg",
+   "role": "image"
+  },
+  "assets/images/6a21850a66a091af9af3b1c5_Havas-Media-Black.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a21850a66a091af9af3b1c5_Havas%20Media%20Black.svg",
+   "role": "image"
+  },
+  "assets/images/6a219f01774c4baf03c85406_Group-2118.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a219f01774c4baf03c85406_Group%202118.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c3172c82595e7fd9c304_robot.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c3172c82595e7fd9c304_robot.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c31750a31221721e0d27_badge-check-1.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c31750a31221721e0d27_badge-check-1.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c317d1dc845254bfd3ae_badge-check.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c317d1dc845254bfd3ae_badge-check.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c317e0fd55bffad840c0_star-sharp.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c317e0fd55bffad840c0_star-sharp.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c317ea18dad40591fa94_robot-1.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c317ea18dad40591fa94_robot-1.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c317fd1328f67a4722c4_star-sharp-1.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c317fd1328f67a4722c4_star-sharp-1.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c44f0907163d7bde7eb9_calendar-1.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c44f0907163d7bde7eb9_calendar-1.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c44f2845041ce3d463cf_gear-1.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c44f2845041ce3d463cf_gear-1.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c44f5bcc86f3b8b95ccf_laptop-1.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c44f5bcc86f3b8b95ccf_laptop-1.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c44f9cc7db61d5125f90_gear.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c44f9cc7db61d5125f90_gear.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c44fa2aca1a4e3e16ec6_computer-1.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c44fa2aca1a4e3e16ec6_computer-1.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c44fd1dc845254c0804b_laptop.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c44fd1dc845254c0804b_laptop.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c44fe62aaea85227d599_computer.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c44fe62aaea85227d599_computer.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c44ff2943f025eb33142_bolt-1.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c44ff2943f025eb33142_bolt-1.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c44ff6655cdd6245d63f_calendar.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c44ff6655cdd6245d63f_calendar.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c44ffb8e64c99b2b2f27_bolt.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c44ffb8e64c99b2b2f27_bolt.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c4500907163d7bde7ee4_page-1.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c4500907163d7bde7ee4_page-1.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c4501204822ec04611f3_shield-1.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c4501204822ec04611f3_shield-1.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c4501204822ec04611f7_Stars-1.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c4501204822ec04611f7_Stars-1.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c4505852625b759d4153_page.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c4505852625b759d4153_page.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c4505f85c979693a54c7_rectangle-history-1.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c4505f85c979693a54c7_rectangle-history-1.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c4505f85c979693a54cc_Stars.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c4505f85c979693a54cc_Stars.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c450c298f17d18bc0779_shield.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c450c298f17d18bc0779_shield.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c450f972f4ca858f9f77_rectangle-history.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c450f972f4ca858f9f77_rectangle-history.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c451aa7a66ddff2a5393_Users.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c451aa7a66ddff2a5393_Users.svg",
+   "role": "image"
+  },
+  "assets/images/6a22c64c3a7124ce7bd32954_Users-1-.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a22c64c3a7124ce7bd32954_Users-1-.svg",
+   "role": "image"
+  },
+  "assets/images/6a270f01054c99eb282ed1ef_Frame-2010.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a270f01054c99eb282ed1ef_Frame%202010.svg",
+   "role": "image"
+  },
+  "assets/images/6a270f0138af3d2262dc1009_Frame-2013.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a270f0138af3d2262dc1009_Frame%202013.svg",
+   "role": "image"
+  },
+  "assets/images/6a270f0159e93cd1b5609771_Group-1499.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a270f0159e93cd1b5609771_Group%201499.svg",
+   "role": "image"
+  },
+  "assets/images/6a270f02054c99eb282ed240_Frame-2009.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a270f02054c99eb282ed240_Frame%202009.svg",
+   "role": "image"
+  },
+  "assets/images/6a270f1338af3d2262dc150a_Group-1503.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a270f1338af3d2262dc150a_Group%201503.svg",
+   "role": "image"
+  },
+  "assets/images/6a277ba642a1793292bf967c_brian-williams.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a277ba642a1793292bf967c_brian%20williams.avif",
+   "role": "image"
+  },
+  "assets/images/6a277be71aee710252fe64e8_new-york-life-black.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a277be71aee710252fe64e8_new%20york%20life%20black.avif",
+   "role": "image"
+  },
+  "assets/images/6a2b0715230b6569305c1f6d_elliot.png": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a2b0715230b6569305c1f6d_elliot.png",
+   "role": "image"
+  },
+  "assets/images/6a2c184407298d216a9fea80_New-York-Life-Logo.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a2c184407298d216a9fea80_New%20York%20Life%20Logo.svg",
+   "role": "image"
+  },
+  "assets/images/6a2c18440d4db90824fd3f76_T-Mobile_Logo.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a2c18440d4db90824fd3f76_T%20Mobile_Logo.svg",
+   "role": "image"
+  },
+  "assets/images/6a2c1844184649026d345c4e_Intuit.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a2c1844184649026d345c4e_Intuit.svg",
+   "role": "image"
+  },
+  "assets/images/6a2c184449db9e654630bec6_NorthernTrust_Logo.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a2c184449db9e654630bec6_NorthernTrust_Logo.svg",
+   "role": "image"
+  },
+  "assets/images/6a2c184469ce62690293084b_Linkedin_Logo.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a2c184469ce62690293084b_Linkedin_Logo.svg",
+   "role": "image"
+  },
+  "assets/images/6a2c1844e6bff1a82ecbce81_Thermo-Fisher-Logo.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a2c1844e6bff1a82ecbce81_Thermo%20Fisher%20Logo.svg",
+   "role": "image"
+  },
+  "assets/images/6a2f2fadbc0e9d85ec6063c5_piggy-bank.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a2f2fadbc0e9d85ec6063c5_piggy-bank.svg",
+   "role": "image"
+  },
+  "assets/images/6a2f2fadf789986bf2dc3328_piggy-bank-active.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a2f2fadf789986bf2dc3328_piggy-bank%20active.svg",
+   "role": "image"
+  },
+  "assets/images/6a2f31cc3abdfa319217ec4b_cyan.png": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a2f31cc3abdfa319217ec4b_cyan.png",
+   "role": "image"
+  },
+  "assets/images/6a2f31cc8f1d72df3e6673b7_purple.png": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a2f31cc8f1d72df3e6673b7_purple.png",
+   "role": "image"
+  },
+  "assets/images/6a305912c8bf3a32503464e6_Okta.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a305912c8bf3a32503464e6_Okta.svg",
+   "role": "image"
+  },
+  "assets/images/6a31584e9f5465dceb97222f_Intel.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a31584e9f5465dceb97222f_Intel.svg",
+   "role": "image"
+  },
+  "assets/images/6a315f22bde8952044dec69b_Hubspot.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a315f22bde8952044dec69b_Hubspot.svg",
+   "role": "image"
+  },
+  "assets/images/6a3160bea968690a94f6419a_CF-Logo-1-p-500.png": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a3160bea968690a94f6419a_CF-Logo%201-p-500.png",
+   "role": "image"
+  },
+  "assets/images/6a3160bea968690a94f6419a_CF-Logo-1.png": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a3160bea968690a94f6419a_CF-Logo%201.png",
+   "role": "image"
+  },
+  "assets/images/6a31615c51dec033443dde06_Estee-Lauder-Logo.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a31615c51dec033443dde06_Estee%20Lauder%20Logo.svg",
+   "role": "image"
+  },
+  "assets/images/6a329d693cd9f9b2b87d5b29_46f0cdc8181195df9c546a1b0542a3b6_cyan-bg-p-1080.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a329d693cd9f9b2b87d5b29_46f0cdc8181195df9c546a1b0542a3b6_cyan%20bg-p-1080.avif",
+   "role": "image"
+  },
+  "assets/images/6a329d693cd9f9b2b87d5b29_46f0cdc8181195df9c546a1b0542a3b6_cyan-bg-p-500.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a329d693cd9f9b2b87d5b29_46f0cdc8181195df9c546a1b0542a3b6_cyan%20bg-p-500.avif",
+   "role": "image"
+  },
+  "assets/images/6a329d693cd9f9b2b87d5b29_46f0cdc8181195df9c546a1b0542a3b6_cyan-bg-p-800.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a329d693cd9f9b2b87d5b29_46f0cdc8181195df9c546a1b0542a3b6_cyan%20bg-p-800.avif",
+   "role": "image"
+  },
+  "assets/images/6a329d693cd9f9b2b87d5b29_46f0cdc8181195df9c546a1b0542a3b6_cyan-bg.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a329d693cd9f9b2b87d5b29_46f0cdc8181195df9c546a1b0542a3b6_cyan%20bg.avif",
+   "role": "image"
+  },
+  "assets/images/6a32ae8ee05462397bf30de5_arrow-footer-p-1080.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a32ae8ee05462397bf30de5_arrow%20footer-p-1080.avif",
+   "role": "image"
+  },
+  "assets/images/6a32ae8ee05462397bf30de5_arrow-footer-p-1600.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a32ae8ee05462397bf30de5_arrow%20footer-p-1600.avif",
+   "role": "image"
+  },
+  "assets/images/6a32ae8ee05462397bf30de5_arrow-footer-p-2000.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a32ae8ee05462397bf30de5_arrow%20footer-p-2000.avif",
+   "role": "image"
+  },
+  "assets/images/6a32ae8ee05462397bf30de5_arrow-footer-p-500.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a32ae8ee05462397bf30de5_arrow%20footer-p-500.avif",
+   "role": "image"
+  },
+  "assets/images/6a32ae8ee05462397bf30de5_arrow-footer-p-800.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a32ae8ee05462397bf30de5_arrow%20footer-p-800.avif",
+   "role": "image"
+  },
+  "assets/images/6a32ae8ee05462397bf30de5_arrow-footer.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a32ae8ee05462397bf30de5_arrow%20footer.avif",
+   "role": "image"
+  },
+  "assets/images/6a33deb8091ac4cd40321810_purple-background-2.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a33deb8091ac4cd40321810_purple%20background%202.avif",
+   "role": "image"
+  },
+  "assets/images/6a33e46f5a28918092dc8004_Finance-Square.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a33e46f5a28918092dc8004_Finance%20Square.avif",
+   "role": "image"
+  },
+  "assets/images/6a33e4706a8e878d20c8cf41_Drive-AI-transformation-Square.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a33e4706a8e878d20c8cf41_Drive%20AI%20transformation%20Square.avif",
+   "role": "image"
+  },
+  "assets/images/6a33e470d60809f26d3c7a87_Operations-Square.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a33e470d60809f26d3c7a87_Operations%20Square.avif",
+   "role": "image"
+  },
+  "assets/images/6a33e470d60809f26d3c7a8e_Onboard-new-hires-Square.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a33e470d60809f26d3c7a8e_Onboard%20new%20hires%20Square.avif",
+   "role": "image"
+  },
+  "assets/images/6a34111a249788ecafa00d1a_favicon.png": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a34111a249788ecafa00d1a_favicon.png",
+   "role": "image"
+  },
+  "assets/images/6a34111a3401be1be75d3060_favicon.png": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a34111a3401be1be75d3060_favicon.png",
+   "role": "image"
+  },
+  "assets/images/6a34111a4f398a29fb723f69_favicon.png": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a34111a4f398a29fb723f69_favicon.png",
+   "role": "image"
+  },
+  "assets/images/6a34111ada54b1622fbd4389_favicon.png": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a34111ada54b1622fbd4389_favicon.png",
+   "role": "image"
+  },
+  "assets/images/6a34111b3354e13b608505fa_favicon.png": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a34111b3354e13b608505fa_favicon.png",
+   "role": "image"
+  },
+  "assets/images/6a6a0a9656d6a97db1cd36ea_b4cde8478484f6272ecefaa24ef501e8_robot.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a6a0a9656d6a97db1cd36ea_b4cde8478484f6272ecefaa24ef501e8_robot.svg",
+   "role": "image"
+  },
+  "assets/images/6a6a0a965a30cc78ca390a88_4743bcf7e7b77766145559d92bcc159c_sitemap.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a6a0a965a30cc78ca390a88_4743bcf7e7b77766145559d92bcc159c_sitemap.svg",
+   "role": "image"
+  },
+  "assets/images/6a6a0a967a37c86c5dad9f0b_f11a1de7ca1d4139d8317c7731df0914_cart-plus.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a6a0a967a37c86c5dad9f0b_f11a1de7ca1d4139d8317c7731df0914_cart-plus.svg",
+   "role": "image"
+  },
+  "assets/images/6a6a0a968d520d0880c419d4_c28f2d0781da52e8f2707daf3cb6f306_arrows-to-dot.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a6a0a968d520d0880c419d4_c28f2d0781da52e8f2707daf3cb6f306_arrows-to-dot.svg",
+   "role": "image"
+  },
+  "assets/images/6a6a0a96db8bf8e71a15678f_095912bde3652cf1038641f5e0b7b311_gears.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a6a0a96db8bf8e71a15678f_095912bde3652cf1038641f5e0b7b311_gears.svg",
+   "role": "image"
+  },
+  "assets/images/6a6a0a96f4ebee09cf489436_1bf58862825adf3e275cfff7e3c62a2f_sliders.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a6a0a96f4ebee09cf489436_1bf58862825adf3e275cfff7e3c62a2f_sliders.svg",
+   "role": "image"
+  },
+  "assets/images/6a9b036ab1dfe34526144183_clone.svg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a9b036ab1dfe34526144183_clone.svg",
+   "role": "image"
+  },
+  "assets/images/6a9b036ab1dfe3452614418e_bg.jpg": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a9b036ab1dfe3452614418e_bg.jpg",
+   "role": "image"
+  },
+  "assets/images/6a9b036ab1dfe345261441af_report-article-bg.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a9b036ab1dfe345261441af_report%20article%20bg.avif",
+   "role": "image"
+  },
+  "assets/images/6a9b036ab1dfe345261441b7_report-article-bg-m.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a9b036ab1dfe345261441b7_report%20article%20bg%20m.avif",
+   "role": "image"
+  },
+  "assets/images/6aba8a70d77e04b8a3e876c0_930b32e293efa92900c1dd5e703cd405_thumbnailnav-p-1080.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6aba8a70d77e04b8a3e876c0_930b32e293efa92900c1dd5e703cd405_thumbnailnav-p-1080.avif",
+   "role": "image"
+  },
+  "assets/images/6aba8a70d77e04b8a3e876c0_930b32e293efa92900c1dd5e703cd405_thumbnailnav-p-500.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6aba8a70d77e04b8a3e876c0_930b32e293efa92900c1dd5e703cd405_thumbnailnav-p-500.avif",
+   "role": "image"
+  },
+  "assets/images/6aba8a70d77e04b8a3e876c0_930b32e293efa92900c1dd5e703cd405_thumbnailnav-p-800.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6aba8a70d77e04b8a3e876c0_930b32e293efa92900c1dd5e703cd405_thumbnailnav-p-800.avif",
+   "role": "image"
+  },
+  "assets/images/6aba8a70d77e04b8a3e876c0_930b32e293efa92900c1dd5e703cd405_thumbnailnav.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6aba8a70d77e04b8a3e876c0_930b32e293efa92900c1dd5e703cd405_thumbnailnav.avif",
+   "role": "image"
+  },
+  "assets/images/6ac51f630560a138934ebc5d_b75f0df593a4a07634d490a781eb3665_blognav-p-1080.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6ac51f630560a138934ebc5d_b75f0df593a4a07634d490a781eb3665_blognav-p-1080.avif",
+   "role": "image"
+  },
+  "assets/images/6ac51f630560a138934ebc5d_b75f0df593a4a07634d490a781eb3665_blognav-p-500.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6ac51f630560a138934ebc5d_b75f0df593a4a07634d490a781eb3665_blognav-p-500.avif",
+   "role": "image"
+  },
+  "assets/images/6ac51f630560a138934ebc5d_b75f0df593a4a07634d490a781eb3665_blognav-p-800.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6ac51f630560a138934ebc5d_b75f0df593a4a07634d490a781eb3665_blognav-p-800.avif",
+   "role": "image"
+  },
+  "assets/images/6ac51f630560a138934ebc5d_b75f0df593a4a07634d490a781eb3665_blognav.avif": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6ac51f630560a138934ebc5d_b75f0df593a4a07634d490a781eb3665_blognav.avif",
+   "role": "image"
+  },
+  "assets/images/custom-checkbox-checkmark.svg": {
+   "source": "https://d3e54v103j8qbb.cloudfront.net/static/custom-checkbox-checkmark.589d534424.svg",
+   "role": "Webflow's checkbox tick"
+  },
+  "assets/js/gsap/ScrollTrigger.min.js": {
+   "source": "https://cdn.prod.website-files.com/gsap/3.15.0/ScrollTrigger.min.js",
+   "role": "script"
+  },
+  "assets/js/gsap/gsap.min.js": {
+   "source": "https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js",
+   "role": "script"
+  },
+  "assets/js/jquery-3.5.1.min.js": {
+   "source": "https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6a0c94b351f88b926e7c69db",
+   "role": "script"
+  },
+  "assets/js/lottie_svg.min.js": {
+   "source": "https://cdn.jsdelivr.net/npm/lottie-web@5.13.0/build/player/lottie_svg.min.js",
+   "role": "script"
+  },
+  "assets/js/mast/accordion.min.js": {
+   "source": "https://cdn.jsdelivr.net/gh/nocodesupplyco/mast@b014a1b/accordion.min.js",
+   "role": "script"
+  },
+  "assets/js/mast/inline-video.min.js": {
+   "source": "https://cdn.jsdelivr.net/gh/nocodesupplyco/mast@latest/inline-video.min.js",
+   "role": "script"
+  },
+  "assets/js/mast/modal.min.js": {
+   "source": "https://cdn.jsdelivr.net/gh/nocodesupplyco/mast@e3479b3/modal.min.js",
+   "role": "script"
+  },
+  "assets/js/mast/slider.min.js": {
+   "source": "https://cdn.jsdelivr.net/gh/nocodesupplyco/mast@latest/slider.min.js",
+   "role": "script"
+  },
+  "assets/js/mast/tabs.min.js": {
+   "source": "https://cdn.jsdelivr.net/gh/nocodesupplyco/mast@latest/tabs.min.js",
+   "role": "script"
+  },
+  "assets/js/swiper-bundle.min.js": {
+   "source": "https://cdn.jsdelivr.net/npm/swiper@11.2.10/swiper-bundle.min.js",
+   "role": "script"
+  },
+  "assets/js/webflow/webflow.787497c0.0ae3368fb2138805.js": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/js/webflow.787497c0.0ae3368fb2138805.js",
+   "role": "script"
+  },
+  "assets/js/webflow/webflow.schunk.4655eb13e7209321.js": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/js/webflow.schunk.4655eb13e7209321.js",
+   "role": "script"
+  },
+  "assets/js/webflow/webflow.schunk.b36de0610a35aa79.js": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/js/webflow.schunk.b36de0610a35aa79.js",
+   "role": "script"
+  },
+  "assets/js/webflow/webflow.schunk.e80b3fc1ede37b22.js": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/js/webflow.schunk.e80b3fc1ede37b22.js",
+   "role": "script"
+  },
+  "assets/lottie/6a28406b26a232c9af644df3_AI-Roadmap.json": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a28406b26a232c9af644df3_AI-Roadmap.json",
+   "role": "Lottie animation"
+  },
+  "assets/lottie/6a28406b576605ee66592560_Optimize-Updating.json": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a28406b576605ee66592560_Optimize-Updating.json",
+   "role": "Lottie animation"
+  },
+  "assets/lottie/6a28406b64364073dabb599f_Top-issues.json": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a28406b64364073dabb599f_Top-issues.json",
+   "role": "Lottie animation"
+  },
+  "assets/lottie/6a28406b773283126968a716_C-S-I.json": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a28406b773283126968a716_C-S-I.json",
+   "role": "Lottie animation"
+  },
+  "assets/lottie/6a28406bc9cd730a2b87cb19_Automation-approvals.json": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a28406bc9cd730a2b87cb19_Automation-approvals.json",
+   "role": "Lottie animation"
+  },
+  "assets/lottie/6a28406be3f86edabec51130_Workflow.json": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a28406be3f86edabec51130_Workflow.json",
+   "role": "Lottie animation"
+  },
+  "assets/lottie/6a28406bfc5b632e8267b733_biggest-bottleneck.json": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a28406bfc5b632e8267b733_biggest-bottleneck.json",
+   "role": "Lottie animation"
+  },
+  "assets/lottie/6a28406bfcdc50ff6d8b729d_Automation-opportunities.json": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a28406bfcdc50ff6d8b729d_Automation-opportunities.json",
+   "role": "Lottie animation"
+  },
+  "assets/lottie/6a30683b8f6808962cef6112_Circles.json": {
+   "source": "https://cdn.prod.website-files.com/6a0c94b351f88b926e7c69db/6a30683b8f6808962cef6112_Circles.json",
+   "role": "Lottie animation"
+  },
+  "assets/video/customer-brian.mp4": {
+   "source": "https://colony-labs-public.s3.us-east-2.amazonaws.com/videos/02_Customer+Video_Brian+v6.mp4",
+   "role": "customer video (re-encoded)"
+  },
+  "assets/video/customer-elliot.mp4": {
+   "source": "https://colony-labs-public.s3.us-east-2.amazonaws.com/videos/06_Customer+Video_Elliot+v6.mp4",
+   "role": "customer video (re-encoded)"
+  },
+  "index.html": {
+   "source": "https://scribe.com/optimize",
+   "role": "page"
+  }
+ }
+}
