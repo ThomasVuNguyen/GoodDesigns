@@ -32,6 +32,12 @@ MOTION_INTRO = {
          "on one detail of the current picture, grows into a solid circle that fills the frame, and the next scene is waiting "
          "inside it. Within scenes the motion is mostly mechanical and repeated: piles driven one after another, boats sliding "
          "past on loops, tiles stacking in a grid, a route drawing itself across a map."),
+    56: ("Caitlin McCarthy animates Amia and her imaginary friend Zelba as hand-drawn characters in flat, saturated color with "
+         "thin colored outlines. Zelba is always a soft, glowing blue shape that can stretch, melt or turn into anything, and the "
+         "film animates him that way: he morphs into a cat, a cloud of fur, a sea serpent, a heart. Scene changes are soft-edged "
+         "color blooms that grow out of a character and wash over the frame, and remembered or imagined scenes drop to thin "
+         "line art on a single color. The motion is full character animation on ones and twos, with smears, squash and stretch "
+         "and big held reaction poses."),
     53: ("Kozmonot Animation Studio builds the whole film from flat dots on flat color fields. People are dots, a group is a ring "
          "or a fan of dots, and the storyteller is the red one. There is one hard cut in five minutes. Every other scene change "
          "goes through a shape: the camera dives into a dot, a speech bubble or the O of a word, a circle irises open or shut, "
@@ -673,6 +679,199 @@ MOTION = {
          "tags": ["unroll", "pop-in"],
          "text": "A white sheet's rolled edge unrolls left to right, and the red map of castles pops on behind it in under half a "
                  "second. It is the TED-Ed end card shared with other lessons."},
+    ],
+    56: [
+        {"id": "hands", "start": 5.75, "end": 8.0, "fps": 8,
+         "title": "Two hands meet",
+         "tags": ["fade-in", "reach", "grip", "pull-back"],
+         "text": "Out of white, a pink hand and a blue hand reach in from opposite corners, meet in the middle and grip. The "
+                 "camera pulls back past their legs to the two of them standing hand in hand on yellow. The film's relationship "
+                 "is set before anyone is named."},
+        {"id": "bloom-castle", "start": 11.0, "end": 14.5, "fps": 8,
+         "title": "A whisper blooms into a kingdom",
+         "tags": ["bloom", "soft edge", "line art", "color wash"],
+         "text": "Amia leans in to whisper, and a soft orange glow blooms out of the space between them. It grows into a "
+                 "cloud with blurred, grainy edges and swallows the frame; inside, the scene is only thin orange line art. A "
+                 "second bloom in turquoise opens on a line-drawn castle where both of them rule. Every memory scene arrives "
+                 "this way."},
+        {"id": "faces", "start": 16.75, "end": 22.75, "fps": 4,
+         "title": "Line-drawn faces trade places",
+         "tags": ["line art", "drift", "swap", "color wipe"],
+         "text": "On yellow, Amia's face in thin orange line talks while doodles (stars, hearts, a fish) drift across. Zelba's "
+                 "face slides in from the right and fills with orange color as he listens. A dark red glow then spreads from the "
+                 "left edge and turns the whole frame red, with the faces still in place."},
+        {"id": "spaghetti", "start": 24.5, "end": 31.0, "fps": 4,
+         "title": "A bad idea fills with color",
+         "tags": ["line art", "squash", "color fill", "bloom"],
+         "text": "Line art on dark red: Amia and Zelba at the table with spaghetti. Amia dumps the bowl on her own head. Then "
+                 "color blooms out from her, orange cloud edges spreading across the frame, and the scene is suddenly full color "
+                 "with the spaghetti on her head."},
+        {"id": "reveal", "start": 34.0, "end": 37.75, "fps": 6,
+         "title": "Zelba appears beside her",
+         "tags": ["fade-in", "glow", "hug"],
+         "text": "Over the parents' shocked dinner table, Zelba fades into the empty chair as a soft glowing blue shape. He "
+                 "leans over and wraps Amia in a hug, the spaghetti still dripping. The glow is the film's rule for anything "
+                 "imaginary."},
+        {"id": "thought", "start": 39.5, "end": 44.0, "fps": 6,
+         "title": "A thought cloud grows",
+         "tags": ["grow", "sparkle", "push-in"],
+         "text": "The two sit cross-legged on yellow. A pink frame cuts in with them inside a yellow thought cloud trailing an "
+                 "orange wisp, sparkles twinkling around it. The cloud swells until its edges leave the frame and the yellow is "
+                 "the background again."},
+        {"id": "crowd", "start": 44.25, "end": 48.0, "fps": 6,
+         "title": "Other kids crowd in, then vanish",
+         "tags": ["pop-in", "stagger", "puff"],
+         "text": "Kids pop up from the bottom edge one at a time, waving and reaching in, until they fill the frame around the "
+                 "pair. Then each one pops into a cloud puff and disappears, and Amia and Zelba are alone again."},
+        {"id": "melt", "start": 48.25, "end": 50.0, "fps": 12,
+         "title": "The pair melts into a family",
+         "tags": ["morph", "squash", "stretch", "split"],
+         "text": "Amia and Zelba squeeze together into one blue blob, shrink to a dot, stretch into a flat line with bumps, and "
+                 "the bumps grow up into a family of four. One shape becomes many in under two seconds."},
+        {"id": "playground", "start": 55.0, "end": 60.25, "fps": 4,
+         "title": "The playground",
+         "tags": ["bloom", "loop", "background action"],
+         "text": "A blue cloud bloom opens on a top-down playground in orange. Kids loop on the swings, slide and seesaw while "
+                 "a yellow imaginary friend appears beside a girl and rides the slide down after her."},
+        {"id": "party", "start": 63.75, "end": 74.0, "fps": 3,
+         "title": "A birthday table fills with friends",
+         "tags": ["pop-in", "stagger", "crowd", "color wipe"],
+         "text": "At an empty birthday table the girl blows out the candles and invites someone in. Imaginary guests pop up "
+                 "behind her one after another, every shape and color, until they pack the frame. A dark red wipe then sweeps up "
+                 "from the corner."},
+        {"id": "lineup", "start": 74.0, "end": 80.5, "fps": 3,
+         "title": "A line of storytellers",
+         "tags": ["line art", "color in", "slide", "bloom"],
+         "text": "Line-drawn kids on pink act out their stories in place: a sword, a guitar, a dog on a leash. The row slides "
+                 "left, and as each kid reaches center their imaginary friend colors in beside them. The last one grows into a "
+                 "blue heart around Amia."},
+        {"id": "classroom", "start": 80.5, "end": 85.5, "fps": 4,
+         "title": "Story time takes over the classroom",
+         "tags": ["drop", "bloom", "fly-in"],
+         "text": "Amia drops into a desk on yellow, the class around her. As she talks, a story cloud blooms in front of the "
+                 "teacher, a pink sea serpent swims through blue waves inside it, and a ship sails by."},
+        {"id": "words", "start": 85.5, "end": 90.0, "fps": 6,
+         "title": "Words stream out",
+         "tags": ["close-up", "stream", "arc"],
+         "text": "Close on Amia with Zelba sitting on her head. Big words and equations ('loquacious', 'e=mc²', "
+                 "'idiosyncratic', 'ubiquitous') stream out of her mouth in blue script and arc off to the right."},
+        {"id": "pointing", "trail": True, "start": 92.0, "end": 101.5, "fps": 4,
+         "title": "The teacher points at everyone",
+         "tags": ["loop", "arm swing", "comic timing"],
+         "text": "Back of the teacher's head in the foreground. Her arm swings out from her side to point at each kid in turn, "
+                 "the same move over and over, while the kids squirm."},
+        {"id": "fall-blob", "start": 101.75, "end": 108.5, "fps": 4,
+         "title": "Zelba falls and shapeshifts",
+         "tags": ["wipe", "fall", "morph", "pile up"],
+         "text": "A dark red wave wipes up over the classroom and Zelba drops in. He flattens into a puddle, a crowd of small "
+                 "creatures piles onto him, then they're gone and he becomes a cat, a long weasel, and a pink curled ball."},
+        {"id": "characters", "start": 108.0, "end": 114.0, "fps": 4,
+         "title": "A parade of imaginary friends",
+         "tags": ["morph", "swap", "trios"],
+         "text": "The ball pops into a lineup of three characters that swaps every second: an old woman, a girl and a dancer; a "
+                 "baby, a woman and a giant; a king, a hooded figure and a grump; a princess, a witch and a long-nosed puppet."},
+        {"id": "family", "trail": True, "start": 115.25, "end": 119.0, "fps": 6,
+         "title": "One friend becomes a family",
+         "tags": ["morph", "bounce", "loop"],
+         "text": "A blue figure lies back, turns green and flattens, then splits into a row of yellow creatures of all sizes. "
+                 "They bounce in place out of step with each other, each one on its own loop."},
+        {"id": "toybox", "start": 119.5, "end": 128.0, "fps": 4,
+         "title": "A toybox comes alive",
+         "tags": ["bloom", "morph", "pop-out", "wobble"],
+         "text": "A blue bloom opens and the yellow creatures run together into a cube: a toybox. It wobbles, the lid springs "
+                 "open, and toys climb out: a bear, a ringed stacker, a car. The box shuts and rounds into a spotted ball."},
+        {"id": "globe", "start": 128.75, "end": 132.75, "fps": 4,
+         "title": "The box becomes a globe",
+         "tags": ["morph", "pop-on", "stagger"],
+         "text": "The box rounds off into a yellow globe with orange continents, and small companions pop onto its surface one "
+                 "after another: a dark star, a pink cloud, a pair of lips."},
+        {"id": "screen", "start": 132.5, "end": 143.75, "fps": 2,
+         "title": "The film within the film",
+         "tags": ["drop-in", "projector", "slide change"],
+         "text": "A dark rectangle drops into frame and an audience appears in front of it with a projector. The screen lights "
+                 "up with a flag and Amia and Zelba, then changes slide by slide: a kid on a cat, a girl hugging a squirrel, a "
+                 "cartoon car with a face. The bloom from the last slide opens into pink."},
+        {"id": "roles", "start": 144.0, "end": 149.75, "fps": 4,
+         "title": "Companions change roles",
+         "tags": ["morph", "stagger", "shape"],
+         "text": "Four companions in a row on pink: a dice, a blue figure, a bag, a dog. They melt one at a time, left to right, "
+                 "into simple shapes with faces (a heart, a rectangle, a triangle, a star). The heart then tips over into the next "
+                 "scene."},
+        {"id": "companions", "start": 157.25, "end": 166.5, "fps": 3,
+         "title": "COMPANIONS writes itself",
+         "tags": ["swirl", "write-on", "orbit"],
+         "text": "Small colored companions swirl around a blue frame in a loose ring. 'COMPANIONS' writes on letter by letter "
+                 "in hand-drawn caps in the middle while the ring keeps turning around it."},
+        {"id": "fight", "start": 166.5, "end": 171.0, "fps": 6,
+         "title": "A fight cloud",
+         "tags": ["slide-in", "echo", "cartoon cloud", "squash"],
+         "text": "Amia slides in on a dark ground trailed by colored echoes of herself, and a row of Zelbas slides in with "
+                 "echoes from the other side. They collide in a burst of speed lines and become a yellow fight cloud with arms, "
+                 "legs and stars poking out."},
+        {"id": "monster", "start": 171.0, "end": 180.0, "fps": 4,
+         "title": "A monster, then a friend",
+         "tags": ["loom", "warm wipe", "reach"],
+         "text": "Zelba looms over a crouching Amia as a spiky, toothy monster, reaching for her twice. Giant faces of her parents "
+                 "watch from the edges. A warm orange glow spreads in and the monster softens back into smiling Zelba, who helps "
+                 "her up into a hug."},
+        {"id": "serpent", "start": 188.0, "end": 196.25, "fps": 4,
+         "title": "The sea serpent",
+         "tags": ["slither", "wrap", "spiral", "shrink"],
+         "text": "A line of blue drops from the top and becomes a toothy sea serpent that slithers across the floor, wraps "
+                 "around Amia in a spiral and squeezes. Then it unwinds, shrinks to a small tail, and is gone."},
+        {"id": "argue", "start": 196.25, "end": 203.75, "fps": 4,
+         "title": "An argument in shapes",
+         "tags": ["close-up", "jagged shapes", "alternating"],
+         "text": "Close profiles face off from opposite edges: Amia and a blue face, then a real girl. Jagged speech shapes in "
+                 "orange, blue and yellow shoot back and forth between them, swapping every quarter second, until both glare."},
+        {"id": "make-up", "start": 203.75, "end": 210.0, "fps": 4,
+         "title": "Making up",
+         "tags": ["pull-back", "hug", "tilt up"],
+         "text": "The two girls on a playground mark, arms folded, then reach out, shake hands and hug. The camera tilts up the "
+                 "building to its rooftop at night."},
+        {"id": "rooftop", "start": 210.0, "end": 228.0, "fps": 2,
+         "title": "Stars drawn on the rooftop",
+         "tags": ["dotted line", "draw-on", "twinkle", "fade"],
+         "text": "On a rooftop at night, Zelba and Amia watch dotted-line drawings sparkle on and off in the sky: hearts, "
+                 "faces, stars, people. Zelba moves to sit away from her, then back. At 3:40 he flickers out and she stands alone, "
+                 "then walks through the door."},
+        {"id": "photos", "start": 228.25, "end": 234.75, "fps": 4,
+         "title": "A life in photos",
+         "tags": ["drop-in", "stack", "swipe away"],
+         "text": "Polaroids drop in and pile up on dark red, each labelled with her age: Amia 2 yrs, 7 yrs, 14 yrs, 18, 25, "
+                 "36, 53, 87. A hand sweeps them off the table and the next scene is under them."},
+        {"id": "lift", "start": 243.0, "end": 249.0, "fps": 4,
+         "title": "Pretend weights",
+         "tags": ["bloom", "lift", "grow"],
+         "text": "An orange bloom washes over the table into yellow, where Zelba cheers in the foreground. A small Amia strains "
+                 "at a barbell, then in one cut she has grown into a strong woman hoisting a huge one overhead."},
+        {"id": "theory", "start": 249.0, "end": 262.0, "fps": 2,
+         "title": "Theory of mind",
+         "tags": ["arc type", "pop-in", "embrace"],
+         "text": "Amia with Zelba behind her. 'THEORY OF MIND' arcs in over their heads word by word. A friend leans in and a "
+                 "crying girl appears, and Amia's face reads each of them. Zelba's arms stretch out and gather the whole group into "
+                 "one hug."},
+        {"id": "mirror", "start": 263.25, "end": 270.0, "fps": 3,
+         "title": "Zelba leaves through the mirror",
+         "tags": ["melt", "pour", "reflection"],
+         "text": "Zelba sits on the bathroom counter by the sink. He melts down into the basin and drains away, and when the "
+                 "mirror clears, the reflection is of grown-up Amia brushing her teeth."},
+        {"id": "dollhouse", "start": 275.75, "end": 279.0, "fps": 6,
+         "title": "The room pulls back to a dollhouse",
+         "tags": ["pull-back", "reveal", "scale"],
+         "text": "Grown-up Amia on her sofa talking to her cat. The camera pulls back fast: the room is a yellow dollhouse box, "
+                 "and Zelba is leaning over it, looking in."},
+        {"id": "together", "start": 278.5, "end": 290.0, "fps": 2,
+         "title": "Grown up, side by side",
+         "tags": ["reach", "pull", "bloom", "walk-by"],
+         "text": "Zelba appears beside the grown-up Amia. She talks, he listens, reaches over her head and pulls her into a "
+                 "hug, then hands her a drink. A yellow cloud bloom drops in around them as a sofa, and a girl walks past with her "
+                 "own pink imaginary friend."},
+        {"id": "end", "start": 293.0, "end": 304.0, "fps": 2,
+         "title": "Back to the family",
+         "tags": ["wipe", "morph", "bounce", "end card"],
+         "text": "The sofa scene slides away into dark red. On near-black, Zelba lies back and melts into the bouncing family "
+                 "of yellow creatures from 1:56, the same loop, now with 'TED.COM/PLAY' above."},
     ],
 }
 

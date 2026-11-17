@@ -19,7 +19,7 @@ import motion_sequences
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 VIDEOS = json.loads((REPO / "gallery/videos.json").read_text())["videos"]
-NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 56)]
+NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 57)]
 # Seconds between library frames. Short clips are sampled more densely than one per second.
 FRAME_STEP = {47: 0.25}
 CURATED_FRAMES = {
@@ -512,6 +512,72 @@ SHOT_NOTES = {
         385: "Tourists' backs blocking the view from a loggia.",
         400: "End card: the red map of castles and roads, shared across TED-Ed lessons.",
     },
+    # TED-Ed, Do imaginary friends make you smarter?: hand-drawn character animation directed by Caitlin McCarthy.
+    56: {
+        2: "Partner card: 'This lesson was made in partnership with LEGO, LEGO Foundation.'",
+        7: "A pink hand and a blue hand grip in close-up. The relationship before the characters.",
+        9: "Amia and Zelba hand in hand on yellow: flat saturated color with thin colored outlines, Zelba already glowing.",
+        12: "Inside the whisper bloom: flat orange, with faint line art drawing in at the edges.",
+        15: "Memory as line art: the two of them ruling a castle, drawn in thin blue line on turquoise.",
+        19: "Amia's face in orange line on yellow, doodles drifting out as she talks.",
+        23: "The same faces after a red wash, Zelba's color drained to pink.",
+        26: "Line-art dinner: the spaghetti goes on her head.",
+        31: "Color blooms back: the bad idea in full color, Amia smiling under the noodles.",
+        33: "Extreme close-ups of the parents, frozen in shock.",
+        36: "Zelba fades in at the table and hugs her, glowing.",
+        41: "A yellow thought cloud on pink with sparkles: what the two of them share.",
+        45: "Other kids crowd in from the bottom edge, reaching.",
+        49: "The pair melted to a line with bumps, mid-morph into a family.",
+        53: "The family with a blue friend and a monkey added at the edges.",
+        57: "Top-down playground, every kid on a loop.",
+        64: "Alone at a birthday table, blowing out candles.",
+        72: "The table packed with imaginary guests of every shape.",
+        77: "Line-drawn kids on pink, each one's imaginary friend in color beside them.",
+        80: "Zelba as a blue heart around Amia.",
+        84: "A story cloud with a sea serpent blooms in the classroom.",
+        88: "Words and equations stream out of Amia's mouth in blue script.",
+        94: "The teacher's pointing arm, the same swing on a loop.",
+        106: "Zelba as a blue cat, one of many shapes in a few seconds.",
+        110: "Imaginary friends in trios: an old woman, a girl, a dancer.",
+        112: "A princess, a witch and a long-nosed puppet.",
+        117: "A family of yellow creatures, each bouncing on its own loop.",
+        123: "The toybox open, toys climbing out.",
+        131: "A globe with companions popping onto its surface.",
+        134: "The film within the film: an audience watching Amia and Zelba on a projected flag.",
+        141: "A cartoon car with a face on the projected screen.",
+        147: "Companions turned into shapes with faces: heart, rectangle, triangle, star.",
+        151: "A child in bed with a blue companion sprawled on the rug, a cozy cutaway room.",
+        152: "A pink companion as the scapegoat for 'I ♥ MUMMY' drawn on the wall.",
+        154: "A toy car racing across the rug as an errand buddy.",
+        156: "Feeding a baby companion with a spoon: the caregiving role.",
+        163: "'COMPANIONS' hand-lettered in a ring of small characters.",
+        168: "Amia and a row of Zelbas collide, colored echoes behind each.",
+        170: "The fight as a yellow cartoon cloud.",
+        172: "Zelba as a spiky monster over a crouching Amia.",
+        177: "Warm orange: the monster softens back into Zelba.",
+        180: "A hug on orange, the conflict over.",
+        183: "Three kids on yellow with companions passing between them.",
+        191: "The sea serpent wrapped around Amia in a spiral.",
+        198: "An argument in jagged shapes between close profiles.",
+        205: "Two girls make up, then hug.",
+        212: "The rooftop at night with dotted-line drawings in the sky.",
+        215: "Zelba moves to sit on the far wall, away from her.",
+        222: "Zelba has flickered out; Amia alone under a shooting star.",
+        226: "The empty rooftop as she leaves through the door.",
+        232: "Polaroids of Amia at 2, 7, 14, 18, 25, 36, 53 and 87.",
+        236: "A round table of kids and companions, all equal.",
+        247: "The barbell grown huge, Amia hoisting it overhead.",
+        252: "'THEORY OF MIND' arcing over Amia and Zelba.",
+        261: "Zelba's arms stretch round the whole group.",
+        265: "Zelba on the bathroom counter by the sink.",
+        269: "The reflection is grown-up Amia.",
+        271: "Rehearsing in the shower.",
+        274: "Grown-up Amia talking to her cat from the sofa.",
+        278: "The room is a dollhouse with Zelba looking in.",
+        284: "Grown-up Amia and Zelba side by side with drinks.",
+        290: "A girl with her own pink imaginary friend walks past.",
+        300: "End card: the family of yellow creatures again, 'TED.COM/PLAY' above.",
+    },
 }
 FRAME_COPY = {
     # Tab label and intro for videos with SHOT_NOTES. Others fall back to DEFAULT_FRAME_COPY.
@@ -646,7 +712,7 @@ def transcript(number):
             timestamp = "00:" + timestamp
         current = [html.unescape(TAG.sub("", line)).strip() for line in raw[pos + 1:]]
         current = [line for line in current if line]
-        if vtt.name.endswith(".en.vtt") and number in (1, 7, 9, 48, 53, 54, 55):
+        if vtt.name.endswith(".en.vtt") and number in (1, 7, 9, 48, 53, 54, 55, 56):
             current = [" ".join(current)] if current else []
         overlap = 0
         for n in range(min(len(previous), len(current)), 0, -1):
@@ -663,7 +729,7 @@ def transcript(number):
     elif vtt.name.endswith(".ja.vtt"):
         kind = "Japanese speech recognition"
     elif vtt.name.endswith(".en.vtt"):
-        kind = "creator captions" if number in (1, 7, 9, 29, 30, 32, 33, 48, 52, 53, 54, 55) else "YouTube auto captions"
+        kind = "creator captions" if number in (1, 7, 9, 29, 30, 32, 33, 48, 52, 53, 54, 55, 56) else "YouTube auto captions"
     else:
         kind = "local speech recognition"
     return {"vtt": str(vtt.relative_to(HERE)), "text": str(out.relative_to(HERE)), "kind": kind}

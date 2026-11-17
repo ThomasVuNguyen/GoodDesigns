@@ -1,6 +1,6 @@
 # Video frame and transcript study
 
-The local `index.html` previews the current GoodDesigns gallery with a **Breakdown** button on videos 1–13, 16, 17, 28–35, and 41–55. Other video cards have no breakdown button. The individual breakdown pages show video playback beside a clickable transcript and a frame library with scene-change and one-second views. Hovering over a frame shows a larger preview and its **Play frame** control; keyboard focus shows the preview too. On touch screens, the play control remains visible.
+The local `index.html` previews the current GoodDesigns gallery with a **Breakdown** button on videos 1–13, 16, 17, 28–35, and 41–56. Other video cards have no breakdown button. The individual breakdown pages show video playback beside a clickable transcript and a frame library with scene-change and one-second views. Hovering over a frame shows a larger preview and its **Play frame** control; keyboard focus shows the preview too. On touch screens, the play control remains visible.
 
 For local review, serve the repository root with `npx -y http-server . -p 8766 -a 127.0.0.1 -c-1` and open `http://127.0.0.1:8766/notes/good-videos-video-study/index.html#videos`. This server supports video byte ranges, so frame timestamps seek reliably.
 
@@ -28,7 +28,9 @@ Video 54 is TED-Ed's “What is sumo, and why is it so popular?”, animated by 
 
 Video 55 is TED-Ed's “The incredible engineering of Venice”, directed by Sofia Pashaei. Nearly every scene change is a circle that grows from one detail into the next scene, so its 30 sequences mostly start or end on one. Its source needed a retry: YouTube refused the audio stream once, and the first file came down silent.
 
-Only videos 48–55 still have local sources. `python3 notes/good-videos-video-study/build_study.py 52 53` rebuilds just those videos and keeps the other manifest entries, and `python3 scripts/publish-video-breakdowns.py 52 53` publishes just those pages, frames and `motion.md` files.
+Video 56 is TED-Ed's “Do imaginary friends make you smarter?”, directed by Caitlin McCarthy. It is full character animation, and its 35 sequences follow Zelba's shapeshifting and the soft-edged color blooms that carry each scene change.
+
+Only videos 48–56 still have local sources. `python3 notes/good-videos-video-study/build_study.py 52 53` rebuilds just those videos and keeps the other manifest entries, and `python3 scripts/publish-video-breakdowns.py 52 53` publishes just those pages, frames and `motion.md` files.
 
 `source/` contains the downloaded clips. `frames/` contains the image sequences and `scene-cuts.csv` files. `transcripts/` contains source WebVTT captions where available and locally recognized speech for the other videos. Video 11 is spoken in Japanese, so its transcript is in Japanese. The `.transcript.txt` files are cleaned, timestamped reading copies. Speech recognition can mishear words and names; the `.vtt` files retain the original timing.
 
