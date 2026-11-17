@@ -19,7 +19,7 @@ import motion_sequences
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 VIDEOS = json.loads((REPO / "gallery/videos.json").read_text())["videos"]
-NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 54)]
+NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 55)]
 # Seconds between library frames. Short clips are sampled more densely than one per second.
 FRAME_STEP = {47: 0.25}
 CURATED_FRAMES = {
@@ -404,6 +404,56 @@ SHOT_NOTES = {
         284: "'Let it mean something…', the red ellipsis ticking in.",
         298: "The credits bar slides up under a recap of the triangle ring.",
     },
+    # TED-Ed, What is sumo: ukiyo-e color and character animation by Masayoshi Nakamura and Good General.
+    54: {
+        2: "A quote card in thin grey type: 'The object in sumo is simple: knock your opponent out of the circle or down to the ground.' The circle is the film's thesis.",
+        7: "Opening map: Japan as one flat yellow shape over a teal-to-coral gradient, pink cloud bands drifting. The palette for the whole film.",
+        12: "Straight down onto a street: a wrestler's topknot, the crowd as heads with hats. Flat ukiyo-e color with clean, even line.",
+        16: "Two pros from the Tokyo guild in dark jackets, arms folded. Even faces and weight, no shading, just line and fill.",
+        21: "Their backs to us, 東京 and 相撲 across the jackets. Type is carried by costume, not captions.",
+        29: "After the slash: one pro down, the other clutching his head. The violence is implied by a cut.",
+        35: "A one-point road to the horizon, the runner centered. The film loves symmetrical, locked-off frames.",
+        43: "He reaches the magistrate's house, which rose from the horizon to fill the frame.",
+        51: "The magistrate lifts his decree, framed symmetrically between teal sayagata panels.",
+        55: "A lone wrestler on a blank cream ground, arms raised. The ritual is staged with nothing around it.",
+        62: "Mid-stomp, leg high, body tilted: the strongest pose in the film's animation.",
+        67: "Petals dissolve the wrestler. Particles carry the transition from Edo back to the imperial court.",
+        73: "The emperor on his red-railed platform under a coral sky, petals falling.",
+        79: "The wrestlers flank the emperor in profile, a frieze composition.",
+        87: "The throw: one wrestler upended in a high arc while the emperor watches, unmoved.",
+        91: "A close two-shot as they clash, the only close framing in the court scene.",
+        98: "Inside a tunnel of flat colored planes, the perspective built from trapezoids.",
+        101: "The samurai helmet as a character, pink face, white moustache, gold crest.",
+        105: "Its turnaround: the helmet seen from the back.",
+        109: "Two wrestlers on a black hill silhouette, the sky shifting to teal.",
+        117: "The collage: a boat, a bridge, cherry trees and a giant blue Buddha in overlapping layers.",
+        121: "Fuji, a temple, cranes and wrestlers in one stacked ukiyo-e composition.",
+        127: "A torii and offering box alone on the gradient, coins falling in: sumo as fundraising.",
+        136: "The wrestler steps into a spinning sunburst of coral, teal and cream wedges.",
+        142: "The guild hall on a pink-to-lime gradient, 相撲会所 on its front.",
+        152: "The queue of customers stretches across frame, each figure a different costume.",
+        156: "Street-corner sumo between shopfronts, spectators at the edges.",
+        166: "A cartoon dust cloud with stars, the brawl drawn as a gag.",
+        176: "Red crosses spread across the map: bans in the cities.",
+        185: "The boundary drawn in as a single ellipse around the crouching pair.",
+        191: "Top-down, the boundary mid-morph: the rule is still being decided.",
+        196: "土俵 / DOHYO, white on the gradient, the film's one title card.",
+        206: "Falling backwards out of the ring into grey.",
+        209: "Mid-fall, he gets heavier: belt now gold, body rounder.",
+        214: "Torii, lanterns and fox statues rising out of the dark.",
+        222: "Five wrestlers in a floating ring of held hands.",
+        229: "Rinsing with the ladle, one gesture held.",
+        234: "The ritual again: the exact animation from 0:54 reused, now as an invented tradition.",
+        255: "The rope pulled tight by two helpers in a glowing burst.",
+        256: "The finished yokozuna, zigzag streamers at his waist, on a perspective grid.",
+        264: "A full court of doll-wrestlers flanking the shōgun on his dais.",
+        270: "A giant hand pinches the shōgun off his dais: 1868 as a gesture.",
+        281: "The modern arena, stands rising around a small ring.",
+        292: "The bout on a TV screen, a gunbai fan held in front.",
+        300: "The thin wrestler mid-inflation, belly swelling sideways.",
+        318: "Banners and portraits at the top of the arena, the end of a long tilt up.",
+        323: "End card: a red-and-white map of castles and roads on a grid.",
+    },
 }
 FRAME_COPY = {
     # Tab label and intro for videos with SHOT_NOTES. Others fall back to DEFAULT_FRAME_COPY.
@@ -538,7 +588,7 @@ def transcript(number):
             timestamp = "00:" + timestamp
         current = [html.unescape(TAG.sub("", line)).strip() for line in raw[pos + 1:]]
         current = [line for line in current if line]
-        if vtt.name.endswith(".en.vtt") and number in (1, 7, 9, 48, 53):
+        if vtt.name.endswith(".en.vtt") and number in (1, 7, 9, 48, 53, 54):
             current = [" ".join(current)] if current else []
         overlap = 0
         for n in range(min(len(previous), len(current)), 0, -1):
@@ -555,7 +605,7 @@ def transcript(number):
     elif vtt.name.endswith(".ja.vtt"):
         kind = "Japanese speech recognition"
     elif vtt.name.endswith(".en.vtt"):
-        kind = "creator captions" if number in (1, 7, 9, 29, 30, 32, 33, 48, 52, 53) else "YouTube auto captions"
+        kind = "creator captions" if number in (1, 7, 9, 29, 30, 32, 33, 48, 52, 53, 54) else "YouTube auto captions"
     else:
         kind = "local speech recognition"
     return {"vtt": str(vtt.relative_to(HERE)), "text": str(out.relative_to(HERE)), "kind": kind}

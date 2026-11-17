@@ -1,6 +1,6 @@
 # Video frame and transcript study
 
-The local `index.html` previews the current GoodDesigns gallery with a **Breakdown** button on videos 1–13, 16, 17, 28–35, and 41–53. Other video cards have no breakdown button. The individual breakdown pages show video playback beside a clickable transcript and a frame library with scene-change and one-second views. Hovering over a frame shows a larger preview and its **Play frame** control; keyboard focus shows the preview too. On touch screens, the play control remains visible.
+The local `index.html` previews the current GoodDesigns gallery with a **Breakdown** button on videos 1–13, 16, 17, 28–35, and 41–54. Other video cards have no breakdown button. The individual breakdown pages show video playback beside a clickable transcript and a frame library with scene-change and one-second views. Hovering over a frame shows a larger preview and its **Play frame** control; keyboard focus shows the preview too. On touch screens, the play control remains visible.
 
 For local review, serve the repository root with `npx -y http-server . -p 8766 -a 127.0.0.1 -c-1` and open `http://127.0.0.1:8766/notes/good-videos-video-study/index.html#videos`. This server supports video byte ranges, so frame timestamps seek reliably.
 
@@ -24,7 +24,9 @@ Video 52 is Google Gemini's “Keep Projects Moving in the Background with Tasks
 
 The Motion section has three parts. A motion-energy timeline across the film is the mean RGB change between consecutive source frames at 96×54, on a log scale from the film's noise floor to its 99th percentile, so a small dot crossing a flat field still registers next to full-frame wipes. Each sequence has a frame strip and a per-step energy bar chart. Sequences with `trail: True` also get an onion-skin image (moving pixels from each frame over the median background, older frames fainter), which only reads well where the background holds still. The same content is written as text to `frames/<video>/motion.md`, with frame paths, timestamps and energy as block characters, so an agent reading the folder can follow the motion in order. The frames sit in `frames/<video>/motion/<sequence>/`, and the per-frame energy is cached in `energy.json` beside them.
 
-Only videos 48–53 still have local sources. `python3 notes/good-videos-video-study/build_study.py 52 53` rebuilds just those videos and keeps the other manifest entries, and `python3 scripts/publish-video-breakdowns.py 52 53` publishes just those pages, frames and `motion.md` files.
+Video 54 is TED-Ed's “What is sumo, and why is it so popular?”, animated by Masayoshi Nakamura and Good General. Unlike video 53 it is cut conventionally (129 detected cuts), and most of its motion is character animation, so its 41 sequences are walk and run cycles, ritual poses, throws and falls, plus the dives and tunnels between scenes. Onion skins are kept only for the six where the background holds still.
+
+Only videos 48–54 still have local sources. `python3 notes/good-videos-video-study/build_study.py 52 53` rebuilds just those videos and keeps the other manifest entries, and `python3 scripts/publish-video-breakdowns.py 52 53` publishes just those pages, frames and `motion.md` files.
 
 `source/` contains the downloaded clips. `frames/` contains the image sequences and `scene-cuts.csv` files. `transcripts/` contains source WebVTT captions where available and locally recognized speech for the other videos. Video 11 is spoken in Japanese, so its transcript is in Japanese. The `.transcript.txt` files are cleaned, timestamped reading copies. Speech recognition can mishear words and names; the `.vtt` files retain the original timing.
 

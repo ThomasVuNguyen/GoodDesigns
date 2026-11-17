@@ -21,6 +21,12 @@ SPARK = "▁▂▃▄▅▆▇█"
 MOTION_INTRO = {
     52: ("Most of the film is live action cut on the line reads. The motion design is in the last five seconds: "
          "the title builds word by word behind a jumping runner, then a Chat/Task toggle flips and gives way to the wordmark."),
+    54: ("Masayoshi Nakamura and Good General draw sumo's history as flat ukiyo-e color with clean line, under gradient skies "
+         "of teal, cream and coral. Most of the motion is character animation: walk and run cycles, the ring-entering ritual, "
+         "throws and tumbles, all timed on twos with snappy holds. Between scenes the camera rarely just cuts. It dives into a "
+         "map, rushes through a tunnel of flat planes or torii gates, tilts up a layered collage, or lets a sunburst, a dust "
+         "cloud or a falling body carry it into the next idea. Shapes morph to explain rules: the boundary cycles through "
+         "polygons before it settles as a circle."),
     53: ("Kozmonot Animation Studio builds the whole film from flat dots on flat color fields. People are dots, a group is a ring "
          "or a fan of dots, and the storyteller is the red one. There is one hard cut in five minutes. Every other scene change "
          "goes through a shape: the camera dives into a dot, a speech bubble or the O of a word, a circle irises open or shut, "
@@ -279,6 +285,229 @@ MOTION = {
          "tags": ["type", "slide", "stagger"],
          "text": "'Let' appears, then 'it' and 'mean' rise in while 'something' slides in from the right and docks beside "
                  "'mean'. Three red dots tick in one at a time as the ellipsis."},
+    ],
+    54: [
+        {"id": "map-dive", "start": 9.75, "end": 11.75, "fps": 8,
+         "title": "From the map to the street",
+         "tags": ["push-in", "zoom-through", "scale jump", "top-down"],
+         "text": "The map of Japan holds under drifting pink clouds, then the camera dives at the coast: in a quarter second the "
+                 "island fills the frame, then patchwork fields appear from overhead, then a single street with a crowd and two "
+                 "wrestlers seen from straight above. Three scales in under a second, all top-down."},
+        {"id": "crash", "start": 14.75, "end": 16.0, "fps": 8,
+         "title": "The pros crash the event",
+         "tags": ["smash cut", "angle change", "pop-in"],
+         "text": "Four shots in one second. The overhead crowd widens, cuts low to two officials over a sprawled wrestler, then two "
+                 "wrestlers in dark jackets pop in small on a gradient sky and cut straight to a medium of them. The speed of the "
+                 "cutting is the intrusion."},
+        {"id": "turn", "start": 19.25, "end": 21.0, "fps": 8,
+         "title": "The jackets turn to show their guild",
+         "tags": ["turn", "stagger", "reveal"],
+         "text": "Arms folded, the two pros turn their backs to us one after the other, about three quarters of a second apart. "
+                 "Each turn takes a single drawing: the faces are gone and 東京 and 相撲, Tokyo and sumo, are printed across "
+                 "their backs."},
+        {"id": "escape", "start": 26.75, "end": 31.75, "fps": 6,
+         "title": "A slash, then the escape",
+         "tags": ["pull-back", "frame inside frame", "slash wipe", "anticipation"],
+         "text": "The backs shrink into a small panel that opens out into a road to the horizon, the pair walking off with the "
+                 "money bags. Dark figures slide in at the frame edges and a yellow diagonal slashes across: the killing is "
+                 "never drawn. After the slash one pro lies flat; the other clutches his head, crouches, and launches into a run."},
+        {"id": "run", "trail": True, "start": 31.75, "end": 39.25, "fps": 4,
+         "title": "Running in place",
+         "tags": ["run cycle", "locked-off", "loop", "away from camera"],
+         "text": "Locked-off, one-point road. He runs away from camera but never gets smaller: the same run cycle loops in place "
+                 "for seven seconds, arms flailing, while nothing else in the frame moves. The distance is covered in the next shot."},
+        {"id": "gates", "start": 39.0, "end": 43.5, "fps": 6,
+         "title": "The world slides past him",
+         "tags": ["background slide", "parallax", "rise-up", "scale"],
+         "text": "The runner stays center while the scenery does the travelling: the Tokyo skyline pops up at the horizon, a "
+                 "torii gate grows over him and slides out of frame, then the ground turns to an empty coral plain. A small "
+                 "magistrate's house rises at the horizon and grows to fill the frame as he reaches its door."},
+        {"id": "decree", "start": 49.5, "end": 53.75, "fps": 4,
+         "title": "The magistrate rules",
+         "tags": ["gesture", "hold", "tilt up"],
+         "text": "Symmetrical front view of the magistrate at his desk. One gesture carries the verdict: he lifts a paper "
+                 "decree overhead and holds it for two seconds. The camera then tilts up to the roof ornament as a transition."},
+        {"id": "ritual", "trail": True, "start": 54.0, "end": 60.0, "fps": 4,
+         "title": "The ring-entering ritual",
+         "tags": ["pose to pose", "holds", "clap", "character"],
+         "text": "A lone wrestler drops onto blank ground and runs the ceremony as poses with holds between them: arms out, "
+                 "arms high, a clap at the chest, arms high again. Each pose is held for a quarter to half a second, so the ritual "
+                 "reads as a sequence of positions rather than a flow. The same animation returns at 3:52."},
+        {"id": "shiko", "trail": True, "start": 60.0, "end": 64.0, "fps": 6,
+         "title": "The stomp",
+         "tags": ["arc", "anticipation", "squash", "settle"],
+         "text": "Arm swept up and across, then the leg goes high in a sideways lift with the body tilted to balance, and it "
+                 "drops into a wide squat. The squat lands with a little settle, and the arm then extends low and holds."},
+        {"id": "petals", "start": 66.0, "end": 72.0, "fps": 4,
+         "title": "Petals carry us to the court",
+         "tags": ["particle dissolve", "fade", "rise-up", "color shift"],
+         "text": "Pink petals blow in around the squatting wrestler, thicken, and dissolve him away. The sky warms from teal to "
+                 "coral as an emperor rises up from the bottom edge on a red-railed platform, petals still falling. The particles "
+                 "are the bridge between centuries."},
+        {"id": "court-bout", "start": 83.5, "end": 90.5, "fps": 4,
+         "title": "A throw at court",
+         "tags": ["clash", "arc", "flip", "hold"],
+         "text": "The two wrestlers bow, lunge, and grapple in front of the emperor. At 1:27 one heaves the other up in a high arc, "
+                 "legs to the sky, and he lands flat on his back. The winner stays crouched over him and everything holds, petals "
+                 "still drifting."},
+        {"id": "close-grapple", "start": 90.75, "end": 95.0, "fps": 6,
+         "title": "Close, then wide for the trip",
+         "tags": ["close-up", "pull-back", "trip"],
+         "text": "Hard cut to a tight two-shot: a glance, a shove, the clinch. The camera pulls back as they shift, and in the "
+                 "wide one hooks a leg and trips the other to the ground. The style turns from striking to grappling and tripping "
+                 "in one move."},
+        {"id": "corridor", "start": 96.25, "end": 100.0, "fps": 8,
+         "title": "A tunnel of flat planes",
+         "tags": ["fly-through", "perspective", "tunnel", "flat shapes"],
+         "text": "Pink and teal trapezoids slide in at the horizon behind the wrestler, and the camera rushes forward into a "
+                 "corridor built from flat colored planes: floors, walls and ceilings flip past every few frames. A samurai helmet "
+                 "waits at the end of the tunnel."},
+        {"id": "helmet", "start": 100.0, "end": 107.75, "fps": 4,
+         "title": "The helmet looks around",
+         "tags": ["turnaround", "head turn", "push-in"],
+         "text": "The samurai helmet turns its head left, to the back, right and front again, a full turnaround drawn as about "
+                 "eight angles. It looks around a second time and then the camera pushes into its black crown, which becomes the "
+                 "next transition."},
+        {"id": "hill", "start": 108.0, "end": 114.0, "fps": 4,
+         "title": "A bout on the hill, then up into the sky",
+         "tags": ["loop", "silhouette", "tilt up"],
+         "text": "Two wrestlers grapple on a black hill silhouette while the sky cools from cream to teal. Around 1:53 the hill "
+                 "sinks out of frame as the camera tilts up into pink cloud bands."},
+        {"id": "collage", "start": 114.0, "end": 126.0, "fps": 2,
+         "title": "A tilt through the collage",
+         "tags": ["tilt", "parallax", "layering"],
+         "text": "A slow vertical move through a dense ukiyo-e collage of a boat, a Buddha, cranes, wrestlers, Mount Fuji and a "
+                 "temple, every layer drifting at its own speed so the flat drawings gain depth. It climbs past the clouds to a "
+                 "torii with an offering box."},
+        {"id": "sunburst", "start": 134.5, "end": 137.0, "fps": 8,
+         "title": "Sunburst wipe",
+         "tags": ["radial wipe", "rotate", "reveal"],
+         "text": "A thin line drops into the offering box, and a radial burst of wedges in coral, teal, cream and sage opens from "
+                 "it and covers the frame in about half a second. It keeps turning as a wrestler steps into the middle of it."},
+        {"id": "rays", "start": 137.0, "end": 142.0, "fps": 4,
+         "title": "The rays spin away",
+         "tags": ["rotate", "loop", "reverse wipe"],
+         "text": "The wedges rotate steadily behind the wrestler as he loosens his shoulders. At 2:21 they collapse back into a "
+                 "point and reveal the sumo guild's hall on a pink-to-lime gradient."},
+        {"id": "queue", "start": 148.0, "end": 154.0, "fps": 3,
+         "title": "A queue forms",
+         "tags": ["pop-in", "stagger", "pan"],
+         "text": "People pop out of the hall's door one at a time and line up to its right. The camera pans with the line until the "
+                 "hall is gone and only the queue is left, then a row of shopfronts drops in from the top."},
+        {"id": "street", "start": 154.0, "end": 161.75, "fps": 3,
+         "title": "Street-corner sumo",
+         "tags": ["loop", "background characters", "locked-off"],
+         "text": "Locked-off in front of the shops: two wrestlers circle and shove while spectators at either side bob in short "
+                 "loops. The bout never resolves; it is a loop that stands for many bouts."},
+        {"id": "cloud", "start": 164.5, "end": 171.75, "fps": 4,
+         "title": "A brawl cloud",
+         "tags": ["cartoon cloud", "stars", "pop", "dissolve to map"],
+         "text": "The grapple tips over and becomes a cartoon dust cloud with stars, the dark sky behind it. A head, a fist and a "
+                 "foot poke out and vanish in turn while the cloud boils. Then a hole opens in the middle, the cloud breaks into "
+                 "puffs, and the map of Japan is underneath."},
+        {"id": "bans", "start": 172.0, "end": 180.0, "fps": 3,
+         "title": "Bans spread across the map",
+         "tags": ["pop-in", "stagger", "tilt away"],
+         "text": "Red crosses appear on city after city, a beat apart, until the map is dotted with them. Then the whole map tips "
+                 "flat away from camera like a lid closing, and the next scene is behind it."},
+        {"id": "ring", "trail": True, "start": 184.5, "end": 187.0, "fps": 8,
+         "title": "The boundary draws itself",
+         "tags": ["draw-on", "ellipse", "line"],
+         "text": "Two wrestlers crouch face to face, still. A short line appears under them and opens out into an ellipse that "
+                 "draws itself around both, closing in about three quarters of a second. The rule arrives as a line."},
+        {"id": "shapes", "start": 189.5, "end": 194.25, "fps": 4,
+         "title": "The ring tries on shapes",
+         "tags": ["morph", "top-down", "shape cycle"],
+         "text": "Top-down, the two wrestlers locked in the middle. The boundary around them morphs: diamond, square, octagon, "
+                 "diamond, hexagon, a bow-tie, a barrel, and finally the circle. Each shape holds about a "
+                 "quarter second before morphing, then the circle holds."},
+        {"id": "dohyo", "start": 194.5, "end": 196.25, "fps": 8,
+         "title": "土俵 slams in",
+         "tags": ["type", "scale-down", "white wipe"],
+         "text": "A white panel slides across, and 土俵 arrives far too big for the frame, then scales down to center in about a "
+                 "quarter second with 'DOHYO' set in spaced capitals beneath. It is the only full-screen title in the film."},
+        {"id": "push-out", "start": 200.5, "end": 206.0, "fps": 6,
+         "title": "Pushed out",
+         "tags": ["shrink", "pull-back", "push", "fall"],
+         "text": "The title shrinks to a speck, then a huge close-up of the wrestlers pulls back to a wide of the ring. One drives "
+                 "the other to the edge and over the line; a cut to a low angle shows him falling backwards out of the ring, and "
+                 "the background drains to grey."},
+        {"id": "fall", "trail": True, "start": 205.75, "end": 210.0, "fps": 4,
+         "title": "Falling, and gaining weight",
+         "tags": ["free fall", "tumble", "speed lines", "morph"],
+         "text": "In a grey void he tumbles head over heels, speed lines streaking upward behind him. As he turns, his body "
+                 "grows heavier and his belt changes from red to gold: weight becoming an advantage, drawn mid-fall."},
+        {"id": "rain", "start": 210.0, "end": 216.0, "fps": 4,
+         "title": "It rains wrestlers",
+         "tags": ["fall", "crowd", "color bars", "rise-up"],
+         "text": "More wrestlers float down around him in mawashi of every color while flat colored bars flash across. Then torii "
+                 "gates, lanterns and fox statues rise from the bottom of the frame and fill it."},
+        {"id": "torii", "start": 216.0, "end": 221.75, "fps": 4,
+         "title": "Through the torii",
+         "tags": ["fly-through", "nested frames", "tunnel"],
+         "text": "The shrine slides past and the camera flies through a torii, then another and another, each gate framing the "
+                 "next, until they become a green box corridor. Wrestlers are waiting at the far end."},
+        {"id": "dance", "start": 221.75, "end": 224.75, "fps": 4,
+         "title": "A ring of wrestlers",
+         "tags": ["rotation", "loop", "floating"],
+         "text": "Five wrestlers float in a ring holding hands and turn slowly on a dark ground, like figures in a dance. The ring "
+                 "rotates by about a quarter turn in three seconds, then one figure swings toward the camera and fills the frame."},
+        {"id": "back-out", "start": 224.75, "end": 227.0, "fps": 8,
+         "title": "Back out of the tunnel",
+         "tags": ["pull-back", "tunnel", "reveal"],
+         "text": "A hand sweeps past the lens and the camera pulls back out through the green corridor to a single wrestler "
+                 "standing at its end, then cuts to him alone on the cream ground."},
+        {"id": "rinse", "trail": True, "start": 227.75, "end": 231.25, "fps": 4,
+         "title": "Rinsing with water",
+         "tags": ["gesture", "hold"],
+         "text": "He lifts a small yellow ladle to his mouth, rinses, and holds the pose while the head bobs slightly. The ritual "
+                 "is shown as one gesture held long enough to read."},
+        {"id": "yokozuna", "start": 249.75, "end": 256.0, "fps": 6,
+         "title": "The rope ties itself",
+         "tags": ["spotlights", "snake", "knot", "flash"],
+         "text": "Pale spotlight bars sweep across as the wrestler turns. A thick white rope snakes in, wraps his waist and ties "
+                 "itself into the big loop at the back. Two helpers haul the ends in a glowing pull, and at 4:15.75 he stands in "
+                 "the finished yokozuna rope with zigzag paper streamers."},
+        {"id": "dolls", "start": 256.0, "end": 266.0, "fps": 2,
+         "title": "Wrestlers become dolls",
+         "tags": ["morph", "drop-in", "stagger", "grid floor"],
+         "text": "On a perspective grid floor he shrinks into a round, doll-like figure. The shōgun appears on a dais, and more "
+                 "dolls drop in at left and right with a small bounce, until a full row flanks him."},
+        {"id": "overthrow", "start": 269.25, "end": 274.0, "fps": 4,
+         "title": "A hand lifts the shōgun away",
+         "tags": ["hand of god", "lift", "flash", "tumble"],
+         "text": "A giant hand reaches in from the top, pinches the shōgun off his dais and lifts him out of frame. A pale yellow "
+                 "flash, then the dolls tumble loose in a grey void."},
+        {"id": "arena", "start": 276.75, "end": 283.0, "fps": 3,
+         "title": "The arena rises",
+         "tags": ["rise-up", "push-in", "particles"],
+         "text": "Wrestlers pop up on a small ring and the stands of a modern arena rise up around them, the camera pushing in as "
+                 "the roof canopy drops into place. Confetti dots drift through."},
+        {"id": "tv", "start": 286.75, "end": 288.0, "fps": 8,
+         "title": "The arena is on TV",
+         "tags": ["pull-back", "frame inside frame", "reveal"],
+         "text": "The whole arena shrinks into a TV screen held up by a gloved hand with a remote. The scale jump reveals the "
+                 "broadcast in a quarter second."},
+        {"id": "replay", "start": 290.75, "end": 297.0, "fps": 4,
+         "title": "Instant replay",
+         "tags": ["loop", "rewind", "prop swap"],
+         "text": "The remote becomes a referee's gunbai fan in the hand. On the screen the same throw plays, rewinds and plays "
+                 "again: a kick, a fall, back to standing, a kick, a fall."},
+        {"id": "weight", "start": 297.25, "end": 303.0, "fps": 4,
+         "title": "Sixty kilograms heavier",
+         "tags": ["inflate", "pose", "squash"],
+         "text": "A thin wrestler stands on a ring that rises under him. As he runs through the ritual poses his body balloons "
+                 "between drawings, belly swelling sideways, until he settles twice his width."},
+        {"id": "unroll", "start": 320.75, "end": 322.0, "fps": 8,
+         "title": "A scroll unrolls into the end card",
+         "tags": ["unroll", "wipe", "map"],
+         "text": "A white sheet covers the arena, its rolled edge unrolls, and a red-and-white illustrated map of castles and "
+                 "roads on a grid pops on piece by piece in under half a second."},
+        {"id": "castles", "start": 327.5, "end": 330.0, "fps": 6,
+         "title": "Castles become a city",
+         "tags": ["morph", "pop", "time passing"],
+         "text": "As the credits slide up, the castles on the map flicker and rebuild as modern blocks and towers, and the "
+                 "smoking steam engine on the road turns into a car. Even the credit card shows history changing."},
     ],
 }
 
