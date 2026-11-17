@@ -1,0 +1,9 @@
+{
+  "home_gray.svg": { "role": "Home tab mask icon", "source": "https://app.notion.com/icons/home_gray.svg" },
+  "chat_gray.svg": { "role": "Chat tab mask icon", "source": "https://app.notion.com/icons/chat_gray.svg" },
+  "calendar_gray.svg": { "role": "Meetings tab mask icon", "source": "https://app.notion.com/icons/calendar_gray.svg" },
+  "ai-face.png": { "role": "Notion AI face (corner button, chat hero, chat toolbar)", "source": "https://app.notion.com/_assets/9ade71d75a1c0e93.png" },
+  "ai-crown.png": { "role": "Crown accessory drawn over the Notion AI face", "source": "https://app.notion.com/_assets/6ddab14ae1911792.png" },
+  "favicon.svg": { "role": "Tab icon drawn for this clone", "source": null },
+  "../icons.js": { "role": "Inline SVG icons captured from the signed-in app's DOM", "source": "https://app.notion.com" }
+}

@@ -12,6 +12,8 @@
     { "slug": "fizzy", "name": "Fizzy", "folder": "Fizzy", "reference": "https://www.fizzy.do/", "tagline": "Kanban as it should be. Not as it has been.", "captured": "2026-09-17" },
     { "slug": "kernel", "name": "Kernel", "folder": "Kernel", "reference": "https://www.kernel.sh/", "tagline": "Browser infrastructure for web agents and automations", "captured": "2026-09-17" },
     { "slug": "notion", "name": "Notion", "folder": "Notion", "reference": "https://www.notion.com/product", "tagline": "The AI workspace that works for you", "captured": "2026-09-16" },
+    { "slug": "notion-app", "name": "Notion app", "folder": "NotionApp", "entry": "/#/p/health-science-lab", "reference": "https://app.notion.com/", "tagline": "The signed-in workspace \u00b7 sidebar, block editor with slash menu and drag handles, \u2318K search, light and dark", "captured": "2026-11-17" },
+    { "slug": "notion-ai-chat", "name": "Notion AI chat", "folder": "NotionApp", "entry": "/#/chat/move-diary-pages", "reference": "https://app.notion.com/ai", "tagline": "Notion AI inside the app \u00b7 chat sidebar, composer, page mentions and the Artifacts panel", "captured": "2026-11-17" },
     { "slug": "opencode", "name": "OpenCode Data", "folder": "OpenCode", "reference": "https://opencode.ai/data", "tagline": "AI model usage rankings", "captured": "2026-09-18" },
     { "slug": "posthog", "name": "PostHog", "folder": "PostHog", "reference": "https://posthog.com/", "tagline": "Your product's context layer", "captured": "2026-09-29" },
     { "slug": "town", "name": "Town", "folder": "Town", "reference": "https://www.town.com/", "tagline": "The AI assistant that does the work", "captured": "2026-09-29" },
