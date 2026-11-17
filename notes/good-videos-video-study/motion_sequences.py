@@ -27,6 +27,11 @@ MOTION_INTRO = {
          "map, rushes through a tunnel of flat planes or torii gates, tilts up a layered collage, or lets a sunburst, a dust "
          "cloud or a falling body carry it into the next idea. Shapes morph to explain rules: the boundary cycles through "
          "polygons before it settles as a circle."),
+    55: ("Sofia Pashaei draws Venice in flat geometric shapes with no outlines: stacked bands of blue for water, gradient "
+         "skies, and buildings built from rectangles and arches. Almost every scene change is the same move. A small dot appears "
+         "on one detail of the current picture, grows into a solid circle that fills the frame, and the next scene is waiting "
+         "inside it. Within scenes the motion is mostly mechanical and repeated: piles driven one after another, boats sliding "
+         "past on loops, tiles stacking in a grid, a route drawing itself across a map."),
     53: ("Kozmonot Animation Studio builds the whole film from flat dots on flat color fields. People are dots, a group is a ring "
          "or a fan of dots, and the storyteller is the red one. There is one hard cut in five minutes. Every other scene change "
          "goes through a shape: the camera dives into a dot, a speech bubble or the O of a word, a circle irises open or shut, "
@@ -508,6 +513,166 @@ MOTION = {
          "tags": ["morph", "pop", "time passing"],
          "text": "As the credits slide up, the castles on the map flicker and rebuild as modern blocks and towers, and the "
                  "smoking steam engine on the road turns into a car. Even the credit card shows history changing."},
+    ],
+    55: [
+        {"id": "book", "start": 5.75, "end": 7.25, "fps": 8,
+         "title": "A book opens onto the city",
+         "tags": ["fade-in", "page turn", "reveal"],
+         "text": "A cream book shape fades up on lavender, and its two pages swing open outward in about half a second. A "
+                 "top-down plan of a walled city is printed inside, already full of tiny figures."},
+        {"id": "raid", "start": 9.5, "end": 16.5, "fps": 3,
+         "title": "Raiders fill the plan",
+         "tags": ["pop-in", "stagger", "fire", "iris"],
+         "text": "Figures in green pop in along the streets a few at a time, then small flames flicker on across the plan. A "
+                 "blue dot appears at its center and grows into a circle that carries us out to the sea."},
+        {"id": "flight", "start": 16.25, "end": 21.75, "fps": 4,
+         "title": "Boats flee, riders arrive",
+         "tags": ["slide-in", "stagger", "parallax", "wipe"],
+         "text": "On banded blue sea, small boats slide in from the right one after another. Pink horsemen ride up from the "
+                 "bottom edge on a gallop loop, filling the foreground. A horizontal band then wipes the frame to a top-down "
+                 "view of boats among islands."},
+        {"id": "lagoon", "trail": True, "start": 26.0, "end": 31.0, "fps": 4,
+         "title": "The lagoon fills with islands",
+         "tags": ["grow", "draw-on", "arrows", "labels"],
+         "text": "On a flat map, island shapes grow out of the lagoon one by one. Yellow arrows draw on from the river mouths and "
+                 "point into it, and the labels Po and Piave type on beside them."},
+        {"id": "currents", "trail": True, "start": 32.5, "end": 40.25, "fps": 3,
+         "title": "Currents push back",
+         "tags": ["loop", "arrows", "morph"],
+         "text": "An Adriatic arrow pushes in from the sea against the river arrows, and all three pulse on loops. Between them "
+                 "the islands keep changing shape, shrinking and splitting: a maze that will not hold still."},
+        {"id": "pile-driving", "trail": True, "start": 74.5, "end": 79.75, "fps": 6,
+         "title": "Piles driven by hand",
+         "tags": ["loop", "push", "splash", "stagger"],
+         "text": "A cross-section of water and banded mud. A pile drops in from the top with a splash, and a pair of giant "
+                 "fingers presses it down into the mud. Each new pile goes in at the left end of the row, so the same "
+                 "two-second loop, repeated, builds the foundation."},
+        {"id": "insects", "start": 87.25, "end": 93.75, "fps": 4,
+         "title": "Insects shut out",
+         "tags": ["iris", "flick", "pop-out"],
+         "text": "A circle grows from one pile into a close-up of the wood in the mud, insects crawling around a clump of fungus. "
+                 "A hand flicks them away one by one, then sweeps the fungus off. The sealed wood stays clean."},
+        {"id": "sparkle", "trail": True, "start": 97.5, "end": 101.75, "fps": 4,
+         "title": "Sparkle, then back out",
+         "tags": ["sparkle", "twinkle", "iris"],
+         "text": "Four-point stars twinkle on and off across the bare wood, each one scaling up and vanishing in a few frames. "
+                 "Then a small round window opens on the right showing the piles from outside, and it grows to fill the frame."},
+        {"id": "foundation", "start": 112.75, "end": 120.0, "fps": 3,
+         "title": "The foundation stacks up",
+         "tags": ["drop-in", "stack", "tilt", "push-in"],
+         "text": "A wooden platform drops onto the piles at a slight tilt and settles level. A stone block lands on top of it the "
+                 "same way. The view then wipes up to a white palace standing on a blue band of water."},
+        {"id": "fires", "start": 128.0, "end": 136.5, "fps": 3,
+         "title": "The bridges burn",
+         "tags": ["parallax", "flicker", "collapse"],
+         "text": "A view between pink buildings with wooden footbridges crossing the canal behind. One bridge sags, and small "
+                 "flames flicker along the others. The foreground buildings hold still while the bridges move."},
+        {"id": "rialto", "start": 136.25, "end": 145.0, "fps": 3,
+         "title": "The Rialto rebuilds itself",
+         "tags": ["morph", "replace", "label"],
+         "text": "On lavender, a grey wooden arch appears with the label 'Rialto Bridge' typing on above it. At 2:21 it is "
+                 "replaced by a white stone bridge with arches, and at 2:24 by the final covered bridge. Three versions on one "
+                 "spot, each swap a cut."},
+        {"id": "canals", "trail": True, "start": 147.0, "end": 155.0, "fps": 2,
+         "title": "Gondolas on the canals",
+         "tags": ["top-down", "loop", "path"],
+         "text": "A top-down map of blue canals through sand-colored land. Black gondolas glide along the channels at a steady "
+                 "pace on loops, each following its canal's curve."},
+        {"id": "gondola", "start": 157.75, "end": 167.75, "fps": 2,
+         "title": "Everyone goes by boat",
+         "tags": ["slide", "pick up", "exit"],
+         "text": "A side view of the quay. A gondola slides in from the left, two people step aboard, and it glides off right "
+                 "out of frame. A small white dot then appears beside the quay and grows into the next circle."},
+        {"id": "seed", "start": 168.0, "end": 173.75, "fps": 4,
+         "title": "No land to farm",
+         "tags": ["pinch", "drop", "fall"],
+         "text": "Giant fingers rise into an empty cream frame holding one seed, then let go. The seed falls through the frame "
+                 "and lands on the floor of a colonnade whose arch looks out to sea."},
+        {"id": "trade-map", "start": 176.75, "end": 186.0, "fps": 2,
+         "title": "Routes, then the city plan",
+         "tags": ["pop-in", "draw-on", "card swap"],
+         "text": "An oval map of the Mediterranean pops onto lavender, sea routes drawn as thin lines from Venice. At 3:05 the "
+                 "card slides down out of frame and a map of the city's canals rises in its place."},
+        {"id": "treaty", "start": 207.75, "end": 216.5, "fps": 2,
+         "title": "The treaty writes itself",
+         "tags": ["rise-up", "write-on", "title"],
+         "text": "A cream document with a scalloped border rises up from the bottom edge. Lines of text draw on one at a time "
+                 "from the top down, and at 3:36 'The Fourth Crusade Agreement' sets as its title."},
+        {"id": "handshake", "start": 221.0, "end": 229.0, "fps": 3,
+         "title": "Handshake, then the fleet",
+         "tags": ["slide-up", "shake", "iris", "slide-in"],
+         "text": "A coral panel slides up with two hands clasping, rings on the fingers. A circle opens from the clasp into the "
+                 "Basilica di San Marco, and a fleet of galleys slides in across the water beneath it."},
+        {"id": "coin", "start": 233.75, "end": 241.0, "fps": 4,
+         "title": "A coin, then the route",
+         "tags": ["pop", "shrink", "iris", "draw-on"],
+         "text": "A hand rises holding a large gold coin, which shrinks to its final size. A dark dot then grows from the hand to "
+                 "fill the frame, and the map behind it has a red route drawing itself from Venice down around Greece toward "
+                 "Constantinople."},
+        {"id": "route", "trail": True, "start": 240.5, "end": 244.5, "fps": 4,
+         "title": "The route arrives",
+         "tags": ["draw-on", "arrowhead", "ease-out"],
+         "text": "The red line keeps drawing, slows as it curls up through the Aegean, and lands at Constantinople as an "
+                 "arrowhead."},
+        {"id": "sail", "start": 252.0, "end": 260.5, "fps": 2,
+         "title": "Sail out, then the Silk Road",
+         "tags": ["slide out", "pan", "draw-on"],
+         "text": "A merchant ship bobs in profile, then slides out of frame right. The sea wipes down to a map of Asia and a thin "
+                 "white route traces east toward Yuan China."},
+        {"id": "gallery", "start": 260.5, "end": 266.75, "fps": 4,
+         "title": "A colonnade of crafts",
+         "tags": ["iris", "pop-in", "stagger"],
+         "text": "A white dot on the route grows into a cream circle. A colonnade fades up inside, and icons pop into its "
+                 "arches one after another: a palette, then a book and quill."},
+        {"id": "tiles", "start": 266.75, "end": 285.0, "fps": 2,
+         "title": "Panels tile across",
+         "tags": ["slide", "grid", "stack"],
+         "text": "Panels slide in from the right on lavender: a loom, a printing press, then glassware. The row keeps scrolling "
+                 "left on a loop, the three crafts repeating like a conveyor belt, until the panels slide away and 'ART', 'SILK' "
+                 "and 'SPICES' type on in a column."},
+        {"id": "people-grid", "start": 288.75, "end": 296.0, "fps": 4,
+         "title": "Words replaced by people",
+         "tags": ["replace", "stagger", "grid", "wipe up"],
+         "text": "Figures pop in one at a time across the top row, pushing 'ART' out. The next row replaces 'SILK', the next "
+                 "'SPICES', until the frame is a grid of people. The grid then wipes up to the Grand Canal, where a gondola slides "
+                 "in."},
+        {"id": "book-flip", "start": 301.5, "end": 313.0, "fps": 2,
+         "title": "A guidebook flips through history",
+         "tags": ["iris", "pop", "page flip"],
+         "text": "A coral circle grows from a lit window into a 'Venice' guidebook. Its cover flips open to an Ottoman army "
+                 "before the Hagia Sophia, then flips again to a fleet of ships, which grows to fill the frame as the ships "
+                 "sail on."},
+        {"id": "flags", "start": 318.0, "end": 341.75, "fps": 1,
+         "title": "Flags change over the city",
+         "tags": ["shrink", "flag swap", "slow color shift"],
+         "text": "A coral circle clears the fleet and the Venetian flag grows from a speck. A hand reaches in and takes it, and a "
+                 "circle from the flag opens on Venice by the sea. The flag on the spire swaps from French to Austrian to French to Austrian to Italian, each change a quick flicker, while red "
+                 "shapes fade in across the façade."},
+        {"id": "souvenir", "start": 341.5, "end": 349.0, "fps": 3,
+         "title": "Venice becomes a souvenir",
+         "tags": ["iris", "slide-in", "iris"],
+         "text": "A lavender circle grows from the spire into an open hand. A postcard slides in from the left and settles in "
+                 "the palm. A hole opens in the card and grows into the lagoon, a souvenir-shop picture of the city."},
+        {"id": "flood", "start": 356.0, "end": 368.5, "fps": 2,
+         "title": "The water rises and falls",
+         "tags": ["rise", "fall", "loop", "tide"],
+         "text": "San Marco on coral, the blue band of water at its base. The water rises up the façade and falls away again, "
+                 "over and over, a little higher each time: 250 floods a year as a tide."},
+        {"id": "traffic", "start": 368.75, "end": 373.0, "fps": 4,
+         "title": "One boat becomes traffic",
+         "tags": ["iris", "slide-in", "multiply", "loop"],
+         "text": "A blue circle from the church door opens on a single motorboat sliding in from the left, seen from above. At "
+                 "6:12.75 the frame cuts to dozens of boats in lanes, all moving at once."},
+        {"id": "balcony", "start": 381.0, "end": 384.0, "fps": 4,
+         "title": "Tourists fill the view",
+         "tags": ["slide-in", "stagger", "foreground"],
+         "text": "A loggia looking out to the church. Two tourists slide in from the right one after the other, their backs "
+                 "filling the foreground and blocking the view."},
+        {"id": "scroll", "start": 390.5, "end": 392.0, "fps": 8,
+         "title": "A scroll unrolls into the end card",
+         "tags": ["unroll", "pop-in"],
+         "text": "A white sheet's rolled edge unrolls left to right, and the red map of castles pops on behind it in under half a "
+                 "second. It is the TED-Ed end card shared with other lessons."},
     ],
 }
 

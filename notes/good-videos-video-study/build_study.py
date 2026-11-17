@@ -19,7 +19,7 @@ import motion_sequences
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 VIDEOS = json.loads((REPO / "gallery/videos.json").read_text())["videos"]
-NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 55)]
+NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 56)]
 # Seconds between library frames. Short clips are sampled more densely than one per second.
 FRAME_STEP = {47: 0.25}
 CURATED_FRAMES = {
@@ -454,6 +454,64 @@ SHOT_NOTES = {
         318: "Banners and portraits at the top of the arena, the end of a long tilt up.",
         323: "End card: a red-and-white map of castles and roads on a grid.",
     },
+    # TED-Ed, The incredible engineering of Venice: flat geometric shapes and circle transitions, directed by Sofia Pashaei.
+    55: {
+        2: "A quote card in thin grey type: Erica Jong's 'It is two cities: one above and seemingly solid; one below and reflected in the waters.'",
+        7: "A storybook opens on lavender, a walled city printed across its pages. The history is framed as a book being read.",
+        14: "Raiders and flames across the plan, all icons with no outlines.",
+        17: "The sea as stacked bands of blue under a gradient sky, the film's water everywhere.",
+        20: "Pink horsemen in the foreground, boats behind. Shapes are geometric and flat, with no line work at all.",
+        23: "Top-down: boats among sand-colored islands on one flat blue.",
+        30: "A map of the lagoon with yellow arrows for the rivers, labelled Po and Piave.",
+        38: "The islands shift and split between the arrows: the lagoon refuses to stay put.",
+        42: "A figure peeks out from behind a leaf in a cream square: the lagoon as the perfect place to hide.",
+        47: "Wooden blocks hover over the sea in isometric, about to be stacked.",
+        52: "A giant hand assembles a house from the blocks. Scale is used for emphasis, not realism.",
+        59: "Fishermen's stilted huts in a row on the water bands.",
+        63: "A huge yellow boot steps onto the mud, the newcomers arriving. Scale jumps are the film's emphasis.",
+        70: "A white palace on a blue base under a gradient sky, Venice as one composed object.",
+        76: "Cross-section: a pile pressed into banded mud by a giant pair of fingers.",
+        79: "The row of piles, each one driven by the same loop.",
+        89: "Close on the sealed wood with insects and fungus that can't get in.",
+        99: "Sparkles across the clean wood, the oxygen-free seal.",
+        117: "Platform and stone stacked on the piles: the whole foundation in one cross-section.",
+        124: "The palace again, now with a flag on top: the Republic declared.",
+        130: "Wooden footbridges between pink buildings, the foreground framing the canal.",
+        134: "Small flames along the bridges.",
+        138: "The Rialto's first version, a grey wooden arch, labelled on lavender.",
+        142: "The second version in white stone on the same spot.",
+        145: "The final covered Rialto, the third design on the same spot.",
+        150: "Top-down canals with gondolas in motion, a map that moves.",
+        162: "Everyone travels by gondola, nobles and commoners in the same boat.",
+        171: "A seed dropped from a giant hand: no land to farm.",
+        180: "The Mediterranean on an oval card, sea routes radiating from Venice.",
+        190: "The city's canal plan on the same oval card.",
+        200: "The Rialto with ships passing beneath, on the oval.",
+        217: "The Fourth Crusade Agreement on a cream document with a scalloped border.",
+        223: "Two hands clasp on coral: the deal with Dandolo.",
+        230: "San Marco above a fleet of galleys.",
+        236: "A hand holding up a gold coin, the payment that fell short.",
+        245: "The red route from Venice curling through the Aegean to Constantinople.",
+        250: "The Venetian flag, the lion of Saint Mark, flying.",
+        253: "A merchant ship in profile, bobbing on the bands.",
+        258: "The Silk Road traced across Asia to Yuan China.",
+        265: "A colonnade with a palette and a book in its arches, the Renaissance.",
+        280: "Loom, printing press and glassware panels in a scrolling row.",
+        287: "'ART', 'SILK', 'SPICES' in a column on lavender.",
+        292: "The words replaced by rows of people: the enslaved trade said by substitution.",
+        298: "The Grand Canal façades with a gondolier passing.",
+        303: "A 'Venice' guidebook, the turn toward tourism foreshadowed.",
+        308: "The guidebook's page: an Ottoman army before the Hagia Sophia.",
+        315: "Galleys and new transoceanic ships crossing.",
+        320: "A hand holding the Venetian flag.",
+        330: "Venice under a flag that keeps changing as it passes between France and Austria.",
+        346: "A Venice postcard held in a hand.",
+        350: "Deck chairs and a white box drift on the lagoon below the campanile: the tourist city.",
+        360: "San Marco with the water partway up its base, mid-flood.",
+        375: "Top-down traffic of motorboats in lanes.",
+        385: "Tourists' backs blocking the view from a loggia.",
+        400: "End card: the red map of castles and roads, shared across TED-Ed lessons.",
+    },
 }
 FRAME_COPY = {
     # Tab label and intro for videos with SHOT_NOTES. Others fall back to DEFAULT_FRAME_COPY.
@@ -588,7 +646,7 @@ def transcript(number):
             timestamp = "00:" + timestamp
         current = [html.unescape(TAG.sub("", line)).strip() for line in raw[pos + 1:]]
         current = [line for line in current if line]
-        if vtt.name.endswith(".en.vtt") and number in (1, 7, 9, 48, 53, 54):
+        if vtt.name.endswith(".en.vtt") and number in (1, 7, 9, 48, 53, 54, 55):
             current = [" ".join(current)] if current else []
         overlap = 0
         for n in range(min(len(previous), len(current)), 0, -1):
@@ -605,7 +663,7 @@ def transcript(number):
     elif vtt.name.endswith(".ja.vtt"):
         kind = "Japanese speech recognition"
     elif vtt.name.endswith(".en.vtt"):
-        kind = "creator captions" if number in (1, 7, 9, 29, 30, 32, 33, 48, 52, 53, 54) else "YouTube auto captions"
+        kind = "creator captions" if number in (1, 7, 9, 29, 30, 32, 33, 48, 52, 53, 54, 55) else "YouTube auto captions"
     else:
         kind = "local speech recognition"
     return {"vtt": str(vtt.relative_to(HERE)), "text": str(out.relative_to(HERE)), "kind": kind}
