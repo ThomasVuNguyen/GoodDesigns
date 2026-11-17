@@ -2,8 +2,9 @@
   const $ = (id) => document.getElementById(id);
   // The gallery shows one tab at a time.
   const tabs = $('tabs');
-  const tabHash = { sites: '#/', videos: '#/videos', shorts: '#/shorts', posts: '#/posts', emails: '#/emails', insta: '#/insta', research: '#/research', cards: '#/cards' };
+  const tabHash = { sites: '#/', videos: '#/videos', shorts: '#/shorts', posts: '#/posts', emails: '#/emails', insta: '#/insta', research: '#/research', cards: '#/cards', motion: '#/motion' };
   const tabOf = (hash) => (
+    hash === 'motion' || hash.startsWith('motion/') ? 'motion' :
     hash === 'cards' || hash.startsWith('cards/') ? 'cards' :
     hash === 'research' || hash.startsWith('research/') ? 'research' :
     hash === 'insta' || hash.startsWith('insta/') ? 'insta' :
@@ -24,8 +25,8 @@
   // Before the lists load, so a link to videos or posts never shows the sites heading first.
   showTab(tabOf(location.hash.replace(/^#\/?/, '').split('?')[0]));
 
-  const [{ repo, branch, sites }, { videos, categories: videoCategories = [] }, { shorts }, { posts }, { emails }, { insta }, { research }, { cards }] = await Promise.all(
-    ['sites.json', 'videos.json', 'shorts.json', 'posts.json', 'emails.json', 'insta.json', 'research.json', 'cards.json'].map(async (f) => (await fetch(f)).json()),
+  const [{ repo, branch, sites }, { videos, categories: videoCategories = [] }, { shorts }, { posts }, { emails }, { insta }, { research }, { cards }, { motion }] = await Promise.all(
+    ['sites.json', 'videos.json', 'shorts.json', 'posts.json', 'emails.json', 'insta.json', 'research.json', 'cards.json', 'motion.json'].map(async (f) => (await fetch(f)).json()),
   );
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
   const srcUrl = (s) => `${repo}/tree/${branch}/${s.folder}`;
@@ -54,6 +55,7 @@
   $('n-insta').textContent = insta.length;
   $('n-research').textContent = research.length;
   $('n-cards').textContent = cards.length;
+  $('n-motion').textContent = motion.length;
 
   $('grid').innerHTML = sites.map((s) => `
     <li class="card">
@@ -185,6 +187,14 @@
       </div>
       ${c.note ? `<p class="tag">${esc(c.note)}</p>` : ''}
     </li>`).join('') || '<li class="empty">No cards yet.</li>';
+
+  // Motion references are bare images in columns, each at its own shape; nothing but the picture.
+  $('motion-grid').innerHTML = motion.map((m) => `
+    <li class="motion-item">
+      <a class="motion-thumb" href="#/motion/${esc(m.slug)}" aria-label="View motion reference by @${esc(m.author)}">
+        <img src="thumbs/motion/${esc(m.slug)}.jpg" alt="" loading="lazy" width="${m.width}" height="${m.height}">
+      </a>
+    </li>`).join('') || '<li class="empty">No motion yet.</li>';
 
   // The card reader shows each face at full size, side by side, with the reason it's here beneath.
   function renderCard(c) {
@@ -363,6 +373,7 @@
     ...emails.map((m) => ({ hash: `emails/${m.slug}`, kind: 'email', item: m })),
     ...insta.map((p) => ({ hash: `insta/${p.slug}`, kind: 'insta', item: p })),
     ...cards.map((c) => ({ hash: `cards/${c.slug}`, kind: 'card', item: c })),
+    ...motion.map((m) => ({ hash: `motion/${m.slug}`, kind: 'motion', item: m })),
   ];
   let current = -1;
   const scrolls = {}; // where each tab was left, restored when it comes back
@@ -385,9 +396,9 @@
     $('gallery').hidden = open;
     $('viewer').hidden = !open;
     document.body.style.overflow = open ? 'hidden' : '';
-    showTab(open ? (items[i].kind === 'card' ? 'cards' : items[i].kind === 'post' ? 'posts' : items[i].kind === 'email' ? 'emails' : items[i].kind === 'insta' ? 'insta' : items[i].kind === 'video' ? 'videos' : items[i].kind === 'short' ? 'shorts' : 'sites') : tabOf(hash));
+    showTab(open ? (items[i].kind === 'motion' ? 'motion' : items[i].kind === 'card' ? 'cards' : items[i].kind === 'post' ? 'posts' : items[i].kind === 'email' ? 'emails' : items[i].kind === 'insta' ? 'insta' : items[i].kind === 'video' ? 'videos' : items[i].kind === 'short' ? 'shorts' : 'sites') : tabOf(hash));
     if (!open) {
-      document.title = tab === 'cards' ? 'Good Cards · GoodDesigns' : tab === 'research' ? 'Good Research · GoodDesigns' : tab === 'insta' ? 'Good Insta · GoodDesigns' : tab === 'posts' ? 'Posts · GoodDesigns' : tab === 'emails' ? 'Good Emails · GoodDesigns' : tab === 'shorts' ? 'Good Shorts · GoodDesigns' : tab === 'videos' ? `${videoCategory ? `${categoryOf(videoCategory).name} · ` : ''}Videos · GoodDesigns` : 'GoodDesigns';
+      document.title = tab === 'motion' ? 'Good Motion · GoodDesigns' : tab === 'cards' ? 'Good Cards · GoodDesigns' : tab === 'research' ? 'Good Research · GoodDesigns' : tab === 'insta' ? 'Good Insta · GoodDesigns' : tab === 'posts' ? 'Posts · GoodDesigns' : tab === 'emails' ? 'Good Emails · GoodDesigns' : tab === 'shorts' ? 'Good Shorts · GoodDesigns' : tab === 'videos' ? `${videoCategory ? `${categoryOf(videoCategory).name} · ` : ''}Videos · GoodDesigns` : 'GoodDesigns';
       frame.removeAttribute('src');
       postView.hidden = true;
       postView.innerHTML = '';
@@ -398,13 +409,13 @@
       return;
     }
     const { kind, item } = items[i];
-    const name = kind === 'site' ? item.name : kind === 'email' ? item.subject : item.title;
+    const name = kind === 'site' ? item.name : kind === 'email' ? item.subject : kind === 'motion' ? `Motion reference by @${item.author}` : item.title;
     $('back').href = tabHash[tab];
-    $('viewer').dataset.kind = kind === 'site' ? 'site' : kind === 'card' ? 'card' : kind === 'post' ? 'post' : kind === 'email' ? 'email' : kind === 'insta' ? 'insta' : kind === 'short' ? 'short' : item.platform;
+    $('viewer').dataset.kind = kind === 'site' ? 'site' : kind === 'motion' ? 'motion' : kind === 'card' ? 'card' : kind === 'post' ? 'post' : kind === 'email' ? 'email' : kind === 'insta' ? 'insta' : kind === 'short' ? 'short' : item.platform;
     document.title = `${name} · GoodDesigns`;
     $('back').setAttribute('aria-label', `Back to GoodDesigns from ${name}`);
     const out = kind === 'site' ? srcUrl(item) : kind === 'card' ? item.faces[0].src : kind === 'email' ? item.link.url : item.url;
-    const label = kind === 'site' ? 'View source' : kind === 'card' ? 'Open image' : kind === 'email' ? item.link.label : `Open on ${PLATFORM[item.platform] || 'platform'}`;
+    const label = kind === 'site' ? 'View source' : kind === 'motion' ? 'Open on X' : kind === 'card' ? 'Open image' : kind === 'email' ? item.link.label : `Open on ${PLATFORM[item.platform] || 'platform'}`;
     $('v-src').href = out;
     $('v-src-label').textContent = label;
     $('v-src-icon').setAttribute('d', kind === 'site' ? 'M7 6 3 10l4 4M13 6l4 4-4 4' : 'M8.5 4.5H4.5v11h11v-4M11.5 3.5h5v5M16.5 3.5l-7.5 7.5');
@@ -424,11 +435,11 @@
       instaView.innerHTML = renderInsta(item);
       $('viewer').scrollTop = 0;
       initInsta();
-    } else if (kind === 'post' || kind === 'email' || kind === 'card') {
+    } else if (kind === 'post' || kind === 'email' || kind === 'card' || kind === 'motion') {
       frame.hidden = true;
       frame.removeAttribute('src');
       postView.hidden = false;
-      postView.innerHTML = kind === 'card' ? renderCard(item) : kind === 'email' ? renderEmail(item) : renderPost(item);
+      postView.innerHTML = kind === 'motion' ? `<img class="motion-full" src="motion/${esc(item.slug)}.jpg" alt="" width="${item.width}" height="${item.height}">` : kind === 'card' ? renderCard(item) : kind === 'email' ? renderEmail(item) : renderPost(item);
       $('viewer').scrollTop = 0;
     } else {
       postView.hidden = true;
@@ -458,8 +469,9 @@
     if (kind === 'insta' && !e.altKey && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) {
       instaView.querySelector(`.insta-nav--${e.key === 'ArrowLeft' ? 'prev' : 'next'}:not([hidden])`)?.click();
     }
-    if (e.key === 'ArrowLeft' && e.altKey) step(-1);
-    if (e.key === 'ArrowRight' && e.altKey) step(1);
+    // Motion references are only pictures, so the arrows alone step through them.
+    if (e.key === 'ArrowLeft' && (e.altKey || kind === 'motion')) step(-1);
+    if (e.key === 'ArrowRight' && (e.altKey || kind === 'motion')) step(1);
   });
   route();
 })();

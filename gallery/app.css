@@ -193,6 +193,19 @@ a { color: inherit; }
 .card-caption h1 { margin: 10px 0 0; font: 400 clamp(28px, 4vw, 36px)/1.1 var(--serif); letter-spacing: -0.02em; }
 .card-caption p { margin: 12px 0 0; font: italic 400 17px/1.5 var(--serif); color: var(--muted); }
 
+/* Motion: bare images in columns, each at its own shape, with no caption. */
+.motion-grid { list-style: none; margin: 0; padding: 0; columns: 300px; column-gap: 16px; }
+.motion-item { break-inside: avoid; margin-bottom: 16px; }
+.motion-thumb { display: block; overflow: hidden; border-radius: 8px; background: var(--card); }
+.motion-thumb img { display: block; width: 100%; height: auto; transition: transform .5s cubic-bezier(.2,.7,.2,1); }
+.motion-thumb:hover img, .motion-thumb:focus-visible img { transform: scale(1.03); }
+.motion-thumb:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+/* The motion reader: the image as large as the window allows, on a dark ground. */
+.viewer[data-kind="motion"] { display: grid; place-items: center; background: #0d0c0b; padding: 24px 24px 80px; }
+.viewer[data-kind="motion"] .post-reader { max-width: none; display: grid; place-items: center; }
+.motion-full { display: block; width: auto; height: auto; max-width: 100%; max-height: calc(100vh - 104px); border-radius: 6px; }
+
 /* Two floating buttons over the full-screen preview. */
 .float { position: fixed; left: 20px; bottom: 20px; z-index: 10; display: flex; gap: 8px; }
 .fab { display: inline-flex; align-items: center; gap: 7px; height: 40px; padding: 0 16px 0 13px; border-radius: 999px; font: 500 14px/1 var(--sans); text-decoration: none; background: var(--card); color: var(--ink); border: 1px solid rgba(21, 20, 18, 0.1); box-shadow: 0 1px 2px rgba(21, 20, 18, 0.1), 0 6px 18px rgba(21, 20, 18, 0.16); transition: background .15s ease, color .15s ease, transform .15s ease; }
@@ -217,6 +230,10 @@ a { color: inherit; }
   .insta-media { margin: 0 -18px; }
   .post-card { padding: 22px 18px; border-radius: 12px; }
   .post-body { font-size: 15px; }
+  .motion-grid { columns: 2; column-gap: 10px; }
+  .motion-item { margin-bottom: 10px; }
+  .viewer[data-kind="motion"] { padding: 12px 12px 64px; }
+  .motion-full { max-height: calc(100vh - 76px); }
   .float { left: 12px; bottom: 12px; }
   .fab { height: 36px; padding: 0 14px 0 11px; font-size: 13px; }
 }
