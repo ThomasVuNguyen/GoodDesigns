@@ -1,0 +1,232 @@
+WEBVTT
+
+00:00.000 --> 00:05.080
+Over the weekend, NVIDIA's leather-loving co-founder and CEO, Jensen Huang, sent out an
+
+00:05.080 --> 00:10.100
+email to all 42,000 of his employees declaring that he had been unfaithful to his wife. Now,
+
+00:10.160 --> 00:13.200
+normally, that would be a personal problem for him to figure out with his family,
+
+00:13.380 --> 00:18.460
+and potentially a very expensive lawyer. But US intelligence believes the woman involved works for
+
+00:18.460 --> 00:23.360
+China's Ministry of State Security, and also happens to be behind a tiny company in Singapore
+
+00:23.360 --> 00:28.480
+that bought billions of dollars worth of NVIDIA's best GPUs. Since then, NVIDIA's stock has been
+
+00:28.480 --> 00:30.000
+getting eviscerated, shareholders
+
+00:30.000 --> 00:34.640
+are suing, and Congress is threatening a subpoena. In today's video, we'll look at how you get banned
+
+00:34.640 --> 00:39.260
+GPUs into China, how a couple of guys reading corporate filings actually broke this story six
+
+00:39.260 --> 00:44.120
+months ago, and what the future looks like for the most important company in AI. It is November 12,
+
+00:44.300 --> 00:48.860
+2026, and you're watching The Code Report. To understand how we got here, we need to go back
+
+00:48.860 --> 00:53.980
+to late 2022, when Kate Bush was topping the charts, and the Biden admin banned Nvidia from
+
+00:53.980 --> 00:58.320
+selling chips to China. A few months later, a Chinese gaming company called 7Road
+
+00:58.320 --> 01:00.000
+that spun off its Singapore
+
+01:00.000 --> 01:05.080
+subsidiary and sold it to a shell in the British Virgin Islands named Huang Le Limited. Huang Le
+
+01:05.080 --> 01:10.160
+is the Chinese name for Alice Huang, the mistress of Jensen Huang, and I want to make this clear,
+
+01:10.340 --> 01:14.960
+the two of them have no genetic relation to each other, I think. Alice's resume says she used to
+
+01:14.960 --> 01:19.840
+be a TV broadcaster in China, although no one can find any proof of that happening. With Alice in
+
+01:19.840 --> 01:24.840
+control, that Singapore subsidiary was renamed Megaspeed, and despite a LinkedIn page listing
+
+01:24.840 --> 01:30.140
+two to 10 employees, it went on to buy more than $4.8 billion of NVIDIA hardware in just two years,
+
+01:30.160 --> 01:34.880
+and the business model is actually pretty clever. Since the US regulation only cares about where a
+
+01:34.880 --> 01:38.900
+chip physically sits and who owns the company that bought it, all you need is a company that isn't
+
+01:38.900 --> 01:44.480
+Chinese and a data center that isn't in China. So Megaspeed, a Singapore company, buys the NVIDIA
+
+01:44.480 --> 01:49.360
+GPUs and racks them in data centers in Malaysia and Indonesia, and then rents the compute to
+
+01:49.360 --> 01:54.060
+Alibaba, who uses them to train models on chips it's not allowed to own. It's sketchy, but
+
+01:54.060 --> 01:54.840
+technically legal,
+
+01:54.840 --> 02:00.520
+but US investigators suspected something worse was going on, and so in 2024, a Commerce Department
+
+02:00.520 --> 02:05.500
+official toured one of Megaspeed's Malaysian data centers and found a bunch of NVIDIA GPUs
+
+02:05.500 --> 02:09.280
+just sitting there unopened, as if they were about to be redistributed for the good of the
+
+02:09.280 --> 02:14.420
+collective. Meanwhile, the Huangs kept showing up in the same places, and then on May 13th of this
+
+02:14.420 --> 02:19.000
+year, a short seller called Culper Research published a 40-page report titled The China
+
+02:19.000 --> 02:23.780
+Problem. In it, they showed how Megaspeed's balance sheet went from $33 million to $3 billion
+
+02:23.780 --> 02:24.840
+in a single year,
+
+02:24.840 --> 02:28.180
+with almost all of it coming from deposits from a source nobody could name.
+
+02:28.340 --> 02:34.800
+They also showed that Megaspeed's Malaysian subsidiary had pledged its entire business as collateral to a company called Apex,
+
+02:34.980 --> 02:36.360
+whose parent is Alibaba.
+
+02:36.560 --> 02:41.220
+So technically, NVIDIA could say with a straight face that its customer had no Chinese shareholders,
+
+02:41.540 --> 02:44.440
+while in reality, Alibaba was allegedly paying for everything.
+
+02:44.620 --> 02:49.520
+The report even called Jensen and Alice's non-incestuous relationship uncomfortably close.
+
+02:49.640 --> 02:53.440
+And that same week, Jensen boarded Air Force One to fly to Beijing with the president.
+
+02:53.440 --> 02:54.840
+And according to the Times,
+
+02:54.840 --> 02:59.440
+that's the trip where Marco Rubio told Trump that Jensen was in a relationship with a suspected
+
+02:59.440 --> 03:03.760
+Chinese spy, although Trump claims he didn't hear about it then. Five months later, the Times
+
+03:03.760 --> 03:08.400
+published its findings, including a classified memo claiming China recruited Alice to gather
+
+03:08.400 --> 03:13.620
+information on Jensen and push NVIDIA to lobby for access to chips, which is awkward because
+
+03:13.620 --> 03:18.860
+Jensen has been doing exactly that. Jensen's first response was that his interactions with Alice were
+
+03:18.860 --> 03:22.820
+completely normal and not unusual, and for a moment it looked like he was going to be fine
+
+03:22.820 --> 03:26.500
+since the board said it had confidence in him, Nvidia said he'd keep running the company
+
+03:26.500 --> 03:30.580
+without interruption, analysts said the stock would be worth up to 30% less without him,
+
+03:30.720 --> 03:34.460
+and the president said he believed Jensen when he told him he didn't know she was a spy.
+
+03:34.640 --> 03:38.500
+And literally as I'm finishing up this video, it looks like another affair has hit the towers.
+
+03:38.760 --> 03:43.020
+The Times is now reporting that Jensen also had a relationship with Kimberly Powell,
+
+03:43.320 --> 03:47.960
+Nvidia's VP of healthcare who reports directly to him, which if true means he cheated on his
+
+03:47.960 --> 03:51.740
+mistress with his other mistress, and I guess there really is no loyalty among thieves.
+
+03:51.740 --> 03:52.820
+Five people who worked
+
+03:52.820 --> 03:57.580
+at Nvidia described the relationship to the Times, and when the paper called Jensen to ask about it,
+
+03:57.580 --> 04:02.260
+he hung up. That was enough for the board, which met last night to decide his future, and by this
+
+04:02.260 --> 04:07.060
+morning Jensen had resigned as CEO effective immediately, ending a 33-year run at the company
+
+04:07.060 --> 04:12.760
+he co-founded. The board's statement doesn't give a reason, names CFO Colette Kress as interim CEO,
+
+04:12.760 --> 04:16.720
+and says operations will continue without interruption, which is the same thing they said
+
+04:16.720 --> 04:22.100
+about Jensen four days ago. So the most important company in AI is now looking for a new CEO five
+
+04:22.100 --> 04:22.820
+days before its
+
+04:22.820 --> 04:27.500
+earnings call. The stock is down another 10%, the short sellers everybody ignored back in May
+
+04:27.500 --> 04:32.080
+ended up being right for a reason that wasn't even in their report, and Jensen Huang might go down in
+
+04:32.080 --> 04:36.160
+history as the man who popped the AI bubble with his manhood. But if you'd like to be involved in
+
+04:36.160 --> 04:40.800
+both Claude and ChatGPT at the same time without consequence, you can do that with Manufact,
+
+04:41.020 --> 04:46.020
+the sponsor of today's video. They're basically the Vercel of MCP, which is incredibly helpful
+
+04:46.020 --> 04:50.520
+since every product needs an MCP server these days, but actually getting one into production
+
+04:50.520 --> 04:56.200
+is surprisingly painful. I used their open source TypeScript framework, mcp-use, to build an MCP
+
+04:56.200 --> 05:01.540
+server for HorseTinder that renders the actual UI inside the chat window. Then I connected my GitHub
+
+05:01.540 --> 05:06.960
+repo so every commit now deploys the server to a custom domain. I pasted that URL into Claude,
+
+05:07.140 --> 05:12.180
+and my app was live inside the chat. You can run Manufact's evals to test that it works across every
+
+05:12.180 --> 05:16.360
+client, and their publishing checks will help make sure it doesn't get stuck in review when you
+
+05:16.360 --> 05:21.740
+submit to the Claude and ChatGPT app stores. Once your MCP is live, their analytics show you how
+
+05:21.740 --> 05:26.720
+agents are actually using your server and where things are breaking. Try deploying your MCP server
+
+05:26.720 --> 05:31.120
+with their free tier at the link below. No credit card required. This has been the Code Report,
+
+05:31.360 --> 05:33.580
+thanks for watching, and I will see you in the next one.

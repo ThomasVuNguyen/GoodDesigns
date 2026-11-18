@@ -13,13 +13,14 @@ from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFont, ImageOps
 
+import craft
 import motion_sequences
 
 
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 VIDEOS = json.loads((REPO / "gallery/videos.json").read_text())["videos"]
-NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 59)]
+NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 69)]
 # Seconds between library frames. Short clips are sampled more densely than one per second.
 FRAME_STEP = {47: 0.25}
 CURATED_FRAMES = {
@@ -709,6 +710,24 @@ TRANSCRIPT_KIND = {
 DEFAULT_FRAME_COPY = ("Key frames", "One frame per visual idea, with a note on its style, composition or transition.")
 # Music-only soundtracks. Whisper returns only hallucinated lines for these, so no transcript is kept.
 NO_NARRATION = set(range(41, 47))
+
+# From video 59 on, each film's notes live in its own file, studies/<NN>-<slug>.json, instead of the dicts above:
+# "shot_notes" ({second: note}), "frame_copy" ([tab label, intro]), "transcript_kind", "no_transcript" (shown
+# instead of a transcript when the film has no speech), "note" (the gallery card note), "motion_intro" and
+# "motion" (as in motion_sequences.py), and "craft" (see craft.py).
+STUDIES = {}
+for _path in sorted((HERE / "studies").glob("*.json")):
+    _number = int(_path.name.split("-")[0])
+    _study = STUDIES[_number] = json.loads(_path.read_text())
+    if "shot_notes" in _study:
+        SHOT_NOTES[_number] = {(int(float(k)) if float(k).is_integer() else float(k)): v for k, v in _study["shot_notes"].items()}
+    if "frame_copy" in _study:
+        FRAME_COPY[_number] = tuple(_study["frame_copy"])
+    if "transcript_kind" in _study:
+        TRANSCRIPT_KIND[_number] = _study["transcript_kind"]
+    if _study.get("motion"):
+        motion_sequences.MOTION[_number] = _study["motion"]
+        motion_sequences.MOTION_INTRO[_number] = _study["motion_intro"]
 TAG = re.compile(r"<[^>]*>")
 TIMING = re.compile(r"^((?:\d\d:)?\d\d:\d\d\.\d+)\s+-->")
 SCENE_LOG = re.compile(r"n:\s*(\d+)\s+pts:\s*\d+\s+pts_time:([\d.]+)")
@@ -928,9 +947,15 @@ def write_pages(items):
                     f'<span class="transcript-words">{html.escape(words)}</span></button>')
             detail.append('</div></aside>')
         else:
-            missing = 'No narration. The soundtrack is music only.' if number in NO_NARRATION else 'Transcript pending.'
+            missing = (STUDIES.get(number, {}).get("no_transcript")
+                       or ('No narration. The soundtrack is music only.' if number in NO_NARRATION else 'Transcript pending.'))
             detail.append(f'<aside class="transcript"><div class="transcript-head"><h2>Transcript</h2></div><p>{missing}</p></aside>')
         detail.append('</div>')
+
+        craft_notes = STUDIES.get(number, {}).get("craft")
+        if craft_notes:
+            detail.append(craft.section(name, item, craft_notes))
+            (HERE / "frames" / name / "craft.md").write_text(craft.markdown(name, item, craft_notes))
 
         step = FRAME_STEP.get(number, 1)
         selected = item.get("selected_frames")

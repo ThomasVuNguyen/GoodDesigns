@@ -1,0 +1,77 @@
+[00:00:00] Over the weekend, NVIDIA's leather-loving co-founder and CEO, Jensen Huang, sent out an
+[00:00:05] email to all 42,000 of his employees declaring that he had been unfaithful to his wife. Now,
+[00:00:10] normally, that would be a personal problem for him to figure out with his family,
+[00:00:13] and potentially a very expensive lawyer. But US intelligence believes the woman involved works for
+[00:00:18] China's Ministry of State Security, and also happens to be behind a tiny company in Singapore
+[00:00:23] that bought billions of dollars worth of NVIDIA's best GPUs. Since then, NVIDIA's stock has been
+[00:00:28] getting eviscerated, shareholders
+[00:00:30] are suing, and Congress is threatening a subpoena. In today's video, we'll look at how you get banned
+[00:00:34] GPUs into China, how a couple of guys reading corporate filings actually broke this story six
+[00:00:39] months ago, and what the future looks like for the most important company in AI. It is November 12,
+[00:00:44] 2026, and you're watching The Code Report. To understand how we got here, we need to go back
+[00:00:48] to late 2022, when Kate Bush was topping the charts, and the Biden admin banned Nvidia from
+[00:00:53] selling chips to China. A few months later, a Chinese gaming company called 7Road
+[00:00:58] that spun off its Singapore
+[00:01:00] subsidiary and sold it to a shell in the British Virgin Islands named Huang Le Limited. Huang Le
+[00:01:05] is the Chinese name for Alice Huang, the mistress of Jensen Huang, and I want to make this clear,
+[00:01:10] the two of them have no genetic relation to each other, I think. Alice's resume says she used to
+[00:01:14] be a TV broadcaster in China, although no one can find any proof of that happening. With Alice in
+[00:01:19] control, that Singapore subsidiary was renamed Megaspeed, and despite a LinkedIn page listing
+[00:01:24] two to 10 employees, it went on to buy more than $4.8 billion of NVIDIA hardware in just two years,
+[00:01:30] and the business model is actually pretty clever. Since the US regulation only cares about where a
+[00:01:34] chip physically sits and who owns the company that bought it, all you need is a company that isn't
+[00:01:38] Chinese and a data center that isn't in China. So Megaspeed, a Singapore company, buys the NVIDIA
+[00:01:44] GPUs and racks them in data centers in Malaysia and Indonesia, and then rents the compute to
+[00:01:49] Alibaba, who uses them to train models on chips it's not allowed to own. It's sketchy, but
+[00:01:54] technically legal,
+[00:01:54] but US investigators suspected something worse was going on, and so in 2024, a Commerce Department
+[00:02:00] official toured one of Megaspeed's Malaysian data centers and found a bunch of NVIDIA GPUs
+[00:02:05] just sitting there unopened, as if they were about to be redistributed for the good of the
+[00:02:09] collective. Meanwhile, the Huangs kept showing up in the same places, and then on May 13th of this
+[00:02:14] year, a short seller called Culper Research published a 40-page report titled The China
+[00:02:19] Problem. In it, they showed how Megaspeed's balance sheet went from $33 million to $3 billion
+[00:02:23] in a single year,
+[00:02:24] with almost all of it coming from deposits from a source nobody could name.
+[00:02:28] They also showed that Megaspeed's Malaysian subsidiary had pledged its entire business as collateral to a company called Apex,
+[00:02:34] whose parent is Alibaba.
+[00:02:36] So technically, NVIDIA could say with a straight face that its customer had no Chinese shareholders,
+[00:02:41] while in reality, Alibaba was allegedly paying for everything.
+[00:02:44] The report even called Jensen and Alice's non-incestuous relationship uncomfortably close.
+[00:02:49] And that same week, Jensen boarded Air Force One to fly to Beijing with the president.
+[00:02:53] And according to the Times,
+[00:02:54] that's the trip where Marco Rubio told Trump that Jensen was in a relationship with a suspected
+[00:02:59] Chinese spy, although Trump claims he didn't hear about it then. Five months later, the Times
+[00:03:03] published its findings, including a classified memo claiming China recruited Alice to gather
+[00:03:08] information on Jensen and push NVIDIA to lobby for access to chips, which is awkward because
+[00:03:13] Jensen has been doing exactly that. Jensen's first response was that his interactions with Alice were
+[00:03:18] completely normal and not unusual, and for a moment it looked like he was going to be fine
+[00:03:22] since the board said it had confidence in him, Nvidia said he'd keep running the company
+[00:03:26] without interruption, analysts said the stock would be worth up to 30% less without him,
+[00:03:30] and the president said he believed Jensen when he told him he didn't know she was a spy.
+[00:03:34] And literally as I'm finishing up this video, it looks like another affair has hit the towers.
+[00:03:38] The Times is now reporting that Jensen also had a relationship with Kimberly Powell,
+[00:03:43] Nvidia's VP of healthcare who reports directly to him, which if true means he cheated on his
+[00:03:47] mistress with his other mistress, and I guess there really is no loyalty among thieves.
+[00:03:51] Five people who worked
+[00:03:52] at Nvidia described the relationship to the Times, and when the paper called Jensen to ask about it,
+[00:03:57] he hung up. That was enough for the board, which met last night to decide his future, and by this
+[00:04:02] morning Jensen had resigned as CEO effective immediately, ending a 33-year run at the company
+[00:04:07] he co-founded. The board's statement doesn't give a reason, names CFO Colette Kress as interim CEO,
+[00:04:12] and says operations will continue without interruption, which is the same thing they said
+[00:04:16] about Jensen four days ago. So the most important company in AI is now looking for a new CEO five
+[00:04:22] days before its
+[00:04:22] earnings call. The stock is down another 10%, the short sellers everybody ignored back in May
+[00:04:27] ended up being right for a reason that wasn't even in their report, and Jensen Huang might go down in
+[00:04:32] history as the man who popped the AI bubble with his manhood. But if you'd like to be involved in
+[00:04:36] both Claude and ChatGPT at the same time without consequence, you can do that with Manufact,
+[00:04:41] the sponsor of today's video. They're basically the Vercel of MCP, which is incredibly helpful
+[00:04:46] since every product needs an MCP server these days, but actually getting one into production
+[00:04:50] is surprisingly painful. I used their open source TypeScript framework, mcp-use, to build an MCP
+[00:04:56] server for HorseTinder that renders the actual UI inside the chat window. Then I connected my GitHub
+[00:05:01] repo so every commit now deploys the server to a custom domain. I pasted that URL into Claude,
+[00:05:07] and my app was live inside the chat. You can run Manufact's evals to test that it works across every
+[00:05:12] client, and their publishing checks will help make sure it doesn't get stuck in review when you
+[00:05:16] submit to the Claude and ChatGPT app stores. Once your MCP is live, their analytics show you how
+[00:05:21] agents are actually using your server and where things are breaking. Try deploying your MCP server
+[00:05:26] with their free tier at the link below. No credit card required. This has been the Code Report,
+[00:05:31] thanks for watching, and I will see you in the next one.

@@ -1,0 +1,868 @@
+{
+  "note": "A Lovable founder story about Zain, who turned down a quarter of a million in investment and went on to build Saath, a community fund for projects across South Asia. His interview, shot in a warm studio with captions that build word by word around him, alternates with a narrator over sepia photographs that bloom out of creased paper like ink. The breakdown follows how the two voices split the story, how the paper world borrows the app's own palette, and where small graphics (a cheque, two flags, color swatches) act out what he says.",
+  "transcript_kind": "Local speech recognition on the isolated voice stem, corrected to the on-screen names and captions",
+  "shot_notes": {
+    "0": "Cold open on the wide: Zain on a wooden chair in the middle of a red rug, with charcoal walls, a sideboard, steel stairs and a carved cabinet lit by warm lamps. The first caption, 'at 23', sits in the empty wall beside his head.",
+    "3": "A cheque made out to Zain for $250,000.00 cuts in at the left of frame, flat like a sticker on the shot. The number is on screen before anyone says it.",
+    "5": "Cut to the side angle on 'and to say no to that'. 'no' is set in italic serif among the white sans words, the first emphasis in the film.",
+    "8": "'we thought you were insane' in a large bold serif across the sideboard. The big serif is saved for lines the film wants felt.",
+    "9": "Hard cut to creased cream paper. 'THIS IS ZAIN.' types on in wide gold capitals while a sepia close-up of his face blooms in at right. The narrator's world starts here.",
+    "11": "Zain in a barrister's wig and gown, a sepia print bleeding out of the paper with ragged ink edges: 'studying law'.",
+    "12": "A still of a costume-drama cast, vignetted into the paper like an ink stain: 'acting in an HBO show'.",
+    "14": "An office snapshot of young colleagues on beanbags, one at a laptop: 'working for a little company called Monzo'. The CV is told in personal photographs, not captions.",
+    "16": "Zain in a purple hoodie in front of a lettered poster, the ink still spreading at the edges, as the narrator says he turned down £250,000.",
+    "20": "'ALL BECAUSE HE REALISED' typed word by word in gold capitals on bare paper.",
+    "21": "'HE WAS WORKING ON THE WRONG THING' completes on its own line. The music has dropped out under it, and the narrator's setup ends on text alone.",
+    "23": "Back to the wide: a British flag and a Pakistani flag float above his upturned palms as he says 'you're in between two identities'.",
+    "27": "'you are cheering for England in the world cup' builds up beside his head, line by line, in small white sans, in the wall space the wide leaves him.",
+    "29": "'but then at home you're eating biryani' builds up on his other side, so the two halves of the sentence flank him.",
+    "34": "A hand holds up an instant photo of two friends on the cream paper. The narrator introduces Habeeb with a keepsake, not an interview.",
+    "36": "The two friends at a table with laptops, warm sepia, the frame edges still blotted with ink.",
+    "38": "A crowd moving down a narrow street toward the camera: the community the narrator is talking about.",
+    "40": "The side setup: Zain in three-quarter profile looking off left, the sideboard and a glass jar soft behind him. 'Habeeb' appears alone above his head.",
+    "44": "Single words float into the empty left of frame ('people', then 'together', then 'other') in bold white. In the side angle the captions come one word at a time.",
+    "52": "'so I gave Habeeb' and 'the ring and said' on either side of him in the wide, then 'let's build it.' in serif.",
+    "53": "A phone propped against a warm wall shows the Saath sign-in screen, gold on cream. The app's palette is the paper's palette.",
+    "56": "Pushed in on the screen until the saaTH wordmark fills the frame. A moment later it slides away and the same word appears in Gurmukhi.",
+    "58": "'Welcome aboard!' fades up under a ticket-like header, 'Saath Express': 'You're now part of a global community on a journey to build a brighter future for South Asia.'",
+    "60": "'we had spent 5 months tinkering with different tools' assembled word by word around him in the wide.",
+    "64": "The side angle in one long take while he explains the button they could not change. A single line of small caption runs along the sideboard.",
+    "79": "'let's try this AI app builder tool called' scattered around his head and body. The product's name is said, and the film shows nothing of it.",
+    "83": "Color swatches (mustard, blush, olive, ochre, sage) pop out of his hand as he says 'these are the colors'. The graphic acts out the ramble.",
+    "88": "In the wide he lifts a hand to his head, 'everything I had over here in my head', just after a riser in the music breaks into a long low boom.",
+    "93": "'24 hours later we were live and running' in the side angle. The payoff is kept to three seconds.",
+    "95": "Back on the paper: a word in Telugu script fades as the terracotta saaTH wordmark takes its place.",
+    "97": "A terracotta card lands on the paper like a tile, its 'How it Works' list printing on line by line.",
+    "99": "Pushed in on the card: 'Become a Saathi. Join with £5/month, get your voting ticket', 'Vote for Projects', 'See the Impact'. The product is shown as printed matter.",
+    "101": "A team photo of girls in navy kit with a ball, printed small on the paper: 'a girls' football club in Nepal'.",
+    "104": "A woman and a man at a sewing table, the print blooming in from the top: the craftswoman academy.",
+    "106": "Zain with arms crossed, ink still bleeding around him: his only portrait in the paper world after the opening.",
+    "110": "An antique map of Asia scattered with coins, in soft focus, under 'businesses across South Asia that will sustain themselves'.",
+    "113": "A tighter framing of the side angle as he remembers seeing the academy live.",
+    "114": "A small print of two people hanging a banner opens the academy photographs. A moment later, at about 114.7, three players stand with their backs to camera, the Saath name in Devanagari across their shirts: the logo he is talking about.",
+    "115": "A huddle of players in the navy kit, printed a little larger on the paper.",
+    "116": "A free kick on a dusty pitch. The prints get larger on the page with each cut.",
+    "119": "Full frame at last: the team with thumbs up and the ball. When the story arrives, the photograph leaves the paper.",
+    "121": "The wide again: 'two kids behind a laptop' sits at left, and a second later 'and now there's a football academy that exists' stacks up at right.",
+    "125": "'that was mindblowing.' in large serif in the tight shot.",
+    "130": "A crowded group photo under a red sign, warm and blown out: 'thousands of people' cut in for two seconds.",
+    "133": "'resources' in big serif, then 'network', each on a low hit in the music.",
+    "137": "'you can bring really ambitious ideas to life' split around him, the last line of the interview.",
+    "141": "End card on brown paper: 'Closing The Gap' as cut-out italic labels stacked step by step, with the Lovable label at the bottom. It holds to the end."
+  },
+  "motion_intro": "The film runs on two kinds of movement. In the studio the camera is locked off, and everything that moves is laid over the live action: captions that build a word or two at a time in the empty wall around Zain, and a few small props that appear on cue (a cheque, two flags, a handful of color swatches). In the narrator's world nothing is cut in cleanly. Photographs bloom out of creased paper like ink spreading in water, gold capitals type on word by word, and the app arrives as a phone, a wordmark that changes script and a card dropped onto the page. The sequences below sample each kind.",
+  "motion": [
+    {
+      "id": "caption-build",
+      "trail": true,
+      "start": 0.0,
+      "end": 4.6,
+      "fps": 6,
+      "title": "Captions build around him, and a cheque cuts in",
+      "tags": [
+        "kinetic captions",
+        "word by word",
+        "cut-in graphic",
+        "locked-off wide"
+      ],
+      "text": "The wide is locked off. 'at', '23', 'years' and 'old' arrive one per spoken word in small white sans in the wall to the right of his head, and 'to be given' drops in under them. At 2.44 a cheque made out to Zain for $250,000.00 appears at left in a single frame, with no scale or fade, and holds while 'to go build a company' builds along the sideboard below. Words land as he says them, so the captions read like a transcript being written live."
+    },
+    {
+      "id": "say-no",
+      "trail": true,
+      "start": 4.6,
+      "end": 6.4,
+      "fps": 10,
+      "title": "'no' switches typeface",
+      "tags": [
+        "hard cut",
+        "type contrast",
+        "emphasis"
+      ],
+      "text": "Cut to the side angle at 4.6. 'and to say' appears at left at 4.8, then 'no' at 5.0 in a thin italic serif, a different voice from the bold sans around it, then 'to that' at right. At about 6.0 'and to say' drops away and 'no to that' holds alone for a moment before the next line starts. A riser in the music peaks with the 'no'. The change of typeface does what a raised voice would."
+    },
+    {
+      "id": "this-is-zain",
+      "start": 8.7,
+      "end": 11.0,
+      "fps": 10,
+      "title": "'THIS IS ZAIN.' types on, and the face blooms in",
+      "tags": [
+        "type-on",
+        "ink bloom",
+        "slow drift",
+        "paper texture"
+      ],
+      "text": "Hard cut at 8.8 to bare creased paper. 'THIS' appears in wide gold capitals, 'IS' follows at about 9.25 and 'ZAIN.' at 9.5, while a sepia close-up of his face spreads in from the right edge like ink soaking into the sheet. The whole layer drifts slowly left, so by 10.4 the T has slid out of frame. At 10.73 the face clears to blank paper and the law photograph blooms out in about a quarter of a second."
+    },
+    {
+      "id": "ink-chain",
+      "start": 10.6,
+      "end": 13.8,
+      "fps": 8,
+      "title": "The CV as a chain of ink blooms",
+      "tags": [
+        "ink bloom",
+        "organic matte",
+        "match to narration"
+      ],
+      "text": "Each photograph grows out of the paper from a ragged blot rather than cutting in. The barrister photo opens from the right at 10.75 and pushes in slowly. At about 12.15 it washes away and the costume-drama still opens from the center as a rough oval, with paper showing around its edges. At 13.4 the office snapshot replaces it the same way. Each image lands on the noun the narrator is saying (law, HBO show, Monzo), so the line and the picture arrive together."
+    },
+    {
+      "id": "wrong-thing",
+      "start": 19.4,
+      "end": 22.4,
+      "fps": 8,
+      "title": "The narrator's line, typed on bare paper",
+      "tags": [
+        "type-on",
+        "word by word",
+        "music drop",
+        "hard cut out"
+      ],
+      "text": "'ALL BECAUSE' appears over the fading hoodie photo at about 19.7, and the photo washes out behind it. The words add one at a time, roughly every quarter second, in the same gold capitals as the name card. At 20.65 the line clears and 'HE WAS' starts a new one lower on the page, finishing on 'THING' at about 21.65. The music has dropped out by then. At 22.24 a hard cut puts us back in the full-color studio."
+    },
+    {
+      "id": "flags",
+      "trail": true,
+      "start": 22.6,
+      "end": 25.2,
+      "fps": 10,
+      "title": "Two flags weighed in his hands",
+      "tags": [
+        "tracked graphic",
+        "gesture",
+        "pop on",
+        "motion blur"
+      ],
+      "text": "As he says 'you're in between two identities', a British flag pops on at 22.84 by his left hand and a Pakistani flag joins at 23.2, overlapping it. Around 23.7 they slide apart to float above each upturned palm, as if he is weighing them, and hold there for a second. When his hands come together at about 24.7 the flags smear back into one and vanish by 24.9. The graphic is timed to his gesture, so it reads as something he is doing, not something laid on him."
+    },
+    {
+      "id": "instant-photo",
+      "start": 33.8,
+      "end": 37.0,
+      "fps": 8,
+      "title": "An instant photo held in a hand, then the desk blooms in",
+      "tags": [
+        "hard cut",
+        "cut-out hand",
+        "ink bloom",
+        "slow push"
+      ],
+      "text": "Hard cut at 34.0, on a low swell in the music, to a hand holding an instant photo of two friends against the cream paper. The hand drifts and tilts a few degrees over two seconds. From about 36.0 the photograph of the two at a table with laptops spreads in from the edges, its corners still blotted, and pushes in slowly until the crowd footage takes over at 37.6."
+    },
+    {
+      "id": "phone-to-welcome",
+      "start": 55.5,
+      "end": 58.7,
+      "fps": 8,
+      "title": "Into the screen, the wordmark changes script, 'Welcome aboard!'",
+      "tags": [
+        "cut in",
+        "push in",
+        "script change",
+        "fade up"
+      ],
+      "text": "At 55.68 the film cuts from the propped phone to a close of its screen and keeps pushing in until the saaTH wordmark fills the frame. At about 56.7 the Latin letters slide left and fade as the same word in Gurmukhi slides in beside them, then both clear by 57.2. 'Welcome aboard!' and its body text fade up from about 57.5. Changing the script turns the name into a small statement about the film's subject: one word that belongs to several languages."
+    },
+    {
+      "id": "swatches",
+      "trail": true,
+      "start": 82.9,
+      "end": 84.2,
+      "fps": 15,
+      "title": "Color swatches pop out of his hand",
+      "tags": [
+        "pop on",
+        "stagger",
+        "gesture",
+        "palette"
+      ],
+      "text": "On 'these are the colors' rounded squares pop out of his reaching hand one after another from about 83.2: sage, ochre, olive, blush, mustard. They scatter left into a loose row by 83.6, all on the same plane, with no shadows. At about 84.0 all but the mustard one vanish, and that one is gone a moment later as the caption moves on. It is a third of a second of animation, and it turns a vague ramble into something you can see."
+    },
+    {
+      "id": "how-it-works",
+      "start": 96.3,
+      "end": 98.4,
+      "fps": 12,
+      "title": "The wordmark gives way to a card dropped on the page",
+      "tags": [
+        "cut-in object",
+        "drop shadow",
+        "type-on",
+        "cut to close"
+      ],
+      "text": "The terracotta saaTH wordmark holds on the paper until 96.7, when a blank terracotta card appears in its place in one frame, with a soft shadow that makes it sit on the sheet. From about 96.9 its contents print on from top to bottom: 'How it Works', then three steps with icons. At 98.2 the film cuts to a close of the card so the steps can be read."
+    },
+    {
+      "id": "prints-grow",
+      "start": 114.3,
+      "end": 119.8,
+      "fps": 4,
+      "title": "The football photos grow until they fill the frame",
+      "tags": [
+        "photo sequence",
+        "scale up",
+        "release"
+      ],
+      "text": "Over Zain's voice the prints change on the same paper background: a small banner photo at 114.44, the shirts from behind at about 114.7, a huddle, a free kick at about 116, a wide of the pitch, then a larger huddle at 117.32. Each one is a little bigger on the page. At 117.92 the last one fills the whole frame, the team with thumbs up, and holds until 119.6. The frame opening up does the work of 'that was mind-blowing' before he says it."
+    },
+    {
+      "id": "end-card",
+      "start": 137.4,
+      "end": 140.2,
+      "fps": 10,
+      "title": "'Closing The Gap' builds from cut-out labels",
+      "tags": [
+        "hard cut",
+        "stagger",
+        "flip on",
+        "end card"
+      ],
+      "text": "Hard cut at 137.56 from the studio to brown paper. From about 137.9 small white labels flip into place one after another, stepping down and right: 'Closing', 'The', a large 'Gap' that settles smaller, and the Lovable label, which first shows upside down and flips upright at about 139.4. Then the card holds still until the end with the music under it."
+    }
+  ],
+  "craft": {
+    "lede": [
+      "A two-and-a-half-minute founder story built from two voices that never share a frame. Zain talks to us from a warm studio set, and his words build up around him as captions. A narrator fills in the facts over sepia photographs that grow out of creased paper. The film hands the story back and forth between them four times, and that rhythm is the structure: he gives the feeling, the narrator gives the context, then he picks the story back up.",
+      "What makes it worth studying is how much craft goes into a modest set of assets. Most of the pictures are personal photographs, a phone screen and a seated interview. The film turns them into a world by printing everything onto the same paper in the same cream, gold and terracotta as the Saath app, and it lets a few small graphics act out his sentences. The product it is made for, Lovable, gets one beat in the middle and is never shown."
+    ],
+    "map": {
+      "lanes": [
+        {
+          "id": "story",
+          "segments": [
+            {
+              "start": 0,
+              "end": 8.8,
+              "label": "The refusal",
+              "note": "Turning down a quarter of a million at 23, in his own words."
+            },
+            {
+              "start": 8.8,
+              "end": 22.24,
+              "label": "This is Zain",
+              "note": "Law, an HBO show, Monzo, the money he turned down, and 'the wrong thing'."
+            },
+            {
+              "start": 22.24,
+              "end": 34.0,
+              "label": "Two identities",
+              "note": "Growing up British Pakistani, looking for shared spaces."
+            },
+            {
+              "start": 34.0,
+              "end": 53.4,
+              "label": "The idea",
+              "note": "Habeeb's story of pooled community funds in Halifax, and 'let's build it'."
+            },
+            {
+              "start": 53.4,
+              "end": 59.12,
+              "label": "Saath",
+              "note": "What they built, shown on a phone."
+            },
+            {
+              "start": 59.12,
+              "end": 80.24,
+              "label": "Stuck on a button",
+              "note": "Five months of tools, a day from launch, unable to change the contribution amount."
+            },
+            {
+              "start": 80.24,
+              "end": 94.84,
+              "label": "Lovable, 24 hours",
+              "note": "He describes what he wants, it appears, and they are live a day later."
+            },
+            {
+              "start": 94.84,
+              "end": 112.64,
+              "label": "How Saath works",
+              "note": "Donors choose projects: a girls' football club in Nepal, a craftswoman academy."
+            },
+            {
+              "start": 112.64,
+              "end": 126.04,
+              "label": "The academy, live",
+              "note": "Seeing the shirts with the logo on a pitch they have never visited."
+            },
+            {
+              "start": 126.04,
+              "end": 137.56,
+              "label": "Five pounds, thousands of people",
+              "note": "The thesis: small amounts and networks pooled together."
+            },
+            {
+              "start": 137.56,
+              "end": 144.0,
+              "label": "End card",
+              "note": "'Closing The Gap' and Lovable."
+            }
+          ]
+        },
+        {
+          "id": "voices",
+          "segments": [
+            {
+              "start": 0,
+              "end": 8.62,
+              "label": "Zain",
+              "kind": "interview",
+              "note": "The hook in his own words, captioned word by word."
+            },
+            {
+              "start": 8.86,
+              "end": 22.04,
+              "label": "Narrator",
+              "kind": "narrator",
+              "note": "Who he is. The name and the last line are also typed on the paper."
+            },
+            {
+              "start": 22.28,
+              "end": 33.94,
+              "label": "Zain",
+              "kind": "interview"
+            },
+            {
+              "start": 34.18,
+              "end": 40.0,
+              "label": "Narrator",
+              "kind": "narrator",
+              "note": "Introduces Habeeb."
+            },
+            {
+              "start": 40.52,
+              "end": 53.36,
+              "label": "Zain",
+              "kind": "interview"
+            },
+            {
+              "start": 53.5,
+              "end": 58.94,
+              "label": "Narrator",
+              "kind": "narrator",
+              "note": "Names Saath."
+            },
+            {
+              "start": 58.94,
+              "end": 94.58,
+              "label": "Zain: building it",
+              "kind": "interview",
+              "note": "The longest stretch of interview: the button, Lovable, 24 hours."
+            },
+            {
+              "start": 94.9,
+              "end": 112.34,
+              "label": "Narrator",
+              "kind": "narrator",
+              "note": "How the fund works and what it has paid for."
+            },
+            {
+              "start": 112.54,
+              "end": 114.44,
+              "label": "Zain",
+              "kind": "interview"
+            },
+            {
+              "start": 114.44,
+              "end": 119.6,
+              "label": "Over the photos",
+              "kind": "interview-vo",
+              "note": "'a shirt which had a logo on it' over the shirts."
+            },
+            {
+              "start": 119.6,
+              "end": 129.56,
+              "label": "Zain",
+              "kind": "interview"
+            },
+            {
+              "start": 129.56,
+              "end": 131.52,
+              "label": "Over the crowd",
+              "kind": "interview-vo",
+              "note": "'thousands of people together' over a group photo."
+            },
+            {
+              "start": 131.52,
+              "end": 137.46,
+              "label": "Zain",
+              "kind": "interview"
+            },
+            {
+              "start": 137.56,
+              "end": 144.0,
+              "label": "Closing The Gap",
+              "kind": "text"
+            }
+          ]
+        },
+        {
+          "id": "sound",
+          "segments": [
+            {
+              "start": 0,
+              "end": 20.8,
+              "label": "Opening cue",
+              "kind": "music",
+              "note": "A riser peaks with the 'no' at about 5 s; low swells mark cuts into the paper."
+            },
+            {
+              "start": 20.8,
+              "end": 22.2,
+              "label": "Music drops out",
+              "note": "Under 'the wrong thing'. Only the voice."
+            },
+            {
+              "start": 22.2,
+              "end": 33.9,
+              "label": "Light bed",
+              "kind": "music"
+            },
+            {
+              "start": 33.9,
+              "end": 40.4,
+              "label": "Swell into paper",
+              "kind": "music",
+              "note": "A low swell on the cut to the instant photo."
+            },
+            {
+              "start": 40.4,
+              "end": 53.3,
+              "label": "Bed",
+              "kind": "music"
+            },
+            {
+              "start": 53.3,
+              "end": 59.1,
+              "label": "Swells on the phone",
+              "kind": "music",
+              "note": "Swells on the cuts at 53.4 and 55.7; the music sits closest to the voice here, about 5 dB under."
+            },
+            {
+              "start": 59.1,
+              "end": 85.5,
+              "label": "Bed",
+              "kind": "music"
+            },
+            {
+              "start": 85.5,
+              "end": 86.9,
+              "label": "Riser",
+              "kind": "music"
+            },
+            {
+              "start": 86.9,
+              "end": 91.8,
+              "label": "Low boom, held",
+              "kind": "music",
+              "note": "Under 'everything I had over here in my head'. The bed returns on the cut at 91.8."
+            },
+            {
+              "start": 91.8,
+              "end": 132.4,
+              "label": "Bed",
+              "kind": "music",
+              "note": "A short swell into the cut back to Zain at 112.6."
+            },
+            {
+              "start": 132.4,
+              "end": 134.5,
+              "label": "Three hits",
+              "kind": "music",
+              "note": "Low hits under 'money', 'resources' and 'network'."
+            },
+            {
+              "start": 134.5,
+              "end": 137.5,
+              "label": "Bed",
+              "kind": "music"
+            },
+            {
+              "start": 137.5,
+              "end": 143.5,
+              "label": "Thins out",
+              "kind": "music",
+              "note": "The top end falls away under the end card."
+            }
+          ]
+        },
+        {
+          "id": "picture",
+          "segments": [
+            {
+              "start": 0,
+              "end": 4.6,
+              "label": "Wide + cheque",
+              "kind": "interview"
+            },
+            {
+              "start": 4.6,
+              "end": 8.8,
+              "label": "Side",
+              "kind": "interview"
+            },
+            {
+              "start": 8.8,
+              "end": 10.72,
+              "label": "Name card",
+              "kind": "graphics"
+            },
+            {
+              "start": 10.72,
+              "end": 19.8,
+              "label": "His photos on paper",
+              "kind": "archive",
+              "note": "Barrister's wig, a costume drama, an office, a purple hoodie."
+            },
+            {
+              "start": 19.8,
+              "end": 22.24,
+              "label": "Typed line",
+              "kind": "graphics"
+            },
+            {
+              "start": 22.24,
+              "end": 34.0,
+              "label": "Wide + flags",
+              "kind": "interview"
+            },
+            {
+              "start": 34.0,
+              "end": 37.6,
+              "label": "Friends",
+              "kind": "archive"
+            },
+            {
+              "start": 37.6,
+              "end": 40.4,
+              "label": "Crowd",
+              "kind": "b-roll"
+            },
+            {
+              "start": 40.4,
+              "end": 47.36,
+              "label": "Side",
+              "kind": "interview"
+            },
+            {
+              "start": 47.36,
+              "end": 53.4,
+              "label": "Wide",
+              "kind": "interview"
+            },
+            {
+              "start": 53.4,
+              "end": 59.12,
+              "label": "Saath on a phone",
+              "kind": "screen"
+            },
+            {
+              "start": 59.12,
+              "end": 61.92,
+              "label": "Wide",
+              "kind": "interview"
+            },
+            {
+              "start": 61.92,
+              "end": 72.8,
+              "label": "Side",
+              "kind": "interview"
+            },
+            {
+              "start": 72.8,
+              "end": 80.24,
+              "label": "Wide",
+              "kind": "interview"
+            },
+            {
+              "start": 80.24,
+              "end": 85.64,
+              "label": "Side + swatches",
+              "kind": "interview"
+            },
+            {
+              "start": 85.64,
+              "end": 91.84,
+              "label": "Wide",
+              "kind": "interview"
+            },
+            {
+              "start": 91.84,
+              "end": 94.84,
+              "label": "Side",
+              "kind": "interview"
+            },
+            {
+              "start": 94.84,
+              "end": 100.76,
+              "label": "Wordmark, card",
+              "kind": "screen"
+            },
+            {
+              "start": 100.76,
+              "end": 112.64,
+              "label": "Projects on paper",
+              "kind": "archive",
+              "note": "Football club, craftswoman, a portrait, a map with coins."
+            },
+            {
+              "start": 112.64,
+              "end": 114.44,
+              "label": "Tight",
+              "kind": "interview"
+            },
+            {
+              "start": 114.44,
+              "end": 119.6,
+              "label": "Academy photos",
+              "kind": "archive"
+            },
+            {
+              "start": 119.6,
+              "end": 124.72,
+              "label": "Wide",
+              "kind": "interview"
+            },
+            {
+              "start": 124.72,
+              "end": 126.04,
+              "label": "Tight",
+              "kind": "interview"
+            },
+            {
+              "start": 126.04,
+              "end": 129.56,
+              "label": "Wide",
+              "kind": "interview"
+            },
+            {
+              "start": 129.56,
+              "end": 131.52,
+              "label": "Group",
+              "kind": "archive"
+            },
+            {
+              "start": 131.52,
+              "end": 137.56,
+              "label": "Wide",
+              "kind": "interview"
+            },
+            {
+              "start": 137.56,
+              "end": 144.0,
+              "label": "End card",
+              "kind": "title"
+            }
+          ]
+        }
+      ]
+    },
+    "aspects": [
+      {
+        "id": "story",
+        "title": "A refusal up front, the product as the hinge",
+        "paragraphs": [
+          "The film opens on the most surprising fact it has: at 23 he was offered a quarter of a million and said no. It does not explain the refusal. The narrator lists his CV (law, an HBO show, Monzo, the money) and ends on 'he was working on the wrong thing', which raises the question the rest of the film answers. What the right thing is unfolds from there: an identity split between two homes, a friend's story about pooled community funds in Halifax, and a fund for South Asia.",
+          "Lovable comes in as an obstacle story, told with concrete detail. They had spent five months on other tools, were a day or two from launch, and could not change a button or the amount people could contribute. Then 'I just completely ramble', and 24 hours later they were live. That beat takes about fifteen seconds of a two-and-a-half-minute film. Everything after it is about what the fund did, ending on a football academy he has never visited and a line about five pounds and thousands of people. The product is the hinge in the story, not the subject."
+        ],
+        "moments": [
+          {
+            "t": 3,
+            "text": "The hook is a number, shown as a cheque before it is spoken."
+          },
+          {
+            "t": 21,
+            "text": "'He was working on the wrong thing' poses the question the film answers."
+          },
+          {
+            "t": 64,
+            "text": "The obstacle in plain terms: a button they could not change."
+          },
+          {
+            "t": 119,
+            "text": "The payoff is a team photo, not a metric."
+          }
+        ]
+      },
+      {
+        "id": "voices",
+        "title": "He gives the feeling, the narrator gives the facts",
+        "paragraphs": [
+          "There are two speakers, and they divide the work cleanly. Zain speaks on camera in the first person: the hook, what it felt like to be between two identities, the frustration, the moment it worked, what it meant to see the academy. The narrator handles whatever would sound like boasting or a brochure from Zain's own mouth: his CV, the money he turned down, Habeeb's introduction, the name Saath, how the fund works and what it has paid for. Each narrator passage is short (five to eighteen seconds) and hands straight back to him.",
+          "The two voices live in different pictures and different type. Zain is always in the studio, and every word he says is captioned as he says it, in bold white sans with a serif for emphasis. The narrator is always over paper and is captioned only twice, the name card and 'he was working on the wrong thing', in gold capitals. Zain's voice leaves the studio only twice, both times late: over the photographs of the academy ('a shirt which had a logo on it') and over a crowded group photo ('thousands of people together'). By then the story has reached the people it is about, so his voice can run over them.",
+          "Lines are matched to pictures noun by noun. 'Studying law' lands on a photo of him in a barrister's wig, 'an HBO show' on a costume-drama still, 'Monzo' on an office snapshot, 'these are the colors' on swatches popping out of his hand. Little is said that is not also seen."
+        ],
+        "moments": [
+          {
+            "t": 9,
+            "text": "The narrator takes over with a name card typed on paper."
+          },
+          {
+            "t": 11,
+            "text": "'studying law' over the wig and gown."
+          },
+          {
+            "t": 115,
+            "text": "His voice over the academy photographs: the first time it leaves the studio."
+          },
+          {
+            "t": 130,
+            "text": "'thousands of people together' over a crowd."
+          }
+        ]
+      },
+      {
+        "id": "frames",
+        "title": "Captions that live in the set",
+        "paragraphs": [
+          "The studio is designed to hold type. The wide is locked off with Zain small in the center on a red rug, and dark wall on both sides of him. The captions go into that wall, building up a word or two at a time beside his head or along the sideboard, often splitting a sentence so its halves flank him: 'you are cheering for England in the world cup' on one side, 'but then at home you're eating biryani' on the other. In the side angle he sits at right looking left, and single words float into the empty left of frame one at a time.",
+          "Type is used as tone of voice. The base layer is small bold sans, and a handful of words switch to a larger serif: 'no' in italic, 'we thought you were insane', 'let's build it.', 'that was mindblowing.', and the three nouns of the closing thesis, 'money', 'resources', 'network'. You could rebuild the emotional shape of the interview from the serif words alone.",
+          "The cutting alternates wide and side angle, often holding ten seconds or more (the longest take is almost twelve), so the captions have room to play out. The set is warm and saturated (red rug, lamps, a carved cabinet), and Zain's cream shirt is the same color as the narrator's paper, which ties the two worlds together without anyone noticing."
+        ],
+        "moments": [
+          {
+            "t": 29,
+            "text": "The two halves of a sentence placed on either side of him."
+          },
+          {
+            "t": 44,
+            "text": "In the side angle, one word at a time in the empty left of frame."
+          },
+          {
+            "t": 8,
+            "text": "The large serif for 'we thought you were insane'."
+          },
+          {
+            "t": 133,
+            "text": "'resources' in serif: the thesis nouns get the emphasis type."
+          }
+        ]
+      },
+      {
+        "id": "world",
+        "title": "Everything printed on the same paper",
+        "paragraphs": [
+          "The narrator's world is a single sheet of creased cream paper. His photographs (the wig, the drama still, the office, the friends, the projects) are tinted sepia and bloom out of it like ink spreading through the fibers, with ragged edges and paper showing at the corners. Nothing cuts in cleanly. That one treatment makes a pile of phone snapshots, press stills and event photos look like one family album.",
+          "The palette comes from the product being built. The Saath app is cream and gold with a terracotta accent, and the film's paper, its gold capitals and its terracotta 'How it Works' card are those same colors. When the phone appears it seems to belong to the world rather than interrupt it. The app is shown as objects: a phone propped against a warm wall, a wordmark, a card laid on the page. Its own language helps: membership is a 'voting ticket', the confirmation screen is headed 'Saath Express' and says 'Welcome aboard!'.",
+          "Small details carry the theme of belonging to more than one place. The wordmark changes from Latin letters to Gurmukhi on the phone and from Telugu to Latin on the paper, and the football shirts carry the name in Devanagari. The card says 'Join with £5/month', and Zain's closing line begins 'if you have five pounds alone'. Even the end card stays in the world, built from cut-out paper labels on brown paper."
+        ],
+        "moments": [
+          {
+            "t": 12,
+            "text": "A still blooming into the paper like an ink stain."
+          },
+          {
+            "t": 53,
+            "text": "The app's cream and gold, already the film's palette."
+          },
+          {
+            "t": 56,
+            "text": "The wordmark pushed to full frame, just before it changes script."
+          },
+          {
+            "t": 99,
+            "text": "'Join with £5/month', which the closing line echoes."
+          },
+          {
+            "t": 141,
+            "text": "The end card as cut-out labels on paper."
+          }
+        ]
+      },
+      {
+        "id": "sound",
+        "title": "A bed with a few placed accents",
+        "paragraphs": [
+          "Music runs under almost the whole film, sitting roughly 11 to 19 dB under the voice for most of it. There is no music credit. The stems give a tempo near 178 BPM by estimate, which may be double the felt pulse, and the cuts do not follow it: 12 of 34 cuts land near a beat, about what chance would give. The music is a bed, not a metronome.",
+          "The accents are placed on story beats, not on the beat. A riser peaks as 'no' appears at about 5 s. The music drops out for about a second and a half under 'he was working on the wrong thing' and comes back lighter when the studio returns. Low swells mark several cuts into the paper world: the instant photo at 34 s, the phone at 53.4 and the screen close at 55.7, where the music comes up to about 5 dB under the voice. The biggest move is a riser from about 85.5 s that breaks into a long low boom just as Zain says 'everything I had over here in my head'. It holds through 'exactly what popped up on the screen' and gives way to the ordinary bed on the cut to '24 hours later'.",
+          "Near the end three low hits fall roughly under 'money', 'resources' and 'network', the words set in serif, so sound and type stress the same words. Under the end card the top end of the music falls away and it plays out quietly."
+        ],
+        "moments": [
+          {
+            "t": 5,
+            "text": "A riser peaks with the italic 'no'."
+          },
+          {
+            "t": 21,
+            "text": "The music drops out under 'the wrong thing'."
+          },
+          {
+            "t": 88,
+            "text": "The low boom under 'everything I had over here in my head'."
+          },
+          {
+            "t": 133,
+            "text": "Hits under the serif nouns of the thesis."
+          }
+        ]
+      },
+      {
+        "id": "trust",
+        "title": "Specifics and real photographs",
+        "paragraphs": [
+          "The film earns belief with details a script would not invent. The obstacle is not 'it was hard' but a button they could not change and a contribution amount they could not edit, a day or two from launch. The numbers are small and concrete: 23 years old, five months, 24 hours, five pounds. Zain's speech is left as spoken, with 'it was about like a day or two away', 'we should, let's try' and 'I just completely ramble', and his hands move the whole time.",
+          "The pictures are personal and plainly real: him in a barrister's wig, an office snapshot, an instant photo of two friends, a free kick on a dusty pitch, a team holding up a ball. The film never shows a stock image of 'impact'. Its strongest proof is a match between word and picture. He says he saw 'a shirt which had a logo on it', and the film shows three players from behind with Saath across their shirts.",
+          "The film also holds back on the product. Lovable is named once by Zain and appears on the end card, and the film shows no interface or generated screen. Keeping the sponsor small is part of why the story feels like his."
+        ],
+        "moments": [
+          {
+            "t": 64,
+            "text": "A specific obstacle, told in one long take."
+          },
+          {
+            "t": 34,
+            "text": "An instant photo of the two friends: a keepsake, not a stock image."
+          },
+          {
+            "t": 115,
+            "text": "The academy in the kit he described, a moment after the shot of the logo on their backs."
+          }
+        ]
+      }
+    ],
+    "patterns": [
+      {
+        "name": "Give each voice its own world",
+        "text": "Put the subject in one setting and the narrator in another, with different type for each. The viewer always knows who is speaking and which kind of line it is: feeling or fact.",
+        "t": 9
+      },
+      {
+        "name": "Let the narrator say the boastful parts",
+        "text": "Hand the CV, the money and the explanations to a narrator so the subject only has to speak about experience and feeling.",
+        "t": 16
+      },
+      {
+        "name": "Frame the interview to hold captions",
+        "text": "Lock off a wide with dark, empty wall on both sides of the subject, and build captions into that space as the words are spoken. Split a sentence so its halves flank the speaker.",
+        "t": 27
+      },
+      {
+        "name": "Switch typeface for the words that matter",
+        "text": "Keep one plain caption style and change to a larger serif only for emphasis. Stress the same words with a sound hit where you can.",
+        "t": 133
+      },
+      {
+        "name": "Let a small graphic act out the sentence",
+        "text": "Time a prop to the speaker's gesture (flags weighed in two palms, swatches popping out of a hand) so the graphic reads as part of what they are doing.",
+        "t": 23
+      },
+      {
+        "name": "Print every asset on one surface",
+        "text": "Put mixed photographs, screens and cards on the same paper texture with the same reveal, and take the palette from the product, so mismatched sources read as one world.",
+        "t": 99
+      },
+      {
+        "name": "Pay off a spoken detail with the exact picture",
+        "text": "When the speaker names a small concrete thing, show that thing. A logo on a shirt proves more than a statistic.",
+        "t": 114.6
+      },
+      {
+        "name": "Show the number before it is said",
+        "text": "Cut the figure in as an object (here a cheque with his name on it) while the speaker is still building up to it.",
+        "t": 3
+      }
+    ],
+    "absent": "Lovable's product is never shown: there is no interface, no prompt and no generated screen, so this is not a film to study for product demos or UI motion. There are no other interviewees and no on-location footage of Zain at the projects. The film works from one seated interview, a narrator and a folder of photographs."
+  }
+}

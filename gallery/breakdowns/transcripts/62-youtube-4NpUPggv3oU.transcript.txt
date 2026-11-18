@@ -1,0 +1,19 @@
+[00:00:00] Ideas are everywhere.
+[00:00:01] In homes, on commutes, at 2 a.m.
+[00:00:05] And most ideas die there.
+[00:00:07] Not because they weren't good enough.
+[00:00:09] Building was just too hard.
+[00:00:12] Until today.
+[00:00:14] This is Lovable.
+[00:00:16] The AI app builder that turns ideas into reality.
+[00:00:20] Anything you can imagine.
+[00:00:22] From small side projects to enterprise tools.
+[00:00:25] From consumer apps to platforms at scale.
+[00:00:27] Built in minutes.
+[00:00:30] This isn't just a mock-up or a demo.
+[00:00:32] It's a real working product with authentication,
+[00:00:36] a database, and built-in security.
+[00:00:39] Want to change something? Just tell Lovable.
+[00:00:42] Or jump in and fine-tune it yourself with visual edits.
+[00:00:46] Add powerful features from payments to AI.
+[00:00:52] Everything you need, all in one place.

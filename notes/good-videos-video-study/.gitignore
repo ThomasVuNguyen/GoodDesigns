@@ -6,3 +6,5 @@
 /*.html
 __pycache__/
 /thumbs/
+/whisper/
+/analysis/

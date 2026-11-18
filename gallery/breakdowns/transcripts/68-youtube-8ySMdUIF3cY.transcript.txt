@@ -1,0 +1,236 @@
+[00:00:13] The Raptor engine, in my opinion, is one of the most impressive feats of engineering that's happened at SpaceX and maybe in the world.
+[00:00:23] But it is a complex device.
+[00:00:28] And with complexity, there come many, many ways for things to go wrong.
+[00:00:36] And so relying on this engine to get us there for that final 1% of a historic return
+[00:00:43] to launch site mission is pretty scary.
+[00:00:52] T plus one minute, maintaining 33 engines.
+[00:01:04] Six engines.
+[00:01:07] Stage separation.
+[00:01:10] 31 engines for boostback.
+[00:01:21] On Anomaly 2, acknowledging Engine 6.
+[00:01:33] On Raptor 2, for awareness, it appears the E6 took an ORCU controller reset, which is
+[00:01:38] what drove the shutdown.
+[00:01:40] And on Prop 2, let's take a look at all of our systems, make sure we're good to go for
+[00:01:43] orbit here.
+[00:01:48] On Anomaly 2, with E6 shut down, we are not committing to orbit.
+[00:02:17] The risks involved with our first orbital flight are largely centered around the demisability
+[00:02:22] of the ship.
+[00:02:26] We have a lot we got to get right to do this, especially when it comes to sustaining a healthy
+[00:02:31] vehicle that can get out of orbit late in missions.
+[00:02:35] In the space world, you either have rockets or you have spacecraft.
+[00:02:40] Rockets are designed as the transportation system that gets you up.
+[00:02:45] Spacecraft are things that live in orbit for a long time.
+[00:02:48] We're trying to make something that's a rocket, but that can act like a spacecraft.
+[00:02:59] This is a vehicle that can be in orbit for a long time,
+[00:03:03] and after that can light the Raptor engines
+[00:03:05] and come safely out of orbit and survive.
+[00:03:13] This is one of two tiles that we took off of Ship 40.
+[00:03:19] The goal here is to prove for the first time ever
+[00:03:23] on a Starship vehicle that tiles can be reflown.
+[00:03:31] If you asked me the day we flew 40, if we were going to fly to Australia, rip off tiles,
+[00:03:38] and then refly them on 41, I would have bet you like a year's salary that wasn't going to happen.
+[00:03:45] To be able to hold the tile that has actually flown and come home, it's the beginning of that
+[00:03:51] next chapter.
+[00:04:28] I'd say there's lots of anticipation for today.
+[00:04:30] This has been the buildup for a long time.
+[00:04:32] This is our first orbital mission, so first big objective here is we're delivering useful
+[00:04:36] payloads to orbit, so these will be functional Starlinks that will actually serve the constellation.
+[00:04:40] Really the whole orbital test flight campaign has been building up to this.
+[00:04:44] Go for launch.
+[00:04:46] Flight committed.
+[00:05:24] On Anomaly 2, we just got confirmation
+[00:05:26] that we are no-go for orbit with this E6 premature shutdown.
+[00:05:41] We've said it multiple times, we are only going to go to orbit
+[00:05:45] when we are extremely confident in the health of the vehicle.
+[00:05:49] It sounds like they're not committing to orbit.
+[00:05:51] Okay.
+[00:05:53] If they don't commit to orbit, do we have a plan for what we're doing?
+[00:05:56] I don't know if they will dispense the satellites.
+[00:06:01] Yeah, I don't think they do.
+[00:06:03] Oh, yeah.
+[00:06:05] And that would be the end of the show.
+[00:06:07] Got it.
+[00:06:09] Neil messaged that, yeah, the flight rule is to not proceed to orbit.
+[00:06:12] Okay.
+[00:06:14] So everything looked great until Engine 6 went out.
+[00:06:17] Everything pre-flight we had determined, let's do the conservative thing.
+[00:06:20] If the vehicle is unhealthy, do not commit to go to orbit.
+[00:06:23] And we would do a disposal into the Indian Ocean.
+[00:06:27] The moment we lost the engine, we all kind of knew
+[00:06:30] this was the end of the mission for the ship.
+[00:06:33] There's only 17 minutes in that first coast to do anything.
+[00:06:37] There's a pneumatics leak.
+[00:06:41] This is why we need more engines on the ship.
+[00:06:44] Let me do another scrub. It looks okay.
+[00:06:48] There was lots of uncertainty. We had done the conservative thing.
+[00:06:51] We had thought, like, hey, let's not proceed if anything goes wrong.
+[00:06:54] And Elon really questioned the requirements,
+[00:06:56] and asked us, is there anything actually prohibiting us from going forward?
+[00:07:00] A development program has a very different risk concept to a production program.
+[00:07:06] On launch day, we get risks from the engine team, from avionics, from the computers,
+[00:07:12] from the propulsion system, from all the plumbing on the rocket.
+[00:07:14] We get risks from the launch pad. We get risks from the tower and the catch arms.
+[00:07:18] But the goal is always to take the risk in the place where you can learn the most.
+[00:07:23] And that's the calculus that we're doing every day.
+[00:07:26] So Jake was the final go for the engine systems
+[00:07:28] and made the recommendation to Elon.
+[00:07:33] We have exec override and concurrence.
+[00:07:35] We want to go to orbit with this condition.
+[00:07:37] We would like to lift the hold.
+[00:07:40] I can weigh in here.
+[00:07:41] They're saying that they're going to likely proceed
+[00:07:43] with orbit pending a final go/no-go four minutes
+[00:07:45] before the orbital insertion burn.
+[00:07:47] Thanks, Thomas.
+[00:07:53] This is the go/no-go poll for Burn 2 to orbit. Provide your status when polled.
+[00:07:57] Stage 2.
+[00:07:58] Stage 2's go.
+[00:07:59] Raptor 2.
+[00:08:00] Raptor 2's go for orbit.
+[00:08:02] Burn 2 startup.
+[00:08:08] Early coast.
+[00:08:15] Burn 2 shutdown.
+[00:08:24] No alerts or alarms on the board.
+[00:08:34] We're in orbit.
+[00:08:44] All right.
+[00:08:47] Yeah, well, it looks good.
+[00:08:50] Now for the fun part.
+[00:09:17] Yeah, I can't say I slept a ton last night.
+[00:09:19] Just, like, really quite excited to get these satellites into orbit.
+[00:09:24] First contact.
+[00:09:25] You can't overstate how important of a milestone this is for Starship.
+[00:09:29] I mean, the team has been working on this for so long,
+[00:09:31] and this rocket is obviously going to be transformational for spaceflight,
+[00:09:35] for humanity.
+[00:09:36] All sats in contact.
+[00:09:41] Shout out to the Starship team.
+[00:09:43] Gave us a little heart attack there,
+[00:09:44] whether they were going orbital or they weren't going orbital.
+[00:09:47] But real happy they ended up getting our sats up there.
+[00:09:50] And yeah, all 26 sats connected to the network.
+[00:09:55] In Redmond and in Starbase, we're two separate teams.
+[00:09:59] But we do partner together.
+[00:10:01] And it's so exciting to collaborate and to be able to be
+[00:10:05] their payload and have a successful mission.
+[00:10:08] It's not just a test ship now, it's a true mission.
+[00:10:21] This is the thing that proves out that, yeah, this rocket has a useful purpose.
+[00:10:26] And as it starts adding satellites to the Starlink constellation, it's going to make
+[00:10:29] our network better, our service better.
+[00:10:31] And then it's going to roll that all into continuing to build the flywheel
+[00:10:34] of making Starship continuously launch, continuously be reused.
+[00:10:58] All things considered, it's been basically a spotless mission so far.
+[00:11:01] All 26 satellites deployed, and they've been successfully climbing ever since then.
+[00:11:09] At Starlink, we think fundamentally the technology is able to support on the order of half of
+[00:11:15] all the internet traffic that is on Earth today.
+[00:11:17] And so really the challenge is on us to go and deliver on that goal.
+[00:11:55] On a per satellite basis, these vehicles are basically 10 times as performance as our V2 satellites.
+[00:12:03] If you were to just swap out our entire V2 fleet with V3s,
+[00:12:07] you would have a network that was 10 times as capable.
+[00:12:10] And so once Starship gets to like a monthly cadence
+[00:12:12] with like 12 launches a year, that's essentially tying
+[00:12:15] like our best year on Starlink in terms of like network growth.
+[00:12:19] So it's really a turning point where we shift from development mode
+[00:12:23] into production mode.
+[00:12:24] Every launch from here going forward is going to generate real value.
+[00:12:41] We have like 30 minutes to make a call, like right after payload deploy.
+[00:12:47] So we had two planned landing locations for this mission, one in Chile with a nine-hour
+[00:12:52] mission and a backup landing site at Hawaii.
+[00:12:56] The reason we did two landing sites was so that if we had any issues arise,
+[00:13:00] we had outs along the way that allowed us to put the rocket down somewhere safe.
+[00:13:05] It's like 90% of the shit that we want.
+[00:13:08] What are you most worried about?
+[00:13:11] Engine shutdown is an elevated risk,
+[00:13:14] and then helium is somewhat of an elevated risk.
+[00:13:17] You know, with the settling.
+[00:13:19] And then the reentry is a higher risk.
+[00:13:23] Hawaii has a really good runway.
+[00:13:27] It's just a low risk reentry.
+[00:13:32] The real risk is are we fucking up and missing something?
+[00:13:34] Because we're not looking at the right thing right now.
+[00:13:39] So it seems like they're chatting it.
+[00:13:45] Starship's coasts are going to be quite long for a orbital stage.
+[00:13:48] It's the longest that any vehicle of its caliber and size
+[00:13:51] will ever have coasted and then tried to relight.
+[00:13:57] Yeah, one of the things that makes Starship particularly tricky
+[00:13:59] towards the long duration on orbit is the cryogenic propellants.
+[00:14:03] And over time, you have lots of heat from your environment
+[00:14:06] that basically wants to boil that propellant,
+[00:14:09] kind of like boiling water on a stove.
+[00:14:14] And so how do we keep the liquid at a happy temperature,
+[00:14:18] such that we have liquid remaining at the end of the mission
+[00:14:21] to do the deorbit and landing burn?
+[00:14:23] I agree with the decision to go to early Hawaii.
+[00:14:26] I don't think that I would gate that just on using helium in the header tanks.
+[00:14:31] Yeah, totally agree on that.
+[00:14:32] Yeah, we're just chatting it here with Mark and Jake and E.
+[00:14:41] E also wants to go to Hawaii.
+[00:14:47] Confirming we're going to commit to Hawaii,
+[00:14:48] given everything that's happened this far.
+[00:14:51] We're going to Hawaii.
+[00:14:54] We could get 99% of the way through
+[00:14:57] a historic second stage return to launch site,
+[00:14:59] but we need those Raptor engines to work.
+[00:15:02] And that's why we put so much time into testing the engines
+[00:15:05] to make sure they will work robustly.
+[00:15:44] We are at Raptor Stand Bravo.
+[00:15:50] We have two booster modules at this test position.
+[00:15:54] And so basically what we did is we took a slice of the aft end of the vehicle
+[00:15:58] and we put it right here in the bay,
+[00:16:00] and we install it just like we do on the vehicle.
+[00:16:04] And then we also test it just like we do on the vehicle.
+[00:16:10] We first started testing Raptor engines, the very first 100-ton, horizontally,
+[00:16:15] because we didn't want to build the infrastructure of a flame trench
+[00:16:18] and the cost of digging down in a flame converter on something we didn't know was going to work.
+[00:16:23] We had no idea if full-flow staged combustion was going to work.
+[00:16:26] We did cold flow after cold flow after spin primes, just trying to figure out how to light it.
+[00:16:32] Elon came to town and we lit it that evening.
+[00:16:37] And then we went from 100 ton to V1 and then V2.
+[00:16:47] And then started V3.
+[00:16:54] Raptor is a full-flow staged combustion engine. That means that basically we burn all of the
+[00:16:59] propellant and extract work from it in a turbine in each side of the engine before it goes into
+[00:17:05] the main combustion chamber and gets burned again. One of the craziest things about Raptor is just
+[00:17:09] the extreme temperature differences. In some of our test fire videos, especially McGregor,
+[00:17:14] where you can get a really good view,
+[00:17:16] you can actually see frost on the thrust chamber.
+[00:17:19] And it's a little unintuitive
+[00:17:20] because the thrust chamber is extremely hot,
+[00:17:23] half the surface temperature of the sun on the inside,
+[00:17:25] but on the outside, it's actually ice cold.
+[00:17:28] That huge temperature delta
+[00:17:30] is actually what gives us a lot of performance.
+[00:17:32] We're extracting as much energy
+[00:17:33] out of the propellants as possible.
+[00:17:35] T minus five, four, three, two, one, zero.
+[00:17:53] We want to make sure that we can get Starship out of space.
+[00:17:56] And so we are primarily focused on deorbit testing.
+[00:18:00] Everything is set so that you are testing the exact conditions that we will have in space
+[00:18:05] and that we successfully light the engine when we do our deorbit burn.
+[00:18:12] All right, ship is committed to early Hawaii contingency landing.
+[00:18:21] We've been building towards this moment for a really long time, and circ burn was a very
+[00:18:26] energizing and exciting moment because it worked and we were going to orbit, but none of that
+[00:18:31] mattered if you can't get it back. So the worst case scenario is that we'll stay in orbit.
+[00:18:37] Other vehicles are largely demisable when they come back and reenter, so they'll burn
+[00:18:40] up in the atmosphere.
+[00:18:47] Starship is obviously meant to be a reusable launch vehicle and is meant to survive atmospheric
+[00:18:52] reentry, and so it's really important that we do not leave the vehicle on orbit in the
+[00:18:56] event that it randomly reenters and comes back over land masses or populated areas.
+[00:19:02] You do all this work, stand up all these contingencies, you get everything ready so that it does work,
+[00:19:07] there's always a thought of like, what if it doesn't?
+[00:19:14] Deorbit burn startup.
+[00:19:29] Deorbit burn shutdown.
+[00:19:42] Fuck yeah.
+[00:19:45] Whoo!
+[00:19:53] We're coming home.
+[00:19:56] We did it.
+[00:20:01] SpaceX as a whole has come down
+[00:20:02] to a handful of unique decision points.
+[00:20:13] When you get your smart people in a room using all the information ahead of them to make
+[00:20:16] educated risk calls where it's go for broke, those calls are kind of the defining moments
+[00:20:21] for the company.
+[00:20:23] And in this case, it became the defining moment for Flight 14 and turning Starship into an
+[00:20:27] orbital launch vehicle.
+[00:20:33] This is a rehearsal poll for ship RTLS.
+[00:20:37] Go indicates that the vehicle would continue to return to launch site had this been an RTLS mission.
+[00:20:44] Provide your go/no-go status when polled.
+[00:20:49] Structures? Go. Aero? Aero is go.
+[00:20:53] Thank you. If this had been an RTLS mission, the vehicle would continue to return to launch site.

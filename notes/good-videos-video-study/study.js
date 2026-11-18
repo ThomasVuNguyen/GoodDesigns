@@ -142,4 +142,33 @@ if (video) {
   }, true);
   document.addEventListener('keydown', (event) => { if (event.key === 'Escape') hidePreview(); });
   window.addEventListener('resize', () => { if (currentFrame) positionPreview(currentFrame); });
+  // Craft map: a playhead that follows the film, and a note line for the selected or hovered segment.
+  const craftMap = document.querySelector('.craft-map');
+  if (craftMap) {
+    const duration = Number(craftMap.dataset.duration);
+    const lanes = craftMap.querySelector('.craft-lanes');
+    const note = craftMap.querySelector('.craft-map-note');
+    const segments = [...craftMap.querySelectorAll('.craft-seg')];
+    const describe = (seg) => {
+      note.textContent = '';
+      const head = document.createElement('strong');
+      head.textContent = `${seg.dataset.lane} · ${seg.dataset.label}`;
+      const span = document.createElement('span');
+      span.textContent = seg.dataset.span;
+      note.append(head, span);
+      if (seg.dataset.note) note.append(document.createTextNode(seg.dataset.note));
+    };
+    craftMap.addEventListener('pointerover', (event) => { const seg = event.target.closest('.craft-seg'); if (seg) describe(seg); });
+    craftMap.addEventListener('focusin', (event) => { const seg = event.target.closest('.craft-seg'); if (seg) describe(seg); });
+    const tick = () => {
+      const time = currentTime();
+      lanes.style.setProperty('--p', Math.min(1, time / duration));
+      segments.forEach((seg) => {
+        seg.classList.toggle('is-now', time > 0 && time >= Number(seg.dataset.seek) && time < Number(seg.dataset.end));
+      });
+      if (time > 0) lanes.classList.add('is-playing');
+    };
+    if (isYouTube) setInterval(tick, 500);
+    else video.addEventListener('timeupdate', tick);
+  }
 }

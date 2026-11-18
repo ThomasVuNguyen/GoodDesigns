@@ -69,11 +69,12 @@ def publish_page(item):
     page = page.replace('href="index.html#videos"', 'href="../index.html#videos"')
     page = re.sub(r'(frames/[^"<>]+)\.jpg', r'\1.webp', page)
     (DEST / f"{name}.html").write_text(page)
-    motion = STUDY / "frames" / name / "motion.md"
-    if motion.exists():
-        target = DEST / "frames" / name / "motion.md"
-        target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_text(motion.read_text().replace(".jpg`", ".webp`"))
+    for notes in ("motion.md", "craft.md"):
+        source = STUDY / "frames" / name / notes
+        if source.exists():
+            target = DEST / "frames" / name / notes
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_text(source.read_text().replace(".jpg`", ".webp`"))
     shutil.copy2(STUDY / "thumbs" / f"{item['slug']}.jpg", DEST / "thumbs" / f"{item['slug']}.jpg")
     transcript = item.get("transcript")
     if transcript:

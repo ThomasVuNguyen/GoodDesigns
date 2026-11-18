@@ -1,0 +1,376 @@
+{
+  "note": "A Lovable founder story about Isabel, Andreas and Eric, three Swedish students who say they dropped out to build Klar, an AI learning tool, and reached €130,000 ARR in its first month. Interviews in one warehouse set are cut against a scrapbook of polaroids, archive engravings and highlighted documents on black paper, and most of the speech is typeset on screen word by word. The breakdown follows how the captions become the graphics system, how a 1088 date and a university letter carry the argument, and how the music steps out for the personal lines.",
+  "transcript_kind": "Local speech recognition (there are no YouTube captions), corrected to the on-screen captions and names",
+  "shot_notes": {
+    "0": "Cold open on a black-and-white low-angle portrait of the three founders. It starts as a small print on white and grows to fill the frame in under a second. The low angle makes them stand tall; black and white makes it read as a record.",
+    "4": "A white chat card, 'Hello, I'm Klar', blooms in over the portrait with the mascot icon at its head. The only real product screen in the film, held for under a second.",
+    "6": "Eric in the wide: a director's chair on a worn rug in a warehouse set of peeling walls, tall windows, candles and plants. His words appear one at a time in the air beside him.",
+    "8": "'€130,000' lands in heavy bold under the small caption line, about three times the size of the words around it. The number is the headline.",
+    "10": "'ARR' joins the number. Locked-off wide, so the only thing moving is the type.",
+    "11": "Cut to the tight side angle on Eric, background soft. Each founder has a wide and a close, and the close is saved for the line that matters.",
+    "14": "Isabel in the side angle as a letter headed 'THE UNIVERSITY' slides up into the bottom right of her shot.",
+    "16": "'Please be advised that this conduct must cease immediately' highlighted in yellow. The letterhead is generic, so the university is never named.",
+    "18": "The scrapbook card: black paper with a faint grid, a caption in small capitals at left and a polaroid held between a pair of parentheses at right.",
+    "19": "'THIS IS ISABEL, ANDREAS, AND ERIC.' Each name brings its own polaroid onto the stack, so faces match names: Andreas in the dark jacket, Eric in the green fleece.",
+    "21": "The caption stops at 'AND IN THE LAST 6 MONTHS THEY' while the photos keep changing: a party snapshot, a crowd at night.",
+    "22": "Snapshots of a cramped room of bunks, posters and laptops. Their orange date stamps read 1998 and 2005, so these stand in for the 25 m² dorm rather than record it.",
+    "24": "The three of them at a lookout with the Golden Gate Bridge behind, a snapshot from their own camera roll.",
+    "26": "Top-down desk on black: a coffee cup, a notebook, a booklet titled 'METODER'. 'ALL ON A MISSION TO' builds across the middle.",
+    "27": "'REINVENT' is stamped into the clean sans line in a rough typewriter face. The one word that breaks the type system is the word about breaking things.",
+    "29": "Andreas in the wide, the words of his question scattered at different heights around him, as if he is thinking out loud.",
+    "33": "Close on Andreas: 'I don't think so.' in bold, with '(personally)' tucked underneath in small italic. The aside is set as an aside.",
+    "34": "'1088' alone in a warm italic serif on the black paper, with a soft drop shadow.",
+    "37": "Archive pieces gather around the year: a medieval illumination of a lecture, engravings of halls and libraries, painted portraits at the edges.",
+    "40": "The year now reads '2026', and colour photographs of brick arcades and a tower pile onto the same table. Nothing old is removed, which is the point.",
+    "42": "A web page, 'College Tuition Inflation Rate', printed and laid on the table like paper, one line highlighted in yellow.",
+    "45": "'Universities have 40% dropout rate' highlighted on a second page. Statistics arrive as documents with a marker stroke, never as charts.",
+    "47": "Isabel close: 'I have ADHD', with 'ADHD' in the serif. The music has just cut out.",
+    "52": "Isabel in the wide, her sentence stacking up beside her: 'I managed school, I did get the good grades, but it was very tough.'",
+    "55": "Eric close, 'everyone learns differently' set large on both sides of him.",
+    "57": "A rough-edged block of light, like torn paper lit from behind, splits into three squares on a dark field.",
+    "59": "The squares have turned into diamonds, and the left one is starting to round off.",
+    "61": "Three shapes, all different: a circle, a diamond and a four-leaf clover, under the small caption 'It's a system that needs to be personalized.'",
+    "64": "Full-frame type, 'So, instead of forcing', in a heavy grotesk, with 'forcing' in a pixel-edged italic serif.",
+    "65": "Old black-and-white school photographs slide in over the lines as 'the old fashioned way...' completes.",
+    "68": "'they left their lives behind and bet everything on Klar', with Klar's mascot, a cream cloud with star eyes, peeking up from the bottom right corner.",
+    "69": "Behind the scenes: Andreas framed between two cinema cameras and their monitors, a boom mic above him. The film shows its own set.",
+    "71": "Close on Andreas, 'in your phone or your laptop or whatever' set small beside his face.",
+    "74": "Eric in the wide; 'FLASH CARDS' with a small icon appears where his hand points.",
+    "78": "Six features placed around him like a menu: explainer, summary, test, image, video, flash cards.",
+    "81": "Close on Eric: 'it can do that and it always knows where you're at.'",
+    "84": "'thousands of', then a cut-out crowd of students from an old class photograph, then 'were waiting to learn differently'. The picture stands in for the word.",
+    "87": "'it was time to turn', then a laptop full of code, then 'from an idea into reality'. The product's name is replaced by a picture of it being built.",
+    "89": "Isabel seen past a soft dark foreground shape that looks like a crew member holding a monitor. Her words stack one per line in a narrow column.",
+    "94": "One word at a time at the left of the wide: here 'Lovable' as its logo, the sponsor's only appearance before the end card.",
+    "99": "'it completely changed everything for me', with 'everything' in the italic serif.",
+    "100": "Isabel close, one arm raised high: 'we now have a partnership'.",
+    "108": "'35,000' in heavy bold with 'students' small beneath it.",
+    "110": "Andreas close, arms spread: 'we're gonna be around all of'.",
+    "113": "An antique map of Scandinavia in a rounded frame with a soft vignette, like a projected lantern slide.",
+    "117": "Punched in on Spain, Madrid marked. Every place he names is its own slide.",
+    "120": "Andreas in the wide with no captions at all. From 1:57 until his laugh at 2:09 the film runs as a plain interview.",
+    "128": "Close on Andreas laughing; the captions come back one word at a time.",
+    "129": "'that feels good', with 'good' in the italic serif.",
+    "130": "'and' alone, large, at the left of an empty black card: the narrator takes the story back.",
+    "133": "The university letter returns under 'the same university that tried to stop them', its warning still highlighted.",
+    "134": "The letter now reads 'Actually, we take that back. Klar is exactly what the future of education needs.'",
+    "136": "The frame travels along a wall of archive images: engravings of lecture halls and old library photographs.",
+    "137": "The wall ends on the colour arcade photographs from the 2026 table, just before the founders' own snapshots drop in.",
+    "138": "The opening portrait again, now in colour, with 'all it took was three friends to change it' in small italic across it.",
+    "140": "The series title builds from cream labels on black: 'Closing', 'The', 'Gap'.",
+    "141": "End card: 'Closing The Gap' stacked as offset labels over a Lovable label."
+  },
+  "motion_intro": "The movement is almost all typographic. Most spoken lines appear on screen word by word as they are said, placed in the space beside the speaker, sized up for numbers and switched to an italic serif for the word that carries feeling. Between the interviews, the graphics live on one black paper surface: polaroids stack inside parentheses, archive images gather around a date, documents slide up with a highlighted line, and pictures take the place of words in a sentence. The sequences below sample those moves, the stop-motion light shapes, the lantern-slide maps and the closing title.",
+  "motion": [
+    {
+      "id": "print-to-portrait",
+      "start": 0.0,
+      "end": 5.1,
+      "fps": 6,
+      "title": "A print grows into the portrait, then the product blooms over it",
+      "tags": ["scale up", "black and white", "glow", "product card"],
+      "text": "The film opens on the portrait as a small print on white. In about 0.75 s it grows until the white border is gone and the photograph fills the frame, then it holds with a slow push. At 4.2 a white chat card, 'Hello, I'm Klar', blooms over the top half, glowing and a little overexposed, and at 5.1 the film cuts to the first interview. The founders and the product are introduced in one picture before anyone speaks on camera."
+    },
+    {
+      "id": "number-lands",
+      "trail": true,
+      "start": 5.1,
+      "end": 10.9,
+      "fps": 5,
+      "title": "Captions build word by word, and the number lands big",
+      "tags": ["kinetic captions", "type scale", "locked-off"],
+      "text": "Over a locked-off wide, Eric's words appear one at a time in small white sans beside him: 'the first month we', then 'launched, we reached'. At about 8.2 '€130,000' pops in below at roughly three times the size, and at 10.2 'ARR' joins it. Nothing else moves. Scale does the emphasis that a voice actor would do with stress."
+    },
+    {
+      "id": "names-and-polaroids",
+      "trail": true,
+      "start": 17.7,
+      "end": 24.5,
+      "fps": 5,
+      "title": "Each name brings its polaroid",
+      "tags": ["type-on", "stack", "parentheses", "photo swap"],
+      "text": "The caption types itself in small capitals at left while polaroids drop onto a stack held between two parentheses at right. A new photo lands with each name: Isabel at about 18.8, Andreas at 19.2, Eric at 19.6. From about 20.6 the caption holds on 'AND IN THE LAST 6 MONTHS THEY' and the photos swap every half second to a second, a party, two dorm rooms, then the three of them at the Golden Gate at about 23.9. The sentence pauses so the pictures can finish it."
+    },
+    {
+      "id": "reinvent-stamp",
+      "trail": true,
+      "start": 25.2,
+      "end": 27.9,
+      "fps": 8,
+      "title": "'REINVENT' is stamped into the line",
+      "tags": ["top-down", "type-on", "typeface swap", "flicker"],
+      "text": "On the still top-down desk the line builds a word per beat: 'ALL', 'ON', 'A MISSION', 'TO'. At about 26.4 'REINVENT' arrives in a rough typewriter face, flickering for a couple of frames as if inked, while every other word stays in clean sans. 'HOW PEOPLE LEARN.' completes by 27.3 and the film cuts to Andreas."
+    },
+    {
+      "id": "1088-to-2026",
+      "start": 33.8,
+      "end": 41.8,
+      "fps": 3,
+      "title": "Archive gathers around a year, and the year changes",
+      "tags": ["collage", "pop on", "number flip", "archive"],
+      "text": "'1088' fades up alone at about 33.9. From 34.8 archive images pop on around it one at a time, each a flat card with a soft shadow; at about 37.4 larger painted portraits arrive at the edges. Near 39.0 the number breaks up for a frame or two and reads '2026', and colour photographs of arcades pile on from 39.7 until the table is crowded. The old images never leave, so the picture itself says the system has not changed."
+    },
+    {
+      "id": "light-shapes",
+      "start": 55.6,
+      "end": 62.8,
+      "fps": 3,
+      "title": "One block of light becomes three different shapes",
+      "tags": ["stop motion", "split", "rotate", "morph"],
+      "text": "A rough-edged block of light grows from small to wide between 55.8 and 56.6, then splits into three squares. By about 57.8 the squares have turned 45 degrees into diamonds. From about 59.3 the left one rounds into a circle and the right one opens into a four-leaf clover, finished by about 60.6. The edges jitter and breathe the whole time, as if each frame were made by hand. 'Personalized' is shown as three learners who started the same and ended different."
+    },
+    {
+      "id": "type-builds",
+      "start": 62.8,
+      "end": 68.8,
+      "fps": 4,
+      "title": "Full-frame type, photos slipped between the lines",
+      "tags": ["kinetic type", "serif italic", "photo slide", "mascot"],
+      "text": "'So,' appears at top left and the sentence builds word by word as the narrator speaks it, with 'forcing' and 'old fashioned' in a pixel-edged italic serif. From about 64.2 black-and-white school photographs slide in between and over the lines. A hard cut at about 66 starts a fresh page, 'they left their lives behind and bet everything on Klar', and at about 67.3 the Klar mascot rises into the bottom right corner, looking up at the words."
+    },
+    {
+      "id": "feature-labels",
+      "trail": true,
+      "start": 73.0,
+      "end": 79.6,
+      "fps": 3,
+      "title": "Feature labels pop on as he names them",
+      "tags": ["callouts", "icons", "accumulate", "locked-off"],
+      "text": "In the locked-off wide, each feature Eric names appears as a white icon and uppercase label in the empty space around him: FLASH CARDS at about 73.3, VIDEO 74.7, IMAGE 75.5, EXPLAINER 76.5, SUMMARY 77.3, TEST 78.1. Each pops on in a frame or two near where his hands point, and none of them leave, so the list adds up to a menu by the end of his sentence."
+    },
+    {
+      "id": "rebus",
+      "trail": true,
+      "start": 82.3,
+      "end": 88.2,
+      "fps": 4,
+      "title": "Pictures take the place of words",
+      "tags": ["rebus", "cut-out", "inline image", "caption"],
+      "text": "'thousands' sits small at the center of a black card, then 'of', and at about 83.0 a cut-out crowd of students from an old photograph rises into the gap where the word 'students' would go. The line completes, 'were waiting to learn differently', and clears. 'it was time to turn' builds, a laptop full of code tilts into the next gap at about 86.0, and 'from an idea into reality' finishes the line. The narrator says 'students' and 'Klar'; the screen shows them."
+    },
+    {
+      "id": "lantern-maps",
+      "start": 112.0,
+      "end": 117.4,
+      "fps": 4,
+      "title": "One map slide for each place he names",
+      "tags": ["hard cut", "punch in", "vintage frame"],
+      "text": "From Andreas's raised hands the film cuts at about 112.2 to an antique map of Scandinavia in a rounded frame with a vignette, held about two seconds. It cuts to North America at 114.5, Europe at about 115.7 and Iberia at 116.2, then punches in on Spain around 116.7. Each cut lands on the place he names, so his list of markets becomes a slide show."
+    },
+    {
+      "id": "letter-turns",
+      "start": 129.9,
+      "end": 134.6,
+      "fps": 5,
+      "title": "The warning letter comes back with new words",
+      "tags": ["slide up", "squash", "callback", "reversal"],
+      "text": "'and' lands large at left on black, then 'and now', then the narrator's line small at center. The university letter slides up from the bottom at about 130.9 and settles beneath the caption, its warning still highlighted. At about 133.3 it squashes down to its letterhead strip and grows back with new text: 'Actually, we take that back.' A medieval illumination pops on at its corner, tying it to the 1088 table."
+    },
+    {
+      "id": "archive-wall",
+      "start": 134.0,
+      "end": 138.2,
+      "fps": 6,
+      "title": "A sideways move along a wall of archive images",
+      "tags": ["pan", "collage", "parallax", "bookend"],
+      "text": "The frame starts to travel right. The caption's words drift apart and slide off to the left, the letter leaves, and engravings and old library photographs pass at slightly different speeds before the colour arcades from the 2026 table go by. At about 137.2 a small italic line sits alone, the founders' own snapshots drop in, and at 138.16 it cuts to the colour version of the opening portrait."
+    },
+    {
+      "id": "title-labels",
+      "start": 139.0,
+      "end": 141.5,
+      "fps": 10,
+      "title": "The series title assembles from labels",
+      "tags": ["cursor", "labels", "flip", "end card"],
+      "text": "A thin cursor line blinks at center. At about 139.3 'The' appears on a cream label, then 'Closing' above and to the left. A Lovable label arrives upside down at about 139.7, 'Gap' slots in between at 140.2, and the Lovable label flips the right way up at about 140.7. It reads like a label maker printing the title one strip at a time."
+    }
+  ],
+  "craft": {
+    "lede": [
+      "A two-and-a-half-minute founder story for Lovable about three students who say their university tried to stop them, and who built Klar, an AI learning tool, anyway. The interviews are plain: three people in director's chairs in one warehouse set. Everything around them is built from typography and paper: most of what they say is set on screen as they say it, and the narrator's lines play out on a black paper surface of polaroids, archive engravings, highlighted documents and antique maps.",
+      "What is worth learning is how much warmth a caption system can carry. Numbers are set big, feelings are set in an italic serif, an aside sits in parentheses, and pictures take the place of words. Two story props carry the argument from start to end: a year, 1088, that becomes 2026 without anything changing, and a warning letter from the university that comes back at the end with new words."
+    ],
+    "map": {
+      "lanes": [
+        {
+          "id": "story",
+          "segments": [
+            {"start": 0, "end": 17.76, "label": "Hook", "note": "Nearly banned, €130,000 ARR in the first month, called in by the university."},
+            {"start": 17.76, "end": 27.92, "label": "Meet the three", "note": "Names on polaroids, six months in snapshots, 'a mission to reinvent how people learn'."},
+            {"start": 27.92, "end": 47.24, "label": "A 1,000-year-old problem", "note": "Andreas's question, 1088 to 2026, tuition and a 40% dropout rate."},
+            {"start": 47.24, "end": 62.8, "label": "Why it's personal", "note": "Isabel's ADHD; 'everyone learns differently'."},
+            {"start": 62.8, "end": 68.84, "label": "The leap", "note": "'They left their lives behind and bet everything on Klar.'"},
+            {"start": 68.84, "end": 82.3, "label": "What Klar is", "note": "A private teacher in your phone; the list of formats."},
+            {"start": 82.3, "end": 99.64, "label": "Building it", "note": "Thousands waiting; Lovable 'changed everything'."},
+            {"start": 99.64, "end": 117.44, "label": "Traction", "note": "A partnership covering 35,000 students; Sweden, the US, Spain."},
+            {"start": 117.44, "end": 129.9, "label": "The thank-you", "note": "Students write to say they passed because of Klar."},
+            {"start": 129.9, "end": 138.16, "label": "The reversal", "note": "The university that tried to stop them asks to work with them."},
+            {"start": 138.16, "end": 141.6, "label": "Bookend", "note": "The opening portrait in colour; 'Closing The Gap'."}
+          ]
+        },
+        {
+          "id": "voices",
+          "segments": [
+            {"start": 0, "end": 5.04, "label": "Narrator: the hook", "kind": "narrator", "note": "'These three students in Sweden almost got banned from their university...'"},
+            {"start": 5.12, "end": 12.92, "label": "Eric: €130K", "kind": "interview"},
+            {"start": 12.92, "end": 17.6, "label": "Isabel: called in", "kind": "interview", "note": "The letter graphic slides into her shot."},
+            {"start": 17.76, "end": 27.56, "label": "Narrator: this is…", "kind": "narrator"},
+            {"start": 27.56, "end": 33.9, "label": "Andreas: a question", "kind": "interview"},
+            {"start": 33.9, "end": 46.92, "label": "Narrator: 1088", "kind": "narrator"},
+            {"start": 47.2, "end": 53.66, "label": "Isabel: ADHD", "kind": "interview"},
+            {"start": 53.92, "end": 55.6, "label": "Eric", "kind": "interview"},
+            {"start": 55.6, "end": 62.6, "label": "…personalized", "kind": "interview-vo", "note": "The line continues over the light shapes."},
+            {"start": 62.8, "end": 68.7, "label": "Narrator: the leap", "kind": "narrator"},
+            {"start": 68.84, "end": 72.7, "label": "Andreas", "kind": "interview"},
+            {"start": 72.8, "end": 82.2, "label": "Eric: features", "kind": "interview"},
+            {"start": 82.3, "end": 87.9, "label": "Narrator", "kind": "narrator"},
+            {"start": 88.1, "end": 109.3, "label": "Isabel: Lovable, 35,000", "kind": "interview"},
+            {"start": 109.3, "end": 112.24, "label": "Andreas", "kind": "interview"},
+            {"start": 112.24, "end": 117.2, "label": "Andreas over maps", "kind": "interview-vo"},
+            {"start": 117.36, "end": 130.2, "label": "Andreas: thank-you", "kind": "interview", "note": "Uncaptioned until his laugh at about 128.9."},
+            {"start": 130.36, "end": 138.84, "label": "Narrator: reversal", "kind": "narrator"},
+            {"start": 139.0, "end": 141.5, "label": "Closing The Gap", "kind": "text"}
+          ]
+        },
+        {
+          "id": "sound",
+          "segments": [
+            {"start": 0, "end": 5.1, "label": "Opening cue", "kind": "music", "note": "Bass-heavy, under the portrait; it changes on the cut to the first interview."},
+            {"start": 5.1, "end": 17.76, "label": "Pulse under the hook", "kind": "music", "note": "A low hit about every two seconds. A riser ends on the cut to the scrapbook."},
+            {"start": 17.76, "end": 29, "label": "Stabs and risers", "kind": "music", "note": "Short stabs that seem to follow the photos changing; risers end on the cuts at 25.2 and 27.9."},
+            {"start": 29, "end": 33.5, "label": "Music out", "note": "No music under Andreas's question."},
+            {"start": 33.5, "end": 47.2, "label": "History bed", "kind": "music", "note": "Re-enters as '1088' appears, swells, and stops dead just before 'I have ADHD'."},
+            {"start": 47.2, "end": 53.5, "label": "Music out", "note": "Isabel's ADHD line plays almost dry."},
+            {"start": 53.5, "end": 85.5, "label": "Rhythmic section", "kind": "music", "note": "Returns on 'everyone learns differently' and drives the type, features and rebus."},
+            {"start": 85.5, "end": 129.9, "label": "Calm sustained bed", "kind": "music", "note": "Steady and low under the traction and the thank-you; hits on the first map and on Spain."},
+            {"start": 129.9, "end": 138.7, "label": "Swell and build", "kind": "music", "note": "A big low hit on 'and now', then a rising build that stops on 'change it'."},
+            {"start": 138.7, "end": 141.6, "label": "Coda", "kind": "music"}
+          ]
+        },
+        {
+          "id": "picture",
+          "segments": [
+            {"start": 0, "end": 5.12, "label": "Portrait + Klar card", "kind": "staged"},
+            {"start": 5.12, "end": 17.76, "label": "Eric, Isabel", "kind": "interview"},
+            {"start": 17.76, "end": 25.2, "label": "Polaroids", "kind": "graphics"},
+            {"start": 25.2, "end": 27.92, "label": "Desk", "kind": "graphics"},
+            {"start": 27.92, "end": 33.9, "label": "Andreas", "kind": "interview"},
+            {"start": 33.9, "end": 41.8, "label": "1088 → 2026", "kind": "archive"},
+            {"start": 41.8, "end": 47.24, "label": "Highlighted pages", "kind": "graphics"},
+            {"start": 47.24, "end": 55.6, "label": "Isabel, Eric", "kind": "interview"},
+            {"start": 55.6, "end": 62.8, "label": "Light shapes", "kind": "graphics"},
+            {"start": 62.8, "end": 68.84, "label": "Full-frame type", "kind": "title"},
+            {"start": 68.84, "end": 70.6, "label": "Behind the scenes", "kind": "b-roll"},
+            {"start": 70.6, "end": 82.3, "label": "Andreas, Eric + labels", "kind": "interview"},
+            {"start": 82.3, "end": 88.2, "label": "Rebus captions", "kind": "graphics"},
+            {"start": 88.2, "end": 112.24, "label": "Isabel, Andreas", "kind": "interview"},
+            {"start": 112.24, "end": 117.44, "label": "Maps", "kind": "archive"},
+            {"start": 117.44, "end": 129.9, "label": "Andreas, no captions", "kind": "interview"},
+            {"start": 129.9, "end": 138.16, "label": "Letter, archive wall", "kind": "graphics"},
+            {"start": 138.16, "end": 139.0, "label": "Portrait in colour", "kind": "staged"},
+            {"start": 139.0, "end": 141.5, "label": "Title", "kind": "title"}
+          ]
+        }
+      ]
+    },
+    "aspects": [
+      {
+        "id": "story",
+        "title": "A founder story with two props",
+        "paragraphs": [
+          "The shape is the familiar one: a hook, the people, the problem, why it is personal, the leap, the product, the traction, a human payoff and a final turn. What makes it hold together in two and a half minutes is that the opening seventeen seconds already contain the ending. The narrator says they were almost banned, Eric gives the number, and Isabel says the university called them in. The viewer spends the rest of the film waiting to hear how that turned out.",
+          "Two props carry the argument. The first is a date. '1088' sits alone on the black paper, archive images gather around it, and then it becomes '2026' while the images stay where they are. The claim that the system has not changed in a thousand years is made by not moving anything. The second is the warning letter, which slides into Isabel's shot in the hook and returns at the end with the same letterhead and new words: 'Actually, we take that back.'",
+          "The film also closes where it opened. The black-and-white portrait of the three of them at the start comes back in colour for the last line, 'all it took was three friends to change it', and the archive wall from the 1088 table passes by on the way there. Apart from the title card, nothing in the ending is new; it is the opening, answered."
+        ],
+        "moments": [
+          {"t": 16, "text": "The warning letter, planted in the hook."},
+          {"t": 40, "text": "1088 has become 2026 and nothing on the table has moved."},
+          {"t": 134, "text": "The same letter, now reading 'Actually, we take that back.'"},
+          {"t": 138, "text": "The opening portrait returns in colour for the last line."}
+        ]
+      },
+      {
+        "id": "voices",
+        "title": "A narrator for the structure, founders for the feeling",
+        "paragraphs": [
+          "There are two kinds of voice. An unseen narrator speaks in the third person ('they dropped out', 'they left their lives behind') and carries everything that needs to be told quickly: the hook, the introductions, the history, the leap and the reversal. The three founders are interviewed on camera and carry the things only they can say: the number, the ADHD, the vision, the thank-you message. The narrator is never seen and never named.",
+          "The lines are cut short and handed back and forth. A founder rarely speaks for more than ten seconds before the narrator or another founder takes over, and the handoffs often finish each other's thoughts. Andreas asks whether books and lectures are the best way to learn and answers himself, 'I don't think so, personally', and the narrator picks up with 'The year is 1088'. Eric says 'everyone learns differently' and his line continues over the light shapes. The narrator's 'it was time to turn Klar from an idea into reality' hands straight to Isabel's 'I've always had these big visions'.",
+          "Each founder has a job. Eric is the numbers and the product: €130,000, the list of formats. Isabel is the personal stake and the business: the ADHD, Lovable, the partnership. Andreas is the questioner and the warmth: the opening doubt, the markets, the student who passed. In the interviews each of them sits alone; they appear together only in their snapshots and in the two portraits that bookend the film."
+        ],
+        "moments": [
+          {"t": 33, "text": "Andreas answers his own question, and the narrator takes it into history."},
+          {"t": 47, "text": "Isabel's ADHD: a line only she could say."},
+          {"t": 130, "text": "The narrator takes the story back for the reversal."}
+        ]
+      },
+      {
+        "id": "world",
+        "title": "Captions as the graphics system",
+        "paragraphs": [
+          "Most of the speech is set on screen as it is said, one word at a time, in small white sans placed in the empty space beside the speaker. That is the base layer, and the design comes from how it bends. Numbers are set three times larger: '€130,000 ARR', '35,000 students'. The word that carries feeling switches to a serif, usually italic: 'forcing', 'old fashioned', 'everything', 'good', 'ADHD'. An aside shrinks and goes into parentheses: '(personally)'. 'REINVENT' is stamped in a rough typewriter face. The layout changes with the frame, a vertical column beside Isabel, a scatter around Andreas, a single word at a time at the left of the wide, so the captions feel placed by hand rather than generated.",
+          "Off camera, everything lives on one surface: black paper with a faint grid, dust and soft light. Polaroids stack on it between a pair of parentheses, as if the photos were an aside in the sentence. Archive engravings and paintings gather on it around the year. Web pages are printed and laid on it with a yellow marker line. The university letter slides across it. Even the antique maps sit in a rounded lantern-slide frame against black. The palette stays cream type on near-black throughout, which lets the few colour photographs and the yellow highlights stand out.",
+          "Pictures can also take a word's place. 'thousands of [a cut-out crowd of students] were waiting to learn differently'; 'it was time to turn [a laptop full of code] from an idea into reality'. The narrator says the word and the screen shows the thing. Klar's own mascot, the cream cloud with star eyes from the product's welcome card, peeks into the corner of the full-frame type, so the product's character lives in the film's graphics, not just in a screenshot."
+        ],
+        "moments": [
+          {"t": 8, "text": "The number set three times the size of the caption around it."},
+          {"t": 19, "text": "Polaroids held inside parentheses, one per name."},
+          {"t": 68, "text": "Grotesk and pixel-edged italic serif, with Klar's mascot in the corner."},
+          {"t": 84, "text": "A cut-out crowd stands in for the word 'students'."},
+          {"t": 113, "text": "Antique maps as lantern slides, still on black."}
+        ]
+      },
+      {
+        "id": "frames",
+        "title": "One set, two angles, and a camera that shows itself",
+        "paragraphs": [
+          "All three interviews are shot in the same place: a director's chair on a worn rug in a warehouse with peeling painted walls, tall windows, a ladder, candles and plants. Each founder has a locked-off wide, centered and symmetrical, and a tight side angle with the background soft. The wide leaves room for the captions to sit in the air; the close is used for the short line that matters, such as 'I don't think so', 'I have ADHD' or 'everyone learns differently'.",
+          "Twice the film lets the production show. At 1:09 Andreas is framed between two cinema cameras and their monitors with a boom mic over his head, and at 1:28 Isabel is seen past a soft dark shape in the foreground that looks like a crew member holding a monitor. These shots make the set feel like a real day with real people rather than a polished ad, and they cost nothing to include.",
+          "Colour is held back as a bookend. The portrait that opens the film is black and white; the same pose closes it in colour."
+        ],
+        "moments": [
+          {"t": 6, "text": "The wide: chair, rug, warehouse, room for type."},
+          {"t": 69, "text": "Cameras and a boom mic left in the frame."},
+          {"t": 89, "text": "Isabel past what looks like a crew member's shoulder."}
+        ]
+      },
+      {
+        "id": "sound",
+        "title": "Music that steps out for the personal lines",
+        "paragraphs": [
+          "The soundtrack is a music score with no credited track, and by the stems it is built in sections that follow the story. A bass-heavy cue opens under the portrait, a pulse runs under the hook, and rising sweeps end on the cuts into the scrapbook (17.8), the desk (25.2) and Andreas's question (27.9). The tempo estimate is about 157 BPM, which may be double the felt pulse, and the cuts do not follow the beat more than chance would give.",
+          "The placement that is worth learning is where it stops. The music drops out under Andreas's question from about 29 to 33.5 seconds, comes back as '1088' appears, swells under the dropout statistic, and stops dead just before Isabel says 'I have ADHD'. Her line plays almost dry for six seconds, and the music returns only on Eric's 'everyone learns differently'. The two most personal statements in the first minute are the two places with no score.",
+          "From about 1:25 the busy rhythmic section gives way to a calm, steady bed under the building, the traction and the thank-you story, with small hits as the first map and the Spain map arrive. A big low hit lands on the narrator's 'and now' at 2:10, a rising build carries the reversal, and it stops on 'change it' before a short coda under the title."
+        ],
+        "moments": [
+          {"t": 30, "text": "No music under Andreas's question."},
+          {"t": 48, "text": "Isabel's ADHD line, with the score cut out."},
+          {"t": 130, "text": "The big hit on 'and now' starts the final build."}
+        ]
+      },
+      {
+        "id": "trust",
+        "title": "Specifics, admissions, and where it is reconstructed",
+        "paragraphs": [
+          "Most of the credibility comes from the founders themselves. They give specific numbers (€130,000 ARR in the first month, a partnership covering 35,000 students) and the film sets those numbers big enough that they are hard to miss. Isabel says she has ADHD and that school was 'very tough' even with good grades. Andreas laughs while telling the thank-you story. These are things a script would not invent, and the film keeps them.",
+          "The warmest anecdote is also the plainest stretch. From about 1:57 to 2:08, while Andreas describes students writing in to say 'I had such a bad teacher and I still passed because of you guys', there are no captions and no graphics, only the wide and the close. After so much type, the absence makes it feel like a moment overheard rather than produced.",
+          "It is worth being clear about what is reconstructed. The university letter is a stand-in with a generic letterhead ('THE UNIVERSITY', 'Dear Student'), not a real document, and some of the dorm snapshots carry date stamps from 1998 and 2005, so they illustrate the dorm rather than show it. The numbers, the near-ban and the university's change of heart are the film's claims, told by the founders and the narrator, and are not sourced on screen."
+        ],
+        "moments": [
+          {"t": 10, "text": "The headline number, as the founders state it."},
+          {"t": 22, "text": "Dorm snapshots whose date stamps show they are stand-ins."},
+          {"t": 120, "text": "The thank-you story told with no captions at all."}
+        ]
+      }
+    ],
+    "patterns": [
+      {"name": "Caption the speech, then break the rule on purpose", "text": "Caption speech word by word in one plain style, then use scale for numbers, an italic serif for the feeling word and small parentheses for asides. The exceptions become the emphasis.", "t": 8},
+      {"name": "Put a picture where a word would be", "text": "Let the narrator say the noun while the screen shows it inline in the sentence: a crowd for 'students', a laptop of code for the product.", "t": 84},
+      {"name": "Show the problem by not changing the picture", "text": "Gather old images around a date, change only the date, and add the new images to the same pile. The stillness makes the claim.", "t": 40},
+      {"name": "Plant a prop in the hook and turn it at the end", "text": "Introduce one document or object early with a clear meaning, and bring it back with that meaning reversed for the payoff.", "t": 134},
+      {"name": "Pull the music out for the confession", "text": "Drop the score entirely under the most personal lines and bring it back on the line that turns the feeling into the idea.", "t": 48},
+      {"name": "Let the warmest story play plain", "text": "After a dense graphic language, remove the captions and graphics for the most human anecdote so it reads as unproduced.", "t": 120},
+      {"name": "Bookend in black and white, then colour", "text": "Open on a monochrome portrait of the people and close on the same pose in colour, so the ending feels like the opening completed.", "t": 138}
+    ],
+    "absent": "The film barely shows the product: one glimpse of Klar's welcome card, a row of feature labels and a laptop of code, and Lovable itself appears only as a word in a caption and a logo. There are no students or partners on camera and no sources for the numbers, so it is not a film to study for product demos or evidence. It is a study in typography, story props and pacing around three people talking."
+  }
+}

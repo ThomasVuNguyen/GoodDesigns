@@ -1,0 +1,844 @@
+{
+  "note": "Fireship's Code Report on the scandal it says ended Jensen Huang's run as Nvidia's CEO: five and a half minutes of one fast narrator over borrowed pictures, from news headlines and corporate filings boxed in red to labelled cutouts, memes and viewers' posts. Nearly every claim gets its source on screen, and most get a gag right after. The breakdown follows how the script is built, how found images work as both evidence and punchline, how the sponsor read grows out of the last joke, and samples 9 moves as flip books.",
+  "transcript_kind": "Local speech recognition, gaps filled from YouTube's captions, names corrected to the on-screen text",
+  "shot_notes": {
+    "0": "Cold open on a typed card: 'Over the weekend…' in heavy cream caps on black, one word per spoken word. The first words are also the first picture.",
+    "2": "The Nvidia logo on black, cutouts of Jensen Huang in his leather jacket piling in from the right on 'leather-loving co-founder and CEO'. Found press photos, used as a running gag.",
+    "4": "His name label, 'JENSEN HUANG', lands on the word. Every person in the film is introduced this way: a cutout and a label in the same display type.",
+    "6": "The employee email as a plain page of text. The primary document comes first, before any joke.",
+    "8": "A photo of Huang at a dinner table with a woman slides over the email. The film presents it as the affair; nothing yet says who she is.",
+    "9": "'Succulent Chinese affair' stamped across the photo at an angle in red caps, a play on an old meme. The first caption gag lands nine seconds in.",
+    "11": "A stock clip of a man being hit with a pillow, captioned 'She had my surname, I thought she was you!'. The shared-surname gag is planted here and paid off a minute later.",
+    "13": "Headline: 'Jensen Huang Scandal Sparks Divorce Speculation', arriving on 'a very expensive lawyer'. The headline is the punchline.",
+    "17": "A House select committee letter beside its seal, with a cutout of the woman next to it. Official paper is paired with a face so you know whose story it is.",
+    "25": "'$4.8 billion' in green, spun onto a news summary at an angle. The number the voice says is stamped on the page that reports it.",
+    "30": "A class action complaint, with the headline 'Nvidia and Jensen Huang sued in US over affair with alleged Chinese spy' slammed on at an angle.",
+    "34": "'In today's video…' over a clip of Huang eating a corn dog in front of a Chinese flag. Even the roadmap card gets a joke.",
+    "38": "Culper Research's report, its title 'NVIDIA (NVDA): The China Problem' curling in across the page. 'A couple of guys reading corporate filings' are shown by their filing.",
+    "41": "A man at a trading desk under a red crash line, and a viewer's post: 'jensen popped the ai bubble with his huang'. The cold open ends on someone else's joke.",
+    "44": "The Code Report ident drawing itself in white outline and flaring. The only music in the body of the film sits under these four seconds.",
+    "52": "The 2022 Commerce Department press release on export controls, highlighted, with a red '2022' tag pinned to its corner.",
+    "55": "'A few months later' typed on black. Seven cards in this one style mark the turns of the script.",
+    "57": "7Road's game website, opened out of the time card by a lens warp, a '7ROAD' label stamped on.",
+    "64": "The highlighted paragraph narrows to a red box around one line about the British Virgin Islands company, the rest blurred away. The page shrinks to the clause being spoken.",
+    "67": "'Huang Le (黄乐)' set in the corner, an arrow curling to a portrait labelled 'ALICE HUANG'. The name is explained as a diagram.",
+    "71": "The dinner photo again, both faces labelled 'HUANG', with 'not related' written between them.",
+    "76": "The résumé claim quoted large over its dimmed source page: '4 years in media, 8 years in securities. Formerly a news reporter for Hunan TV and CCTV-1'.",
+    "82": "A portrait composited in front of an office: the 7Road badge crossed out, a pointing hand at the Megaspeed sign. The rename is acted out with stickers.",
+    "88": "A chart from a news story on Megaspeed's Nvidia imports, with a red '$4.8B' tag. Ten employees, then the money.",
+    "90": "A reaction meme of a man tapping his temple, on 'the business model is actually pretty clever'.",
+    "93": "The Commerce Department rule, the clause about where an entity's 'ultimate parent company is headquartered' highlighted. The loophole in the regulation's own words.",
+    "100": "A world map under the headline, China in red, and a legend that pops in: 'China' and 'Not China'. Two colors carry the whole explanation.",
+    "107": "Malaysia and Indonesia turn red: where the chips physically sit.",
+    "114": "A dancing man cutout over the Alibaba paragraph, on 'sketchy, but technically legal'.",
+    "125": "Nvidia-branded boxes stacked over an aerial of a data center campus: 'a bunch of Nvidia GPUs just sitting there unopened'.",
+    "128": "A four-panel meme: 'GPU' over an American flag, 'GPWE' over a Soviet one, on 'redistributed for the good of the collective'. The punchline is a picture.",
+    "131": "Photos of the two at events pile up with dates stamped on: March 2024, June 2024, January, February and September 2025. A timeline built from snapshots.",
+    "134": "'May 2026' on black: the next time card, on 'May 13th of this year'.",
+    "136": "Culper's logo, a cartoon profile in a tricorn hat, pasted over the face in a film still of a trader at his screens. The short seller is cast as a character.",
+    "146": "Megaspeed's statement of financial position with two line items boxed in red, the report's summary curling down onto it. The claim and the filing it rests on, in one frame.",
+    "156": "Apex's financial statements, the line naming Alibaba Group as ultimate holding company boxed, a hand emoji pointing at it.",
+    "160": "The finished ownership diagram: Speedmatrix pledged as collateral to Apex, Apex owned by Alibaba, with a grinning Huang cutout risen in on 'a straight face'.",
+    "167": "A news photo of an embrace, the report's paragraph sliding up beneath it with 'uncomfortably close' highlighted in blue.",
+    "170": "'That same week…' on black.",
+    "173": "A photo of Huang and the president pointing, captioned as a two-line joke exchange in the film's display type.",
+    "178": "The Times headline, 'Despite Denial, Trump Was Told on Trip to China About Spying on Nvidia Leader', its key lines highlighted. The source is named in the voice and shown on screen.",
+    "182": "'Five months later…' on black.",
+    "188": "A split collage: figures in suits with the woman above, a cartoon figure in a Chinese-flag shirt in front of empty benches below. The classified memo, drawn as a cartoon.",
+    "194": "A close cutout of Huang pressing his lips together, on 'which is awkward'.",
+    "200": "Footage through a window of Huang in a crowded room, his quote set below in white: 'it was all completely normal and not unusual'. His words are shown, not heard.",
+    "216": "'Breaking news' on black: the story catches up with the recording.",
+    "217": "A meme of an aide whispering in Huang's ear, captioned 'Sir, they know about your other… other woman'.",
+    "230": "A chart meme, 'why is dating hard for guys?', with 'Jensen Huang' at the top and a cutout of him laughing, captioned with a pun on his name.",
+    "236": "The Times quote, 'I don't think you should be talking to me directly.' highlighted, followed by 'He then hung up.'",
+    "238": "Four cartoon creatures sitting in chairs above the Nvidia wordmark: the board meeting.",
+    "244": "The press release narrowed to one highlighted line: 'Jensen Huang has resigned as President, Chief Executive Officer'.",
+    "254": "'we expect the company's operations… to continue without interruption' highlighted: the same words the voice says were used four days earlier.",
+    "258": "The page and the cutout melt into a liquid smear that opens on keynote stage footage.",
+    "262": "Huang alone on a dark stage under 'RTX Blackwell', a viewer's post sliding up with a CUDA pun.",
+    "267": "A news card, 'A short seller flagged Nvidia CEO's ties to a suspected Chinese spy six months before the scandal', with Culper's logo. The short seller bookends the story.",
+    "270": "The distracted-boyfriend meme rebuilt with Huang's face, on 'a reason that wasn't even in their report'.",
+    "272": "Huang, arms crossed, beside a giant soap bubble: 'popped the AI bubble'.",
+    "276": "Stock photo from behind: a man holding hands with two women at once. The sponsor read starts inside the affair joke.",
+    "278": "Claude's and ChatGPT's logos pinned on the two women's heads: 'involved in both Claude and ChatGPT at the same time without consequence'.",
+    "280": "Manufact's wordmark on black, opened out of the photo by a lens warp.",
+    "283": "A forced-perspective tourist photo with the pyramid replaced by a black triangle, on 'the Vercel of MCP'.",
+    "291": "A cyclist knocked off his bike by an antelope, beside an architecture diagram: 'surprisingly painful'.",
+    "293": "The mcp-use GitHub repo with a '10.8K GH stars' stamp and a pointing hand.",
+    "297": "The HorseTinder demo in an inspector: a horse's dating profile rendered as a UI card.",
+    "307": "HorseTinder's swipe cards rendered inside a Claude chat: the claim 'my app was live inside the chat', shown.",
+    "324": "A failed tool call in the session log, marked with a hand-drawn red arrow.",
+    "328": "Manufact's wordmark with 'Deploy free' and 'Link below' stickers.",
+    "331": "End card: The Code Report logo, a hand cutting a credit card on 'No credit card required', and 'Link below'."
+  },
+  "motion_intro": "Almost every picture is borrowed, so the motion is in how borrowed pictures are handled. A small kit repeats for five minutes: titles typed one word per spoken word, cutouts that pop or rise in on a name, highlighter sweeps and red boxes on documents, number stamps spun on at an angle, and a lens warp that opens the next picture out of a hole in the middle of the last one. Elements arrive on the word they illustrate, so the picture keeps pace with a voice that never pauses.",
+  "motion": [
+    {
+      "id": "type-card-cutouts",
+      "start": 0.0,
+      "end": 4.8,
+      "fps": 6,
+      "title": "Typed card, then cutouts piling onto the logo",
+      "tags": [
+        "type-on",
+        "glow",
+        "cutout pop-on",
+        "label"
+      ],
+      "text": "'Over the weekend…' types on one word at a time with the voice (0.0, 0.17, 0.33), flares with a soft glow at 0.5 and cuts to the Nvidia logo at 0.83. At 1.67, on 'leather-loving', the first Huang cutout appears at the right edge; three more pop in on top of it by 2.5, each a different press photo of the same jacket, and a close portrait replaces the pile at 2.83. The name label snaps on at 3.67 on 'Jensen'. At 4.5 the email page sweeps in over two or three frames. Nothing eases: every element appears in one or two frames, so the timing does the work."
+    },
+    {
+      "id": "caption-gags",
+      "start": 7.6,
+      "end": 12.4,
+      "fps": 6,
+      "title": "A photo, a stamped caption, a captioned clip",
+      "tags": [
+        "slide in",
+        "stamp",
+        "caption reveal",
+        "hard cut"
+      ],
+      "text": "The dinner photo pushes in over the email by 8.0 and holds clean for a second. At 9.0, on 'unfaithful to his wife', 'Succulent Chinese affair' slams on in red, tilted about ten degrees, with no animation in or out. At 10.0 a hard cut to the stock clip, whose caption resolves in place over about half a second, letters filling in from scattered fragments, so it reads just as the pillow lands. Two jokes in three seconds, neither one spoken."
+    },
+    {
+      "id": "stamp-and-arrow",
+      "start": 23.8,
+      "end": 30.5,
+      "fps": 4,
+      "title": "A number stamped on, an arrow drawn, a headline slammed down",
+      "tags": [
+        "stamp",
+        "spin in",
+        "vignette fade",
+        "arrow draw",
+        "slam"
+      ],
+      "text": "'$4.8 billion' spins in at 24.0 and settles at an angle across the news summary in half a second. At 26.83 it cuts to a stock chart; at 28.0 a clip fades in over the chart through a soft oval vignette, and a red arrow draws on from the top right at 28.75 to point at the drop. At 29.5 the lawsuit page arrives and a headline strip smears on and lands at 30.0, tilted. Each of the three is a different gesture for the same idea: put the claim on top of the evidence."
+    },
+    {
+      "id": "lens-warp-reveal",
+      "start": 55.2,
+      "end": 58.8,
+      "fps": 8,
+      "title": "Time card, then a lens warp into the next picture",
+      "tags": [
+        "type-on",
+        "lens warp",
+        "fisheye",
+        "stamp"
+      ],
+      "text": "'A few months later' types on word by word from 55.5 to 56.0. At 56.17 a small hole opens in the middle of the card with the next picture inside it, and it bulges outward like a fisheye lens, pushing the type to the edges, until 7Road's website fills the frame by about 56.9. The '7ROAD' label stamps on at 57.5, just ahead of 'Seven Road'. The same warp returns several times (1:09.7, 2:37.0, 2:44.8, 4:39.3), always to open a picture out of the one before it."
+    },
+    {
+      "id": "name-diagram",
+      "start": 66.0,
+      "end": 71.5,
+      "fps": 6,
+      "title": "A name explained with arrows and labels",
+      "tags": [
+        "label",
+        "arrow",
+        "pop-on",
+        "lens warp"
+      ],
+      "text": "'Huang Le (黄乐)' sits alone in the top left. At 66.5, on 'Alice Huang', a portrait pops in with a hand-drawn arrow from the name and a yellow 'ALICE HUANG' label. At 68.0, on 'Jensen Huang', a second photo joins at the right with its own arrow and label. At 69.67 a lens warp zooms into the dinner photo, and 'HUANG' and 'HUANG' pop onto the two faces at 70.17. Each label appears on the spoken name, so the viewer reads the same word the voice is saying."
+    },
+    {
+      "id": "map-and-swirl",
+      "start": 98.5,
+      "end": 108.5,
+      "fps": 3,
+      "title": "A two-color map, and text that twists away",
+      "tags": [
+        "slide in",
+        "legend",
+        "text swirl",
+        "glitch"
+      ],
+      "text": "The world map slides in from the right under the headline at 98.67, China already red. At 99.67, on 'isn't in China', the legend pops in: 'China' and 'Not China'. At 101.0 the headline bends into a ribbon and spins off to the left in about half a second, and a new paragraph lands in its place while the map stays still. At 106.0 a brief glitch, and Malaysia and Indonesia appear in red on 'data centers in Malaysia and Indonesia'. The map holds for about ten seconds, longer than almost any picture in the film, because this is the part that needs explaining."
+    },
+    {
+      "id": "boxes-to-timeline",
+      "start": 123.3,
+      "end": 131.5,
+      "fps": 4,
+      "title": "Boxes stack up, a meme splits the frame, photos pile on",
+      "tags": [
+        "stack",
+        "split screen",
+        "meme",
+        "photo pile",
+        "date stamp"
+      ],
+      "text": "From 123.6 Nvidia boxes pile onto the aerial row by row, building a stack at the right while the voice says 'found a bunch of Nvidia GPUs'. At 127.3 the stack slides left and the frame splits into the four-panel 'GPU / GPWE' meme by 128.2. At 130.0, on 'kept showing up in the same places', dated photos drop in one after another (March 2024, then June 2024, then January, February and September 2025) until the frame is a collage. The pile is the claim: many photos, many dates."
+    },
+    {
+      "id": "diagram-build",
+      "start": 156.8,
+      "end": 160.4,
+      "fps": 8,
+      "title": "The ownership diagram completes itself",
+      "tags": [
+        "lens warp",
+        "arrow draw",
+        "box pop-on",
+        "cutout rise"
+      ],
+      "text": "A lens warp opens the diagram out of the Apex filing at 157.0. The dashed 'collateral pledge' arrow draws left to right from 157.5 to 157.9, the red Apex box pops on at 158.0, and the orange Alibaba box pops on above it at 158.6 with its 'parent company' arrow at 158.9. At 159.2, just after 'with a straight face', a grinning Huang cutout rises from the bottom left, and a hand emoji appears at 159.6. Five elements in about two seconds, each a single frame pop."
+    },
+    {
+      "id": "sponsor-pivot",
+      "start": 275.0,
+      "end": 281.0,
+      "fps": 4,
+      "title": "From the last joke to the sponsor's wordmark",
+      "tags": [
+        "logo pop-on",
+        "lens warp",
+        "wordmark"
+      ],
+      "text": "The stock photo of a man holding two women's hands holds still from 275.0. Claude's logo pops onto one woman's head at 276.3, on 'Claude', and ChatGPT's onto the other at 277.0, on 'ChatGPT'. At 279.3 the lens warp opens a black hole in the middle of the photo with the Manufact wordmark inside it; it fills the frame by 280.0, on the sponsor's name. The ad arrives through the same transition the story has used all along."
+    }
+  ],
+  "craft": {
+    "lede": [
+      "A five-and-a-half-minute news explainer made entirely from borrowed pictures and one voice. The script tells the whole story in its first thirty seconds, promises three answers, and then goes back to 2022 and walks forward: export controls, a shell company and a name, the loophole, the investigators, a short seller's report, the reporting, the resignation. Every factual claim about the people involved is the video's own, and the video attributes most of them as it goes: to a report, a filing or a newspaper.",
+      "What is worth studying is the rhythm of evidence and joke. Nearly every sentence gets a document on screen, a headline, a regulation or a filing with the line in question highlighted or boxed in red, and most of those documents are followed within a second or two by a meme, a captioned photo or a viewer's post that lands the punchline while the voice keeps going. The sponsor read at the end grows straight out of the last joke and uses the same kit, so the ad feels like part of the episode."
+    ],
+    "map": {
+      "lanes": [
+        {
+          "id": "story",
+          "segments": [
+            {
+              "start": 0,
+              "end": 32.6,
+              "label": "The whole story first",
+              "note": "The email, the affair, the alleged spy, the company that bought billions of GPUs, the stock, the lawsuits, the subpoena: the headline version in 33 seconds."
+            },
+            {
+              "start": 32.6,
+              "end": 43.2,
+              "label": "Three promises",
+              "note": "'In today's video': how banned GPUs get into China, how two people reading filings broke the story, and what comes next for Nvidia."
+            },
+            {
+              "start": 43.2,
+              "end": 46.8,
+              "label": "Ident and date",
+              "note": "'It is November 12th, 2026, and you are watching the Code Report.'"
+            },
+            {
+              "start": 46.8,
+              "end": 55.3,
+              "label": "2022: the ban",
+              "note": "Back to the start: the export controls."
+            },
+            {
+              "start": 55.3,
+              "end": 89.8,
+              "label": "Who is behind Megaspeed",
+              "note": "A 7Road spin-off, a shell called Huang Le Limited, Alice Huang, a résumé, a rename, two to ten employees and $4.8 billion of hardware."
+            },
+            {
+              "start": 89.8,
+              "end": 114.9,
+              "label": "How the loophole works",
+              "note": "A company that isn't Chinese, a data center that isn't in China, compute rented to Alibaba. 'Sketchy, but technically legal.'"
+            },
+            {
+              "start": 114.9,
+              "end": 133.7,
+              "label": "Investigators look",
+              "note": "A 2024 visit to a Malaysian data center, unopened GPUs, and the two seen together again and again."
+            },
+            {
+              "start": 133.7,
+              "end": 169.7,
+              "label": "The short seller's report",
+              "note": "Culper Research, 13 May: the balance sheet, the collateral pledge to Apex, Apex's parent Alibaba."
+            },
+            {
+              "start": 169.7,
+              "end": 182.2,
+              "label": "Air Force One",
+              "note": "The Beijing trip and what the Times says the president was told."
+            },
+            {
+              "start": 182.2,
+              "end": 214.9,
+              "label": "The reporting and the denials",
+              "note": "The Times story and classified memo, Huang's response, the board's confidence, the analysts, the president."
+            },
+            {
+              "start": 214.9,
+              "end": 238.4,
+              "label": "Breaking: a second relationship",
+              "note": "'Literally as I'm finishing up this video': the Times reports on Kimberly Powell, and Huang hangs up on the paper."
+            },
+            {
+              "start": 238.4,
+              "end": 275.0,
+              "label": "Resignation and fallout",
+              "note": "The board meets, Huang resigns, Colette Kress is interim CEO, the earnings call is five days away, the short sellers were right."
+            },
+            {
+              "start": 275.0,
+              "end": 325.0,
+              "label": "Sponsor: Manufact",
+              "note": "Pivots on the affair joke, then a first-person build of an MCP server."
+            },
+            {
+              "start": 325.0,
+              "end": 335.2,
+              "label": "Sign-off",
+              "note": "'This has been the Code Report.'"
+            }
+          ]
+        },
+        {
+          "id": "voices",
+          "segments": [
+            {
+              "start": 0,
+              "end": 32.6,
+              "label": "Cold open, at speed",
+              "kind": "narrator",
+              "note": "About 190 words a minute, every clause a new fact."
+            },
+            {
+              "start": 32.6,
+              "end": 46.8,
+              "label": "Roadmap and sign-in",
+              "kind": "narrator",
+              "note": "The voice keeps going straight through the ident and names the show and the date."
+            },
+            {
+              "start": 46.8,
+              "end": 89.8,
+              "label": "Backstory with asides",
+              "kind": "narrator",
+              "note": "Kate Bush topping the charts; 'no genetic relation to each other, I think'."
+            },
+            {
+              "start": 89.8,
+              "end": 114.9,
+              "label": "The explainer",
+              "kind": "narrator",
+              "note": "The loophole in two plain conditions, then a verdict in five words."
+            },
+            {
+              "start": 114.9,
+              "end": 169.7,
+              "label": "Reading the filings",
+              "kind": "narrator",
+              "note": "Numbers and company names read out from the report while the documents are on screen."
+            },
+            {
+              "start": 169.7,
+              "end": 214.9,
+              "label": "Attributed claims",
+              "kind": "narrator",
+              "note": "'According to the Times', 'claims', 'allegedly': the hedges sit inside the sentences."
+            },
+            {
+              "start": 214.9,
+              "end": 238.4,
+              "label": "A live update",
+              "kind": "narrator",
+              "note": "'Literally as I'm finishing up this video'."
+            },
+            {
+              "start": 238.4,
+              "end": 275.0,
+              "label": "Fallout and the last pun",
+              "kind": "narrator",
+              "note": "Ends on a one-line joke that the next sentence turns into the sponsor's hook."
+            },
+            {
+              "start": 275.0,
+              "end": 325.0,
+              "label": "First-person sponsor read",
+              "kind": "narrator",
+              "note": "'I used… Then I connected… I pasted that URL'. Same voice, same speed."
+            },
+            {
+              "start": 325.0,
+              "end": 335.2,
+              "label": "Sign-off",
+              "kind": "narrator"
+            }
+          ]
+        },
+        {
+          "id": "sound",
+          "segments": [
+            {
+              "start": 0,
+              "end": 43.2,
+              "label": "Voice only",
+              "note": "No music bed and, by the stems, no sound effects. The voice never pauses for more than about a quarter of a second."
+            },
+            {
+              "start": 43.2,
+              "end": 47.5,
+              "label": "Ident sting",
+              "kind": "music",
+              "note": "About four seconds of music under the show logo, roughly 10 dB under the voice, which talks straight through it."
+            },
+            {
+              "start": 47.5,
+              "end": 330.0,
+              "label": "Voice only, nearly five minutes",
+              "note": "The story and the whole sponsor read run on the voice alone."
+            },
+            {
+              "start": 330.0,
+              "end": 334.5,
+              "label": "End card music",
+              "kind": "music",
+              "note": "Returns under 'This has been the Code Report'."
+            },
+            {
+              "start": 334.5,
+              "end": 335.2,
+              "label": "Out",
+              "kind": "silence"
+            }
+          ]
+        },
+        {
+          "id": "picture",
+          "segments": [
+            {
+              "start": 0,
+              "end": 0.83,
+              "label": "Time card",
+              "kind": "title"
+            },
+            {
+              "start": 0.83,
+              "end": 4.53,
+              "label": "Logo and cutouts",
+              "kind": "stock"
+            },
+            {
+              "start": 4.53,
+              "end": 8.03,
+              "label": "The email",
+              "kind": "archive"
+            },
+            {
+              "start": 8.03,
+              "end": 13.37,
+              "label": "Photo and meme clip",
+              "kind": "stock",
+              "note": "'Succulent Chinese affair', then 'She had my surname, I thought she was you!'."
+            },
+            {
+              "start": 13.37,
+              "end": 26.83,
+              "label": "Headline, letter, summary",
+              "kind": "archive",
+              "note": "Each page paired with a labelled cutout, a logo or a stamped number."
+            },
+            {
+              "start": 26.83,
+              "end": 29.5,
+              "label": "Chart and clip",
+              "kind": "stock"
+            },
+            {
+              "start": 29.5,
+              "end": 33.0,
+              "label": "Lawsuit, subpoena",
+              "kind": "archive"
+            },
+            {
+              "start": 33.0,
+              "end": 36.0,
+              "label": "Roadmap over a clip",
+              "kind": "stock"
+            },
+            {
+              "start": 36.0,
+              "end": 40.0,
+              "label": "Culper report",
+              "kind": "archive"
+            },
+            {
+              "start": 40.0,
+              "end": 43.2,
+              "label": "A viewer's post",
+              "kind": "stock"
+            },
+            {
+              "start": 43.2,
+              "end": 46.87,
+              "label": "Ident",
+              "kind": "title"
+            },
+            {
+              "start": 46.87,
+              "end": 51.9,
+              "label": "Music video aside",
+              "kind": "stock"
+            },
+            {
+              "start": 51.9,
+              "end": 55.3,
+              "label": "2022 release",
+              "kind": "archive"
+            },
+            {
+              "start": 55.3,
+              "end": 56.5,
+              "label": "Time card",
+              "kind": "title"
+            },
+            {
+              "start": 56.5,
+              "end": 66.47,
+              "label": "Website, article",
+              "kind": "archive"
+            },
+            {
+              "start": 66.47,
+              "end": 73.6,
+              "label": "Name diagram",
+              "kind": "graphics",
+              "note": "Labels and arrows on photos: Huang Le, Alice Huang, Jensen Huang, 'not related'."
+            },
+            {
+              "start": 73.6,
+              "end": 97.23,
+              "label": "Résumé, LinkedIn, rule",
+              "kind": "archive",
+              "note": "With a stickered portrait at 1:19 and a reaction meme at 1:30."
+            },
+            {
+              "start": 97.23,
+              "end": 108.77,
+              "label": "China / Not China map",
+              "kind": "graphics"
+            },
+            {
+              "start": 108.77,
+              "end": 120.9,
+              "label": "News, with cut-in reactions",
+              "kind": "archive",
+              "note": "A dancing cutout and a skeptical face slide in over the paragraphs."
+            },
+            {
+              "start": 120.9,
+              "end": 133.5,
+              "label": "Boxes, meme, photo pile",
+              "kind": "stock"
+            },
+            {
+              "start": 133.5,
+              "end": 134.9,
+              "label": "Time card",
+              "kind": "title"
+            },
+            {
+              "start": 134.9,
+              "end": 149.0,
+              "label": "Culper, then its report",
+              "kind": "archive",
+              "note": "A film still with Culper's logo for a face and a poster parody, then the report and Megaspeed's balance sheet."
+            },
+            {
+              "start": 149.0,
+              "end": 169.8,
+              "label": "Diagram and filings",
+              "kind": "graphics",
+              "note": "The ownership diagram builds in two passes, with each filing boxed in red between them."
+            },
+            {
+              "start": 169.8,
+              "end": 170.7,
+              "label": "Time card",
+              "kind": "title"
+            },
+            {
+              "start": 170.7,
+              "end": 182.2,
+              "label": "Captioned photos, Times story",
+              "kind": "archive"
+            },
+            {
+              "start": 182.2,
+              "end": 183.4,
+              "label": "Time card",
+              "kind": "title"
+            },
+            {
+              "start": 183.4,
+              "end": 187.0,
+              "label": "Times exclusive",
+              "kind": "archive"
+            },
+            {
+              "start": 187.0,
+              "end": 196.6,
+              "label": "Spy-plot collage",
+              "kind": "stock"
+            },
+            {
+              "start": 196.6,
+              "end": 215.0,
+              "label": "Quote, statements, briefing",
+              "kind": "archive"
+            },
+            {
+              "start": 215.0,
+              "end": 216.8,
+              "label": "Breaking news",
+              "kind": "title"
+            },
+            {
+              "start": 216.8,
+              "end": 238.4,
+              "label": "Times story with memes",
+              "kind": "archive",
+              "note": "A whispering-aide meme and a dating chart meme around the headline, the profile page and the quote."
+            },
+            {
+              "start": 238.4,
+              "end": 240.7,
+              "label": "Board as cartoons",
+              "kind": "stock"
+            },
+            {
+              "start": 240.7,
+              "end": 269.2,
+              "label": "Release, posts, keynote",
+              "kind": "archive",
+              "note": "The resignation release, the interim CEO, the reused promise, a facepalm, keynote footage, the stock, the short seller."
+            },
+            {
+              "start": 269.2,
+              "end": 275.0,
+              "label": "Meme, bubble",
+              "kind": "stock"
+            },
+            {
+              "start": 275.0,
+              "end": 292.4,
+              "label": "Sponsor setup in memes",
+              "kind": "stock",
+              "note": "Hand-holding photo, wordmark, pyramid triangle, developers' posts, a chart, the antelope."
+            },
+            {
+              "start": 292.4,
+              "end": 325.0,
+              "label": "Product recordings",
+              "kind": "screen",
+              "note": "mcp-use repo, the HorseTinder demo, deploys, Claude, the checklist, analytics."
+            },
+            {
+              "start": 325.0,
+              "end": 335.2,
+              "label": "Wordmark, end card",
+              "kind": "title"
+            }
+          ]
+        }
+      ]
+    },
+    "aspects": [
+      {
+        "id": "story",
+        "title": "The whole story first, then how it happened",
+        "paragraphs": [
+          "The structure is a news story's, not a mystery's. The first thirty-three seconds give away everything: the email, the affair, the alleged spy, the company that bought billions of GPUs, the stock, the lawsuits, the subpoena. Then three promises ('how you get banned GPUs into China, how a couple of guys reading corporate filings actually broke this story six months ago, and what the future looks like'), and only then the show's ident. The viewer knows the ending, so the rest of the video is free to be about how.",
+          "After the ident the story goes back to 2022 and walks forward in strict order, and the jumps are marked with typed cards in one style: 'A few months later', 'May 2026', 'That same week…', 'Five months later…', 'Breaking news'. Each card lands on the spoken phrase. They are the outline of the script made visible, and they let a dense five minutes feel like a sequence of short chapters.",
+          "Small things planted early come back. The shared surname is a pillow-fight gag at 0:11 and a labelled diagram at 1:07. Nvidia's promise at 3:26 that Huang would keep running the company 'without interruption' comes back at 4:14, when the board uses the same words about the company after he has gone. The short seller who appears in the roadmap at 0:37 closes the story at 4:27 as the one everybody ignored. The last line of the story, a pun, becomes the first line of the ad."
+        ],
+        "moments": [
+          {
+            "t": 30,
+            "text": "Thirty seconds in, the lawsuit: the whole story has already been told."
+          },
+          {
+            "t": 55,
+            "text": "A typed time card marks the first jump forward."
+          },
+          {
+            "t": 254,
+            "text": "'Without interruption', quoted back four days later."
+          },
+          {
+            "t": 267,
+            "text": "The short seller returns to close the story."
+          }
+        ]
+      },
+      {
+        "id": "voices",
+        "title": "One fast voice, and a chorus in captions",
+        "paragraphs": [
+          "There is one voice, the channel's narrator, and it does not stop. About 1,170 words in 334 seconds is roughly 210 a minute, and by the voice stem there is no pause anywhere longer than about a quarter of a second: the breaths have been cut out. Jokes are delivered at the same speed as facts, with no more than a breath before the punchline ('the two of them have no genetic relation to each other, I think'), so the viewer never gets a pause to decide whether to laugh. The picture supplies the beat instead.",
+          "Nobody else is heard. Huang's own words, 'it was all completely normal and not unusual' and 'I don't think you should be talking to me directly', appear as text on screen, quoted from reporting, not played. The second voice in the film is written: meme captions ('She had my surname, I thought she was you!', 'Sir, they know about your other… other woman') and viewers' posts ('Two Huangs don't make it right') land jokes the narrator never says. The narrator handles the facts and most of the wordplay; the captions handle the crowd.",
+          "The sentences are built for the ear. Long chains of clauses are joined with 'and' and 'since', numbers are rounded to one idea ($33 million to $3 billion in a single year), and the hedges sit inside the sentence rather than in a disclaimer: 'US intelligence believes', 'according to the Times', 'Trump claims', 'allegedly', 'which if true'. The sponsor read switches to the first person ('I used their open source TypeScript framework… Then I connected my GitHub repo… I pasted that URL into Claude') without changing pace."
+        ],
+        "moments": [
+          {
+            "t": 11,
+            "text": "A joke carried by a caption, not the voice."
+          },
+          {
+            "t": 200,
+            "text": "Huang's words are shown as a quote, never heard."
+          },
+          {
+            "t": 132,
+            "text": "A viewer's post used as the punchline."
+          },
+          {
+            "t": 307,
+            "text": "The sponsor read in the first person: 'my app was live inside the chat'."
+          }
+        ]
+      },
+      {
+        "id": "world",
+        "title": "Documents as evidence, memes as punchlines",
+        "paragraphs": [
+          "The film has two visual registers and keeps them apart. Evidence is white pages floating on black: press releases, a regulation, a congressional letter, news paragraphs, balance sheets and company filings, with the spoken line swept in orange highlighter or boxed in red. Jokes are everything else: cutouts with yellow labels, bold captions stamped at an angle, memes, movie posters, stock photos and viewers' posts. A viewer can tell at a glance which kind of picture they are looking at, and that is what lets the jokes sit right next to serious claims without blurring them.",
+          "Evidence is layered. A news summary of a claim usually comes first, then the primary document behind it: the report's sentence about Megaspeed's balance sheet curls down onto the actual statement of financial position, with the two line items boxed. The collateral pledge gets the Malaysian charge filing, and the claim that Apex's parent is Alibaba gets Apex's own accounts, with a hand emoji pointing at the line. When a mechanism needs explaining, the film draws it once and simply: a world map in two colors, 'China' and 'Not China', and a five-box ownership diagram.",
+          "The punchlines are pictures timed to a word. 'A very expensive lawyer' lands on a divorce headline. 'Redistributed for the good of the collective' lands on a GPU/GPWE meme. 'With a straight face' brings in a grinning cutout. The same few devices repeat for five minutes (label, arrow, stamp, highlight, cutout), so the world feels consistent even though every image comes from somewhere else."
+        ],
+        "moments": [
+          {
+            "t": 146,
+            "text": "The report's summary laid onto the filing it rests on."
+          },
+          {
+            "t": 100,
+            "text": "The loophole in two colors: China and Not China."
+          },
+          {
+            "t": 160,
+            "text": "The ownership diagram, with a grin on 'a straight face'."
+          },
+          {
+            "t": 128,
+            "text": "A meme as the punchline to a spoken line."
+          }
+        ]
+      },
+      {
+        "id": "frames",
+        "title": "Holds for evidence, flashes for jokes",
+        "paragraphs": [
+          "The detector finds 112 hard cuts, a median shot of 2.2 seconds, but many changes are warps, pixel dissolves and pop-ons it cannot see, so the picture changes more often than that. What matters is the pattern. Documents usually hold for three to six seconds while the voice reads from them; most jokes last one to three. The rhythm is read, laugh, read, laugh, and a viewer learns it within the first fifteen seconds.",
+          "The film slows down where it has to explain. The two-color map holds for about ten seconds while the loophole is described, the longest any one picture stays, and the ownership diagram is built in two passes with the filings in between. The detector's busiest windows (2:00 and 2:30, nine cuts in ten seconds) are where documents and gags trade places fastest: the unopened GPUs and their meme, then the chain of filings."
+        ],
+        "moments": [
+          {
+            "t": 107,
+            "text": "The map is still on screen ten seconds after it arrived."
+          },
+          {
+            "t": 156,
+            "text": "A filing boxed in red between two passes of the diagram."
+          }
+        ]
+      },
+      {
+        "id": "screens",
+        "title": "A sponsor read folded into the joke",
+        "paragraphs": [
+          "The story ends on a pun and the very next sentence is the ad, with no break: 'But if you'd like to be involved in both Claude and ChatGPT at the same time without consequence, you can do that with Manufact'. The picture does the same thing. A stock photo of a man holding two women's hands gets Claude's and ChatGPT's logos on their heads, and the wordmark opens out of it through the same lens warp the story used. The affair becomes the hook without a single new device.",
+          "The read keeps the episode's kit. 'The Vercel of MCP' is a tourist pyramid photo with the pyramid swapped for a black triangle. 'Every product needs an MCP server' is backed by developers' posts and a chart of connector listings jumping from 2 to 109. 'Surprisingly painful' gets a cyclist knocked over by an antelope. Then it becomes a short screen-recorded build: the mcp-use repo stamped '10.8K GH stars', a demo app called HorseTinder (a dating app for horses, which keeps the episode's theme going), a GitHub deploy, the server pasted into Claude, swipe cards rendering inside the chat, a publishing checklist at 91/100, analytics, and a failed call marked with a red arrow. Every feature the voice names gets its own screen."
+        ],
+        "moments": [
+          {
+            "t": 278,
+            "text": "Claude and ChatGPT pinned on the stock photo: the pivot."
+          },
+          {
+            "t": 283,
+            "text": "'The Vercel of MCP' as a pyramid swapped for a triangle."
+          },
+          {
+            "t": 307,
+            "text": "The demo app rendering inside a Claude chat."
+          },
+          {
+            "t": 324,
+            "text": "A failure shown and marked, as proof the analytics are real."
+          }
+        ]
+      },
+      {
+        "id": "trust",
+        "title": "Why a joke-heavy video still reads as reporting",
+        "paragraphs": [
+          "The jokes never stand in for a source. Almost every factual sentence has a page on screen while it is said, and the page is usually named in the voice too: the Times, Culper Research, the board's statement, a commerce rule. The highlighter shows exactly which line is being quoted, so a viewer can pause and check it. Dates are pinned onto the documents, and the time cards keep the order of events straight.",
+          "The script marks its uncertainty out loud. Claims are given to whoever made them ('US intelligence believes', 'Trump claims he didn't hear about it then', 'Alibaba was allegedly paying', 'which if true'), and the narrator admits when the story moved under him: 'literally as I'm finishing up this video'. Even the gags respect the line between joke and claim: the stickered composites and captioned photos look nothing like the evidence pages, so nobody mistakes one for the other."
+        ],
+        "moments": [
+          {
+            "t": 178,
+            "text": "The Times headline on screen while the voice says 'according to the Times'."
+          },
+          {
+            "t": 216,
+            "text": "'Breaking news': the update is labelled as one."
+          },
+          {
+            "t": 93,
+            "text": "The regulation's own clause, highlighted."
+          }
+        ]
+      }
+    ],
+    "patterns": [
+      {
+        "name": "Give away the ending first",
+        "text": "Tell the whole story in the first thirty seconds, promise the three questions you will answer, then go back and walk forward in order. The viewer stays for how, not what.",
+        "t": 30
+      },
+      {
+        "name": "Put the source on screen with the sentence",
+        "text": "Show the page the claim comes from while you say it, highlight the exact line, and when you can, follow the news summary with the primary filing it rests on.",
+        "t": 146
+      },
+      {
+        "name": "Keep evidence and jokes in different looks",
+        "text": "Give documents one register (white pages, highlighter, red boxes) and gags another (cutouts, stamped captions, memes), so they can sit side by side without the jokes undermining the claims.",
+        "t": 125
+      },
+      {
+        "name": "Land the punchline in the picture",
+        "text": "Let the voice keep its pace and time a meme, caption or cutout to the exact word. The cut becomes the beat a comedian would leave.",
+        "t": 128
+      },
+      {
+        "name": "Draw the mechanism once, in two colors",
+        "text": "When something needs explaining, reduce it to one simple diagram or map and hold it longer than anything else in the film.",
+        "t": 100
+      },
+      {
+        "name": "Plant it, then pay it off",
+        "text": "Set up a word or a promise early and quote it back later: a surname gag that becomes a labelled diagram, a promise of 'no interruption' that returns after the resignation.",
+        "t": 71
+      },
+      {
+        "name": "Turn the last joke into the sponsor's hook",
+        "text": "End the story on a line the ad can pick up, and bring the sponsor in with the same visual devices the episode has used, so it does not feel like a different video.",
+        "t": 278
+      },
+      {
+        "name": "Mark time with typed cards",
+        "text": "Use one style of card for every jump ('A few months later', 'That same week…'), timed to the spoken phrase, so a dense script reads as short chapters.",
+        "t": 170
+      }
+    ],
+    "absent": "There is no music bed, no interview, no on-camera host and no original footage: every picture is borrowed and the soundtrack is one voice. It is not a film to study for score, cinematography or animation; the lesson is the script, the sourcing and the timing of found images."
+  }
+}

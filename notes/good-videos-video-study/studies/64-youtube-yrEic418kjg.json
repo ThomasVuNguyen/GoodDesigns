@@ -1,0 +1,717 @@
+{
+  "note": "Notion's 71-second launch film for Custom Agents, with no voice. A conveyor of busywork piles up and blows away, then the app's own agent icons (a purple checkbox, an orange speech bubble, a teal folder) become characters that halftone hands set into the frame. Each one wipes in its own title and works real Notion screens: it routes requests to a board, answers a flood of questions and writes a status update. The night turns into a sky full of agents. The breakdown follows how three sidebar icons carry the story, and samples 12 moves.",
+  "no_transcript": "No speech. The script is nine short lines of on-screen text and one button. The separator picks up a brief voice-like chop in the music at 0:20, but no words can be made out. The Craft map lays the lines out.",
+  "shot_notes": {
+    "0": "Warm off-white and nothing else for half a second. The paper color is the stage for the whole day half of the film.",
+    "1": "A hand-drawn conveyor belt (two black lines and a row of rollers) carries task cards: 'Compile latest metrics snapshot for leadership', 'Draft and send weekly team update'. Busywork as a factory line.",
+    "2": "A new card tumbles in from the top of frame in a motion-blurred streak and lands on the belt. The work keeps arriving.",
+    "6": "The belt speeds up to a blur and runs out: its rounded end slides in from the right.",
+    "7": "The last cards tip off the end of the belt, tilting as they fall.",
+    "8": "Cut to the heap: dozens of cards at every angle, all believable chores ('Triage inbox and close pending follow-ups', 'Prep handoff notes for items rolling to next week'). The checkbox and type are Notion's own.",
+    "10": "The camera pulls back and a purple 'To-do' pill sits on the heap, its count leaping from 89 to 175 and on up.",
+    "11": "The count settles in the 600s (628 by the end). A doodled pile has become a Notion view with a number on it.",
+    "12": "The heap bursts outward in one frame and the cards fly off every edge, leaving 'Bye bye, busywork.' in bold black sans.",
+    "13": "The line alone, shrinking slowly. Under it the music has fallen almost to silence.",
+    "15": "The beat drops on a cut to the real product: Notion's sidebar beside a 'Launch Day' page, the cursor on '+ New agent' under an empty Agents heading.",
+    "16": "Three agents now listed, each with a round colored icon: Task routing agent (purple), Q&A agent (orange), Status update agent (teal). Those icons are about to become the cast.",
+    "17": "'Hello, Custom Agents.' A halftone-stippled hand with a thick black outline sets the purple checkbox badge down like a game piece.",
+    "18": "A finger pushes the orange speech-bubble badge up from the bottom edge as a second hand brings in the teal folder. Each badge has two dot eyes.",
+    "19": "The hands are gone and so is the line, leaving three badges on the empty page. Drawn hands have given the sidebar icons life.",
+    "20": "The badges dart off with dashed speed lines in their own colors.",
+    "21": "'They handle repetitive work, 24/7.' The teal badge wiped it on as it flew through; purple and orange hover in place with flickering trails.",
+    "23": "The purple badge sweeps right at huge scale and drags 'Route tasks automatically' in behind it. Every capability title enters this way.",
+    "25": "Three incoming requests as cards: a Slack message in #support-channel-ask, a Notion comment and an email from Paolo.",
+    "27": "The purple badge carries the stack, tilted, into the To-do column as the board slides in.",
+    "29": "The requests are now tasks with priority tags: Low for Privacy & Compliance, Urgent for Data Governance.",
+    "31": "The badge lifts the Urgent card to the top of To-do. Routing is shown as the agent physically moving work.",
+    "33": "The same wipe in orange: 'Answer questions instantly'.",
+    "35": "One question, from James Kim: 'Where's the demo script?', with a red unread badge reading 1 and a hand-drawn avatar.",
+    "37": "The list has flooded and the unread count reads 43: Libby Morano asks how to book a conference room, Wesley Ceceña wants the wifi password.",
+    "38": "The orange badge works down the list. A '1 reply' tag appears under each answered question and the count drops to 42.",
+    "41": "The count is 0. Catherine Nichols' 'What's the latest launch date?' has its answer: 'New launch date is April 14. Here's the rollout plan.'",
+    "43": "Teal wipe: 'Write updates autonomously'.",
+    "45": "A 'Launch status reports' database. The teal badge carries in a new row, 'Weekly Status Update @Today', and drops it on top of earlier weekly briefs.",
+    "47": "The new row opens as a side page, with Created by: Status update agent.",
+    "49": "The badge has written the page: 'Week at a Glance' and a roadmap status list.",
+    "50": "A push in to '@Today' at display size, one avatar above it.",
+    "51": "Avatars stack up beside it and a '+2' appears, then '+3'. The update is being read: the team benefits.",
+    "52": "Cut to 'Keep work moving all day...', ending on an ellipsis.",
+    "53": "The stippled hand comes back, fingers curled for a flick.",
+    "54": "On the flick the film cuts to navy: '...and night.' The light-bulb badge now glows, and the hand is still finishing its follow-through.",
+    "56": "Night agents up close: a glowing plug badge trailing 'Post roadmap summary', a red badge towing 'Catch up on inbox'. Each drags its task like a banner.",
+    "58": "A blink to empty navy, then a wider view: dozens of agents crossing on horizontal and vertical paths, each towing a task.",
+    "62": "Wider again. Each agent is now a small colored mark with its task, moving on a grid like traffic seen from far above.",
+    "63": "The swarm is gone. One white '+ New Agent' button sits on navy.",
+    "64": "The cursor has pressed the button and drifts away below it.",
+    "65": "Cut to the Notion icon alone on navy; the wordmark fades in beside it half a second later.",
+    "68": "The wordmark holds. The music has just ended, and the last two and a half seconds are silent."
+  },
+  "motion_intro": "Notion's agents launch film is almost all motion design, with about a dozen hard cuts in 71 seconds. The world is warm off-white paper with thick black hand-drawn line, then navy for night. Real Notion UI is laid flat on the same paper, and three round badges taken from the app's sidebar (a purple checkbox, an orange speech bubble, a teal folder, each with two dot eyes) are the characters. They fly on dashed speed lines in their own colors, and each one introduces its job by sweeping through at huge scale and dragging a title in behind it. Halftone-stippled hands place them at the start and flick the film into night near the end. Most moves are quick and snappy: things arrive with a smear and settle, with little drift.",
+  "motion": [
+    {
+      "id": "conveyor",
+      "start": 0.3,
+      "end": 8.1,
+      "fps": 4,
+      "title": "Busywork on a conveyor that runs out",
+      "tags": [
+        "draw-on",
+        "conveyor",
+        "drop-in",
+        "speed-up",
+        "jump cut"
+      ],
+      "text": "A belt of black line and rollers slides in from the right at 0.4 with task cards riding on it. New cards keep dropping onto it from the top of frame in a smeared tumble (about 2.3, 4.0 and 5.7). At 6.3 the belt accelerates into a motion blur, then its rounded end arrives from the right at 6.8 and the belt shrinks away. The last card tips off the end, and at 7.9 the film jumps straight to the pile it made. Work that never stops coming, shown as a machine, before any product appears."
+    },
+    {
+      "id": "pile-burst",
+      "start": 9.0,
+      "end": 13.0,
+      "fps": 8,
+      "title": "The pile gets a count, then blows away",
+      "tags": [
+        "pull back",
+        "counter",
+        "burst",
+        "reveal"
+      ],
+      "text": "The camera pulls back from the heap at 9.2 and a purple 'To-do' pill appears on top. Its count jumps 89, 175, 356, 573 in about a second and settles at 628 by 11.6. At 12.4 the whole heap explodes outward in a single frame, cards spinning off every edge, and 'Bye bye, busywork.' is left in the clearing. The line then shrinks very slowly for the next two and a half seconds while the music drops away."
+    },
+    {
+      "id": "three-agents",
+      "start": 14.8,
+      "end": 17.4,
+      "fps": 8,
+      "title": "Three agents added in the real sidebar",
+      "tags": [
+        "hard cut",
+        "UI",
+        "stagger",
+        "cursor"
+      ],
+      "text": "A hard cut at 14.9, on the beat drop, to Notion's sidebar with an empty Agents section. The cursor sits on '+ New agent' and an agent appears above it about every half second: Task routing at 15.4, Q&A at 15.9, Status update at 16.4, each with its colored round icon. At 17.25 it cuts to the title card. The beat is short and plain, but it is where the characters come from."
+    },
+    {
+      "id": "hands-place",
+      "trail": true,
+      "start": 17.2,
+      "end": 19.6,
+      "fps": 10,
+      "title": "Stippled hands set the badges down",
+      "tags": [
+        "hands",
+        "placement",
+        "stagger",
+        "exit"
+      ],
+      "text": "'Hello, Custom Agents.' A hand from the top left pinches the purple badge and sets it down beside the text (17.3 to 17.9). A finger from the bottom pushes the orange badge up like a button (17.8 to 18.6), and a hand from the right lays down the teal one (18.4 to 18.9). The hands withdraw by 19.4 and the line clears, so only the three badges are left on the page."
+    },
+    {
+      "id": "dash-off",
+      "start": 19.5,
+      "end": 21.6,
+      "fps": 10,
+      "title": "Badges dash off and wipe the line on",
+      "tags": [
+        "speed lines",
+        "fly-through",
+        "text reveal",
+        "hover"
+      ],
+      "text": "At 19.7 the badges shoot right, each leaving dashed speed lines in its own color, and leave the frame by about 20.5. They fly back through on new paths, and the teal one crosses the center at 21.1 and leaves 'They handle repetitive work, 24/7.' behind it. Purple and orange then hover in place, their dashed trails flickering as if they are still flying."
+    },
+    {
+      "id": "badge-wipe",
+      "start": 22.9,
+      "end": 23.9,
+      "fps": 24,
+      "title": "The capability wipe",
+      "tags": [
+        "scale",
+        "wipe",
+        "speed lines",
+        "repeat"
+      ],
+      "text": "The purple badge enters from the left at many times its normal size and sweeps right in about half a second. 'Route tasks automatically' is revealed in its wake, as if the badge is pulling it on, and purple dashes above and below the line retract after it. The same move, timed the same way, introduces 'Answer questions instantly' in orange at 33.25 and 'Write updates autonomously' in teal at 42.6. Repeating one entrance three times makes three features read as one system."
+    },
+    {
+      "id": "route",
+      "start": 24.5,
+      "end": 28.2,
+      "fps": 6,
+      "title": "Requests carried onto a board",
+      "tags": [
+        "pop-in",
+        "carry",
+        "slide-in",
+        "transform"
+      ],
+      "text": "Three request cards pop in one after another from 24.6: Slack, a Notion comment, an email. The purple badge flies in at 25.5 and lands on the stack. It tilts the stack and carries it left as a board slides in from the right (26.6 to 27.2), drops it into To-do, and by 27.6 the requests have become task cards. Priority tags arrive at 28.6, and around 31.3 the badge lifts the Urgent card to the top."
+    },
+    {
+      "id": "questions",
+      "start": 35.0,
+      "end": 41.2,
+      "fps": 5,
+      "title": "Questions flood in, the count runs to zero",
+      "tags": [
+        "stack",
+        "blur scroll",
+        "counter",
+        "typing dots"
+      ],
+      "text": "Questions arrive one at a time (James Kim at 35.0, Yusuf Khan at 35.75, Lisa Chau at 36.4) with a red unread badge counting 1, 2, 3. Then the list scrolls in a motion blur and the count jumps to 43 by 37.2. The orange badge moves down the list and a '1 reply' tag appears under each question as the count falls. A second blur scroll at 39.6 lands on 0, and the last question gets typing dots at 40.6 and a real answer at 40.9."
+    },
+    {
+      "id": "status-row",
+      "start": 44.3,
+      "end": 50.1,
+      "fps": 5,
+      "title": "A row slotted in, a page written, a push to @Today",
+      "tags": [
+        "carry",
+        "insert",
+        "side peek",
+        "push in"
+      ],
+      "text": "The 'Launch status reports' database appears at 44.4. The teal badge flies in carrying a tilted row, 'Weekly Status Update @Today', and settles it into the top line as the older briefs shift down (44.6 to 45.5). At 46.9 the row opens as a side page, and the badge drops in the body text at about 48.5. At 49.6 the camera pushes in to '@Today' at display size, where reader avatars start stacking up."
+    },
+    {
+      "id": "flick-to-night",
+      "start": 53.1,
+      "end": 55.2,
+      "fps": 12,
+      "title": "A flick turns day into night",
+      "tags": [
+        "hands",
+        "flick",
+        "match on action",
+        "color swap"
+      ],
+      "text": "The stippled hand rises beside 'Keep work moving all day...' at 53.2 and curls its fingers. At 53.9 it flicks, and a yellow light-bulb badge pops up and arcs over the text. At 54.4, mid-arc, the film cuts to navy. The bulb keeps going in the same direction, now glowing, the hand finishes its follow-through at the left edge, and the line has become '...and night.' The ellipsis and the bulb's path carry the eye across the cut."
+    },
+    {
+      "id": "night-pullback",
+      "start": 55.3,
+      "end": 63.5,
+      "fps": 3,
+      "title": "Pull back in steps to a sky of agents",
+      "tags": [
+        "towing",
+        "scale steps",
+        "blink cut",
+        "swarm"
+      ],
+      "text": "Close up, glowing agents cross the navy towing their tasks like banners, some horizontal, some vertical (55.4 to 57.4). At 57.4 the frame blinks to empty navy for about a fifth of a second and comes back wider, with dozens of them. At 61.1 it steps out again, and the agents shrink to small colored marks moving on a grid. Each step out is a cut, not a zoom, so the scale jumps. At 63.37 the swarm is gone."
+    },
+    {
+      "id": "button-logo",
+      "start": 63.2,
+      "end": 66.2,
+      "fps": 8,
+      "title": "Press New Agent, cut to the logo",
+      "tags": [
+        "cursor",
+        "button press",
+        "hard cut",
+        "fade-in"
+      ],
+      "text": "A single white '+ New Agent' button sits on navy at 63.37. A cursor rises from below, reaches it at about 63.9, and the button gives slightly on the press at 64.1 before the cursor drifts away. At 65.1 it cuts to the Notion icon alone, and the wordmark fades in beside it at 65.7. The call to action is a press the viewer watches happen, not a written line."
+    }
+  ],
+  "craft": {
+    "lede": [
+      "A seventy-one second launch film with no voice and almost no cuts. It opens on a conveyor belt of chores that piles into a heap of 628 to-dos and blows away. Then it introduces three AI agents by turning their sidebar icons into characters: a purple checkbox, an orange speech bubble and a teal folder, each with two dot eyes. Each one gets a title and a short demo on real Notion screens. Then the film goes to night and pulls back to show the agents working by the dozen while nobody is watching.",
+      "What is worth learning is how little it invents. The characters are the app's own icons, the busywork is written in the app's own checkbox type, and the demos are real views (a board, a thread, a database) shown in a few seconds each. One repeated entrance, the badge sweeping its title on, turns three features into one system. A hand that flicks a light bulb carries the film from day to night."
+    ],
+    "map": {
+      "lanes": [
+        {
+          "id": "story",
+          "segments": [
+            {
+              "start": 0,
+              "end": 12.4,
+              "label": "Busywork piles up",
+              "note": "Tasks ride a conveyor, fall off the end and heap up into a To-do count of 628."
+            },
+            {
+              "start": 12.4,
+              "end": 14.93,
+              "label": "Bye bye",
+              "note": "The heap blows away, leaving 'Bye bye, busywork.'"
+            },
+            {
+              "start": 14.93,
+              "end": 21.1,
+              "label": "Meet the agents",
+              "note": "Three agents are created in the sidebar, then drawn hands set them down as characters."
+            },
+            {
+              "start": 21.1,
+              "end": 23.1,
+              "label": "24/7",
+              "note": "'They handle repetitive work, 24/7.'"
+            },
+            {
+              "start": 23.1,
+              "end": 33.15,
+              "label": "Route tasks",
+              "note": "The purple agent turns Slack, comment and email requests into prioritized tasks on a board."
+            },
+            {
+              "start": 33.15,
+              "end": 42.6,
+              "label": "Answer questions",
+              "note": "The orange agent answers a flood of 43 questions down to zero."
+            },
+            {
+              "start": 42.6,
+              "end": 52.1,
+              "label": "Write updates",
+              "note": "The teal agent adds this week's status report and writes it; the team reads it."
+            },
+            {
+              "start": 52.1,
+              "end": 63.37,
+              "label": "Day and night",
+              "note": "'Keep work moving all day... ...and night.' A sky full of agents at work."
+            },
+            {
+              "start": 63.37,
+              "end": 65.1,
+              "label": "Make one",
+              "note": "A '+ New Agent' button, pressed."
+            },
+            {
+              "start": 65.1,
+              "end": 70.91,
+              "label": "Notion",
+              "note": "Icon, then wordmark, on navy."
+            }
+          ]
+        },
+        {
+          "id": "voices",
+          "segments": [
+            {
+              "start": 12.4,
+              "end": 14.93,
+              "label": "Bye bye, busywork",
+              "kind": "text"
+            },
+            {
+              "start": 17.25,
+              "end": 19.3,
+              "label": "Hello, Custom Agents",
+              "kind": "text"
+            },
+            {
+              "start": 21.1,
+              "end": 23.0,
+              "label": "Repetitive work, 24/7",
+              "kind": "text"
+            },
+            {
+              "start": 23.1,
+              "end": 24.55,
+              "label": "Route tasks",
+              "kind": "text",
+              "note": "'Route tasks automatically', wiped on by the purple badge."
+            },
+            {
+              "start": 33.25,
+              "end": 34.95,
+              "label": "Answer questions",
+              "kind": "text",
+              "note": "'Answer questions instantly', wiped on by the orange badge."
+            },
+            {
+              "start": 42.6,
+              "end": 44.35,
+              "label": "Write updates",
+              "kind": "text",
+              "note": "'Write updates autonomously', wiped on by the teal badge."
+            },
+            {
+              "start": 52.1,
+              "end": 54.4,
+              "label": "All day…",
+              "kind": "text",
+              "note": "'Keep work moving all day...'"
+            },
+            {
+              "start": 54.4,
+              "end": 55.3,
+              "label": "…and night",
+              "kind": "text",
+              "note": "The second half of the line, across a cut to navy."
+            },
+            {
+              "start": 63.37,
+              "end": 65.1,
+              "label": "+ New Agent",
+              "kind": "text",
+              "note": "The last words are a button label."
+            }
+          ]
+        },
+        {
+          "id": "sound",
+          "segments": [
+            {
+              "start": 0,
+              "end": 4.4,
+              "label": "Near quiet, light ticks",
+              "kind": "music",
+              "note": "Near silence for the first 2.5 seconds, then only sparse high transients while the belt runs."
+            },
+            {
+              "start": 4.4,
+              "end": 10.8,
+              "label": "Bass in blocks",
+              "kind": "music",
+              "note": "Low stabs in blocks about 1.6 seconds apart, with gaps between them."
+            },
+            {
+              "start": 10.8,
+              "end": 13.3,
+              "label": "Build",
+              "kind": "music",
+              "note": "The sound thickens and rises while the count climbs and the heap bursts."
+            },
+            {
+              "start": 13.3,
+              "end": 14.8,
+              "label": "Drop-out",
+              "kind": "silence",
+              "note": "The mix falls toward -50 dB under 'Bye bye, busywork.'"
+            },
+            {
+              "start": 14.8,
+              "end": 51.5,
+              "label": "Full groove",
+              "kind": "music",
+              "note": "The beat drops about a tenth of a second before the cut to the product and runs steady, near 77 BPM by estimate. A brief voice-like chop sits in it at 19.9 to 20.8 as the badges dash off; no words can be made out."
+            },
+            {
+              "start": 51.5,
+              "end": 64.8,
+              "label": "Pitched figures join",
+              "kind": "music",
+              "note": "Short pitched figures appear in the upper range from the status update through the night section."
+            },
+            {
+              "start": 64.8,
+              "end": 65.3,
+              "label": "Stop",
+              "kind": "silence",
+              "note": "The groove cuts out just after the button press."
+            },
+            {
+              "start": 65.3,
+              "end": 68.4,
+              "label": "Soft tail",
+              "kind": "music",
+              "note": "A quieter tail of pitched figures under the logo, without the beat."
+            },
+            {
+              "start": 68.4,
+              "end": 70.91,
+              "label": "Silence",
+              "kind": "silence"
+            }
+          ]
+        },
+        {
+          "id": "picture",
+          "segments": [
+            {
+              "start": 0,
+              "end": 12.4,
+              "label": "Task cards",
+              "kind": "graphics"
+            },
+            {
+              "start": 12.4,
+              "end": 14.93,
+              "label": "Title",
+              "kind": "title"
+            },
+            {
+              "start": 14.93,
+              "end": 17.25,
+              "label": "Sidebar",
+              "kind": "screen"
+            },
+            {
+              "start": 17.25,
+              "end": 23.1,
+              "label": "Hands and badges",
+              "kind": "graphics"
+            },
+            {
+              "start": 23.1,
+              "end": 24.55,
+              "label": "Wipe",
+              "kind": "title"
+            },
+            {
+              "start": 24.55,
+              "end": 33.15,
+              "label": "Requests to board",
+              "kind": "screen"
+            },
+            {
+              "start": 33.15,
+              "end": 34.95,
+              "label": "Wipe",
+              "kind": "title"
+            },
+            {
+              "start": 34.95,
+              "end": 42.6,
+              "label": "Q&A thread",
+              "kind": "screen"
+            },
+            {
+              "start": 42.6,
+              "end": 44.35,
+              "label": "Wipe",
+              "kind": "title"
+            },
+            {
+              "start": 44.35,
+              "end": 52.1,
+              "label": "Status report",
+              "kind": "screen"
+            },
+            {
+              "start": 52.1,
+              "end": 54.4,
+              "label": "Hand flick",
+              "kind": "graphics"
+            },
+            {
+              "start": 54.4,
+              "end": 63.37,
+              "label": "Night swarm",
+              "kind": "graphics"
+            },
+            {
+              "start": 63.37,
+              "end": 65.1,
+              "label": "Button",
+              "kind": "screen"
+            },
+            {
+              "start": 65.1,
+              "end": 70.91,
+              "label": "Logo",
+              "kind": "title"
+            }
+          ]
+        }
+      ]
+    },
+    "aspects": [
+      {
+        "id": "story",
+        "title": "A problem you can count, then three jobs",
+        "paragraphs": [
+          "The structure is simple: show the problem, wave it goodbye, meet the helpers, watch each one work, then show what happens when nobody is watching. The problem gets twelve seconds, which is a lot in a seventy-second film, and it is made physical. Tasks ride a conveyor, more keep landing, the belt runs out and they pile up. Then a purple 'To-do' pill puts a number on the heap, 628, so the feeling of too much becomes a figure.",
+          "The middle is a list of three, and each item has the same shape: a title, a starting state, the agent doing something, an end state. Requests go from an inbox to a prioritized board. Questions go from 43 unread to 0. A database gets this week's report, and readers' avatars stack up beside it. Each demo ends on a result, not on a feature.",
+          "The ending raises the stakes without a new claim. 'Keep work moving all day...' is completed by '...and night.' across a cut to navy, and the camera steps back twice until the three agents are hundreds. The last image before the logo is a button being pressed: the film ends on the viewer making their own."
+        ],
+        "moments": [
+          {
+            "t": 11,
+            "text": "The heap gets a count. Busywork is now a number in the app."
+          },
+          {
+            "t": 41,
+            "text": "The unread count reaches 0: the Q&A demo ends on a result."
+          },
+          {
+            "t": 62,
+            "text": "Stepped back twice, the agents are small marks on a grid. Scale is the last argument."
+          },
+          {
+            "t": 64,
+            "text": "The final beat is a button pressed, not a slogan."
+          }
+        ]
+      },
+      {
+        "id": "voices",
+        "title": "Nine lines, and a button",
+        "paragraphs": [
+          "Nobody speaks. The script is written on screen in short lines of bold black sans, centered, and each is on screen for one or two seconds. They come in pairs and sets. 'Bye bye, busywork.' is answered by 'Hello, Custom Agents.' The three capability lines share a grammar: a verb, an object and an adverb ('Route tasks automatically', 'Answer questions instantly', 'Write updates autonomously').",
+          "The best line is split across a cut. 'Keep work moving all day...' ends on an ellipsis, and '...and night.' picks it up on navy, so the punctuation does the joining. The last words in the film are not a slogan but a button label, '+ New Agent', which a cursor presses.",
+          "Everything else is said by demo data, and it is written to sound like a real office: 'Where's the demo script?', 'Is the .heic fix a top priority?', 'What's the wifi password?'. Those questions explain what a Q&A agent is for faster than a line of copy could."
+        ],
+        "moments": [
+          {
+            "t": 23,
+            "text": "First of three capability lines, all verb, object and adverb."
+          },
+          {
+            "t": 37,
+            "text": "The demo questions are the copy: the wifi password, a conference room."
+          },
+          {
+            "t": 54,
+            "text": "'...and night.' finishes the line from the previous shot."
+          }
+        ]
+      },
+      {
+        "id": "world",
+        "title": "The sidebar icons become the cast",
+        "paragraphs": [
+          "The film builds its world from things already in the product. At 0:16 three agents appear in Notion's real sidebar with small round icons: a purple checkbox, an orange speech bubble, a teal folder. A second later those same icons are characters, drawn bigger with a thick black outline and two dot eyes, and they stay the cast for the rest of the film. Each agent's color then runs through its own section: purple speed lines and title for routing, orange for questions, teal for updates.",
+          "Around them is a small, consistent kit. Warm off-white for day and deep navy for night. Thick black hand-drawn line for the conveyor belt and the outlines. Halftone-stippled hands, like a printed cartoon, that place the badges and later flick the light. Real Notion UI laid flat on the same paper with no device frame and no shadow, so the drawn world and the product share one surface.",
+          "The busywork is written in the product's own type too. The task cards use Notion's checkbox and font, so the opening heap is already a Notion view before the 'To-do' pill confirms it. At night the agents glow and drag their tasks behind them like banners, and the film quietly adds new characters (a light bulb, a plug and more) to suggest there are many more kinds."
+        ],
+        "moments": [
+          {
+            "t": 16,
+            "text": "The three icons as they appear in the real sidebar."
+          },
+          {
+            "t": 18,
+            "text": "The same icons as characters, set down by stippled hands."
+          },
+          {
+            "t": 8,
+            "text": "The heap of chores uses Notion's own checkbox and type."
+          },
+          {
+            "t": 56,
+            "text": "At night the badges glow and tow their tasks like banners."
+          }
+        ]
+      },
+      {
+        "id": "screens",
+        "title": "Each demo is one before-and-after",
+        "paragraphs": [
+          "The product moments are short (about eight seconds each) and each shows one change of state. The UI is real and readable but cropped to the part that matters: a column of message cards, a board, a thread, a database row. The agent never clicks a menu. It flies in and physically moves the work, carrying a stack of requests to To-do, lifting the Urgent card to the top, dropping a new row into a table.",
+          "Counters do the explaining. The heap's count climbs to 628, the questions' unread badge runs up to 43 and back down to 0, and the status page's readers stack up to '+3'. A number changing is understood at a glance, which matters when nobody is speaking.",
+          "The data is specific enough to feel lived in: named people with hand-drawn avatars, priority tags like 'Urgent' for Data Governance, 'New launch date is April 14. Here's the rollout plan.' as a real answer to a real question. It is also legible in a second, which is all it gets."
+        ],
+        "moments": [
+          {
+            "t": 27,
+            "text": "The routing agent carries three requests into To-do."
+          },
+          {
+            "t": 31,
+            "text": "The Urgent card lifted to the top: prioritizing, shown as a move."
+          },
+          {
+            "t": 45,
+            "text": "A new weekly report row dropped on top of the old ones."
+          },
+          {
+            "t": 51,
+            "text": "Readers stack up beside '@Today': the update did its job."
+          }
+        ]
+      },
+      {
+        "id": "frames",
+        "title": "Moving without cutting",
+        "paragraphs": [
+          "There are only about a dozen hard cuts in the film, and most scene changes happen inside the motion. The heap bursts to reveal its own title. A badge sweeps through at huge scale and leaves a line of text in its wake. Messages are carried off one view as the next view slides in. The eye always has something to follow from one idea to the next.",
+          "The few real cuts are placed with care. The cut to the product lands on the beat drop. The cut to night happens in the middle of a flick: the bulb keeps its arc and the hand finishes its follow-through on navy, so the move carries straight over a total change of color. The night pull-back is done in two blinks to empty navy rather than a zoom, so each step out lands as a jump in scale.",
+          "Composition stays centered and open. Titles sit alone in the middle of the frame with a lot of empty paper around them, and the UI is cropped so one column or one thread fills the space. Nothing competes with the badge."
+        ],
+        "moments": [
+          {
+            "t": 12,
+            "text": "The heap explodes and reveals the title in its place."
+          },
+          {
+            "t": 33,
+            "text": "The orange badge drags its title on: a transition and a title in one move."
+          },
+          {
+            "t": 54,
+            "text": "The flick carries across the cut to night, the bulb still in flight."
+          }
+        ]
+      },
+      {
+        "id": "sound",
+        "title": "A held breath before the product",
+        "paragraphs": [
+          "There is no voice and the soundtrack is one music cue; the stems show no separate effects worth naming. It is shaped around three moments. It starts near silent with only light ticks under the belt, adds low stabs in blocks, then thickens and rises while the count climbs and the heap bursts. Then, under 'Bye bye, busywork.', the mix falls to nearly nothing for about a second and a half (from 13.3 to 14.8). The full beat drops at 14.8, a tenth of a second before the cut to the product sidebar.",
+          "From there it is a steady groove, near 77 BPM by estimate (an estimate that can be double or half the felt tempo). The two cuts the detector found do not land on its beat, so it works as a bed, not a metronome. A brief voice-like chop at about 20 seconds falls just as the badges dash off; the separator files it as voice, but there are no clear words. Short pitched figures join from about 51 seconds and carry through the night.",
+          "The ending is placed exactly. The groove stops at about 65 seconds, just after the cursor presses '+ New Agent' and right as the logo appears. A soft tail without the beat carries the wordmark, and it ends at 68.4, leaving the last two and a half seconds silent."
+        ],
+        "moments": [
+          {
+            "t": 13,
+            "text": "The music drops out under the goodbye line."
+          },
+          {
+            "t": 15,
+            "text": "The beat comes back on the cut to the product."
+          },
+          {
+            "t": 65,
+            "text": "The groove stops as the logo arrives; only a soft tail is left."
+          },
+          {
+            "t": 68,
+            "text": "Silence on the wordmark."
+          }
+        ]
+      }
+    ],
+    "patterns": [
+      {
+        "name": "Cast the product's own icons",
+        "text": "Show the icons in the real UI first, then enlarge them, outline them and give them eyes. The characters then point straight back to the product, and each one's color can mark its section.",
+        "t": 18
+      },
+      {
+        "name": "Make the problem a pile with a number",
+        "text": "Show the pain as a physical heap that keeps growing, then attach the product's own counter to it. Viewers feel the mess and read the scale at once.",
+        "t": 11
+      },
+      {
+        "name": "Give every feature the same entrance",
+        "text": "Introduce each capability with an identical move (here the badge sweeping its title on), changing only the color. Repetition makes a list of features read as one system and tells the viewer a new chapter has started.",
+        "t": 23
+      },
+      {
+        "name": "End each demo on a count",
+        "text": "Let a number that goes up or down carry the result: 43 unread to 0, readers stacking to '+3'. With no voice, the counter is the narration.",
+        "t": 41
+      },
+      {
+        "name": "Drop the music before the product",
+        "text": "Pull the cue almost to silence for a second or two before the first product shot, and bring the beat back on the cut. The product arrives as a release.",
+        "t": 15
+      },
+      {
+        "name": "Split a line across a cut",
+        "text": "End the first half on an ellipsis and open the next shot with one, and carry a moving object through the cut. Here a flicked light bulb turns 'all day...' into '...and night.'",
+        "t": 54
+      },
+      {
+        "name": "Step back to show scale",
+        "text": "After showing one of each, cut back twice to wider views until the individuals become a pattern. It makes the 'all the time, everywhere' claim without saying it.",
+        "t": 62
+      },
+      {
+        "name": "End on the button",
+        "text": "Make the call to action a real UI control that a cursor presses, then go to the logo. The viewer sees the first step instead of reading an instruction.",
+        "t": 64
+      }
+    ],
+    "absent": "There are no people on camera, no voiceover, no customers and no numbers about the product itself. The film also skips setup entirely (the triggers and schedules the description mentions are never shown), so it is not a guide to explaining configuration. Study it for building a small motion world out of a product's own UI."
+  }
+}

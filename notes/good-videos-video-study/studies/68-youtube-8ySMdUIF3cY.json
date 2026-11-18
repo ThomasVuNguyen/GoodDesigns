@@ -1,0 +1,1023 @@
+{
+  "note": "SpaceX's 21-minute film of Starship Flight 14, captioned as its first orbital mission. It opens on an engine shutting down and the call not to commit to orbit, then rewinds to dawn and follows the engineers who, by the film's account, overturned that call, chose Hawaii for the landing and lit the deorbit burn. The breakdown follows how mission loop audio, interviews and subtitled room talk are cut together to build tension, and how the frames give a huge vehicle its size.",
+  "transcript_kind": "Local speech recognition, corrected to the on-screen names and the film's own burned-in subtitles; loop calls that could not be made out are left out",
+  "shot_notes": {
+    "0": "Cold open in near darkness: a black wall and a door edge. The film starts by withholding the picture.",
+    "7": "A glowing engine part on a furnace stand, orange light on red walls. The first image of Raptor is something being made, not something flying.",
+    "13": "A pale printed part hangs from a robot arm inside a round chamber. The voice calls Raptor 'one of the most impressive feats of engineering' over the factory, not over a launch.",
+    "43": "A furnace door open on white-hot parts. The line ends on 'pretty scary', the cold open's thesis.",
+    "52": "The booster's engine ring climbs into frame through brown smoke, every bell lit. The camera finds the vehicle from underneath.",
+    "55": "'FLIGHT 14 / September 28, 2026 | First orbital mission' set small at lower right: bold wide caps, a hairline rule, letterspaced small caps. The same lower-third system names every person and place.",
+    "62": "An onboard camera looks along the ship's skin at the curve of the Earth, the sun flaring. The scale jumps from shop floor to orbit in one cut.",
+    "68": "The onboard feed tears into orange horizontal streaks for about a second. The signal breakup is kept, not cleaned.",
+    "75": "The ship's flap against the blue limb of the Earth: the reference image the film returns to whenever it needs to say 'orbit'.",
+    "86": "Monitors in mission control show the same magenta engine-bay feed. The cut carries the picture from the vehicle into the room.",
+    "95": "A controller with a hand at her ear, half her face in shadow. The anomaly is told in faces before the call comes.",
+    "110": "Two men in caps lean toward a screen as the loop says 'we are not committing to orbit'. The setback lands on reactions, not on a graphic.",
+    "112": "The towers seen small through the control room window, controllers' desks in the foreground. People and vehicle share one frame, miles apart.",
+    "125": "Title: 'STARSHIP' resolves letter by letter in thin, wide-spaced caps over the ship in orbit, then gives way to 'GO FOR ORBIT'. A plain fade, held long.",
+    "136": "Dawn over flat water, then the ship's nose rises into frame and through the horizon. The first full view of the vehicle is a silhouette measured against the land.",
+    "149": "Jeremy Pedro, Director, Starship Engineering, framed mid-shot with ship hardware behind him. Every interview is staged in front of the work.",
+    "170": "Lars Blackmore, Sr. Principal Mars Landing Engineer, outdoors against a white factory wall: 'We're trying to make something that's a rocket, but that can act like a spacecraft.'",
+    "174": "A static fire seen from straight above, the vehicle's base in a pool of fire. It leads into the line about a ship that can 'come safely out of orbit and survive'.",
+    "218": "A technician presses a bare, silvery tile into a wall of black ones. 'Refly them on 41.'",
+    "228": "Start of an unbroken twenty-second shot: one bare tile in a field of black hexagons, filling the frame.",
+    "236": "The same shot, pulled back and down: the tile is a speck on the ship's skirt, the booster's steel and the sea now in frame.",
+    "247": "The shot ends on the booster beside the tower, venting white. The pull-back has gone from a hand's width to the whole stack.",
+    "257": "The tower fades up from black as a column of lights in the dark. Near silence except for loop calls.",
+    "263": "'FLIGHT 14 / 7:22 AM | Launch day' over the pad at first light, palms in silhouette. Time of day turns the film into a clock.",
+    "266": "The Starbase control room from the floor, curved light strips across the ceiling. The score returns on this cut.",
+    "287": "A controller in a green cap raises binoculars toward the pad. Distance, acted out.",
+    "289": "The stacked vehicle seen through the control room window over a row of heads. The same composition as the cold open, now on launch morning.",
+    "295": "Liftoff from a camera on the tower: steam and fire fill the frame. The launch is roar for about 22 seconds.",
+    "308": "Wide: the rocket a thin line above two banks of orange steam, clouds above. Scale through weather.",
+    "324": "The ship's flap over the Earth while the loop repeats the cold open's call: 'no-go for orbit'. The film has caught up with its own opening.",
+    "331": "A black card, 'PAYLOAD', in small white caps. Three such cards are the film's only chapter markers.",
+    "346": "The Redmond satellite team at their desks, a screen above them. The customer's room becomes the second stage of the story.",
+    "367": "A man with both hands on his head in Redmond after 'that would be the end of the show'.",
+    "377": "Jeremy Pedro again, on camera: 'Everything pre-flight we had determined, let's do the conservative thing.' The interview takes over from the room, in past tense.",
+    "398": "A controller in a cap rubs his face, subtitled: 'There's a pneumatics leak.' Room talk too quiet to hear is captioned as evidence.",
+    "402": "Two men conferring, subtitled: 'This is why we need more engines on the ship.'",
+    "422": "Shana Diez, Sr. Director, Starship Reliability, outdoors in front of blue launch hardware: 'A development program has a very different risk concept.'",
+    "483": "The ship's engines light for the orbital burn, blue against the dark. The score stops a second into this shot, right after 'Burn 2 startup'.",
+    "500": "Elon Musk, named in the interviews but never captioned, at a console with a hand to his chin beside an older controller.",
+    "513": "'ORBITAL / 26,373 km/hr | Altitude 276 km' over the ship and the Earth. The milestone is stated as two numbers.",
+    "516": "A wide of the Starbase control room as people turn and clap: the first time the room is shown loose.",
+    "560": "Akash Badshah, Sr. Director, Satellite Engineering, at his desk in Redmond: 'I can't say I slept a ton last night.'",
+    "565": "Over a shoulder at a monitor showing the deploy, subtitled: 'First contact.'",
+    "585": "Richard Bielski, Sr. Software Engineer, grinning: 'Gave us a little heart attack there.'",
+    "615": "The ship's camera watches a satellite drift off toward the Earth's limb. The Earth is the ruler.",
+    "640": "A grey long-range tracking image of the whole ship in space, side on, against black: the vehicle seen whole in orbit.",
+    "673": "Jonathan Herman, Sr. Director, Starlink Constellation Engineering, in front of racks of satellites: 'half of all the internet traffic that is on Earth today'.",
+    "734": "A man walks past a wall of racked satellites taller than the frame. A person for scale in the factory.",
+    "777": "'Ship splashdown zones': a dark globe with Starbase marked and an arc running out over the Pacific to a ring around Hawaii. The film's one explanatory graphic.",
+    "781": "An older controller speaks while Elon Musk rubs his forehead beside him. The decision is shown as a room, not a person.",
+    "786": "A man in a cap standing over the consoles, subtitled: 'It's like 90% of the shit that we want.' The swearing stays in.",
+    "804": "The same debate, subtitled: 'Hawaii has a really good runway.'",
+    "829": "Shana Diez explaining long coasts with both hands: the longest any vehicle 'of its caliber and size will ever have coasted'.",
+    "882": "A controller with her hand at her ear, subtitled: 'E also wants to go to Hawaii.'",
+    "891": "At a console, subtitled: 'We're going to Hawaii.' The decision lands as overheard speech.",
+    "909": "The onboard feed breaks into grey blocks for a few frames, and the film cuts out on the breakup to Texas.",
+    "913": "'MCGREGOR, TEXAS / Rocket Development Facility' over test stands reflected in a wet pad.",
+    "973": "Kelly Oliver, Manager, Test Operations, by a pickup truck, telling the origin story: 'Elon came to town and we lit it that evening.'",
+    "997": "Black-and-white high-speed footage of an engine firing horizontally: the early tests he is describing.",
+    "1023": "Jacob McKenzie, VP, Raptor, framed against rows of engines. The backdrop is a production line, not a single hero engine.",
+    "1053": "Jake Berkowitz, Lead Propulsion Engineer, in a hard hat, hand flat to show a temperature gradient. Ten minutes earlier he was named as 'the final go for the engine systems'.",
+    "1070": "Four people stand at a road barrier watching a test plume far off across the grass. People small, the plume beyond them.",
+    "1106": "A console screen reading 'SPLASHDOWN COMMITTED' over a yellow arc. The interface is filmed, never recreated.",
+    "1116": "A controller pulls his headset on, face filling the frame. The burn is played as a run of tight faces.",
+    "1183": "A controller drops his head to the desk, then is grabbed by a colleague. The release after 'Deorbit burn shutdown'.",
+    "1196": "Reentry from the ship's camera: the flap glowing magenta against the dawn line.",
+    "1207": "Fire and debris: the first of a run of what look like earlier test flights, cut fast under 'a handful of unique decision points'. The failures are in the highlight reel.",
+    "1242": "A camera on the sea looks up through cloud at the ship, a dark speck descending.",
+    "1257": "Splashdown from water level at sunset: the plume hits the sea and a bank of steam rolls across the frame.",
+    "1263": "Last shot: a ship on the tower at dusk, pink cloud behind it, over a rehearsal poll for a return to launch site. No celebration, just the next question."
+  },
+  "motion_intro": "There is no motion design worth studying here beyond a plain title fade and one restrained lower-third system. The movement that matters is the camera and the cut working for scale: a booster's engine ring rising into frame, a ship's nose climbing through a dawn horizon, a twenty-second pull-back from one heat tile to the whole stack, a montage of earlier flights that slows as it reaches the present, and a splashdown filmed from the water.",
+  "motion": [
+    {
+      "id": "engine-ring",
+      "start": 48.2,
+      "end": 56.2,
+      "fps": 3,
+      "title": "The engine ring climbs into frame",
+      "tags": [
+        "reveal from below",
+        "slow rise",
+        "lower third",
+        "flash-forward"
+      ],
+      "text": "The shot opens on brown smoke with only the tops of a few lit bells at the bottom edge. Over about four seconds the booster's base rises into frame until, by 52, the full ring and the inner engines fill the lower half, exhaust streaming purple below. At about 53 'FLIGHT 14' fades up at lower right and the date line follows under a hairline rule. The vehicle is introduced by its engines, from beneath, and only partly: the frame is never wide enough to hold it."
+    },
+    {
+      "id": "nose-through-horizon",
+      "start": 133.0,
+      "end": 141.0,
+      "fps": 3,
+      "title": "A ship's nose rises through the horizon",
+      "tags": [
+        "drone descent",
+        "silhouette",
+        "dawn",
+        "reveal"
+      ],
+      "text": "Straight after the title, a level frame of dawn over flat water and mudflats holds empty for a second and a half. At about 134.5 the tip of the ship's nose appears at the bottom edge, and as the camera sinks it rises slowly, a forward flap following at about 137, until by 139 the tip has passed the horizon and by 141 the nose stands above it, black against the pink sky. The move is slow and even, with no cut. The vehicle is measured against the landscape before anyone explains it."
+    },
+    {
+      "id": "tile-to-stack",
+      "start": 228.4,
+      "end": 236.4,
+      "fps": 3,
+      "title": "From one tile to the whole stack",
+      "tags": [
+        "pull-back",
+        "crane down",
+        "unbroken take",
+        "unit of scale"
+      ],
+      "text": "The shot opens on a wall of black hexagonal tiles with one bare tile at the center, the tile the film has just spent a minute on. The camera pulls back and starts to descend: by 232.6 the bottom edge of the ship's tiled skirt enters, at 233.3 the steel structure below it appears, and by 236 the sea and the tower are in frame and the tile is a speck. The take does not cut; it keeps sinking down the booster until 248, with vents starting to steam. A thing you could hold in two hands becomes the unit you measure the rocket by."
+    },
+    {
+      "id": "history-montage",
+      "start": 1205.5,
+      "end": 1213.5,
+      "fps": 4,
+      "title": "A montage of earlier flights that slows down",
+      "tags": [
+        "montage",
+        "flicker cuts",
+        "decelerating",
+        "archive"
+      ],
+      "text": "Out of the onboard engine bay at about 1206.1, the film cuts several times in under a second, then settles into shots of 0.6 to 0.8 s: what look like earlier test flights: fire at the base of a vehicle on the pad, a fireball in the sky, a falling ship trailing smoke, a cheering crowd under a hanging vehicle, a booster's engines lit as it comes down, a booster descending to the tower at sunset. The shots lengthen as the montage nears the present, to about a second by 1217 and three seconds after that. It plays under 'a handful of unique decision points', so the past arrives as a blur and slows down to land on this flight."
+    },
+    {
+      "id": "splashdown",
+      "start": 1251.3,
+      "end": 1259.3,
+      "fps": 3,
+      "title": "Splashdown from the water",
+      "tags": [
+        "water level",
+        "lens flare",
+        "steam bank",
+        "coda"
+      ],
+      "text": "A close shot holds the ship on a bright plume over grey sea, tilting upright. At 1252.9 it cuts to a camera at water level facing the sunset: the ship is small under a dark cloud, descending on its engines, and lens flares bloom as it nears the horizon. At about 1257.5 the plume reaches the water and a bank of steam rolls right across the frame until it swallows the picture, then black at 1260. It is the biggest event of the mission's end, and the film gives it eight seconds with no cheering."
+    }
+  ],
+  "craft": {
+    "lede": [
+      "A 21-minute company film about one flight: Starship Flight 14, captioned 'September 28, 2026 | First orbital mission'. It opens on the moment things go wrong. During the ascent an engine shuts down, the loop says 'we are not committing to orbit', and only then does the title come up. The rest of the film rewinds to dawn, catches up with that call at five and a half minutes, and then follows how, by its own account, the team reversed it, chose where to land and brought the ship back.",
+      "What is worth studying is how it builds tension and scale with almost nothing invented. There is no narrator and no score worth naming. Engineers explain the stakes in interviews, the mission loop reports what happens in clipped present-tense calls, the rooms in Starbase and Redmond react, and when people speak too quietly to hear, the film subtitles them. The vehicle is almost never shown without something to measure it by: a horizon, a tower, a person, the Earth."
+    ],
+    "map": {
+      "lanes": [
+        {
+          "id": "story",
+          "segments": [
+            {
+              "start": 0,
+              "end": 48.2,
+              "label": "The engine is scary",
+              "note": "Raptor parts being made, under one engineer's voice: complex, many ways to go wrong, 'pretty scary'."
+            },
+            {
+              "start": 48.2,
+              "end": 116.4,
+              "label": "Flash-forward: E6 goes out",
+              "note": "Liftoff, staging, boostback, then 'On Anomaly 2, acknowledging Engine 6' and 'we are not committing to orbit'."
+            },
+            {
+              "start": 116.4,
+              "end": 132.9,
+              "label": "Title",
+              "note": "'STARSHIP', then 'GO FOR ORBIT', over the ship in orbit."
+            },
+            {
+              "start": 132.9,
+              "end": 190.7,
+              "label": "What orbit asks",
+              "note": "Demisability, and a rocket that has to act like a spacecraft and relight to come home. YouTube chapter: Orbital flight objectives."
+            },
+            {
+              "start": 190.7,
+              "end": 253.7,
+              "label": "A tile that flew twice",
+              "note": "Heat tiles taken off Ship 40, tested and flown again on 41."
+            },
+            {
+              "start": 253.7,
+              "end": 316.6,
+              "label": "Launch day",
+              "note": "7:22 AM, anticipation, 'Go for launch', 'Flight committed', liftoff."
+            },
+            {
+              "start": 316.6,
+              "end": 331,
+              "label": "The call, again",
+              "note": "The ship in space; the loop repeats the cold open: 'no-go for orbit'."
+            },
+            {
+              "start": 331,
+              "end": 374.4,
+              "label": "The customer hears it",
+              "note": "Redmond's satellite team: 'If they don't commit to orbit, do we have a plan?' 'That would be the end of the show.'"
+            },
+            {
+              "start": 374.4,
+              "end": 483.8,
+              "label": "Reopening the decision",
+              "note": "The conservative rule, the 17-minute coast, Elon questioning the requirements, exec override, the go/no-go poll. YouTube chapter: Managing the engine anomaly."
+            },
+            {
+              "start": 483.8,
+              "end": 534.6,
+              "label": "Burn 2: orbit",
+              "note": "'Burn 2 startup', 'Burn 2 shutdown', 'No alerts or alarms on the board', 'We're in orbit'."
+            },
+            {
+              "start": 534.6,
+              "end": 649.1,
+              "label": "26 satellites",
+              "note": "Deploy, 'First contact', 'All sats in contact', Redmond celebrates."
+            },
+            {
+              "start": 649.1,
+              "end": 750.5,
+              "label": "Why the payload matters",
+              "note": "The Starlink factory: ten times the capacity per satellite, development mode to production mode."
+            },
+            {
+              "start": 750.5,
+              "end": 894.3,
+              "label": "Chile or Hawaii",
+              "note": "Thirty minutes to choose a landing site; the room weighs engine, helium and reentry risk and commits to Hawaii. YouTube chapter: Contingency planning."
+            },
+            {
+              "start": 894.3,
+              "end": 1091.2,
+              "label": "Raptor: will it relight?",
+              "note": "'We need those Raptor engines to work': the test sites in McGregor, the engine's history, deorbit testing."
+            },
+            {
+              "start": 1091.2,
+              "end": 1195.4,
+              "label": "Deorbit burn",
+              "note": "'None of that mattered if you can't get it back.' Startup, shutdown, then the room lets go."
+            },
+            {
+              "start": 1195.4,
+              "end": 1250,
+              "label": "A defining moment",
+              "note": "Reentry, and a montage of earlier flights under 'a handful of unique decision points'."
+            },
+            {
+              "start": 1250,
+              "end": 1270.4,
+              "label": "Splashdown, next poll",
+              "note": "Splashdown in steam, then a ship on the tower under a rehearsal poll for a return to launch site."
+            }
+          ]
+        },
+        {
+          "id": "voices",
+          "segments": [
+            {
+              "start": 13.6,
+              "end": 45.9,
+              "label": "'Pretty scary'",
+              "kind": "interview-vo",
+              "note": "An engineer, unseen, over the factory: the Raptor is impressive, complex, and the last 1% of the mission depends on it."
+            },
+            {
+              "start": 52.2,
+              "end": 113,
+              "label": "Loop: staging to E6",
+              "kind": "commentary",
+              "note": "'T plus one minute, maintaining 33 engines', 'Stage separation', 'ORCU controller reset', 'we are not committing to orbit'."
+            },
+            {
+              "start": 119.5,
+              "end": 132.9,
+              "label": "STARSHIP / GO FOR ORBIT",
+              "kind": "text"
+            },
+            {
+              "start": 137.7,
+              "end": 154.1,
+              "label": "Jeremy Pedro",
+              "kind": "interview",
+              "note": "The risks of a first orbital flight center on the ship's demisability."
+            },
+            {
+              "start": 155,
+              "end": 189.9,
+              "label": "Lars Blackmore",
+              "kind": "interview",
+              "note": "'We're trying to make something that's a rocket, but that can act like a spacecraft.'"
+            },
+            {
+              "start": 193,
+              "end": 231.9,
+              "label": "Tile reflight",
+              "kind": "interview-vo",
+              "note": "'I would have bet you like a year's salary that wasn't going to happen.'"
+            },
+            {
+              "start": 254.5,
+              "end": 265.5,
+              "label": "Loop in the dark",
+              "kind": "commentary",
+              "note": "Terse pre-launch calls over near silence. Too indistinct to transcribe; left out of the transcript."
+            },
+            {
+              "start": 268,
+              "end": 287.6,
+              "label": "Anticipation, go for launch",
+              "kind": "interview-vo",
+              "note": "'This is our first orbital mission... functional Starlinks that will actually serve the constellation.' Then 'Go for launch' and 'Flight committed' on the loop."
+            },
+            {
+              "start": 324.1,
+              "end": 330.2,
+              "label": "'No-go for orbit'",
+              "kind": "commentary",
+              "note": "The same call the cold open ended on."
+            },
+            {
+              "start": 341,
+              "end": 373.2,
+              "label": "Redmond talks it over",
+              "kind": "dialogue",
+              "note": "'I don't know if they will dispense the satellites.' 'That would be the end of the show.'"
+            },
+            {
+              "start": 375,
+              "end": 396,
+              "label": "Jeremy Pedro: the rule",
+              "kind": "interview",
+              "note": "'If the vehicle is unhealthy, do not commit to go to orbit.' 'There's only 17 minutes in that first coast.'"
+            },
+            {
+              "start": 397.1,
+              "end": 406.4,
+              "label": "Overheard, subtitled",
+              "kind": "dialogue",
+              "note": "'There's a pneumatics leak.' 'This is why we need more engines on the ship.'"
+            },
+            {
+              "start": 408,
+              "end": 419.7,
+              "label": "Elon questions it",
+              "kind": "interview-vo",
+              "note": "'Is there anything actually prohibiting us from going forward?'"
+            },
+            {
+              "start": 420.3,
+              "end": 450.4,
+              "label": "Shana Diez: risk",
+              "kind": "interview",
+              "note": "'Take the risk in the place where you can learn the most.' Then: 'Jake was the final go for the engine systems.'"
+            },
+            {
+              "start": 453.1,
+              "end": 468.3,
+              "label": "Override, relayed",
+              "kind": "commentary",
+              "note": "'We have exec override and concurrence... We would like to lift the hold.' Redmond relays it: 'Thanks, Thomas.'"
+            },
+            {
+              "start": 473.7,
+              "end": 483.5,
+              "label": "Go/no-go poll",
+              "kind": "commentary",
+              "note": "'Stage 2's go.' 'Raptor 2's go for orbit.' 'Burn 2 startup.'"
+            },
+            {
+              "start": 488.9,
+              "end": 531.1,
+              "label": "'We're in orbit'",
+              "kind": "commentary",
+              "note": "'Early coast', 'Burn 2 shutdown', 'No alerts or alarms on the board', 'We're in orbit', 'Now for the fun part.'"
+            },
+            {
+              "start": 557.2,
+              "end": 576.1,
+              "label": "Akash Badshah, 'First contact'",
+              "kind": "interview",
+              "note": "Interview cut against ops calls in Redmond: 'First contact' (subtitled), then 'All sats in contact'."
+            },
+            {
+              "start": 581.4,
+              "end": 613.3,
+              "label": "Bielski, Sherman",
+              "kind": "interview",
+              "note": "'Gave us a little heart attack there.' 'It's not just a test ship now, it's a true mission.'"
+            },
+            {
+              "start": 621.9,
+              "end": 639,
+              "label": "A useful purpose",
+              "kind": "interview-vo",
+              "note": "'This is the thing that proves out that, yeah, this rocket has a useful purpose.'"
+            },
+            {
+              "start": 658.3,
+              "end": 747.7,
+              "label": "Jonathan Herman",
+              "kind": "interview",
+              "note": "'All 26 satellites deployed', half of the world's internet traffic, ten times the capacity, 'development mode into production mode'."
+            },
+            {
+              "start": 761.9,
+              "end": 784.2,
+              "label": "Two landing sites",
+              "kind": "interview-vo",
+              "note": "'One in Chile with a nine-hour mission and a backup landing site at Hawaii.'"
+            },
+            {
+              "start": 785.6,
+              "end": 809,
+              "label": "The room debates, subtitled",
+              "kind": "dialogue",
+              "note": "'What are you most worried about?' 'Engine shutdown is an elevated risk.' 'Hawaii has a really good runway.'"
+            },
+            {
+              "start": 812.2,
+              "end": 862.8,
+              "label": "Risk and boil-off",
+              "kind": "interview",
+              "note": "'The real risk is are we... missing something?' Then Shana Diez on the longest coast of any vehicle its size, and keeping cryogenic propellant cold."
+            },
+            {
+              "start": 863.7,
+              "end": 893.1,
+              "label": "'We're going to Hawaii'",
+              "kind": "dialogue",
+              "note": "Room talk and the loop: 'E also wants to go to Hawaii.' 'Confirming we're going to commit to Hawaii.'"
+            },
+            {
+              "start": 894.3,
+              "end": 908.3,
+              "label": "'Engines to work'",
+              "kind": "interview-vo",
+              "note": "The same thought as the cold open's first line: 99% of the way there, but the engines have to work."
+            },
+            {
+              "start": 944.1,
+              "end": 1009.2,
+              "label": "Strimbu, Oliver: test history",
+              "kind": "interview",
+              "note": "A slice of the vehicle in the test bay; the first engine lit horizontally; 'Elon came to town and we lit it that evening.'"
+            },
+            {
+              "start": 1015,
+              "end": 1054.6,
+              "label": "McKenzie, Berkowitz",
+              "kind": "interview",
+              "note": "Full-flow staged combustion; frost on a thrust chamber that is 'half the surface temperature of the sun on the inside'. A countdown on a test stand follows: 'T minus five... zero.'"
+            },
+            {
+              "start": 1073.2,
+              "end": 1089.7,
+              "label": "Zac Strimbu: deorbit tests",
+              "kind": "interview",
+              "note": "'We want to make sure that we can get Starship out of space.'"
+            },
+            {
+              "start": 1092.6,
+              "end": 1097,
+              "label": "Committed to Hawaii",
+              "kind": "commentary"
+            },
+            {
+              "start": 1101.4,
+              "end": 1150.2,
+              "label": "'Can't get it back'",
+              "kind": "interview-vo",
+              "note": "Over faces: circ burn worked, 'but none of that mattered if you can't get it back'; 'what if it doesn't?'"
+            },
+            {
+              "start": 1154.6,
+              "end": 1170.9,
+              "label": "Deorbit calls",
+              "kind": "commentary",
+              "note": "'Deorbit burn startup', then fifteen seconds later 'Deorbit burn shutdown'."
+            },
+            {
+              "start": 1182.8,
+              "end": 1198,
+              "label": "Cheers",
+              "kind": "dialogue",
+              "note": "'We're coming home.' 'We did it.'"
+            },
+            {
+              "start": 1201.1,
+              "end": 1228.7,
+              "label": "Defining moments",
+              "kind": "interview-vo",
+              "note": "'Those calls are kind of the defining moments for the company.'"
+            },
+            {
+              "start": 1233.5,
+              "end": 1258.6,
+              "label": "Rehearsal poll: RTLS",
+              "kind": "commentary",
+              "note": "'This is a rehearsal poll for ship RTLS.' The film ends on a poll for the next mission."
+            }
+          ]
+        },
+        {
+          "id": "sound",
+          "segments": [
+            {
+              "start": 0,
+              "end": 253.6,
+              "label": "Score bed",
+              "kind": "music",
+              "note": "An uncredited score runs under the cold open and the setup. Cuts land on its beat no more often than chance."
+            },
+            {
+              "start": 253.6,
+              "end": 265.5,
+              "label": "Near silence: tower in the dark",
+              "kind": "silence",
+              "note": "The score cuts with the fade to black at 4:13.6; loop calls and room tone only, until the control room cut at 4:25.5."
+            },
+            {
+              "start": 265.5,
+              "end": 294.5,
+              "label": "Score returns",
+              "kind": "music"
+            },
+            {
+              "start": 294.5,
+              "end": 316.6,
+              "label": "Launch roar",
+              "kind": "ambience",
+              "note": "About 22 seconds of broadband roar from liftoff."
+            },
+            {
+              "start": 316.6,
+              "end": 483.8,
+              "label": "Score bed",
+              "kind": "music",
+              "note": "Sits about 7 to 14 dB under the interviews; a pulsing cue under the go/no-go poll."
+            },
+            {
+              "start": 483.8,
+              "end": 510,
+              "label": "Score drops out: Burn 2",
+              "kind": "silence",
+              "note": "The cue stops on 'Burn 2 startup'. Low rumble under the engine shots, then near silence under 'No alerts or alarms on the board'."
+            },
+            {
+              "start": 510,
+              "end": 644,
+              "label": "Score back for orbit",
+              "kind": "music",
+              "note": "Creeps back in at about 8:30, two seconds before the ORBITAL lower third and four before 'We're in orbit'."
+            },
+            {
+              "start": 644,
+              "end": 656.5,
+              "label": "Pause at Redmond dawn",
+              "kind": "silence"
+            },
+            {
+              "start": 656.5,
+              "end": 947,
+              "label": "Score bed",
+              "kind": "music"
+            },
+            {
+              "start": 947,
+              "end": 992,
+              "label": "Test site sound",
+              "kind": "ambience",
+              "note": "The score all but drops out for the McGregor interviews until an engine fires at 16:32."
+            },
+            {
+              "start": 992,
+              "end": 1270.4,
+              "label": "Score to the end",
+              "kind": "music",
+              "note": "Under the deorbit burn, the release and the montage, out to the last shot."
+            }
+          ]
+        },
+        {
+          "id": "picture",
+          "segments": [
+            {
+              "start": 0,
+              "end": 48.2,
+              "label": "Raptor parts being made",
+              "kind": "b-roll"
+            },
+            {
+              "start": 48.2,
+              "end": 85.5,
+              "label": "Ascent, onboard cameras",
+              "kind": "footage"
+            },
+            {
+              "start": 85.5,
+              "end": 116.4,
+              "label": "Faces in mission control",
+              "kind": "b-roll"
+            },
+            {
+              "start": 116.4,
+              "end": 132.9,
+              "label": "Title over orbit",
+              "kind": "title"
+            },
+            {
+              "start": 132.9,
+              "end": 153.9,
+              "label": "Ship at dawn, Pedro",
+              "kind": "b-roll"
+            },
+            {
+              "start": 153.9,
+              "end": 190.7,
+              "label": "Night pad, static fire, Blackmore",
+              "kind": "footage"
+            },
+            {
+              "start": 190.7,
+              "end": 228.3,
+              "label": "Tile tests and install",
+              "kind": "b-roll"
+            },
+            {
+              "start": 228.3,
+              "end": 248.1,
+              "label": "One take: tile to tower",
+              "kind": "b-roll",
+              "note": "An unbroken twenty-second pull-back from a single heat tile to the booster and tower."
+            },
+            {
+              "start": 248.1,
+              "end": 265.6,
+              "label": "Vapor, tower at dawn",
+              "kind": "b-roll"
+            },
+            {
+              "start": 265.6,
+              "end": 293.6,
+              "label": "Room and pad",
+              "kind": "b-roll"
+            },
+            {
+              "start": 293.6,
+              "end": 331,
+              "label": "Liftoff to space",
+              "kind": "footage"
+            },
+            {
+              "start": 331,
+              "end": 334.6,
+              "label": "PAYLOAD",
+              "kind": "title"
+            },
+            {
+              "start": 334.6,
+              "end": 376.9,
+              "label": "Redmond room",
+              "kind": "b-roll"
+            },
+            {
+              "start": 376.9,
+              "end": 483.8,
+              "label": "Both rooms decide",
+              "kind": "b-roll",
+              "note": "Starbase control, subtitled room talk, interviews with Jeremy Pedro and Shana Diez, pad inserts."
+            },
+            {
+              "start": 483.8,
+              "end": 516.1,
+              "label": "Burn 2, ORBITAL",
+              "kind": "footage"
+            },
+            {
+              "start": 516.1,
+              "end": 534.6,
+              "label": "Applause, two rooms",
+              "kind": "b-roll"
+            },
+            {
+              "start": 534.6,
+              "end": 559.3,
+              "label": "Ship and payload bay",
+              "kind": "footage"
+            },
+            {
+              "start": 559.3,
+              "end": 613.4,
+              "label": "Badshah, Bielski, Sherman",
+              "kind": "interview"
+            },
+            {
+              "start": 613.4,
+              "end": 649.1,
+              "label": "Satellites drift off",
+              "kind": "footage"
+            },
+            {
+              "start": 649.1,
+              "end": 671.4,
+              "label": "Redmond dawn, factory",
+              "kind": "b-roll"
+            },
+            {
+              "start": 671.4,
+              "end": 750.5,
+              "label": "Herman in the factory",
+              "kind": "interview"
+            },
+            {
+              "start": 750.5,
+              "end": 770.8,
+              "label": "TRAJECTORY, feeds",
+              "kind": "b-roll"
+            },
+            {
+              "start": 770.8,
+              "end": 781.3,
+              "label": "Splashdown zones",
+              "kind": "graphics"
+            },
+            {
+              "start": 781.3,
+              "end": 832.3,
+              "label": "The Hawaii debate",
+              "kind": "b-roll"
+            },
+            {
+              "start": 832.3,
+              "end": 866.1,
+              "label": "Ship over Earth",
+              "kind": "footage"
+            },
+            {
+              "start": 866.1,
+              "end": 894,
+              "label": "Faces, 'Hawaii'",
+              "kind": "b-roll"
+            },
+            {
+              "start": 894,
+              "end": 909.3,
+              "label": "Engine bay, ship",
+              "kind": "footage"
+            },
+            {
+              "start": 909.3,
+              "end": 959.2,
+              "label": "McGregor test stands",
+              "kind": "b-roll"
+            },
+            {
+              "start": 959.2,
+              "end": 991.7,
+              "label": "Strimbu, Oliver",
+              "kind": "interview"
+            },
+            {
+              "start": 991.7,
+              "end": 1015.7,
+              "label": "Early test footage",
+              "kind": "archive"
+            },
+            {
+              "start": 1015.7,
+              "end": 1054.9,
+              "label": "McKenzie, Berkowitz",
+              "kind": "interview"
+            },
+            {
+              "start": 1054.9,
+              "end": 1091.2,
+              "label": "Test fire, onlookers",
+              "kind": "b-roll"
+            },
+            {
+              "start": 1091.2,
+              "end": 1094.2,
+              "label": "DEORBIT BURN",
+              "kind": "title"
+            },
+            {
+              "start": 1094.2,
+              "end": 1177.3,
+              "label": "Faces through the burn",
+              "kind": "b-roll"
+            },
+            {
+              "start": 1177.3,
+              "end": 1195.4,
+              "label": "Release",
+              "kind": "b-roll"
+            },
+            {
+              "start": 1195.4,
+              "end": 1203,
+              "label": "Reentry",
+              "kind": "footage"
+            },
+            {
+              "start": 1203,
+              "end": 1230.2,
+              "label": "Earlier flights, fast",
+              "kind": "archive"
+            },
+            {
+              "start": 1230.2,
+              "end": 1260,
+              "label": "Reentry, splashdown",
+              "kind": "footage"
+            },
+            {
+              "start": 1260,
+              "end": 1270.4,
+              "label": "Ship on the tower",
+              "kind": "b-roll"
+            }
+          ]
+        }
+      ]
+    },
+    "aspects": [
+      {
+        "id": "story",
+        "title": "Open on the setback, then earn it back",
+        "paragraphs": [
+          "The film starts at its lowest point. Over the first 48 seconds of engine parts being made, one engineer says the Raptor is impressive, complex and 'pretty scary' to rely on. Then the flight: staging, boostback, a call acknowledging Engine 6, an 'ORCU controller reset', and 'we are not committing to orbit'. Only after that does the title appear. When the film rewinds to dawn, the viewer already knows the problem is coming, so the question is never what happens but what these people will do about it. At 5:24 the loop repeats the cold open's call over the ship in space, and the story has caught up with itself.",
+          "From there it is built around three decisions, and each one follows the same shape: an engineer explains the stakes in an interview, the room argues, and the loop delivers the outcome. Jeremy Pedro explains the conservative flight rule and Shana Diez the risk calculus of a development program before 'We have exec override and concurrence'. The landing-site interview and a subtitled room debate come before 'Confirming we're going to commit to Hawaii'. Zac Strimbu on deorbit testing comes before 'Deorbit burn startup'. The viewer is always taught what could go wrong just before it might.",
+          "The apparent detours are placed to pay off. The reflown heat tile sets up survival and reuse. The Starlink factory chapter explains why the payload mattered to the people in Redmond. The longest detour, the history of Raptor testing, sits between 'commit to Hawaii' and the deorbit burn, so it both explains why the burn is frightening (the engine has to relight after a long coast) and makes the viewer wait for it. The YouTube chapters follow these turns closely.",
+          "The emotional peak is not the launch or the splashdown. It is 'Deorbit burn shutdown', when a room of controllers who have been shown in tight close-ups for over a minute finally lets go. The splashdown gets eight seconds near the end with no cheering, and the last shot is a ship on the tower under a rehearsal poll for a return to launch site. That bookends the very first line, about 'a historic return to launch site mission', and leaves the film on the next question rather than a victory lap."
+        ],
+        "moments": [
+          {
+            "t": 110,
+            "text": "Faces lean toward a screen as the loop says 'we are not committing to orbit'. The title comes after this, not before."
+          },
+          {
+            "t": 324,
+            "text": "The cold open's call returns over the ship in space: the story has caught up with its opening."
+          },
+          {
+            "t": 891,
+            "text": "'We're going to Hawaii', overheard and subtitled: the second decision lands."
+          },
+          {
+            "t": 1183,
+            "text": "The release comes after the deorbit burn, the decision that mattered most."
+          },
+          {
+            "t": 1263,
+            "text": "The last shot sits under a rehearsal poll for the next mission."
+          }
+        ]
+      },
+      {
+        "id": "voices",
+        "title": "Interviews explain, the loop reports, the room reacts",
+        "paragraphs": [
+          "There is no narrator. The script is assembled from four sources, and each has one job. Eleven named people, captioned with their titles, explain in past tense and plain words ('So everything looked great until Engine 6 went out'). The mission loop reports in clipped present tense, full of jargon nobody stops to define: E6, ORCU, Burn 2, 'exec override and concurrence'. The rooms in Starbase and Redmond react. On-screen text does the rest: locator titles with the time of day, one stat line for orbit, and three black chapter cards, 'PAYLOAD', 'TRAJECTORY' and 'DEORBIT BURN'.",
+          "The division matters because the interviews never give away an outcome. Everyone on camera knows how the flight ended, but the result always arrives through the loop, as a live call. That is how a film made after the fact keeps its suspense: the people who know explain the stakes, and the record delivers the news.",
+          "When the room talks too quietly to hear, the film subtitles it. 'There's a pneumatics leak.' 'This is why we need more engines on the ship.' During the landing debate: 'What are you most worried about?' 'Engine shutdown is an elevated risk.' 'Hawaii has a really good runway.' 'E also wants to go to Hawaii.' The subtitles are sparse, used only where the speech is otherwise lost, and they turn murmured asides into evidence that the decision was argued by people, not announced.",
+          "The customer gets a voice too. The Redmond satellite team hears 'not committing' and says it plainly: 'That would be the end of the show.' Later, Richard Bielski thanks the Starship team for giving them 'a little heart attack'. Names also carry across the film: 'Jake was the final go for the engine systems' at 7:26, and Jake Berkowitz turns up ten minutes later in a hard hat explaining frost on a thrust chamber."
+        ],
+        "moments": [
+          {
+            "t": 377,
+            "text": "Jeremy Pedro, on camera and in past tense, on the conservative flight rule."
+          },
+          {
+            "t": 398,
+            "text": "Murmured room talk, subtitled: 'There's a pneumatics leak.'"
+          },
+          {
+            "t": 367,
+            "text": "Redmond, just after 'that would be the end of the show'."
+          },
+          {
+            "t": 804,
+            "text": "The landing debate, subtitled line by line."
+          },
+          {
+            "t": 1053,
+            "text": "Jake Berkowitz, named as 'the final go' ten minutes before we meet him."
+          }
+        ]
+      },
+      {
+        "id": "frames",
+        "title": "Always give the vehicle a ruler",
+        "paragraphs": [
+          "The film almost never shows the rocket on its own. It measures it against something you already know the size of. At dawn the ship's nose rises through a flat horizon. It stands between dark towers, beside a floodlit wall, reflected in standing water under a big sky. From the control room it is seen through the window over a row of heads, and a controller raises binoculars to look at it. In orbit it is the Earth's curve, and the satellites drifting off toward it. At the end it is a speck under cloud, filmed from the sea.",
+          "The best single example is a twenty-second unbroken shot at 3:48. It starts on one bare heat tile in a field of black hexagons, the tile the film has just watched being tested, handled and pressed on by a technician. The camera pulls back and sinks until the tile is a speck on the ship's skirt, then keeps going down the booster to the tower and the sea. A thing you could hold becomes the unit you measure the rocket by.",
+          "People are framed the opposite way. In mission control the camera is tight: faces half lit by screens, hands at mouths, brows and headsets, often one person to a frame. During the deorbit burn they come in a long run, one after another. The alternation does the work, a vehicle too big for the frame, then a face that fills it. It also keeps the drama on the people, which is where the story puts it.",
+          "Light and time of day add weight. The vehicle is mostly shown at dawn, dusk or night, as a silhouette or under floodlights. The pad fades up from black at 4:14 as a column of lights, and locators turn the day into a clock: 5:57 AM in Redmond, 7:22 AM on launch day."
+        ],
+        "moments": [
+          {
+            "t": 136,
+            "text": "The ship's nose rising through the dawn horizon: size measured against land."
+          },
+          {
+            "t": 236,
+            "text": "The reflown tile, now a speck on the ship's skirt, partway through one unbroken take."
+          },
+          {
+            "t": 289,
+            "text": "The stack seen through the control room window, over the heads of the people flying it."
+          },
+          {
+            "t": 1070,
+            "text": "Four onlookers at a barrier, a test plume far beyond them."
+          },
+          {
+            "t": 1116,
+            "text": "The other scale: a controller's face filling the frame during the burn."
+          }
+        ]
+      },
+      {
+        "id": "sound",
+        "title": "Where the score steps out",
+        "paragraphs": [
+          "The music is not the point. An uncredited score runs under most of the film, usually sitting 7 to 14 dB below the interviews, and the cuts land on its beat no more often than chance would give. What is worth learning is where it stops. At 4:13.6 the score cuts with a fade to black, the pad fades up as a column of lights, and for twelve seconds there is only room tone and loop calls. The score comes back at 4:25.5, on the cut to the control room.",
+          "The orbital burn is handled the same way. By the stems, a pulsing cue under the go/no-go poll stops at 8:03.8, right on 'Burn 2 startup'. What follows is low rumble under the engine shots, then near silence from about 8:22 to 8:30 under 'No alerts or alarms on the board'. Music creeps back at about 8:30, the 'ORBITAL' lower third lands at 8:32 and 'We're in orbit' at 8:34.6. Elsewhere the track gives way to the real thing: about 22 seconds of launch roar from 4:54, and natural sound at the McGregor test site until an engine fires at 16:32."
+        ],
+        "moments": [
+          {
+            "t": 257,
+            "text": "The pad in darkness: no score, only loop calls."
+          },
+          {
+            "t": 505,
+            "text": "A controller's face in the near silence before 'We're in orbit'."
+          },
+          {
+            "t": 513,
+            "text": "The score is back as 'ORBITAL' arrives."
+          }
+        ]
+      },
+      {
+        "id": "trust",
+        "title": "Leave the problems in",
+        "paragraphs": [
+          "This is a company film about its own flight, so everything in it is the company's account. What makes it credible is how much it leaves in. It opens on the failure. It keeps the jargon unexplained and the loop calls clipped. It keeps the swearing: 'It's like 90% of the shit that we want', 'are we fucking up and missing something?', 'Fuck yeah' when the burn ends. It keeps onboard video tearing into streaks at 1:08 and breaking into blocks at 15:09. It shows the CEO questioning the requirements and an older controller doing the talking while he rubs his forehead.",
+          "It shows the plan B. The original call not to proceed is explained, not hidden; the customer's doubt is on camera; the landing site is chosen by argument, with the risks named out loud. Numbers are specific and sparing: 26 satellites, 17 minutes of coast, 30 minutes to decide, a nine-hour mission to Chile, '26,373 km/hr | Altitude 276 km'. Every person who explains something is named with a real job title, and the closing montage of earlier flights includes vehicles exploding. The failures are in the highlight reel."
+        ],
+        "moments": [
+          {
+            "t": 68,
+            "text": "The onboard feed tears into streaks, and the film leaves it in."
+          },
+          {
+            "t": 786,
+            "text": "The swearing stays, subtitled."
+          },
+          {
+            "t": 513,
+            "text": "Orbit stated as two numbers, nothing more."
+          },
+          {
+            "t": 1207,
+            "text": "An earlier vehicle breaking up, in the closing montage."
+          }
+        ]
+      }
+    ],
+    "patterns": [
+      {
+        "name": "Open on the crisis, then rewind",
+        "text": "Start at the worst moment, put the title after it, then go back to the beginning. The viewer stops asking what happens and starts asking how these people will handle it.",
+        "t": 110
+      },
+      {
+        "name": "Let interviews pose the question and the record answer it",
+        "text": "Have the people who know the outcome explain only the stakes, in past tense. Deliver every result through live audio, so a film made afterwards still plays as if it is happening now.",
+        "t": 422
+      },
+      {
+        "name": "Subtitle what the room says under its breath",
+        "text": "When real talk is too quiet to hear, caption it, sparingly. Overheard asides read as evidence and show a decision being argued, not announced.",
+        "t": 804
+      },
+      {
+        "name": "Give every big object a ruler",
+        "text": "Frame the vehicle against a horizon, a person, a window or the Earth, and once, pull back in a single take from something you could hold to the whole machine.",
+        "t": 236
+      },
+      {
+        "name": "Delay the payoff with the backstory it depends on",
+        "text": "Put the explanation of why the next moment is dangerous right before it, so the detour both teaches and makes the viewer wait.",
+        "t": 913
+      },
+      {
+        "name": "Cut the music where the outcome is decided",
+        "text": "Let the score stop on the call that starts the critical moment and leave the loop and room tone alone until the result lands.",
+        "t": 505
+      },
+      {
+        "name": "Put the peak on the decision, not the spectacle",
+        "text": "Spend the big emotional release on the moment that mattered to the people, and give the spectacle that follows a few quiet seconds.",
+        "t": 1183
+      },
+      {
+        "name": "End on the next question",
+        "text": "Close on a quiet image and a line that points at the next mission, ideally one that echoes the first line of the film.",
+        "t": 1263
+      }
+    ],
+    "absent": "There is no narrator, no animation beyond one globe and a lower-third system, and no music worth studying for its own sake. It is not a film for motion graphics, product screens or score; it is a film for structure, sourcing a script from real audio, and making size felt."
+  }
+}

@@ -1,0 +1,392 @@
+{
+  "note": "Notion's 30-second spot for Enterprise Search, with no voice at all. Engravings of people peering through telescopes give way to the things nobody ever found (Nessie, a kraken, a UFO, Bigfoot, the Grail at the Round Table), then one unbroken stretch of product: a search for 'Project Camelot' by a user named Arthur. The breakdown follows how two lines of text, a myth montage and demo data written inside the joke carry the whole argument.",
+  "no_transcript": "No speech. The script is three lines of on-screen text and one typed search; the Craft map below lays them out.",
+  "shot_notes": {
+    "0": "Cold open on an engraving: one man points at the sky while another sights a long telescope. Black-and-white line work, no type, no logo.",
+    "1": "A comet crossing an engraved sky, the telescope barrel cutting in from the edge of frame. Searching, from the other end of the lens.",
+    "2": "A third engraving, a man with a telescope against a ladder of masts. Each image lasts under a second.",
+    "3": "A scan of a fantastical airship floating on cream paper, the paper edge left in. The archive is shown as an object, not just an image.",
+    "5": "A sailor sweeping the horizon with a telescope. Five searchers in five seconds, all looking out of frame.",
+    "7": "The first line on white, centered in small black sans: 'Some things weren't meant to be found.' The archive stops dead for it.",
+    "9": "Nessie as the famous long-necked silhouette on grey water: the first thing never found.",
+    "10": "An engraved kraken wrapping a sailing ship in a storm.",
+    "11": "A flying saucer over a park bench at dusk, grainy black and white.",
+    "12": "A horseman small in front of the Sphinx in a black-and-white desert. The myths widen from monsters to mysteries.",
+    "13": "First color in the film: a medieval tapestry of a lady, a unicorn and a falcon on red millefleurs. A whip pan runs from here to the unicorn.",
+    "14": "A manuscript illumination of knights at the Round Table with a gold vessel at its center: the Grail, the last thing never found, and the hinge into the product.",
+    "15": "The second line on the same white card: 'Answers to your work questions shouldn't be one of them.' The couplet completes.",
+    "17": "Notion's home view: 'Good afternoon, Arthur', with recent pages named Round Table Build, Chainmail Launch, Quest Timelines and Squire Program.",
+    "18": "The camera has pushed into the Ask box until it fills the frame, cursor resting in it.",
+    "19": "'Project Ca' typed at headline size, the text sliding left as the cursor runs off the frame.",
+    "20": "'Thinking' with three colored dots, alone on white. The only wait in the film, about half a second.",
+    "21": "Results for 'Project Camelot launch', with source tabs for Notion, Slack, GitHub, Drive and Jira and a summary below. The result count climbs.",
+    "23": "Same view at 31 results, the tab underline moved to Slack and the list re-sorted to match.",
+    "25": "The interface shrinks onto a yellow card under 'Search every app → Try Notion AI for work', with Notion's line-drawn face badge at its corner.",
+    "27": "End card: the Notion wordmark alone on warm grey. The music has a second left before it stops."
+  },
+  "motion_intro": "Almost all the movement is cutting. The first fifteen seconds are still images held for under a second each, and the motion that matters sits in three places: a whip pan across a tapestry that hands the montage to the Round Table, an unbroken product take that pushes into the search box and types the query at headline size, and a closing move that shrinks the interface onto a yellow card before the wordmark.",
+  "motion": [
+    {
+      "id": "whip-to-grail",
+      "start": 13.0,
+      "end": 14.9,
+      "fps": 12,
+      "title": "Whip pan from the tapestry to the Grail",
+      "tags": [
+        "whip pan",
+        "motion blur",
+        "hard cut",
+        "color arrives"
+      ],
+      "text": "The tapestry holds for half a second, then whips right in one smeared frame and lands on the unicorn's head. At about 14.6 it cuts to the Round Table with the Grail at its center. The whip is the only camera move in the montage, and it marks the jump from black-and-white monsters to the color legend the product will borrow."
+    },
+    {
+      "id": "type-the-query",
+      "start": 17.2,
+      "end": 21.2,
+      "fps": 6,
+      "title": "Push into the search box and type at headline size",
+      "tags": [
+        "push in",
+        "type-on",
+        "follow the cursor",
+        "loading state"
+      ],
+      "text": "From the home view the frame pushes into the Ask box in about a second, until the placeholder is the only thing on screen. 'Project Camelot' is then typed one or two letters a frame at display size, and the text slides left to keep the cursor in frame. It cuts to a lone 'Thinking' with three dots for half a second and then to results. The query is set as large as the title cards, so it reads as the film's next line."
+    },
+    {
+      "id": "results-to-card",
+      "start": 21.0,
+      "end": 27.5,
+      "fps": 4,
+      "title": "Results count up, then shrink onto a yellow card",
+      "tags": [
+        "counter",
+        "tab slide",
+        "scale down",
+        "end card"
+      ],
+      "text": "The result count climbs from 18 to 31 in about a second while the tab underline slides from Notion to Slack. At 24.5 the whole interface scales down onto a yellow field under the headline, and the underline keeps moving, now to GitHub and Drive, so the claim 'every app' is acted out on the card itself. At 26.9 it cuts to the wordmark on warm grey, fading up over a couple of frames."
+    }
+  ],
+  "craft": {
+    "lede": [
+      "A thirty-second argument made entirely from two lines of text and a stack of old pictures. The first line, 'Some things weren't meant to be found', is proved by a montage of things nobody ever found. The second, 'Answers to your work questions shouldn't be one of them', turns the joke onto the product. Then the film stops cutting and shows a single search.",
+      "What makes it worth studying is how far the idea is carried. The searchers are engravings of people with telescopes, the last legend is the Grail at the Round Table, and the product demo belongs to a user named Arthur searching for Project Camelot. The demo data is written inside the joke."
+    ],
+    "map": {
+      "lanes": [
+        {
+          "id": "story",
+          "segments": [
+            {
+              "start": 0,
+              "end": 6.74,
+              "label": "People have always searched",
+              "note": "Five engravings of searchers with telescopes, under a second each."
+            },
+            {
+              "start": 6.74,
+              "end": 9.48,
+              "label": "The setup line",
+              "note": "'Some things weren't meant to be found.'"
+            },
+            {
+              "start": 9.48,
+              "end": 15.28,
+              "label": "Proof: never found",
+              "note": "Nessie, a kraken, a UFO, Bigfoot, the Sphinx, the unicorn, the Grail."
+            },
+            {
+              "start": 15.28,
+              "end": 17.3,
+              "label": "The turn",
+              "note": "'Answers to your work questions shouldn't be one of them.'"
+            },
+            {
+              "start": 17.3,
+              "end": 24.5,
+              "label": "Found in seconds",
+              "note": "One search for Project Camelot, from home view to answer."
+            },
+            {
+              "start": 24.5,
+              "end": 30.2,
+              "label": "The ask",
+              "note": "'Search every app → Try Notion AI for work', then the wordmark."
+            }
+          ]
+        },
+        {
+          "id": "voices",
+          "segments": [
+            {
+              "start": 6.74,
+              "end": 9.48,
+              "label": "Some things weren't meant to be found",
+              "kind": "text"
+            },
+            {
+              "start": 15.28,
+              "end": 17.3,
+              "label": "Answers… shouldn't be one of them",
+              "kind": "text"
+            },
+            {
+              "start": 18.6,
+              "end": 20.3,
+              "label": "Project Camelot (typed)",
+              "kind": "text",
+              "note": "The search query, typed at the same size as a title."
+            },
+            {
+              "start": 24.5,
+              "end": 26.86,
+              "label": "Search every app",
+              "kind": "text"
+            }
+          ]
+        },
+        {
+          "id": "sound",
+          "segments": [
+            {
+              "start": 0,
+              "end": 13.5,
+              "label": "One music cue, steady pulse",
+              "kind": "music",
+              "note": "A single cue at an even pulse, near 83 BPM by estimate. Cuts do not follow its beat."
+            },
+            {
+              "start": 13.5,
+              "end": 25,
+              "label": "A sustained pitched line joins",
+              "kind": "music",
+              "note": "Enters with the tapestry and the Grail and holds under the product. The separator files it with voices, so it may be a sung or voice-like tone, but there are no words."
+            },
+            {
+              "start": 25,
+              "end": 28,
+              "label": "Cue resolves",
+              "kind": "music"
+            },
+            {
+              "start": 28,
+              "end": 30.2,
+              "label": "Silence on the wordmark",
+              "kind": "silence"
+            }
+          ]
+        },
+        {
+          "id": "picture",
+          "segments": [
+            {
+              "start": 0,
+              "end": 6.74,
+              "label": "Engravings",
+              "kind": "archive"
+            },
+            {
+              "start": 6.74,
+              "end": 9.48,
+              "label": "Line 1",
+              "kind": "title"
+            },
+            {
+              "start": 9.48,
+              "end": 15.28,
+              "label": "Myths and legends",
+              "kind": "archive"
+            },
+            {
+              "start": 15.28,
+              "end": 17.3,
+              "label": "Line 2",
+              "kind": "title"
+            },
+            {
+              "start": 17.3,
+              "end": 24.5,
+              "label": "One unbroken search",
+              "kind": "screen"
+            },
+            {
+              "start": 24.5,
+              "end": 26.86,
+              "label": "Yellow card",
+              "kind": "screen"
+            },
+            {
+              "start": 26.86,
+              "end": 30.2,
+              "label": "Wordmark",
+              "kind": "title"
+            }
+          ]
+        }
+      ]
+    },
+    "aspects": [
+      {
+        "id": "story",
+        "title": "A setup, a list and a punchline",
+        "paragraphs": [
+          "The structure is a joke told slowly. A premise (people have always searched), a setup line, a list of examples, and a turn that lands on the viewer's own problem. Each part has one job, and none of them names the product until the list has done its work.",
+          "The list is ordered. It starts with monsters people half believe in, Nessie and a kraken, moves through grainy evidence, a UFO and Bigfoot, widens to a historical mystery at the Sphinx, and ends on a legend, the Grail. Each step is a little older and a little more mythic, so the last image is the biggest thing never found, and it is also the bridge into the product's world."
+        ],
+        "moments": [
+          {
+            "t": 7,
+            "text": "The setup line stops the archive dead on a white card."
+          },
+          {
+            "t": 14,
+            "text": "The Grail at the Round Table closes the list and opens the Arthurian thread."
+          },
+          {
+            "t": 15,
+            "text": "The punchline arrives in the same type, on the same card, so it reads as the second half of one sentence."
+          }
+        ]
+      },
+      {
+        "id": "voices",
+        "title": "No voice, two lines",
+        "paragraphs": [
+          "Nobody speaks. The script is a couplet split across six seconds of pictures: 'Some things weren't meant to be found' and 'Answers to your work questions shouldn't be one of them'. Both are set small, centered and black on white, with nothing else in frame, so each reads in a breath and the pictures between them do the arguing.",
+          "The third piece of text is the search itself. 'Project Camelot' is typed at headline size, bigger than either line, so the product's input becomes the film's next sentence. The closing 'Search every app' is the only line that sells, and it arrives after the product has already shown it."
+        ],
+        "moments": [
+          {
+            "t": 19,
+            "text": "The typed query is set larger than the title cards."
+          },
+          {
+            "t": 25,
+            "text": "The only selling line comes last, over a demonstration of itself."
+          }
+        ]
+      },
+      {
+        "id": "frames",
+        "title": "Two textures, two tempos",
+        "paragraphs": [
+          "The film is built on contrast. The first half is dense black-and-white line work, grain and old paper; the second half is Notion's empty white interface. The jump from crosshatching to white space makes the product feel clear before anything happens on it.",
+          "The tempo changes too. Until 15 seconds the cuts come every 0.6 to 0.9 seconds, eighteen of them. From 15.3 to 26.9 there are no hard cuts at all: one continuous take from the second line through the home view, the search, the results and the card. Slowing the cutting is how the film tells you where to look.",
+          "Every searcher in the opening looks out of frame, up and away. The legends that follow sit centered and still. Searching moves; the things never found just wait."
+        ],
+        "moments": [
+          {
+            "t": 0,
+            "text": "Searchers look up and out of frame, telescopes raised."
+          },
+          {
+            "t": 3,
+            "text": "The airship scan keeps its paper edge, so the archive feels handled."
+          },
+          {
+            "t": 17,
+            "text": "The first frame of the unbroken product take: white space after fifteen seconds of crosshatching."
+          }
+        ]
+      },
+      {
+        "id": "world",
+        "title": "Demo data written inside the joke",
+        "paragraphs": [
+          "The montage ends on the Round Table, and the product picks up the same story. The workspace greets 'Arthur'. His recent pages are Round Table Build, Chainmail Launch, Quest Timelines and Squire Program. He searches for Project Camelot, and the answer is about a UI redesign launching on September 30, 2025.",
+          "None of this is pointed out. Viewers who catch it get a second laugh; those who miss it still see a believable workspace. It also means the product shots do not break the spell of the opening: the film stays in one world from the first engraving to the last result."
+        ],
+        "moments": [
+          {
+            "t": 17,
+            "text": "'Good afternoon, Arthur', with Round Table Build and Squire Program in the recents."
+          },
+          {
+            "t": 21,
+            "text": "The answer to Project Camelot: an ordinary product launch, with a date and a scope."
+          }
+        ]
+      },
+      {
+        "id": "screens",
+        "title": "One search, shown as a performance",
+        "paragraphs": [
+          "The product is shown as a single task from start to finish, with nothing skipped and nothing explained. The frame pushes into the Ask box until it fills the screen, the query is typed huge, a 'Thinking' state holds for half a second, and the results arrive.",
+          "The claim 'every app' is never stated over the results. Instead the source tabs (Notion, Slack, GitHub, Drive, Jira) sit in a row and the underline slides across them while the count climbs from 18 to 31 and the list re-sorts. When the closing card says 'Search every app', the viewer has just watched it."
+        ],
+        "moments": [
+          {
+            "t": 18,
+            "text": "Pushed in until the input is the whole frame."
+          },
+          {
+            "t": 20,
+            "text": "A half-second 'Thinking' state: the only wait, kept short."
+          },
+          {
+            "t": 23,
+            "text": "Thirty-one results, the underline on Slack, the list re-sorted."
+          }
+        ]
+      },
+      {
+        "id": "sound",
+        "title": "One cue, and silence for the logo",
+        "paragraphs": [
+          "There is no voice and, by the stems, no designed sound effects worth naming; the soundtrack is a single music cue at a steady pulse. The cutting does not follow its beat (only about as many cuts land on the beat as chance would give), so the music works as a bed, not a metronome.",
+          "Two things are placed with care. A sustained pitched line joins the cue at about 13.5 seconds, as color arrives with the tapestry and the Grail, and holds under the product, so the turn from myth to work has a lift without a hit. And the music stops at 28 seconds, about a second after the wordmark appears, leaving the logo in near silence for the last two seconds."
+        ],
+        "moments": [
+          {
+            "t": 13,
+            "text": "The pitched line enters with the first color image."
+          },
+          {
+            "t": 28,
+            "text": "The cue ends and the wordmark holds in near silence."
+          }
+        ]
+      }
+    ],
+    "patterns": [
+      {
+        "name": "Split one sentence across a montage",
+        "text": "Write a two-part line. Show the first half, prove it with a fast list of images, then complete it with the second half pointed at the viewer's own problem.",
+        "t": 15
+      },
+      {
+        "name": "Order the list toward the bridge",
+        "text": "Arrange examples so each is a step bigger than the last, and make the final one the doorway into the product's world.",
+        "t": 14
+      },
+      {
+        "name": "Write the demo data inside the metaphor",
+        "text": "Name the user, the pages and the query after the film's idea. It rewards close viewers and keeps the product shots in the same world as the opening.",
+        "t": 17
+      },
+      {
+        "name": "Stop cutting for the product",
+        "text": "Cut fast through the setup, then hold one unbroken take for the demonstration. The change in tempo tells the viewer this is the part that matters.",
+        "t": 17
+      },
+      {
+        "name": "Type the input at headline size",
+        "text": "When the product's input is the message, set it as large as your title cards so it reads as the next line of the script.",
+        "t": 19
+      },
+      {
+        "name": "Let the interface prove the claim",
+        "text": "Show the counter climbing and the tabs changing before you write the claim. The end line then confirms what the viewer just saw.",
+        "t": 23
+      },
+      {
+        "name": "End the music before the logo goes",
+        "text": "Let the cue resolve just after the wordmark lands and give the logo a second or two of quiet.",
+        "t": 28
+      }
+    ],
+    "absent": "There are no people, no voiceover, no customers and no numbers about the product. It is not a film to study for interviews, live action or motion graphics. What it shows is how an idea, an edit and a small amount of text can do the work of all of those."
+  }
+}

@@ -1,0 +1,323 @@
+{
+  "note": "Notion's two-minute manifesto against the lonely story of AI. One narrator speaks over a scrapbook of people doing things together, from the Apollo landing and the Disney studio to a campfire and a big band. The past sits as small prints on black, the lonely future arrives as headlines and empty offices, and the present fills the screen with Notion's customers. The breakdown covers how the script is split between archive audio, narration, captions and one-word cards, how image pairs and grids act out each line, and how the music steps aside for the last words.",
+  "transcript_kind": "Local speech recognition, corrected to the film's own burned-in captions",
+  "shot_notes": {
+    "0": "Cold open on the astronaut visor portrait, full bleed. The first voice is the archive's, captioned in italic yellow: 'Tranquility Base here —'. The narrator has not spoken yet.",
+    "2": "A diptych: the astronaut, full length and alone on the left; mission control waving flags on the right. One person on the moon, a room of people behind him. The film's whole argument in one frame.",
+    "5": "Black, then a small print of a room full of beanbags and people talking. From here on most of the past is shown as prints laid on a black page, not as full-screen pictures.",
+    "6": "A second print joins on the right: an early workstation. A room of people next to the machine they made. No voice, only a few electronic chirps.",
+    "7": "Two children at a computer, one print in the center. The first nine seconds set up the film's method before a line of narration is spoken.",
+    "11": "'meaningful', white sans on black, centered. The thesis is shown one word at a time, each word held exactly as long as the narrator takes to say it.",
+    "15": "Five riders on one long bicycle, full bleed, under 'It's always groups of people'. The music proper enters on this cut.",
+    "17": "Workers sitting on the cables of a suspension bridge, small figures on a huge web.",
+    "18": "The first color in the montage: a crowd of puppets around a bearded man, under 'building and believing'. A joyful choice for a list of serious achievements.",
+    "19": "A staff photo outside a building signed 'WALT DISNEY STUDIO', rows of people, not one famous face.",
+    "21": "A pencil sketch of Mickey on the left, the finished cartoon on the right, on 'until something clicks'. The pair shows the click: drawing becomes character.",
+    "22": "An early biplane over a field, printed with the dark edges of the plate left in. 'Thinking together' begins over it.",
+    "23": "Two men in overalls listening to a radio in a parlor. Togetherness as something ordinary, not heroic.",
+    "24": "Four young women sitting against a wall on a break, 'is innate to us'. A scene with no achievement in it at all.",
+    "26": "A cave painting of linked red figures fills the left half; the right half waits in black.",
+    "27": "A campfire at night joins on the right, under 'Campfire stories'. Two of the oldest ways people think together, paired.",
+    "29": "A present-day color snapshot of two friends playing chess, split down the middle so the two players face each other across a seam.",
+    "30": "A flat digital chessboard drops in over the seam on 'even though machines do it better'. The machine sits between the players; they are still laughing.",
+    "33": "Eight men in suits under a company logo, and beside them a man and a woman at a laboratory bench, 'gives us meaning'. Two working partnerships side by side.",
+    "35": "A big band on stage, the leader and the bassist grinning at each other. The last image of the warm past.",
+    "37": "The counter-story arrives as type only. A New York Times headline, 'Did A.I. Take Your Job? Or Was Your Employer 'A.I.-Washing'?', then 'Stop hiring humans' viral AI billboard campaign sparks outrage in NYC'.",
+    "41": "Five headlines on black, each set in its own publication's typeface, scattered like clippings on a desk.",
+    "45": "A terminal typing out a long prompt to build a 'full-stack SaaS platform', beside a photo of an unmade bed in a dark high-rise apartment. 'with a solo founder'.",
+    "48": "Two phone snapshots of empty offices, desks and chairs and no people, 'No need for teamwork'.",
+    "49": "A shaky vertical phone clip walking through an empty office, small in the frame: 'Humans are friction.' Deliberately the least crafted image in the film.",
+    "53": "'wrong', alone on black. The turn, 'We think that gets the future wrong', is the second line given the word-by-word treatment.",
+    "54": "Nearly two seconds of black with the music dropped to a low drone. The film's longest pause, right after the turn.",
+    "56": "Hard cut to old film: a gloved hand throwing a switch marked 'OFF / ON / FAST'. The music comes back fuller on this cut.",
+    "58": "A comic actor in a bowler hat panicking at a machine, under 'ten times faster'. Efficiency played for slapstick.",
+    "61": "One clip of factory workers, now doubled side by side on 'ten times better'.",
+    "63": "The same clip four times, filling the frame and moving in lockstep, under 'That's a story of efficiency'. More output, same people.",
+    "67": "'abundance', the third word-by-word line: 'AI should be a story of abundance'.",
+    "68": "A thin window on black shows a few heads at consoles. In half a second it widens in steps to full frame: 'More minds on any problem' acted out by the crop.",
+    "69": "The full mission control room in color, rows of consoles and people. It answers the opening's black-and-white control room.",
+    "73": "The first present-day footage at full bleed: three men leaning over a laptop, laughing, 'More people'.",
+    "74": "A woman waving at the camera from her desk, a dog at her side, 'doing their life's work'.",
+    "76": "A meeting room with the Notion logo on the screen, two people at a whiteboard: 'Notion has always been a tool'. The first time the brand appears.",
+    "78": "Design books on a shelf, 'Grid systems' on a red cover, and a poster reading 'Think it. Make it.' Notion's own taste, shown rather than said.",
+    "81": "The only product shot: a Notion page with 'Instructions' shared on a video call, three faces beside it, 'Now, we're building AI'.",
+    "85": "A video-call grid fills tile by tile until six people share the frame, under 'Not behind one person's screen'.",
+    "87": "A selfie taken with a microphone in hand, an auditorium full of people behind him. We see him talking but hear only the narrator.",
+    "92": "Friends giving thumbs up and holding a phone to the camera, 'Every team in the world'. Candid, slightly blown out, kept.",
+    "96": "An old trading-floor photo inside a frame of live-looking ticker numbers, 'Not just the Fortune 500'.",
+    "100": "Three founders on a sofa, a small 'RAMP' in the top corner, as the narrator says only 'The fintech startup in New York'.",
+    "104": "A team of a hundred or more outside their building, 'HEIDI' in the corner, 'The Australian healthcare experts'.",
+    "109": "Three men around a screen, unlabeled: 'The three founders in Lagos who don't know yet what they're about to become'.",
+    "114": "Back to a small black-and-white print: children climbing a sculpture, 'The best things in humanity haven't been built yet'. The future shown as kids at play.",
+    "119": "'us', held longer than any other word in the last line, with the music gone.",
+    "122": "End card: the Notion mark and 'Think together', small, on black, as a warm chord returns."
+  },
+  "motion_intro": "Nothing here is animated in the usual sense: there are no moving graphics, no camera moves on the stills, and most changes are hard cuts. The movement worth studying is in the layout. Images arrive on a black page one at a time, pair up, multiply into grids, widen from a slit to full frame, and the thesis lines are flashed one word per card. Each of these builds is timed to the narration so the layout does what the sentence says.",
+  "motion": [
+    {
+      "id": "moon-diptych",
+      "start": 0.0,
+      "end": 3.9,
+      "fps": 6,
+      "title": "One astronaut, then the room behind him",
+      "tags": ["archive audio", "diptych", "hard cut", "cut to black"],
+      "text": "The visor portrait holds still at full bleed for almost two seconds under 'Tranquility Base here'. At 2.17, on 'The Eagle has landed', it cuts to a split frame: the astronaut full length on the left, mission control celebrating on the right. At 3.67 the frame goes to black and stays there for a second and a half. Nothing moves inside the pictures; the argument is made by what is put next to what."
+    },
+    {
+      "id": "thesis-words",
+      "start": 10.4,
+      "end": 14.4,
+      "fps": 8,
+      "title": "The thesis, one word per card",
+      "tags": ["kinetic type", "word by word", "synced to voice", "black"],
+      "text": "From 10.7 each word of 'The most meaningful things were never built alone' appears alone, centered, white on black, and hard cuts to the next as the narrator reaches it. Short words like 'The' last a frame or two; 'meaningful' and 'alone' hold for most of a second because they are said slowly. The captions vanish for these cards, so this is the only text on screen. The same device returns for the turn at 51.2, for 'abundance' at 65.2, for 'more opportunities' at 70.5, and for the last line at 117.6."
+    },
+    {
+      "id": "chess-board",
+      "start": 28.6,
+      "end": 32.2,
+      "fps": 8,
+      "title": "A machine's board between two players",
+      "tags": ["overlay", "pop on", "split frame", "visual joke"],
+      "text": "The chess snapshot is two halves facing each other across a seam. At about 29.75, on 'even though machines do it better', a flat grey digital chessboard pops on over the seam with no transition, sized to sit between the two faces. It holds until the cut at 32.07. The line is a concession, and the image keeps the people laughing on either side of it."
+    },
+    {
+      "id": "headlines",
+      "start": 35.4,
+      "end": 43.4,
+      "fps": 3,
+      "title": "Headlines pile up, then leave",
+      "tags": ["type only", "accumulate", "clear out", "black page"],
+      "trail": true,
+      "text": "After the big band print, the frame empties to black and headlines arrive one by one, each a hard pop: the New York Times at 36.0, the billboard story at 37.0, 'The People vs. AI' at 39.0, 'AI, Loneliness, and the Value of Human Connection' at 39.3 and 'AI is Destroying the University and Learning Itself' at 41.0. They sit in different corners and typefaces, like clippings. From 42.3 they disappear in three steps in a third of a second each, and at 43.3 a terminal takes their place. The pile-up gives the 'loudest story' its volume without a single loud image."
+    },
+    {
+      "id": "terminal",
+      "start": 43.2,
+      "end": 47.4,
+      "fps": 6,
+      "title": "A prompt types itself next to an empty bed",
+      "tags": ["type-on", "screen", "diptych", "second panel joins"],
+      "text": "A terminal window sits small on the left and a prompt types out in it line by line ('Build me a full-stack SaaS platform...'). At 44.6, on 'with a solo founder', a second panel pops in on the right: an unmade bed in a dark high-rise with the city lit up outside. The terminal keeps typing beside it until 47.3. Work without people, and a home without them."
+    },
+    {
+      "id": "clone-grid",
+      "start": 59.8,
+      "end": 64.9,
+      "fps": 6,
+      "title": "Ten times faster, shown as copies",
+      "tags": ["duplicate", "grid", "lockstep", "fill frame"],
+      "text": "At 59.9 a single clip of factory workers sits small on black under 'doesn't make a company'. At 60.75, as 'ten times better' begins, it doubles side by side. At 61.5 it jumps to a full-frame two-by-two grid, four identical copies moving in lockstep, and holds through 'That's a story of efficiency and cost' until the cut at 64.86. Each step is a hard pop, not an animated split. More output, but the same four people."
+    },
+    {
+      "id": "more-minds",
+      "start": 68.3,
+      "end": 69.3,
+      "fps": 24,
+      "title": "The window widens to show more minds",
+      "tags": ["reveal", "crop opens", "stepped", "full bleed"],
+      "text": "On 'More minds on any problem' the mission control footage starts as a small square on black showing one or two heads. At 68.43 it widens to a strip with three heads, at 68.55 to a larger box, and by 68.75 it fills the frame. Each change is a hard step, a frame apart, not a smooth zoom. The crop literally lets more people into the picture, and it ends the dark-page stretch: from here the present-day footage runs full bleed."
+    },
+    {
+      "id": "call-grid",
+      "start": 83.9,
+      "end": 86.5,
+      "fps": 10,
+      "title": "One screen fills with faces",
+      "tags": ["grid fill", "video call", "build", "tile by tile"],
+      "text": "At 84.1, on 'Not behind one person's screen', a video-call grid starts with two tiles on black. A third arrives at 84.3, a fourth at 84.5, and by 84.8 six faces fill the frame edge to edge. The grid holds while the faces react, then cuts at 86.4 to a selfie in a packed auditorium. The line says 'one person's screen' and the screen in front of you has six people on it."
+    },
+    {
+      "id": "last-line",
+      "start": 116.6,
+      "end": 122.0,
+      "fps": 6,
+      "title": "The last line in silence, then the card",
+      "tags": ["kinetic type", "music out", "held word", "end card"],
+      "text": "The children's print cuts to black at 116.8 as the music fades out. From 117.6 'They will be built by us together' runs word by word; 'us' holds for about three quarters of a second, longer than any word around it, and 'together' for half a second. A full second of black follows, and at 121.1 the small Notion mark and 'Think together' appear as a low chord comes back."
+    }
+  ],
+  "craft": {
+    "lede": [
+      "A brand manifesto that argues one sentence for two minutes: the most meaningful things were never built alone. It answers the story that AI is one founder and a chat window, and it does it almost entirely with found pictures, a single narrator and a few words on black. The product appears once, for four seconds.",
+      "What makes it worth studying is how the images are chosen and placed to argue. The past is a scrapbook of groups (a five-man bicycle, a studio staff photo, a campfire, a big band), laid out as prints on a black page and paired so each pair makes a point. The lonely future is told in headlines, a terminal and empty offices shot on a phone. Then the layout itself starts to act out the lines: a clip clones itself for 'ten times faster', a window widens for 'more minds', a call grid fills for 'not behind one person's screen', and the present-day people finally fill the whole frame."
+    ],
+    "map": {
+      "lanes": [
+        {
+          "id": "story",
+          "segments": [
+            {"start": 0, "end": 9.38, "label": "Cold open", "note": "The Apollo landing call over the astronaut and mission control, then early computing in silence."},
+            {"start": 9.38, "end": 15.43, "label": "Thesis", "note": "'The most meaningful things were never built alone.'"},
+            {"start": 15.43, "end": 34.49, "label": "Proof from history", "note": "Groups building, thinking together, and finding meaning together, from bridges and studios to cave walls and chess."},
+            {"start": 34.49, "end": 51.22, "label": "The lonely story", "note": "Headlines, a solo founder's terminal, empty offices, 'Humans are friction.'"},
+            {"start": 51.22, "end": 55.64, "label": "The turn", "note": "'We think that gets the future wrong', then a held black."},
+            {"start": 55.64, "end": 64.86, "label": "Efficiency is too small", "note": "Factory film and slapstick: ten times faster is a story of efficiency and cost."},
+            {"start": 64.86, "end": 75.83, "label": "Abundance", "note": "More minds, more opportunities, more people doing their life's work."},
+            {"start": 75.83, "end": 91.76, "label": "Where Notion stands", "note": "A tool for people to think together; AI inside a team, not behind one screen."},
+            {"start": 91.76, "end": 112.15, "label": "Every team", "note": "Not just the Fortune 500: a New York fintech, Australian healthcare, three founders in Lagos."},
+            {"start": 112.15, "end": 125.4, "label": "Not built yet", "note": "Children on a sculpture, the last line word by word, 'Think together'."}
+          ]
+        },
+        {
+          "id": "voices",
+          "segments": [
+            {"start": 0, "end": 3.0, "label": "Apollo landing call", "kind": "archival", "note": "'Tranquility Base here. The Eagle has landed.' Captioned in italics."},
+            {"start": 10.6, "end": 14.3, "label": "Thesis, word by word", "kind": "text", "note": "Spoken by the narrator; the screen shows only the current word."},
+            {"start": 14.96, "end": 34.5, "label": "Narrator: groups of people", "kind": "narrator", "note": "Short phrases, each with its own picture and caption."},
+            {"start": 35.5, "end": 51.0, "label": "Narrator: the lonely story", "kind": "narrator", "note": "'About a year ago, we took a hard look at where AI was headed.'"},
+            {"start": 51.22, "end": 53.8, "label": "Turn, word by word", "kind": "text"},
+            {"start": 56.16, "end": 64.6, "label": "Narrator: efficiency", "kind": "narrator"},
+            {"start": 65.2, "end": 68.2, "label": "Abundance", "kind": "text"},
+            {"start": 68.16, "end": 70.0, "label": "More minds", "kind": "narrator"},
+            {"start": 70.5, "end": 72.4, "label": "More opportunities", "kind": "text"},
+            {"start": 72.4, "end": 91.5, "label": "Narrator: Notion's place", "kind": "narrator", "note": "The only stretch that names the company."},
+            {"start": 91.8, "end": 112.0, "label": "Narrator: every team", "kind": "narrator", "note": "Customers described by their situation; logos sit small in the corner."},
+            {"start": 113.5, "end": 116.8, "label": "Haven't been built yet", "kind": "narrator"},
+            {"start": 117.6, "end": 120.1, "label": "Built by us together", "kind": "text", "note": "Word by word, with no music under it."},
+            {"start": 121.1, "end": 125.4, "label": "Think together", "kind": "text"}
+          ]
+        },
+        {
+          "id": "sound",
+          "segments": [
+            {"start": 0, "end": 15.4, "label": "Low drone, beeps", "kind": "music", "note": "A dense low drone. Two short high beeps bracket the Apollo line, and a few electronic chirps sit under the early computers."},
+            {"start": 15.4, "end": 53.3, "label": "Cue enters with the montage", "kind": "music", "note": "A pitched, pulsing cue starts on the cut to the five-man bicycle. Near 123 BPM by estimate; cuts do not follow its beat."},
+            {"start": 53.3, "end": 55.7, "label": "Drops to drone", "kind": "music", "note": "Under the end of the turn and the held black."},
+            {"start": 55.7, "end": 116.2, "label": "Fuller cue", "kind": "music", "note": "Returns louder and fuller on the cut to the factory switch and carries the rest of the argument."},
+            {"start": 116.2, "end": 121.0, "label": "Music out", "kind": "silence", "note": "Only the voice for 'They will be built by us together'."},
+            {"start": 121.0, "end": 125.4, "label": "Chord on the card", "kind": "music"}
+          ]
+        },
+        {
+          "id": "picture",
+          "segments": [
+            {"start": 0, "end": 9.38, "label": "Moon, early computers", "kind": "archive", "note": "Full bleed, then a diptych, then small prints on black."},
+            {"start": 9.38, "end": 15.43, "label": "Words", "kind": "title"},
+            {"start": 15.43, "end": 34.49, "label": "Groups through history", "kind": "archive", "note": "Mostly full bleed, with pairs: sketch and cartoon, cave painting and campfire, two partnerships."},
+            {"start": 34.49, "end": 36.0, "label": "Big band", "kind": "archive"},
+            {"start": 36.0, "end": 43.2, "label": "Headlines", "kind": "graphics"},
+            {"start": 43.2, "end": 47.34, "label": "Terminal, empty bed", "kind": "screen"},
+            {"start": 47.34, "end": 51.22, "label": "Empty offices", "kind": "stock", "note": "Phone snapshots and a shaky phone clip."},
+            {"start": 51.22, "end": 55.64, "label": "Words, black", "kind": "title"},
+            {"start": 55.64, "end": 64.86, "label": "Factory, slapstick, clones", "kind": "archive"},
+            {"start": 64.86, "end": 68.57, "label": "Words", "kind": "title"},
+            {"start": 68.57, "end": 70.49, "label": "Mission control opens", "kind": "archive"},
+            {"start": 70.49, "end": 72.53, "label": "Words", "kind": "title"},
+            {"start": 72.53, "end": 79.9, "label": "Teams now, full bleed", "kind": "b-roll"},
+            {"start": 79.9, "end": 86.38, "label": "Call and grid", "kind": "screen"},
+            {"start": 86.38, "end": 94.59, "label": "Meetups and teams", "kind": "b-roll"},
+            {"start": 94.59, "end": 99.02, "label": "Trading floor", "kind": "archive"},
+            {"start": 99.02, "end": 112.15, "label": "Three customers", "kind": "staged", "note": "Ramp, Heidi and an unnamed Lagos team, with black beats between them."},
+            {"start": 112.15, "end": 116.78, "label": "Children, sculpture", "kind": "archive"},
+            {"start": 116.78, "end": 121.1, "label": "Words", "kind": "title"},
+            {"start": 121.1, "end": 125.4, "label": "End card", "kind": "title"}
+          ]
+        }
+      ]
+    },
+    "aspects": [
+      {
+        "id": "story",
+        "title": "A thesis, its evidence, its opponent",
+        "paragraphs": [
+          "The film is built like an essay. It states its claim early ('The most meaningful things were never built alone'), proves it with history, lets the other side speak ('Billion-dollar companies with a solo founder behind a chat window'), turns ('We think that gets the future wrong'), offers its own picture of the future, and only then says where Notion stands. The narrator does not name the company until 1:16, more than halfway through.",
+          "The order of the evidence matters. It starts with achievements everyone knows (the moon landing, the Disney studio, the first flights) and then slides toward the ordinary: two men at a radio, women on a break, a campfire, friends at a chess board. By the time it reaches 'Togetherness gives us meaning', the film has moved from what groups build to why people want to be together at all.",
+          "The ending is the thesis turned around. The opening said great things were never built alone; the close says 'The best things in humanity haven't been built yet. They will be built by us together.' It is the same sentence, pointed forward, over children climbing a sculpture."
+        ],
+        "moments": [
+          {"t": 11, "text": "The claim is stated in the first fifteen seconds, one word at a time."},
+          {"t": 24, "text": "The evidence drifts from landmarks to ordinary afternoons."},
+          {"t": 45, "text": "The opposing story gets its own sequence, told fairly enough to recognize."},
+          {"t": 114, "text": "The close restates the thesis as something still to come."}
+        ]
+      },
+      {
+        "id": "voices",
+        "title": "One narrator, four registers of text",
+        "paragraphs": [
+          "There is only one borrowed voice, and it comes first: the Apollo landing call, 'Tranquility Base here. The Eagle has landed.' It is short, instantly recognized, and it lets history speak before the brand does. Everything after it is one narrator, speaking in short, plain phrases with room around them. A man is seen talking into a microphone at 1:27, but we never hear him; the film keeps a single voice so the argument stays one person's conviction.",
+          "The words on screen are split into registers. Burned-in yellow captions carry every narrated phrase, and the archive line is set in italics so you can tell it apart. The five lines that carry the argument (the thesis, the turn, 'abundance', 'more opportunities' and the closing line) drop the captions and the pictures entirely and appear one word per card, white on black, timed to the voice. The opposing view is never spoken by anyone else. It arrives as real headlines, each in its own publication's typeface, so the 'loudest story' is literally the press, quoted.",
+          "The customers are described rather than named. The narrator says 'The fintech startup in New York with more ambition than people' and 'The three founders in Lagos who don't know yet what they're about to become', while a small 'RAMP' or 'HEIDI' sits in the corner of the frame for anyone who looks. The line describes a situation the viewer might share; the logo is a footnote."
+        ],
+        "moments": [
+          {"t": 0, "text": "The archive voice first, its caption in italics."},
+          {"t": 13, "text": "A thesis line gets no caption and no picture, only the word being spoken."},
+          {"t": 41, "text": "The counter-argument is quoted from the press, in the papers' own type."},
+          {"t": 100, "text": "Spoken as 'the fintech startup in New York', credited small in the corner."}
+        ]
+      },
+      {
+        "id": "frames",
+        "title": "Pictures chosen in pairs, placed on a black page",
+        "paragraphs": [
+          "Most of the archive is laid on black like prints on a table, and the most important images come in pairs. The astronaut stands next to the room that got him there. A pencil Mickey sits next to the finished cartoon on 'until something clicks'. A cave painting waits alone in half the frame until a campfire joins it. Eight men under a company logo sit beside a couple at a laboratory bench. Each pair makes a small argument that neither picture makes alone.",
+          "Size carries meaning too. The past and the lonely present are mostly small prints with black around them: the early computer lab, the terminal, the empty-office phone clip. The present-day teams, from 1:12 on, fill the frame edge to edge. The change is announced by the mission control shot at 1:08, which opens from a slit to full bleed on 'More minds on any problem'. After that, people take up the whole screen.",
+          "The choice of images is generous and specific. Alongside landmarks there are puppets, a big band laughing, a dog at a desk, friends doing thumbs up at a camera. The lonely images, by contrast, are drained of people and of craft: an unmade bed in a dark apartment, empty desks, a shaky vertical phone clip. The film never shows a villain. It shows rooms where people used to be.",
+          "Black is used as punctuation. A second and a half of it follows the moon landing, nearly two seconds follow the turn, and short black beats separate each of the three customers, so every story gets its own breath."
+        ],
+        "moments": [
+          {"t": 2, "text": "One astronaut beside the room behind him."},
+          {"t": 27, "text": "Cave painting and campfire: two of the oldest ways to think together, side by side."},
+          {"t": 49, "text": "The lonely future, as a small, shaky phone clip of an empty office."},
+          {"t": 73, "text": "The present arrives full bleed, people filling the frame."},
+          {"t": 54, "text": "Black held after the turn, the longest pause in the film."}
+        ]
+      },
+      {
+        "id": "world",
+        "title": "Layouts that act out the line",
+        "paragraphs": [
+          "There are no animated graphics, but the layout performs. When the narrator says 'ten times faster doesn't make a company ten times better', one factory clip doubles and then fills the frame as four identical copies working in lockstep: more output, the same four people. When the line is 'More minds on any problem', the frame opens in three steps to let more heads into mission control. On 'Not behind one person's screen', a call grid fills tile by tile until six faces share the screen.",
+          "The same trick is used for small jokes. A flat digital chessboard pops up between two friends exactly on 'even though machines do it better'. The solo founder's terminal types a prompt asking for an app that is 'basically Salesforce meets Notion meets Slack', a dry nod for anyone who pauses on it. A trading-floor photo is boxed in by live-looking ticker numbers for 'Not just the Fortune 500'.",
+          "All of these are hard pops between states, never smooth tweens, which keeps them in the same plain, editorial voice as the cutting. The rule is easy to borrow: decide what a line claims, then let the arrangement of the picture make the same claim."
+        ],
+        "moments": [
+          {"t": 63, "text": "One worker clip cloned into a grid for 'efficiency and cost'."},
+          {"t": 68, "text": "Mission control starts as a slit and opens up."},
+          {"t": 85, "text": "Six people fill 'one person's screen'."},
+          {"t": 30, "text": "A machine's chessboard set between two laughing players."}
+        ]
+      },
+      {
+        "id": "sound",
+        "title": "Music that follows the argument, not the cuts",
+        "paragraphs": [
+          "The soundtrack is one narrator over one score, and the score changes section by section with the essay. The opening, under the Apollo call and the thesis, is a low drone; two short high beeps bracket the landing line like mission radio tones, and a few electronic chirps sit under the early computer pictures. The music proper, a pitched pulsing cue, starts at 15.4, on the cut to the five-man bicycle, as the proof begins.",
+          "At the turn it steps back. Around 53.3 the cue drops to a drone again under 'future wrong' and the held black, and at 55.7, on the cut to the factory switch, it returns louder and fuller and carries the rest of the film. By the stems, the music sits about 9 to 15 dB under the voice throughout, and no hits are placed on cuts: the tempo estimate is near 123 BPM (which may be double or half the felt pulse), and cuts land on the beat no more often than chance. The pictures are cut to the sentences instead.",
+          "The best decision is at the end. The music fades out at about 116, after 'haven't been built yet', so 'They will be built by us together' is spoken with almost nothing under it. A warm low chord comes back only with the end card at 121. The silence makes the last line sound like a person talking, not a voiceover."
+        ],
+        "moments": [
+          {"t": 15, "text": "The cue enters on the first picture of the proof."},
+          {"t": 56, "text": "After a drop under the turn, the music returns fuller on this cut."},
+          {"t": 119, "text": "The last line, with the music gone."},
+          {"t": 122, "text": "A chord returns only for the card."}
+        ]
+      },
+      {
+        "id": "trust",
+        "title": "Warmth from ordinary, unpolished people",
+        "paragraphs": [
+          "For a film about AI it has almost no technology in it, and that is part of why it feels sincere. The present-day footage is candid and a little rough: selfies at events, a slightly blown-out thumbs-up, a woman waving with her dog beside her, people laughing at a laptop. These read as real teams rather than casting, and the customers are shown as groups, from three founders on a sofa to a staff photo of a hundred or more.",
+          "The script also admits something. 'About a year ago, we took a hard look at where AI was headed. The future felt lonely and unsettling.' A brand confessing that it was unsettled, and quoting real headlines rather than inventing a strawman, earns more trust than a list of features would. The product gets four seconds on a video call, and the film ends on 'us' held a beat longer than any other word."
+        ],
+        "moments": [
+          {"t": 74, "text": "A wave and a dog: footage that feels taken, not staged."},
+          {"t": 37, "text": "Real headlines stand in for the opposing view."},
+          {"t": 104, "text": "A customer shown as a whole team, not a spokesperson."}
+        ]
+      }
+    ],
+    "patterns": [
+      {"name": "Let an archive voice speak first", "text": "Open on a short, famous recording before your narrator says a word. It sets the scale of the claim and borrows history's authority for a few seconds.", "t": 2},
+      {"name": "Argue in pairs", "text": "Put two pictures side by side so that together they make the point: the lone hero and the room behind him, the sketch and the finished thing, the old ritual and its modern form.", "t": 21},
+      {"name": "Give the thesis its own register", "text": "Choose the four or five lines that carry the argument and show them one word per card on black, timed to the voice, with no picture and no caption. Everything else stays captioned.", "t": 11},
+      {"name": "Quote the opposing story", "text": "Show the view you are arguing against as real headlines in their own typefaces, piling up on an empty page, instead of putting words in an imaginary opponent's mouth.", "t": 41},
+      {"name": "Make the layout say the line", "text": "If the line is about multiplying, multiply the clip; if it is about more people, open the frame to let more in; if it is about one screen, fill that screen with faces.", "t": 68},
+      {"name": "Shrink the lonely, fill the frame with the together", "text": "Keep isolation and the past small on black, and let the people you are arguing for take the full frame once the turn has happened.", "t": 73},
+      {"name": "Describe customers, credit them small", "text": "Have the narrator name a customer by its situation ('the three founders in Lagos') and put the logo in a corner, so the viewer recognizes themselves before the brand.", "t": 100},
+      {"name": "Pull the music for the last line", "text": "Fade the score just before the closing sentence and bring a single chord back on the end card, so the final words land as speech.", "t": 119}
+    ],
+    "absent": "There is no product demo, no feature list, no numbers and no interviews; the one person seen speaking is never heard. Nothing is animated beyond hard changes of layout, and the music is a bed, not a beat to cut to. Study it for how found images, one voice and a few words on black are sequenced into an argument."
+  }
+}

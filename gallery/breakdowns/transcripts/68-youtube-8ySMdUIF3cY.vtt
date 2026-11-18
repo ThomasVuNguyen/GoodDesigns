@@ -1,0 +1,709 @@
+WEBVTT
+
+00:13.620 --> 00:21.020
+The Raptor engine, in my opinion, is one of the most impressive feats of engineering that's happened at SpaceX and maybe in the world.
+
+00:23.780 --> 00:26.360
+But it is a complex device.
+
+00:28.440 --> 00:33.400
+And with complexity, there come many, many ways for things to go wrong.
+
+00:36.900 --> 00:43.400
+And so relying on this engine to get us there for that final 1% of a historic return
+
+00:43.400 --> 00:45.860
+to launch site mission is pretty scary.
+
+00:52.200 --> 00:55.240
+T plus one minute, maintaining 33 engines.
+
+01:04.160 --> 01:05.480
+Six engines.
+
+01:07.060 --> 01:08.520
+Stage separation.
+
+01:10.880 --> 01:13.080
+31 engines for boostback.
+
+01:21.540 --> 01:24.020
+On Anomaly 2, acknowledging Engine 6.
+
+01:33.880 --> 01:38.540
+On Raptor 2, for awareness, it appears the E6 took an ORCU controller reset, which is
+
+01:38.540 --> 01:39.340
+what drove the shutdown.
+
+01:40.180 --> 01:43.680
+And on Prop 2, let's take a look at all of our systems, make sure we're good to go for
+
+01:43.680 --> 01:44.520
+orbit here.
+
+01:48.200 --> 01:51.500
+On Anomaly 2, with E6 shut down, we are not committing to orbit.
+
+02:17.720 --> 02:22.740
+The risks involved with our first orbital flight are largely centered around the demisability
+
+02:22.740 --> 02:23.300
+of the ship.
+
+02:26.040 --> 02:31.580
+We have a lot we got to get right to do this, especially when it comes to sustaining a healthy
+
+02:31.580 --> 02:34.100
+vehicle that can get out of orbit late in missions.
+
+02:35.080 --> 02:38.600
+In the space world, you either have rockets or you have spacecraft.
+
+02:40.980 --> 02:44.560
+Rockets are designed as the transportation system that gets you up.
+
+02:45.180 --> 02:47.800
+Spacecraft are things that live in orbit for a long time.
+
+02:48.200 --> 02:52.800
+We're trying to make something that's a rocket, but that can act like a spacecraft.
+
+02:59.960 --> 03:03.280
+This is a vehicle that can be in orbit for a long time,
+
+03:03.280 --> 03:05.980
+and after that can light the Raptor engines
+
+03:05.980 --> 03:09.840
+and come safely out of orbit and survive.
+
+03:13.020 --> 03:17.900
+This is one of two tiles that we took off of Ship 40.
+
+03:19.320 --> 03:23.060
+The goal here is to prove for the first time ever
+
+03:23.060 --> 03:26.620
+on a Starship vehicle that tiles can be reflown.
+
+03:31.140 --> 03:37.840
+If you asked me the day we flew 40, if we were going to fly to Australia, rip off tiles,
+
+03:38.140 --> 03:43.880
+and then refly them on 41, I would have bet you like a year's salary that wasn't going to happen.
+
+03:45.860 --> 03:51.160
+To be able to hold the tile that has actually flown and come home, it's the beginning of that
+
+03:51.160 --> 03:51.920
+next chapter.
+
+04:28.020 --> 04:30.080
+I'd say there's lots of anticipation for today.
+
+04:30.280 --> 04:32.060
+This has been the buildup for a long time.
+
+04:32.300 --> 04:36.800
+This is our first orbital mission, so first big objective here is we're delivering useful
+
+04:36.800 --> 04:40.400
+payloads to orbit, so these will be functional Starlinks that will actually serve the constellation.
+
+04:40.840 --> 04:43.920
+Really the whole orbital test flight campaign has been building up to this.
+
+04:44.260 --> 04:45.240
+Go for launch.
+
+04:46.840 --> 04:47.600
+Flight committed.
+
+05:24.100 --> 05:26.320
+On Anomaly 2, we just got confirmation
+
+05:26.620 --> 05:30.140
+that we are no-go for orbit with this E6 premature shutdown.
+
+05:41.060 --> 05:45.200
+We've said it multiple times, we are only going to go to orbit
+
+05:45.200 --> 05:48.920
+when we are extremely confident in the health of the vehicle.
+
+05:49.680 --> 05:51.560
+It sounds like they're not committing to orbit.
+
+05:51.700 --> 05:51.920
+Okay.
+
+05:53.200 --> 05:55.800
+If they don't commit to orbit, do we have a plan for what we're doing?
+
+05:56.720 --> 05:59.880
+I don't know if they will dispense the satellites.
+
+06:01.040 --> 06:02.200
+Yeah, I don't think they do.
+
+06:03.460 --> 06:04.240
+Oh, yeah.
+
+06:05.200 --> 06:06.500
+And that would be the end of the show.
+
+06:07.940 --> 06:08.560
+Got it.
+
+06:09.500 --> 06:12.800
+Neil messaged that, yeah, the flight rule is to not proceed to orbit.
+
+06:12.880 --> 06:13.160
+Okay.
+
+06:14.980 --> 06:16.960
+So everything looked great until Engine 6 went out.
+
+06:17.440 --> 06:20.360
+Everything pre-flight we had determined, let's do the conservative thing.
+
+06:20.360 --> 06:23.180
+If the vehicle is unhealthy, do not commit to go to orbit.
+
+06:23.360 --> 06:25.760
+And we would do a disposal into the Indian Ocean.
+
+06:27.480 --> 06:30.060
+The moment we lost the engine, we all kind of knew
+
+06:30.060 --> 06:32.020
+this was the end of the mission for the ship.
+
+06:33.320 --> 06:35.940
+There's only 17 minutes in that first coast to do anything.
+
+06:37.120 --> 06:39.620
+There's a pneumatics leak.
+
+06:41.880 --> 06:44.380
+This is why we need more engines on the ship.
+
+06:44.400 --> 06:46.440
+Let me do another scrub. It looks okay.
+
+06:48.040 --> 06:50.820
+There was lots of uncertainty. We had done the conservative thing.
+
+06:51.000 --> 06:54.500
+We had thought, like, hey, let's not proceed if anything goes wrong.
+
+06:54.800 --> 06:56.480
+And Elon really questioned the requirements,
+
+06:56.620 --> 06:59.660
+and asked us, is there anything actually prohibiting us from going forward?
+
+07:00.320 --> 07:05.620
+A development program has a very different risk concept to a production program.
+
+07:06.960 --> 07:11.800
+On launch day, we get risks from the engine team, from avionics, from the computers,
+
+07:12.180 --> 07:14.320
+from the propulsion system, from all the plumbing on the rocket.
+
+07:14.520 --> 07:18.260
+We get risks from the launch pad. We get risks from the tower and the catch arms.
+
+07:18.940 --> 07:23.400
+But the goal is always to take the risk in the place where you can learn the most.
+
+07:23.600 --> 07:25.520
+And that's the calculus that we're doing every day.
+
+07:26.620 --> 07:28.380
+So Jake was the final go for the engine systems
+
+07:28.380 --> 07:30.360
+and made the recommendation to Elon.
+
+07:33.140 --> 07:35.440
+We have exec override and concurrence.
+
+07:35.520 --> 07:37.160
+We want to go to orbit with this condition.
+
+07:37.320 --> 07:38.260
+We would like to lift the hold.
+
+07:40.680 --> 07:41.840
+I can weigh in here.
+
+07:41.940 --> 07:43.780
+They're saying that they're going to likely proceed
+
+07:43.780 --> 07:45.800
+with orbit pending a final go/no-go four minutes
+
+07:45.800 --> 07:47.080
+before the orbital insertion burn.
+
+07:47.700 --> 07:48.340
+Thanks, Thomas.
+
+07:53.660 --> 07:57.480
+This is the go/no-go poll for Burn 2 to orbit. Provide your status when polled.
+
+07:57.740 --> 07:58.280
+Stage 2.
+
+07:58.520 --> 07:59.340
+Stage 2's go.
+
+07:59.520 --> 08:00.080
+Raptor 2.
+
+08:00.420 --> 08:01.740
+Raptor 2's go for orbit.
+
+08:02.680 --> 08:03.480
+Burn 2 startup.
+
+08:08.940 --> 08:09.800
+Early coast.
+
+08:15.920 --> 08:17.080
+Burn 2 shutdown.
+
+08:24.620 --> 08:26.200
+No alerts or alarms on the board.
+
+08:34.600 --> 08:35.460
+We're in orbit.
+
+08:44.780 --> 08:45.400
+All right.
+
+08:47.340 --> 08:48.420
+Yeah, well, it looks good.
+
+08:50.080 --> 08:51.080
+Now for the fun part.
+
+09:17.160 --> 09:19.060
+Yeah, I can't say I slept a ton last night.
+
+09:19.240 --> 09:23.120
+Just, like, really quite excited to get these satellites into orbit.
+
+09:24.440 --> 09:25.240
+First contact.
+
+09:25.880 --> 09:29.280
+You can't overstate how important of a milestone this is for Starship.
+
+09:29.440 --> 09:31.600
+I mean, the team has been working on this for so long,
+
+09:31.700 --> 09:35.280
+and this rocket is obviously going to be transformational for spaceflight,
+
+09:35.460 --> 09:36.120
+for humanity.
+
+09:36.780 --> 09:38.040
+All sats in contact.
+
+09:41.360 --> 09:42.900
+Shout out to the Starship team.
+
+09:43.200 --> 09:44.820
+Gave us a little heart attack there,
+
+09:44.960 --> 09:47.180
+whether they were going orbital or they weren't going orbital.
+
+09:47.460 --> 09:50.340
+But real happy they ended up getting our sats up there.
+
+09:50.600 --> 09:53.440
+And yeah, all 26 sats connected to the network.
+
+09:55.860 --> 09:59.540
+In Redmond and in Starbase, we're two separate teams.
+
+09:59.600 --> 10:01.420
+But we do partner together.
+
+10:01.420 --> 10:05.400
+And it's so exciting to collaborate and to be able to be
+
+10:05.460 --> 10:08.280
+their payload and have a successful mission.
+
+10:08.560 --> 10:13.260
+It's not just a test ship now, it's a true mission.
+
+10:21.960 --> 10:26.040
+This is the thing that proves out that, yeah, this rocket has a useful purpose.
+
+10:26.260 --> 10:29.820
+And as it starts adding satellites to the Starlink constellation, it's going to make
+
+10:29.820 --> 10:31.160
+our network better, our service better.
+
+10:31.160 --> 10:34.840
+And then it's going to roll that all into continuing to build the flywheel
+
+10:34.840 --> 10:38.960
+of making Starship continuously launch, continuously be reused.
+
+10:58.260 --> 11:01.560
+All things considered, it's been basically a spotless mission so far.
+
+11:01.820 --> 11:07.440
+All 26 satellites deployed, and they've been successfully climbing ever since then.
+
+11:09.720 --> 11:15.420
+At Starlink, we think fundamentally the technology is able to support on the order of half of
+
+11:15.420 --> 11:17.340
+all the internet traffic that is on Earth today.
+
+11:17.740 --> 11:20.940
+And so really the challenge is on us to go and deliver on that goal.
+
+11:55.880 --> 12:02.200
+On a per satellite basis, these vehicles are basically 10 times as performance as our V2 satellites.
+
+12:03.420 --> 12:07.660
+If you were to just swap out our entire V2 fleet with V3s,
+
+12:07.720 --> 12:09.900
+you would have a network that was 10 times as capable.
+
+12:10.460 --> 12:12.860
+And so once Starship gets to like a monthly cadence
+
+12:12.860 --> 12:15.600
+with like 12 launches a year, that's essentially tying
+
+12:15.600 --> 12:18.660
+like our best year on Starlink in terms of like network growth.
+
+12:19.600 --> 12:23.160
+So it's really a turning point where we shift from development mode
+
+12:23.160 --> 12:24.440
+into production mode.
+
+12:24.640 --> 12:27.720
+Every launch from here going forward is going to generate real value.
+
+12:41.920 --> 12:46.640
+We have like 30 minutes to make a call, like right after payload deploy.
+
+12:47.840 --> 12:52.640
+So we had two planned landing locations for this mission, one in Chile with a nine-hour
+
+12:52.640 --> 12:55.660
+mission and a backup landing site at Hawaii.
+
+12:56.180 --> 13:00.120
+The reason we did two landing sites was so that if we had any issues arise,
+
+13:00.320 --> 13:04.220
+we had outs along the way that allowed us to put the rocket down somewhere safe.
+
+13:05.620 --> 13:07.880
+It's like 90% of the shit that we want.
+
+13:08.120 --> 13:09.880
+What are you most worried about?
+
+13:11.000 --> 13:14.500
+Engine shutdown is an elevated risk,
+
+13:14.880 --> 13:17.000
+and then helium is somewhat of an elevated risk.
+
+13:17.000 --> 13:18.750
+You know, with the settling.
+
+13:19.250 --> 13:23.120
+And then the reentry is a higher risk.
+
+13:23.880 --> 13:26.500
+Hawaii has a really good runway.
+
+13:27.120 --> 13:29.000
+It's just a low risk reentry.
+
+13:32.200 --> 13:34.240
+The real risk is are we fucking up and missing something?
+
+13:34.480 --> 13:37.040
+Because we're not looking at the right thing right now.
+
+13:39.900 --> 13:41.980
+So it seems like they're chatting it.
+
+13:45.020 --> 13:48.260
+Starship's coasts are going to be quite long for a orbital stage.
+
+13:48.520 --> 13:51.420
+It's the longest that any vehicle of its caliber and size
+
+13:51.420 --> 13:53.320
+will ever have coasted and then tried to relight.
+
+13:57.140 --> 13:59.880
+Yeah, one of the things that makes Starship particularly tricky
+
+13:59.880 --> 14:03.240
+towards the long duration on orbit is the cryogenic propellants.
+
+14:03.500 --> 14:06.720
+And over time, you have lots of heat from your environment
+
+14:06.720 --> 14:09.100
+that basically wants to boil that propellant,
+
+14:09.180 --> 14:10.540
+kind of like boiling water on a stove.
+
+14:14.940 --> 14:18.380
+And so how do we keep the liquid at a happy temperature,
+
+14:18.460 --> 14:21.340
+such that we have liquid remaining at the end of the mission
+
+14:21.340 --> 14:22.800
+to do the deorbit and landing burn?
+
+14:23.680 --> 14:25.780
+I agree with the decision to go to early Hawaii.
+
+14:26.080 --> 14:29.220
+I don't think that I would gate that just on using helium in the header tanks.
+
+14:31.060 --> 14:32.120
+Yeah, totally agree on that.
+
+14:32.440 --> 14:35.480
+Yeah, we're just chatting it here with Mark and Jake and E.
+
+14:41.380 --> 14:44.000
+E also wants to go to Hawaii.
+
+14:47.100 --> 14:48.460
+Confirming we're going to commit to Hawaii,
+
+14:48.640 --> 14:50.720
+given everything that's happened this far.
+
+14:51.120 --> 14:53.120
+We're going to Hawaii.
+
+14:54.300 --> 14:57.160
+We could get 99% of the way through
+
+14:57.160 --> 14:59.860
+a historic second stage return to launch site,
+
+14:59.860 --> 15:02.100
+but we need those Raptor engines to work.
+
+15:02.320 --> 15:05.820
+And that's why we put so much time into testing the engines
+
+15:05.820 --> 15:08.300
+to make sure they will work robustly.
+
+15:44.120 --> 15:45.960
+We are at Raptor Stand Bravo.
+
+15:50.680 --> 15:54.500
+We have two booster modules at this test position.
+
+15:54.780 --> 15:58.400
+And so basically what we did is we took a slice of the aft end of the vehicle
+
+15:58.400 --> 16:00.400
+and we put it right here in the bay,
+
+16:00.920 --> 16:04.220
+and we install it just like we do on the vehicle.
+
+16:04.440 --> 16:07.380
+And then we also test it just like we do on the vehicle.
+
+16:10.560 --> 16:15.560
+We first started testing Raptor engines, the very first 100-ton, horizontally,
+
+16:15.680 --> 16:18.660
+because we didn't want to build the infrastructure of a flame trench
+
+16:18.660 --> 16:23.600
+and the cost of digging down in a flame converter on something we didn't know was going to work.
+
+16:23.800 --> 16:26.180
+We had no idea if full-flow staged combustion was going to work.
+
+16:26.180 --> 16:31.960
+We did cold flow after cold flow after spin primes, just trying to figure out how to light it.
+
+16:32.320 --> 16:34.900
+Elon came to town and we lit it that evening.
+
+16:37.880 --> 16:42.180
+And then we went from 100 ton to V1 and then V2.
+
+16:47.560 --> 16:49.140
+And then started V3.
+
+16:54.980 --> 16:59.780
+Raptor is a full-flow staged combustion engine. That means that basically we burn all of the
+
+16:59.780 --> 17:05.200
+propellant and extract work from it in a turbine in each side of the engine before it goes into
+
+17:05.200 --> 17:09.600
+the main combustion chamber and gets burned again. One of the craziest things about Raptor is just
+
+17:09.600 --> 17:14.380
+the extreme temperature differences. In some of our test fire videos, especially McGregor,
+
+17:14.380 --> 17:15.980
+where you can get a really good view,
+
+17:16.140 --> 17:18.920
+you can actually see frost on the thrust chamber.
+
+17:19.380 --> 17:20.780
+And it's a little unintuitive
+
+17:20.780 --> 17:23.080
+because the thrust chamber is extremely hot,
+
+17:23.200 --> 17:25.160
+half the surface temperature of the sun on the inside,
+
+17:25.380 --> 17:27.300
+but on the outside, it's actually ice cold.
+
+17:28.540 --> 17:30.240
+That huge temperature delta
+
+17:30.240 --> 17:31.960
+is actually what gives us a lot of performance.
+
+17:32.160 --> 17:33.440
+We're extracting as much energy
+
+17:33.440 --> 17:34.560
+out of the propellants as possible.
+
+17:35.000 --> 17:40.900
+T minus five, four, three, two, one, zero.
+
+17:53.200 --> 17:56.320
+We want to make sure that we can get Starship out of space.
+
+17:56.820 --> 18:00.140
+And so we are primarily focused on deorbit testing.
+
+18:00.500 --> 18:05.840
+Everything is set so that you are testing the exact conditions that we will have in space
+
+18:05.840 --> 18:09.680
+and that we successfully light the engine when we do our deorbit burn.
+
+18:12.580 --> 18:16.980
+All right, ship is committed to early Hawaii contingency landing.
+
+18:21.380 --> 18:26.860
+We've been building towards this moment for a really long time, and circ burn was a very
+
+18:26.860 --> 18:31.780
+energizing and exciting moment because it worked and we were going to orbit, but none of that
+
+18:31.780 --> 18:37.480
+mattered if you can't get it back. So the worst case scenario is that we'll stay in orbit.
+
+18:37.480 --> 18:40.740
+Other vehicles are largely demisable when they come back and reenter, so they'll burn
+
+18:40.740 --> 18:41.620
+up in the atmosphere.
+
+18:47.140 --> 18:52.060
+Starship is obviously meant to be a reusable launch vehicle and is meant to survive atmospheric
+
+18:52.060 --> 18:56.880
+reentry, and so it's really important that we do not leave the vehicle on orbit in the
+
+18:56.880 --> 19:02.140
+event that it randomly reenters and comes back over land masses or populated areas.
+
+19:02.600 --> 19:07.400
+You do all this work, stand up all these contingencies, you get everything ready so that it does work,
+
+19:07.560 --> 19:10.180
+there's always a thought of like, what if it doesn't?
+
+19:14.640 --> 19:15.700
+Deorbit burn startup.
+
+19:29.800 --> 19:30.920
+Deorbit burn shutdown.
+
+19:42.840 --> 19:43.560
+Fuck yeah.
+
+19:45.020 --> 19:45.160
+Whoo!
+
+19:53.380 --> 19:54.580
+We're coming home.
+
+19:56.980 --> 19:57.940
+We did it.
+
+20:01.140 --> 20:02.860
+SpaceX as a whole has come down
+
+20:02.860 --> 20:05.340
+to a handful of unique decision points.
+
+20:13.020 --> 20:16.940
+When you get your smart people in a room using all the information ahead of them to make
+
+20:16.940 --> 20:21.260
+educated risk calls where it's go for broke, those calls are kind of the defining moments
+
+20:21.260 --> 20:21.800
+for the company.
+
+20:23.360 --> 20:27.920
+And in this case, it became the defining moment for Flight 14 and turning Starship into an
+
+20:27.920 --> 20:28.680
+orbital launch vehicle.
+
+20:33.520 --> 20:36.380
+This is a rehearsal poll for ship RTLS.
+
+20:37.240 --> 20:42.300
+Go indicates that the vehicle would continue to return to launch site had this been an RTLS mission.
+
+20:44.100 --> 20:46.620
+Provide your go/no-go status when polled.
+
+20:49.240 --> 20:52.740
+Structures? Go. Aero? Aero is go.
+
+20:53.340 --> 20:58.600
+Thank you. If this had been an RTLS mission, the vehicle would continue to return to launch site.

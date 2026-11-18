@@ -1,0 +1,790 @@
+{
+  "note": "Lovable's one-minute brand film, told by one narrator. It opens on small glowing windows of footage and rim-lit silhouettes with the reasons ideas die written across their faces, then types the Lovable name into its own prompt box and builds app after app in a single window, each change carried by a smear of the brand gradient. The breakdown follows how the voice, the on-screen words and the typed prompts share the script, and samples 14 UI moves as flip books.",
+  "transcript_kind": "Local speech recognition on the isolated voice, corrected against YouTube's captions",
+  "shot_notes": {
+    "0": "Cold open on black: 'Ideas' resolves out of a blur, centered in white sans with a soft glow. The word arrives as the narrator says it.",
+    "1": "'Ideas are everywhere' complete, set smaller than the first word was. The line shrinks to make room as it grows.",
+    "2": "'In homes' over a small window of what looks like home-movie footage, a toddler in a garden. Rounded corners and a glow, like a lit screen in a dark room.",
+    "3": "Still 'In homes', now lit apartment windows at night. Same caption, a new window, so homes means many homes.",
+    "4": "'On commutes' over a city street, the window now portrait. Each window takes the shape of its clip.",
+    "5": "'At 2 a.m.': a figure at a desk, back to camera, under one warm lamp. The only warm color in the first thirteen seconds.",
+    "6": "'And most ideas' on black, word by word with the voice. The footage is gone and the film turns.",
+    "7": "A rim-lit silhouette, face in total shadow. Anyone could be standing there.",
+    "8": "'No coding skills' set across the dark face. The reason sits where the eyes should be.",
+    "9": "'Cost too high' on the same head. The labels swap about every half second while the narrator keeps talking.",
+    "10": "A new silhouette, long hair, with 'Parents say no'. People dissolve into each other on their own beat, separate from the labels.",
+    "11": "'Burnout' over a broader figure in a jacket, the rim light at its brightest.",
+    "12": "'Feels impossible' as the light fails: the silhouette flickers like a dying bulb and drops to black.",
+    "13": "'Until' alone, small, on black. A one-word hold before the hinge.",
+    "14": "'Until today' with the brand gradient sweeping through the letters, blue to pink to orange. The first time the brand's color appears.",
+    "15": "The heart mark pops in and 'Lovable' types on beside it, a gradient horizon starting to glow at the bottom edge.",
+    "16": "Pushed in: the wordmark was sitting inside a prompt box. It has been deleted and 'Cr' is being typed in its place.",
+    "17": "'Create an AI' at headline size, the frame sliding left to follow the cursor.",
+    "18": "'AI resume builder', the prompt running off the left edge. The input is the film's next sentence.",
+    "19": "A hand cursor presses the send arrow, which fills with the gradient. Every press in the film gets a pressed state.",
+    "20": "The built app opens: a resume for 'Megan Reed', chat panel on the left, the name still typing in. 'Into reality' has just been said.",
+    "21": "A wall of prompt pills typing at once around the heart: 'AI meeting summarizer', 'AI chatbot', 'Online course platform'. 'Anything you can imagine' as a picture.",
+    "22": "The wall pulled wider, a dozen half-typed ideas cropped by the frame edges. The heart is about to grow and fill the screen.",
+    "23": "A meeting app on a pale blue field, the prompt pill docked bottom left. This window stays put for the next five seconds.",
+    "24": "A liquid smear of pink and orange starts across the window. Under it the next app is already loading.",
+    "25": "A dark revenue dashboard in the same window, while the pill types the next request, 'Build a multi-user family calendar'.",
+    "26": "Mid-smear into the calendar. The transition is the brand gradient itself, used like wet paint.",
+    "27": "The family calendar settled, and 'Build an AI avatar marketplace' already typing below it. Request and result overlap.",
+    "28": "'Discover AI Creators', a marketplace of portraits. Right after this the film flashes through four sites in under half a second.",
+    "29": "'Dream Home', a real-estate site full frame. It is about to pull back into a laptop on a terrazzo desk.",
+    "30": "Inside the real-estate site: stats and listing cards. 'This isn't just a mock-up or a demo' starts here, over a site being used.",
+    "31": "A hand cursor on 'Book Tour'. The narrator's claim is answered with a click.",
+    "32": "The booking calendar floats over the same terrazzo desk with a vase and books. The interface is put in a room.",
+    "33": "'Real' beside a toggle that has just switched on. A UI control stands in for a word.",
+    "35": "'Create your account', with the name Laura Rose in the field. Remember the name.",
+    "36": "The account becomes a database row, 'laura.r@mail.me', tilting back in 3D. The same user, one shot later, as data.",
+    "37": "The row has joined the 'Viewing table' with the other users. 'A database' is said over it.",
+    "38": "'Built-in' over a pink shield with a padlock, black field, gradient horizon.",
+    "39": "'Built-in security' with small status tags. Feature words are set big and short, like a slide.",
+    "40": "Split frame: the prompt 'Make it easy and fun for an 8-year-old to use' on the left; the Spanish lessons app on the right, half repainted with a koala mascot.",
+    "41": "'WE SCALE IDEAS' on a soft white site with blurred glass shapes. Visual edits start here.",
+    "42": "A cursor lands on 'SCALE' and a selection box with a tag appears around it.",
+    "43": "A font menu open (Inter, Kalnia, Instrument Serif, Field Gothic, Plus Jakarta Sans) and 'SCALE' already reset in a heavy wide face.",
+    "44": "An image selected with a blue frame: a green inflated form on a case-study card. Images are editable too.",
+    "45": "A color palette open beside a selected 'LET'S START' button. It is about to turn brown.",
+    "47": "'Please add a premium subscription to my app for $12/month', typed politely, cursor on send.",
+    "48": "The 'Payments' page that answers it, with Stripe and PayPal options and a card form.",
+    "49": "A huge purple 'Success' pill, check mark in place. The payment goes through on screen.",
+    "50": "'Add AI chatbot feature' in a white prompt box on the gradient. The narrator says 'to AI' and stops.",
+    "51": "The chatbot app, 'Ask AI', running in a window, with no voice over it.",
+    "52": "A laptop on a stone plinth under blue light showing 'Your team's knowledge. Finally organized.' after 'Publish' is pressed.",
+    "53": "'Custom Domains' with a globe icon between the words. The laptop shot has just shrunk into that icon.",
+    "54": "'Connectors' with a row of app icons. Six feature names in two seconds under 'Everything you need, all in one place'.",
+    "55": "Everything blurs out: app screens rush past close to the lens.",
+    "56": "A tight collage of app screens on black ('Habit', 'Flow', 'KICKLAB'), the range of things made with it.",
+    "57": "The collage reshuffles card by card, held long enough to read a few names.",
+    "58": "End card on a full gradient field: 'For every idea, there's' and a heart. The music is fading.",
+    "59": "The heart has become the Lovable mark: 'For every idea, there's Lovable', in near silence. The line is never spoken."
+  },
+  "motion_intro": "Almost nothing here is a plain cut. The world is a black stage with Lovable's blue, pink and orange gradient glowing along the bottom of the frame like a horizon, and the moving parts are the product's own pieces: the prompt box, the send arrow, the heart, a hand cursor. Type blurs into focus word by word as it is spoken. Apps change under a liquid smear of the gradient while the window holds still. Shapes hand off to each other: the wordmark turns out to sit in a prompt box, the send button becomes a loading flower whose star opens onto the finished app, a sign-up button becomes a database row, a laptop shrinks into a globe icon. The camera pushes into whatever is about to be pressed, and every press gets a visible pressed state.",
+  "motion": [
+    {
+      "id": "line-blurs-in",
+      "start": 0.0,
+      "end": 2.0,
+      "fps": 12,
+      "title": "The first line blurs in word by word",
+      "tags": [
+        "blur to focus",
+        "word by word",
+        "scale down",
+        "voice sync"
+      ],
+      "text": "'Ideas' resolves out of a blur at about 0.25, large and soft-glowing on black. 'are' arrives blurred at 0.75 and sharpens over a few frames. At 1.0 the whole line jumps smaller as 'everywhere' joins, also arriving soft, and it is sharp by 1.25. Each word lands with the narrator. At 1.9 the line starts to blur away before the first footage cuts in at 1.97."
+    },
+    {
+      "id": "footage-windows",
+      "start": 1.9,
+      "end": 6.0,
+      "fps": 6,
+      "title": "Footage in small glowing windows",
+      "tags": [
+        "picture in black",
+        "window shape",
+        "fast cutting",
+        "caption holds"
+      ],
+      "text": "At 1.97 a small window opens in the black on what looks like home-movie footage, a child on a tricycle, with rounded corners and a soft glow around it. The clips change every half second to a second: a toddler in a garden (2.47), lit apartment windows at night (2.9), a subway platform (3.6), a city street and a taxi (4.0 to 4.6), a figure at a desk under a warm lamp (4.75). Each window takes the shape of its clip, 4:3 for the home movie, portrait for the street, wide for the desk, while the caption stays dead center. Small windows in darkness make the footage feel like glimpses of other people's lives."
+    },
+    {
+      "id": "reasons-on-faces",
+      "start": 7.0,
+      "end": 13.0,
+      "fps": 4,
+      "title": "Reasons swap across faceless silhouettes",
+      "tags": [
+        "rim light",
+        "label swap",
+        "dissolve",
+        "light failure"
+      ],
+      "text": "A rim-lit silhouette appears at 7.1 with its face in full shadow, and 'No coding skills' fades onto the face at 7.5. From 8.6 the label changes roughly every half second: 'Not enough time', 'Cost too high', 'Language barrier', 'Kids start school', 'Parents say no', 'Afraid to fail', 'Twelve hour shifts', 'Small town', 'Burnout', 'Feels impossible'. The people dissolve into one another on a separate beat (around 9.7, 10.5, 11.1 and 11.4), so reasons and faces never line up one to one; they read as many people, not one. From 12.0 the rim light flickers like a failing bulb, the label dims, and at 12.9 the frame goes black."
+    },
+    {
+      "id": "until-today-to-prompt",
+      "start": 13.0,
+      "end": 17.0,
+      "fps": 8,
+      "title": "'Until today' turns into the wordmark, inside a prompt",
+      "tags": [
+        "gradient sweep",
+        "letter dropout",
+        "type-on",
+        "push in",
+        "reveal"
+      ],
+      "text": "'Until' sharpens small at 13.0 and 'today' blurs in at 13.75. At 14.26 the brand gradient sweeps through the letters left to right, blue to pink to orange, and has passed by 14.66. At 14.8 the letters drop out at random and the frame is black by 14.93. The heart pops in at 15.0 and 'Lovable' types on letter by letter from 15.13, each letter appearing grey and settling to white. A gradient glow rises from the bottom edge at 15.5, and at 15.86 the frame jumps closer to show the wordmark sitting inside a dark rounded prompt box with a cursor. By 16.25 the name has been deleted, and 'Create' starts typing at 16.4. The brand name was the first prompt."
+    },
+    {
+      "id": "send-through-the-flower",
+      "start": 19.3,
+      "end": 20.6,
+      "fps": 24,
+      "title": "Send, a loading flower, and the app inside its star",
+      "tags": [
+        "button press",
+        "loading state",
+        "shape reveal",
+        "scale through"
+      ],
+      "text": "The hand cursor presses send at 19.3; the arrow button fills with the gradient and fades over about a quarter second while the prompt panel falls away into the dark. At 19.6 a scalloped gradient flower sits alone with a tiny four-point star at its center, pulsing for about a third of a second as the loading state. At 20.05 the star opens like a cutout and the flower scales toward the camera; the finished resume app is visible inside the opening by 20.2, and the flower passes the lens at about 20.35. The app window lands with the name 'Megan', then 'Reed', typing in at 20.42 to 20.55. Waiting is shown as a branded object, and it lasts well under a second."
+    },
+    {
+      "id": "prompt-wall",
+      "start": 21.0,
+      "end": 22.9,
+      "fps": 12,
+      "title": "A wall of prompts typing at once",
+      "tags": [
+        "hard cut",
+        "pull back",
+        "simultaneous type-on",
+        "scale through"
+      ],
+      "text": "A hard cut at 21.13 lands close on the heart, surrounded by prompt pills that are all typing at the same time: 'AI meeting summarizer', 'AI chatbot for lawyers', 'Online course platform'. Most of the pull back happens in the first third of a second; then it keeps drifting out slowly so new pills enter at the edges. At about 22.6 the heart scales toward the camera, its gradient fills the frame and becomes the pale blue background of the next app, which fades in from 22.75 to 23.0."
+    },
+    {
+      "id": "smear-morph",
+      "start": 24.3,
+      "end": 25.1,
+      "fps": 24,
+      "title": "A gradient smear carries one app into the next",
+      "tags": [
+        "liquid wipe",
+        "fixed window",
+        "morph",
+        "prompt chain"
+      ],
+      "text": "The window never moves. The cursor clicks send in the prompt pill at 24.3, and at about 24.45 a liquid smear of pink, red and orange spreads in from the left across the meeting app like wet paint. Underneath it the content is already the dark revenue dashboard by 24.7, and the smear thins and slides off to the right by about 24.95. The pill clears and starts typing the next request while the new app is still settling. The same move repeats at about 26.1 and 27.6, four apps in five seconds."
+    },
+    {
+      "id": "flash-to-laptop",
+      "start": 28.3,
+      "end": 30.4,
+      "fps": 15,
+      "title": "Four sites in a blink, then into a laptop",
+      "tags": [
+        "flash cuts",
+        "pull back",
+        "screen to object",
+        "rendered set"
+      ],
+      "text": "At 28.5, on 'minutes', the rhythm breaks: a portfolio for 'Nathan Hale', a revenue pipeline, 'BOOK NEXT VISIT' and an 'Essence' perfume page flash past at one or two frames each. 'Dream Home' lands full frame at 29.0 and holds. From about 29.3 the frame pulls back and the site settles into a laptop screen on a terrazzo desk with a vase and a stack of books, settled by 30.2. At 30.27 it cuts back inside the site. The pull back turns a screen into an object someone owns."
+    },
+    {
+      "id": "account-to-database",
+      "start": 35.4,
+      "end": 38.7,
+      "fps": 8,
+      "title": "A sign-up becomes a database row, then a padlock",
+      "tags": [
+        "push in",
+        "button squash",
+        "3D tilt",
+        "shape morph"
+      ],
+      "text": "A cut at 35.5 goes close on 'Create account'. The cursor presses at about 36.1, the button swells and then squashes flat, and at 36.26 it becomes a dark row holding the new user's id and 'laura.r@mail.me'. The row tilts back in 3D and drops into a stack of other user rows (36.4 to 36.9), which flatten into the database table by about 37.25. At 37.75 a black plus-shaped form wipes over the table and inverts into a padlock, then a shield at 38.1, with 'Built-in' at 38.25 and 'security' at 38.6. Each step is said by the narrator as it happens: authentication, a database, built-in security."
+    },
+    {
+      "id": "edit-by-prompt",
+      "start": 39.4,
+      "end": 41.1,
+      "fps": 12,
+      "title": "One sentence repaints the app",
+      "tags": [
+        "split frame",
+        "send",
+        "gradient smear",
+        "before and after"
+      ],
+      "text": "The frame splits: a dark panel on the left finishes typing 'Make it easy and fun for an 8-year-old to use', and the Spanish lessons app sits on the right. The send button is pressed at about 39.9 and pulses. At 40.2 a magenta smear sweeps across the app from the lower left, and by 40.5 a koala mascot and a warm orange and beige palette are showing through. It is settled by 40.9 and cuts at 41.2. The narrator says 'Just tell Lovable' over it."
+    },
+    {
+      "id": "font-swap",
+      "start": 42.3,
+      "end": 43.7,
+      "fps": 10,
+      "title": "Hovering fonts on a live headline",
+      "tags": [
+        "selection box",
+        "dropdown",
+        "hover preview",
+        "snap"
+      ],
+      "text": "The cursor clicks 'SCALE' at about 42.4 and a thin selection box with a tag appears. A dark font menu opens at 42.5 (Inter, Kalnia, Instrument Serif, Field Gothic, Plus Jakarta Sans). As the cursor moves down the list from 43.0, the headline previews each face in place, and at about 43.5 'SCALE' snaps to a heavy, wide sans. It is a real editing gesture shown at full size, not a menu described."
+    },
+    {
+      "id": "payment-success",
+      "start": 47.2,
+      "end": 49.7,
+      "fps": 10,
+      "title": "A request for payments, a payment, success",
+      "tags": [
+        "send",
+        "glow bloom",
+        "push in",
+        "button press",
+        "slide"
+      ],
+      "text": "'Please add a premium subscription to my app for $12/month' is sent at about 47.3. The prompt box drifts up as an orange glow blooms beneath it, 'Payments' fades up in pink at 47.75, and the payments page with Stripe and PayPal builds around it. The camera pushes in to 'Pay $12.00' by 48.5, the cursor presses at about 48.8 and the button glows. At 49.1 it cuts to a huge purple 'Success' pill whose spinner turns into a check by 49.3 as it slides left. The film closes the loop from request to working feature to a paid transaction in two and a half seconds."
+    },
+    {
+      "id": "laptop-to-globe",
+      "start": 52.5,
+      "end": 53.6,
+      "fps": 24,
+      "title": "The published site shrinks into an icon",
+      "tags": [
+        "scale down",
+        "card",
+        "icon morph",
+        "blur-in type"
+      ],
+      "text": "The laptop on its stone plinth holds until about 52.79, when the whole picture becomes a rounded card with the gradient horizon showing beneath it. The card shrinks over a fifth of a second into a dark tile at 53.04, a globe appears in the tile at 53.08, and the tile shrinks to icon size. 'Custom' blurs in from the left at 53.2 and 'Domains' from the right at 53.25, sharp by 53.33. A hard cut at 53.58 goes to 'Collaboration' with two named cursors, 'Jonathan' and 'Jodie'. The site you just published becomes the first feature in the list."
+    },
+    {
+      "id": "collage-to-end",
+      "start": 55.2,
+      "end": 59.2,
+      "fps": 8,
+      "title": "Rush of apps, a collage, the end line",
+      "tags": [
+        "blur out",
+        "rush past",
+        "collage",
+        "pull back",
+        "logo swap"
+      ],
+      "text": "'Code Ownership' blurs out at 55.33. Out-of-focus app screens rush past close to the lens from 55.5 and sharpen into a dense collage by 56.0, which pulls back to a tight cluster on black at 56.2. The cards reshuffle inside the cluster for almost two seconds, then the cluster bursts toward the camera at 58.0. The gradient end card follows: 'For every idea, there's' and a heart, and at about 58.75 the heart is replaced by the Lovable mark and wordmark as the music fades out."
+    }
+  ],
+  "craft": {
+    "lede": [
+      "A one-minute film that spends its first fifteen seconds on people, not product. Ideas are everywhere, it says over small windows of homes and streets; then it shows why they die, eleven reasons written across the faces of silhouettes with no faces. 'Until today' is the hinge, and the rest is proof: the Lovable name typed into its own prompt box, an app built from one sentence, and a run of apps, sign-ups, payments and edits made in front of you.",
+      "What is worth studying is how the film turns a claim nobody can see, that the software it makes is real, into things you watch happen. The same user who signs up shows up in the database. The prompts are written the way people talk. And the motion is built from the product's own parts, so even the transitions look like Lovable."
+    ],
+    "map": {
+      "lanes": [
+        {
+          "id": "story",
+          "segments": [
+            {
+              "start": 0,
+              "end": 5.95,
+              "label": "Ideas are everywhere",
+              "note": "The line, then glimpses of homes, commutes and 2 a.m."
+            },
+            {
+              "start": 5.95,
+              "end": 12.95,
+              "label": "Why ideas die",
+              "note": "'And most ideas die there', with eleven reasons on faceless silhouettes."
+            },
+            {
+              "start": 12.95,
+              "end": 15.0,
+              "label": "Until today",
+              "note": "The hinge, and the first appearance of the brand gradient."
+            },
+            {
+              "start": 15.0,
+              "end": 21.13,
+              "label": "This is Lovable",
+              "note": "The name typed into a prompt, then one prompt becomes an app."
+            },
+            {
+              "start": 21.13,
+              "end": 30.27,
+              "label": "Anything you can imagine",
+              "note": "A wall of prompts, four apps in one window, a flash of four more, a laptop."
+            },
+            {
+              "start": 30.27,
+              "end": 39.5,
+              "label": "It's real",
+              "note": "A booking flow, a sign-up, the database, security."
+            },
+            {
+              "start": 39.5,
+              "end": 46.47,
+              "label": "Change it",
+              "note": "By prompt, then by hand with visual edits."
+            },
+            {
+              "start": 46.47,
+              "end": 52.27,
+              "label": "Add features",
+              "note": "Payments, an AI chatbot, Publish."
+            },
+            {
+              "start": 52.27,
+              "end": 55.4,
+              "label": "All in one place",
+              "note": "Six feature names in two seconds."
+            },
+            {
+              "start": 55.4,
+              "end": 60.05,
+              "label": "For every idea",
+              "note": "A collage of apps, then the unspoken end line."
+            }
+          ]
+        },
+        {
+          "id": "voices",
+          "segments": [
+            {
+              "start": 0.0,
+              "end": 1.34,
+              "label": "Ideas are everywhere",
+              "kind": "narrator",
+              "note": "Also typed on screen, word by word with the voice."
+            },
+            {
+              "start": 1.96,
+              "end": 5.54,
+              "label": "Homes, commutes, 2 a.m.",
+              "kind": "narrator",
+              "note": "Each place captioned on its own clip."
+            },
+            {
+              "start": 5.78,
+              "end": 12.46,
+              "label": "Most ideas die there",
+              "kind": "narrator",
+              "note": "'Not because they weren't good enough. Building was just too hard.' Meanwhile eleven reasons swap on screen that the voice never says."
+            },
+            {
+              "start": 12.82,
+              "end": 14.28,
+              "label": "Until today",
+              "kind": "narrator"
+            },
+            {
+              "start": 14.66,
+              "end": 16.24,
+              "label": "This is Lovable",
+              "kind": "narrator"
+            },
+            {
+              "start": 16.46,
+              "end": 19.84,
+              "label": "Ideas into reality",
+              "kind": "narrator",
+              "note": "'Create an AI resume builder' is typed while it is said."
+            },
+            {
+              "start": 20.5,
+              "end": 28.74,
+              "label": "Anything you can imagine",
+              "kind": "narrator",
+              "note": "'From small side projects to enterprise tools. From consumer apps to platforms at scale. Built in minutes.'"
+            },
+            {
+              "start": 30.0,
+              "end": 39.0,
+              "label": "Not a mock-up or a demo",
+              "kind": "narrator",
+              "note": "'A real working product with authentication, a database, and built-in security.'"
+            },
+            {
+              "start": 39.5,
+              "end": 45.46,
+              "label": "Just tell Lovable",
+              "kind": "narrator",
+              "note": "'Or jump in and fine-tune it yourself with visual edits.'"
+            },
+            {
+              "start": 46.12,
+              "end": 50.1,
+              "label": "Payments to AI",
+              "kind": "narrator",
+              "note": "Typed prompts carry the requests; the voice stops for Ask AI and Publish."
+            },
+            {
+              "start": 52.92,
+              "end": 55.5,
+              "label": "Everything you need",
+              "kind": "narrator",
+              "note": "Six feature names flash on screen under the line."
+            },
+            {
+              "start": 58.1,
+              "end": 60.05,
+              "label": "For every idea, there's Lovable",
+              "kind": "text",
+              "note": "Never spoken."
+            }
+          ]
+        },
+        {
+          "id": "sound",
+          "segments": [
+            {
+              "start": 0,
+              "end": 1.5,
+              "label": "Voice alone",
+              "kind": "silence",
+              "note": "The first line is spoken over near silence."
+            },
+            {
+              "start": 1.5,
+              "end": 20.0,
+              "label": "Music low under the problem",
+              "kind": "music",
+              "note": "About 10 to 12 dB under the voice."
+            },
+            {
+              "start": 20.0,
+              "end": 50.5,
+              "label": "Fuller, with the first app",
+              "kind": "music",
+              "note": "The low end thickens as the resume app opens; the music now sits only 4 to 5 dB under the voice. Near 120 BPM by estimate; cuts do not follow the beat."
+            },
+            {
+              "start": 50.5,
+              "end": 52.8,
+              "label": "Music alone",
+              "kind": "music",
+              "note": "No voice over the chatbot and Publish."
+            },
+            {
+              "start": 52.8,
+              "end": 55.4,
+              "label": "Break",
+              "kind": "music",
+              "note": "The low end thins under 'Everything you need, all in one place'."
+            },
+            {
+              "start": 55.4,
+              "end": 58.4,
+              "label": "Returns for the collage",
+              "kind": "music"
+            },
+            {
+              "start": 58.4,
+              "end": 60.05,
+              "label": "Fade to silence",
+              "kind": "silence",
+              "note": "The wordmark lands in near silence."
+            }
+          ]
+        },
+        {
+          "id": "picture",
+          "segments": [
+            {
+              "start": 0,
+              "end": 1.97,
+              "label": "Line 1",
+              "kind": "title"
+            },
+            {
+              "start": 1.97,
+              "end": 5.95,
+              "label": "Footage in windows",
+              "kind": "b-roll"
+            },
+            {
+              "start": 5.95,
+              "end": 7.05,
+              "label": "Line 2",
+              "kind": "title"
+            },
+            {
+              "start": 7.05,
+              "end": 12.95,
+              "label": "Silhouettes",
+              "kind": "staged"
+            },
+            {
+              "start": 12.95,
+              "end": 15.85,
+              "label": "Until today, wordmark",
+              "kind": "title"
+            },
+            {
+              "start": 15.85,
+              "end": 20.35,
+              "label": "Prompt and send",
+              "kind": "screen"
+            },
+            {
+              "start": 20.35,
+              "end": 21.13,
+              "label": "First app",
+              "kind": "screen"
+            },
+            {
+              "start": 21.13,
+              "end": 22.7,
+              "label": "Prompt wall",
+              "kind": "graphics"
+            },
+            {
+              "start": 22.7,
+              "end": 28.5,
+              "label": "Apps in one window",
+              "kind": "screen"
+            },
+            {
+              "start": 28.5,
+              "end": 30.27,
+              "label": "Flash, laptop",
+              "kind": "screen"
+            },
+            {
+              "start": 30.27,
+              "end": 33.07,
+              "label": "Booking flow",
+              "kind": "screen"
+            },
+            {
+              "start": 33.07,
+              "end": 34.43,
+              "label": "Real working product",
+              "kind": "graphics"
+            },
+            {
+              "start": 34.43,
+              "end": 37.75,
+              "label": "Sign-up to database",
+              "kind": "screen"
+            },
+            {
+              "start": 37.75,
+              "end": 39.5,
+              "label": "Security",
+              "kind": "graphics"
+            },
+            {
+              "start": 39.5,
+              "end": 41.2,
+              "label": "Edit by prompt",
+              "kind": "screen"
+            },
+            {
+              "start": 41.2,
+              "end": 46.47,
+              "label": "Visual edits",
+              "kind": "screen"
+            },
+            {
+              "start": 46.47,
+              "end": 52.27,
+              "label": "Payments, AI, Publish",
+              "kind": "screen"
+            },
+            {
+              "start": 52.27,
+              "end": 53.1,
+              "label": "Laptop on plinth",
+              "kind": "screen"
+            },
+            {
+              "start": 53.1,
+              "end": 55.4,
+              "label": "Feature names",
+              "kind": "graphics"
+            },
+            {
+              "start": 55.4,
+              "end": 58.0,
+              "label": "Collage",
+              "kind": "graphics"
+            },
+            {
+              "start": 58.0,
+              "end": 60.05,
+              "label": "End line",
+              "kind": "title"
+            }
+          ]
+        }
+      ]
+    },
+    "aspects": [
+      {
+        "id": "story",
+        "title": "A problem with faces, then a pile of proof",
+        "paragraphs": [
+          "The first quarter of the film is about people: where ideas happen, and why they die. It is dim, mostly dark and quiet, and it never mentions software. 'Until today' is the hinge, and the name arrives at fifteen seconds.",
+          "The remaining forty-five seconds are ordered like answers to a sceptic. Can it make anything? A resume, a meeting tool, a dashboard, a calendar, a marketplace. Is it real, or a demo? A booking is clicked through, an account is created and appears in the database. Can I change it? By asking, or by hand. Can it grow? Payments, AI, Publish. Then the feature list, a collage of everything, and the end line.",
+          "The last line, 'For every idea, there's Lovable', answers the first one, 'Ideas are everywhere'. The film closes on the word it opened with."
+        ],
+        "moments": [
+          {
+            "t": 12,
+            "text": "'Feels impossible' as the light fails: the problem ends in darkness."
+          },
+          {
+            "t": 14,
+            "text": "'Until today' in the brand gradient, the hinge of the film."
+          },
+          {
+            "t": 30,
+            "text": "'This isn't just a mock-up or a demo' starts over a site being clicked through."
+          },
+          {
+            "t": 59,
+            "text": "The end line comes back to 'idea', the film's first word."
+          }
+        ]
+      },
+      {
+        "id": "voices",
+        "title": "One narrator, two scripts on screen",
+        "paragraphs": [
+          "The narrator speaks in short sentences and fragments: 'In homes, on commutes, at 2 a.m.' 'Until today.' 'Built in minutes.' On screen, words do two different jobs. Some echo the voice exactly ('Ideas are everywhere', 'In homes', 'Until today'), blurring in as each word is said, so the opening reads like captions with weight.",
+          "Others say what the narrator does not. While the voice gives one general reason, 'Building was just too hard', the screen lists eleven specific ones across the silhouettes: 'No coding skills', 'Kids start school', 'Parents say no', 'Twelve hour shifts', 'Small town', 'Burnout'. This is where the film's warmth lives. These are ordinary, domestic reasons, and the viewer finds their own among them without the narrator having to list them.",
+          "The third voice is the user's. The prompts are typed in plain language, the way someone would ask a colleague: 'Create an AI resume builder', 'Make it easy and fun for an 8-year-old to use', 'Please add a premium subscription to my app for $12/month'. The narrator says 'Just tell Lovable' over one being sent. The voice then steps away twice: for two seconds of music over the chatbot and Publish, and for the end line, which is only written."
+        ],
+        "moments": [
+          {
+            "t": 8,
+            "text": "'No coding skills' written where the face should be, while the voice says something else."
+          },
+          {
+            "t": 10,
+            "text": "'Parents say no': one of eleven reasons the narrator never reads out."
+          },
+          {
+            "t": 40,
+            "text": "'Make it easy and fun for an 8-year-old to use': the request in ordinary words."
+          },
+          {
+            "t": 47,
+            "text": "Even the payment request says 'Please'."
+          }
+        ]
+      },
+      {
+        "id": "world",
+        "title": "A black stage, a gradient horizon, the interface as type",
+        "paragraphs": [
+          "Almost every frame sits on black with Lovable's gradient glowing along the bottom edge, blue into pink into orange, like light on a horizon. The opening holds that color back. The footage plays in small glowing windows in the dark, each cut to the shape of its clip, and the silhouettes are lit only at their edges. The gradient first appears inside two words, when it sweeps through 'Until today', and from then on it is the light source of the film: the send button fills with it, the loading flower is made of it, and app changes are wiped by it.",
+          "Interface parts are set into the type as if they were words. 'Real' sits beside a toggle that switches on; 'product' follows a stack of avatars; a globe sits between 'Custom' and 'Domains'; the GitHub mark sits inside 'Code Ownership'; and the end line finishes on a heart that becomes the logo. The product's visual language becomes the film's alphabet.",
+          "Some screens are placed in rendered rooms: a laptop on a terrazzo desk with a vase and books, the booking calendar floating over the same desk, a laptop on a stone plinth under blue light. These moments take the interface out of the abstract black and put it on a desk where someone could use it."
+        ],
+        "moments": [
+          {
+            "t": 3,
+            "text": "A small glowing window of lit apartments, captioned at its center."
+          },
+          {
+            "t": 14,
+            "text": "The brand's gradient first appears inside the words."
+          },
+          {
+            "t": 33,
+            "text": "A toggle, just switched on, set beside 'Real' as if it were a word."
+          },
+          {
+            "t": 32,
+            "text": "The booking calendar floats over a terrazzo desk."
+          },
+          {
+            "t": 53,
+            "text": "The globe icon set between two words."
+          }
+        ]
+      },
+      {
+        "id": "screens",
+        "title": "One window, edited while you watch",
+        "paragraphs": [
+          "The product is shown as a chain, not a gallery. A window holds still with a prompt pill docked at its bottom left. The next request starts typing while the current app is still on screen; the cursor presses send; a smear of gradient passes over; the new app is there. A meeting summarizer, a revenue dashboard, a family calendar and a creator marketplace follow each other in about five seconds, and because the frame never moves, it reads as one tool doing many jobs.",
+          "The claim 'real working product' is proved through continuity. An account is created with the name Laura Rose, and one shot later the 'Create account' button turns into a database row for 'laura.r@mail.me' that tilts into the table of users. A tour is booked by clicking 'Book Tour' and picking a date. A payment is made, 'Pay $12.00', and a 'Success' pill slides in. Every action has a cursor and a pressed state, so the screens read as being used rather than presented.",
+          "People come back inside the product. The opening's silhouettes had no faces and no names; the apps are full of them: a resume for 'Megan Reed', creators with portraits, an agent on the booking card, avatars beside 'product', and two named cursors, 'Jonathan' and 'Jodie', under 'Collaboration'. The film's problem is anonymous, and its product is populated."
+        ],
+        "moments": [
+          {
+            "t": 25,
+            "text": "The next request typing under the current app: request and result overlap."
+          },
+          {
+            "t": 35,
+            "text": "'Create your account' with Laura Rose in the field."
+          },
+          {
+            "t": 36,
+            "text": "The same account, now a row in the database."
+          },
+          {
+            "t": 43,
+            "text": "A real font menu, with the headline already changed."
+          },
+          {
+            "t": 49,
+            "text": "'Success' after a $12 payment: the feature works on screen."
+          }
+        ]
+      },
+      {
+        "id": "sound",
+        "title": "Low under the problem, lifted for the product",
+        "paragraphs": [
+          "There is no credited music, and by the stems the soundtrack is one voice over one music cue, with no sound effects that stand out from it. The first line is spoken over near silence and the music enters at about 1.5 seconds. Under the problem it is kept well back, about 10 to 12 dB under the voice. At about 20 seconds, as the first app opens, the low end thickens and the music rises, sitting only 4 to 5 dB under the voice for the rest of the demo. The film's mood turns at the same moment its picture does.",
+          "Three later moves are placed with care. The music plays alone for about two seconds (50.5 to 52.8) over the chatbot and Publish. It thins to a break under 'Everything you need, all in one place', so the summary line and the six feature names stand clear, and comes back for the collage. Then it fades out from about 58.4, so the logo arrives at 58.75 in near silence. The tempo is near 120 BPM by estimate (it may feel half or double that), but the cutting does not follow it: 7 of 27 cuts land near a beat, about what chance would give."
+        ],
+        "moments": [
+          {
+            "t": 20,
+            "text": "The music thickens as the first app opens."
+          },
+          {
+            "t": 54,
+            "text": "The break under the feature list."
+          },
+          {
+            "t": 59,
+            "text": "The wordmark lands as the music fades out."
+          }
+        ]
+      }
+    ],
+    "patterns": [
+      {
+        "name": "Write the reasons, say the summary",
+        "text": "Let the narrator say one general line and put the specific, personal examples on screen at reading speed. Viewers find their own reason without the voice getting longer.",
+        "t": 9
+      },
+      {
+        "name": "Hold color back until the turn",
+        "text": "Keep the problem dim and dark, then let the brand color enter inside the words of the turn. The color change marks the hinge before the logo does.",
+        "t": 14
+      },
+      {
+        "name": "Type the brand name into the product",
+        "text": "Introduce the name as text typed into the product's own input, then delete it and type the first real request. The logo and the demo become one move.",
+        "t": 15
+      },
+      {
+        "name": "Keep the window, change the app",
+        "text": "Hold one frame still and change only what is inside it, with the next request typing before the current result has finished. Many outputs read as one tool.",
+        "t": 26
+      },
+      {
+        "name": "Carry one record across shots",
+        "text": "To prove something works, follow a single piece of data through it: the name typed at sign-up should be the row that lands in the database.",
+        "t": 36
+      },
+      {
+        "name": "Set interface parts inside the type",
+        "text": "Use a toggle, an avatar stack or an icon as a word in a headline. It keeps feature slides in the product's own language.",
+        "t": 33
+      },
+      {
+        "name": "Leave the last line unspoken",
+        "text": "Let the voice finish on the summary and give the closing line to the screen alone as the music fades. The quiet makes the logo the last thing heard and seen.",
+        "t": 59
+      }
+    ],
+    "absent": "There are no real customers, testimonials, usage numbers or on-camera interviews; after the opening every face is demo data inside an app. It is not a film to study for documentary footage or for cutting to the beat."
+  }
+}
