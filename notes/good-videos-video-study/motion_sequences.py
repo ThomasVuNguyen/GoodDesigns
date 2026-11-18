@@ -45,6 +45,11 @@ MOTION_INTRO = {
          "including her own past books, is a cutout on white with a small black caption at bottom left. The motion worth "
          "studying is the hands: unfolding, scoring, taping, peeling and pressing, usually shown by cutting between two scales "
          "of the same gesture."),
+    58: ("MoMA's trailer for its YouTube channel is a montage of clips from its series, about 55 cuts in 68 seconds, "
+         "framed by outtakes: it opens on a slate and color bars and closes on 'You want me to clap?'. The cutting runs in "
+         "bursts. Half-second inserts of hands at work alternate with longer held beats for a joke or a reaction, and archive "
+         "film, animation and camcorder video are cut straight into the cinematic interviews. The only graphics are two "
+         "centered lines in bold white sans and the MoMA wordmark, each appearing on a cut rather than animating in."),
     53: ("Kozmonot Animation Studio builds the whole film from flat dots on flat color fields. People are dots, a group is a ring "
          "or a fan of dots, and the storyteller is the red one. There is one hard cut in five minutes. Every other scene change "
          "goes through a shape: the camera dives into a dot, a speech bubble or the O of a word, a circle irises open or shut, "
@@ -974,6 +979,68 @@ MOTION = {
          "tags": ["hard cut", "mask reveal", "end card"],
          "text": "Hard cut from the wide to white. The MoMA wordmark rises into the center from a mask line with the same move "
                  "as the chapter titles, holds about two seconds, and hard cuts to three columns of small black credits."},
+    ],
+    58: [
+        {"id": "outtake-open", "start": 0.0, "end": 4.0, "fps": 6,
+         "title": "An outtake as the opening",
+         "tags": ["outtake", "color bars", "slate", "hard cut"],
+         "text": "A man at his editing desk asks 'What's the tone of this?', turns away and rubs his head. At 2.9 a single "
+                 "frame of color bars cuts in, then a slate claps in front of him, and at 3.9 the film jumps to a deep wide "
+                 "of a studio. The tape-and-slate leader tells you this is the people behind the work, before any art "
+                 "appears."},
+        {"id": "staccato", "start": 22.6, "end": 27.0, "fps": 8,
+         "title": "The half-second montage",
+         "tags": ["fast cutting", "on the beat", "inserts"],
+         "text": "Eight shots in about four seconds, each roughly half a second: a conservator's tools, a microscope over a "
+                 "textile, a macro of burlap threads, a negative held to the light, a technician reaching up to a shelf, "
+                 "handlers on a hoist, a painting on a rack, a team at a glass table. Every shot is mid-gesture, so the "
+                 "cuts read as one continuous motion of hands."},
+        {"id": "crate", "start": 28.3, "end": 32.3, "fps": 4,
+         "title": "The crate that won't fit",
+         "tags": ["comic beat", "locked-off", "held shot"],
+         "text": "After the montage, a held shot of an open freight elevator. A huge white crate lid tilts out over the "
+                 "doorway and a man in a yellow shirt ducks under it and pushes it back up. The trailer gives slapstick "
+                 "four full seconds, about eight times what its neighbors get."},
+        {"id": "cone", "start": 35.5, "end": 37.1, "fps": 6,
+         "title": "Shot and reverse down a cone",
+         "tags": ["reverse angle", "cut on action", "wide lens"],
+         "text": "An older woman blows into a long metal cone, seen from her end. Hard cut to the other end on a wide lens: "
+                 "the cone's open mouth fills the foreground and she is small at the far end of the room. The cut flips "
+                 "the depth of the frame."},
+        {"id": "red-studio", "start": 49.5, "end": 50.75, "fps": 8,
+         "title": "The Red Studio pulls back into a collage",
+         "tags": ["collage", "pull-back", "pop-on", "stagger"],
+         "text": "Matisse's Red Studio fills the frame, then snaps back in a couple of frames to a small card on pale blue. "
+                 "The works it pictures pop on around it one after another, about one every eighth of a second, with no "
+                 "scale or fade, until the card is ringed by them."},
+        {"id": "tulips", "start": 50.9, "end": 52.3, "fps": 8,
+         "title": "A ring of tulips turns",
+         "tags": ["hand-drawn", "rotation", "boiling line"],
+         "text": "Hand-drawn animation of a black eel inside an oval of tulips. The whole ring turns and the eel swims round "
+                 "with it, while every stem is redrawn each frame, so the line wobbles as it moves."},
+        {"id": "scream", "start": 55.7, "end": 57.5, "fps": 12,
+         "title": "From a silent stare to a scream",
+         "tags": ["hard cut", "whip", "camcorder", "contrast"],
+         "text": "A still, sepia silent-film face inside an iris vignette, eyes wide. Hard cut to handheld camcorder video on a "
+                 "crowded street: the camera whips round and a man's face swings into the lens, screaming, with low-resolution "
+                 "color and smeared motion. Two archive formats are cut back to back for contrast."},
+        {"id": "lift", "trail": True, "start": 59.5, "end": 61.5, "fps": 4,
+         "title": "A lift across the white gallery",
+         "tags": ["dance", "locked-off", "white field"],
+         "text": "Locked-off on an empty white gallery. A group walks toward the camera and two dancers raise a woman "
+                 "overhead, arms spread, as they come forward. On the white field the onion skin shows the rise as one stack "
+                 "of poses."},
+        {"id": "taglines", "start": 61.6, "end": 64.8, "fps": 4,
+         "title": "Two lines of type, each on its own shot",
+         "tags": ["type", "hard on", "centered"],
+         "text": "'Passionate perspectives on art' appears in bold white sans with the cut to a photographer beside a bronze "
+                 "head, and holds without moving. On the next cut, to an extreme close-up through a magnifier, it is replaced "
+                 "by 'Subscribe on YouTube' in the same place. The type changes only when the shot does."},
+        {"id": "logo", "start": 65.8, "end": 66.8, "fps": 8,
+         "title": "A clap, then the wordmark",
+         "tags": ["gesture", "logo", "hard on"],
+         "text": "The last interviewee claps her hands, and as they come together the white MoMA wordmark appears over her. "
+                 "She holds the folded-hands pose under it to the end."},
     ],
 }
 

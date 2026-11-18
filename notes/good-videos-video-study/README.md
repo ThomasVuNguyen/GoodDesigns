@@ -1,6 +1,6 @@
 # Video frame and transcript study
 
-The local `index.html` previews the current GoodDesigns gallery with a **Breakdown** button on videos 1–13, 16, 17, 28–35, and 41–57. Other video cards have no breakdown button. The individual breakdown pages show video playback beside a clickable transcript and a frame library with scene-change and one-second views. Hovering over a frame shows a larger preview and its **Play frame** control; keyboard focus shows the preview too. On touch screens, the play control remains visible.
+The local `index.html` previews the current GoodDesigns gallery with a **Breakdown** button on videos 1–13, 16, 17, 28–35, and 41–58. Other video cards have no breakdown button. The individual breakdown pages show video playback beside a clickable transcript and a frame library with scene-change and one-second views. Hovering over a frame shows a larger preview and its **Play frame** control; keyboard focus shows the preview too. On touch screens, the play control remains visible.
 
 For local review, serve the repository root with `npx -y http-server . -p 8766 -a 127.0.0.1 -c-1` and open `http://127.0.0.1:8766/notes/good-videos-video-study/index.html#videos`. This server supports video byte ranges, so frame timestamps seek reliably.
 
@@ -32,7 +32,9 @@ Video 56 is TED-Ed's “Do imaginary friends make you smarter?”, directed by C
 
 Video 57 is MoMA's “How to Make an Artist Book”, a 27-minute In the Studio demonstration by Rhea Karam. It is the first long live-action film with a **Motion** section, so its page uses the YouTube player and 720-pixel frames like video 48. Its 69 **Key frames** cover the eight chapter titles, the reference cards for other artists' books and her own, and each step from sketch to cover. Its 16 sequences are mostly hand gestures (taping, scoring, peeling and pressing the binding, the guillotine cut) and the title reveals. The timeline labels every two minutes on films over ten minutes. The installed yt-dlp got 403 errors from YouTube; a current release downloaded it, with the original English audio picked from the dubbed tracks.
 
-Only videos 48–57 still have local sources. `python3 notes/good-videos-video-study/build_study.py 52 53` rebuilds just those videos and keeps the other manifest entries, and `python3 scripts/publish-video-breakdowns.py 52 53` publishes just those pages, frames and `motion.md` files.
+Video 58 is MoMA's 68-second trailer for its YouTube channel, a montage of about 55 cuts framed by on-set outtakes. Its 43 **Key frames** cover the montage shot by shot, and its 10 sequences cover the opening slate, the half-second inserts, the Red Studio collage, the cut from a silent-film stare to a camcorder scream, and the type and wordmark that appear on cuts. Several sequences end just before a cut so their frames and onion skins stay inside one shot.
+
+Only videos 48–58 still have local sources. `python3 notes/good-videos-video-study/build_study.py 52 53` rebuilds just those videos and keeps the other manifest entries, and `python3 scripts/publish-video-breakdowns.py 52 53` publishes just those pages, frames and `motion.md` files.
 
 `source/` contains the downloaded clips. `frames/` contains the image sequences and `scene-cuts.csv` files. `transcripts/` contains source WebVTT captions where available and locally recognized speech for the other videos. Video 11 is spoken in Japanese, so its transcript is in Japanese. The `.transcript.txt` files are cleaned, timestamped reading copies. Speech recognition can mishear words and names; the `.vtt` files retain the original timing.
 

@@ -19,7 +19,7 @@ import motion_sequences
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 VIDEOS = json.loads((REPO / "gallery/videos.json").read_text())["videos"]
-NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 58)]
+NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 59)]
 # Seconds between library frames. Short clips are sampled more densely than one per second.
 FRAME_STEP = {47: 0.25}
 CURATED_FRAMES = {
@@ -650,6 +650,52 @@ SHOT_NOTES = {
         1606: "End card: the MoMA wordmark in black on white.",
         1608: "Credits in three dense columns of small black type, listing every work and fabricator.",
     },
+    # MoMA, channel trailer: a fast montage of clips from its YouTube series, framed by on-set outtakes.
+    58: {
+        0: "Cold open on an outtake: a man at his editing desk asks 'What's the tone of this?' The trailer starts behind the scenes, not on the art.",
+        3: "A slate claps in front of him after a single frame of color bars. 'Take three' doubles as the title card.",
+        4: "A deep wide of an artist's studio, paintings on the far wall: the first proper interview location.",
+        5: "An interviewee framed low against a wall of speaker stands, with plenty of headroom.",
+        8: "Two people study Matisse's Red Studio under a round lamp, the painting filling the frame behind them.",
+        9: "Visitors in silhouette against a projected image that fills the wall.",
+        11: "The MoMA banner on the building, shot up from the street on a long lens.",
+        13: "A photographer on an elevated platform as a train smears past behind him.",
+        14: "Archival black-and-white film of a suspended railway over a river.",
+        16: "Interview close-up of a woman in glasses against a dark workshop.",
+        18: "Gloved handlers lift The Starry Night above a padded table.",
+        19: "A man covers his face with his hand, overwhelmed.",
+        20: "Interview from below, a woman in a studio of pinned papers.",
+        21: "Someone peeks out between two tall wooden doors.",
+        23: "Start of the half-second montage: a macro of loose threads on burlap under a conservator's microscope.",
+        24: "A gloved hand holds an orange negative up to the light.",
+        25: "Handlers guide a bundled sculpture of yellow and orange forms on a hoist.",
+        27: "Four handlers walk a tall silver Warhol Elvis in a glazed frame.",
+        30: "A crate lid tilts out of a freight elevator and a man ducks under it. A comic beat in the middle of the reel.",
+        32: "Three people in a storage room laugh, one bent double.",
+        34: "A woman lifts an instant camera overhead to shoot herself.",
+        36: "An older woman blows into a long metal cone.",
+        37: "Point of view from the bow of a painted long-tail boat under a red canopy.",
+        39: "Line drawings on a white wall that seem to float beside a stairwell.",
+        40: "A woman works close against a huge yellow and red painting.",
+        42: "Flat animation: a red-and-white marionette dancing on blue, the curtains drawn back.",
+        44: "Hands rest a clay vessel among broken slabs of clay.",
+        45: "A woman turns a large painting of figures toward the camera.",
+        46: "Macro on a pen hatching a dense black pattern.",
+        47: "Two people in the sculpture garden in front of a bronze.",
+        48: "A woman laughing at an easel outdoors, trees soft behind her.",
+        50: "Collage animation: Matisse's Red Studio as a small card on pale blue, with the works it shows popping in around it.",
+        51: "Hand-drawn animation: a black eel inside a ring of tulips that turns as you watch.",
+        53: "A woman lit by a projector beam in the dark.",
+        54: "Archival film of a man leaping from a window.",
+        55: "Silent-film close-up in sepia inside an iris vignette, eyes wide.",
+        57: "Camcorder footage: a man screams straight into the lens on a crowded street.",
+        58: "A dancer in a red paper costume, the camera swinging with her.",
+        60: "Dancers carry a woman overhead across a white gallery.",
+        62: "'Passionate perspectives on art' centered in bold white sans over a photographer beside a bronze head.",
+        64: "'Subscribe on YouTube' over an extreme close-up through a magnifier.",
+        65: "The last interview, a woman in a black T-shirt in a bright studio.",
+        67: "She claps, then folds her hands under the white MoMA wordmark.",
+    },
 }
 FRAME_COPY = {
     # Tab label and intro for videos with SHOT_NOTES. Others fall back to DEFAULT_FRAME_COPY.
@@ -784,7 +830,7 @@ def transcript(number):
             timestamp = "00:" + timestamp
         current = [html.unescape(TAG.sub("", line)).strip() for line in raw[pos + 1:]]
         current = [line for line in current if line]
-        if vtt.name.endswith(".en.vtt") and number in (1, 7, 9, 48, 53, 54, 55, 56, 57):
+        if vtt.name.endswith(".en.vtt") and number in (1, 7, 9, 48, 53, 54, 55, 56, 57, 58):
             current = [" ".join(current)] if current else []
         overlap = 0
         for n in range(min(len(previous), len(current)), 0, -1):
@@ -801,7 +847,7 @@ def transcript(number):
     elif vtt.name.endswith(".ja.vtt"):
         kind = "Japanese speech recognition"
     elif vtt.name.endswith(".en.vtt"):
-        kind = "creator captions" if number in (1, 7, 9, 29, 30, 32, 33, 48, 52, 53, 54, 55, 56, 57) else "YouTube auto captions"
+        kind = "creator captions" if number in (1, 7, 9, 29, 30, 32, 33, 48, 52, 53, 54, 55, 56, 57, 58) else "YouTube auto captions"
     else:
         kind = "local speech recognition"
     return {"vtt": str(vtt.relative_to(HERE)), "text": str(out.relative_to(HERE)), "kind": kind}
