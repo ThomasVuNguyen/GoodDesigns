@@ -1,0 +1,513 @@
+{
+  "note": "Notion's 29-second New Year spot for Notion Faces, with no voice and nothing but white paper. 'New year. New you.' is pushed off by a sliding wall of hand-drawn portraits, one face tries on a year's worth of looks (a donut, sunglasses, glasses, a graduation cap), and then it lands where it will actually live: in place of the default 'N' avatar, then in a row of collaborators. The breakdown follows how a brand's illustration style is turned into a product, and samples ten moves.",
+  "no_transcript": "No speech. Whisper heard only a hallucinated line and the voice stem is silent. The script is four short lines of on-screen text and a row of initials; the Craft map lays them out.",
+  "shot_notes": {
+    "0": "'New year.' alone on white, small black sans, centered, with nothing else on the page. The film opens on half of an idiom everyone can finish.",
+    "1": "'New you.' arrives under it and the two lines re-center as a block, the way text settles when you add a line on a page.",
+    "3": "A wall of portrait tiles slides in from the right and has pushed the title off to the left. The tiles enter staggered, so the wall reads as a moving crowd rather than a grid.",
+    "4": "The wall at rest, three tiles across and two down. Colored tiles (yellow, blue, red) show the face cropped into a white circle, the way an avatar is cropped; pale grey tiles show the whole drawing. Spiral eyes, a wink, heart eyes: the expressions are part of the system.",
+    "5": "Mid-step: the whole wall shifts left one column, and a woman with long curls enters on the right. More than a dozen people in one ink style, with hair, glasses and skin shading doing the variety.",
+    "6": "The wall starts to reshuffle like a sliding puzzle. A gap opens at the right and a blue tile slides into it.",
+    "7": "Two gaps at the left edge, tiles moving through them one at a time. The crowd keeps rearranging without ever cutting.",
+    "8": "Settled again, with a bearded face on yellow at top left. Of six tiles, three are colored and three are grey, a ratio that holds through the wall.",
+    "9": "The wall has gone off left and one face has slid in from the right, still easing toward the center. From many people to one person in half a second.",
+    "10": "The face at the center of the white page, alone and large, tongue out. Grey skin carries a fine halftone stipple, the only texture in the film.",
+    "11": "A donut in her mouth, bitten. The first accessory, and the funniest: the holidays before the resolutions.",
+    "12": "Sunglasses and a toothy grin. The grin she gained a second ago stays on; changes pile up instead of resetting.",
+    "13": "Square glasses, and a pencil tucked into her hair. The look turns studious.",
+    "14": "Frazzled hair flying out, with little stress marks at the sides. The one bad day in the sequence.",
+    "15": "A graduation cap on top, glasses still on. The last look ends the year on an achievement.",
+    "16": "A hard change to Notion's default avatar: a grey 'N' in a white circle with a soft shadow, in the same spot and at about the same size as the face. A cursor rises toward it.",
+    "17": "One click and the portrait has filled the circle. The feature is shown in the slot where it will be seen, not in an editor.",
+    "18": "The avatar shrinks to a small circle and sits alone for a beat, an ordinary piece of UI now.",
+    "19": "The avatar slides left as grey initial circles (Y, J, M, A) pile in beside it, then 'Share' and a comment icon. It is the top corner of a shared Notion page.",
+    "20": "The initials have turned into faces one by one, left to right, and they are faces from the opening wall. The whole team has made one.",
+    "22": "'Create your new look with Notion Faces' in three bold centered lines. The only line that names the feature.",
+    "24": "'Think it.' alone in small sans; 'Make it.' is added beside it half a second later, and the line re-centers, like the opening.",
+    "25": "The Notion icon alone on white.",
+    "26": "The icon slides left as 'Notion' fades in beside it, grey first and then black. The music starts fading here.",
+    "28": "The wordmark holds in near silence for the last two seconds."
+  },
+  "motion_intro": "There is no camera and no hard cut the detector can see: the whole film plays on one white page, and every change is either a slide or an instant swap. Two habits run through it. Things move right to left, as if someone were swiping through a carousel (the title is pushed off left, the wall steps and leaves left, the single face enters from the right). And the face changes by swapping whole drawings on a single frame, like flipping through options in a picker, while the UI moments use small, familiar interface moves: a button press, avatars stacking, initials turning into pictures.",
+  "motion": [
+    {
+      "id": "title-build",
+      "trail": true,
+      "start": 0.0,
+      "end": 2.0,
+      "fps": 8,
+      "title": "Add a line, re-center the block",
+      "tags": [
+        "type-on",
+        "re-center",
+        "hold"
+      ],
+      "text": "'New year.' appears at 0.17 on a blank white frame with no animation at all. At 1.42 'New you.' is added beneath it and the pair jumps up to stay centered as a block. Nothing slides or fades; the text behaves like a document being written. The same rule returns at the end, when 'Make it.' is appended to 'Think it.'"
+    },
+    {
+      "id": "wall-arrives",
+      "start": 2.6,
+      "end": 4.5,
+      "fps": 12,
+      "title": "The wall pushes the title off",
+      "tags": [
+        "slide",
+        "push",
+        "ease out",
+        "stagger"
+      ],
+      "text": "At 2.79 a blue tile cuts in at the top right and the title starts moving left, gone by about 2.95. The wall of tiles follows fast from the right, in staggered rows so it never looks like one rigid sheet, and then decelerates for over a second, coming to rest at about 4.4. Fast in, long settle: the crowd arrives with energy and then lets you look."
+    },
+    {
+      "id": "wall-step",
+      "start": 4.9,
+      "end": 5.8,
+      "fps": 16,
+      "title": "One column to the left",
+      "tags": [
+        "step",
+        "slide",
+        "carousel"
+      ],
+      "text": "After half a second at rest, the whole wall shifts left by exactly one column between 5.05 and 5.6, bringing in a woman with long curls and a sunglasses tile on blue. It is the move of a carousel advancing one card, and it says there are more faces than fit on the screen."
+    },
+    {
+      "id": "tile-shuffle",
+      "start": 5.7,
+      "end": 7.9,
+      "fps": 8,
+      "title": "A sliding-puzzle reshuffle",
+      "tags": [
+        "sliding puzzle",
+        "gaps",
+        "one at a time"
+      ],
+      "text": "From 5.8 the wall rearranges like a sliding-tile puzzle. A tile leaves through an edge, and a gap opens. A neighbor slides into it, and new tiles come in from the top or bottom: a blue sunglasses tile up at 5.9, a red tile out at the bottom at 6.2, the heart-eyes face sliding left at 6.8, a red bob back in at 7.3, a bearded face on yellow dropping in at 7.6. Only one or two tiles move at a time, so the eye can follow each one. By 7.75 every slot is full again."
+    },
+    {
+      "id": "wall-exit",
+      "start": 8.7,
+      "end": 10.3,
+      "fps": 12,
+      "title": "Many leave, one arrives",
+      "tags": [
+        "slide out",
+        "stagger",
+        "enter from right",
+        "ease out"
+      ],
+      "text": "At 8.75 the wall slides left and its tiles drop out in a quick stagger, the last grey tile vanishing at about 9.35. For a frame or two the page is empty. At 9.42 a single face, much larger and with no tile behind it, enters at the right edge and eases to the center, slowing all the way until about 10.2. The direction stays the same, so the one face reads as the next card in the same carousel."
+    },
+    {
+      "id": "try-on",
+      "start": 10.1,
+      "end": 15.85,
+      "fps": 4,
+      "title": "Eight looks, swapped on single frames",
+      "tags": [
+        "swap",
+        "accumulate",
+        "picker rhythm",
+        "hold"
+      ],
+      "text": "The face never moves; the drawing is replaced in one frame each time, with only a tiny settle after. Tongue out at 10.25, a donut at 10.92, a toothy grin at 11.79, sunglasses at 12.38, square glasses at 12.88, a pencil in the hair at 13.42, frazzled hair with stress marks at 14.04, a graduation cap at 14.96. Holds run from half a second to just under a second, about the time it takes to read each joke. Some changes stay (the grin, the glasses) and some are swapped out, so it plays as one person through a year, not a menu of unrelated options."
+    },
+    {
+      "id": "avatar-click",
+      "trail": true,
+      "start": 15.9,
+      "end": 17.6,
+      "fps": 12,
+      "title": "Click the default avatar",
+      "tags": [
+        "swap in place",
+        "cursor",
+        "button press",
+        "pop"
+      ],
+      "text": "At 15.88 the capped face is replaced, in the same place, by Notion's default avatar, a grey 'N' in a white circle with a drop shadow. A cursor rises from the bottom right at 16.4 and stops on its edge. The circle presses in slightly from about 16.95, and at 17.16 the portrait pops into it. The cursor drifts away at 17.3. It is the whole feature in one before-and-after, done with the most ordinary UI gesture there is."
+    },
+    {
+      "id": "to-facepile",
+      "start": 18.0,
+      "end": 20.7,
+      "fps": 8,
+      "title": "From one avatar to a team",
+      "tags": [
+        "shrink",
+        "stagger",
+        "facepile",
+        "swap left to right"
+      ],
+      "text": "The avatar shrinks from about 18.1 to 18.3 and holds small and alone. From 18.7 it slides left while grey initial circles stack out to its right, Y, J, M, A (19.0 to 19.3), followed by 'Share' and a comment icon. After a second of plain initials, they turn into faces one at a time, left to right, between 20.2 and 20.5. The faces belong to people from the opening wall, so the film closes its own loop."
+    },
+    {
+      "id": "headline",
+      "start": 21.4,
+      "end": 22.3,
+      "fps": 16,
+      "title": "Three lines rise and tighten",
+      "tags": [
+        "stagger",
+        "rise",
+        "leading settles"
+      ],
+      "text": "At 21.5 the facepile is gone and 'Create your' is on the page; 'new look with' and 'Notion Faces' follow a frame apart. The lines arrive loosely spaced and pull together into a tight block over the next half second, settling by about 22.1. It is the only text in the film that moves, and the only line that names the feature."
+    },
+    {
+      "id": "sign-off",
+      "start": 23.9,
+      "end": 26.0,
+      "fps": 8,
+      "title": "Think it, make it, logo",
+      "tags": [
+        "append",
+        "re-center",
+        "slide",
+        "fade-in"
+      ],
+      "text": "'Think it.' replaces the headline at 24.08; 'Make it.' is added at 24.54 and the line re-centers, echoing the opening. At 25.25 the Notion icon appears alone. From about 25.6 it slides left while 'Notion' fades in beside it, grey first and solid by 25.85. Then nothing moves for the last three seconds."
+    }
+  ],
+  "craft": {
+    "lede": [
+      "A twenty-nine second New Year spot with no voice, no people on camera and no background but white. It takes the oldest January line there is, 'New year. New you.', and makes it literal: the product gives you a new you, in the form of a hand-drawn self-portrait. A wall of portraits slides through, one face tries on a year of looks, and then that face goes where it will actually be seen, into Notion's avatar slot and a row of collaborators.",
+      "What is worth learning is the path the film takes from a brand style to a product. Notion's ink-drawn illustration style is already part of how the company presents itself. Here they are shown first as a crowd (it is a system that can draw anyone), then as one person choosing (you can make it yours), then in the real interface (this is where it lives), then across a team (others will see it). Each step is a few seconds long, and each is made of a move the viewer already knows from software: a carousel, a picker, a click, a facepile."
+    ],
+    "map": {
+      "lanes": [
+        {
+          "id": "story",
+          "segments": [
+            {
+              "start": 0,
+              "end": 2.79,
+              "label": "New year, new you",
+              "note": "The idiom, written on a blank page in two lines."
+            },
+            {
+              "start": 2.79,
+              "end": 9.35,
+              "label": "Everyone",
+              "note": "A wall of more than a dozen hand-drawn faces slides, steps and reshuffles."
+            },
+            {
+              "start": 9.35,
+              "end": 15.88,
+              "label": "One face, many looks",
+              "note": "A single face tries on a year: a donut, sunglasses, glasses, a pencil, a bad day, a graduation cap."
+            },
+            {
+              "start": 15.88,
+              "end": 18.0,
+              "label": "Set as avatar",
+              "note": "The default 'N' avatar is clicked and becomes the portrait."
+            },
+            {
+              "start": 18.0,
+              "end": 21.5,
+              "label": "The team",
+              "note": "The avatar joins a row of collaborators whose initials turn into faces."
+            },
+            {
+              "start": 21.5,
+              "end": 24.08,
+              "label": "Make yours",
+              "note": "'Create your new look with Notion Faces'."
+            },
+            {
+              "start": 24.08,
+              "end": 25.25,
+              "label": "Think it. Make it.",
+              "note": "The sign-off line."
+            },
+            {
+              "start": 25.25,
+              "end": 29.23,
+              "label": "Notion",
+              "note": "Icon, then wordmark."
+            }
+          ]
+        },
+        {
+          "id": "voices",
+          "segments": [
+            {
+              "start": 0.17,
+              "end": 1.42,
+              "label": "New year.",
+              "kind": "text"
+            },
+            {
+              "start": 1.42,
+              "end": 2.9,
+              "label": "New you.",
+              "kind": "text",
+              "note": "Added under the first line; the block re-centers."
+            },
+            {
+              "start": 19.0,
+              "end": 20.5,
+              "label": "Y J M A",
+              "kind": "text",
+              "note": "Collaborators' initials in Notion's default avatar style, replaced by faces."
+            },
+            {
+              "start": 21.5,
+              "end": 24.08,
+              "label": "Create your new look",
+              "kind": "text",
+              "note": "'Create your new look with Notion Faces', the only line that names the feature."
+            },
+            {
+              "start": 24.08,
+              "end": 24.54,
+              "label": "Think it.",
+              "kind": "text"
+            },
+            {
+              "start": 24.54,
+              "end": 25.25,
+              "label": "Make it.",
+              "kind": "text",
+              "note": "Appended to 'Think it.' on the same line."
+            }
+          ]
+        },
+        {
+          "id": "sound",
+          "segments": [
+            {
+              "start": 0,
+              "end": 1.4,
+              "label": "Stop-start bass",
+              "kind": "music",
+              "note": "Low stabs with gaps between them under 'New year.'"
+            },
+            {
+              "start": 1.4,
+              "end": 3.5,
+              "label": "High tone joins",
+              "kind": "music",
+              "note": "A thin, steady high tone enters with 'New you.' and holds until the wall is nearly at rest."
+            },
+            {
+              "start": 3.5,
+              "end": 5.5,
+              "label": "Stop-start bass",
+              "kind": "music",
+              "note": "The stabs continue, still with gaps, and short pitched figures appear above them."
+            },
+            {
+              "start": 5.5,
+              "end": 26.0,
+              "label": "Steady bed",
+              "kind": "music",
+              "note": "The gaps close and the cue runs as a continuous bed, about 140 BPM by estimate (which could be double or half the felt tempo). The picture is not cut to its beat."
+            },
+            {
+              "start": 26.0,
+              "end": 27.0,
+              "label": "Fade",
+              "kind": "music",
+              "note": "The cue fades out just after the wordmark is solid."
+            },
+            {
+              "start": 27.0,
+              "end": 29.23,
+              "label": "Near silence",
+              "kind": "silence"
+            }
+          ]
+        },
+        {
+          "id": "picture",
+          "segments": [
+            {
+              "start": 0,
+              "end": 2.79,
+              "label": "Title",
+              "kind": "title"
+            },
+            {
+              "start": 2.79,
+              "end": 9.35,
+              "label": "Face wall",
+              "kind": "graphics"
+            },
+            {
+              "start": 9.35,
+              "end": 15.88,
+              "label": "One face",
+              "kind": "graphics"
+            },
+            {
+              "start": 15.88,
+              "end": 18.0,
+              "label": "Avatar",
+              "kind": "screen"
+            },
+            {
+              "start": 18.0,
+              "end": 21.5,
+              "label": "Facepile",
+              "kind": "screen"
+            },
+            {
+              "start": 21.5,
+              "end": 25.25,
+              "label": "Lines",
+              "kind": "title"
+            },
+            {
+              "start": 25.25,
+              "end": 29.23,
+              "label": "Logo",
+              "kind": "title"
+            }
+          ]
+        }
+      ]
+    },
+    "aspects": [
+      {
+        "id": "story",
+        "title": "A seasonal cliché, taken literally",
+        "paragraphs": [
+          "January ads use 'New year, new you' to sell gym memberships and planners. This film uses it and means it: here is a new you, drawn. The whole spot is built on the gap between the worn-out phrase and the literal product, and it never explains the joke. 'New year.' sits alone for over a second so the viewer finishes the line in their head before 'New you.' appears.",
+          "The middle section is where the New Year idea gets its warmth. One face tries on eight looks in under six seconds, and they can be read as a year compressed: a cheeky grin, a donut, sunglasses, glasses and a pencil, a frazzled bad day, a graduation cap. It is resolutions and their consequences in one person, and it ends on an achievement. The film does not say any of this. It just orders the gags so they make a little arc, which turns a feature demo (look how many options there are) into a character.",
+          "Then the story turns practical, quickly. The face becomes a profile picture, the profile picture joins a team, and only then does the film name the feature. By the time 'Create your new look with Notion Faces' appears, the viewer has already seen what the look is for."
+        ],
+        "moments": [
+          {
+            "t": 0,
+            "text": "'New year.' alone, long enough to finish the phrase yourself."
+          },
+          {
+            "t": 11,
+            "text": "The donut: the holidays before the resolutions."
+          },
+          {
+            "t": 14,
+            "text": "The bad day, frazzled hair and stress marks."
+          },
+          {
+            "t": 15,
+            "text": "The year ends in a graduation cap."
+          }
+        ]
+      },
+      {
+        "id": "world",
+        "title": "The brand's drawing style becomes the product",
+        "paragraphs": [
+          "The world is almost nothing: a white page, Notion's own sans for the few words, black ink drawings and three accent colors. The drawings carry it. Every face is in one hand: thick black line, solid black hair, grey skin with a fine halftone stipple, simple dot and comma features, and expressions borrowed from cartoons (spiral eyes, heart eyes, a wink). Variety comes from hair, glasses and how dark the shading is, so more than a dozen different people still look like one family.",
+          "Color is used for one job. On the wall, about half the tiles are yellow, blue or red with the face cropped into a white circle, and the rest are pale grey with the whole drawing. The colored tiles preview the face as an avatar, the round crop it will have in the app, before the film has shown the app at all. After the wall leaves, color disappears and does not come back; the rest of the film is black on white.",
+          "This is the move worth copying. The illustration style was already part of Notion's brand; the film turns it into something the viewer can own. It shows the style as a system first, so that it reads as capable of drawing anyone, and only then narrows down to one face that is clearly a person choosing."
+        ],
+        "moments": [
+          {
+            "t": 4,
+            "text": "Colored tiles crop the face into an avatar circle; grey tiles show the full drawing."
+          },
+          {
+            "t": 5,
+            "text": "One ink style, many people: hair, glasses and shading do the variety."
+          },
+          {
+            "t": 10,
+            "text": "The halftone stipple on the skin, the only texture in the film."
+          }
+        ]
+      },
+      {
+        "id": "screens",
+        "title": "Show the feature where it lives, not where it's made",
+        "paragraphs": [
+          "The portrait maker itself never appears. There is no editor, no panel of options and no 'choose your hair' screen. The try-on sequence implies the options, and the product shots go straight to the destination: the circle at the top of a page where your face will actually be seen.",
+          "The before is Notion's real default, a grey letter in a white circle. Anyone who uses the app has seen that 'N' (or their own initial) and knows how blank it feels. A cursor clicks it, the button gives slightly, and the portrait pops in. Then the film widens to a facepile beside 'Share' and a comment icon, where Y, J, M and A sit as the same blank initials and then turn into faces, left to right. One click is the personal benefit; the row of faces is the social one, and it quietly suggests the invitation in the description to create and share.",
+          "Both UI moments are small and short, about two seconds each, and they are built from moves people already know: a press, a stack of avatars, a placeholder replaced by a picture. Nothing needs a caption."
+        ],
+        "moments": [
+          {
+            "t": 16,
+            "text": "The default 'N' avatar, with the cursor on its way."
+          },
+          {
+            "t": 17,
+            "text": "After one click: the portrait in the circle."
+          },
+          {
+            "t": 19,
+            "text": "Initials Y, J, M, A beside 'Share': a page everyone has seen."
+          },
+          {
+            "t": 20,
+            "text": "The initials have become faces, the team has joined in."
+          }
+        ]
+      },
+      {
+        "id": "frames",
+        "title": "One page, one direction, many scales",
+        "paragraphs": [
+          "The cut detector found no cuts, and in a sense it is right: the white page never changes, so even the four instant changes (to the avatar at 15.9, to the headline at 21.5, to 'Think it.' at 24.1 and to the logo at 25.25) read as the page updating, not as new shots. The face-to-avatar change is placed carefully: the circle appears in the same spot and at about the same size as the face it replaces, so the eye does not have to move.",
+          "Motion keeps one direction. The title is pushed out to the left, the wall arrives from the right, steps left a column and leaves to the left, and the single face enters from the right. It feels like swiping through a carousel, which suits a film about choosing a look.",
+          "The real variety is in scale. The film goes from a crowd filling the frame, to one face large and alone, to that face as a small avatar, to a row of tiny faces in a strip of UI. Each change of scale is a change of meaning: everyone, you, you in the app, you with your team. The composition is centered throughout, with lots of white around the subject, so the one thing that matters is never in doubt."
+        ],
+        "moments": [
+          {
+            "t": 3,
+            "text": "The wall still sliding in from the right, the title already pushed out."
+          },
+          {
+            "t": 9,
+            "text": "One face enters from the right, the same direction as the crowd."
+          },
+          {
+            "t": 18,
+            "text": "The same face, now a small avatar alone on the page."
+          }
+        ]
+      }
+    ],
+    "patterns": [
+      {
+        "name": "Take the seasonal cliché literally",
+        "text": "Pick the phrase everyone uses at this time of year and find the version where your product makes it literally true. Show the first half of the phrase alone so viewers complete it before you do.",
+        "t": 1
+      },
+      {
+        "name": "Show the style as a system before it's personal",
+        "text": "Open with many examples of what the tool can make, varied but clearly in one hand, then narrow to one. The crowd proves range; the single example invites the viewer in.",
+        "t": 5
+      },
+      {
+        "name": "Order the options into a little life",
+        "text": "When you show a product's options, sequence them so they tell a tiny story (here a year, from a donut to a graduation cap) and let some changes stay on. A menu becomes a character.",
+        "t": 13
+      },
+      {
+        "name": "Use the real default as the before",
+        "text": "Start the product moment on the blank state users already know, like a grey initial in an avatar circle, and change it with one click. The contrast needs no explanation.",
+        "t": 16
+      },
+      {
+        "name": "Put the feature where it will be seen",
+        "text": "Skip the editor and show the result in its final slot: the avatar, then a row of collaborators. Viewers see the benefit, not the work.",
+        "t": 20
+      },
+      {
+        "name": "Let the crowd come back as the team",
+        "text": "Reuse characters from the opening in the closing UI, so the final shot closes a loop and the people the viewer met earlier become the coworkers.",
+        "t": 20
+      },
+      {
+        "name": "Keep one page and one direction",
+        "text": "Hold a single background and move everything the same way across it. Instant changes then read as the page updating, and the whole film feels like one continuous gesture.",
+        "t": 9
+      }
+    ],
+    "absent": "There is no voice, no live action, no real customers and no tour of the portrait maker; the music is a bed that the picture is not cut to, so it is not a film to study for sound. Study it for turning an illustration style into a product in under thirty seconds."
+  }
+}

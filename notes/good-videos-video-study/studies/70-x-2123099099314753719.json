@@ -1,0 +1,758 @@
+{
+  "note": "Omar Abudayyeh's 79-second launch film for Helios, posted on X. The two co-founders, captioned on screen, pass one script between them in their lab, and when they reach the hard part they say it themselves: 'we know tech has made big promises about a single drop of blood before.' Lab footage, staged scenes at home, borrowed clips and press clippings all share one layer of green glass graphics, which ends in the logo's rings. The breakdown follows how the script is split between two voices and on-screen text, how the graphics sit on live action, and samples 9 moves as flip books.",
+  "transcript_kind": "Local speech recognition, checked against the film's burned-in subtitles; a 'Thank you.' heard in the silent end card was removed",
+  "shot_notes": {
+    "0": "Cold open: an old CRT set alone in a dark room on a green-lit floor, flicking between channels. The camera creeps toward it for four seconds.",
+    "1": "One of about nine channels in four seconds: a car seen from above under a hard light. Others are tumbling digits, city lights, a circuit-board machine, a chatbot answer and a robot arm. Every clip is technology that 'can tell us more than ever', played on a box that looks decades old.",
+    "3": "A hand on a car's touchscreen map: the last gadget before the turn to medicine.",
+    "4": "The last channel is a patient monitor, its trace and numbers going dark as the camera dives into the screen. Technology lands on health just as the caption reaches 'So why is our health still'.",
+    "5": "'a guessing game?' centered on black, typed on with a block cursor after the picture collapses to a dot like a CRT switching off. The subtitle is promoted to a title for the one question the film asks.",
+    "6": "An x-ray of a spine with a finger pointing at it, cold and blue. The voice stops here for three seconds and lets medicine as it is speak for itself.",
+    "7": "A doctor in scrubs shows an x-ray to a patient in a doorway, framed from the dark side of a wall. A drawer of paper records and a hand held on a hospital bed flash past either side of it.",
+    "8": "Walker wheels in a corridor at floor level, soft focus: medicine that arrives after the fact. These shots look like library footage, graded to match.",
+    "9": "The founders side by side in their lab, Omar Abudayyeh in a red polo and Jonathan Gootenberg in an oatmeal sweater. Their names fade on a word at a time, with 'Co-founder, Helios' beneath, while Jonathan speaks first.",
+    "13": "A second camera at three-quarters, low and close, as Jonathan finishes 'long before you feel it'. Omar, in focus at the back, is about to take over.",
+    "15": "Back to the front two-shot for Omar's 'We built Helios'. The roles split cleanly: Jonathan states the problem, Omar makes the promise.",
+    "21": "Lab b-roll: a gloved hand with a multichannel pipette over pink well plates, shallow focus. 'After pioneering CRISPR diagnostics' is shown as work at a bench.",
+    "26": "Gloved fingers on a laptop keyboard in near darkness for 'AI to decode how we age'. The film's only picture of the AI is hands typing.",
+    "27": "Jonathan alone in close-up for the first time, a scientist working in soft focus behind him: 'Now we've turned that work into Helios'.",
+    "29": "A wide through a window: a woman at a wooden table with a black box, plants all round, daylight. One cut moves the film from the lab to a home.",
+    "30": "Her hand on the opened black box, a beat after the lid lifts on 'Helios' in big grey type. The packaging is the first product shot.",
+    "33": "Jonathan raises one finger to the lens on 'from a single drop of blood', and the music cuts out under him. The only gesture in the film that acts out a word.",
+    "35": "Bullets fade on beside the device on her arm: 'Do it yourself', 'Needle free', 'Painless'. The voice pauses, and the text says what the voice leaves out.",
+    "38": "A macro of the device: the cross-marked red button and the clear strip, its channels filled with red. The drop of blood is shown, not hidden.",
+    "40": "A woman in silhouette against a window, about to be turned into data.",
+    "41": "The silhouette has dissolved onto a green field and become a translucent x-ray figure, brain and organs lit, as a glass panel opens around her.",
+    "42": "The full panel: 'Whole-body age 26 yrs', 'Your chronological age is 31', 'Metabolism: On track', with Heart, Mitochondria, Brain and 10-year risk dimmed. The bright labels are what the voice is saying.",
+    "44": "The emphasis has moved to 'Heart: Optimal', 'Mitochondria: Watch' and 'Brain: Optimal' for 'how your organs are functioning'.",
+    "45": "'Low risk of 3 diseases' grows large and bright for 'your risk of developing disease'. The panel is read in the order the voice speaks.",
+    "47": "Back to the founders for Omar's 'decades into the future': a breath of real faces between two graphics sections.",
+    "49": "A top-down still life: the Helios box, a phone reading 'Your health at a glance' with a 26, a cut orange and a matcha whisk. 'Our AI agent' fades on in the empty corner.",
+    "50": "A second woman, in a white kitchen, picks up her phone while a glass card writes itself at the lower right: 'Your plan: Add creatine monohydrate to your morning routine'.",
+    "51": "Over her shoulder onto the phone: 'Built around your results', with a checklist (strength twice a week, more vitamin C, vitamin D, lights out by 11 pm). Screen and card say the same thing at two sizes.",
+    "53": "A yoga pose by a window, a glass 'Muscle strength score' card drawn across the glass behind her, its line chart plotting.",
+    "54": "Cut to her lifting dumbbells; the card stays in exactly the same place across the cut, now reading 26 years, tagged 'younger', against a chronological age of 31.",
+    "57": "Chopping oranges, with a 'Helios AI' chat card at the right: 'How can I improve my scores?' and the reply 'Try a ketogenic diet.'",
+    "58": "Back to the plainest frame in the film, the front two-shot, for Omar's 'And yes, we know'. Both founders are in shot for the objection.",
+    "60": "Omar, hands open, on 'about a single drop of blood before'. The headline promise comes back word for word, now as the doubt.",
+    "62": "'Built by physicians and scientists' over an Engadget headline, 'Researchers use CRISPR to detect HPV and Zika'. The plain words are light and the claim is bold.",
+    "63": "'Trained at Harvard + MIT' over a Boston Globe clipping about MIT scientists' gene technology.",
+    "65": "'Pioneers of CRISPR diagnostics' over a Forbes headline about alumni racing to make at-home coronavirus tests with CRISPR. Three clippings in under four seconds.",
+    "66": "Omar's only solo close-up, saved for 'and companies around the world', a scientist at the bench behind him.",
+    "67": "The two-shot again, and the subtitle leaves the bottom of the frame: 'Your body is telling a story.' is set larger in the space beside Jonathan.",
+    "68": "The Helios box and the device on a wooden table, lit from the side: 'We've made a new way to listen.'",
+    "70": "'Find out with Helios.' fades on beside Jonathan as he says it. His sign-off is in the frame, not under it.",
+    "71": "A red drop strikes a red surface on white, a fifth of a second long. It starts a run of rings.",
+    "72": "A tree's cross-section dissolving in after blue water ripples: rings that record years.",
+    "73": "A fingertip in macro, its whorls lit warm. A white dot is about to appear at its center.",
+    "74": "The logo's concentric rings on the green field, burst out of that dot. The last ring in the sequence is the brand.",
+    "76": "End card: the icon and 'Helios' wordmark, with 'Visit myhelios.com' in small spaced type. The music has faded and the last three seconds are silent."
+  },
+  "motion_intro": "The movement is almost all type and glass. One graphics kit is laid over live action: words that fade on one at a time, frosted cards that draw themselves as a line and then open, labels that brighten in step with the voice, and a closing chain of rings that turns into the logo. The camera itself barely moves; the two showpieces are a dive into an old TV at the start and an x-ray figure built out of a silhouette in the middle.",
+  "motion": [
+    {
+      "id": "tv-dive",
+      "start": 3.8,
+      "end": 6.1,
+      "fps": 12,
+      "title": "Dive into the TV, collapse to a dot, type the question",
+      "tags": [
+        "push in",
+        "CRT switch-off",
+        "type-on",
+        "block cursor"
+      ],
+      "text": "The last channel, a patient monitor, arrives at 4.07. At about 4.4 the camera pushes fast into the screen until the bezel fills the frame, the picture sinks to dark blue at 4.48 and shrinks to a single white dot at 4.57, the way an old tube switches off. From that dot 'a guessing game?' types on with a block cursor (4.65 'a', 4.73 'a guessing', 4.9 the question mark). It holds for a second, then the words drop away from the left with a flare at 5.9, and a hard cut lands on an x-ray at about 6.0. The bottom caption has become the center of the frame."
+    },
+    {
+      "id": "name-supers",
+      "start": 9.0,
+      "end": 10.4,
+      "fps": 12,
+      "title": "Names fade on a word at a time",
+      "tags": [
+        "lower third",
+        "word-by-word fade",
+        "stagger"
+      ],
+      "text": "Each word fades up from dim to white on its own, about two frames apart: 'Omar' at 9.25, 'Abudayyeh' at 9.33, 'Jonathan' at 9.42, 'Gootenberg' at 9.58, then 'Co-founder, Helios' under each from 9.75 to 10.0. The names sit low over each man's body, not in a box. This same staggered fade is used for every word of on-screen text in the film."
+    },
+    {
+      "id": "bullets",
+      "start": 34.3,
+      "end": 36.5,
+      "fps": 10,
+      "title": "Three bullets in the voice's only pause",
+      "tags": [
+        "word-by-word fade",
+        "bullet list",
+        "negative space"
+      ],
+      "text": "The cut to the device on her arm lands at 34.38 with her hand still on the button; the hand leaves by 34.6. 'Do it yourself' fades on word by word from 34.8, its bullet dot appearing first, then 'Needle free' at 35.1 and 'Painless' at 35.5, stacked in the empty skin to the left of the device. They hold until about 37.6 and leave in the same order. The voice is silent from 34.5 to 36.5, so the list is read, not heard."
+    },
+    {
+      "id": "xray-panel",
+      "start": 39.8,
+      "end": 41.9,
+      "fps": 12,
+      "title": "Silhouette to x-ray, and the panel opens",
+      "tags": [
+        "dissolve",
+        "x-ray",
+        "glass card",
+        "scale out"
+      ],
+      "text": "A woman stands in silhouette against a window from 39.875. At 40.5 the room dissolves to a green field and her dark shape fills with a translucent x-ray body, brain and organs glowing. At 40.7 a small glass panel appears around her torso and widens sideways to full width by 40.95. Labels fade on from 41.0, 'On track' at 41.1, '26 yrs' at 41.2, and the small 'Your chronological age is 31' last at 41.5. A real person becomes the graphic, so the data feels like hers."
+    },
+    {
+      "id": "panel-emphasis",
+      "start": 41.9,
+      "end": 46.9,
+      "fps": 4,
+      "trail": true,
+      "title": "The bright labels follow the voice",
+      "tags": [
+        "highlight shift",
+        "type scale",
+        "sync to voice"
+      ],
+      "text": "Nothing moves except brightness and size. On 'how your body is aging' (about 42) 'Whole-body age' and 'Metabolism' are bright and large. At about 43.3, as the voice reaches 'how your organs are functioning', those dim and 'Heart', 'Mitochondria' and 'Brain' come up. At about 45.0, on 'your risk of developing disease', '10-year risk: Low risk of 3 diseases' grows to the largest type on the panel. The panel is a still diagram read aloud, and the highlight tells the eye where the sentence is."
+    },
+    {
+      "id": "muscle-card",
+      "start": 52.6,
+      "end": 55.4,
+      "fps": 8,
+      "title": "A line becomes a card, and the card survives the cut",
+      "tags": [
+        "line draw",
+        "card expand",
+        "count-up",
+        "match across cut"
+      ],
+      "text": "At 52.62 a thin white line already crosses the yoga shot. By 52.75 it thickens into a bar and by 52.87 opens vertically into a frosted card. A chart dot travels left to right from 53.0, the score reads '2' at 53.75 and '26' by 54.1, with a 'younger' tag. At 54.33 the shot cuts to her lifting dumbbells, but the card stays exactly where it was, so two shots read as one workout and one measurement."
+    },
+    {
+      "id": "chat-card",
+      "start": 56.3,
+      "end": 58.0,
+      "fps": 10,
+      "title": "A question, then the answer types",
+      "tags": [
+        "chat bubble",
+        "type-on",
+        "glass card"
+      ],
+      "text": "The cut to her chopping oranges lands at 56.38 and an empty 'Helios AI' card outline fades up at the right at 56.5. The question bubble, 'How can I improve my scores?', fills in at 56.67 to 56.83. The answer types on below it from 57.3: 'Try', then 'Try a ketogenic diet.' by 57.7. Less than a second later the film cuts to the founders for the objection."
+    },
+    {
+      "id": "press-cards",
+      "start": 61.8,
+      "end": 65.7,
+      "fps": 6,
+      "title": "Three credentials, three clippings",
+      "tags": [
+        "dissolve",
+        "light-to-bold headline",
+        "press clipping",
+        "word-by-word fade"
+      ],
+      "text": "The two-shot dissolves to the green field at about 61.9 as 'Built' fades on; by 62.0 'Built by physicians and scientists' sits over an Engadget clipping. At about 63.05 the card dips and 'Trained at Harvard + MIT' builds over a Boston Globe clipping; at about 64.3 'Pioneers of CRISPR diagnostics' builds over Forbes. Each line arrives as light words first and the bold claim last, and each card holds about 1.2 seconds, barely drifting. At 65.58 a hard cut to Omar's close-up ends the run."
+    },
+    {
+      "id": "rings-to-logo",
+      "start": 71.3,
+      "end": 75.6,
+      "fps": 7,
+      "title": "Drop, ripples, tree rings, fingerprint, logo",
+      "tags": [
+        "visual rhyme",
+        "dissolve",
+        "dot burst",
+        "logo resolve"
+      ],
+      "text": "At 71.38 a red drop strikes a red surface on white and crowns at 71.5. At 71.58 a hard cut to blue water rippling out in rings from above; at about 72.3 a quick dissolve to a tree's cross-section, at about 73.1 another to a fingertip in macro. At 73.73 a white dot appears on the fingertip and at 73.82 the logo's concentric rings burst out of it, the green field replacing the finger a frame later. At 74.65 the icon shrinks and slides left while 'Helios' unmasks to its right, and 'Visit myhelios.com' fades on at 75.3 to 75.5."
+    }
+  ],
+  "craft": {
+    "lede": [
+      "A seventy-nine-second launch film that works like a good pitch. It asks one question ('why is our health still a guessing game?'), lets two founders answer it in turn from their lab, shows the product in a stranger's hands at home, and then, just when a viewer's doubt would peak, says the doubt out loud: 'And yes, we know tech has made big promises about a single drop of blood before.'",
+      "What makes it worth studying is how many kinds of picture it holds together. Borrowed clips on an old TV, a lab interview with two cameras, staged scenes in warm homes and press clippings all sit under the same burned-in subtitles and the same green glass graphics. The script decides which kind of picture each line gets, and the graphics make them read as one film."
+    ],
+    "map": {
+      "lanes": [
+        {
+          "id": "story",
+          "segments": [
+            {
+              "start": 0,
+              "end": 5.98,
+              "label": "The question",
+              "note": "Technology on an old TV, ending in 'a guessing game?'"
+            },
+            {
+              "start": 5.98,
+              "end": 8.83,
+              "label": "Medicine as it is",
+              "note": "Three wordless seconds: x-ray, records, a held hand, a doctor, walker wheels."
+            },
+            {
+              "start": 8.83,
+              "end": 14.5,
+              "label": "The problem",
+              "note": "'You do everything you're supposed to…'"
+            },
+            {
+              "start": 14.5,
+              "end": 20.71,
+              "label": "The promise",
+              "note": "'the world's highest resolution picture of your body and health'"
+            },
+            {
+              "start": 20.71,
+              "end": 27.38,
+              "label": "Where it comes from",
+              "note": "CRISPR diagnostics, then years teaching AI how we age."
+            },
+            {
+              "start": 27.38,
+              "end": 34.38,
+              "label": "One drop of blood",
+              "note": "Product reveal, from Jonathan's face to the unboxing and back."
+            },
+            {
+              "start": 34.38,
+              "end": 48.54,
+              "label": "Collect, measure",
+              "note": "The device on the arm, then the x-ray panel of results."
+            },
+            {
+              "start": 48.54,
+              "end": 58.42,
+              "label": "The AI agent",
+              "note": "A plan, a progress score and a chat, laid over one woman's day."
+            },
+            {
+              "start": 58.42,
+              "end": 66.71,
+              "label": "The objection",
+              "note": "'And yes, we know…' then 'The difference?' answered with credentials."
+            },
+            {
+              "start": 66.71,
+              "end": 71.38,
+              "label": "Sign-off",
+              "note": "'Your body is telling a story. We've made a new way to listen.'"
+            },
+            {
+              "start": 71.38,
+              "end": 78.72,
+              "label": "Rings to logo",
+              "note": "Drop, ripples, tree rings, fingerprint, logo, end card."
+            }
+          ]
+        },
+        {
+          "id": "voices",
+          "segments": [
+            {
+              "start": 1.18,
+              "end": 5.4,
+              "label": "Omar: the question",
+              "kind": "interview-vo",
+              "note": "Heard before either founder is seen; identified by the voice stem."
+            },
+            {
+              "start": 9.0,
+              "end": 13.6,
+              "label": "Jonathan: the problem",
+              "kind": "interview",
+              "note": "Second person: 'You do everything you're supposed to.'"
+            },
+            {
+              "start": 14.5,
+              "end": 20.5,
+              "label": "Omar: the promise",
+              "kind": "interview"
+            },
+            {
+              "start": 21.3,
+              "end": 26.4,
+              "label": "CRISPR, then AI",
+              "kind": "interview-vo",
+              "note": "Over lab b-roll. Probably Jonathan by the voice stem, but the match is close."
+            },
+            {
+              "start": 26.4,
+              "end": 28.92,
+              "label": "Jonathan: into Helios",
+              "kind": "interview"
+            },
+            {
+              "start": 28.92,
+              "end": 33.21,
+              "label": "Over the unboxing",
+              "kind": "interview-vo"
+            },
+            {
+              "start": 33.21,
+              "end": 34.38,
+              "label": "'a single drop'",
+              "kind": "interview",
+              "note": "Back on his face, one finger raised, music gone."
+            },
+            {
+              "start": 34.38,
+              "end": 36.5,
+              "label": "Bullets",
+              "kind": "text",
+              "note": "'Do it yourself · Needle free · Painless', in the voice's pause."
+            },
+            {
+              "start": 36.5,
+              "end": 47.17,
+              "label": "Omar: how it works",
+              "kind": "interview-vo",
+              "note": "Five minutes, a thousand biomarkers, three things they reveal."
+            },
+            {
+              "start": 47.17,
+              "end": 48.44,
+              "label": "Omar",
+              "kind": "interview",
+              "note": "'decades into the future'"
+            },
+            {
+              "start": 48.44,
+              "end": 57.44,
+              "label": "Jonathan: the AI agent",
+              "kind": "interview-vo"
+            },
+            {
+              "start": 57.8,
+              "end": 61.95,
+              "label": "Omar: 'And yes, we know'",
+              "kind": "interview",
+              "note": "Both founders in the front two-shot."
+            },
+            {
+              "start": 61.95,
+              "end": 65.58,
+              "label": "Over the clippings",
+              "kind": "interview-vo",
+              "note": "The voice claims validation; the on-screen headlines give credentials."
+            },
+            {
+              "start": 65.58,
+              "end": 66.6,
+              "label": "Omar",
+              "kind": "interview",
+              "note": "'and companies around the world', his only solo close-up."
+            },
+            {
+              "start": 66.8,
+              "end": 68.08,
+              "label": "Jonathan: a story",
+              "kind": "interview",
+              "note": "The subtitle moves up into the frame."
+            },
+            {
+              "start": 68.08,
+              "end": 69.58,
+              "label": "A new way to listen",
+              "kind": "interview-vo"
+            },
+            {
+              "start": 69.58,
+              "end": 71.5,
+              "label": "Find out",
+              "kind": "interview"
+            },
+            {
+              "start": 75.3,
+              "end": 78.72,
+              "label": "myhelios.com",
+              "kind": "text"
+            }
+          ]
+        },
+        {
+          "id": "sound",
+          "segments": [
+            {
+              "start": 0,
+              "end": 5.98,
+              "label": "Dense opening",
+              "kind": "music",
+              "note": "The cue plus bursts of broadband noise that, by the spectrogram, sit under the channel changes."
+            },
+            {
+              "start": 5.98,
+              "end": 31.5,
+              "label": "Bed under the voices",
+              "kind": "music",
+              "note": "A steady pulse, about 178 BPM by estimate (it may be felt at half that), 9 to 17 dB under the voices."
+            },
+            {
+              "start": 31.5,
+              "end": 33.21,
+              "label": "Swell",
+              "kind": "music",
+              "note": "Rises about 17 dB in the pause while she presses the button."
+            },
+            {
+              "start": 33.21,
+              "end": 34.38,
+              "label": "Music cuts out",
+              "kind": "silence",
+              "note": "'from a single drop of blood' heard almost alone."
+            },
+            {
+              "start": 34.38,
+              "end": 73.5,
+              "label": "Bed returns",
+              "kind": "music"
+            },
+            {
+              "start": 73.5,
+              "end": 75.7,
+              "label": "Fade",
+              "kind": "music"
+            },
+            {
+              "start": 75.7,
+              "end": 78.72,
+              "label": "Silent end card",
+              "kind": "silence"
+            }
+          ]
+        },
+        {
+          "id": "picture",
+          "segments": [
+            {
+              "start": 0,
+              "end": 4.45,
+              "label": "Clips on an old TV",
+              "kind": "stock"
+            },
+            {
+              "start": 4.45,
+              "end": 5.98,
+              "label": "The question",
+              "kind": "title"
+            },
+            {
+              "start": 5.98,
+              "end": 8.83,
+              "label": "Hospital",
+              "kind": "stock",
+              "note": "Looks like library footage, graded cold."
+            },
+            {
+              "start": 8.83,
+              "end": 20.71,
+              "label": "Founders, two cameras",
+              "kind": "interview"
+            },
+            {
+              "start": 20.71,
+              "end": 27.38,
+              "label": "Lab",
+              "kind": "b-roll"
+            },
+            {
+              "start": 27.38,
+              "end": 28.92,
+              "label": "Close-up",
+              "kind": "interview"
+            },
+            {
+              "start": 28.92,
+              "end": 33.21,
+              "label": "Unboxing at home",
+              "kind": "staged"
+            },
+            {
+              "start": 33.21,
+              "end": 34.38,
+              "label": "Finger",
+              "kind": "interview"
+            },
+            {
+              "start": 34.38,
+              "end": 39.88,
+              "label": "Device",
+              "kind": "staged"
+            },
+            {
+              "start": 39.88,
+              "end": 47.17,
+              "label": "X-ray panel",
+              "kind": "graphics"
+            },
+            {
+              "start": 47.17,
+              "end": 48.54,
+              "label": "Two-shot",
+              "kind": "interview"
+            },
+            {
+              "start": 48.54,
+              "end": 58.42,
+              "label": "Her day, with glass cards",
+              "kind": "staged"
+            },
+            {
+              "start": 58.42,
+              "end": 61.95,
+              "label": "Two-shot",
+              "kind": "interview"
+            },
+            {
+              "start": 61.95,
+              "end": 65.58,
+              "label": "Clippings",
+              "kind": "graphics"
+            },
+            {
+              "start": 65.58,
+              "end": 68.08,
+              "label": "Founders",
+              "kind": "interview"
+            },
+            {
+              "start": 68.08,
+              "end": 69.58,
+              "label": "Box",
+              "kind": "staged"
+            },
+            {
+              "start": 69.58,
+              "end": 71.38,
+              "label": "Two-shot",
+              "kind": "interview"
+            },
+            {
+              "start": 71.38,
+              "end": 73.82,
+              "label": "Rings",
+              "kind": "stock"
+            },
+            {
+              "start": 73.82,
+              "end": 78.72,
+              "label": "Logo",
+              "kind": "title"
+            }
+          ]
+        }
+      ]
+    },
+    "aspects": [
+      {
+        "id": "story",
+        "title": "Question, promise, proof, then the doubt",
+        "paragraphs": [
+          "The film is a pitch in eleven short sections, most under ten seconds. A question, the problem in the viewer's own terms ('You do everything you're supposed to'), the promise, where it comes from, the product, how it works in three steps (collect, measure, guide), the objection, the sign-off. Each section has one job, and each changes the kind of picture on screen, so the structure can be felt even with the sound off.",
+          "The order of the proof is the smart part. The objection comes only after the product has been shown in full, when a viewer has seen enough to have the doubt, and it is answered before the ending, so the last thing heard is not the doubt but 'Your body is telling a story. We've made a new way to listen.' The film also opens on a question and closes on an invitation to 'Find out', which makes the whole thing feel like the answer."
+        ],
+        "moments": [
+          {
+            "t": 5,
+            "text": "The question the rest of the film answers."
+          },
+          {
+            "t": 15,
+            "text": "The promise, three sections in."
+          },
+          {
+            "t": 58,
+            "text": "The objection arrives after the product, not before it."
+          },
+          {
+            "t": 67,
+            "text": "The answer to the opening question, set in the frame."
+          }
+        ]
+      },
+      {
+        "id": "voices",
+        "title": "Two founders, one script, and the doubt said out loud",
+        "paragraphs": [
+          "Two co-founders share the script, captioned once by name when they first appear: Omar Abudayyeh and Jonathan Gootenberg. Matching the voice stem against the shots where each is plainly talking shows the split. Omar asks the opening question before he is seen, Jonathan names the problem, Omar makes the promise and walks through how it works, Jonathan introduces the product and the AI agent, Omar takes the objection, and Jonathan signs off. Nobody is being interviewed. They deliver written lines straight to the lens, standing together, and the edit carries a line off their faces onto pictures and often back again.",
+          "The writing is plain and spoken. Short sentences, second person for the problem ('disease can still creep up on you long before you feel it'), 'we' for the company. The lists come in threes ('how your body is aging, how your organs are functioning, and your risk of developing disease'), and each item gets its own highlight on screen. The key phrase is placed with care. Jonathan says 'from a single drop of blood' straight into the lens with one finger raised, after his line has left his face for the unboxing and come back, and the music cuts out under it.",
+          "Then the film does what most launch films avoid. Twenty-five seconds later Omar, in the plainest frame with both founders in shot, says 'And yes, we know tech has made big promises about a single drop of blood before.' It names nobody and does not need to. Repeating the headline phrase word for word turns it from a promise into the viewer's own objection, said first by the people with most to lose. A two-word question, 'The difference?', sets up the answer, and the answer is split: the voice says 'This technology has been validated by labs and companies around the world', while the screen shows credentials and press clippings.",
+          "On-screen text is the third voice. Subtitles are burned in throughout, so the film reads with the sound off as feeds autoplay. 'Do it yourself, Needle free, Painless' is never spoken; it fills the one pause the voices take after the opening. And the subtitles are promoted to titles twice, at the two ends of the argument: 'a guessing game?' in the middle of black, and 'Your body is telling a story.' and 'Find out with Helios.' set large beside Jonathan."
+        ],
+        "moments": [
+          {
+            "t": 9,
+            "text": "Names fade on once; Jonathan speaks first in the two-shot."
+          },
+          {
+            "t": 33,
+            "text": "One finger for 'a single drop of blood', with the music gone."
+          },
+          {
+            "t": 35,
+            "text": "The bullets say what the voice leaves out."
+          },
+          {
+            "t": 60,
+            "text": "'about a single drop of blood before': the promise returns as the doubt."
+          },
+          {
+            "t": 70,
+            "text": "The sign-off set in the frame beside him."
+          }
+        ]
+      },
+      {
+        "id": "frames",
+        "title": "Each kind of picture has a job",
+        "paragraphs": [
+          "The film uses three kinds of picture and gives each one a job. Borrowed clips show the world as it is: technology flickering on an old TV, then three wordless seconds of hospital (an x-ray, records, a held hand, walker wheels), graded dark and cold. The lab is for the people: the founders and the bench work behind them, in cool window light. Staged scenes at home are for the product: daylight, wood, plants, oranges on a board. Cutting from one kind to another tells the viewer that the subject has changed.",
+          "The interview coverage is simple and disciplined. The front two-shot is home base, and a low three-quarter angle covers the hand-off between speakers. Solo close-ups are saved for three lines: Jonathan's 'Now we've turned that work into Helios', his 'single drop of blood', and Omar's 'and companies around the world'. Each founder is alone in frame only when he makes a claim he has to own.",
+          "Lines often loop from face to pictures and back. Jonathan's product line starts in close-up, plays over the unboxing and the device, and returns to his face for its last words. Omar's measuring section ends back on the two-shot for 'decades into the future', and the press-clipping run ends on his close-up. The faces punctuate the graphics, so the film never goes long without a person in it."
+        ],
+        "moments": [
+          {
+            "t": 7,
+            "text": "Medicine as it is: borrowed, cold, wordless."
+          },
+          {
+            "t": 13,
+            "text": "The three-quarter angle covers the hand-off from Jonathan to Omar."
+          },
+          {
+            "t": 29,
+            "text": "One cut from the lab to a warm home."
+          },
+          {
+            "t": 66,
+            "text": "Omar's one solo close-up, for the validation line."
+          }
+        ]
+      },
+      {
+        "id": "world",
+        "title": "One green glass layer over every kind of footage",
+        "paragraphs": [
+          "The graphics are a small, strict kit. A deep green blurred field (behind the x-ray panel, the clippings and the end card); frosted glass cards with rounded corners and a thin white edge; tiny spaced capitals with a dot for labels ('• Heart', '• Your plan', '• Helios AI', 'Muscle strength score'); big light numerals; and headlines that set the plain words light and the claim bold, as in 'Built by physicians and scientists'. Every word, from the founders' names to the bullets, the cards and the closing lines, fades on the same way, one word at a time.",
+          "How the kit meets live action is the lesson. Cards sit in the empty part of a frame (the lower right of the kitchen, the window behind the yoga pose), never over a face. One card survives a cut, so a yoga shot and a dumbbell shot read as one measured workout. The x-ray panel begins as a real woman's silhouette that dissolves into a translucent body, so the data looks like hers. The numbers agree everywhere: a whole-body age of 26 against a real age of 31 on the panel, the phone and the strength card, as if one person's results ran through the whole film.",
+          "The ending turns the logo into the last image in a visual rhyme. A red drop strikes a surface, water ripples out in rings, a tree's cross-section shows its years, a fingertip shows its whorls, and a white dot on that fingertip bursts into the logo's concentric rings. Each is a pattern that records something, which is what the line before it promised: 'Your body is telling a story.' The brand mark arrives as the answer, not as a sign-off slapped on the end."
+        ],
+        "moments": [
+          {
+            "t": 42,
+            "text": "The glass panel: light labels, big numerals, a real body turned to x-ray."
+          },
+          {
+            "t": 50,
+            "text": "A plan card in the empty corner of a kitchen shot."
+          },
+          {
+            "t": 54,
+            "text": "The strength card holds its place across the cut."
+          },
+          {
+            "t": 62,
+            "text": "Light words, bold claim, clipping beneath."
+          },
+          {
+            "t": 74,
+            "text": "The logo's rings, born from a dot on a fingertip."
+          }
+        ]
+      },
+      {
+        "id": "sound",
+        "title": "The music steps out for one line",
+        "paragraphs": [
+          "Most of the time the music is a bed. One cue with a steady pulse (about 178 BPM by estimate, which may be felt at half that) sits about 6 to 17 dB under the voices, and the cutting does not follow its beat: 11 of 34 cuts land near a beat, fewer than chance would give. The opening is denser, with bursts of broadband noise that, by the spectrogram, sit under the TV's channel changes, and it thins at about six seconds when the film cuts to the hospital.",
+          "One move is clearly designed. In the second-long pause after 'where your health is headed', while the woman presses the device to her arm, the music swells by about 17 dB. On the cut to Jonathan's raised finger at 33.2 it stops dead, and 'from a single drop of blood' is heard almost alone. The cue comes back on the cut to the bullets at 34.4. The claim the film will later defend is the one moment it is given silence. At the end the music fades from about 73.5 and is gone by 75.7, leaving the end card silent for three seconds."
+        ],
+        "moments": [
+          {
+            "t": 32,
+            "text": "The swell, while the device goes on."
+          },
+          {
+            "t": 33,
+            "text": "Music gone under 'a single drop of blood'."
+          },
+          {
+            "t": 76,
+            "text": "The end card in silence."
+          }
+        ]
+      },
+      {
+        "id": "trust",
+        "title": "Credibility earned, and credibility borrowed",
+        "paragraphs": [
+          "Much of the trust is earned on screen. The founders are named, stand in a working lab with a scientist at the bench behind them, and say the lines themselves. The specifics are concrete, as the film states them: 'less than five minutes', 'over a thousand biomarkers', a plan that reads like a real one (creatine, vitamin D, lights out by 11 pm). The device is shown in macro with blood in its channel, not kept out of frame. And the biggest risk to the pitch, the memory of an earlier blood-testing promise, is raised by the founders before a viewer can raise it.",
+          "Some of it is borrowed, and it is worth seeing how. While the voice says 'This technology has been validated by labs and companies around the world', the screen shows clippings about the founders' earlier CRISPR work: detecting HPV and Zika, a gene technology from MIT, at-home coronavirus tests. They vouch for the team more than for the protein measurements Helios sells, and the cut lets one stand in for the other. It works at speed, about a second per clipping. Anyone borrowing the move should know that a careful viewer may notice the gap."
+        ],
+        "moments": [
+          {
+            "t": 27,
+            "text": "A real lab, with work going on behind the founder."
+          },
+          {
+            "t": 38,
+            "text": "The blood is shown, in macro."
+          },
+          {
+            "t": 65,
+            "text": "A clipping about earlier work under the validation line."
+          }
+        ]
+      }
+    ],
+    "patterns": [
+      {
+        "name": "Say the objection before the viewer does",
+        "text": "After the product is fully shown, have the founders name the obvious doubt in the words of your own headline, then answer it at once. Put it in your plainest frame, with everyone in shot.",
+        "t": 58
+      },
+      {
+        "name": "Split the script by role between two speakers",
+        "text": "Give one founder the problem and the product, the other the promise, the method and the defence. Hand off on a cut to a second angle so the turn feels natural.",
+        "t": 13
+      },
+      {
+        "name": "Pull the music for the hardest claim",
+        "text": "Swell the cue in the pause before your boldest line, then cut it dead on a close-up so the claim is heard almost alone.",
+        "t": 33
+      },
+      {
+        "name": "Let the highlight follow the voice",
+        "text": "Lay a still diagram out in full and brighten only the labels the voice is naming, in the order it names them.",
+        "t": 44
+      },
+      {
+        "name": "Keep an overlay across a cut",
+        "text": "Leave a graphic card in place when the shot changes; two shots of the same person then read as one session and one measurement.",
+        "t": 54
+      },
+      {
+        "name": "Let text carry what the voice skips",
+        "text": "Use the voice's pauses for short on-screen lists of facts nobody needs to hear spoken.",
+        "t": 35
+      },
+      {
+        "name": "Promote the subtitle to a title at the ends",
+        "text": "Burn in subtitles throughout, then lift the opening question and the closing line out of the caption band and set them large in the frame.",
+        "t": 67
+      },
+      {
+        "name": "Make the logo the last image in a rhyme",
+        "text": "Find real images that share the shape of your mark and cut them in a short chain, so the logo arrives as the answer.",
+        "t": 74
+      }
+    ],
+    "absent": "No customers or patients speak, there is no explanation of how one drop yields a thousand measurements, and no study figures, accuracy numbers or prices appear. Do not study it for explaining science; study it for scripting, interview coverage and how one graphics layer ties mixed footage together."
+  }
+}
