@@ -38,6 +38,13 @@ MOTION_INTRO = {
          "color blooms that grow out of a character and wash over the frame, and remembered or imagined scenes drop to thin "
          "line art on a single color. The motion is full character animation on ones and twos, with smears, squash and stretch "
          "and big held reaction poses."),
+    57: ("MoMA's studio demonstration is live action with a quiet, museum-like system laid over it. Rhea Karam's magenta "
+         "T-shirt is the brightest color in a white studio, and the film cuts between three setups: a locked-off wide of her "
+         "talking at the table, overhead shots of her hands on a white surface, and low close-ups in shallow focus. Eight "
+         "chapter titles rise into the top left from a hidden baseline in bold white sans, and every outside reference, "
+         "including her own past books, is a cutout on white with a small black caption at bottom left. The motion worth "
+         "studying is the hands: unfolding, scoring, taping, peeling and pressing, usually shown by cutting between two scales "
+         "of the same gesture."),
     53: ("Kozmonot Animation Studio builds the whole film from flat dots on flat color fields. People are dots, a group is a ring "
          "or a fan of dots, and the storyteller is the red one. There is one hard cut in five minutes. Every other scene change "
          "goes through a shape: the camera dives into a dot, a speech bubble or the O of a word, a circle irises open or shut, "
@@ -873,6 +880,101 @@ MOTION = {
          "text": "The sofa scene slides away into dark red. On near-black, Zelba lies back and melts into the bouncing family "
                  "of yellow creatures from 1:56, the same loop, now with 'TED.COM/PLAY' above."},
     ],
+    57: [
+        {"id": "cold-open", "start": 4.0, "end": 15.5, "fps": 2,
+         "title": "The cold open is the whole process in eleven seconds",
+         "tags": ["montage", "inserts", "process preview"],
+         "text": "Before the title, six inserts compress the film: the accordion dummy on the pinboard, both halves of the book "
+                 "fanned open on the table, the spread laid out on screen, a stack of spreads flipped in her hands, the printer "
+                 "feeding a sheet, and her palm pressing a bound book flat. Each holds about two seconds with the camera nearly "
+                 "still, and the hands do all the moving."},
+        {"id": "series-title", "start": 15.5, "end": 18.5, "fps": 6,
+         "title": "'In the Studio / Bookmaking' rises over the page fan",
+         "tags": ["mask reveal", "rise", "type"],
+         "text": "Hard cut to a dark, low macro of pages fanned around a spine. 'In the Studio' appears small at top left; about "
+                 "a second later 'Bookmaking' rises into place beneath it from a hidden baseline, the bottoms of the "
+                 "letters clipped until it lands. No fade and no scale; the macro holds still under it."},
+        {"id": "echo-cards", "start": 99.5, "end": 110.0, "fps": 3,
+         "title": "Her own book, shown as a museum would",
+         "tags": ["hard cut", "cutout on white", "caption"],
+         "text": "From the studio wide, hard cuts to ECHO photographed as a cutout on white: three spreads, about two seconds "
+                 "each, each fanned to a different angle. The fourth card turns the book edge-on and adds the caption in the "
+                 "same small black type as the Delaunay and Miró cards, so her work sits in the collection's visual system. "
+                 "Then a cut to one of her wheatpastes on a brick wall."},
+        {"id": "dummy-flip", "start": 170.5, "end": 178.5, "fps": 4,
+         "title": "Flipping both halves of the dummy",
+         "tags": ["overhead", "locked-off", "page turn"],
+         "text": "Locked-off overhead on the opened dummy. Her hands turn strips on the left half, then the right, then the "
+                 "left again, so neighboring walls keep changing which photograph they meet. The camera never moves; the "
+                 "only motion is paper turning on the spine."},
+        {"id": "printing-title", "start": 178.6, "end": 179.6, "fps": 12,
+         "title": "A section title rises from its baseline",
+         "tags": ["mask reveal", "rise", "type"],
+         "text": "The shared move for all eight chapter titles. 'Printing' slides up into place at top left in about a quarter "
+                 "of a second, clipped by an invisible line below it, then holds over the shot. The live action under it keeps "
+                 "playing; the title never fades in or scales."},
+        {"id": "sequencing-title", "start": 249.0, "end": 249.8, "fps": 12,
+         "title": "'Sequencing' lands on the cut",
+         "tags": ["mask reveal", "rise", "hard cut"],
+         "text": "Here the title starts its rise on the first frames of the new shot, so the cut and the type arrive together. "
+                 "The first readable frame shows only the tops of the letters above the mask line."},
+        {"id": "spray", "start": 465.5, "end": 479.0, "fps": 2,
+         "title": "Spraying through a stencil outdoors",
+         "tags": ["handheld", "gesture", "reveal"],
+         "text": "A slight handheld drift follows her in the courtyard. She shakes the can and sprays a blue band along the "
+                 "print's edge through a cardboard mask. Cut closer as she peels the mask away and tilts the print to camera, "
+                 "the sprayed edge now crisp against the photograph."},
+        {"id": "tape", "start": 510.5, "end": 530.0, "fps": 2,
+         "title": "Laying a strip of yellow tape",
+         "tags": ["overhead", "close-up", "gesture"],
+         "text": "Three angles on one strip: overhead as she lines the tape up with a stripe in the photograph, a side close-up "
+                 "as she cuts it off the roll, then a tight overhead as her fingers smooth it down and press it past the crop "
+                 "marks."},
+        {"id": "score", "trail": True, "start": 823.5, "end": 831.0, "fps": 2,
+         "title": "Scoring with the bone folder",
+         "tags": ["overhead", "locked-off", "measurement"],
+         "text": "Locked-off overhead on the scoring board. One hand spreads flat over the print while the other draws the bone "
+                 "folder's point down the groove at four and a quarter inches, once and then again. Only the folder hand "
+                 "travels, so the onion skin shows the two passes as one vertical line."},
+        {"id": "fold", "start": 836.5, "end": 840.0, "fps": 4,
+         "title": "Folding and burnishing the crease",
+         "tags": ["low angle", "close-up", "fold"],
+         "text": "A low side angle at table height: the scored print folds over on itself, and the flat of the bone folder "
+                 "slides along the fold with steady pressure until the sheet lies flat."},
+        {"id": "bind", "start": 984.0, "end": 1005.0, "fps": 1.5,
+         "title": "Perfect binding, page by page",
+         "tags": ["overhead", "macro", "repetition"],
+         "text": "A low side angle as she squares the clamped stack, then overhead as she peels the tape backing strip by "
+                 "strip along the spine edge, then a low macro as each page is lifted and pressed onto the next. The cuts "
+                 "follow the rhythm of the repeated gesture."},
+        {"id": "first-flip", "start": 1025.0, "end": 1037.0, "fps": 2,
+         "title": "The bound left side opens for the first time",
+         "tags": ["overhead", "page turn", "reveal"],
+         "text": "Overhead as she turns the bound left side spread by spread: brick, blue triangle, yellow and pale blue bands. "
+                 "Each spread lies flat as it lands, the property of the binding she has just described."},
+        {"id": "stencil", "start": 1325.0, "end": 1349.0, "fps": 1,
+         "title": "Stenciling her name on the cover",
+         "tags": ["overhead", "low angle", "reveal"],
+         "text": "Overhead as the paper stencil is taped in place, cut to a low angle as the sponge dabs white acrylic through it, "
+                 "then back overhead as the stencil lifts to leave 'RHEA KARAM' in rough white capitals."},
+        {"id": "guillotine", "start": 1395.0, "end": 1423.0, "fps": 1,
+         "title": "The guillotine cut",
+         "tags": ["macro", "wide", "machine"],
+         "text": "The stack slides against the back gauge, the clamp wheel turns, and a macro across the clamp shows the colored "
+                 "edges in a thin line. Then a wide as she pulls the long lever across her body, and the macro again on the "
+                 "fresh edge. The same cut is seen at two scales."},
+        {"id": "finale", "start": 1537.0, "end": 1561.0, "fps": 1.5,
+         "title": "The finished book opens, then stands",
+         "tags": ["overhead", "reveal", "callback"],
+         "text": "Overhead, the closed book with its two narrow front covers; both halves swing open and fan through the walls. "
+                 "Cut to the book stood on end, opening into a zigzag. The sequence closes on the same low, dark "
+                 "macro of fanned pages it opened with."},
+        {"id": "moma", "start": 1605.0, "end": 1608.0, "fps": 6,
+         "title": "The wordmark rises, then credits",
+         "tags": ["hard cut", "mask reveal", "end card"],
+         "text": "Hard cut from the wide to white. The MoMA wordmark rises into the center from a mask line with the same move "
+                 "as the chapter titles, holds about two seconds, and hard cuts to three columns of small black credits."},
+    ],
 }
 
 
@@ -988,7 +1090,8 @@ def section(number, name, item, seqs, data, frame_card):
     width = 1000
     bucket = 0.5 if duration > 90 else 0.25
     edges = list(np.arange(0, duration, bucket)) + [duration]
-    tick_every = 30 if duration > 90 else 10
+    # Labels need about 70 of the 1000 units; long films get one every two minutes so they do not overlap.
+    tick_every = 120 if duration > 600 else 30 if duration > 90 else 10
     ticks = [(t / duration * width, f"{int(t) // 60}:{int(t) % 60:02d}") for t in range(0, int(duration), tick_every)]
     bands = [(s["start"] / duration * width, s["end"] / duration * width, f'#m-{s["id"]}', s["title"]) for s in seqs]
     timeline = bars_svg(levels(data, edges), width, 64, "Motion energy across the film", bands, ticks)

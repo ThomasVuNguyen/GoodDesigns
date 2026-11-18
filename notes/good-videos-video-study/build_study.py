@@ -19,7 +19,7 @@ import motion_sequences
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 VIDEOS = json.loads((REPO / "gallery/videos.json").read_text())["videos"]
-NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 57)]
+NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 58)]
 # Seconds between library frames. Short clips are sampled more densely than one per second.
 FRAME_STEP = {47: 0.25}
 CURATED_FRAMES = {
@@ -578,6 +578,78 @@ SHOT_NOTES = {
         290: "A girl with her own pink imaginary friend walks past.",
         300: "End card: the family of yellow creatures again, 'TED.COM/PLAY' above.",
     },
+    # MoMA, How to Make an Artist Book: Rhea Karam's studio demonstration, live action with section titles and reference cards.
+    57: {
+        0: "Opening wide: Rhea Karam at her desk in a white studio of pinned prints and colored spines. Her magenta T-shirt is the strongest color in every wide.",
+        4: "Insert on the pinboard: an accordion dummy of brick and tile photographs hanging from a clip. The cold open starts with the object, not the person.",
+        7: "Hands open the two-sided dummy on the table, both halves fanning at once. The finished idea is shown before any step.",
+        18: "Series title over a low macro of pages fanned around the spine: 'In the Studio' small, 'Bookmaking' large, bold white sans at top left.",
+        29: "Reference card: the work as a photo at right on white, with artist, italic title and year set small in black at bottom left. Every outside reference uses this layout.",
+        34: "Delaunay's book unfolded to its full length as a cutout on white, one tall strip filling the frame height.",
+        48: "Her own small accordion of street photographs pulled open on her lap.",
+        57: "Section title 'Book design' over the top-down sketchbook: the book drawn as rough boxes, flat, open and standing.",
+        63: "Pencil close-up in shallow focus, the words of the sketch soft beyond the hand.",
+        100: "Her book ECHO as a cutout on white, fanned so each photographed wall reads as one vertical strip.",
+        107: "ECHO turned edge-on with the caption 'Rhea Karam / ECHO. 2025', the same card type used for MoMA's collection.",
+        110: "Her wheatpaste on a painted brick wall: a blue square with yellow and red triangles. The book's palette comes from the street.",
+        116: "Section title 'Book dummies' over a color-block accordion dummy standing open on the desk.",
+        144: "The cast-concrete brick slipcase with her name cast into it, one of many material tests for a single book.",
+        172: "Overhead on the finished dummy: both halves open, strip after strip of wall side by side.",
+        180: "Section title 'Printing' over the Epson feeding a print. Every chapter opens with its name in the same place.",
+        205: "Screen insert: two spreads placed on one sheet in her layout software, crop marks at the corners.",
+        224: "Paper swatch books fanned in her hands. Texture and weight are chosen by touch.",
+        250: "Section title 'Sequencing' over the wall of trimmed prints, the yellow window frame cutting the left edge.",
+        270: "Close on her arm reaching across the sequencing wall to swap a print.",
+        290: "A second interview setup: tighter, by the window, with foliage soft behind her.",
+        320: "The prints pinned edge to edge as one composition, a corner in each image ready to sit on a fold.",
+        351: "Section title 'Embellishing prints' over spray-paint cans in shallow focus.",
+        363: "An earlier accordion in black with cut red and yellow triangles, shown low across the table.",
+        368: "Overhead: a book bound in green tarp lifted off the table, one of her industrial-material examples.",
+        389: "A spread in stripes of yellow, pink, black and blue: prints worked over with spray paint and cutting.",
+        402: "Reference card: Joan Miró, 'À toute épreuve (Proof Against All). 1958'.",
+        411: "A full-frame Miró spread on cream paper, held still so the color does the work.",
+        417: "Tauba Auerbach's pop-up: a coil of colored bands rising from a flat black book, white caption at bottom left.",
+        470: "Outdoors in a red sweater and purple gloves, spraying a print's edge through a cardboard stencil. The only scene outside the studio.",
+        483: "Reference card: John Baldessari, 'Lamp. 1993'.",
+        503: "Close on yellow cloth tape being torn off the roll, the print waiting on the table.",
+        553: "Her 'Leporello. 2022' on white: a black accordion with neon triangles cut from each fold.",
+        557: "Her '1982. 2025' with its concrete slipcase: the brick dummy made real.",
+        587: "Cut to the street: paper triangles pasted around a red fire bell on a concrete corner. The collage on the table repeats the move.",
+        601: "Overhead: a blue paper triangle laid on the corner of a brick print, tape gun and cutter at hand.",
+        653: "Signing the back page with a marker, the edition number written into the photographed wall like a tag.",
+        665: "Section title 'Trimming the prints' over the roller trimmer seen straight down, the print squared to its grid.",
+        685: "Macro along the trimmer's steel rail as the blade passes.",
+        765: "Section title 'Scoring and folding' over the bone folder lying across the scoring board.",
+        826: "Overhead: one hand flat on the print, the bone folder's point drawn down the board's groove.",
+        838: "Low side angle on the fold, the bone folder pressed along the crease.",
+        854: "Section title 'Binding' over the dark macro of pages fanned from the spine, reused from the opening.",
+        868: "Her 'Book I. 2025' on white: teal and orange covers with a cut window.",
+        912: "Overhead: the folded sheets in a row with double-sided tape run along each edge.",
+        980: "The stack shaken square and clamped at the spine, held up toward the overhead lens.",
+        998: "Low macro: lifting each page and pulling the tape backing, page by page through the stack.",
+        1032: "Overhead: the bound left side flipped spread by spread, each one a different wall.",
+        1076: "Left and right books open side by side, city corners meeting across the gutter.",
+        1081: "Section title 'Making the cover' over a shallow-focus macro of the finished cover with her stenciled name.",
+        1090: "The cover material: cardboard she used as a spray-paint backstop, layered with stencil colors.",
+        1135: "Overhead: marking the sprayed cardboard with a steel ruler before cutting.",
+        1172: "Reference card: Giorgio de Chirico, 'Défense de savoir (Knowledge Forbidden). 1928'.",
+        1180: "The de Chirico book standing open: shattered glass between sheets of lead, shot plainly on gray.",
+        1220: "Overhead: the signed back-page print scored to wrap the back cover.",
+        1330: "Overhead: a paper stencil of her name taped across the cardboard cover.",
+        1342: "Low angle: white acrylic dabbed through the stencil with a sponge.",
+        1349: "The stencil lifted: 'RHEA KARAM' in rough white capitals on the sprayed cardboard.",
+        1398: "Macro across the guillotine clamp, the stack's colored edges in a thin line under the blade.",
+        1416: "Wide: she pulls the guillotine lever across her body. The cut is shown in macro and wide back to back.",
+        1468: "Overhead: the two narrow front covers and the back with its stenciled name, ready to join.",
+        1539: "Overhead: the finished book closed, its two front covers side by side.",
+        1546: "The same overhead with both halves open, walls fanned left and right.",
+        1555: "The book stood on end and opened into a zigzag of walls.",
+        1559: "The low dark macro of the opening returns: pages fanned around the spine.",
+        1566: "Another edition of the same book: plywood and aluminum covers with barrel bolts and industrial pulls.",
+        1601: "Macro on a barrel bolt sliding shut.",
+        1606: "End card: the MoMA wordmark in black on white.",
+        1608: "Credits in three dense columns of small black type, listing every work and fabricator.",
+    },
 }
 FRAME_COPY = {
     # Tab label and intro for videos with SHOT_NOTES. Others fall back to DEFAULT_FRAME_COPY.
@@ -712,7 +784,7 @@ def transcript(number):
             timestamp = "00:" + timestamp
         current = [html.unescape(TAG.sub("", line)).strip() for line in raw[pos + 1:]]
         current = [line for line in current if line]
-        if vtt.name.endswith(".en.vtt") and number in (1, 7, 9, 48, 53, 54, 55, 56):
+        if vtt.name.endswith(".en.vtt") and number in (1, 7, 9, 48, 53, 54, 55, 56, 57):
             current = [" ".join(current)] if current else []
         overlap = 0
         for n in range(min(len(previous), len(current)), 0, -1):
@@ -729,7 +801,7 @@ def transcript(number):
     elif vtt.name.endswith(".ja.vtt"):
         kind = "Japanese speech recognition"
     elif vtt.name.endswith(".en.vtt"):
-        kind = "creator captions" if number in (1, 7, 9, 29, 30, 32, 33, 48, 52, 53, 54, 55, 56) else "YouTube auto captions"
+        kind = "creator captions" if number in (1, 7, 9, 29, 30, 32, 33, 48, 52, 53, 54, 55, 56, 57) else "YouTube auto captions"
     else:
         kind = "local speech recognition"
     return {"vtt": str(vtt.relative_to(HERE)), "text": str(out.relative_to(HERE)), "kind": kind}
