@@ -1,5 +1,5 @@
 {
-  "note": "HubSpot's 17-minute 'Stories of Scale' episode from The Science of Scaling, in which host Payton Kirol spends a day at Clay with Everett Berry, its head of go-to-market engineering, to find out what a GTM engineer is. It is a day-in-the-life vlog, from a 7 a.m. train out of New Jersey to the pub, with an explainer built into it. A bare studio set, a green chalkboard of clay-like icons and hand lettering, and running jokes (making Everett famous, a pickle she has never eaten) carry the jargon. The breakdown follows how the explainer and the vlog are cut together, and samples 22 moves as flip books.",
+  "note": "HubSpot's 17-minute 'Stories of Scale' episode from The Science of Scaling, in which host Payton Kirol spends a day at Clay with Everett Berry, its head of go-to-market engineering, to find out what a GTM engineer is. It is a day-in-the-life vlog, from a 7 a.m. train out of New Jersey to the pub, with an explainer built into it. A bare studio set, a green chalkboard of clay-like icons and hand lettering, and running jokes (making Everett famous, a pickle she has never eaten) carry the jargon. The breakdown follows why it holds attention even when you stop following, how it sells Clay without a pitch, how the explainer and the vlog are cut together, and samples 22 moves as flip books.",
   "transcript_kind": "Local speech recognition, corrected to the on-screen names and burned-in subtitles; lines muttered off-mic that could not be made out are left out",
   "shot_notes": {
     "0": "Cold open in the studio set: Payton Kirol on a desk chair with a hand mic, in a bare white loft with a filing cabinet, an old TV, a rug and scattered props. This set is the narration booth. Every explanation comes back here.",
@@ -402,7 +402,7 @@
   "craft": {
     "lede": [
       "A 17-minute B2B explainer made as a day-in-the-life vlog. HubSpot's host, Payton Kirol, says up front that she has no idea what a go-to-market engineer is, then spends a day at Clay with Everett Berry, who runs its GTM engineering team: a 7 a.m. train out of New Jersey, a string of meetings, a customer walk in Bryant Park and a pub at the end. Along the way the film answers the question in steps: what the role is (a pickle analogy), why Clay invented it (a founder's history), what the team does all day, and how Clay splits it into two teams that feed each other.",
-      "What is worth studying is how it keeps a dry subject watchable for 17 minutes without a single formal sit-down interview. Three layers take turns: handheld vlog footage where the host is always in or next to the frame, a bare studio set where she explains things to camera, and a green chalkboard of clay-like icons and hand lettering that draws every idea as it is said. Running jokes (making Everett famous, losing Everett, a pickle she has never eaten) give the day a thread to follow between the explanations."
+      "What is worth studying is that it holds attention even when the viewer stops following, or never cared about the subject. It never asks for full attention. Something changes on screen every few seconds, the people and the jokes keep their own storyline running beside the explanation, and every idea is said, restated and drawn, so a viewer who drifts can rejoin at the next one. It also sells Clay hard without a single pitch for it: the sponsor is HubSpot, the host starts out as a skeptic, and the case is made through proof, people and the company's own art."
     ],
     "map": {
       "lanes": [
@@ -902,6 +902,68 @@
     },
     "aspects": [
       {
+        "id": "attention",
+        "title": "Engaged even when you stop following",
+        "paragraphs": [
+          "Most explainers lose people at the first idea they don't understand. This one is built so that not understanding costs nothing. It runs two storylines side by side. One is the information: what a GTM engineer is, Clay's history, the two teams. The other is the day: will Everett get famous, where did he go, will she ever eat the pickle. A viewer who drops out of the first still has the second, and the film cuts between them often enough that the second is never far away.",
+          "The host gives permission not to follow. 'Within about 30 seconds, I had no idea what they were talking about. So I left and decided to go explore the office.' When an engineer warns 'I think you guys will have a lot of trouble', she answers 'Well, that wasn't very comforting.' Confusion becomes part of the show instead of the viewer's failure, so nobody feels left behind and clicks away.",
+          "Every idea also comes in at least three forms: an expert says it, she restates it to camera in the studio, and the green board draws it, often alongside the expert's own whiteboard. A viewer can miss two of them and still catch the third, and the studio restatements work as regular places to rejoin.",
+          "Underneath, the picture never sits still for long. There are 237 detected cuts in under 17 minutes, a shot every four seconds or so, before counting the graphics that type, pop and slide inside shots, the punch-ins inside one studio take and the fast-forwards. The music drops out on the punchlines, which gives the soundtrack its own rhythm of small payoffs. The movement and the jokes keep paying out whether or not the content lands.",
+          "Open loops pull the viewer forward. The pickle is set up at 3:50 ('I've never had a pickle'), promised at 5:29 ('If you stayed at the end of this video, I'm going to try a pickle') and paid off only after the credits. 'Wait, two teams?' at 12:26 turns the last third into a question to be answered. Each loop is a reason to stay that has nothing to do with go-to-market engineering."
+        ],
+        "moments": [
+          {
+            "t": 168,
+            "text": "'I had no idea what they were talking about.' Permission not to follow."
+          },
+          {
+            "t": 214,
+            "text": "'Well, that wasn't very comforting.'"
+          },
+          {
+            "t": 329,
+            "text": "The pickle promise: a reason to stay to the end."
+          },
+          {
+            "t": 746,
+            "text": "'Wait, two teams?' The last third becomes a question."
+          }
+        ]
+      },
+      {
+        "id": "persuasion",
+        "title": "Selling Clay without a pitch",
+        "paragraphs": [
+          "The only ad in the film is for HubSpot's playbook, and it is labelled as one. Clay is never pitched. Nobody lists features or asks you to sign up. The persuasion runs through the story, which makes it hard to notice and easy to believe.",
+          "It starts with a skeptic. The host knows nothing and says so, so when she comes around ('Clay didn't just coin the term go-to-market engineer. They became the best example of what it could do.') it plays as her conclusion rather than the company's claim, and the viewer, who started in the same place, comes along.",
+          "The proof is everywhere and mostly unspoken: the opening crowd of startup logos, Anthropic and Google named as customers, a $5 billion counter, Clay's billboards from a drone, coworkers photographing Everett, revenue climbing from five years at '~$0' to $100 million, '16,000 customers'. The underdog stretch matters as much as the big numbers. 'Nothing really happened for a while' makes the success feel earned.",
+          "The product appears only as the answer to a need the viewer has just understood. The pickle analogy ends on 'build a list of all of the delis', and the next shot is that exact request typed into Clay and a table coming back. The viewer pictures using it before being told what it does.",
+          "The deepest move is selling the role, not the tool. The film makes go-to-market engineering look like the fastest-growing, most interesting job in startups, then shows that Clay invented it, named it and staffs it, and that 'the people selling Clay are the same type of person buying it'. Wanting the job and wanting the tool become the same thing. Even the explainer graphics are in Clay's clay-modelled style, so the whole film looks like it belongs to the company."
+        ],
+        "moments": [
+          {
+            "t": 4,
+            "text": "A crowd of customer logos before any claim."
+          },
+          {
+            "t": 44,
+            "text": "The $5 billion counter."
+          },
+          {
+            "t": 259,
+            "text": "The product as the answer to the analogy."
+          },
+          {
+            "t": 875,
+            "text": "'The people selling Clay are the same type of person buying it.'"
+          },
+          {
+            "t": 945,
+            "text": "'They became the best example of what it could do.'"
+          }
+        ]
+      },
+      {
         "id": "story",
         "title": "A question the host doesn't know the answer to",
         "paragraphs": [
@@ -1085,6 +1147,26 @@
       }
     ],
     "patterns": [
+      {
+        "name": "Run a human storyline beside the information",
+        "text": "Give viewers something to follow that needs no understanding of the subject: a running joke, a search for someone, a promise. When they drop out of the explanation, they stay for the story.",
+        "t": 126
+      },
+      {
+        "name": "Let the host be confused on camera",
+        "text": "When the presenter admits they're lost, viewers who are lost feel included instead of left behind.",
+        "t": 168
+      },
+      {
+        "name": "Plant an open loop and pay it off at the very end",
+        "text": "Promise something small and concrete early (here, eating a pickle) and deliver it only after the credits.",
+        "t": 329
+      },
+      {
+        "name": "Sell the role, and the tool comes with it",
+        "text": "Make the job look exciting, then show that the company invented it and staffs it with its own users. Wanting the job becomes wanting the tool.",
+        "t": 875
+      },
       {
         "name": "Let the host not know",
         "text": "Have the presenter admit up front that they can't answer the question, and let them say 'that's confusing' when an expert loses them. The audience follows someone learning, not someone lecturing.",

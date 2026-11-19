@@ -6,7 +6,7 @@ Each film's craft notes live in `studies/<NN>-<slug>.json` under "craft". The se
 - a film map: parallel lanes (story, voices, sound, picture) laid against the running time, so you
   can see how the pieces stack up at any moment. Every segment seeks the player;
 - aspects: essays on only the crafts the film actually uses (story, voices, frames, world, screens,
-  sound, trust), each anchored to timestamped moments with the frame from that second;
+  sound, trust, attention, persuasion), each anchored to timestamped moments with the frame from that second;
 - patterns: techniques worth reusing, and a line on what the film does not lean on.
 
 The same content is written to `frames/<video>/craft.md` so an agent reading the folder gets it as text.
@@ -59,6 +59,8 @@ ASPECTS = {
     "screens": "Showing the product",
     "sound": "Music and sound",
     "trust": "Trust, warmth and craft",
+    "attention": "Holding attention",
+    "persuasion": "How it persuades",
 }
 
 
