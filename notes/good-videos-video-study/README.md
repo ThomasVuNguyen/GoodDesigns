@@ -1,6 +1,6 @@
 # Video frame and transcript study
 
-The local `index.html` previews the current GoodDesigns gallery with a **Breakdown** button on videos 1–13, 16, 17, 28–35, and 41–70. Other video cards have no breakdown button. The individual breakdown pages show video playback beside a clickable transcript and a frame library with scene-change and one-second views. Hovering over a frame shows a larger preview and its **Play frame** control; keyboard focus shows the preview too. On touch screens, the play control remains visible.
+The local `index.html` previews the current GoodDesigns gallery with a **Breakdown** button on videos 1–13, 16, 17, 28–35, and 41–71. Other video cards have no breakdown button. The individual breakdown pages show video playback beside a clickable transcript and a frame library with scene-change and one-second views. Hovering over a frame shows a larger preview and its **Play frame** control; keyboard focus shows the preview too. On touch screens, the play control remains visible.
 
 For local review, serve the repository root with `npx -y http-server . -p 8766 -a 127.0.0.1 -c-1` and open `http://127.0.0.1:8766/notes/good-videos-video-study/index.html#videos`. This server supports video byte ranges, so frame timestamps seek reliably.
 
@@ -40,7 +40,9 @@ From video 59 on, each film's notes live in one file, `studies/<NN>-<slug>.json`
 
 Videos 69 and 70 follow the same pattern. Notion's "Introducing Notion Faces" has no speech and no change of background, so the cut detector finds none of its four instant changes. Helios's launch film, from an X post, is narrated by its two founders. Their supers name them, and the voice stem was matched against their on-camera stretches to attribute the lines heard over other footage.
 
-Only videos 48–70 still have local sources. `python3 notes/good-videos-video-study/build_study.py 52 53` rebuilds just those videos and keeps the other manifest entries, and `python3 scripts/publish-video-breakdowns.py 52 53` publishes just those pages, frames and `motion.md` files.
+Video 71 is HubSpot's 17-minute "Stories of Scale" episode on go-to-market engineering at Clay, a day-in-the-life vlog with an explainer built in. Like the other films over ten minutes, its page uses the YouTube player and 720-pixel frames. Its 22 Motion sequences are mostly the green explainer board and the timeline and counter graphics, and its Craft section follows how the vlog footage, the studio set and the drawn explanations take turns. The installed yt-dlp was out of date, so a current release ran through `uvx`. Demucs needed `--with numpy` added to its `uvx` environment. Its transcript drops a run of hallucinated "I have water" lines at the very end.
+
+Only videos 48–71 still have local sources. `python3 notes/good-videos-video-study/build_study.py 52 53` rebuilds just those videos and keeps the other manifest entries, and `python3 scripts/publish-video-breakdowns.py 52 53` publishes just those pages, frames and `motion.md` files.
 
 `source/` contains the downloaded clips. `frames/` contains the image sequences and `scene-cuts.csv` files. `transcripts/` contains source WebVTT captions where available and locally recognized speech for the other videos. Video 11 is spoken in Japanese, so its transcript is in Japanese. The `.transcript.txt` files are cleaned, timestamped reading copies. Speech recognition can mishear words and names; the `.vtt` files retain the original timing.
 

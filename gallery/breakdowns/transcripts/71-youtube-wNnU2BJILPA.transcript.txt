@@ -1,0 +1,343 @@
+[00:00:00] There's a new role popping up inside some of the fastest growing startups and
+[00:00:03] it's spreading quickly across the industry. In the last year alone, job
+[00:00:07] postings for this role have surged over 5,000 percent and it's called a go-to
+[00:00:12] market engineer. But what the — is a go-to-market engineer? Is it engineering?
+[00:00:18] Is it marketing? Is it sales? Is it an internal facing role or an external role?
+[00:00:23] What do they actually do every day? I have no idea. Which is exactly why I
+[00:00:28] ended up here inside Clay. Because they didn't just adopt this role, they actually
+[00:00:33] coined it. Clay was founded in 2017 and in just a few years it went from a small
+[00:00:37] product to powering go-to-market teams at some of the largest companies in the
+[00:00:40] world like Anthropic and Google. It's now valued at five billion dollars. And this
+[00:00:46] whole idea of go-to-market engineering seems to be a big part of how they've
+[00:00:49] scaled so fast. So I'm meeting up with Everett Berry, their head of go-to-market
+[00:00:53] engineering, to find out what it is, what they actually do all day, and how it's
+[00:00:57] driving Clay's growth. But first, in order for this to be a real full day, we got to go to Jersey.
+[00:01:10] He's on the phone.
+[00:01:12] He's working already.
+[00:01:14] And then just...
+[00:01:15] And by the way...
+[00:01:18] What's up?
+[00:01:20] How's it going?
+[00:01:21] Good. And then yeah, on the train, we got to write a LinkedIn post and then we got to like finish with this
+[00:01:27] enablement session.
+[00:01:28] Oh gosh.
+[00:01:29] Leaving the train. Please watch the gap.
+[00:01:32] The trick with this commute is basically the cell service goes in and out. So I got to get all my stuff like ready to go.
+[00:01:38] You've mastered your commute.
+[00:01:39] Yeah. Yeah.
+[00:01:40] All right. So we're basically racing the clock. 45 minute train ride, spotty service, and somehow the goal is to write a full LinkedIn post and prep for a presentation he had later that day.
+[00:01:49] We're going to do a look at how Clay's like internal GTM engineering team works.
+[00:01:53] Are you under pressure because we're watching you?
+[00:01:55] No. No. I feel comfortable.
+[00:01:58] Okay. Okay. Good.
+[00:01:58] People are like, what are your goals at Clay? I'm like, I'm trying to become famous.
+[00:02:02] Smile at the camera really quick.
+[00:02:05] Make Everett famous.
+[00:02:08] I said, I think we're ready to post.
+[00:02:09] Let's go.
+[00:02:11] Post made.
+[00:02:12] What should I comment?
+[00:02:13] Comment, "So insightful."
+[00:02:15] Perfect.
+[00:02:17] Okay. Yeah. So we just got to, and then we're there.
+[00:02:21] Cool.
+[00:02:22] So Everett's already in a meeting.
+[00:02:24] To like make him aware of that too, he may just not know.
+[00:02:27] I would do, I'd probably do an intro for this one.
+[00:02:29] The second we got to the office, Everett's dream of becoming famous started to come true.
+[00:02:33] Okay. Welcome to the office.
+[00:02:34] Thank you.
+[00:02:35] His coworkers stopped to take photos of him.
+[00:02:37] I think it's because they thought it was funny.
+[00:02:39] He was being followed around by a camera crew.
+[00:02:41] What's going on?
+[00:02:42] Great.
+[00:02:43] Nice to meet you guys.
+[00:02:44] Anyway, he got straight to business and jumped into a meeting with Zach.
+[00:02:47] And I'm not going to lie.
+[00:02:48] Within about 30 seconds, I had no idea what they were talking about.
+[00:02:52] So I left and decided to go explore the office.
+[00:02:55] Just came across a cinnamon roll.
+[00:02:57] I kind of want to bite.
+[00:03:04] Are you busy right now?
+[00:03:06] Can we ask you a couple questions?
+[00:03:08] Sure.
+[00:03:09] What do you do?
+[00:03:09] I do go-to-market engineering here.
+[00:03:11] I am a go-to-market engineer.
+[00:03:13] I am an internal go-to-market engineer.
+[00:03:14] What the heck is a go-to-market engineer?
+[00:03:18] Sorry.
+[00:03:18] So this is why I think interviewing Clay about go-to-market engineering can be confusing.
+[00:03:22] I am a go-to-market engineer.
+[00:03:23] I am the core user of every other company.
+[00:03:26] Yeah.
+[00:03:26] We try to sell to people like me.
+[00:03:28] And he was right.
+[00:03:29] It is confusing.
+[00:03:31] Trying to explain this in a video, I think you guys will have a lot of trouble.
+[00:03:34] Well, that wasn't very comforting.
+[00:03:36] But I figured if I could understand what Spencer does, I could figure out how Clay works.
+[00:03:42] And that's when he started talking about pickles.
+[00:03:46] I default to the pickle analogy, which is imagine you make pickles.
+[00:03:49] I've never had a pickle.
+[00:03:51] You've never had a pickle?
+[00:03:52] That's heinous.
+[00:03:53] They look so gross.
+[00:03:55] The main thing we're thinking is how do you grow your business?
+[00:03:58] You need to think, who are my customers and how can I find more of them?
+[00:04:02] Somebody making pickles in New York City needs to build a list of all of the delis in New York
+[00:04:06] and say which ones are my customers, which ones are not.
+[00:04:09] Now I know the ones that I should sell to.
+[00:04:11] Or maybe even for the customers, maybe I want to expand my customer into different pickle varieties, right?
+[00:04:16] And we know exactly which ones they're buying and which ones they're not buying.
+[00:04:19] We build that list.
+[00:04:20] We find the right people.
+[00:04:22] We find the decision maker.
+[00:04:24] Who's the most likely to buy the pickle?
+[00:04:25] And then we sell you pickles.
+[00:04:27] So what Spencer is describing is the core job of a go-to-market engineer.
+[00:04:31] They take messy data about who's out there, track signs of interest, which is something like who visits your website, and analyze buying behavior.
+[00:04:38] Then they turn it into a system that tells you who to sell to, who's most likely to buy, and how to reach them.
+[00:04:44] And instead of doing all of that manually, like teams used to, they automate the entire thing.
+[00:04:49] Clay is the tool that lets go-to-market engineers build those systems.
+[00:04:53] And when I asked Spencer what else he's been up to, he said...
+[00:04:56] It might be because I'm in a good mood, but I've been hyping people up.
+[00:05:00] Emily?
+[00:05:01] Emily's actually...
+[00:05:02] She knows exactly how to target and who to target at any given moment.
+[00:05:05] Thank you.
+[00:05:07] This is not good hype.
+[00:05:08] We've got to find better hype.
+[00:05:09] Alright, I'm going to go hype up somebody else.
+[00:05:12] People, engineers have like onboarding projects to learn the code base, and Jenny's onboarding project still gives me a smile once a week.
+[00:05:19] I think Spencer's just the best hype man.
+[00:05:21] Like, Spencer brings the best energy to the office.
+[00:05:22] I'm a personality hype man.
+[00:05:24] That was slightly awkward.
+[00:05:25] Then it was time for me to go meet back up with Everett.
+[00:05:28] Alright, quick pause.
+[00:05:29] If you stayed at the end of this video, I'm going to try a pickle.
+[00:05:32] But also, I wanted to let you know that if you're trying to wrap your head around this whole go-to-market engineering thing, don't worry.
+[00:05:37] I got you.
+[00:05:38] We put together a full playbook breaking down how Clay built this into a $5 billion growth engine, what the role actually is, and how to structure it inside your own company.
+[00:05:47] Because right now, this is one of the fastest growing roles in B2B, and most companies don't know how to hire for it or use it.
+[00:05:54] So, if you want the playbook, it's free. Link in the description.
+[00:05:57] Alright, back to Clay.
+[00:05:59] On my way back downstairs, I ran into Varun, one of Clay's co-founders.
+[00:06:02] So, I asked if he could walk me through how Clay got here.
+[00:06:06] Hi.
+[00:06:06] What I didn't realize was that Clay's growth was pretty slow in the beginning.
+[00:06:11] For the first five years, they made basically zero dollars in revenue.
+[00:06:15] Nothing really happened for a while.
+[00:06:16] But eventually, they landed on an idea.
+[00:06:19] What if a spreadsheet could actually pull data from anywhere on the internet?
+[00:06:24] And then in like February of 2022, we launched the product on Product Hunt.
+[00:06:31] And that's when they started noticing something.
+[00:06:33] The people who really understood the product were technical scrappy operators using it to build systems to find and reach customers.
+[00:06:40] And watching how those users worked gave Clay a clear direction.
+[00:06:44] Instead of just being a data tool, Clay became a system that lets teams find the right people, understand them, and reach out to them.
+[00:06:51] Then, in late 2022, artificial intelligence supercharged all of it.
+[00:06:55] Now, instead of just finding the right people, teams could actually generate personalized outreach automatically, all in Clay.
+[00:07:01] And that's when startups started using it.
+[00:07:04] I still remember, by the way, Rippling was a pretty meaningful customer for us.
+[00:07:08] They signed in March of 2023.
+[00:07:10] They were the customer that pushed us over a million dollars.
+[00:07:12] But then, heading into 2024, they hit a new challenge.
+[00:07:15] Startups were using Clay, but enterprise companies weren't.
+[00:07:18] Well, how do we become like an amazing company?
+[00:07:21] Well, you kind of need other amazing companies to use your product.
+[00:07:23] And it just so happens that other amazing big companies don't want to use your product.
+[00:07:27] If, like, we need to kind of help them.
+[00:07:29] So, like, okay, how do we do that?
+[00:07:30] Well, apparently that's what sales is.
+[00:07:31] But Varun didn't want traditional salespeople.
+[00:07:33] The product was too complex.
+[00:07:35] So, he looked at Clay's users for people who already knew how to use it.
+[00:07:38] Everett was there in our community.
+[00:07:40] So, you were using Clay before you joined Clay?
+[00:07:42] Yes.
+[00:07:43] Okay.
+[00:07:43] And I was like, hey, what if you did sales?
+[00:07:46] And you're like, what?
+[00:07:48] I've never done sales before.
+[00:07:49] What was your reaction?
+[00:07:50] I was like, I'm, first of all, more of an engineer.
+[00:07:53] Second of all, more of a, like, a growth person.
+[00:07:56] Sales is like, icky.
+[00:07:57] Yeah, sales is icky.
+[00:07:58] But that's exactly why Varun wanted him.
+[00:08:00] He was someone that could build systems and could show another company how to grow using Clay.
+[00:08:05] At one point I was like, so, Varun, like, should I be, like, head of sales?
+[00:08:08] And he was like, no.
+[00:08:09] He was like, GTM engineering is the thing.
+[00:08:11] And just like that, the team had a name.
+[00:08:13] So, Everett joined, helping bring Clay into enterprise companies.
+[00:08:16] And then I didn't sell anything at Clay for six months.
+[00:08:20] But eventually, he started to figure it out.
+[00:08:22] Instead of just telling companies what the product could do, the go-to-market engineers started building real workflows for each prospect.
+[00:08:28] Well, no one liked their data stack.
+[00:08:30] Everyone thought it was too expensive.
+[00:08:32] The quality wasn't good enough.
+[00:08:33] There was too many vendors to manage.
+[00:08:34] So, like, hey, we'll solve that for you.
+[00:08:35] We'll prove to you that we can solve it through this data test.
+[00:08:38] Let's start with that use case, get you on that.
+[00:08:40] And then we can expand you to all these other use cases, outbound, inbound, CRM, expansion, all these other things that are ABM that we can do for you after the fact.
+[00:08:48] And by the end of the year, they were landing companies like Figma and OpenAI.
+[00:08:52] By 2025, they scaled that approach and crossed $100 million in revenue.
+[00:08:56] Today, they have over 16,000 customers, including hundreds of enterprise teams.
+[00:09:01] And a big part of how they got here came from building their go-to-market engineering team.
+[00:09:05] Okay, so now that I know why Clay created go-to-market engineers, it was time to see what they do all day.
+[00:09:10] Alright, so we are in Boomi. What up?
+[00:09:15] Hi.
+[00:09:15] Hi, how are you guys?
+[00:09:16] I'm Payton.
+[00:09:17] Nice to meet you.
+[00:09:18] That's Daniel, and that's Melina.
+[00:09:21] So then I just wanted to kind of quickly go over what is present in the GTME training around pricing from Zona.
+[00:09:28] Who is this deck for?
+[00:09:29] The GTMEs.
+[00:09:31] Of course.
+[00:09:33] Alright, awesome.
+[00:09:35] And then we had so many meetings.
+[00:09:39] Well, in case you haven't noticed, I brought a camera crew with me today.
+[00:09:42] Oh, I bet you did.
+[00:09:43] It got to the point where Everett just kept disappearing into so many meetings.
+[00:09:47] And I kept losing him.
+[00:09:53] Well, we lost Everett.
+[00:09:55] He's just such a busy guy, so now we gotta go find him.
+[00:09:59] See where he possibly could have went.
+[00:10:00] Everett, where are you?
+[00:10:02] Did he leave?
+[00:10:03] We saw him walk past us.
+[00:10:06] No one responded.
+[00:10:09] It's the problem with these operators.
+[00:10:13] They're just so busy.
+[00:10:14] Yeah, I lost you for a while.
+[00:10:16] I know, I was, well, I had a meeting with Becca there.
+[00:10:19] Oh, okay.
+[00:10:20] So.
+[00:10:20] Not gonna lie, I was getting really hungry.
+[00:10:23] And just when I was about to go get food, Everett said we had to take a field trip to the park.
+[00:10:29] Oh, yeah, I was wondering what was gonna happen.
+[00:10:30] So are customer meetings outside the office not the usual?
+[00:10:35] No, they are.
+[00:10:35] Okay, okay.
+[00:10:36] Yeah.
+[00:10:37] And a lot of times we go to their office instead of like walking around.
+[00:10:39] Right.
+[00:10:40] Hi.
+[00:10:41] How are you?
+[00:10:42] Good.
+[00:10:43] Good to see you.
+[00:10:43] You too.
+[00:10:44] Hi.
+[00:10:45] Nice to meet you.
+[00:10:48] All right, shall we stroll around the park?
+[00:10:49] Yeah, let's do it.
+[00:10:50] This was a customer meeting with someone from AWS.
+[00:10:52] A chance to check in, see how things were going and keep building the relationship.
+[00:10:57] This is a customer meeting everybody.
+[00:11:00] And I, not allowed in that conversation.
+[00:11:12] Looks like it's going well.
+[00:11:14] How'd it go?
+[00:11:15] Great.
+[00:11:15] Amazing.
+[00:11:16] All right.
+[00:11:17] See you.
+[00:11:17] Bye.
+[00:11:19] I've been seeing a lot of meetings and on the walk back, I wanted to ask Everett a bit more about what his team does.
+[00:11:24] And so what we do is go deep with customers and discover all their use cases and like really carefully kind of build like a POC for them.
+[00:11:34] There were three things his team needs to be able to do.
+[00:11:37] Know go-to-market well, know Clay well, and basically be a good salesperson.
+[00:11:41] When we got back to the office, Everett had more meetings, of course.
+[00:11:44] So I took the opportunity to go chat with the rest of the team.
+[00:11:48] I think so go-to-market engineering for as like a whole, I think is really kind of just very intertwined with Clay's growth as a company because we are the kind of pioneers of the go-to-market engineer.
+[00:12:00] I ended up talking to George for a very long time.
+[00:12:05] I'm talking to 10 different go-to-market orgs a day.
+[00:12:08] And so a lot of times when they're creating a role, it's to solve the problem that they have.
+[00:12:12] So you want an application of Clay for these customers.
+[00:12:16] So why not just call yourself a salesperson?
+[00:12:18] Good question.
+[00:12:20] And then he said something that stopped me in my tracks.
+[00:12:23] So there's two go-to-market engineering teams.
+[00:12:26] Wait, two teams?
+[00:12:27] I needed to find Everett.
+[00:12:31] GTM engineers use technology to help businesses grow.
+[00:12:34] Okay.
+[00:12:37] So there are two GTME teams at Clay.
+[00:12:41] The first team is the internal team.
+[00:12:43] Other companies have only this for GTM engineering.
+[00:12:46] They have internal people focused on pipeline generation.
+[00:12:48] They're not traditional ops or marketing people.
+[00:12:50] They're engineers, but instead of building software, they're building systems that power a company's revenue.
+[00:12:56] Things like pipeline operations, automated follow-ups, and content generation.
+[00:13:00] They're basically helping sort through the best prospects to target.
+[00:13:06] Right.
+[00:13:06] Correct.
+[00:13:07] Okay.
+[00:13:07] But I still had one question.
+[00:13:09] If most companies only have the internal team, how does Clay's second team actually fit in?
+[00:13:14] And how do they work together?
+[00:13:15] So I had Everett map it out.
+[00:13:17] Basically, the internal team is responsible for bringing in all different types of leads.
+[00:13:22] Enterprise customers or potential ones go to our second GTME team for deployed GTMEs.
+[00:13:29] That's Everett's team, the salespeople.
+[00:13:32] And this is where Clay did something most companies haven't.
+[00:13:34] They took people with the same skills as the internal team and deployed them directly to customers.
+[00:13:39] So this GTME team receives what this GTME team kind of creates.
+[00:13:44] The internal team generates and qualifies leads.
+[00:13:46] And when they identify something that seems like a strong enterprise fit, it gets passed to Everett's team.
+[00:13:51] And so, you know, we're basically coming in almost as like a go-to-market consultant and figuring out,
+[00:13:57] Hey, what is the like root cause of problems you're facing in the go-to-market, you know, stack?
+[00:14:03] And how do we fix that?
+[00:14:04] And how can we build something in Clay that will solve that problem?
+[00:14:06] It's completely custom to the customer.
+[00:14:08] So we're doing these kind of one-of-one builds for people pre-sale to just show them like how they would run this,
+[00:14:15] you know, use case in Clay for like a small sample of their, you know, their customers or their data that they're trying to source.
+[00:14:23] They are people with the same skills pretty much divided depending on personality.
+[00:14:26] The more engineering minded ones gravitate towards internal infrastructure.
+[00:14:30] The ones who may like more customer conversations end up forward deployed.
+[00:14:34] And what makes this work is that the people selling Clay are the same type of person buying it.
+[00:14:39] So they deeply understand the customer's pain points and how to fix them.
+[00:14:43] And that's what makes the loop a revenue engine.
+[00:14:46] The internal team generates the pipeline, the forward deploy team closes it,
+[00:14:50] and everything they learn goes straight back in.
+[00:14:53] It's a flywheel because we like help customers with Clay.
+[00:14:56] We learn a lot about what they're doing with Clay and then we feed that back into our team so that we can do cool stuff with Clay too.
+[00:15:03] And because both teams have the same skills, the flywheel actually works.
+[00:15:07] Because it's like, hey, our CEO is headed to San Francisco.
+[00:15:10] Who are the 20 best people that we could put around a dinner table with him to like drive the most impact for the business?
+[00:15:15] We have a live Clay table that at any point you can go in and filter for say SF, Austin, NYC.
+[00:15:22] And you can build these like super targeted lists.
+[00:15:26] And then we can actually send the invite on behalf of our founder.
+[00:15:29] And we can then log responses and like registrants.
+[00:15:35] And who created this system?
+[00:15:37] This was created by our GTM engineers.
+[00:15:39] A forward deploy GTME would build this for our customers.
+[00:15:42] Clay didn't just coin the term go-to-market engineer.
+[00:15:45] They became the best example of what it could do.
+[00:15:48] Two teams, one loop and a $5 billion company to show for it.
+[00:15:54] And to end the day in true Everett fashion, the team and I headed to his favorite pub.
+[00:15:59] All right, everybody.
+[00:16:00] Well, that was our day inside of Clay.
+[00:16:02] A whole day spent with Everett, their head of go-to-market engineering.
+[00:16:06] Thanks so much for hanging out with Clay today.
+[00:16:08] Hope you guys learned about GTM engineering and also what it's like to work at a growing company in New York City.
+[00:16:15] That's all I have for this episode of Stories of Scale.
+[00:16:18] Stay tuned.
+[00:16:19] We got plenty more to come.
+[00:16:20] Lots of new things happening on the channel.
+[00:16:22] And remember to hit that button, please.
+[00:16:25] Subscribe.
+[00:16:27] Okay, so if you made it to the end of the video, I'm about to try a pickle.
+[00:16:30] This is for you. Can I eat the whole thing?
+[00:16:33] Don't bite.
+[00:16:38] Oh, wait.
+[00:16:40] Wait.
+[00:16:43] Oh, I don't know how I feel.
+[00:16:44] I don't know how I feel.
+[00:16:45] I actually don't know.
+[00:16:47] Do I have water?
+[00:16:48] I have water.

@@ -1,0 +1,1131 @@
+{
+  "note": "HubSpot's 17-minute 'Stories of Scale' episode from The Science of Scaling, in which host Payton Kirol spends a day at Clay with Everett Berry, its head of go-to-market engineering, to find out what a GTM engineer is. It is a day-in-the-life vlog, from a 7 a.m. train out of New Jersey to the pub, with an explainer built into it. A bare studio set, a green chalkboard of clay-like icons and hand lettering, and running jokes (making Everett famous, a pickle she has never eaten) carry the jargon. The breakdown follows how the explainer and the vlog are cut together, and samples 22 moves as flip books.",
+  "transcript_kind": "Local speech recognition, corrected to the on-screen names and burned-in subtitles; lines muttered off-mic that could not be made out are left out",
+  "shot_notes": {
+    "0": "Cold open in the studio set: Payton Kirol on a desk chair with a hand mic, in a bare white loft with a filing cabinet, an old TV, a rug and scattered props. This set is the narration booth. Every explanation comes back here.",
+    "4": "Startup logos (Clay, Ramp, Docker, Hex, Unify, MaintainX, Modal, Vercel, Rippling and more) pop on around her as frosted chips on 'some of the fastest-growing startups'. The claim is shown as a crowd of brands before any number.",
+    "8": "Hard cut to the show's chalkboard green: hand-drawn white axes and two bars, 'LAST YEAR' and 'THIS YEAR'. The green grid is the film's whiteboard for every explainer that follows.",
+    "11": "The camera has pushed in until the 'THIS YEAR' bar fills the frame, with '5000%' inside it. The statistic is told by scale rather than by labelled axes.",
+    "13": "'GO-TO-MARKET ENGINEER' set word by word in heavy white sans, after a punch-in on the same take. Jump cuts inside one studio take keep the monologue moving.",
+    "15": "A handheld wide-angle close-up in Times Square, her face a foot from the lens. The questions ('Is it engineering? Is it marketing?') leave the studio for the street.",
+    "17": "'WTF is a GTME?' on the green board: the swear in hand lettering, the acronym in the bold sans. The word muted in the voice is spelled out in the type.",
+    "18": "Lower third 'Payton Kirol / HOST & PRODUCER' over Times Square billboards. She is named only after the hook, eighteen seconds in.",
+    "28": "She walks past the Clay logo on the lobby wall: 'which is exactly why I ended up here inside Clay.' The company is introduced as a place she enters.",
+    "35": "Clay's 3D logo, a soft blue arch over red and yellow, grows as a year counter rolls from 2017 to 2026. Nine years of history in four seconds.",
+    "42": "'ANTHROPIC' and then 'Google' appear as dark pills on the green board as she names them. Customers are said and shown at once.",
+    "44": "A green box counts up to '$5,000,000,000' behind her head, its middle digits hidden by her hair. The number is layered behind the host, so the graphic sits in the room.",
+    "47": "A drone shot of a Clay billboard: 'Michelangelo had marble. GTM has clay.' Clay's own advertising stands in as proof that it is a big company.",
+    "51": "First look at Everett Berry, walking a sunny street with her. The person the day will follow is seen before he is named.",
+    "54": "A full conference table of Clay staff, shot wide, for 'what they actually do all day'.",
+    "63": "'7:00am' in small white type over a top-down drone shot of the city. Clock stamps give the day its structure from here to the afternoon.",
+    "65": "The series title, 'STORIES OF SCALE', in tall condensed black on cream graph paper with green doodles and an atom-and-book icon between the words. The show package is cream; the explainer board is green.",
+    "72": "'Everett Berry / HEAD OF GTME, CLAY' with a hand-drawn arrow that follows him as he paces the station on his phone. The lower third is tracked to him rather than pinned in a corner.",
+    "70": "Burned-in yellow italic subtitles (here 'he's on the phone') appear only for quiet or off-mic lines. Everything else is left to the voice.",
+    "93": "Two-shot across the train seats on a wide lens. Most of the commute plays in this one setup while the window light changes.",
+    "105": "Close on her face as she asks 'Are you under pressure because we're watching you?' The film keeps the crew's presence in the story.",
+    "126": "'MAKE Everett FAMOUS' builds word by word on the train wall beside him, the name in handwriting between two sans words. The running joke gets a title card inside the shot.",
+    "128": "'8:40am' over a blurred overhead line from the moving train.",
+    "133": "His LinkedIn post on a laptop screen, shot at an angle in shallow focus. The work of the commute is shown as he made it, not as a clean screen recording.",
+    "136": "Her 'so insightful!' comment rebuilt as a white card on the green board, under her own name and title. The comment is the punchline, so it gets a graphic.",
+    "150": "The Clay logo wall in the office, awards on the ledge, as they arrive.",
+    "158": "A coworker holds up her phone to photograph him across the desks. The 'famous' joke pays off with real reactions in the office.",
+    "180": "She bites a cinnamon roll she found on a desk. A small detour that keeps the host's personality between interviews.",
+    "190": "Engineers at their desks answer the same question in one line each, named in white lower thirds ('Andrew, GTM ENGINEER', 'George'). Asking several people one question becomes a montage.",
+    "193": "Spencer, an internal GTM engineer, on a yellow sofa by the window in a two-shot with her. The interviews are conversations with the host in frame, not formal sit-downs.",
+    "225": "She holds up a jar of pickles in the studio: 'I've never had a pickle.' The prop is set up here and paid off in the last minute.",
+    "244": "A pickle with dollar signs and a list of delis that types itself; then two delis get check marks. Spencer's analogy is drawn as he says it.",
+    "259": "A Clay prompt, 'I'm looking for a list of all the delis in nyc!! I wanna sell them pickles!!', typed into the real product. The analogy becomes a product demo in one cut.",
+    "263": "The resulting Clay table of New York delis, as a full-frame screen recording.",
+    "273": "Document, chart, phone and cart icons gather around a blue 'GTME' folder on the green board: the narration's 'messy data'.",
+    "283": "'Who to sell to / Most likely to buy / How to reach them' fill a list at the end of a dotted line from the folder. The job is laid out as input, system and output.",
+    "292": "'Clay is the tool that lets GTMEs build those systems' over Clay's own clay-modelled landscape of hills and a river. The one-line product definition is set on the brand's art.",
+    "303": "Spencer hypes up a coworker at her desk and she covers her face; 'this is not good hype' is subtitled.",
+    "328": "She leans into the lens with a hand up for 'quick pause'. The sponsor read starts with a closer framing, and a thin green bar along the bottom fills over its thirty seconds.",
+    "340": "The 'GTM ENGINEERING PLAYBOOK' cover, black with green type, on the cream show board. The free offer is shown as a product.",
+    "366": "Varun Anand, named with an arrow as 'COFOUNDER + HEAD OF OPERATIONS', turns to a whiteboard. The founder tells the history standing up, marker in hand.",
+    "371": "On white graph paper the Clay logo sits over 'REVENUE ~$0' while the years slide under a marker from 2017 to 2022. The joke is that the number never moves.",
+    "376": "Varun drinks from a glass of water under the subtitle 'nothing really happened for a while'. A pause shot used as the punchline.",
+    "382": "An empty Clay table filling with company rows, recorded in the product, for 'a spreadsheet that could pull data from anywhere'.",
+    "406": "'DATA TOOL' turns into a red hand-lettered 'SYSTEM' banner under the Clay logo, and three tiles follow: Find the right people, Understand them, Reach out to them.",
+    "422": "A tighter studio framing, closer and at chest height. The studio narration cuts between two or three sizes so long passages never sit on one frame.",
+    "426": "Varun's whiteboard fills with his own timeline as he talks: years, stick figures, 'Product Hunt'. His drawing and the motion graphics tell the same history twice.",
+    "438": "'STARTUPS ✓ / ENTERPRISE ✗' at 2024 on the timeline. The second act's problem in two words and two marks.",
+    "485": "Everett joins Varun at the whiteboard, and the two retell how the role got its name.",
+    "490": "The Slack message that named the team, rebuilt as a card on the green board: 'varun 7:29 AM · I like the name GTM engineer … will go w that title for the team', February 7th, 2024.",
+    "507": "A Clay table with job titles boxed in red, for 'we'll prove to you that we can solve it through this data test'.",
+    "536": "Revenue counts up to '$100,000,000' at 2025 on the same timeline, Figma and OpenAI faded above. The ruler that sat at ~$0 for five years finally moves.",
+    "560": "Melina, 'HEAD OF GTM ENABLEMENT', and Daniel, a GTM engineer, are named as she walks into their meeting room.",
+    "561": "The 'Pricing & Negotiation Part 2' deck on the room screen, with a clay-modelled cover in Clay's brand style.",
+    "577": "'1:00pm', '1:30pm' and '2:30pm' stamped over three meetings in a row. Clock stamps compress an afternoon into four seconds.",
+    "594": "She stands among the desks with a laptop and says they have lost Everett. Looking for him becomes the excuse to show more of the office.",
+    "609": "'no one responded' subtitled as she calls his name across the floor.",
+    "615": "Everett reappears, laughing, with an explanation about another meeting.",
+    "628": "'2:45pm' over a low angle of Manhattan towers and a crossing signal.",
+    "645": "Meeting the AWS customer on a street corner, a wide handheld with traffic behind them.",
+    "664": "'CONFIDENTIAL' types itself letter by letter over a heavily blurred shot of the meeting. The film shows that it cannot show the meeting.",
+    "672": "She leans on the park wall and talks to camera while the meeting goes on without her.",
+    "692": "A walking interview on the sidewalk with yellow subtitles: 'build like a (Proof of Concept) for them'. The brackets spell out the jargon.",
+    "699": "'GTME Checklist': 1, 2, 3 in bubbly 3D numerals with hand-lettered labels: Know GTM well, Know Clay well, Be a good sales person.",
+    "711": "George, a GTM engineer, at his desk in a Geese T-shirt, named in a white lower third.",
+    "733": "A dissolve puts George in a navy track jacket mid-sentence. 'I ended up talking to George for a very long time' is shown by a change of clothes.",
+    "757": "Everett at a frosted whiteboard in a green-walled room. 'I needed to find Everett' leads into the film's main explainer.",
+    "761": "'2 GTME TEAMS' on the green board: a blue-green group of clay figures and a pink-orange one. The two teams keep these colors for the rest of the film.",
+    "781": "She stands at the board, now written up with 'External / FDE' and 'Sales GTMEs', and checks her understanding with him.",
+    "796": "Over Everett's shoulder as he writes 'Pipeline' on the board.",
+    "829": "Leads pass from the internal team to 'FORWARD DEPLOYED' as the camera slides right across the green board.",
+    "842": "George again, now labelled with an arrow as 'FORWARD DEPLOYED GTME', on the custom builds done before a sale.",
+    "866": "'SAME SKILLS': one group icon splits in two, with 'Personality' written between them.",
+    "884": "A quick montage of people met earlier, cut back in as she sums up.",
+    "892": "The two teams, the leads and the dollar signs, joined by dotted lines to the Clay logo above: 'two teams, one loop'.",
+    "936": "Everett's board for the founder-dinner workflow: Events, Contacts (involved, execs, intent, location), Dinner/Event invites, 'Sent by Kareem', Log responses. The concrete example arrives as handwriting.",
+    "957": "The team at the pub around a long red table of drinks.",
+    "963": "She waves goodbye from the pub table.",
+    "968": "Everett signs off from the pub: 'Thanks so much for hanging out with Clay today.'",
+    "976": "The end card: 'STORIES OF SCALE' in the condensed type, 'SUBSCRIBE!' and the crew credits on black, beside her in the studio.",
+    "1000": "She finally eats a pickle, as promised in the sponsor read.",
+    "1009": "'PLEASE STAND BY' over color bars. The video ends on a broadcast gag instead of a logo."
+  },
+  "motion_intro": "Two kinds of movement share this film. The live action is handheld vlog camera: wide lenses close to faces, walk-and-talks, jump cuts and punch-ins inside a single take, and one fast-forward. The graphics come from two packages. The show's own is cream graph paper with tall condensed type and green doodles, used for the title, the sponsor read and the end card. The explainer board is a dark green grid where glossy clay-like icons pop on, lists type themselves out, a camera slides across to follow a lead or a dotted line, and hand lettering labels things the way a person would at a whiteboard. Timelines and counters run on white paper. Type is almost never faded on. It types itself or snaps on one word at a time, in step with the voice.",
+  "motion": [
+    {
+      "id": "logo-cloud",
+      "start": 0.0,
+      "end": 5.75,
+      "fps": 4,
+      "title": "A crowd of logos builds around the host",
+      "tags": [
+        "pop on",
+        "accumulate",
+        "frosted chips",
+        "jump cut"
+      ],
+      "text": "The film opens on a punch-in and cuts wider at 0.25 on the same take. From about 1.0 company logos fade up one at a time as translucent rounded chips scattered around her: Clay at 1.0, Docker at 1.5, Ramp at 2.0, Hex at 2.5, Unify at 2.75, MaintainX at 3.0, Modal at 3.5, Vimeo at 3.75, Vercel and Rippling at 4.0, Cursor at 4.5, Air at 5.0. Each fades in from transparent over about a quarter second and then stays, so the frame fills as she says 'some of the fastest-growing startups'. At 5.75 it cuts to a white screen of job listings."
+    },
+    {
+      "id": "bar-chart",
+      "start": 7.6,
+      "end": 11.8,
+      "fps": 6,
+      "title": "A bar grows until it fills the frame",
+      "tags": [
+        "hand-drawn axes",
+        "bar grow",
+        "push in",
+        "number reveal"
+      ],
+      "text": "A vignetted grid of job listings holds for half a second, then a hard cut at 8.0 lands on the green board, where wobbly white axes draw themselves with a small 'LAST YEAR' bar. From 8.4 a lime 'THIS YEAR' bar rises beside it while the camera pushes in and drifts up and right, so by 9.6 the axes are sliding out of frame and by 10.43 the bar fills the middle of the screen. '5000%' appears inside it at 10.6 and holds for a second before the cut back to the studio at 11.77. The growth is shown by the camera running out of room, not by a scale."
+    },
+    {
+      "id": "title-to-street",
+      "start": 12.2,
+      "end": 18.2,
+      "fps": 4,
+      "title": "Title word by word, then out to Times Square",
+      "tags": [
+        "word-by-word",
+        "punch-in",
+        "whip",
+        "censor sticker",
+        "title card"
+      ],
+      "text": "'GO-TO-' snaps on at 12.7, 'MARKET' at 12.95 and 'ENGINEER' at 13.45 in heavy white sans, one word per beat of her line. At 13.7 a punch-in on the same take reframes her, and the title jumps to a larger stack at lower left. At 14.45 a smeared, motion-blurred cut throws us into Times Square on a wide lens inches from her face. On 'what the' the swear is cut from the audio, and from 15.06 to 15.3 a Clay logo sits over her mouth like a sticker instead of a bleep box. At 16.95 the green board answers with 'WTF is a GTME?', then at 17.95 a wider street shot brings in her name and title."
+    },
+    {
+      "id": "year-counter",
+      "start": 34.5,
+      "end": 39.0,
+      "fps": 6,
+      "title": "The logo grows as the years roll",
+      "tags": [
+        "odometer",
+        "motion blur",
+        "scale up",
+        "body wipe"
+      ],
+      "text": "Her arm sweeps across the lens at 34.6 and the cut lands on the green board, where a tiny Clay logo pops up at 34.83. Under it a row of years slides left like an odometer: 2017 holds, then a blurred whip at 35.83 lands on 2020, another at 36.83 on 2023 and one at 38.0 on 2026. Each step takes about a third of a second and the logo grows a size with every jump, so the company literally gets bigger with time. It holds on 2026 and cuts back to her at 39.0."
+    },
+    {
+      "id": "valuation",
+      "start": 43.2,
+      "end": 46.0,
+      "fps": 8,
+      "title": "A counter that runs behind her head",
+      "tags": [
+        "count up",
+        "punch-in",
+        "matte",
+        "depth layering"
+      ],
+      "text": "On 'It's now valued at five billion dollars' the shot punches in at 43.95 and a green box of white numerals fades up across the top of the frame already counting: $2.77 billion, $3.17 billion, $3.96 billion, $4.75 billion, landing on '$5,000,000,000' by 44.7. Her head and hair stay in front of the box, so the middle digits are always hidden. It holds there until the cut. A rotoscoped matte makes the number part of the room instead of a sticker on the screen."
+    },
+    {
+      "id": "stories-title",
+      "start": 63.4,
+      "end": 68.0,
+      "fps": 6,
+      "title": "The series title, emphasis passed word to word",
+      "tags": [
+        "band wipe",
+        "condensed type",
+        "scale pulse",
+        "slide up"
+      ],
+      "text": "Over the '7:00am' drone shot, green horizontal bands wipe in at 64.07 and leave cream graph paper with a double-stacked 'STORIES OF SCALE' in tall condensed black, a green line running through it. By 64.9 it settles to one line; at 65.07 the words part and an atom-and-book icon grows in the gap. Then the scale moves through the words: 'STORIES' is biggest at 65.7, the icon at 66.1, 'OF' at 66.6, 'SCALE' at 66.9 with a green fill wiping through it at 67.07. At 67.6 the whole card slides up to uncover the station shot underneath."
+    },
+    {
+      "id": "everett-elevator",
+      "start": 71.8,
+      "end": 79.2,
+      "fps": 3,
+      "trail": true,
+      "title": "A tracked name, then a fast-forward pace",
+      "tags": [
+        "tracked lower third",
+        "hand-drawn arrow",
+        "speed ramp",
+        "locked-off"
+      ],
+      "text": "A locked-off wide of the station lobby. As Everett walks in on his phone, a hand-drawn arrow and 'Everett Berry / HEAD OF GTME, CLAY' appear at 72.1 and travel with him toward frame left, fading out by 74.5. He walks off left, and from about 75.5 the footage runs fast: he smears across the frame as a ghost at 75.8 and 76.4, back and forth by the windows, then drops to normal speed at 77.1 as he walks toward the lens. The onion skin shows the pacing that 'He's working already' refers to."
+    },
+    {
+      "id": "make-famous",
+      "start": 124.3,
+      "end": 127.3,
+      "fps": 8,
+      "title": "'MAKE Everett FAMOUS' on the train wall",
+      "tags": [
+        "word-by-word",
+        "mixed type",
+        "punch-in",
+        "running gag"
+      ],
+      "text": "She raises her coffee to the lens, and at 124.8 the shot punches in on Everett alone. 'MAKE' snaps on in bold small caps on the grey wall to the right of his head at 124.8, 'Everett' in a handwritten script under it at 125.3, and 'FAMOUS' at 125.8, each word appearing whole, half a second apart. The type sits in the empty wall between his head and hers, and holds still while he grins."
+    },
+    {
+      "id": "pickle-list",
+      "start": 242.1,
+      "end": 250.9,
+      "fps": 3,
+      "trail": true,
+      "title": "The pickle analogy, drawn as a list",
+      "tags": [
+        "pop on",
+        "typewriter",
+        "checkmarks",
+        "dim the rest"
+      ],
+      "text": "On the green board a tilted pickle fades up at 242.5, and three dollar signs pop around it by 243.1. Empty dark pills slide in one under another on the right from 243.8 to 245.1. Then each fills with typed text, 'Deli A' to 'Deli E', one row after another from 245.8 to 247.8, a few letters per frame. At 248.5 checkmarks land on Deli B and Deli C, and at 248.8 the other three dim. It all follows Spencer's line from 'build a list of all of the delis' to 'which ones are my customers'."
+    },
+    {
+      "id": "prompt-table",
+      "start": 258.8,
+      "end": 265.0,
+      "fps": 3,
+      "title": "From a typed prompt to a full table",
+      "tags": [
+        "screen recording",
+        "type-on",
+        "slide",
+        "pan"
+      ],
+      "text": "Straight off Spencer's last line, the frame turns white and a Clay prompt box finishes typing 'I'm looking for a list of all the delis in nyc!! I wanna sell them pickles!!'. The cursor reaches the send button at 260.5 and clicks at 260.8. The prompt slides left as a table of delis wipes in from the right at 261.1, and the recording pans across columns of names, addresses and categories until about 265. The analogy and the product are joined with no narration between them."
+    },
+    {
+      "id": "folder-flow",
+      "start": 271.8,
+      "end": 284.8,
+      "fps": 2,
+      "title": "Messy data into a folder, out as a list",
+      "tags": [
+        "gather",
+        "type-on",
+        "camera slide",
+        "dotted line"
+      ],
+      "text": "A blue 'GTME' folder sits on the green board as document, chart, globe, phone, cart and map-pin icons pop up around it (271.8 to 273.3). At 273.8 they fly into the folder, which bumps and then slides left and grows. 'Who visits your website' types out beside it from 275.8, 'Buying behavior' from 277.3. At 279.3 a dotted line starts from the folder and the camera slides right with it to an empty list, which types 'Who to sell to', 'Most likely to buy' and 'How to reach them' from 281.3 to 283.3. At 283.8 the dotted line turns from blue to green, as if the system is now connected."
+    },
+    {
+      "id": "tool-landscape",
+      "start": 289.6,
+      "end": 294.0,
+      "fps": 6,
+      "title": "The definition typed over the brand's landscape",
+      "tags": [
+        "type-on",
+        "word by word",
+        "brand illustration",
+        "mixed weights"
+      ],
+      "text": "A hard cut from the studio to cream graph paper over Clay's clay-modelled landscape of hills, hedges and a rainbow river. 'Clay is the tool that lets' types one word at a time in small italic from 289.8 to 290.6. Then 'GTME' types letter by letter in heavy bold (290.8 to 291.3), its apostrophe-s set small and raised, and 'build those systems' follows in the small italic by 292.8. It holds for half a second and cuts back to the studio at 293.4. The key term is the only heavy word."
+    },
+    {
+      "id": "playbook",
+      "start": 336.6,
+      "end": 348.0,
+      "fps": 2,
+      "title": "The sponsor read slides into a product shot",
+      "tags": [
+        "slide down",
+        "card push",
+        "page flips",
+        "progress bar"
+      ],
+      "text": "A thin green bar along the bottom of the frame has been growing since 'quick pause'. At 337.1 the studio shot slides down out of frame to uncover the cream show board, and at 338.6 a black card, 'GTM ENGINEERING PLAYBOOK / 5 OPERATIONAL FRAMEWORKS', pushes in from the right with a pale green border and a spiral drawing. It changes to an inside spread with a target and arrow at 342.1 and to a page headed 'FIVE NAMED FRAMEWORKS. ALL OPERATIONAL.' at 344.6. At 347.6 it dissolves back to her, with the cover now standing beside her in the studio. The bar keeps filling the whole time, so viewers can see how long the ad will last."
+    },
+    {
+      "id": "revenue-ruler",
+      "start": 369.6,
+      "end": 376.0,
+      "fps": 3,
+      "title": "Five years at '~$0'",
+      "tags": [
+        "timeline ruler",
+        "type-on",
+        "scroll",
+        "deadpan"
+      ],
+      "text": "On white graph paper the Clay logo fades up at 369.9, 'REVENUE' types out under it, and '~$0' fades in at 370.6 above a small triangle marker. A ruler of years rises into place by 371.3 with 2017 under the marker. Then the years slide left under the fixed marker one by one (2018 at 372.6, 2019 at 372.9, 2020 at 373.6, 2021 at 373.9, 2022 at 374.6) while '~$0' never changes. It holds on 2022 and cuts to Varun drinking water under 'nothing really happened for a while'."
+    },
+    {
+      "id": "data-tool-system",
+      "start": 403.8,
+      "end": 411.8,
+      "fps": 3,
+      "title": "'DATA TOOL' becomes 'SYSTEM'",
+      "tags": [
+        "type-on",
+        "label swap",
+        "camera move",
+        "tiles"
+      ],
+      "text": "The Clay logo pops up on the green board at 404.1 and 'DATA TOOL' types under it by 405.1. At 405.5 a red hand-lettered banner sweeps across and replaces it with 'SYSTEM', and the group drifts up while a hand-drawn arrow curls out from the banner at 406.8. The camera follows it down to the right, where three dark tiles pop in one after another, each with a clay-like icon and a typed label: 'Find the Right People' at 407.5, 'Understand them' at 408.8, 'Reach out to them' at 409.8. It cuts back to the studio at 411.4."
+    },
+    {
+      "id": "revenue-counter",
+      "start": 528.8,
+      "end": 537.0,
+      "fps": 3,
+      "title": "The ruler finally moves",
+      "tags": [
+        "timeline ruler",
+        "logo stack",
+        "count up",
+        "callback"
+      ],
+      "text": "The white timeline returns on 2024, with the faded 'LAUNCHED ON Product Hunt' label still at the left edge. 'Figma' fades in under the logo at 530.8 and 'OpenAI' under it at 531.5. At 533.5 the years slide on to 2025, the two names dim, and 'REVENUE' types out with a number already counting: $42 million at 534.8, $68 million at 535.1, $93 million at 535.5, landing on '$100,000,000' at 535.8. The same ruler that sat at '~$0' for five years now spins, and the callback is the point."
+    },
+    {
+      "id": "time-stamps",
+      "start": 576.6,
+      "end": 582.0,
+      "fps": 3,
+      "title": "Three clock stamps, three meetings",
+      "tags": [
+        "time stamp",
+        "montage",
+        "hard cuts"
+      ],
+      "text": "After she slips out of one meeting, three shots of other meetings follow at about 1.3 seconds each, each with a white clock time centered on it: '1:00pm' at 576.9 over Everett rubbing his eyes, '1:30pm' at 578.3 over a packed room watching a deck, '2:30pm' at 579.6 over a smaller table. The stamps appear on the cut and leave on the next one. A fourth shot of the big room plays clean at 580.9. The film's time stamps, used since '7:00am', here squeeze an afternoon into four seconds."
+    },
+    {
+      "id": "confidential",
+      "start": 663.6,
+      "end": 670.0,
+      "fps": 6,
+      "title": "'CONFIDENTIAL' types over a blurred meeting",
+      "tags": [
+        "defocus",
+        "type-on",
+        "letter by letter",
+        "censor"
+      ],
+      "text": "From the back of her head at 664.1, the cut lands on a shot of the customer meeting thrown so far out of focus that only shapes and colors remain. 'CONFIDENTIAL' types itself in heavy white caps from 664.3, a letter every one or two frames ('C', 'CO', 'CONFI', 'CONFIDEN'), complete at 667.4. As Everett leans into frame behind the type, the camera drifts and at 667.9 the word jumps larger and recenters. It holds until 669.6 and cuts to a sharp shot of the park sign. The blur and the word together say that the scene exists but cannot be shown."
+    },
+    {
+      "id": "checklist",
+      "start": 696.85,
+      "end": 702.1,
+      "fps": 4,
+      "trail": true,
+      "title": "A three-item checklist in clay numerals",
+      "tags": [
+        "pop on",
+        "hand lettering",
+        "type-on",
+        "stagger"
+      ],
+      "text": "'GTME Checklist' sits at the top of the green board. A teal 3D '1' fades up at 697.1 and 'KNOW GTM WELL' writes itself under it in hand lettering. A coral '2' follows at 698.1 with 'KNOW CLAY WELL', and a yellow '3' at 699.6 with 'BE A GOOD SALES PERSON', each label appearing a few letters at a time as she says it. Each item takes about a second and a half, matched to her three clauses, and the finished list holds for a beat and a half."
+    },
+    {
+      "id": "lead-handoff",
+      "start": 823.8,
+      "end": 833.0,
+      "fps": 3,
+      "title": "Leads pass from one team to the other",
+      "tags": [
+        "pop on",
+        "camera slide",
+        "color change",
+        "handoff"
+      ],
+      "text": "From Everett's whiteboard to the green board at 824.5: the blue-green 'INTERNAL' group sits alone, and small pink face tokens pop up beside it from 825.1 to 825.8, the leads it brings in. By 827.5 most of them turn grey and one stays pink. At 829.1 the camera starts sliding right; the 'FORWARD DEPLOYED' group arrives at 829.5, and the pink token travels across the gap to sit beside it by 830.5 while the grey ones stay with the internal team. The colors do the explaining: grey for leads that stop, pink for the enterprise fit that is handed on."
+    },
+    {
+      "id": "revenue-loop",
+      "start": 885.8,
+      "end": 894.0,
+      "fps": 3,
+      "title": "Two teams and one loop",
+      "tags": [
+        "pop on",
+        "token travel",
+        "dotted line",
+        "pull back"
+      ],
+      "text": "After a pass by the Clay lobby, the two teams sit on the green board as a pair. Pink lead tokens pop next to 'INTERNAL' at 886.5 and 886.8, most fade to grey, and from 888.1 one pink token crosses to 'FORWARD DEPLOYED'. At 890.1 it turns into green '$$'. Dotted lines start up from both teams at 890.5, the camera pulls back and down, and the Clay logo drops in at the top by 891.5 so the lines close into a triangle. It holds until the cut to Everett at 894.1, on 'two teams, one loop'."
+    },
+    {
+      "id": "stand-by",
+      "start": 1006.5,
+      "end": 1010.0,
+      "fps": 6,
+      "title": "A gag ending on color bars",
+      "tags": [
+        "physical comedy",
+        "lean into lens",
+        "hard cut",
+        "color bars"
+      ],
+      "text": "After the credits she tries the promised pickle. At 1007.2 she puts the jar down, covers her mouth and sits back, and from 1007.8 she leans forward until her head fills the lens and goes out of focus by 1009.0. The cut at 1009.5 lands on broadcast color bars with a 'PLEASE STAND BY' banner, and the video ends there. The show's old-TV props in the studio make the broadcast joke fit."
+    }
+  ],
+  "craft": {
+    "lede": [
+      "A 17-minute B2B explainer made as a day-in-the-life vlog. HubSpot's host, Payton Kirol, says up front that she has no idea what a go-to-market engineer is, then spends a day at Clay with Everett Berry, who runs its GTM engineering team: a 7 a.m. train out of New Jersey, a string of meetings, a customer walk in Bryant Park and a pub at the end. Along the way the film answers the question in steps: what the role is (a pickle analogy), why Clay invented it (a founder's history), what the team does all day, and how Clay splits it into two teams that feed each other.",
+      "What is worth studying is how it keeps a dry subject watchable for 17 minutes without a single formal sit-down interview. Three layers take turns: handheld vlog footage where the host is always in or next to the frame, a bare studio set where she explains things to camera, and a green chalkboard of clay-like icons and hand lettering that draws every idea as it is said. Running jokes (making Everett famous, losing Everett, a pickle she has never eaten) give the day a thread to follow between the explanations."
+    ],
+    "map": {
+      "lanes": [
+        {
+          "id": "story",
+          "segments": [
+            {
+              "start": 0,
+              "end": 63.4,
+              "label": "What is a GTME?",
+              "note": "The hook: a fast-growing job no one can define, and the promise to find out at Clay."
+            },
+            {
+              "start": 63.4,
+              "end": 68,
+              "label": "Title"
+            },
+            {
+              "start": 68,
+              "end": 165,
+              "label": "The commute",
+              "note": "A train ride to write a LinkedIn post; 'make Everett famous' starts."
+            },
+            {
+              "start": 165,
+              "end": 222,
+              "label": "Into the office",
+              "note": "Coworkers take photos; one-line answers that don't explain the job."
+            },
+            {
+              "start": 222,
+              "end": 296,
+              "label": "The pickle analogy",
+              "note": "Spencer explains the job with pickles and delis; she translates."
+            },
+            {
+              "start": 296,
+              "end": 328,
+              "label": "Hype man",
+              "note": "A comic break with Spencer hyping coworkers."
+            },
+            {
+              "start": 328,
+              "end": 358,
+              "label": "Sponsor read",
+              "note": "The free GTM engineering playbook, and the pickle promise."
+            },
+            {
+              "start": 358,
+              "end": 545,
+              "label": "How Clay got here",
+              "note": "Five years at ~$0, the pivot to a system, enterprise, naming the role, $100M."
+            },
+            {
+              "start": 545,
+              "end": 631,
+              "label": "A day of meetings",
+              "note": "Meetings stamped by the clock, then losing Everett."
+            },
+            {
+              "start": 631,
+              "end": 684,
+              "label": "Customer meeting",
+              "note": "A walk with AWS she is not allowed to film."
+            },
+            {
+              "start": 684,
+              "end": 743,
+              "label": "What the team needs",
+              "note": "Three-item checklist, then a long talk with George."
+            },
+            {
+              "start": 743,
+              "end": 946,
+              "label": "Two teams, one loop",
+              "note": "Internal and forward-deployed GTMEs, the handoff, and the founder-dinner example."
+            },
+            {
+              "start": 946,
+              "end": 976,
+              "label": "Pub and sign-off"
+            },
+            {
+              "start": 976,
+              "end": 1010,
+              "label": "Credits and the pickle",
+              "note": "She eats the pickle; color bars."
+            }
+          ]
+        },
+        {
+          "id": "voices",
+          "segments": [
+            {
+              "start": 0,
+              "end": 63.4,
+              "label": "Payton sets the question",
+              "kind": "narrator",
+              "note": "To camera in the studio and on the street, with voice-over over graphics."
+            },
+            {
+              "start": 68,
+              "end": 162,
+              "label": "Banter on the commute",
+              "kind": "dialogue",
+              "note": "Her narration fills in the plan between lines."
+            },
+            {
+              "start": 162,
+              "end": 186,
+              "label": "Arrival in voice-over",
+              "kind": "narrator"
+            },
+            {
+              "start": 186,
+              "end": 222,
+              "label": "One-line answers",
+              "kind": "dialogue",
+              "note": "'I am a go-to-market engineer.'"
+            },
+            {
+              "start": 222,
+              "end": 267,
+              "label": "Spencer: pickles",
+              "kind": "interview"
+            },
+            {
+              "start": 267,
+              "end": 296,
+              "label": "Payton translates",
+              "kind": "narrator"
+            },
+            {
+              "start": 296,
+              "end": 328,
+              "label": "Hype",
+              "kind": "dialogue"
+            },
+            {
+              "start": 328,
+              "end": 358,
+              "label": "Sponsor read",
+              "kind": "narrator"
+            },
+            {
+              "start": 358,
+              "end": 545,
+              "label": "Varun and Everett",
+              "kind": "interview",
+              "note": "Founder history at the whiteboard, cut with her narration in the studio."
+            },
+            {
+              "start": 545,
+              "end": 684,
+              "label": "Meetings and the hunt",
+              "kind": "dialogue",
+              "note": "Her voice-over carries the time jumps."
+            },
+            {
+              "start": 684,
+              "end": 696,
+              "label": "Everett, walking",
+              "kind": "interview"
+            },
+            {
+              "start": 696,
+              "end": 712,
+              "label": "The checklist",
+              "kind": "narrator"
+            },
+            {
+              "start": 712,
+              "end": 745,
+              "label": "George",
+              "kind": "interview"
+            },
+            {
+              "start": 745,
+              "end": 946,
+              "label": "Everett at the board",
+              "kind": "interview",
+              "note": "She restates each step to camera between his lines."
+            },
+            {
+              "start": 946,
+              "end": 976,
+              "label": "Pub sign-offs",
+              "kind": "dialogue"
+            },
+            {
+              "start": 976,
+              "end": 1010,
+              "label": "Outro and the pickle",
+              "kind": "narrator"
+            }
+          ]
+        },
+        {
+          "id": "sound",
+          "segments": [
+            {
+              "start": 0,
+              "end": 27.5,
+              "label": "Bed under the hook",
+              "kind": "music"
+            },
+            {
+              "start": 27.5,
+              "end": 29.5,
+              "label": "Drop",
+              "kind": "silence",
+              "note": "Music out just before 'here inside Clay'."
+            },
+            {
+              "start": 29.5,
+              "end": 121,
+              "label": "Bed",
+              "kind": "music",
+              "note": "5 to 12 dB under the voice."
+            },
+            {
+              "start": 121,
+              "end": 123.5,
+              "label": "Drop",
+              "kind": "silence",
+              "note": "Before 'Make Everett famous'."
+            },
+            {
+              "start": 123.5,
+              "end": 204,
+              "label": "Bed",
+              "kind": "music"
+            },
+            {
+              "start": 204,
+              "end": 214.5,
+              "label": "Stutters",
+              "kind": "silence",
+              "note": "Short drops around 'you guys will have a lot of trouble' and 'that wasn't very comforting'."
+            },
+            {
+              "start": 214.5,
+              "end": 296.5,
+              "label": "Bed under the analogy",
+              "kind": "music"
+            },
+            {
+              "start": 296.5,
+              "end": 299,
+              "label": "Drop",
+              "kind": "silence"
+            },
+            {
+              "start": 299,
+              "end": 325,
+              "label": "Bed",
+              "kind": "music"
+            },
+            {
+              "start": 325,
+              "end": 329,
+              "label": "Stop",
+              "kind": "silence",
+              "note": "For 'quick pause'."
+            },
+            {
+              "start": 329,
+              "end": 439.5,
+              "label": "Bed",
+              "kind": "music"
+            },
+            {
+              "start": 439.5,
+              "end": 451.5,
+              "label": "Music out",
+              "kind": "silence",
+              "note": "Twelve seconds of Varun alone: 'apparently that's what sales is'."
+            },
+            {
+              "start": 451.5,
+              "end": 568.5,
+              "label": "Bed",
+              "kind": "music"
+            },
+            {
+              "start": 568.5,
+              "end": 572,
+              "label": "Drop",
+              "kind": "silence",
+              "note": "'Of course.'"
+            },
+            {
+              "start": 572,
+              "end": 609,
+              "label": "Bed",
+              "kind": "music"
+            },
+            {
+              "start": 609,
+              "end": 611.5,
+              "label": "Drop",
+              "kind": "silence",
+              "note": "'no one responded'"
+            },
+            {
+              "start": 611.5,
+              "end": 621.5,
+              "label": "Bed",
+              "kind": "music"
+            },
+            {
+              "start": 621.5,
+              "end": 628,
+              "label": "Drop",
+              "kind": "silence"
+            },
+            {
+              "start": 628,
+              "end": 675.5,
+              "label": "Bed",
+              "kind": "music"
+            },
+            {
+              "start": 675.5,
+              "end": 683.5,
+              "label": "Drop",
+              "kind": "silence",
+              "note": "The goodbye and the cut back to the studio."
+            },
+            {
+              "start": 683.5,
+              "end": 740,
+              "label": "Bed",
+              "kind": "music"
+            },
+            {
+              "start": 740,
+              "end": 749,
+              "label": "Stop",
+              "kind": "silence",
+              "note": "'He said something that stopped me in my tracks… Wait, two teams?'"
+            },
+            {
+              "start": 749,
+              "end": 972.5,
+              "label": "Longest stretch",
+              "kind": "music",
+              "note": "Under the whole two-team explainer."
+            },
+            {
+              "start": 972.5,
+              "end": 999.5,
+              "label": "Credits",
+              "kind": "music"
+            },
+            {
+              "start": 999.5,
+              "end": 1009.5,
+              "label": "No music for the pickle",
+              "kind": "silence",
+              "note": "Only her reactions."
+            }
+          ]
+        },
+        {
+          "id": "picture",
+          "segments": [
+            {
+              "start": 0,
+              "end": 63.4,
+              "label": "Studio and street hook",
+              "kind": "staged",
+              "note": "Logo chips, the 5000% bar, the year counter, billboards."
+            },
+            {
+              "start": 63.4,
+              "end": 68,
+              "label": "Stories of Scale",
+              "kind": "title"
+            },
+            {
+              "start": 68,
+              "end": 165,
+              "label": "Commute",
+              "kind": "b-roll",
+              "note": "Handheld, mostly one two-shot on the train."
+            },
+            {
+              "start": 165,
+              "end": 222,
+              "label": "Office walk",
+              "kind": "b-roll"
+            },
+            {
+              "start": 222,
+              "end": 241,
+              "label": "Spencer",
+              "kind": "interview"
+            },
+            {
+              "start": 241,
+              "end": 251,
+              "label": "Pickle list",
+              "kind": "graphics"
+            },
+            {
+              "start": 251,
+              "end": 258,
+              "label": "Spencer",
+              "kind": "interview"
+            },
+            {
+              "start": 258,
+              "end": 266,
+              "label": "Prompt to table",
+              "kind": "screen"
+            },
+            {
+              "start": 266,
+              "end": 296,
+              "label": "GTME folder, landscape card",
+              "kind": "graphics"
+            },
+            {
+              "start": 296,
+              "end": 328,
+              "label": "Hype man",
+              "kind": "b-roll"
+            },
+            {
+              "start": 328,
+              "end": 358,
+              "label": "Playbook card",
+              "kind": "graphics"
+            },
+            {
+              "start": 358,
+              "end": 545,
+              "label": "Varun at the whiteboard",
+              "kind": "interview",
+              "note": "Timeline graphics and Slack and table cards in between."
+            },
+            {
+              "start": 545,
+              "end": 631,
+              "label": "Meetings",
+              "kind": "b-roll",
+              "note": "Clock stamps."
+            },
+            {
+              "start": 631,
+              "end": 684,
+              "label": "Park meeting",
+              "kind": "b-roll",
+              "note": "Blurred and stamped CONFIDENTIAL."
+            },
+            {
+              "start": 684,
+              "end": 702,
+              "label": "Walk and checklist",
+              "kind": "graphics"
+            },
+            {
+              "start": 702,
+              "end": 756,
+              "label": "George",
+              "kind": "interview"
+            },
+            {
+              "start": 756,
+              "end": 946,
+              "label": "Whiteboard and green board",
+              "kind": "graphics",
+              "note": "Everett's handwriting and the clay-icon diagrams take turns."
+            },
+            {
+              "start": 946,
+              "end": 976,
+              "label": "Pub",
+              "kind": "b-roll"
+            },
+            {
+              "start": 976,
+              "end": 1009.5,
+              "label": "End card, then the pickle",
+              "kind": "title"
+            },
+            {
+              "start": 1009.5,
+              "end": 1010,
+              "label": "Color bars",
+              "kind": "title"
+            }
+          ]
+        }
+      ]
+    },
+    "aspects": [
+      {
+        "id": "story",
+        "title": "A question the host doesn't know the answer to",
+        "paragraphs": [
+          "The whole film is set up as one question asked by someone who admits she can't answer it: 'What do they actually do every day? I have no idea, which is exactly why I ended up here.' That puts the host on the viewer's side. When an engineer says 'I am the core user of every other company' and she says it is confusing, she says what the audience is thinking, and the film earns the right to explain.",
+          "The explanation is spread across the day instead of delivered in one block. The definition comes first, through an analogy (pickles and delis), then the history of why the role exists, then what the team does, and only in the last third the idea the film is really about: Clay has two GTM teams, and one feeds the other. Each step is triggered by something in the day, a person she meets or a line someone drops ('So there's two go-to-market engineering teams'), so the structure feels found rather than planned.",
+          "Running jokes carry the viewer between the explanations. 'Make Everett famous' starts on the train and pays off when coworkers photograph him. Losing Everett in meetings turns into a tour of the office. The pickle she has never eaten is set up at 3:50, promised in the sponsor read and paid off after the credits. Each gives viewers a small reason to keep watching that has nothing to do with GTM engineering."
+        ],
+        "moments": [
+          {
+            "t": 25,
+            "text": "'I have no idea, which is exactly why I ended up here.'"
+          },
+          {
+            "t": 225,
+            "text": "The pickle jar: a setup that pays off fourteen minutes later."
+          },
+          {
+            "t": 744,
+            "text": "'Wait, two teams?' The turn into the film's main idea."
+          },
+          {
+            "t": 1000,
+            "text": "The pickle, after the credits."
+          }
+        ]
+      },
+      {
+        "id": "voices",
+        "title": "One host, three ways of speaking",
+        "paragraphs": [
+          "Payton speaks in three registers, and the film switches between them constantly. In the bare studio she addresses the lens and restates what was just said in plain words. Over b-roll she narrates in the past tense like a diary ('The second we got to the office, Everett's dream of becoming famous started to come true'). On location she is a participant, asking questions and reacting. The studio is the one that does the teaching: after every expert line that would lose a newcomer, the film cuts to her saying it again more simply ('So what Spencer is describing is the core job of a go-to-market engineer').",
+          "The experts are never interviewed formally. Spencer sits beside her on a sofa, Varun stands at a whiteboard, Everett draws on another one, and George talks from his desk. Because the host is in or next to the frame, their answers play as conversation. Lower thirds name everyone with their exact title, and the important lines get extra help: quiet remarks get yellow italic subtitles, and jargon is spelled out in brackets ('build like a (Proof of Concept) for them').",
+          "Lines that would be dull as narration are given to the people who lived them. Varun tells how the role got its name in his own words, and the Slack message where he named it is shown as a card; Everett adds 'And then I didn't sell anything at Clay for six months.' The history becomes anecdotes told by its characters."
+        ],
+        "moments": [
+          {
+            "t": 268,
+            "text": "'So what Spencer is describing…' The studio restates the expert."
+          },
+          {
+            "t": 193,
+            "text": "Spencer on the sofa, the host in the frame."
+          },
+          {
+            "t": 490,
+            "text": "The Slack message that named the team."
+          },
+          {
+            "t": 692,
+            "text": "Jargon spelled out in a bracketed subtitle."
+          }
+        ]
+      },
+      {
+        "id": "frames",
+        "title": "Vlog camera, with a studio to come home to",
+        "paragraphs": [
+          "Location footage is shot like a vlog: wide lenses close to faces, the camera walking with people, the crew acknowledged ('Are you under pressure because we're watching you?'). It is deliberately unpolished, and a fast-forward, a punch-in or a jump cut is used whenever a moment runs long. The commute plays almost entirely in one two-shot across the train seats, so the cutting comes from the conversation, not from coverage.",
+          "The studio is the opposite: a locked-off wide of an almost empty loft, the host in a chair with a corded mic, a filing cabinet, an old TV and some props on a rug. It is cut in two or three sizes so a long piece to camera never sits on one frame, and the props (pickles, the TV) feed the jokes. Going back to the same calm frame after every outing tells viewers they are about to get the explanation.",
+          "Clock stamps ('7:00am', '8:40am', '1:00pm', '2:30pm', '2:45pm') are the only device for time. They make a 17-minute edit feel like one continuous day, and at 9:37 three of them in four seconds compress an afternoon of meetings into a joke about how busy Everett is."
+        ],
+        "moments": [
+          {
+            "t": 93,
+            "text": "The commute in one two-shot."
+          },
+          {
+            "t": 422,
+            "text": "The studio, cut to a closer size."
+          },
+          {
+            "t": 577,
+            "text": "Three clock stamps in four seconds."
+          },
+          {
+            "t": 72,
+            "text": "A fast-forward pace under a tracked name."
+          }
+        ]
+      },
+      {
+        "id": "world",
+        "title": "Two graphics packages and the client's own art",
+        "paragraphs": [
+          "The graphics come in two clearly separate kits. The show's package is cream graph paper with tall condensed black type and green doodles; it is used only for things that belong to HubSpot, such as the title, the sponsor read and the end card. The explainer board is a dark green grid, like a chalkboard, where Clay's ideas get drawn: glossy clay-like icons (group figures, folders, tiles), white sans labels, and hand lettering for anything a person would write by hand ('WTF is a', 'SYSTEM', 'Personality'). Timelines and counters sit on white paper.",
+          "The clay look of the icons echoes the company's name and brand. Clay's real billboards, its logo wall and its clay-modelled landscape illustration all appear as found material, and the one-line product definition, 'Clay is the tool that lets GTMEs build those systems', is typed over the brand's own art. The explainer feels made for the client without the film having to say so.",
+          "Every graphic arrives in step with the voice. Lists type themselves one item per clause, labels snap on a word at a time, a dotted line runs from the GTME folder to its outputs as the narration gets there, and the camera slides across the board to follow a lead from one team to the other. The two teams keep their colors (blue-green internal, pink-orange forward deployed) from their first appearance to the final loop, so later diagrams need no labels to be read."
+        ],
+        "moments": [
+          {
+            "t": 65,
+            "text": "The show package: cream paper and condensed type."
+          },
+          {
+            "t": 273,
+            "text": "The explainer board: clay icons on green."
+          },
+          {
+            "t": 292,
+            "text": "The product definition over Clay's own illustration."
+          },
+          {
+            "t": 892,
+            "text": "Two teams, one loop, in colors set earlier."
+          }
+        ]
+      },
+      {
+        "id": "screens",
+        "title": "The product, as the punchline to an analogy",
+        "paragraphs": [
+          "Clay itself appears only a few times, and always right after something has been explained in plain terms. Spencer's pickle analogy ends on 'build a list of all of the delis'; the very next shot is a Clay prompt asking for 'a list of all the delis in nyc!! I wanna sell them pickles!!' and the table it returns. The analogy and the demo use the same words, so the screen needs no narration.",
+          "Elsewhere the product is shown as working material rather than as a polished UI: a table filling with rows for 'a spreadsheet that could pull data from anywhere', filter panels, a table with job titles boxed in red for the 'data test', and Everett's own whiteboard sketch of the founder-dinner workflow instead of a screen recording of it."
+        ],
+        "moments": [
+          {
+            "t": 259,
+            "text": "The pickle prompt typed into Clay."
+          },
+          {
+            "t": 263,
+            "text": "The table of delis it returns."
+          },
+          {
+            "t": 507,
+            "text": "Job titles boxed in red for the 'data test'."
+          },
+          {
+            "t": 936,
+            "text": "The founder-dinner workflow as handwriting."
+          }
+        ]
+      },
+      {
+        "id": "sound",
+        "title": "A bed that stops for the jokes",
+        "paragraphs": [
+          "Music runs under almost the whole film, roughly 5 to 15 dB below the voice by the stem analysis, and by the spectrogram it changes cue at many section breaks. It is not cut to: a tempo check found cuts landing on the beat no more often than chance. What the edit does with the music is take it away. The stem drops out for a second or more about a dozen times, nearly always on a punchline or a turn.",
+          "The longest gap is twelve seconds under Varun's 'How do we become an amazing company? … apparently that's what sales is' (7:19 to 7:31), so the founder's dry joke plays in silence. The music also stops for 'quick pause' before the sponsor read, for 'no one responded', and on 'he said something that stopped me in my tracks… Wait, two teams?' before the main explainer begins. Then it runs unbroken for almost four minutes under that explainer. The pickle tasting at the end has no music at all."
+        ],
+        "moments": [
+          {
+            "t": 441,
+            "text": "Twelve seconds without music under Varun's joke."
+          },
+          {
+            "t": 328,
+            "text": "The music stops for 'quick pause'."
+          },
+          {
+            "t": 741,
+            "text": "A stop before 'Wait, two teams?'"
+          },
+          {
+            "t": 1003,
+            "text": "No music for the pickle."
+          }
+        ]
+      },
+      {
+        "id": "trust",
+        "title": "Warmth that sells the explanation",
+        "paragraphs": [
+          "The film keeps its awkward moments: Spencer's hype that falls flat ('This is not good hype'), 'That was slightly awkward', Everett vanishing into meetings, a customer meeting she is not allowed into. A sponsored film about a $5 billion company could easily feel like an ad. These moments make it feel like a real day, which makes the business claims around them easier to accept.",
+          "The confidential meeting shows this best. Instead of cutting it, the film shows it out of focus with 'CONFIDENTIAL' typed over it, and then cuts to the host leaning on a wall waiting. The limit on access becomes part of the story."
+        ],
+        "moments": [
+          {
+            "t": 307,
+            "text": "'This is not good hype.'"
+          },
+          {
+            "t": 664,
+            "text": "The meeting shown blurred, stamped CONFIDENTIAL."
+          },
+          {
+            "t": 594,
+            "text": "Losing Everett turns into a tour."
+          }
+        ]
+      }
+    ],
+    "patterns": [
+      {
+        "name": "Let the host not know",
+        "text": "Have the presenter admit up front that they can't answer the question, and let them say 'that's confusing' when an expert loses them. The audience follows someone learning, not someone lecturing.",
+        "t": 25
+      },
+      {
+        "name": "Restate every expert line from a home base",
+        "text": "Keep one calm, locked-off set to return to. After each expert answer, cut there and have the host say it again in plain words. Viewers learn that this frame means 'here is the simple version'.",
+        "t": 268
+      },
+      {
+        "name": "Make the analogy and the demo use the same words",
+        "text": "End an analogy on a concrete request and use that exact request as the product prompt in the next shot. The demo needs no voice-over.",
+        "t": 259
+      },
+      {
+        "name": "Keep separate graphics kits for the show and the subject",
+        "text": "Give the show's own segments (title, sponsor, credits) one look and the subject's explainers another, so viewers always know whose voice a graphic speaks in.",
+        "t": 65
+      },
+      {
+        "name": "Give recurring ideas fixed colors",
+        "text": "Assign each team or concept a color on first appearance and never change it, so later diagrams can drop their labels.",
+        "t": 761
+      },
+      {
+        "name": "Take the music out for the punchline",
+        "text": "Run a quiet bed under everything and cut it for a second or more on the jokes and turns. Silence does the emphasis that a sting would overdo.",
+        "t": 441
+      },
+      {
+        "name": "Turn a limit on access into a scene",
+        "text": "When you can't film something, show that you can't: blur it, label it, and cut to the host waiting outside.",
+        "t": 664
+      },
+      {
+        "name": "Use clock stamps to hold a long edit together",
+        "text": "Time stamps over establishing shots make a long, cut-down day feel continuous, and a burst of them makes a quick joke about how full the day was.",
+        "t": 577
+      }
+    ],
+    "absent": "There are no formal sit-down interviews, no cinematic coverage of the office and no music worth studying on its own; the cuts are not timed to the beat. Study it for keeping a jargon-heavy subject watchable at length, by cutting between vlog, studio and drawn explanation."
+  }
+}

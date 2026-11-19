@@ -1,0 +1,1033 @@
+WEBVTT
+
+00:00.000 --> 00:03.780
+There's a new role popping up inside some of the fastest growing startups and
+
+00:03.780 --> 00:07.280
+it's spreading quickly across the industry. In the last year alone, job
+
+00:07.280 --> 00:12.880
+postings for this role have surged over 5,000 percent and it's called a go-to
+
+00:12.880 --> 00:18.640
+market engineer. But what the — is a go-to-market engineer? Is it engineering?
+
+00:18.880 --> 00:23.480
+Is it marketing? Is it sales? Is it an internal facing role or an external role?
+
+00:23.620 --> 00:28.200
+What do they actually do every day? I have no idea. Which is exactly why I
+
+00:28.200 --> 00:33.480
+ended up here inside Clay. Because they didn't just adopt this role, they actually
+
+00:33.480 --> 00:37.320
+coined it. Clay was founded in 2017 and in just a few years it went from a small
+
+00:37.320 --> 00:40.920
+product to powering go-to-market teams at some of the largest companies in the
+
+00:40.920 --> 00:46.520
+world like Anthropic and Google. It's now valued at five billion dollars. And this
+
+00:46.520 --> 00:49.760
+whole idea of go-to-market engineering seems to be a big part of how they've
+
+00:49.760 --> 00:53.340
+scaled so fast. So I'm meeting up with Everett Berry, their head of go-to-market
+
+00:53.340 --> 00:57.280
+engineering, to find out what it is, what they actually do all day, and how it's
+
+00:57.280 --> 01:03.580
+driving Clay's growth. But first, in order for this to be a real full day, we got to go to Jersey.
+
+01:10.260 --> 01:11.340
+He's on the phone.
+
+01:12.360 --> 01:13.580
+He's working already.
+
+01:14.160 --> 01:15.460
+And then just...
+
+01:15.460 --> 01:16.620
+And by the way...
+
+01:18.900 --> 01:19.640
+What's up?
+
+01:20.740 --> 01:21.340
+How's it going?
+
+01:21.580 --> 01:27.260
+Good. And then yeah, on the train, we got to write a LinkedIn post and then we got to like finish with this
+
+01:27.260 --> 01:28.040
+enablement session.
+
+01:28.180 --> 01:28.780
+Oh gosh.
+
+01:29.000 --> 01:31.540
+Leaving the train. Please watch the gap.
+
+01:32.360 --> 01:38.200
+The trick with this commute is basically the cell service goes in and out. So I got to get all my stuff like ready to go.
+
+01:38.420 --> 01:39.780
+You've mastered your commute.
+
+01:39.900 --> 01:40.440
+Yeah. Yeah.
+
+01:40.840 --> 01:49.680
+All right. So we're basically racing the clock. 45 minute train ride, spotty service, and somehow the goal is to write a full LinkedIn post and prep for a presentation he had later that day.
+
+01:49.680 --> 01:53.300
+We're going to do a look at how Clay's like internal GTM engineering team works.
+
+01:53.500 --> 01:55.520
+Are you under pressure because we're watching you?
+
+01:55.920 --> 01:58.000
+No. No. I feel comfortable.
+
+01:58.220 --> 01:58.460
+Okay. Okay. Good.
+
+01:58.740 --> 02:01.540
+People are like, what are your goals at Clay? I'm like, I'm trying to become famous.
+
+02:02.460 --> 02:03.640
+Smile at the camera really quick.
+
+02:05.100 --> 02:06.240
+Make Everett famous.
+
+02:08.240 --> 02:09.820
+I said, I think we're ready to post.
+
+02:09.820 --> 02:10.380
+Let's go.
+
+02:11.400 --> 02:12.200
+Post made.
+
+02:12.640 --> 02:13.480
+What should I comment?
+
+02:13.840 --> 02:15.120
+Comment, "So insightful."
+
+02:15.400 --> 02:15.700
+Perfect.
+
+02:17.880 --> 02:21.120
+Okay. Yeah. So we just got to, and then we're there.
+
+02:21.540 --> 02:21.640
+Cool.
+
+02:22.480 --> 02:24.380
+So Everett's already in a meeting.
+
+02:24.900 --> 02:27.080
+To like make him aware of that too, he may just not know.
+
+02:27.460 --> 02:29.640
+I would do, I'd probably do an intro for this one.
+
+02:29.780 --> 02:33.280
+The second we got to the office, Everett's dream of becoming famous started to come true.
+
+02:33.480 --> 02:34.340
+Okay. Welcome to the office.
+
+02:34.340 --> 02:35.100
+Thank you.
+
+02:35.400 --> 02:37.480
+His coworkers stopped to take photos of him.
+
+02:37.600 --> 02:39.120
+I think it's because they thought it was funny.
+
+02:39.260 --> 02:40.780
+He was being followed around by a camera crew.
+
+02:41.160 --> 02:42.020
+What's going on?
+
+02:42.280 --> 02:42.480
+Great.
+
+02:43.100 --> 02:44.120
+Nice to meet you guys.
+
+02:44.620 --> 02:47.620
+Anyway, he got straight to business and jumped into a meeting with Zach.
+
+02:47.840 --> 02:48.680
+And I'm not going to lie.
+
+02:48.840 --> 02:52.240
+Within about 30 seconds, I had no idea what they were talking about.
+
+02:52.300 --> 02:55.060
+So I left and decided to go explore the office.
+
+02:55.320 --> 02:56.940
+Just came across a cinnamon roll.
+
+02:57.260 --> 02:58.380
+I kind of want to bite.
+
+03:04.620 --> 03:05.740
+Are you busy right now?
+
+03:06.500 --> 03:08.220
+Can we ask you a couple questions?
+
+03:08.580 --> 03:08.820
+Sure.
+
+03:09.080 --> 03:09.540
+What do you do?
+
+03:09.800 --> 03:11.260
+I do go-to-market engineering here.
+
+03:11.440 --> 03:12.700
+I am a go-to-market engineer.
+
+03:13.020 --> 03:14.620
+I am an internal go-to-market engineer.
+
+03:14.960 --> 03:16.380
+What the heck is a go-to-market engineer?
+
+03:16.480 --> 03:17.880
+What the heck is a go-to-market engineer?
+
+03:18.200 --> 03:18.540
+Sorry.
+
+03:18.740 --> 03:22.100
+So this is why I think interviewing Clay about go-to-market engineering can be confusing.
+
+03:22.400 --> 03:23.620
+I am a go-to-market engineer.
+
+03:23.620 --> 03:26.120
+I am the core user of every other company.
+
+03:26.460 --> 03:26.500
+Yeah.
+
+03:26.500 --> 03:27.860
+We try to sell to people like me.
+
+03:28.160 --> 03:28.840
+And he was right.
+
+03:29.200 --> 03:30.960
+It is confusing.
+
+03:31.280 --> 03:34.340
+Trying to explain this in a video, I think you guys will have a lot of trouble.
+
+03:34.620 --> 03:36.460
+Well, that wasn't very comforting.
+
+03:36.700 --> 03:41.800
+But I figured if I could understand what Spencer does, I could figure out how Clay works.
+
+03:42.200 --> 03:46.280
+And that's when he started talking about pickles.
+
+03:46.760 --> 03:49.680
+I default to the pickle analogy, which is imagine you make pickles.
+
+03:49.880 --> 03:50.900
+I've never had a pickle.
+
+03:51.160 --> 03:52.240
+You've never had a pickle?
+
+03:52.240 --> 03:53.480
+That's heinous.
+
+03:53.620 --> 03:54.980
+They look so gross.
+
+03:55.400 --> 03:58.180
+The main thing we're thinking is how do you grow your business?
+
+03:58.500 --> 04:02.220
+You need to think, who are my customers and how can I find more of them?
+
+04:02.440 --> 04:06.900
+Somebody making pickles in New York City needs to build a list of all of the delis in New York
+
+04:06.900 --> 04:09.280
+and say which ones are my customers, which ones are not.
+
+04:09.520 --> 04:10.880
+Now I know the ones that I should sell to.
+
+04:11.360 --> 04:16.040
+Or maybe even for the customers, maybe I want to expand my customer into different pickle varieties, right?
+
+04:16.220 --> 04:18.760
+And we know exactly which ones they're buying and which ones they're not buying.
+
+04:19.420 --> 04:20.500
+We build that list.
+
+04:20.700 --> 04:21.960
+We find the right people.
+
+04:22.240 --> 04:23.980
+We find the decision maker.
+
+04:24.180 --> 04:25.520
+Who's the most likely to buy the pickle?
+
+04:25.820 --> 04:27.480
+And then we sell you pickles.
+
+04:27.820 --> 04:31.340
+So what Spencer is describing is the core job of a go-to-market engineer.
+
+04:31.640 --> 04:38.660
+They take messy data about who's out there, track signs of interest, which is something like who visits your website, and analyze buying behavior.
+
+04:38.660 --> 04:44.580
+Then they turn it into a system that tells you who to sell to, who's most likely to buy, and how to reach them.
+
+04:44.840 --> 04:49.500
+And instead of doing all of that manually, like teams used to, they automate the entire thing.
+
+04:49.800 --> 04:53.180
+Clay is the tool that lets go-to-market engineers build those systems.
+
+04:53.540 --> 04:56.940
+And when I asked Spencer what else he's been up to, he said...
+
+04:56.940 --> 04:59.100
+It might be because I'm in a good mood, but I've been hyping people up.
+
+05:00.980 --> 05:01.340
+Emily?
+
+05:01.580 --> 05:02.400
+Emily's actually...
+
+05:02.400 --> 05:05.640
+She knows exactly how to target and who to target at any given moment.
+
+05:05.920 --> 05:06.500
+Thank you.
+
+05:07.500 --> 05:08.520
+This is not good hype.
+
+05:08.640 --> 05:09.440
+We've got to find better hype.
+
+05:09.960 --> 05:11.620
+Alright, I'm going to go hype up somebody else.
+
+05:12.120 --> 05:18.660
+People, engineers have like onboarding projects to learn the code base, and Jenny's onboarding project still gives me a smile once a week.
+
+05:19.080 --> 05:21.280
+I think Spencer's just the best hype man.
+
+05:21.580 --> 05:22.860
+Like, Spencer brings the best energy to the office.
+
+05:22.860 --> 05:23.900
+I'm a personality hype man.
+
+05:24.340 --> 05:25.420
+That was slightly awkward.
+
+05:25.680 --> 05:27.800
+Then it was time for me to go meet back up with Everett.
+
+05:28.060 --> 05:29.060
+Alright, quick pause.
+
+05:29.480 --> 05:31.800
+If you stayed at the end of this video, I'm going to try a pickle.
+
+05:32.100 --> 05:37.240
+But also, I wanted to let you know that if you're trying to wrap your head around this whole go-to-market engineering thing, don't worry.
+
+05:37.440 --> 05:38.160
+I got you.
+
+05:38.300 --> 05:47.280
+We put together a full playbook breaking down how Clay built this into a $5 billion growth engine, what the role actually is, and how to structure it inside your own company.
+
+05:47.280 --> 05:53.980
+Because right now, this is one of the fastest growing roles in B2B, and most companies don't know how to hire for it or use it.
+
+05:54.100 --> 05:57.100
+So, if you want the playbook, it's free. Link in the description.
+
+05:57.500 --> 05:58.840
+Alright, back to Clay.
+
+05:59.040 --> 06:02.580
+On my way back downstairs, I ran into Varun, one of Clay's co-founders.
+
+06:02.720 --> 06:05.680
+So, I asked if he could walk me through how Clay got here.
+
+06:06.040 --> 06:06.320
+Hi.
+
+06:06.920 --> 06:10.920
+What I didn't realize was that Clay's growth was pretty slow in the beginning.
+
+06:11.200 --> 06:15.020
+For the first five years, they made basically zero dollars in revenue.
+
+06:15.760 --> 06:16.980
+Nothing really happened for a while.
+
+06:16.980 --> 06:19.560
+But eventually, they landed on an idea.
+
+06:19.920 --> 06:24.220
+What if a spreadsheet could actually pull data from anywhere on the internet?
+
+06:24.500 --> 06:31.740
+And then in like February of 2022, we launched the product on Product Hunt.
+
+06:31.940 --> 06:33.420
+And that's when they started noticing something.
+
+06:33.640 --> 06:40.160
+The people who really understood the product were technical scrappy operators using it to build systems to find and reach customers.
+
+06:40.160 --> 06:43.900
+And watching how those users worked gave Clay a clear direction.
+
+06:44.160 --> 06:50.760
+Instead of just being a data tool, Clay became a system that lets teams find the right people, understand them, and reach out to them.
+
+06:51.060 --> 06:55.020
+Then, in late 2022, artificial intelligence supercharged all of it.
+
+06:55.020 --> 07:01.640
+Now, instead of just finding the right people, teams could actually generate personalized outreach automatically, all in Clay.
+
+07:01.920 --> 07:04.400
+And that's when startups started using it.
+
+07:04.700 --> 07:08.740
+I still remember, by the way, Rippling was a pretty meaningful customer for us.
+
+07:08.860 --> 07:10.380
+They signed in March of 2023.
+
+07:10.740 --> 07:12.480
+They were the customer that pushed us over a million dollars.
+
+07:12.480 --> 07:15.540
+But then, heading into 2024, they hit a new challenge.
+
+07:15.940 --> 07:18.580
+Startups were using Clay, but enterprise companies weren't.
+
+07:18.840 --> 07:21.180
+Well, how do we become like an amazing company?
+
+07:21.360 --> 07:23.800
+Well, you kind of need other amazing companies to use your product.
+
+07:23.980 --> 07:27.340
+And it just so happens that other amazing big companies don't want to use your product.
+
+07:27.560 --> 07:29.000
+If, like, we need to kind of help them.
+
+07:29.180 --> 07:30.240
+So, like, okay, how do we do that?
+
+07:30.360 --> 07:31.640
+Well, apparently that's what sales is.
+
+07:31.880 --> 07:33.760
+But Varun didn't want traditional salespeople.
+
+07:33.960 --> 07:35.020
+The product was too complex.
+
+07:35.280 --> 07:38.540
+So, he looked at Clay's users for people who already knew how to use it.
+
+07:38.640 --> 07:39.980
+Everett was there in our community.
+
+07:40.360 --> 07:42.240
+So, you were using Clay before you joined Clay?
+
+07:42.240 --> 07:42.720
+Yes.
+
+07:43.140 --> 07:43.360
+Okay.
+
+07:43.840 --> 07:45.900
+And I was like, hey, what if you did sales?
+
+07:46.620 --> 07:47.580
+And you're like, what?
+
+07:48.180 --> 07:49.180
+I've never done sales before.
+
+07:49.300 --> 07:50.100
+What was your reaction?
+
+07:50.500 --> 07:53.700
+I was like, I'm, first of all, more of an engineer.
+
+07:53.860 --> 07:56.100
+Second of all, more of a, like, a growth person.
+
+07:56.260 --> 07:57.180
+Sales is like, icky.
+
+07:57.400 --> 07:58.140
+Yeah, sales is icky.
+
+07:58.320 --> 08:00.200
+But that's exactly why Varun wanted him.
+
+08:00.440 --> 08:05.100
+He was someone that could build systems and could show another company how to grow using Clay.
+
+08:05.360 --> 08:08.180
+At one point I was like, so, Varun, like, should I be, like, head of sales?
+
+08:08.400 --> 08:09.080
+And he was like, no.
+
+08:09.480 --> 08:11.160
+He was like, GTM engineering is the thing.
+
+08:11.160 --> 08:13.480
+And just like that, the team had a name.
+
+08:13.640 --> 08:16.360
+So, Everett joined, helping bring Clay into enterprise companies.
+
+08:16.660 --> 08:19.940
+And then I didn't sell anything at Clay for six months.
+
+08:20.200 --> 08:22.120
+But eventually, he started to figure it out.
+
+08:22.220 --> 08:28.680
+Instead of just telling companies what the product could do, the go-to-market engineers started building real workflows for each prospect.
+
+08:28.680 --> 08:30.600
+Well, no one liked their data stack.
+
+08:30.720 --> 08:31.820
+Everyone thought it was too expensive.
+
+08:32.000 --> 08:32.940
+The quality wasn't good enough.
+
+08:33.060 --> 08:34.080
+There was too many vendors to manage.
+
+08:34.240 --> 08:35.660
+So, like, hey, we'll solve that for you.
+
+08:35.820 --> 08:38.220
+We'll prove to you that we can solve it through this data test.
+
+08:38.440 --> 08:40.520
+Let's start with that use case, get you on that.
+
+08:40.660 --> 08:48.380
+And then we can expand you to all these other use cases, outbound, inbound, CRM, expansion, all these other things that are ABM that we can do for you after the fact.
+
+08:48.380 --> 08:52.300
+And by the end of the year, they were landing companies like Figma and OpenAI.
+
+08:52.580 --> 08:56.600
+By 2025, they scaled that approach and crossed $100 million in revenue.
+
+08:56.840 --> 09:00.860
+Today, they have over 16,000 customers, including hundreds of enterprise teams.
+
+09:01.080 --> 09:05.060
+And a big part of how they got here came from building their go-to-market engineering team.
+
+09:05.300 --> 09:10.380
+Okay, so now that I know why Clay created go-to-market engineers, it was time to see what they do all day.
+
+09:10.380 --> 09:14.560
+Alright, so we are in Boomi. What up?
+
+09:15.400 --> 09:15.740
+Hi.
+
+09:15.980 --> 09:16.600
+Hi, how are you guys?
+
+09:16.740 --> 09:17.320
+I'm Payton.
+
+09:17.560 --> 09:17.980
+Nice to meet you.
+
+09:18.520 --> 09:21.120
+That's Daniel, and that's Melina.
+
+09:21.420 --> 09:27.860
+So then I just wanted to kind of quickly go over what is present in the GTME training around pricing from Zona.
+
+09:28.140 --> 09:29.380
+Who is this deck for?
+
+09:29.780 --> 09:30.640
+The GTMEs.
+
+09:31.580 --> 09:32.060
+Of course.
+
+09:33.180 --> 09:34.240
+Alright, awesome.
+
+09:35.260 --> 09:39.880
+And then we had so many meetings.
+
+09:39.880 --> 09:42.360
+Well, in case you haven't noticed, I brought a camera crew with me today.
+
+09:42.520 --> 09:43.200
+Oh, I bet you did.
+
+09:43.640 --> 09:47.280
+It got to the point where Everett just kept disappearing into so many meetings.
+
+09:47.520 --> 09:49.200
+And I kept losing him.
+
+09:53.260 --> 09:54.800
+Well, we lost Everett.
+
+09:55.180 --> 09:57.920
+He's just such a busy guy, so now we gotta go find him.
+
+09:59.040 --> 10:00.480
+See where he possibly could have went.
+
+10:00.840 --> 10:01.880
+Everett, where are you?
+
+10:02.340 --> 10:03.040
+Did he leave?
+
+10:03.720 --> 10:05.880
+We saw him walk past us.
+
+10:06.860 --> 10:08.520
+No one responded.
+
+10:09.880 --> 10:12.940
+It's the problem with these operators.
+
+10:13.400 --> 10:14.240
+They're just so busy.
+
+10:14.840 --> 10:16.200
+Yeah, I lost you for a while.
+
+10:16.220 --> 10:19.200
+I know, I was, well, I had a meeting with Becca there.
+
+10:19.400 --> 10:19.880
+Oh, okay.
+
+10:20.020 --> 10:20.240
+So.
+
+10:20.620 --> 10:22.900
+Not gonna lie, I was getting really hungry.
+
+10:23.740 --> 10:27.900
+And just when I was about to go get food, Everett said we had to take a field trip to the park.
+
+10:29.180 --> 10:30.960
+Oh, yeah, I was wondering what was gonna happen.
+
+10:30.960 --> 10:34.640
+So are customer meetings outside the office not the usual?
+
+10:35.000 --> 10:35.460
+No, they are.
+
+10:35.680 --> 10:36.240
+Okay, okay.
+
+10:36.700 --> 10:36.880
+Yeah.
+
+10:37.180 --> 10:39.180
+And a lot of times we go to their office instead of like walking around.
+
+10:39.180 --> 10:39.420
+Right.
+
+10:40.340 --> 10:40.700
+Hi.
+
+10:41.760 --> 10:42.520
+How are you?
+
+10:42.580 --> 10:42.900
+Good.
+
+10:43.060 --> 10:43.800
+Good to see you.
+
+10:43.880 --> 10:44.320
+You too.
+
+10:44.540 --> 10:44.600
+Hi.
+
+10:45.560 --> 10:47.380
+Nice to meet you.
+
+10:48.160 --> 10:49.700
+All right, shall we stroll around the park?
+
+10:49.780 --> 10:50.380
+Yeah, let's do it.
+
+10:50.380 --> 10:52.640
+This was a customer meeting with someone from AWS.
+
+10:52.720 --> 10:56.380
+A chance to check in, see how things were going and keep building the relationship.
+
+10:57.180 --> 10:59.640
+This is a customer meeting everybody.
+
+11:00.540 --> 11:03.420
+And I, not allowed in that conversation.
+
+11:12.300 --> 11:13.760
+Looks like it's going well.
+
+11:14.020 --> 11:14.720
+How'd it go?
+
+11:15.020 --> 11:15.440
+Great.
+
+11:15.820 --> 11:16.220
+Amazing.
+
+11:16.720 --> 11:16.940
+All right.
+
+11:17.460 --> 11:17.620
+See you.
+
+11:17.620 --> 11:17.800
+Bye.
+
+11:19.060 --> 11:23.880
+I've been seeing a lot of meetings and on the walk back, I wanted to ask Everett a bit more about what his team does.
+
+11:24.120 --> 11:33.820
+And so what we do is go deep with customers and discover all their use cases and like really carefully kind of build like a POC for them.
+
+11:34.060 --> 11:36.740
+There were three things his team needs to be able to do.
+
+11:37.060 --> 11:41.000
+Know go-to-market well, know Clay well, and basically be a good salesperson.
+
+11:41.220 --> 11:44.720
+When we got back to the office, Everett had more meetings, of course.
+
+11:44.720 --> 11:47.980
+So I took the opportunity to go chat with the rest of the team.
+
+11:48.600 --> 12:00.340
+I think so go-to-market engineering for as like a whole, I think is really kind of just very intertwined with Clay's growth as a company because we are the kind of pioneers of the go-to-market engineer.
+
+12:00.340 --> 12:04.660
+I ended up talking to George for a very long time.
+
+12:05.100 --> 12:08.040
+I'm talking to 10 different go-to-market orgs a day.
+
+12:08.300 --> 12:12.080
+And so a lot of times when they're creating a role, it's to solve the problem that they have.
+
+12:12.320 --> 12:16.020
+So you want an application of Clay for these customers.
+
+12:16.320 --> 12:18.640
+So why not just call yourself a salesperson?
+
+12:18.960 --> 12:19.660
+Good question.
+
+12:20.160 --> 12:23.000
+And then he said something that stopped me in my tracks.
+
+12:23.000 --> 12:26.140
+So there's two go-to-market engineering teams.
+
+12:26.340 --> 12:27.580
+Wait, two teams?
+
+12:27.940 --> 12:29.280
+I needed to find Everett.
+
+12:31.580 --> 12:34.420
+GTM engineers use technology to help businesses grow.
+
+12:34.920 --> 12:35.480
+Okay.
+
+12:37.040 --> 12:41.100
+So there are two GTME teams at Clay.
+
+12:41.400 --> 12:43.020
+The first team is the internal team.
+
+12:43.200 --> 12:46.040
+Other companies have only this for GTM engineering.
+
+12:46.200 --> 12:48.360
+They have internal people focused on pipeline generation.
+
+12:48.680 --> 12:50.800
+They're not traditional ops or marketing people.
+
+12:50.800 --> 12:56.100
+They're engineers, but instead of building software, they're building systems that power a company's revenue.
+
+12:56.280 --> 13:00.280
+Things like pipeline operations, automated follow-ups, and content generation.
+
+13:00.620 --> 13:06.460
+They're basically helping sort through the best prospects to target.
+
+13:06.600 --> 13:06.700
+Right.
+
+13:06.920 --> 13:07.060
+Correct.
+
+13:07.240 --> 13:07.560
+Okay.
+
+13:07.720 --> 13:09.080
+But I still had one question.
+
+13:09.280 --> 13:14.140
+If most companies only have the internal team, how does Clay's second team actually fit in?
+
+13:14.220 --> 13:15.440
+And how do they work together?
+
+13:15.660 --> 13:17.740
+So I had Everett map it out.
+
+13:17.740 --> 13:21.880
+Basically, the internal team is responsible for bringing in all different types of leads.
+
+13:22.160 --> 13:28.880
+Enterprise customers or potential ones go to our second GTME team for deployed GTMEs.
+
+13:29.740 --> 13:31.540
+That's Everett's team, the salespeople.
+
+13:32.000 --> 13:34.420
+And this is where Clay did something most companies haven't.
+
+13:34.500 --> 13:39.500
+They took people with the same skills as the internal team and deployed them directly to customers.
+
+13:39.500 --> 13:44.140
+So this GTME team receives what this GTME team kind of creates.
+
+13:44.360 --> 13:46.640
+The internal team generates and qualifies leads.
+
+13:46.860 --> 13:51.280
+And when they identify something that seems like a strong enterprise fit, it gets passed to Everett's team.
+
+13:51.480 --> 13:57.360
+And so, you know, we're basically coming in almost as like a go-to-market consultant and figuring out,
+
+13:57.360 --> 14:02.340
+Hey, what is the like root cause of problems you're facing in the go-to-market, you know, stack?
+
+14:03.280 --> 14:04.380
+And how do we fix that?
+
+14:04.480 --> 14:06.500
+And how can we build something in Clay that will solve that problem?
+
+14:06.660 --> 14:08.080
+It's completely custom to the customer.
+
+14:08.480 --> 14:15.120
+So we're doing these kind of one-of-one builds for people pre-sale to just show them like how they would run this,
+
+14:15.600 --> 14:23.260
+you know, use case in Clay for like a small sample of their, you know, their customers or their data that they're trying to source.
+
+14:23.260 --> 14:26.740
+They are people with the same skills pretty much divided depending on personality.
+
+14:26.960 --> 14:30.200
+The more engineering minded ones gravitate towards internal infrastructure.
+
+14:30.360 --> 14:33.980
+The ones who may like more customer conversations end up forward deployed.
+
+14:34.220 --> 14:39.860
+And what makes this work is that the people selling Clay are the same type of person buying it.
+
+14:39.940 --> 14:43.720
+So they deeply understand the customer's pain points and how to fix them.
+
+14:43.860 --> 14:46.040
+And that's what makes the loop a revenue engine.
+
+14:46.220 --> 14:50.420
+The internal team generates the pipeline, the forward deploy team closes it,
+
+14:50.420 --> 14:52.960
+and everything they learn goes straight back in.
+
+14:53.060 --> 14:56.320
+It's a flywheel because we like help customers with Clay.
+
+14:56.940 --> 15:02.760
+We learn a lot about what they're doing with Clay and then we feed that back into our team so that we can do cool stuff with Clay too.
+
+15:03.000 --> 15:06.600
+And because both teams have the same skills, the flywheel actually works.
+
+15:07.400 --> 15:09.780
+Because it's like, hey, our CEO is headed to San Francisco.
+
+15:10.360 --> 15:15.800
+Who are the 20 best people that we could put around a dinner table with him to like drive the most impact for the business?
+
+15:15.800 --> 15:22.100
+We have a live Clay table that at any point you can go in and filter for say SF, Austin, NYC.
+
+15:22.240 --> 15:25.760
+And you can build these like super targeted lists.
+
+15:26.020 --> 15:29.620
+And then we can actually send the invite on behalf of our founder.
+
+15:29.860 --> 15:35.040
+And we can then log responses and like registrants.
+
+15:35.820 --> 15:37.500
+And who created this system?
+
+15:37.660 --> 15:39.500
+This was created by our GTM engineers.
+
+15:39.920 --> 15:42.420
+A forward deploy GTME would build this for our customers.
+
+15:42.820 --> 15:45.500
+Clay didn't just coin the term go-to-market engineer.
+
+15:45.500 --> 15:48.460
+They became the best example of what it could do.
+
+15:48.800 --> 15:53.900
+Two teams, one loop and a $5 billion company to show for it.
+
+15:54.080 --> 15:59.440
+And to end the day in true Everett fashion, the team and I headed to his favorite pub.
+
+15:59.920 --> 16:00.700
+All right, everybody.
+
+16:00.840 --> 16:02.580
+Well, that was our day inside of Clay.
+
+16:02.880 --> 16:06.400
+A whole day spent with Everett, their head of go-to-market engineering.
+
+16:06.620 --> 16:08.460
+Thanks so much for hanging out with Clay today.
+
+16:08.660 --> 16:14.080
+Hope you guys learned about GTM engineering and also what it's like to work at a growing company in New York City.
+
+16:15.440 --> 16:17.860
+That's all I have for this episode of Stories of Scale.
+
+16:18.360 --> 16:18.740
+Stay tuned.
+
+16:19.000 --> 16:20.100
+We got plenty more to come.
+
+16:20.400 --> 16:21.940
+Lots of new things happening on the channel.
+
+16:22.220 --> 16:25.120
+And remember to hit that button, please.
+
+16:25.780 --> 16:26.220
+Subscribe.
+
+16:27.420 --> 16:30.340
+Okay, so if you made it to the end of the video, I'm about to try a pickle.
+
+16:30.580 --> 16:32.580
+This is for you. Can I eat the whole thing?
+
+16:33.320 --> 16:33.760
+Don't bite.
+
+16:38.440 --> 16:38.920
+Oh, wait.
+
+16:40.180 --> 16:40.480
+Wait.
+
+16:43.660 --> 16:44.760
+Oh, I don't know how I feel.
+
+16:44.960 --> 16:45.900
+I don't know how I feel.
+
+16:45.900 --> 16:47.180
+I actually don't know.
+
+16:47.380 --> 16:47.960
+Do I have water?
+
+16:48.400 --> 16:48.460
+I have water.
