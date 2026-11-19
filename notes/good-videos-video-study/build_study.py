@@ -20,7 +20,7 @@ import motion_sequences
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 VIDEOS = json.loads((REPO / "gallery/videos.json").read_text())["videos"]
-NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 72)]
+NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 75)]
 # Seconds between library frames. Short clips are sampled more densely than one per second.
 FRAME_STEP = {47: 0.25}
 CURATED_FRAMES = {

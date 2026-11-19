@@ -1,0 +1,617 @@
+{
+  "note": "The Browser Company's 37-second launch spot for Arc on Windows. It opens in the 1990s, on an old PC, a dial-up search for 'flowers' and a spinning hourglass, under a recorded voice reading Marshall McLuhan's line about 'a brand-new world of allatonceness'. 'You've been waiting.' A counter of beta testers climbs past 186,000, every Windows Start button from 95 to 11 goes by in four seconds, and the Arc icon is clicked: 'Finally'. Fifteen seconds of quick feature close-ups follow, then three words on blue and Microsoft Edge dragged to the Recycle Bin. The breakdown follows how a long wait is turned into the joke and the payoff, how the features are cut, and samples 12 moves as flip books.",
+  "transcript_kind": "Local speech recognition on the isolated voice stem. The two lines match Marshall McLuhan's The Medium Is the Massage (1967), so 'all experiences' was corrected to his coinage 'allatonceness'. Short vocal sounds at 0:14 and 0:30 that Whisper read as words ('Bingo', 'Venga') sit inside the music and were removed",
+  "shot_notes": {
+    "0": "Camcorder footage of a beige 1990s PC, a Windows 9x splash on the CRT, with a second monitor and a desk phone beside it. The film fades up into it from the same electric blue it ends on.",
+    "1": "Internet Explorer's old Go menu, blown up until the pixels show: 'Start Page, Search the Internet, Read Newsgroups'. A pixel cursor drops onto 'Search the Internet'.",
+    "2": "An empty search box with a blinking caret, filling the frame. 'flowers' is about to be typed one letter at a time.",
+    "3": "The result: Van Gogh's Sunflowers loading line by line into a black browser window, the way images came down a modem.",
+    "4": "'You've been waiting.' in white bold sans over the teal Windows 95 desktop, after the words arrived one at a time. The desktop icons have just been pushed out of frame by a punch-in on the text.",
+    "5": "The Windows hourglass on white, enlarged to fill the screen and settling upright after a half turn. The wait, drawn as the icon everyone remembers waiting on.",
+    "6": "The waiting gets a number: a counter seen so close that its digits fill the frame, spinning like a slot machine on Arc's electric blue.",
+    "7": "Pulled back, the counter reads as a card: 'Beta Testers Onboarded since Dec 11, 2023', climbing past 112,000. The film admits how many people have been in line.",
+    "8": "151,141 and still rising. The voice says 'Ours is a brand-new world' over it.",
+    "9": "An early Windows toolbar (the four-color flag, a magnifier, a help icon) in extreme close-up, a cursor drifting over it. The start of a four-second history of the Start button.",
+    "10": "The Windows 95 Start button, chunky and grey. The cursor will press it, and the dotted focus ring appears before the next era cuts in.",
+    "11": "A dark glass 'start' button from the XP years. Each button is held about half a second, from the same tight crop, so the eras flick past like a flip book.",
+    "12": "Windows 10's flat Start logo beside the search magnifier, its square going dark navy under the cursor. One more button and the history reaches Windows 11.",
+    "13": "A clean Windows 11 desktop, the default green hills wallpaper, with one icon at the top left. The wide shot is the present day.",
+    "14": "Pushed in on that icon: Arc's red and blue logo with a shortcut arrow, labelled 'Arc', a cursor beside it. The cursor double-clicks.",
+    "15": "'Finally' in white italic bold on Windows blue, small and centered. The only word in the film that isn't a fact or an instruction.",
+    "16": "Arc's first window on Windows: a green sidebar of folders and tabs, a New York Times photo story on a sustainable house, and the Windows 11 bloom wallpaper behind. It fades up from black as if the app had just launched.",
+    "17": "Arc's command bar in close-up, 'japandi interior' typed in, with suggestions in a soft green highlight. Product shots are framed this tight throughout, so each control can be read at phone size.",
+    "18": "The AD article the search lands on. It holds less than a second.",
+    "19": "The sidebar has slid in over a split view of an Airbnb listing and a sculpture: folders for 'Apartment inspo', 'Recipes' and 'Upstate trip', then saved pages below.",
+    "20": "Close on the sidebar, a cursor closing tabs with the small x that appears on hover.",
+    "21": "A link opened in a pop-up preview over the dimmed window, the white panel still growing before the Storm King Art Center page loads in it.",
+    "22": "A tab for 'lofi hip hop radio' being dragged up the sidebar past a playing video. The demo uses everyday browsing (a lo-fi stream, recipes, a weekend trip), not work.",
+    "23": "A tab being dragged into the row of pinned favorites at the top of the sidebar, in a 'Work' space.",
+    "24": "A tooltip, 'Open Split View', under the cursor. The film names a control only when its tooltip does.",
+    "25": "Split view: a Vox article on mass timber beside a photo of a building's courtyard. The pairs change every half second.",
+    "26": "A MoMA page in split view, among pairs of design, architecture and recipe pages. The sites are recognizable on purpose.",
+    "27": "A Windows-only setting: the choice between 'Mica (default)' and 'Acrylic', the Windows 11 materials, with the cursor on Acrylic. Arc is shown belonging on Windows, not ported to it.",
+    "28": "A 'DIY Projects' space in a pink and orange gradient theme, against a vivid Windows wallpaper.",
+    "29": "The theme picker: a light and dark switch and a row of color swatches, a cursor dragging the toggle.",
+    "30": "The last product shot, in green: a Japandi style article next to an Instagram grid, settled after a soft dissolve through the blurred wallpaper.",
+    "31": "'Arc is on Windows' in small white bold on electric blue, the same blue as the counter.",
+    "32": "'Download now' on the same blue, in the same place. Each line holds for about a second.",
+    "33": "'arc.net', the third and last card.",
+    "34": "The sting: on a Windows desktop, the Microsoft Edge icon dragged onto the Recycle Bin with the system tooltip 'Move to Recycle Bin'. A second later only the bin is left.",
+    "35": "The end mark: Arc's 'A' drawn in white outline, peeking around a Windows logo drawn as a window swung open.",
+    "36": "The mark holds as the music fades."
+  },
+  "motion_intro": "The film cuts fast (a median shot of 0.73 seconds, 35 detected cuts in 37 seconds), and almost nothing moves inside a shot except a cursor. The motion is in the editing: close-ups of old interface parts swapped on cuts, text that arrives a word at a time, and product clips that each show one gesture. The retro half is shot as extreme, soft close-ups of pixels and the product half as tight crops of a crisp window, so the change from past to present can be felt in the texture before the voice stops. The sequences below follow the waiting gags, the march of Start buttons, the reveal, five product gestures and the ending.",
+  "motion": [
+    {
+      "id": "dial-up",
+      "start": 0.0,
+      "end": 3.6,
+      "fps": 10,
+      "title": "Fade up into 1998, then wait for a picture",
+      "tags": [
+        "fade from color",
+        "camcorder",
+        "pixel close-up",
+        "progressive load"
+      ],
+      "text": "The first frame is pure electric blue, and the film fades from it into camcorder footage of a beige PC by 0.3. At 1.0 it cuts to a blown-up title bar, where a pixel cursor clicks the minimize button at 1.3 (the button darkens for a frame). At 1.46 IE's Go menu appears, 'Start Page' highlights at 1.7 and 'Search the Internet' at 1.8. An hourglass cursor appears at 2.2 and fades, a search box fills with 'flowers' one letter about every tenth of a second from 2.4 to 2.8, and from 2.88 Van Gogh's Sunflowers comes in a band at a time from the top, completing at about 3.4. Every step is a wait of a few frames, so the joke builds through the cutting."
+    },
+    {
+      "id": "waiting",
+      "start": 3.55,
+      "end": 5.5,
+      "fps": 20,
+      "title": "'You've been waiting.' word by word, then the hourglass",
+      "tags": [
+        "word by word",
+        "punch-in",
+        "rotate",
+        "hold"
+      ],
+      "text": "On the teal Windows 95 desktop 'You've' appears at 3.6, 'been' at 3.95, and on 'waiting.' at 4.4 the frame jumps larger, pushing the desktop icons out of shot. The words come at a talking pace, slower than the cuts around them. At 4.84 a hard cut to white lands on the pixel hourglass already tipped on its side; it flips through a half turn in steps (4.9 flat, 5.15 tilted, 5.3 nearly upright) and settles upright at 5.4, the same stuttering spin as the real cursor."
+    },
+    {
+      "id": "counter",
+      "start": 5.5,
+      "end": 9.45,
+      "fps": 8,
+      "title": "A counter too close to read, then a number too big to ignore",
+      "tags": [
+        "extreme close-up",
+        "pull back",
+        "rolling digits"
+      ],
+      "text": "At 5.5 the counter fills the frame, its digit boxes so large that only fragments of the caption show at the bottom, and every digit changes on every frame. At about 6.5 the camera is suddenly wide enough to read the whole card: 'Beta Testers Onboarded since Dec 11, 2023'. From there the six digits roll up steadily (about 79,500 at 6.5, 117,731 at 7.5, 186,142 at 9.25), about 40,000 a second, so the count of people waiting rises by more than a hundred thousand in under three seconds. It is the film's one statistic, and it is shown as a crowd in line."
+    },
+    {
+      "id": "start-buttons",
+      "start": 9.35,
+      "end": 13.3,
+      "fps": 12,
+      "title": "Every Start button in four seconds",
+      "tags": [
+        "match cut",
+        "same crop",
+        "cursor continuity",
+        "history"
+      ],
+      "text": "Each era of Windows is the same framing: the bottom-left corner in close-up with a cursor on the button. an early toolbar with the four-color flag at 9.42, Windows 95's 'Start' at 10.04 (pressed at 10.55, its dotted focus ring showing by 10.7), XP's green 'start' at 10.96, a dark glass 'start' at 11.46, the Vista and Windows 7 orb beside Internet Explorer at 11.88, Windows 10's flat logo at 12.3 (darkening under the cursor by 12.38), and Windows 11's centered logo at 12.71. Cuts fall about every half second, and because the cursor is always at the same place on the button, the cuts read as one continuous click across 30 years."
+    },
+    {
+      "id": "finally",
+      "start": 13.2,
+      "end": 15.8,
+      "fps": 8,
+      "title": "The desktop, the icon, 'Finally'",
+      "tags": [
+        "wide to close",
+        "double-click",
+        "type card",
+        "hold"
+      ],
+      "text": "A wide shot of the Windows 11 desktop holds from 13.25 to 14.45, the longest still image in the film so far, with a tiny cursor moving toward the one icon at top left. A cut pushes in on that icon, the Arc logo and its label, with the cursor beside it. The cursor rests there until 15.15, as if before a double-click, and at 15.2 the blue fills the frame with 'Finally' in small italic bold. The word holds for half a second, and the music jumps about 10 dB right after it, at 15.5."
+    },
+    {
+      "id": "launch",
+      "start": 15.6,
+      "end": 16.8,
+      "fps": 18,
+      "title": "The window fades up from dark",
+      "tags": [
+        "fade from black",
+        "app launch",
+        "cursor click"
+      ],
+      "text": "At 15.65 a full Arc window cuts in, nearly black, and brightens over about a quarter of a second to full color by 15.9, like an app finishing its launch. The window then holds still on a New York Times photo story while a cursor at bottom right clicks the gallery's next arrow. Under a second later, at 16.76, the cut to the command bar starts the product montage."
+    },
+    {
+      "id": "command-bar",
+      "start": 16.75,
+      "end": 18.3,
+      "fps": 10,
+      "title": "Typing with suggestions, then landing",
+      "tags": [
+        "type-on",
+        "autocomplete",
+        "highlight move"
+      ],
+      "text": "Close on the command bar, 'japan' becomes 'japand', 'japandi i', 'japandi inte' and 'japandi interior' between 16.76 and 17.6, the green suggestion row updating with each letter. At about 17.7 the field autocompletes 'design' as selected text and the green highlight jumps down to 'japandi interior design'. At 18.23 it cuts to the result page. The search is shown at the speed of real typing, not sped up, because the suggestions are the feature."
+    },
+    {
+      "id": "peek",
+      "start": 21.1,
+      "end": 22.2,
+      "fps": 24,
+      "title": "A link opens in a panel over the page",
+      "tags": [
+        "dim",
+        "grow from center",
+        "pop-up preview"
+      ],
+      "text": "At 21.26 the split view dims and fades back, and a small white rectangle appears in the middle of it at 21.35. By 21.43 it has grown to almost the full window height, a blank panel over the dimmed page, and at 21.64 the Storm King Art Center article fills it. The interface move itself is the subject: half a second from click to page, without leaving the window behind."
+    },
+    {
+      "id": "tab-drag",
+      "start": 22.2,
+      "end": 24.2,
+      "fps": 8,
+      "title": "Dragging tabs up the sidebar and into favorites",
+      "tags": [
+        "drag",
+        "reorder",
+        "drop into slot"
+      ],
+      "text": "The 'lofi hip hop radio' tab, its video playing beside the sidebar, is dragged up between 22.22 and 22.43, with the other tabs sliding down to make room. At 22.75 a closer crop shows another tab ('Living Room Photos') lifted and dropped between two others by 23.25. At 23.37 a third crop shows an 'Architizer' tab dragged up into the row of pinned favorites, where it becomes an icon by 24.0. Three drags in two seconds, each from a new framing, so the gesture is learned by repetition."
+    },
+    {
+      "id": "split-view",
+      "start": 24.2,
+      "end": 27.35,
+      "fps": 6,
+      "title": "Split view, as a flip book of pairs",
+      "tags": [
+        "tooltip",
+        "two panes",
+        "rapid pairs"
+      ],
+      "text": "The cursor rests on a button long enough for its tooltip, 'Open Split View', to appear (24.5 to 25.2). From 25.25 the film cuts through pairs of pages side by side: Vox and a timber courtyard, a construction article, MoMA and a design magazine at 26.37, then a cooking video beside a recipe for spicy peanut noodles at 26.75. Each pair holds about half a second, enough to see that it is two pages and not to read them."
+    },
+    {
+      "id": "themes",
+      "start": 27.3,
+      "end": 31.1,
+      "fps": 8,
+      "title": "Materials, colors, and a dissolve through the wallpaper",
+      "tags": [
+        "Windows material",
+        "theme swap",
+        "dissolve"
+      ],
+      "text": "At 27.37 a settings menu offers 'Mica (default)' and 'Acrylic', with the cursor moving onto Acrylic, then a dropdown at 28.0. A pink and orange 'DIY Projects' space slides in at 28.12, a light and dark switch is dragged at 29.0, and from 29.42 a pink dot is moved around a color picker as the window tint follows. At 30.17 a pink window starts fading out, the blurred wallpaper shows through it from 30.21 to 30.38, and a green window resolves in its place by 30.5. That dissolve is the one soft transition in the montage, and it fits a feature about translucent windows."
+    },
+    {
+      "id": "edge-to-bin",
+      "start": 31.0,
+      "end": 36.4,
+      "fps": 6,
+      "title": "Three words, then Edge in the bin",
+      "tags": [
+        "type card",
+        "drag to bin",
+        "sting",
+        "logo"
+      ],
+      "text": "Three cards on the electric blue, each about a second: 'Arc is on Windows' at 31.08, 'Download now' at 32.0, 'arc.net' at 33.0. At 33.83 the sting cuts in: a dark Windows desktop where the Microsoft Edge icon, already selected, is dragged over the Recycle Bin with the 'Move to Recycle Bin' tooltip. It drops at about 34.5 and by 34.75 only the bin is left. At 35.21 the end mark appears on blue (Arc's 'A' peeking around a Windows logo drawn as an open window) and holds to the end as the music fades."
+    }
+  ],
+  "craft": {
+    "lede": [
+      "A thirty-seven-second launch spot built on one joke: the wait. Arc had been Mac-only and then in a long beta on Windows, and instead of hiding that, the film opens in the 1990s, piles up every image of waiting a Windows user remembers (a dial-up picture loading, the hourglass, every Start button from 95 to 11), shows how many people have been in line, and then lets one word, 'Finally', turn the wait into the payoff.",
+      "It is worth studying for how much it gets from a timeline split in two. The first fifteen seconds are blurry pixels, nostalgia and a recorded voice reading Marshall McLuhan; the second fifteen are crisp product close-ups with no voice at all. The cut between them is the launch. Then it spends its last three seconds on a joke at Microsoft's expense, dragging Edge into the Recycle Bin."
+    ],
+    "map": {
+      "lanes": [
+        {
+          "id": "story",
+          "segments": [
+            {
+              "start": 0,
+              "end": 3.58,
+              "label": "1998",
+              "note": "An old PC, a search for 'flowers', Sunflowers loading line by line."
+            },
+            {
+              "start": 3.58,
+              "end": 5.5,
+              "label": "You've been waiting",
+              "note": "The line, then the hourglass."
+            },
+            {
+              "start": 5.5,
+              "end": 9.42,
+              "label": "The line",
+              "note": "Beta testers onboarded, past 186,000."
+            },
+            {
+              "start": 9.42,
+              "end": 13.25,
+              "label": "Thirty years of Start",
+              "note": "From an early toolbar to Windows 11 in four seconds."
+            },
+            {
+              "start": 13.25,
+              "end": 15.67,
+              "label": "Finally",
+              "note": "The Arc icon, a double-click, one word."
+            },
+            {
+              "start": 15.67,
+              "end": 31.08,
+              "label": "Arc on Windows",
+              "note": "Command bar, sidebar, preview, tabs, split view, themes."
+            },
+            {
+              "start": 31.08,
+              "end": 33.83,
+              "label": "Call to action",
+              "note": "'Arc is on Windows', 'Download now', 'arc.net'."
+            },
+            {
+              "start": 33.83,
+              "end": 35.21,
+              "label": "Edge in the bin"
+            },
+            {
+              "start": 35.21,
+              "end": 36.62,
+              "label": "End mark"
+            }
+          ]
+        },
+        {
+          "id": "voices",
+          "segments": [
+            {
+              "start": 0,
+              "end": 7.1,
+              "label": "'all of us, all at once'",
+              "kind": "archival",
+              "note": "A recorded reading of McLuhan's The Medium Is the Massage."
+            },
+            {
+              "start": 8.3,
+              "end": 11.4,
+              "label": "'a brand-new world of allatonceness'",
+              "kind": "archival",
+              "note": "Lands over the march of Start buttons."
+            },
+            {
+              "start": 3.6,
+              "end": 4.83,
+              "label": "You've been waiting.",
+              "kind": "text"
+            },
+            {
+              "start": 15.2,
+              "end": 15.67,
+              "label": "Finally",
+              "kind": "text"
+            },
+            {
+              "start": 31.08,
+              "end": 33.83,
+              "label": "Three cards",
+              "kind": "text"
+            }
+          ]
+        },
+        {
+          "id": "sound",
+          "segments": [
+            {
+              "start": 0,
+              "end": 10,
+              "label": "Cue under the voice",
+              "kind": "music",
+              "note": "About level with the voice, not ducked under it."
+            },
+            {
+              "start": 10,
+              "end": 15.5,
+              "label": "Build",
+              "kind": "music",
+              "note": "Rises about 5 dB as the Start buttons go by."
+            },
+            {
+              "start": 15.5,
+              "end": 30.4,
+              "label": "Full level",
+              "kind": "music",
+              "note": "Jumps about 10 dB right after 'Finally' and holds."
+            },
+            {
+              "start": 30.4,
+              "end": 34.5,
+              "label": "Drops back",
+              "kind": "music",
+              "note": "Down 10 to 15 dB for the cards."
+            },
+            {
+              "start": 34.5,
+              "end": 36.62,
+              "label": "Fade",
+              "kind": "music"
+            }
+          ]
+        },
+        {
+          "id": "picture",
+          "segments": [
+            {
+              "start": 0,
+              "end": 1.0,
+              "label": "Old PC",
+              "kind": "archive"
+            },
+            {
+              "start": 1.0,
+              "end": 3.58,
+              "label": "Old screens",
+              "kind": "archive",
+              "note": "Interface close-ups, soft and pixelated."
+            },
+            {
+              "start": 3.58,
+              "end": 4.83,
+              "label": "Type on a 95 desktop",
+              "kind": "title"
+            },
+            {
+              "start": 4.83,
+              "end": 5.5,
+              "label": "Hourglass",
+              "kind": "graphics"
+            },
+            {
+              "start": 5.5,
+              "end": 9.42,
+              "label": "Counter",
+              "kind": "graphics"
+            },
+            {
+              "start": 9.42,
+              "end": 13.25,
+              "label": "Start buttons",
+              "kind": "archive"
+            },
+            {
+              "start": 13.25,
+              "end": 15.2,
+              "label": "Desktop, icon",
+              "kind": "screen"
+            },
+            {
+              "start": 15.2,
+              "end": 15.67,
+              "label": "Finally",
+              "kind": "title"
+            },
+            {
+              "start": 15.67,
+              "end": 31.08,
+              "label": "Product close-ups",
+              "kind": "screen",
+              "note": "About 20 cuts in 15 seconds."
+            },
+            {
+              "start": 31.08,
+              "end": 33.83,
+              "label": "Cards",
+              "kind": "title"
+            },
+            {
+              "start": 33.83,
+              "end": 35.21,
+              "label": "Edge to bin",
+              "kind": "screen"
+            },
+            {
+              "start": 35.21,
+              "end": 36.62,
+              "label": "End mark",
+              "kind": "title"
+            }
+          ]
+        }
+      ]
+    },
+    "aspects": [
+      {
+        "id": "story",
+        "title": "A wait, a word, a product",
+        "paragraphs": [
+          "The structure is two halves and a hinge. For fifteen seconds the film is about waiting, and it never mentions Arc: an old PC, a picture of flowers loading a band at a time, 'You've been waiting.', the hourglass, a counter of people in line, and every Start button Windows has had. Then the Arc icon is clicked and one word appears: 'Finally'. For the next fifteen seconds the film is only the product.",
+          "The opening works because the wait was real. Arc had been Mac-only, and Windows users had been on a waitlist and then a beta for months. Instead of apologizing, the film turns that into a shared joke and puts the viewer in the line, with 'You've been waiting' addressed to them. The counter makes the joke a fact: 186,142 people onboarded since a date on screen. And the history of the Start button widens the wait from months to decades, so 'Finally' can mean both 'it's out' and 'Windows finally has a browser like this'."
+        ],
+        "moments": [
+          {
+            "t": 3,
+            "text": "The wait, as a picture coming down a modem."
+          },
+          {
+            "t": 7,
+            "text": "The wait, counted."
+          },
+          {
+            "t": 15,
+            "text": "The hinge: one word on blue."
+          },
+          {
+            "t": 34,
+            "text": "The last joke: Edge goes in the bin."
+          }
+        ]
+      },
+      {
+        "id": "voices",
+        "title": "A borrowed voice, and the film's own words in type",
+        "paragraphs": [
+          "The only voice is a recording, heard over the first eleven seconds: 'The instantaneous world of electric informational media involves all of us, all at once', and 'Ours is a brand-new world of allatonceness.' The words are Marshall McLuhan's, from The Medium Is the Massage (1967); the film does not credit them. It sits in the retro half and reads as archive, part of that world, not as the brand talking. And it is placed to be ironic: 'all at once' plays over an hourglass and a counter of people kept waiting, and 'a brand-new world' plays over thirty years of Start buttons.",
+          "Everything the company says itself is in type, and there is very little of it: 'You've been waiting.', 'Finally', 'Arc is on Windows', 'Download now', 'arc.net'. All are white bold sans, centered and small in the frame, one idea per card. The product half has no words at all except the interface's own: the suggestions in the command bar and a tooltip reading 'Open Split View'. The voice stops at 11.4 seconds and never returns, so the product is shown in silence apart from the music."
+        ],
+        "moments": [
+          {
+            "t": 4,
+            "text": "The one line addressed to the viewer."
+          },
+          {
+            "t": 8,
+            "text": "'Ours is a brand-new world' over a counter of people waiting."
+          },
+          {
+            "t": 24,
+            "text": "The interface's tooltip is the only caption in the product half."
+          },
+          {
+            "t": 31,
+            "text": "Three cards, each a second long."
+          }
+        ]
+      },
+      {
+        "id": "frames",
+        "title": "Old pixels, then a clean window",
+        "paragraphs": [
+          "The two halves look different before anything is said about them. The past is shot in extreme close-up on soft, enlarged pixels (a title bar's minimize button, IE's Go menu, a caret in a search box, the hourglass), plus a few frames of camcorder footage of a beige PC. The present is a crisp Windows 11 desktop and tight crops of Arc's window, sharp enough to read at phone size. The change of texture at 13.25, from Windows 11's taskbar button to the clean desktop, tells the viewer the history is over.",
+          "The Start-button run is the best-made shot in the film. Seven eras of Windows, each in the same framing (the bottom-left corner, the button at the same size, a cursor on it), cut about every half second. Because only the button changes, the cuts read as one continuous click through thirty years, a match cut repeated six times. The same idea, holding the framing and changing the era, is what makes the film's case: the place you click has changed, and now Arc is in it."
+        ],
+        "moments": [
+          {
+            "t": 1,
+            "text": "The past in extreme, soft close-up."
+          },
+          {
+            "t": 10,
+            "text": "Windows 95's Start, in the frame every era will share."
+          },
+          {
+            "t": 11,
+            "text": "Vista, half a second later, in the same spot."
+          },
+          {
+            "t": 13,
+            "text": "The clean desktop: the present."
+          }
+        ]
+      },
+      {
+        "id": "screens",
+        "title": "Fifteen seconds of product, one gesture per shot",
+        "paragraphs": [
+          "The product half is about twenty shots in fifteen seconds, and each shows one gesture: typing into the command bar with suggestions, the sidebar sliding in, closing a tab, a link opening in a preview over the page, dragging a tab, dropping one into favorites, opening split view, choosing a material, picking a theme color. None is explained. The film trusts that a viewer who has seen browsers will read each gesture from a second of it, and it frames every shot tight enough that the controls are legible.",
+          "Two choices make it feel native to Windows rather than ported. The content is ordinary life (Japandi interiors, an Airbnb in the Hudson Valley, Storm King Art Center, a lo-fi stream, a spicy peanut noodle recipe), not work dashboards, which fits a launch aimed at people who had been waiting to use it. And one shot is a setting only Windows has: 'Mica (default)' or 'Acrylic', the Windows 11 window materials. The montage ends on a soft dissolve through the blurred wallpaper, the one transition that shows the window is translucent."
+        ],
+        "moments": [
+          {
+            "t": 17,
+            "text": "The command bar, typed at real speed."
+          },
+          {
+            "t": 21,
+            "text": "A link opens in a panel over the page."
+          },
+          {
+            "t": 23,
+            "text": "A tab dropped into favorites."
+          },
+          {
+            "t": 27,
+            "text": "Mica or Acrylic: a Windows-only choice."
+          }
+        ]
+      },
+      {
+        "id": "sound",
+        "title": "The music arrives with the product",
+        "paragraphs": [
+          "One music cue runs from the first frame to the last, with a steady pulse (about 62 BPM by estimate, felt strongly). The edit does not lock to it: only 3 of 35 cuts land within 70 ms of a beat, fewer than chance would give, so the fast cutting follows the gags and gestures, not the beat. Under the voice the music sits at about the voice's level rather than ducking under it, which keeps the McLuhan lines feeling like part of a collage rather than narration.",
+          "The level tells the story. The music rises about 5 dB through the Start buttons, dips slightly over the desktop, and jumps about 10 dB right after 'Finally', at 15.5 seconds, as the first Arc window appears. It holds at full level through the whole product half and drops back 10 to 15 dB when the closing cards come up, then fades under the end mark. The release of the wait is heard as well as seen."
+        ],
+        "moments": [
+          {
+            "t": 12,
+            "text": "The music builds as the eras pass."
+          },
+          {
+            "t": 16,
+            "text": "Full level from here, with the first window."
+          },
+          {
+            "t": 32,
+            "text": "Back down for the cards."
+          }
+        ]
+      },
+      {
+        "id": "persuasion",
+        "title": "Turning a delay into the pitch",
+        "paragraphs": [
+          "The film persuades with three moves, none of which is a claim about features. It makes the delay a shared joke, so a viewer who was annoyed by the waitlist is now in on it. It shows a number, beta testers onboarded since a stated date, so the launch looks like the end of a queue other people were already in. And it ends with a sting at the browser Windows ships with: Edge dragged to the Recycle Bin, using the system's own 'Move to Recycle Bin' tooltip.",
+          "The sting comes after the call to action, not before it, which keeps the cards clean ('Arc is on Windows', 'Download now', 'arc.net') and makes the joke the last thing remembered. The end mark repeats the idea quietly: Arc's 'A' peeking around a Windows logo drawn as a window swung open."
+        ],
+        "moments": [
+          {
+            "t": 8,
+            "text": "The queue, as a number."
+          },
+          {
+            "t": 34,
+            "text": "The system's own tooltip makes the joke."
+          },
+          {
+            "t": 35,
+            "text": "Arc stepping through the Windows window."
+          }
+        ]
+      }
+    ],
+    "patterns": [
+      {
+        "name": "Make the delay the joke",
+        "text": "If people have been waiting for your launch, open on the wait. Use images they remember waiting on, address them directly ('You've been waiting.'), then release it with one word on the cut to the product.",
+        "t": 4
+      },
+      {
+        "name": "Count the line",
+        "text": "Show a real, rising number of people who already signed up, with the date it counts from, so the launch reads as the end of a queue and not a cold start.",
+        "t": 7
+      },
+      {
+        "name": "Repeat a framing across eras",
+        "text": "Shoot the same small piece of an interface from successive versions in an identical crop, with the cursor in the same spot, and cut every half second. Only the era changes, so history plays like one gesture.",
+        "t": 10
+      },
+      {
+        "name": "Change texture at the turn",
+        "text": "Shoot the past soft and pixelated and the present crisp. The viewer feels the move to now before anything says it.",
+        "t": 13
+      },
+      {
+        "name": "One gesture per product shot",
+        "text": "Give each feature one tight shot of one action (type, drag, drop, open) and no caption. Let the interface's own tooltip name the one feature that needs a name.",
+        "t": 22
+      },
+      {
+        "name": "Show the platform's own settings",
+        "text": "To prove a port is native, include one setting only that platform has.",
+        "t": 27
+      },
+      {
+        "name": "Put the sting after the call to action",
+        "text": "End the cards cleanly, then add a short gag at a competitor's expense, using the system's own UI, so the joke is the last thing remembered.",
+        "t": 34
+      }
+    ],
+    "absent": "No one from the company speaks or appears, nothing is explained, there are no performance claims, prices or comparisons beyond the closing gag, and the McLuhan recording is not credited. Do not study it for explaining a product; study it for structure, timing and how a launch can turn its own delay into the story."
+  }
+}
