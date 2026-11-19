@@ -1,0 +1,525 @@
+{
+  "note": "A 30-second Dia spot from The Browser Company, posted by its CEO Josh Miller as the company's 'best-performing feature of all time'. Nobody speaks. The same woman sits at the same desk twice. 'Mornings with Chrome.': she reads her screen as pings pile up, her face falls, and she screams, cut with nine strangers screaming on black, over a siren and music that climbs about 27 dB in ten seconds. None of the screams is heard. Then a hit, a second of black and digital silence, and birdsong in the same wide shot. 'Mornings with Dia.': strings, a glance at the painting on her wall, and the laptop opens on the same painting as the header of her Monday Brief, timed to a bird's coo. The breakdown is mostly about the sound design, which tells the whole story without a word, and samples 9 moves as flip books.",
+  "no_transcript": "Nobody speaks. Speech recognition returned only hallucinated 'Thank you.' lines, and the isolated voice stem is empty apart from one bird's coo at 0:19, so the screams in the first half are silent.",
+  "shot_notes": {
+    "0": "A wide of a woman in a green shirt settling at a wooden desk in a bright loft, a closed laptop in front of her. The soundtrack is only room sound: the scrape and thump of her sitting down.",
+    "1": "A tight, soft close-up of a hand lifting a laptop lid, with 'Mornings with Chrome.' in white sans across the middle. A chirpy, ringtone-like cue starts under it.",
+    "3": "Back to the wide: she reads the screen, which the film never shows. Pings and plops of notifications pile up on the soundtrack, and her face falls.",
+    "4": "The same locked-off wide, her mouth opening. The music is rising, and nothing you hear comes from her.",
+    "5": "Mid-scream in the wide, eyes squeezed shut. The scream is silent; at the cut that follows, a siren takes its place.",
+    "6": "A stranger in a black T-shirt screaming straight at the lens on black. The cut from her close-up brought a siren with it; no human scream is heard here or anywhere.",
+    "7": "Another stranger, in a white T-shirt, framed the same way. Each face holds two to six frames, an eighth to a quarter of a second, with her own face cut onto black among them.",
+    "8": "A man in thick glasses, mid-scream. Nine strangers in all, several of them more than once, so the morning reads as everyone's. The music is near its peak.",
+    "9": "A woman with curly hair, teeth bared, one of the last faces before the film whips back to her and cuts out.",
+    "10": "Black. A hit (the tagger hears a bang or a door) lands on the cut at 9.9, and by 10.25 the sound has dropped to digital silence.",
+    "11": "The same wide, the same woman, the same desk, and she is calm. Birdsong fades up from nothing with the picture.",
+    "12": "Held. For two seconds the film offers only birds and a still shot, the quietest moment in it.",
+    "13": "'Mornings with Dia.' in the same white sans at the same size. Strings enter with the title, about 15 dB louder than the birds.",
+    "15": "A cut to what she is looking at: a small painting on the wall above the desk, a figure with a parasol on a sunlit coast. The music thins to almost nothing under it.",
+    "16": "Back on her, looking up at the painting with the start of a smile. The strings return as she turns to the desk.",
+    "17": "She looks down and reaches for the laptop. A soft tick sits in the music.",
+    "18": "A low angle across the desk as the lid comes up, and the screen shows the same painting. The prop on the wall has become the screen.",
+    "19": "The laptop open on the painting. The music dips for half a second to leave room for what comes next.",
+    "20": "'The Monday Brief' fades up in yellow serif over the painting on screen, timed to a bird's coo, the one sound that seems to come from inside the picture.",
+    "22": "The screen recording now floats over a painted landscape of green leaves and a red roof, in the same brushy style as the painting. The brief is dated '22 JUNE 2026' and '09:05:00 AM', with 'Top to-dos' below.",
+    "24": "'You have a busy day today!', with a line on each meeting and a Slack or Notion icon, and a yellow starburst sticker reading 'Prep for this →' beside it.",
+    "25": "The cursor on the sticker. The click is marked by soft clicks in the music; it is the only interaction shown.",
+    "26": "The end card over a soft close-up of her hand at the laptop: 'A better way to start your work day.' and 'diabrowser.com'. The music dips on the cut and comes back.",
+    "27": "The Dia mark rises into place above the line, small and white.",
+    "29": "Held to the end as the strings fade out.",
+    "23": "A tight crop of the header, 'Monday Brief' in huge yellow serif across the figure with the parasol, and the first to-dos below: 'Respond to Marco's Art Direction' struck through, then 'Finalize Summer Launch Timeline' and 'Make Time to Thank Ben'."
+  },
+  "motion_intro": "The camera hardly moves. Most shots are locked off, and the same wide of the woman at her desk is used for both mornings, so the difference between them has to come from the cutting and the sound. The first half accelerates: shots of two to three seconds give way to faces held a quarter of a second, ending in a whip and a cut to black. The second half slows down and moves by matching: from the painting on the wall, to the same painting on the screen, to the brief floating over a painted landscape. The sequences below follow both lid openings, the build to the scream, the reset through black, the painting and the product.",
+  "motion": [
+    {
+      "id": "chrome-lid",
+      "start": 0.0,
+      "end": 2.75,
+      "fps": 8,
+      "title": "Sitting down, and the first lid",
+      "tags": [
+        "wide to insert",
+        "soft focus",
+        "title"
+      ],
+      "text": "The film opens mid-action in the wide: she is already settling into the chair, and the only sound is the room (a scrape, a thump). At 0.75 it cuts to a soft close-up of her hand lifting the laptop lid, and at 1.0 'Mornings with Chrome.' appears in white sans, centered, with no animation. A bright, chiming cue starts on the title, and the lid is held open, out of focus, until the cut back to the wide at 2.71."
+    },
+    {
+      "id": "build",
+      "start": 2.7,
+      "end": 5.7,
+      "fps": 6,
+      "title": "Reading, then screaming, in one locked-off shot",
+      "tags": [
+        "locked off",
+        "performance",
+        "slow build"
+      ],
+      "text": "The wide holds for 2.9 seconds. She reads, and over the first second her brow tightens while notification sounds land one after another (a ding at about 2.0, plops from 2.2 to 3.5, chimes at 3.0). By 3.75 her mouth is opening, and from 4.25 she is screaming, head tipped forward. The camera does not move or cut in. The music climbs steadily under the whole shot, about 15 dB in three seconds."
+    },
+    {
+      "id": "faces",
+      "start": 5.5,
+      "end": 10.0,
+      "fps": 8,
+      "title": "One scream, then everyone's",
+      "tags": [
+        "close-up",
+        "accelerating cuts",
+        "faces on black",
+        "whip"
+      ],
+      "text": "At 5.58 a frame-filling close-up of her scream, and a siren arrives on the cut. From about 6.0 her face is on black too, and the film starts cutting between her and nine strangers screaming straight at the lens: a man in a black T-shirt, a bearded man, a man in glasses, a woman with curly hair, a man in a pink shirt, a woman more shocked than angry, a bald man, another man in thick glasses. Each face holds two to six frames, an eighth to a quarter of a second, and several come back. The changes are face to face on black, so the cut detector misses most of them. At 9.5 it is her again in the room, her mouth closing for a beat at about 9.6, then a whip pan across her green shirt at 9.75 and a hard cut to black at 9.92. The music peaks at about -13 dBFS from 8.25 to 9.25."
+    },
+    {
+      "id": "reset",
+      "start": 9.7,
+      "end": 13.5,
+      "fps": 4,
+      "title": "A hit, black, silence, birds",
+      "tags": [
+        "hard cut to black",
+        "silence",
+        "same setup",
+        "title"
+      ],
+      "text": "The whip ends on black at 9.92 with a hit, and by 10.25 the soundtrack has fallen from -13 dBFS to digital silence. The black holds for 1.1 seconds. At 11.04 the same wide returns, framed identically, and she is calm; birdsong fades up with the picture, very quietly (about -57 dBFS). Nothing else happens for two seconds. At 13.0 'Mornings with Dia.' appears in the same place and type as the first title, and strings enter under it."
+    },
+    {
+      "id": "painting",
+      "start": 14.2,
+      "end": 17.6,
+      "fps": 4,
+      "title": "What she is looking at",
+      "tags": [
+        "eyeline cut",
+        "insert",
+        "plant"
+      ],
+      "text": "At 14.5 the film cuts to the wall above her desk: a small painting of a figure with a parasol on a sunlit coast, a stack of books below it. The music phrase ends just before the cut and thins to almost nothing by 15.5, so the painting gets a quiet beat. At 16.21 it is back on her, looking up at it with the start of a smile, and the strings come back as she turns to the laptop. The painting is a plant: it will be the first thing on her screen."
+    },
+    {
+      "id": "dia-lid",
+      "start": 17.2,
+      "end": 20.6,
+      "fps": 8,
+      "title": "The second lid opens on the painting",
+      "tags": [
+        "low angle",
+        "match",
+        "title fade",
+        "sound from the picture"
+      ],
+      "text": "At 17.75 a low angle across the desk: her hand pulls the lid up, and by 18.25 the screen shows the same painting, framed on white. It is the same gesture as the first lid at 0.75, now in focus and shown in full. The music dips for half a second around 19.0, and at about 19.6 'The Monday Brief' fades up in yellow serif over the painting while a bird coos, the one sound in the film that seems to come from inside a picture."
+    },
+    {
+      "id": "into-screen",
+      "start": 20.8,
+      "end": 23.4,
+      "fps": 8,
+      "title": "From the desk into a painted world",
+      "tags": [
+        "push in",
+        "whoosh",
+        "screen recording",
+        "painted backdrop"
+      ],
+      "text": "The laptop holds on the desk until about 21.3, when a whoosh carries the film into the screen: the brief now floats as a clean window over a painted landscape of leaves and a red roof, in the same brushy style as the painting. The window drifts slightly larger. At 23.12 it cuts in tight on the header, the yellow 'Monday Brief' type cropped huge across a figure with a parasol, and the first to-dos below."
+    },
+    {
+      "id": "brief",
+      "start": 23.1,
+      "end": 26.4,
+      "fps": 6,
+      "title": "Scrolling the brief to one click",
+      "tags": [
+        "scroll",
+        "cursor",
+        "sticker button",
+        "click"
+      ],
+      "text": "The camera glides down the page: 'Respond to Marco's Art Direction' already struck through, 'Finalize Summer Launch Timeline', 'Make Time to Thank Ben', 'Settings Redesign — Prioritization', 'Meeting Prep in Jour', each with a line of context and a Slack, Notion or GitHub icon. At 25.0 it settles on 'You have a busy day today!' and a yellow starburst sticker, 'Prep for this →'; the cursor clicks it at about 25.4, with small clicks in the music. The footer credits 'Google Calendar, Slack, Notion, and GitHub'."
+    },
+    {
+      "id": "end-card",
+      "start": 26.0,
+      "end": 30.0,
+      "fps": 4,
+      "title": "End card, and the mark rises",
+      "tags": [
+        "end card",
+        "soft focus",
+        "logo reveal"
+      ],
+      "text": "At 26.25 a soft close-up of her hand resting near the laptop, with 'A better way to start your work day.' in two staggered lines of white sans and 'diabrowser.com' in small serif below. The music dips on the cut and comes back. At 27.0 the Dia mark rises into place above the line, half visible and then whole by 27.25, and the card holds as the strings fade out from 29.0."
+    }
+  ],
+  "craft": {
+    "lede": [
+      "A thirty-second comparison ad in which nobody says a word. The same woman sits at the same desk and opens the same laptop twice. 'Mornings with Chrome.' turns into a scream that spreads to nine strangers; 'Mornings with Dia.' turns into a painting, a calm look and a brief that tells her what to do first. The Chrome screen is never shown. You know what is on it from the sound.",
+      "It is worth studying almost entirely for its sound design. The screams are silent; a siren and a climbing electronic cue scream for them. The turn between the two halves is a hit and a second of digital silence. The calm morning starts on birdsong alone, and the product reveal is timed to a bird's coo that seems to come out of the painting on screen. Take the sound away and the film is two nearly identical takes; with it, it is a story with a villain and a relief."
+    ],
+    "map": {
+      "lanes": [
+        {
+          "id": "story",
+          "segments": [
+            {
+              "start": 0,
+              "end": 2.71,
+              "label": "Opens the laptop",
+              "note": "'Mornings with Chrome.'"
+            },
+            {
+              "start": 2.71,
+              "end": 5.58,
+              "label": "Reads, then screams"
+            },
+            {
+              "start": 5.58,
+              "end": 9.92,
+              "label": "Everyone screams",
+              "note": "Her and nine strangers."
+            },
+            {
+              "start": 9.92,
+              "end": 11.04,
+              "label": "Black"
+            },
+            {
+              "start": 11.04,
+              "end": 14.5,
+              "label": "Same desk, calm",
+              "note": "'Mornings with Dia.'"
+            },
+            {
+              "start": 14.5,
+              "end": 17.75,
+              "label": "The painting"
+            },
+            {
+              "start": 17.75,
+              "end": 21.3,
+              "label": "Opens the laptop",
+              "note": "The painting is on the screen."
+            },
+            {
+              "start": 21.3,
+              "end": 26.25,
+              "label": "The Monday Brief"
+            },
+            {
+              "start": 26.25,
+              "end": 30.08,
+              "label": "End card"
+            }
+          ]
+        },
+        {
+          "id": "voices",
+          "segments": [
+            {
+              "start": 1.0,
+              "end": 2.71,
+              "label": "'Mornings with Chrome.'",
+              "kind": "text"
+            },
+            {
+              "start": 13.0,
+              "end": 14.5,
+              "label": "'Mornings with Dia.'",
+              "kind": "text"
+            },
+            {
+              "start": 19.6,
+              "end": 21.3,
+              "label": "'The Monday Brief'",
+              "kind": "text"
+            },
+            {
+              "start": 26.25,
+              "end": 30.08,
+              "label": "'A better way to start your work day.'",
+              "kind": "text"
+            }
+          ]
+        },
+        {
+          "id": "sound",
+          "segments": [
+            {
+              "start": 0,
+              "end": 0.9,
+              "label": "Room sound",
+              "kind": "ambience",
+              "note": "Her chair, a thump on the cut."
+            },
+            {
+              "start": 0.9,
+              "end": 2.0,
+              "label": "Chiming cue",
+              "kind": "music"
+            },
+            {
+              "start": 2.0,
+              "end": 5.5,
+              "label": "Pings and plops",
+              "kind": "sfx",
+              "note": "Notifications pile up over a rising cue."
+            },
+            {
+              "start": 5.5,
+              "end": 6.5,
+              "label": "Siren",
+              "kind": "sfx",
+              "note": "In place of her scream."
+            },
+            {
+              "start": 6.5,
+              "end": 9.92,
+              "label": "Climax",
+              "kind": "music",
+              "note": "Peaks near -13 dBFS."
+            },
+            {
+              "start": 9.92,
+              "end": 10.25,
+              "label": "Hit",
+              "kind": "sfx"
+            },
+            {
+              "start": 10.25,
+              "end": 11.0,
+              "label": "Digital silence",
+              "kind": "silence"
+            },
+            {
+              "start": 11.0,
+              "end": 13.0,
+              "label": "Birdsong",
+              "kind": "ambience"
+            },
+            {
+              "start": 13.0,
+              "end": 19.5,
+              "label": "Strings",
+              "kind": "music",
+              "note": "Phrases that ease off on each cut."
+            },
+            {
+              "start": 19.5,
+              "end": 20.25,
+              "label": "A bird's coo",
+              "kind": "sfx",
+              "note": "With the title on the screen."
+            },
+            {
+              "start": 20.25,
+              "end": 30.08,
+              "label": "Strings to the end",
+              "kind": "music",
+              "note": "A whoosh into the screen, clicks on the button."
+            }
+          ]
+        },
+        {
+          "id": "picture",
+          "segments": [
+            {
+              "start": 0,
+              "end": 9.92,
+              "label": "Chrome morning",
+              "kind": "staged",
+              "note": "The loft wide, an insert of the lid, faces on black."
+            },
+            {
+              "start": 9.92,
+              "end": 11.04,
+              "label": "Black",
+              "kind": "title"
+            },
+            {
+              "start": 11.04,
+              "end": 21.3,
+              "label": "Dia morning",
+              "kind": "staged",
+              "note": "The same wide, the painting, the lid."
+            },
+            {
+              "start": 21.3,
+              "end": 26.25,
+              "label": "The brief",
+              "kind": "screen",
+              "note": "Over a painted landscape."
+            },
+            {
+              "start": 26.25,
+              "end": 30.08,
+              "label": "End card",
+              "kind": "title"
+            }
+          ]
+        }
+      ]
+    },
+    "aspects": [
+      {
+        "id": "sound",
+        "title": "The soundtrack tells the story",
+        "paragraphs": [
+          "The Chrome half is built as one long crescendo. It starts on plain room sound (the chair, a thump as the film cuts to the laptop), then a bright, chiming cue under the title. Notification sounds pile in as she reads, a ding and a run of plops and chimes between 2.0 and 3.5, so the screen we never see is heard as a stream of interruptions. The level climbs without a break, from about -40 dBFS at the title to -13 dBFS at the peak, roughly 27 dB in ten seconds. A sound-event tagger hears the second half of the climb as tense, electronic music.",
+          "Her scream is never heard. The isolated voice stem is empty through the whole first half, and on the cut to her close-up at 5.58 a siren arrives in its place. The nine strangers scream silently too. Leaving the voices out keeps the joke from turning ugly (ten real screams would be hard to sit through) and lets the music scream for everyone at once, which reads as a feeling rather than a noise.",
+          "The turn is the cleanest edit in the film. On the cut to black at 9.92 a single hit lands, and a quarter second later the soundtrack is digital silence. After ten seconds of build, the silence is felt as relief before any picture explains it. Then birdsong fades up from nothing with the same wide shot, very quiet (around -57 dBFS), and the film holds on birds and a calm face for two seconds before the strings enter with 'Mornings with Dia.'.",
+          "The Dia half is not one even bed of music. The strings play in phrases that ease off on each beat of the story: they thin almost to silence over the painting on the wall, dip for half a second before the laptop's title appears, and dip again on the cut to the end card. Into one of those gaps the film puts a bird's coo, exactly as 'The Monday Brief' fades up over the painting on screen, so the product's first frame seems to have a sound of its own. A whoosh carries the camera into the screen, and soft clicks mark the press of 'Prep for this'. The cutting follows the story, not a beat: only 4 of 15 detected cuts land within 70 ms of the music's estimated beat, fewer than chance."
+        ],
+        "moments": [
+          {
+            "t": 3,
+            "text": "Notifications heard, never seen."
+          },
+          {
+            "t": 5.6,
+            "text": "A siren where the scream should be."
+          },
+          {
+            "t": 10,
+            "text": "Digital silence."
+          },
+          {
+            "t": 11,
+            "text": "Birdsong, from nothing."
+          },
+          {
+            "t": 20,
+            "text": "A coo with the title on screen."
+          }
+        ]
+      },
+      {
+        "id": "story",
+        "title": "Two takes of one morning",
+        "paragraphs": [
+          "The structure is a before and after shot as a repeat. The same woman, the same green shirt, the same desk and the same locked-off wide are used for both mornings, and the two titles are the same sentence with one word changed: 'Mornings with Chrome.', 'Mornings with Dia.'. Because nothing in the frame changes, the viewer compares only what does: her face, the pace of the cutting and the sound.",
+          "The first half spends ten seconds turning a small thing (opening a laptop) into a collective scream, with strangers on black making it everyone's morning. The second half spends ten seconds doing almost nothing: she looks at a painting, smiles, opens the laptop. The product only arrives in the last third, and by then the viewer wants it."
+        ],
+        "moments": [
+          {
+            "t": 3,
+            "text": "The wide, first time."
+          },
+          {
+            "t": 11,
+            "text": "The wide, second time."
+          },
+          {
+            "t": 13,
+            "text": "One word changed."
+          }
+        ]
+      },
+      {
+        "id": "frames",
+        "title": "Holding the shot, then matching it",
+        "paragraphs": [
+          "The camera barely moves, which makes the cuts do the work. In the Chrome half the shots shrink from nearly three seconds to a quarter of a second, ending in a whip pan across her shirt and a hard cut to black. The strangers are framed the same way, head-on, on black, mouths open at the lens, so the cuts between them read as one scream passed along a line.",
+          "The Dia half moves by matching. Her eyeline leads to the painting on the wall; the painting comes back on the laptop when the lid opens; the brief then floats over a painted landscape in the same style. Each shot hands its image to the next, so the product looks like it grew out of her room. The two lid openings rhyme as well: the first is a soft, out-of-focus insert, and the second is a sharp low angle that shows the screen."
+        ],
+        "moments": [
+          {
+            "t": 8,
+            "text": "Strangers framed alike, on black."
+          },
+          {
+            "t": 15,
+            "text": "The painting on the wall."
+          },
+          {
+            "t": 18,
+            "text": "The same painting on the screen."
+          },
+          {
+            "t": 22,
+            "text": "The brief in a painted world."
+          }
+        ]
+      },
+      {
+        "id": "screens",
+        "title": "Five seconds of product, all of it content",
+        "paragraphs": [
+          "Dia gets about five seconds of screen time, and it shows one feature, the Monday Brief, as a finished thing rather than a demo. There is no typing and no prompt. The page opens on her painting and the date, lists her to-dos with the context behind each ('He needs a clear yes/no…'), and ends on 'You have a busy day today!' with a yellow starburst to prep for a meeting. The footer names where it all came from: Google Calendar, Slack, Notion and GitHub.",
+          "The brief is designed to look like part of her room, not like software. It uses her painting as its header, a yellow serif title, and a hand-cut sticker as its button, and it floats over a painted backdrop instead of a desktop. The Chrome screen, by contrast, is never shown at all; the film trusts the viewer to fill it in with their own inbox."
+        ],
+        "moments": [
+          {
+            "t": 20,
+            "text": "The brief opens on her painting."
+          },
+          {
+            "t": 23,
+            "text": "To-dos with the reason behind each."
+          },
+          {
+            "t": 25,
+            "text": "One click: 'Prep for this'."
+          }
+        ]
+      },
+      {
+        "id": "persuasion",
+        "title": "Felt before it is explained",
+        "paragraphs": [
+          "The film names its competitor in the first title and never says anything bad about it. It does not need to: the viewer hears ten seconds of pings, a siren and a rising cue, and then silence, and takes the side of the silence before any product appears. The claim is made in the body, through the change in sound, which is harder to argue with than a line of copy.",
+          "The only argument in words comes at the very end, and it is modest: 'A better way to start your work day.' By then the film has already shown the better way as a feeling (birds, a painting, a smile) and then as a page. Josh Miller's post calls it the company's best-performing feature video, which suggests the restraint did not cost it reach."
+        ],
+        "moments": [
+          {
+            "t": 1,
+            "text": "The competitor named, never shown."
+          },
+          {
+            "t": 12,
+            "text": "The relief, before any product."
+          },
+          {
+            "t": 26,
+            "text": "The one line of argument."
+          }
+        ]
+      }
+    ],
+    "patterns": [
+      {
+        "name": "Let the score scream instead of the actors",
+        "text": "For an extreme reaction, cut the human voice and give its sound to the music and an effect (here a siren). It keeps the feeling and loses the noise, and it lets one sound stand for many people.",
+        "t": 6
+      },
+      {
+        "name": "Build, hit, silence",
+        "text": "Run one uninterrupted crescendo, end it on a single hit over a cut to black, and drop to true silence for most of a second. The silence is felt as relief before the next shot explains it.",
+        "t": 10
+      },
+      {
+        "name": "Reshoot the same frame with opposite sound",
+        "text": "For a before and after, keep the actor, the set and the camera position identical and change only the sound and the pace of the cutting. The viewer compares the feeling, not the props.",
+        "t": 11
+      },
+      {
+        "name": "Plant the product's first image in the room",
+        "text": "Show an object in the set (here a painting) with an eyeline cut, and make it the first thing on screen when the product opens. The product looks like it belongs to the person.",
+        "t": 18
+      },
+      {
+        "name": "Give the reveal a sound from inside the picture",
+        "text": "Clear a half-second gap in the music and fill it with a sound that belongs to the image on screen (a bird's coo over a landscape painting) as the product's title appears.",
+        "t": 20
+      },
+      {
+        "name": "Change one word in the title card",
+        "text": "Use the same sentence, type and position for both halves and change only the name. The repetition makes the comparison without a word of criticism.",
+        "t": 13
+      }
+    ],
+    "absent": "There is no voice, no narration, no on-screen explanation of how the Monday Brief is made, and no shot of Chrome itself. The product is shown for about five seconds, as a finished page. Do not study it for explaining a feature; study it for how sound, silence and a repeated shot can carry a comparison on their own."
+  }
+}
