@@ -20,7 +20,7 @@ import motion_sequences
 HERE = Path(__file__).resolve().parent
 REPO = HERE.parents[1]
 VIDEOS = json.loads((REPO / "gallery/videos.json").read_text())["videos"]
-NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 77)]
+NUMBERS = [*range(1, 14), 16, 17, 28, *range(29, 36), *range(41, 79)]
 # Seconds between library frames. Short clips are sampled more densely than one per second.
 FRAME_STEP = {47: 0.25}
 CURATED_FRAMES = {
@@ -849,7 +849,7 @@ def transcript(number):
             timestamp = "00:" + timestamp
         current = [html.unescape(TAG.sub("", line)).strip() for line in raw[pos + 1:]]
         current = [line for line in current if line]
-        if vtt.name.endswith(".en.vtt") and number in (1, 7, 9, 48, 53, 54, 55, 56, 57, 58):
+        if vtt.name.endswith(".en.vtt") and number in (1, 7, 9, 48, 53, 54, 55, 56, 57, 58, 78):
             current = [" ".join(current)] if current else []
         overlap = 0
         for n in range(min(len(previous), len(current)), 0, -1):

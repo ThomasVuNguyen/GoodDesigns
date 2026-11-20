@@ -1,0 +1,593 @@
+{
+  "note": "Jon Bois's two-and-a-half-minute parody of an explainer, posted in May 2016. A calm, unhurried narrator gives six numbered reasons never to vote, and every reason gets the same card: a huge numeral, two lines of bold sans and a catalog box with a useless product ('Voting stones', 'The Incredible Voting Dog', which is a cinder block, 'Voter's supper', a fork beside a power outlet). The visuals are the usual explainer tools, each one broken: a map of voter fees by state for a '2014 Presidential election' with Cuba at $68, a seven-line URL for 'Form Q-83', a pie chart where one vote is 1%. The middle reason spirals from a database error to a night-vision hallway where tiny type whispers 'you do not belong here', and the last one ends as a phone filming a laptop as someone searches 'what color pill in the matrix was the good one'. Almost all of it is one mint canvas that a virtual camera pans, spins and zooms across, with 11 hard cuts in 157 seconds. The breakdown follows how a deadpan voice and escalating pictures make the joke, how the canvas is built and travelled, and samples 14 moves as flip books.",
+  "transcript_kind": "Local speech recognition on the isolated voice stem, checked against a second pass on the full mix, with 'Q-83' and the 'Department of Registrars' spelled as on screen. Both passes hear '1,000 Americans' at 2:00; the chart on screen reads '10,000 Americans'",
+  "shot_notes": {
+    "0": "The film opens on wallpaper: molars and the triangle-and-serpent emblem of dentistry, faded into a flat mint. Nothing in the script is about teeth.",
+    "3": "The title, 'Why you shouldn't vote', in heavy geometric sans between two hairline rules, ringed by cut-out photos of floss, a toothbrush, a hammer and a handsaw. Every photo is tinted into the same dark green, so clip art from anywhere reads as one set.",
+    "7": "The template for every reason: a huge numeral, a two-line claim in bold sans under a rule, and a thin-ruled box with an italic serif caption, like a mail-order catalog. Here the product is 'Voting stones', three gems.",
+    "12": "'Voter fees by state, 2014 Presidential election': a plain outline map with a dollar figure in every state, and Cuba drawn in at $68. There was no presidential election in 2014 and there is no fee to vote. A tiny $1 bill already sits at right, waiting for its line.",
+    "17": "The camera has swung right and pushed in on that parked dollar bill, now filling the middle of the frame.",
+    "21": "Pulled back: the bill has become a row of bills running out to sea off the East Coast, the line '100 feet long'.",
+    "24": "At the end of the row, a heap of cash and '= $1,000,000' in italic serif. The voice: 'And if you have a lot more money than that, then you have $1 million.'",
+    "30": "'2. You'll probably be stuck at work', with 'Voting tea': a phone dunked in a teacup.",
+    "33": "A clip-art desk calendar headed 'welcome to this calendar', its weekdays reading S ? M T W T F S, with a red X stamped on Tuesday.",
+    "36": "EMPLOYMENT MART, a strip-mall storefront crushed to two tones, slides up from the bottom of the canvas.",
+    "39": "'3. You haven't filled out your Q-83 form'. The catalog box holds 'The Incredible Voting Dog', which is a cinder block.",
+    "43": "FORM Q-83, a dense government procurement form with numbered boxes for report number, contracting office code and DUNS number. It stays white and untinted, the first thing on the canvas not in mint.",
+    "45": "'Access the Q-83 form at:' over a URL seven lines long in small italic serif, full of 'proxy', 'portal', 'DEPARTMENT_PORTAL.aspx' and a run of zeros.",
+    "47": "The camera pushes in until the URL is huge and reads across it from left to right, as if someone is copying it out.",
+    "52": "A Windows printers folder over an 'IBM Rational Portfolio Manager' dialog: 'Database error. Please contact your System Administrator'. Real interface pieces, pasted flat on the mint.",
+    "56": "The camera has spun into a street map until the street names are upside down, and an address block in a pixel font sits level over them: 'Office of the System Administrator, c/o Melanie McKenzie, 801-C W 95th Street, Lenexa, KS 66219'. The map keeps its own tan and blue, untinted.",
+    "60": "Below the map, the 2010 Census form, 'Start here', for the phone number 'associated with your name in the most recent census'.",
+    "62": "A fast whip back up the canvas retraces reason three in half a second: the census form, then the map and the error dialog, then the printers folder, the URL card and the Internet Explorer 6 ad, all small and laid out in rows on one mint field, before the camera lands on Form Q-83.",
+    "66": "Hard cuts across the form's fine print, 'TOTAL COSTS', 'PROFIT', 'MARKUP RATE (Line 32 + 33 divided by 31)', each a different scale and crop.",
+    "71": "The canvas gives way to footage: an empty office corridor tinted night-vision green, with a lower third, 'DEPT. OF REGISTRARS, EST. 1247', between two swords, an all-seeing eye and a square and compass.",
+    "75": "The corridor has gone almost black. Tiny serif lines repeat across the ceiling: 'what are you doing? you do not belong here'.",
+    "82": "A long corridor glowing green at the end of a dark tunnel, the horror-film shot under 'they will all talk about you as though you are stupid'.",
+    "84": "A man in glasses stares straight into the lens from the corridor as the voice says 'They will all see you.'",
+    "88": "Back on the mint: '4. People will think you are strange', with 'Voter's Helper™', a shovel.",
+    "92": "The footage of people 'lined up to vote' is shown as an inverted, blue negative: here a high angle on cars along a curving lane.",
+    "97": "Inverted again: the backs of people standing in a line in a meeting room. 'They're just standing around doing nothing.'",
+    "101": "A poll worker at a table, still in negative, his face lit like an X-ray.",
+    "105": "'5. All of the candidates are bad', with 'Voter's supper': a fork next to an electrical outlet.",
+    "110": "Candidate photos cut out as rough polygons: Trump, Cruz, Kasich, Clinton and Sanders, plus three faces the voice never mentions. A handwritten-looking aside sits between them: 'NOTE TO JON: remember to take these guys out, they aren't in the race anymore. they were too handsome. love, jon'. Its arrows point at Cruz and Kasich, who left the race on May 3 and May 4, 2016; the video went up on May 4.",
+    "114": "The push-in ends filling the frame with Sanders's smiling photo: 'He's the very worst one.'",
+    "118": "'6. The math just doesn't add up', with 'Emergency voting kit': a Dracula DVD and a crowbar.",
+    "124": "'10,000 Americans cast a vote for President' over a solid black disc. The disc holds for five seconds before anything is added.",
+    "127": "A white sliver appears, labeled '1 vote = 1%', a fraction of the disc nowhere near one percent.",
+    "131": "An orange wedge, 'Electoral stuff', arrives on the voice's 'Plus the electoral stuff, so who cares.'",
+    "134": "A red wedge, 'All of the government problems', overlaps the label, and the camera tilts until the title is printed on a slant.",
+    "136": "Hard cut to a phone held up to a laptop: a Google search typed live, 'examples of government problems', the screen soft and catching glare.",
+    "139": "'CORRUPTION' typed in spaced capitals, close and out of focus.",
+    "143": "'orwellian nightmare definition', with real results and '(0.57 seconds)'.",
+    "146": "The last search, after the voice has finished: 'what color pill in the matrix was the good one'.",
+    "150": "End card: 'Presented by Jon Bois at A HUGE DOG', a sauropod engraving between the words, and 'Please do not share this video with anyone. Sharing is a form of theft. Besides, I made it just for you.'"
+  },
+  "motion_intro": "Nearly all of the film is one flat mint canvas with things pasted on it, and a virtual camera that travels across it: the first detected cut comes at 0:46.7, and there are only 11 in 157 seconds, a median shot of 6.45 seconds. Instead of cutting, the camera tilts down from each reason card to its props, whips sideways to the next card, pushes into details (a dollar bill, a URL, an address) and pulls back to show where they sit. The props barely animate themselves; a red X stamps, wedges snap into a pie, a bill repeats into a row. The hard cuts gather where the film leaves the canvas or loses its footing: three across the form's fine print, four in and out of the inverted voter footage, three around the phone filming a laptop. The motion also escalates with the script, from smooth, centered moves for the first two reasons to whips and spins through the Q-83 bureaucracy, tinted and inverted footage, and finally a handheld phone. The sequences below follow the title, the dollar line, the calendar, the URL and map, the whip back through reason three, the corridor, the faces, the pie and the searches.",
+  "motion": [
+    {
+      "id": "title-open",
+      "start": 0.5,
+      "end": 7.25,
+      "fps": 4,
+      "title": "The title rises out of the wallpaper, then the canvas is revealed",
+      "tags": [
+        "cut-outs",
+        "rise in",
+        "tilt",
+        "pull back",
+        "push in"
+      ],
+      "text": "The tooth wallpaper sits alone until about 0.75, when the floss box enters from the bottom edge. From 1.25 the hammer, the toothbrush and the title follow it up from below the frame, and the cluster settles by 3.25 with the toothbrush and hammer either side of 'vote' and the saw underneath. It holds, drifting slightly, until 6.0. Then the camera drops fast down the canvas, so title, tools and wallpaper all leave by the top, and at 6.75 it is pulled far back: the card for reason one and the voter-fee map sit side by side, small, on a plain mint field. By 7.0 it has pushed into the card. The first seven seconds already show the method: everything lives on one surface and the camera goes to it."
+    },
+    {
+      "id": "dollar-line",
+      "start": 15.0,
+      "end": 20.5,
+      "fps": 6,
+      "title": "From the map to the dollar bill parked beside it",
+      "tags": [
+        "pan",
+        "push in",
+        "repeat",
+        "pull back"
+      ],
+      "text": "The $1 bill has sat small to the right of the map since about 0:11. At 15.5 the camera swings right past the map onto it and pushes in, so by 16.3 the bill fills the middle of the frame on 'picture it like this'. At 18.3 copies of it appear either side, a row sliding through the frame, and from 19.5 the camera pulls back fast until the bills are a thin strip with the East Coast and Cuba at left edge. The bill was planted five seconds before the voice needed it."
+    },
+    {
+      "id": "million",
+      "start": 20.0,
+      "end": 25.0,
+      "fps": 4,
+      "title": "Along the line to a million dollars",
+      "tags": [
+        "pan",
+        "type in",
+        "deadpan"
+      ],
+      "text": "The camera tracks right along the row of bills for two and a half seconds of nothing but bills, the coast falling away at left. At 22.5 a heap of cash slides in from the right edge, and from 23.5 the serif '= $1,000,000' follows it in, letter by letter as the frame moves. The voice has said 'if you have a lot more money than that' and the pan is the punchline's timing: the heap arrives only once the line has run long enough to feel pointless."
+    },
+    {
+      "id": "calendar",
+      "start": 31.0,
+      "end": 35.5,
+      "fps": 6,
+      "title": "Down to the calendar, the X, and Employment Mart",
+      "tags": [
+        "tilt",
+        "stamp",
+        "rise in"
+      ],
+      "text": "At 31.3 the camera tilts down off the card for reason two and finds the clip-art calendar sitting beneath it. It holds while a red X lands on Tuesday at about 32.3, with no scale or bounce, just there on the next frame. At 34.0 the camera tilts down again; the calendar leaves the top as EMPLOYMENT MART rises from the bottom, settled by 35.0. The canvas is laid out like a page, and the camera reads it top to bottom."
+    },
+    {
+      "id": "whip-to-url",
+      "start": 43.5,
+      "end": 45.25,
+      "fps": 12,
+      "title": "A whip pan past an Internet Explorer 6 ad",
+      "tags": [
+        "whip pan",
+        "motion blur",
+        "background gag"
+      ],
+      "text": "From the Form Q-83 close-up, the camera whips left at about 43.6. In the blur a full-color 'Download Internet Explorer 6 Now!' ad, pasted on the canvas between the form and the URL card, crosses the frame from left to right in under a second, and the camera lands on the URL card by 44.9 as the voice says 'navigate your browser to the following address'. The ad is never mentioned; it is there for whoever pauses."
+    },
+    {
+      "id": "url-read",
+      "start": 46.25,
+      "end": 48.25,
+      "fps": 8,
+      "title": "The camera reads the URL",
+      "tags": [
+        "push in",
+        "scan",
+        "snap back"
+      ],
+      "text": "At 46.6 the camera jumps in close on the URL so the italic serif lines fill the frame, then slides right across them, the start of each line leaving the left edge, as if the viewer is being made to copy it out. By 47.9 it snaps back to the full card. The voice, over the scan: 'Typing it incorrectly will put your computer at risk of spam.'"
+    },
+    {
+      "id": "map-spin",
+      "start": 54.0,
+      "end": 58.25,
+      "fps": 6,
+      "title": "Spinning into the System Administrator's address",
+      "tags": [
+        "rotate",
+        "zoom",
+        "pixel type"
+      ],
+      "text": "The street map of Lenexa enters from the top, and from 54.5 the camera rotates and zooms at once: by 55.0 the map has turned a quarter turn, and by 55.7 it is close and the street names are upside down. Over them an address block in a pixel font stays level and readable, held to 56.3: 'Office of the System Administrator'. Then the camera spins back out, the map level and small again by 58.0. It is the first rotating move in the film, and it lands on its most bureaucratic line."
+    },
+    {
+      "id": "board-reveal",
+      "start": 61.75,
+      "end": 63.5,
+      "fps": 12,
+      "title": "Whipping back up through reason three",
+      "tags": [
+        "whip tilt",
+        "motion blur",
+        "layout reveal"
+      ],
+      "text": "From the census form at the bottom of reason three, the camera whips back up the canvas in about half a second instead of cutting. Each frame catches a row of what came before: the census form (62.25), then the map, the error dialog and the end of the URL (62.4), then the printers folder, the 'Access the Q-83 form at:' card and the Internet Explorer 6 ad (62.6), and then the card for reason three and Form Q-83, where it pushes in by 63.0. The voice is going back to the form ('Once your Q-83 form is printed'), and the camera goes back with it, showing for a blink that the whole reason is laid out in rows on one page."
+    },
+    {
+      "id": "form-cuts",
+      "start": 64.75,
+      "end": 70.5,
+      "fps": 6,
+      "title": "Cutting through the fine print into the corridor",
+      "tags": [
+        "hard cut",
+        "scale jump",
+        "pan",
+        "footage panel"
+      ],
+      "text": "Three of the detected hard cuts land here, at 64.9, 65.6 and 67.1, and between them the camera jumps and slides so fast that nearly every sampled frame is a new crop of the same form: the cost categories, the profit factors, the markup-rate lines, contracting-officer approval. At 68.3 it pulls back to the whole form, and from 68.7 it pans right, where a rectangle of night-vision corridor footage is pasted beside it on the canvas. By 70.0 the footage fills the frame and the 'DEPT. OF REGISTRARS' lower third settles in. The film enters live footage by panning onto it, not by cutting to it."
+    },
+    {
+      "id": "corridor",
+      "start": 72.0,
+      "end": 84.5,
+      "fps": 2,
+      "title": "The corridor goes dark and the whispers multiply",
+      "tags": [
+        "tint",
+        "drift",
+        "fade to black",
+        "small type"
+      ],
+      "text": "The camera drifts and tilts through the green corridor while the lower third slides off the top at 73.5. From 73.0 small grey serif lines appear on the floor and ceiling, 'what are you doing? you do not belong here', three or four copies at once, at different sizes. The picture darkens as the camera tilts up to the ceiling tiles (75–76), sweeps a row of office doors (77–79), and sinks to near black by 80.5 with one whisper left. A glowing tunnel of corridor fades up from 82.0, and at 84.0 a man in glasses is staring into the lens. The type is barely legible at full screen, so it reads as something overheard."
+    },
+    {
+      "id": "exit-to-card",
+      "start": 86.5,
+      "end": 88.25,
+      "fps": 12,
+      "title": "The footage slides away and the canvas comes back",
+      "tags": [
+        "pan",
+        "footage panel",
+        "return"
+      ],
+      "text": "At about 86.9 a strip of mint appears at the right edge of the staring face, and the camera pans right off the footage rectangle, the corridor sliding out left. The card for reason four enters at 87.4 and is centered by 88.0, on 'People will think you are strange'. As at 1:09, the footage was a panel on the canvas all along."
+    },
+    {
+      "id": "faces",
+      "start": 107.5,
+      "end": 117.75,
+      "fps": 3,
+      "title": "Down to the candidates, and in on 'the very worst one'",
+      "tags": [
+        "tilt",
+        "push in",
+        "cut-outs",
+        "exit"
+      ],
+      "text": "At 107.7 the camera tilts down from the card for reason five to the cut-out faces, eight photos in two loose rows, and holds there through 'All of them' and 'Especially this one' (to about 110.7). Then a slow push-in starts, drifting down and to the right toward Sanders; Clinton and the blonde face at right slide off either edge by 113.7, and his smiling photo fills the frame by 114.3 on 'He's the very worst one'. At 116.3 the camera tilts down past him, his tie and jacket leaving the top of the frame at 117.0, and the card for reason six is already rising beneath."
+    },
+    {
+      "id": "pie",
+      "start": 121.0,
+      "end": 135.75,
+      "fps": 2,
+      "title": "A pie chart built one wrong wedge at a time",
+      "tags": [
+        "hold",
+        "snap on",
+        "tilt",
+        "chart"
+      ],
+      "text": "The camera arrives on '10,000 Americans cast a vote for President' over a solid black disc by 121.5 and holds still for five seconds. A white sliver labeled '1 vote = 1%' snaps on at about 126.8, on 'your vote only counts for 1%'. An orange 'Electoral stuff' wedge snaps on at 130.5 on 'Plus the electoral stuff', and at 133.3 a red 'All of the government problems' wedge appears over the label as the camera tilts, so the title runs down the right side at a steep angle. The chart never animates; only the camera reacts. At 135.7 the film cuts away to handheld phone footage."
+    },
+    {
+      "id": "searches",
+      "start": 135.5,
+      "end": 150.0,
+      "fps": 2,
+      "title": "A phone filming a laptop, and the end card",
+      "tags": [
+        "handheld",
+        "screen recording",
+        "typing",
+        "rise in"
+      ],
+      "text": "The polished canvas is replaced by a phone held up to a laptop screen, swaying, soft and catching glare. Searches are typed live: 'examples of government problems' (from 135.7), 'CORRUPTION' in spaced capitals (138.6), 'what is voter fraud' (140.5), 'orwellian nightmare definition' with results (143.0), and, after the voice has stopped at 2:24, 'what color pill in the matrix was the good one' (145.5). Two more hard cuts, at 138.6 and 148.5, carry it out. At 148.5 the mint returns and the end card rises from the bottom, settled by 149.5."
+    }
+  ],
+  "craft": {
+    "lede": [
+      "A two-and-a-half-minute parody of the explainer video, posted on May 4, 2016. It looks like one: a numbered list of six reasons, a calm narrator, a map with numbers on it, a scale comparison, a form to download, a pie chart. Every one of them is broken, and the narrator never notices. The case against voting gets less coherent with each reason, from a voter fee that does not exist to 'Plus voter fraud with all of the fraud', and the pictures go from tidy cards to a night-vision corridor to a phone pointed at a laptop.",
+      "It is worth studying for two things. One is the deadpan: the voice keeps one even, reasonable tone from start to finish, so all of the escalation is carried by the script and the pictures, and the gap between them is the joke. The other is how cheaply it is built: cut-out photos, clip art, government forms and old interface screenshots pasted on one mint canvas, tinted to a single green, with a virtual camera doing almost all of the motion and only 11 hard cuts."
+    ],
+    "map": {
+      "lanes": [
+        {
+          "id": "story",
+          "segments": [
+            {
+              "start": 0,
+              "end": 6.6,
+              "label": "Title",
+              "note": "'Everyone knows that voting is terrible.'"
+            },
+            {
+              "start": 6.6,
+              "end": 28.1,
+              "label": "1. Too expensive",
+              "note": "A fee map, then a line of dollar bills to a million."
+            },
+            {
+              "start": 28.1,
+              "end": 37.5,
+              "label": "2. Stuck at work"
+            },
+            {
+              "start": 37.5,
+              "end": 85.6,
+              "label": "3. The Q-83 form",
+              "note": "The longest reason: 48 seconds of bureaucracy that ends in paranoia."
+            },
+            {
+              "start": 85.6,
+              "end": 104.5,
+              "label": "4. Strange",
+              "note": "Ordinary voters, shown in negative."
+            },
+            {
+              "start": 104.5,
+              "end": 116.2,
+              "label": "5. Bad candidates"
+            },
+            {
+              "start": 116.2,
+              "end": 135.7,
+              "label": "6. The math",
+              "note": "One vote is 1%."
+            },
+            {
+              "start": 135.7,
+              "end": 148.5,
+              "label": "Searches",
+              "note": "The argument falls apart into search queries."
+            },
+            {
+              "start": 148.5,
+              "end": 156.6,
+              "label": "End card"
+            }
+          ]
+        },
+        {
+          "id": "voices",
+          "segments": [
+            {
+              "start": 0,
+              "end": 144.1,
+              "label": "One narrator, one tone",
+              "kind": "narrator",
+              "note": "Uncredited and unhurried; the end card says only 'Presented by Jon Bois'."
+            },
+            {
+              "start": 144.1,
+              "end": 148.5,
+              "label": "The last search",
+              "kind": "text",
+              "note": "'what color pill in the matrix was the good one', after the voice stops."
+            },
+            {
+              "start": 148.5,
+              "end": 156.6,
+              "label": "'Sharing is a form of theft.'",
+              "kind": "text"
+            }
+          ]
+        },
+        {
+          "id": "sound",
+          "segments": [
+            {
+              "start": 0,
+              "end": 144.0,
+              "label": "One cue under the voice",
+              "kind": "music",
+              "note": "About 129 BPM, steady, sitting 2–9 dB under the voice."
+            },
+            {
+              "start": 144.0,
+              "end": 156.6,
+              "label": "The cue comes up",
+              "kind": "music",
+              "note": "Up to full level once the voice stops."
+            }
+          ]
+        },
+        {
+          "id": "picture",
+          "segments": [
+            {
+              "start": 0,
+              "end": 6.6,
+              "label": "Tooth wallpaper, title",
+              "kind": "title"
+            },
+            {
+              "start": 6.6,
+              "end": 69.5,
+              "label": "The mint canvas",
+              "kind": "graphics",
+              "note": "Cards, props, a map, forms and dialogs, joined by camera moves. First cut at 0:46.7."
+            },
+            {
+              "start": 69.5,
+              "end": 87.2,
+              "label": "Green corridor",
+              "kind": "b-roll",
+              "note": "Footage tinted to night vision, with whispered type."
+            },
+            {
+              "start": 87.2,
+              "end": 91.7,
+              "label": "Card 4",
+              "kind": "graphics"
+            },
+            {
+              "start": 91.7,
+              "end": 104.5,
+              "label": "Voters in negative",
+              "kind": "b-roll",
+              "note": "Inverted and tinted blue."
+            },
+            {
+              "start": 104.5,
+              "end": 135.7,
+              "label": "Faces and the pie",
+              "kind": "graphics"
+            },
+            {
+              "start": 135.7,
+              "end": 148.5,
+              "label": "Phone on a laptop",
+              "kind": "screen",
+              "note": "Handheld searches, typed live."
+            },
+            {
+              "start": 148.5,
+              "end": 156.6,
+              "label": "End card",
+              "kind": "title"
+            }
+          ]
+        }
+      ]
+    },
+    "aspects": [
+      {
+        "id": "story",
+        "title": "Six reasons, each worse than the last",
+        "paragraphs": [
+          "The structure is the most familiar one on YouTube: a question ('have you ever wondered what makes voting such an awful thing to do?'), then a numbered list. The parody is in how the list decays. Reason one is a false fact delivered with evidence: a fee map and a scale comparison. Reason two is a real complaint, voting on a Tuesday during work hours, with a calendar. Reason three starts as a bureaucratic obstacle and keeps going for 48 seconds, a third of the film, through a URL, a printer, an error dialog, a System Administrator's address, the census and a hallway, until it ends on 'They will all see you.' After that the reasons are a feeling (people will think you are strange), an insult (all of the candidates are bad, especially this one) and arithmetic that does not work.",
+          "The last reason does not end, it dissolves: 'Plus the electoral stuff, so who cares. And plus all of the government problems with the money debt... Plus voter fraud with all of the fraud. Think about it.' The pictures dissolve with it, from the canvas to a phone filming search queries. The film never says to vote. It lets the case against voting sound the way a bad argument sounds, and leaves the conclusion to the viewer."
+        ],
+        "moments": [
+          {
+            "t": 7,
+            "text": "Reason one, in the template every reason will use."
+          },
+          {
+            "t": 52,
+            "text": "Reason three, fifteen seconds in and still getting worse."
+          },
+          {
+            "t": 84,
+            "text": "Where reason three ends: 'They will all see you.'"
+          },
+          {
+            "t": 146,
+            "text": "Where the argument ends: a search query."
+          }
+        ]
+      },
+      {
+        "id": "voices",
+        "title": "A reasonable voice saying unreasonable things",
+        "paragraphs": [
+          "The narrator sounds like an explainer narrator: clear, even and never in a hurry. The level never changes for a joke. 'That's a lot of money' gets the same reading as 'Filling it out incorrectly exposes you to federal prosecution' and 'They will all see you.' Because the voice does not escalate, the script and the pictures have to, and the viewer is the only one who notices.",
+          "The script borrows explainer phrasing and empties it. 'Picture it like this' sets up a comparison that compares nothing ('If you have a lot more money than that, then you have $1 million'). 'Mathematically speaking' introduces 1,000 voters and 1%. The sentences stay grammatical and confident while their content falls apart, until the last ones lose their grammar too: 'the government problems with the money debt'. The words on screen add their own errors that the voice never mentions: the chart reads '10,000 Americans', and the fee map is for a '2014 Presidential election'."
+        ],
+        "moments": [
+          {
+            "t": 21,
+            "text": "'Picture it like this': a line of bills with nothing to compare it to."
+          },
+          {
+            "t": 66,
+            "text": "'Filling it out incorrectly exposes you to federal prosecution,' read like a weather report."
+          },
+          {
+            "t": 127,
+            "text": "'So that means your vote only counts for 1% of the overall vote.'"
+          },
+          {
+            "t": 133,
+            "text": "'Plus all of the government problems with the money debt.'"
+          }
+        ]
+      },
+      {
+        "id": "world",
+        "title": "One mint canvas, cut-outs and real paperwork",
+        "paragraphs": [
+          "The look is built from found pieces under one rule. Every prop is a cut-out photo (gems, a cinder block, a shovel, a fork, an electrical outlet, a crowbar, candidates' faces) tinted into the same dark green, and every card uses the same layout: a numeral, a bold geometric sans for the claim, an italic serif for captions and dollar figures, hairline rules. The rule is broken on purpose by the things that are meant to feel foreign: Form Q-83 stays stark white, the Internet Explorer 6 ad and the street map keep their own colors, the Windows dialog stays grey. The bureaucracy looks like it does not belong on the page.",
+          "The paperwork is real or close to it: a procurement form with lines for DUNS numbers and markup rates, the 2010 Census form, a Windows printers folder, an 'IBM Rational Portfolio Manager' database error. Real artifacts make the frustration recognizable faster than drawn ones would. The live footage is treated to feel hostile. The corridor is a panel pasted on the canvas and tinted night-vision green, and ordinary voters standing in line are cut in as an inverted blue negative, which makes a meeting room look like surveillance."
+        ],
+        "moments": [
+          {
+            "t": 3,
+            "text": "Cut-out tools tinted into one green around the title."
+          },
+          {
+            "t": 43,
+            "text": "Form Q-83, left white so it looks out of place."
+          },
+          {
+            "t": 71,
+            "text": "The corridor, tinted night vision, with a lower third out of a conspiracy theory."
+          },
+          {
+            "t": 97,
+            "text": "Voters standing in line, inverted."
+          }
+        ]
+      },
+      {
+        "id": "frames",
+        "title": "A camera travelling across one page",
+        "paragraphs": [
+          "The film has 11 detected hard cuts in 157 seconds, and the first does not come until 0:46.7. Everything before it is camera movement over a single surface. Each reason card has its props laid out below or beside it, and the camera tilts down to them, pushes into a detail, then whips sideways to the next card. The layout shows through twice: at 0:06.75 the card for reason one and the map sit side by side, small, and at 1:02 a half-second whip back up the canvas runs past every piece of reason three in rows before landing on Form Q-83.",
+          "The moves change character as the argument does. Reasons one and two get smooth, centered tilts and pans. Reason three whips past an ad, scans a URL, spins into a map and cuts hard across the form's fine print. The corridor is entered by panning onto its rectangle and left the same way, so even it belongs to the page. The cuts gather where the film loses its footing: four take the inverted voters in and out (1:31.7 to 1:44.5), and three carry the ending, from the pie chart to a phone filming a laptop at 2:15.7 and on to the end card. Leaving the canvas for that phone is the sign that the argument has collapsed."
+        ],
+        "moments": [
+          {
+            "t": 6,
+            "text": "The title clears and the canvas is shown, small."
+          },
+          {
+            "t": 55,
+            "text": "The map spins as it zooms, the most disorienting move so far."
+          },
+          {
+            "t": 62,
+            "text": "Halfway through the whip back up the canvas."
+          },
+          {
+            "t": 136,
+            "text": "The only exit from the canvas: a handheld phone."
+          }
+        ]
+      },
+      {
+        "id": "attention",
+        "title": "Jokes for whoever pauses",
+        "paragraphs": [
+          "Much of the comedy is in the fine print, too small or too brief to catch at speed. The fee map includes Cuba, at $68. The calendar is headed 'welcome to this calendar' and has a '?' between Sunday and Monday. The Department of Registrars was established in 1247 and has an all-seeing eye and a square and compass in its logo. An Internet Explorer 6 ad flashes by in a whip pan. The candidates' faces carry a leftover production note, 'NOTE TO JON: remember to take these guys out, they aren't in the race anymore. they were too handsome. love, jon', pointing at Cruz and Kasich, who dropped out the day before and the day of the upload.",
+          "The catalog boxes do the same work at every reason: 'Voting stones', 'Voting tea', 'The Incredible Voting Dog' (a cinder block), 'Voter's Helper™' (a shovel), 'Voter's supper' (a fork and a power outlet), 'Emergency voting kit' (a Dracula DVD and a crowbar). The voice never mentions them. They make the repeated template a reason to look at each card, and the end card keeps it up: 'Please do not share this video with anyone. Sharing is a form of theft.'"
+        ],
+        "moments": [
+          {
+            "t": 12,
+            "text": "Cuba, $68."
+          },
+          {
+            "t": 33,
+            "text": "'welcome to this calendar'."
+          },
+          {
+            "t": 110,
+            "text": "'NOTE TO JON'."
+          },
+          {
+            "t": 150,
+            "text": "'Sharing is a form of theft. Besides, I made it just for you.'"
+          }
+        ]
+      },
+      {
+        "id": "sound",
+        "title": "One cue, never in on the joke",
+        "paragraphs": [
+          "There is one music cue for the whole film, at about 129 BPM with a steady pulse, and it sits a few decibels under the voice (between 2 and 9 dB in most ten-second windows, 11 dB at the end) without obvious ducking. It does not change for the corridor, the faces or the pie chart, so, like the voice, it keeps a pleasant explainer surface over the escalation. The cuts are not timed to it: 3 of the 11 land within 70 ms of a beat, about what chance would give. The one change comes when the voice stops at 2:24: the cue rises to its full level under the last search and the end card."
+        ],
+        "moments": [
+          {
+            "t": 84,
+            "text": "The same cue under the staring face."
+          },
+          {
+            "t": 145,
+            "text": "The voice has stopped and the music comes up."
+          }
+        ]
+      }
+    ],
+    "patterns": [
+      {
+        "name": "Keep the voice flat and escalate the pictures",
+        "text": "Read the absurd lines in the same even tone as the sensible ones, and let the script and images get stranger. The audience supplies the reaction the narrator never has.",
+        "t": 84
+      },
+      {
+        "name": "Break the explainer's own tools",
+        "text": "Use the familiar devices (a data map, a scale comparison, a pie chart, a numbered list) and get each one subtly wrong: a year with no election, a comparison to nothing, a 1% slice that is a sliver. The parody works because the form is right.",
+        "t": 127
+      },
+      {
+        "name": "Lay the film out on one canvas",
+        "text": "Paste every card, prop and footage panel onto one large surface and move a virtual camera over it with tilts, whips, pushes and pulls instead of cuts. Let the layout show for a moment, so viewers feel the space.",
+        "t": 6
+      },
+      {
+        "name": "Plant the next prop early",
+        "text": "Put the object the next line needs in the corner of the current shot, like the dollar bill beside the fee map, then move the camera to it when the voice gets there.",
+        "t": 12
+      },
+      {
+        "name": "Fix the template, vary the joke",
+        "text": "Give every list item the identical layout, so the only thing that changes is the absurd part: here the caption and product in each catalog box.",
+        "t": 105
+      },
+      {
+        "name": "Degrade the production with the argument",
+        "text": "Let the craft fall apart as the reasoning does: from tidy cards to tinted footage to a phone filming a laptop. The picture quality becomes part of the script.",
+        "t": 136
+      },
+      {
+        "name": "Hide jokes in the fine print",
+        "text": "Put lines too small or brief to catch at speed (an establishment date, a leftover note, an ad in a whip pan) so the film rewards pausing and rewatching.",
+        "t": 71
+      }
+    ],
+    "absent": "Nothing in it is accurate, and it is not meant to be: there is no fee to vote, no Form Q-83, no presidential election in 2014, and nothing about how voting actually works. There is no on-camera host and no sources, and the soundtrack is one cue under one voice. Study it for deadpan timing, for building a parody out of an explainer's own tools, and for making a cheap, coherent world on one canvas with a moving camera."
+  }
+}
