@@ -23,6 +23,7 @@ What it changes:
   every other host are blocked, and the router's /_next/data requests fail, so in-site navigation is a full page load.
 
 Run: python3 Notion/tools/capture.py   (CAPTURE_CACHE=<dir> reuses downloads between runs)
+     python3 Notion/tools/capture.py /a-new-shape-for-work   adds or refreshes those routes in the existing dist/
 """
 import concurrent.futures, hashlib, html, json, os, re, shutil, subprocess, sys, urllib.parse
 
@@ -96,8 +97,25 @@ def capturable(route):
                 or route.startswith('/@') or re.match(r'/templates/.+', route))
 
 
+# Pages notion.com answers 404 for, read from the Internet Archive's copy of the original server-rendered HTML (the id_
+# form serves the bytes as captured). Each copy names the chunks of the build it came from.
+ARCHIVED = {
+    # "A new shape for work", a field guide. It went up on 2026-11-21 and answered 404 that afternoon, while the root
+    # sitemap still listed it and the build (c8cf2d22…) still shipped its code. This copy is from that build.
+    '/a-new-shape-for-work': 'https://web.archive.org/web/20261121085323id_/https://www.notion.com/a-new-shape-for-work',
+}
+
+
+def fetch_page(route):
+    code, eff, ct, body = fetch(BASE + urllib.parse.quote(route))
+    if code == 404 and route in ARCHIVED:
+        code, _, ct, body = fetch(ARCHIVED[route])
+        eff = BASE + route
+    return code, eff, ct, body
+
+
 def discover():
-    todo = set()
+    todo = set(ARCHIVED)
     for s in SITEMAPS:
         _, _, _, body = fetch(f'{BASE}/{s}.xml')
         todo |= {page_path(urllib.parse.urlsplit(u).path or '/') for u in re.findall(r'<loc>([^<]+)</loc>', body.decode())}
@@ -106,7 +124,7 @@ def discover():
     while todo:
         batch, todo = sorted(todo - seen), set()
         seen.update(batch)
-        for route, (code, eff, ct, body) in zip(batch, pool_map(lambda r: fetch(BASE + urllib.parse.quote(r)), batch, 12)):
+        for route, (code, eff, ct, body) in zip(batch, pool_map(fetch_page, batch, 12)):
             u = urllib.parse.urlsplit(eff)
             # Redirects (/calendar -> /product/calendar) are not pages of their own; the target is captured on its own.
             if code != 200 or 'html' not in ct or u.netloc != HOST or (u.path.rstrip('/') or '/') != route:
@@ -436,14 +454,7 @@ def main():
             open(f, 'w', encoding='utf8').write(after)
 
     for route, page in sorted(pages.items()):
-        page = links(localize(page), routes)
-        # Third-party script preloads (Vercel Insights, Transcend consent, Google sign-in) would still fetch them.
-        page = re.sub(r'<link rel="preload" href="(?:https?://|/_vercel/)[^"]+" as="script"[^>]*/>', '', page)
-        page = re.sub(r'<link rel="(?:preconnect|dns-prefetch)" href="https?://[^"]+"[^>]*/>', '', page)
-        # The help center's survey embed (/embed/help/sprig-survey) is not part of the site.
-        page = re.sub(r'(<iframe\b[^>]*\ssrc=")/embed/[^"]*', r'\1about:blank', page)
-        page = page.replace('<head>', '<head><script src="/shim.js"></script>', 1)
-        save('/index.html' if route == '/' else route + '/index.html', page, BASE + route)
+        save_page(route, page, routes)
 
     for rel, body in sorted(snapshots.items()):
         source = ('https://app.notion.com/api/v3/' + rel[len('app-api/'):] if rel.startswith('app-api/') else BASE + '/front-api/' + rel)
@@ -454,21 +465,66 @@ def main():
         code, _, _, body = fetch(url)
         save(path, body, url) if code == 200 else missing.append(f'{code} {url}')
 
+    report([OUT])
+
+
+def save_page(route, page, routes):
+    page = links(localize(page), routes)
+    # Third-party script preloads (Vercel Insights, Transcend consent, Google sign-in) would still fetch them.
+    page = re.sub(r'<link rel="preload" href="(?:https?://|/_vercel/)[^"]+" as="script"[^>]*/>', '', page)
+    page = re.sub(r'<link rel="(?:preconnect|dns-prefetch)" href="https?://[^"]+"[^>]*/>', '', page)
+    # The help center's survey embed (/embed/help/sprig-survey) is not part of the site.
+    page = re.sub(r'(<iframe\b[^>]*\ssrc=")/embed/[^"]*', r'\1about:blank', page)
+    page = page.replace('<head>', '<head><script src="/shim.js"></script>', 1)
+    save('/index.html' if route == '/' else route + '/index.html', page, BASE + route)
+
+
+def report(dirs):
     # Anything left pointing at Contentful or the S3 bucket is a file the capture missed.
     left = {}
-    for d, _, fs in os.walk(OUT):
-        for f in fs:
-            if f.endswith(('.html', '.js', '.css')):
-                for u in set(re.findall(r'(?:images|videos)\.ctfassets\.net/[^"\'\s\\)]{0,80}|public\.notion-static\.com/[^"\'\s\\)]{0,60}',
-                                        open(os.path.join(d, f), encoding='utf8', errors='ignore').read())):
-                    left.setdefault(u, os.path.relpath(os.path.join(d, f), OUT))
+    for top in dirs:
+        for d, _, fs in os.walk(top):
+            for f in fs:
+                if f.endswith(('.html', '.js', '.css')):
+                    for u in set(re.findall(r'(?:images|videos)\.ctfassets\.net/[^"\'\s\\)]{0,80}|public\.notion-static\.com/[^"\'\s\\)]{0,60}',
+                                            open(os.path.join(d, f), encoding='utf8', errors='ignore').read())):
+                        left.setdefault(u, os.path.relpath(os.path.join(d, f), OUT))
     json.dump(dict(sorted(manifest.items())), open(os.path.join(ROOT, 'assets-manifest.json'), 'w'), indent=1)
     if left:
         print('remote media still referenced:', len(left), *sorted(f'{v}: {k}' for k, v in left.items())[:30], sep='\n  ')
     if missing:
         print('not saved:', len(missing), *sorted(missing)[:60], sep='\n  ')
-    print(len(manifest), 'files saved to', OUT)
+    print(len(manifest), 'files in', OUT)
+
+
+def add(only):
+    """Add or refresh the given routes in the existing dist/ without crawling the rest of the site. Code and media
+    already saved are kept; the pages' links to other captured routes stay local."""
+    manifest.update(json.load(open(os.path.join(ROOT, 'assets-manifest.json'))))
+    seen_assets.update(manifest)
+    routes = {p[:-len('/index.html')] or '/' for p in manifest if p.endswith('/index.html')}
+    pages = {}
+    for route in only:
+        code, eff, ct, body = fetch_page(route)
+        if code != 200 or 'html' not in ct:
+            raise SystemExit(f'{route}: {code} {eff}')
+        pages[route] = body.decode('utf8')
+    routes |= set(pages)
+    asset_paths = set()
+    for route, page in pages.items():
+        collect_media(page, route.split('/')[1] or 'home')
+        asset_paths |= {urllib.parse.unquote(p.split('?')[0]) for p in PATHS.findall(page)}
+    before = set(manifest)
+    crawl(asset_paths, routes)
+    fetch_media()
+    print(len(ctf), 'Contentful files,', len(ext_media), 'files from other hosts,', len(optimized), 'optimizer images')
+    for p in [p for p in set(manifest) - before if p.endswith(('.js', '.mjs'))]:
+        f = os.path.join(OUT, p.lstrip('/'))
+        open(f, 'w', encoding='utf8').write(patch_js(open(f, encoding='utf8').read(), routes))
+    for route, page in sorted(pages.items()):
+        save_page(route, page, routes)
+    report([os.path.join(OUT, r.lstrip('/')) for r in pages])
 
 
 if __name__ == '__main__':
-    main()
+    add(sys.argv[1:]) if sys.argv[1:] else main()

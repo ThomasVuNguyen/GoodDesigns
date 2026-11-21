@@ -8,6 +8,7 @@ A local capture of notion.com, made for design study. It covers the homepage and
   - `node Notion/tools/serve.mjs 4341 --gallery` serves it under `/sites/notion/` with the gallery build's path rewrite applied, as it runs on gooddesigns.web.app.
   - Use this server and not `python3 -m http.server`, which redirects `/pricing` to `/pricing/`. `serve.mjs` serves `pricing/index.html` at `/pricing`, as Firebase Hosting does.
 - **Rebuild:** `python3 Notion/tools/capture.py` crawls the live site again and rewrites `dist/` and `assets-manifest.json`.
+  - `python3 Notion/tools/capture.py /a-new-shape-for-work` adds or refreshes only the routes you name, keeping the rest of `dist/`.
   - Set `CAPTURE_CACHE=<dir>` to reuse downloads and video encodes between runs.
   - It needs `curl` and `ffmpeg`.
 
@@ -15,7 +16,7 @@ The previous version of this folder, a hand-built rebuild of `/product` from Sep
 
 ## Pages
 
-There are 1,789 pages, each saved as `dist/<route>/index.html`:
+There are 1,790 pages, each saved as `dist/<route>/index.html`:
 
 | Section | Pages |
 | --- | --- |
@@ -28,7 +29,7 @@ There are 1,789 pages, each saved as `dist/<route>/index.html`:
 | `/custom-agent-templates/…` | 37 |
 | `/connections/…` | 29 |
 | `/webinars/…` | 19 |
-| Everything else | the homepage, `/pricing`, `/enterprise`, `/teams`, `/startups`, `/about`, `/careers`, `/security`, `/templates`, `/explore-templates`, `/download`, `/desktop`, `/mobile`, partner pages and the rest |
+| Everything else | the homepage, `/a-new-shape-for-work` (see below), `/pricing`, `/enterprise`, `/teams`, `/startups`, `/about`, `/careers`, `/security`, `/templates`, `/explore-templates`, `/download`, `/desktop`, `/mobile`, partner pages and the rest |
 
 Not captured, so links to them open the live site:
 
@@ -36,6 +37,14 @@ Not captured, so links to them open the live site:
 - the 21 translated sites (`/ja`, `/fr`, …)
 - the app: `/login`, `/signup`, `@creator` profiles, invites
 - links that redirect elsewhere (`/calendar` goes to `/product/calendar`, which is captured)
+
+### A new shape for work
+
+`/a-new-shape-for-work` is Notion's field guide to building a shared context system for people and their agents. It has its own gallery card (`notion-a-new-shape-for-work`) that opens this route.
+
+- **Source:** the page went up on 2026-11-21. By that afternoon notion.com answered 404 for it, and for all 21 translations, while the root sitemap still listed it and the live build still shipped its code. The capture uses the Internet Archive's copy of the original server-rendered HTML from 08:53 UTC that day (`web.archive.org/web/20261121085323id_/…`). That copy is from the same build (`c8cf2d22…`) as the rest of `dist/`, so it runs on the chunks already saved here. `ARCHIVED` in `capture.py` names it, and a rebuild falls back to it whenever the live route answers 404.
+- **What it has:** six parts and 31 numbered chapters in a serif reading column, 10 figures, and a floating chapter bar. The bar has previous and next arrows and opens a contents panel, which is a bottom sheet on mobile.
+- **Checked against the original:** the archived HTML was loaded at notion.com, so the reference ran Notion's live code and images. At 1280×900 and 390×844, viewport screenshots at eight scroll positions and with the contents panel open match the local page pixel for pixel, except the footer's missing consent line (11 px on desktop, 20 px on mobile). The chapter arrows land on the same anchors.
 
 ## How it is built
 
