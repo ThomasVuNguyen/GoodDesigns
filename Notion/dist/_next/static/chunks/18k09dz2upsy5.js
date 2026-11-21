@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="80421312-80f4-3d55-9f90-0db17bfef3ce")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,227130,h=>{"use strict";var o=h.i(968946),r=h.i(707821);h.s(["CarIcon",0,function(h){return(0,o.jsx)(r.l,{...h,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M16.406 8.125 15.313 3.75H4.688L3.593 8.125H1.875V10h1.25v5h1.25v1.875h2.5V15h6.25v1.875h2.5V15h1.25v-5h1.25V8.125zM6.15 5.625h7.697l.781 3.125h-9.26zm.1 7.188a.936.936 0 0 1-.937-.938.936.936 0 1 1 1.875 0 .936.936 0 0 1-.938.938m6.563-.938a.936.936 0 1 1 1.875 0 .936.936 0 0 1-.938.938.936.936 0 0 1-.937-.938",fill:"currentColor"})})}])}]);
+
+//# debugId=80421312-80f4-3d55-9f90-0db17bfef3ce
+//# sourceMappingURL=1nnlc0jkbqsm8.js.map

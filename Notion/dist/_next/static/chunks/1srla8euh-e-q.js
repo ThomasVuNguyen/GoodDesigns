@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="b8821765-82e3-2f19-5ebf-529c6ce553d0")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,623093,e=>{"use strict";var t=e.i(968946),i=e.i(946409),o=e.i(261266),n=e.i(647619);let r={title:"TemplateGalleryContentRow",component:n.f};e.s(["ContentRow",0,function(){let e={link:{text:"See all templates",href:""},title:"Marie Poulin",description:"Personal productivity / fan of all things organized",asset:{id:"screenshotIntegrationWikisPng",src:o.f.pages.wikis.carousel.screenshotCompanyHomePng,width:1920,height:1350},assetPosition:(0,i.U)("rightCorner")};return(0,t.jsx)(n.f,{heading:"Featured creators",blocks:[e,e,e,e],blockSpan:3,link:{text:"Browse 1.2k creators",href:""}})},"default",0,r])}]);
+
+//# debugId=b8821765-82e3-2f19-5ebf-529c6ce553d0
+//# sourceMappingURL=0s4y-vrbw28gs.js.map

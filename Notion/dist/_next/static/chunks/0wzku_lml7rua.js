@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="5b0403c5-afa1-d7af-96b1-4e4436a2f2f7")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,40095,l=>{"use strict";var o=l.i(968946),t=l.i(707821);l.s(["SunIcon",0,function(l){return(0,o.jsx)(t.l,{...l,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M13.75 10A3.75 3.75 0 0 1 10 13.75 3.75 3.75 0 0 1 6.25 10 3.75 3.75 0 0 1 10 6.25 3.75 3.75 0 0 1 13.75 10m-3.125-8.125h-1.25V5h1.25zm-1.25 16.25h1.25V15h-1.25zM6.906 6.022l-2.21-2.21-.883.885 2.209 2.21zm6.188 7.956 2.21 2.21.883-.885-2.209-2.21zM5 9.375H1.875v1.25H5zm10 0v1.25h3.125v-1.25zM3.813 15.303l.884.884 2.21-2.209-.885-.884zM16.188 4.697l-.885-.885-2.21 2.21.885.884z",fill:"currentColor"})})}])}]);
+
+//# debugId=5b0403c5-afa1-d7af-96b1-4e4436a2f2f7
+//# sourceMappingURL=0tlyavy05xz3f.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="e11ba80b-fa04-9cc4-fa35-fd346100cd14")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,29961,c=>{"use strict";var t=c.i(968946),o=c.i(707821);c.s(["RubberStampIcon",0,function(c){return(0,t.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M3.75 15.625h12.5V17.5H3.75zM15 9.375h-3.75v-1.25c0-1.653 1.25-2.722 1.25-4.375 0-1.544-.956-2.5-2.5-2.5s-2.5.956-2.5 2.5c0 1.653 1.25 2.722 1.25 4.375v1.25H5c-1.544 0-2.5.956-2.5 2.5v2.5h15v-2.5c0-1.544-.956-2.5-2.5-2.5",fill:"currentColor"})})}])}]);
+
+//# debugId=e11ba80b-fa04-9cc4-fa35-fd346100cd14
+//# sourceMappingURL=3v2yjzyqnrsn-.js.map

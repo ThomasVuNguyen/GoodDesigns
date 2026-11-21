@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="c305a88e-b1f7-d227-633c-2dd296a59366")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,6868,o=>{"use strict";var t=o.i(968946),c=o.i(707821);o.s(["MoonIcon",0,function(o){return(0,t.jsx)(c.l,{...o,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M17.5 10c0 4.14-3.36 7.5-7.5 7.5S2.5 14.14 2.5 10 5.86 2.5 10 2.5l.475.953a4.684 4.684 0 0 0 1.713 9.047 4.68 4.68 0 0 0 4.359-2.975z",fill:"currentColor"})})}])}]);
+
+//# debugId=c305a88e-b1f7-d227-633c-2dd296a59366
+//# sourceMappingURL=18m-fwphjyy7b.js.map

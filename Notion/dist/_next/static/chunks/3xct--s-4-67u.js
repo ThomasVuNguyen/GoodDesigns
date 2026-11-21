@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="92b58531-d9b1-12b3-5c50-1e0b524cb35f")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,796203,h=>{"use strict";var o=h.i(968946),t=h.i(707821);h.s(["BusMetroIcon",0,function(h){return(0,o.jsx)(t.l,{...h,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M17.5 6.25h-1.25V5c0-1.537-.963-2.5-2.5-2.5h-7.5c-1.537 0-2.5.962-2.5 2.5v1.25H2.5V10h1.25v5.625H5V17.5h2.5v-1.875h5V17.5H15v-1.875h1.25V10h1.25zm-9.375-2.5h3.75V5h-3.75zm-1.25 10a.936.936 0 0 1-.937-.937.936.936 0 1 1 1.875 0 .936.936 0 0 1-.938.937M9.063 10H5.937V6.25h3.125zm1.874-3.75h3.126V10h-3.126zm1.25 6.563a.937.937 0 1 1 1.876 0 .936.936 0 0 1-.938.937.936.936 0 0 1-.937-.937",fill:"currentColor"})})}])}]);
+
+//# debugId=92b58531-d9b1-12b3-5c50-1e0b524cb35f
+//# sourceMappingURL=3m-qhpv_j8t4t.js.map

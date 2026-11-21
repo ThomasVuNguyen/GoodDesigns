@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="0720e393-e71e-e3e6-ed93-072bd1854344")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,781176,c=>{"use strict";var i=c.i(968946),o=c.i(707821);c.s(["MusicAlbumIcon",0,function(c){return(0,i.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,i.jsx)("path",{d:"M1.875 16.875h13.75V3.125H1.875zm3.75-4.79q.34.002.625.074V6.88l6.25-1.876V12.4c0 .966-.719 1.563-1.875 1.563S8.75 13.366 8.75 12.4s.719-1.562 1.875-1.562c.228 0 .434.028.625.075V8.506L7.5 9.631v4.022c0 .966-.719 1.563-1.875 1.563s-1.875-.597-1.875-1.563.719-1.562 1.875-1.562zM19.375 10a6.23 6.23 0 0 1-2.5 4.99V5.007a6.24 6.24 0 0 1 2.5 4.99z",fill:"currentColor"})})}])}]);
+
+//# debugId=0720e393-e71e-e3e6-ed93-072bd1854344
+//# sourceMappingURL=03a_cy4n6sl9v.js.map

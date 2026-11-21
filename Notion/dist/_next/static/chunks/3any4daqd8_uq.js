@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="cc478e87-5b0b-5cd8-779e-37ef7b195493")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,466646,o=>{"use strict";var s=o.i(968946);let e=(0,o.i(801373).defineIcon)({className:"windowsLogo",viewBox:"0 0 88 88",svg:(0,s.jsx)("path",{d:"m0,12.402,35.687-4.8602,0.0156,34.423-35.67,0.20313zm35.67,33.529,0.0277,34.453-35.67-4.9041-0.002-29.78zm4.3261-39.025,47.318-6.906,0,41.527-47.318,0.37565zm47.329,39.349-0.0111,41.34-47.318-6.6784-0.0663-34.739z"})});o.s(["WindowsLogo",0,e])}]);
+
+//# debugId=cc478e87-5b0b-5cd8-779e-37ef7b195493
+//# sourceMappingURL=1dya406hl9754.js.map

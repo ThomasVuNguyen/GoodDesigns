@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="d73f142f-57e1-bc4d-39cf-3eef6c1f747d")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,549244,c=>{"use strict";var e=c.i(968946),i=c.i(707821);c.s(["WheelchairAccessIcon",0,function(c){return(0,e.jsx)(i.l,{...c,viewBox:"0 0 20 20",children:(0,e.jsx)("path",{d:"M8.438 3.75c0-.966.596-1.562 1.562-1.562s1.563.596 1.563 1.562S10.966 5.313 10 5.313 8.438 4.716 8.438 3.75m7.128 7.944q-.357-1.07-1.482-1.069h-2.518V7.813c0-.966-.597-1.563-1.563-1.563-3.037 0-5 1.963-5 5h1.563c0-1.59.668-2.687 1.875-3.166v2.854c0 .965.596 1.562 1.562 1.562h3.856l1.041 3.125h1.975zM10 15.937A3.436 3.436 0 0 1 6.563 12.5H5a5 5 0 0 0 5 5 4.97 4.97 0 0 0 3.669-1.613l-.55-1.656s-1.15 1.703-3.119 1.703z",fill:"currentColor"})})}])}]);
+
+//# debugId=d73f142f-57e1-bc4d-39cf-3eef6c1f747d
+//# sourceMappingURL=1500f68a9pla_.js.map

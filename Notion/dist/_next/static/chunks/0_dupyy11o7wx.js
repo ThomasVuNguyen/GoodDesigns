@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="a4739f2b-6089-79fd-d361-f35054de83fe")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,396354,h=>{"use strict";var o=h.i(968946),c=h.i(707821);h.s(["SchoolIcon",0,function(h){return(0,o.jsx)(c.l,{...h,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"m13.75 7.5-3.125-3.125v-1.25l2.5-1.25V.625h-3.75v3.75L6.25 7.5H2.5v9.375h6.25V13.75c0-.772.478-1.25 1.25-1.25s1.25.478 1.25 1.25v3.125h6.25V7.5zM6.875 15h-2.5v-1.875h2.5zm0-3.75h-2.5V9.375h2.5zM10 10.625a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5M15.625 15h-2.5v-1.875h2.5zm0-3.75h-2.5V9.375h2.5z",fill:"currentColor"})})}])}]);
+
+//# debugId=a4739f2b-6089-79fd-d361-f35054de83fe
+//# sourceMappingURL=0kmerwgdxj0i8.js.map

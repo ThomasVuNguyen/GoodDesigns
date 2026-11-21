@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="d1bf2120-e87f-f50a-bbe4-b4cccc85c225")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,557208,r=>{"use strict";var o=r.i(968946),t=r.i(707821);r.s(["ArrowTurnRightIcon",0,function(r){return(0,o.jsx)(t.l,{...r,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M17.575 8.125 11.95 13.75l-1.325-1.325 3.363-3.363H8.75C6.438 9.063 5 10.5 5 12.813V17.5H3.125v-4.687c0-3.472 2.153-5.626 5.625-5.626h5.238l-3.363-3.362L11.95 2.5z",fill:"currentColor"})})}])}]);
+
+//# debugId=d1bf2120-e87f-f50a-bbe4-b4cccc85c225
+//# sourceMappingURL=25hccpuxg5j3p.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="6d446f91-466b-3025-3653-92c1e93ae939")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,214461,l=>{"use strict";var o=l.i(968946),t=l.i(707821);l.s(["ShoppingBasketIcon",0,function(l){return(0,o.jsx)(t.l,{...l,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M18.125 8.75v1.875h-1.25l-1.04 6.25H4.164l-1.04-6.25h-1.25V8.75h2.697L7.697 2.5l1.678.837L6.669 8.75h6.662l-2.706-5.412 1.678-.838 3.125 6.25z",fill:"currentColor"})})}])}]);
+
+//# debugId=6d446f91-466b-3025-3653-92c1e93ae939
+//# sourceMappingURL=30vpp_o9bnmr3.js.map

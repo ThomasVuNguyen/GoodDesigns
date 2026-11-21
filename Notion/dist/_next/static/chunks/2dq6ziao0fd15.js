@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="a895eba0-e71a-2f2a-f184-c03a39816938")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,232068,t=>{"use strict";var c=t.i(968946),e=t.i(707821);t.s(["LaundryDetergentIcon",0,function(t){return(0,c.jsx)(e.l,{...t,viewBox:"0 0 20 20",children:(0,c.jsx)("path",{d:"M11.875 4.15V1.875h-3.75V4.15C5.591 5.266 3.75 8.581 3.75 12.5c0 1.86.416 3.581 1.122 5h10.256c.706-1.419 1.122-3.14 1.122-5 0-3.919-1.84-7.234-4.375-8.35m0 8.35v-5h1.09c.86 1.266 1.41 3.053 1.41 5z",fill:"currentColor"})})}])}]);
+
+//# debugId=a895eba0-e71a-2f2a-f184-c03a39816938
+//# sourceMappingURL=24-937-98hfxy.js.map

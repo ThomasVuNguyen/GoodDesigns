@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="dc92a090-6f35-6e5d-5ae0-81d0761cd52f")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,750275,c=>{"use strict";var l=c.i(968946),o=c.i(707821);c.s(["PersonMasculineIcon",0,function(c){return(0,l.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,l.jsx)("path",{d:"M8.438 3.75c0-.966.596-1.562 1.562-1.562s1.563.596 1.563 1.562S10.966 5.313 10 5.313 8.438 4.716 8.438 3.75m6.321 6.794.866-1.3-3.547-2.366c-.687-.46-1.253-.628-2.078-.628s-1.39.172-2.078.628L4.375 9.244l.866 1.3 3.197-2.132v2.525L6.25 17.5h1.975L10 12.178l1.775 5.322h1.975l-2.187-6.562V8.412z",fill:"currentColor"})})}])}]);
+
+//# debugId=dc92a090-6f35-6e5d-5ae0-81d0761cd52f
+//# sourceMappingURL=3urbtarxsgnhh.js.map

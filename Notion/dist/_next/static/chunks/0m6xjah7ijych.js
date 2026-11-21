@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="75ec3c62-c808-e1db-3fbc-1ff010401ebd")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,313672,c=>{"use strict";var o=c.i(968946),t=c.i(707821);c.s(["WatchAnalogIcon",0,function(c){return(0,o.jsx)(t.l,{...c,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M10 3.75c-.89 0-1.734.188-2.5.525V1.25h5v3.025A6.2 6.2 0 0 0 10 3.75M15 10c0 2.762-2.238 5-5 5s-5-2.238-5-5 2.238-5 5-5 5 2.238 5 5m-1.875-.416h-2.5V6.25h-1.25v4.584h3.75zM7.5 15.728v3.025h5v-3.025a6.23 6.23 0 0 1-5 0",fill:"currentColor"})})}])}]);
+
+//# debugId=75ec3c62-c808-e1db-3fbc-1ff010401ebd
+//# sourceMappingURL=1-kgm-vaqjxdi.js.map

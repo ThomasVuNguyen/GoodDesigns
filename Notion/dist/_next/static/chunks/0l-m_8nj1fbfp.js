@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="39b30177-1baf-635c-2c53-428f6afb9c1c")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,79055,i=>{"use strict";var t=i.i(968946),o=i.i(707821);i.s(["VitruvianManIcon",0,function(i){return(0,t.jsx)(o.l,{...i,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M8.438 3.75c0-.966.596-1.562 1.562-1.562s1.563.596 1.563 1.562S10.966 5.313 10 5.313 8.438 4.716 8.438 3.75m7.187 4.063V6.25H4.375v1.563h4.063v3.125L6.25 17.5h1.975L10 12.178l1.775 5.322h1.975l-2.187-6.562V7.812z",fill:"currentColor"})})}])}]);
+
+//# debugId=39b30177-1baf-635c-2c53-428f6afb9c1c
+//# sourceMappingURL=2gsjq_osi_w4c.js.map

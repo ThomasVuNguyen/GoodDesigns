@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="efe4febc-f6d8-071e-2d36-aea0ecf5d989")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,778472,o=>{"use strict";var c=o.i(968946),t=o.i(707821);o.s(["PhoneEndCallIcon",0,function(o){return(0,c.jsx)(t.l,{...o,viewBox:"0 0 20 20",children:(0,c.jsx)("path",{d:"M18.75 10.59v2.223h-5.312V9.375c-.335-.284-1.432-.937-3.438-.937s-3.103.653-3.437.937v3.438H1.25V10.59c0-2.775 4.297-4.653 8.75-4.653s8.75 1.856 8.75 4.653",fill:"currentColor"})})}])}]);
+
+//# debugId=efe4febc-f6d8-071e-2d36-aea0ecf5d989
+//# sourceMappingURL=0ow9pc4ezomuf.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="cc70ddec-034a-4cbd-1842-fc88c33814a5")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,682537,i=>{"use strict";var e=i.i(968946);i.i(171118);var t=i.i(554864);i.i(553768);var s=i.i(3413);i.s(["CalendarTimeManagementSimplified",0,function(){return(0,e.jsxs)(s.f,{type:"section",children:[(0,e.jsx)(t.f,{type:"clock",position:{x:11,y:266},sm:{x:75,y:222}}),(0,e.jsx)(t.f,{type:"checkmark",position:{x:296,y:67},sm:{x:1187,y:71}})]})}])}]);
+
+//# debugId=cc70ddec-034a-4cbd-1842-fc88c33814a5
+//# sourceMappingURL=283xjd01h1wvt.js.map

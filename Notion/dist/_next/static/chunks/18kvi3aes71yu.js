@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="7a943d25-e66e-d911-c740-715626b6e79e")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,308252,c=>{"use strict";var i=c.i(968946),o=c.i(707821);c.s(["LibraIcon",0,function(c){return(0,i.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,i.jsx)("path",{d:"M2.5 15h15v1.875h-15zm11.403-4.375A4.98 4.98 0 0 0 15 7.5c0-2.756-2.244-5-5-5s-5 2.244-5 5c0 1.169.403 2.262 1.097 3.125H2.5V12.5h6.25v-2.137A3.12 3.12 0 0 1 6.875 7.5 3.13 3.13 0 0 1 10 4.375 3.13 3.13 0 0 1 13.125 7.5a3.12 3.12 0 0 1-1.875 2.863V12.5h6.25v-1.875z",fill:"currentColor"})})}])}]);
+
+//# debugId=7a943d25-e66e-d911-c740-715626b6e79e
+//# sourceMappingURL=0p8f42-t04p3t.js.map

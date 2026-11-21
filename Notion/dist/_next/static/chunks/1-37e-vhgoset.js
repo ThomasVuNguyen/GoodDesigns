@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="b606cbe2-aef4-0240-6bcd-535874f6819b")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,300871,c=>{"use strict";var l=c.i(968946),o=c.i(707821);c.s(["DishSoapIcon",0,function(c){return(0,l.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,l.jsx)("path",{d:"M13.863 12.834c.38 1.141.512 1.963.512 3.163V17.5h-8.75v-1.503c0-1.2.134-2.022.513-3.163l.737-2.209-1.047-2.094a1.7 1.7 0 0 1-.203-.86c0-.568.16-.955.563-1.359l2.25-2.25V1.876h3.124v2.188l2.25 2.25c.404.403.563.79.563 1.359 0 .334-.053.562-.203.86l-1.047 2.093z",fill:"currentColor"})})}])}]);
+
+//# debugId=b606cbe2-aef4-0240-6bcd-535874f6819b
+//# sourceMappingURL=24t0zj558596g.js.map

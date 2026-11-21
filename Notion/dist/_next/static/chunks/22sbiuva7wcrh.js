@@ -1,0 +1,22 @@
+__turbopack_load_page_chunks__("/customers/little-plains/demo", [
+  "static/chunks/1or1euws8rdgo.js",
+  "static/chunks/220je_tbco38i.js",
+  "static/chunks/43w5ogug-k9vq.js",
+  "static/chunks/2796-dr6ssp8r.js",
+  "static/chunks/1ermpgwlk2b7i.js",
+  "static/chunks/04yblq-d7w_j_.js",
+  "static/chunks/3d6huc3q-084r.js",
+  "static/chunks/40839-lux-dpu.css",
+  "static/chunks/3by1w4k6em3eb.css",
+  "static/chunks/063x1-vii3z5g.css",
+  "static/chunks/360eaeul209s2.css",
+  "static/chunks/062x-g8-wvqwo.css",
+  "static/chunks/3rj8lb3dqws2t.css",
+  "static/chunks/06p1d6vqw353x.css",
+  "static/chunks/1dk1nqhdw1d_h.css",
+  "static/chunks/3mxn38_khry5v.css",
+  "static/chunks/2o0d09y_k4hbs.css",
+  "static/chunks/28gc2o4fdt-fp.css",
+  "static/chunks/1lji1hh5jbzod.css",
+  "static/chunks/turbopack-0rw29v8dsd-kr.js"
+])

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="b2f61365-386d-9338-0af3-f3e3f4b60d8d")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,720846,h=>{"use strict";var o=h.i(968946),c=h.i(707821);h.s(["VideoGameIcon",0,function(h){return(0,o.jsx)(c.l,{...h,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M13.75 5h-7.5C3.938 5 2.5 6.438 2.5 8.75v5.466c0 1.256.778 2.034 2.034 2.034.76 0 1.272-.275 1.694-.906L8.125 12.5h3.75l1.897 2.844c.422.631.934.906 1.694.906 1.256 0 2.034-.778 2.034-2.034V8.75C17.5 6.438 16.063 5 13.75 5M8.125 9.375h-1.25v1.25h-1.25v-1.25h-1.25v-1.25h1.25v-1.25h1.25v1.25h1.25zm4.375 1.25a.936.936 0 0 1-.937-.937.936.936 0 1 1 1.875 0 .936.936 0 0 1-.938.937M15 8.75a.936.936 0 0 1-.937-.937.936.936 0 1 1 1.875 0A.936.936 0 0 1 15 8.75",fill:"currentColor"})})}])}]);
+
+//# debugId=b2f61365-386d-9338-0af3-f3e3f4b60d8d
+//# sourceMappingURL=1enmj34hoil_s.js.map

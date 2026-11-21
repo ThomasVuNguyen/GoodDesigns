@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="5668aab9-681f-6337-f1a4-aeb4290842f6")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,301003,o=>{"use strict";var e=o.i(968946);let c=(0,o.i(801373).defineIcon)({className:"googlePlayLogo",viewBox:"0 0 13 14",svg:(0,e.jsx)("path",{d:"M6.458 6.543.116.388c-.08.165-.12.347-.116.53V12.17c0 .215.045.394.12.537zm.367-.356 1.953-1.9L1.33.173A1.2 1.2 0 0 0 .743 0a.7.7 0 0 0-.248.043zm4.707-.378L9.249 4.548 7.195 6.546 9.25 8.539l2.283-1.262c.73-.403.73-1.064 0-1.468M6.829 6.903.513 13.05c.225.074.508.039.818-.131l7.45-4.12z"})});o.s(["GooglePlayLogo",0,c])}]);
+
+//# debugId=5668aab9-681f-6337-f1a4-aeb4290842f6
+//# sourceMappingURL=0ty4wefu0altc.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="dd213632-20d0-fbd7-a2a8-cfb84d0b5ef2")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,721478,h=>{"use strict";var o=h.i(968946),t=h.i(707821);h.s(["WallIcon",0,function(h){return(0,o.jsx)(t.l,{...h,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M1.875 12.813H5v3.124H1.875zM5 4.063H1.875v3.125H5zm4.375 4.375h-7.5v3.124h7.5zm4.375-4.376h-7.5v3.125h7.5zm1.25 0v3.125h3.125V4.063zm-4.375 7.5h7.5V8.439h-7.5zM15 15.939h3.125v-3.126H15zm-8.75 0h7.5v-3.126h-7.5z",fill:"currentColor"})})}])}]);
+
+//# debugId=dd213632-20d0-fbd7-a2a8-cfb84d0b5ef2
+//# sourceMappingURL=0sea3ppraaai-.js.map

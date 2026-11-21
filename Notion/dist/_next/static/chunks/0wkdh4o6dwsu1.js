@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="443437b4-2f92-3b2b-5ff0-ba0b6990fd59")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,143052,i=>{"use strict";var o=i.i(968946),r=i.i(707821);i.s(["AriesIcon",0,function(i){return(0,o.jsx)(r.l,{...i,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M17.5 6.719a4.225 4.225 0 0 1-4.219 4.219h-.469V9.062h.47a2.345 2.345 0 1 0-2.344-2.343V17.5H9.062V6.719A2.345 2.345 0 1 0 6.72 9.062h.468v1.876H6.72a4.225 4.225 0 0 1-4.22-4.22A4.225 4.225 0 0 1 6.719 2.5c1.325 0 2.506.616 3.281 1.572A4.2 4.2 0 0 1 13.281 2.5 4.225 4.225 0 0 1 17.5 6.719",fill:"currentColor"})})}])}]);
+
+//# debugId=443437b4-2f92-3b2b-5ff0-ba0b6990fd59
+//# sourceMappingURL=3nj3gd3s_uf21.js.map

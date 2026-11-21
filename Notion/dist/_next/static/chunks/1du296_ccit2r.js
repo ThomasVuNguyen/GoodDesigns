@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="f7cb5c82-887c-4791-18c4-0b5930d0515e")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,849276,c=>{"use strict";var l=c.i(968946),o=c.i(707821);c.s(["MakeupBrushIcon",0,function(c){return(0,l.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,l.jsx)("path",{d:"M11.25 10 7.5 6.25l2.166-4.331c.228-.46.572-.669 1.084-.669 1.51 0 5.503 2.797 5.503 5.5 0 .513-.212.853-.669 1.084L11.254 10zM.625 15.55l1.325 1.325L10 11.25 6.25 7.5zm17.888-2.478c.15.406.237.844.237 1.303a3.75 3.75 0 0 1-3.75 3.75 3.75 3.75 0 0 1-3.75-3.75 3.75 3.75 0 0 1 3.75-3.75c.46 0 .897.088 1.303.238l.863-.863 2.209 2.21zm-1.638 1.303c0-1.034-.84-1.875-1.875-1.875-1.034 0-1.875.84-1.875 1.875 0 1.034.84 1.875 1.875 1.875 1.034 0 1.875-.84 1.875-1.875",fill:"currentColor"})})}])}]);
+
+//# debugId=f7cb5c82-887c-4791-18c4-0b5930d0515e
+//# sourceMappingURL=3jygnaeyq-7jb.js.map

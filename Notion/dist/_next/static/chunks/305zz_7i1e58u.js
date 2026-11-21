@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="2ef6fd36-b3ad-4026-d5e8-f27b1aaa0be6")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,329163,c=>{"use strict";var t=c.i(968946),o=c.i(707821);c.s(["BathtubIcon",0,function(c){return(0,t.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M18.75 10H17.5v3.125c0 1.544-.956 2.5-2.5 2.5V17.5h-1.875v-1.875h-5V17.5H6.25v-1.994c-1.013-.247-1.75-.881-2.287-1.953L2.188 10H1.25V8.125h14.375V5.313c0-.641-.297-.938-.937-.938s-.938.297-.938.938v.937h-1.875v-.937c0-1.682 1.131-2.813 2.813-2.813 1.68 0 2.812 1.131 2.812 2.813v2.812h1.25z",fill:"currentColor"})})}])}]);
+
+//# debugId=2ef6fd36-b3ad-4026-d5e8-f27b1aaa0be6
+//# sourceMappingURL=02odwm_aro7j3.js.map

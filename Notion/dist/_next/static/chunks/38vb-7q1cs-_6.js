@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="9a5b58cd-ca15-7041-f297-3f7cbf3fa170")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,115825,o=>{"use strict";var c=o.i(968946),t=o.i(707821);o.s(["BowlFoodIcon",0,function(o){return(0,c.jsx)(t.l,{...o,viewBox:"0 0 20 20",children:(0,c.jsx)("path",{d:"m14.04 15.125-.29 1.75h-7.5l-.29-1.75c-2.588-1.197-4.085-3.66-4.085-7h16.25c0 3.34-1.497 5.803-4.084 7m-1.54-8.25h3.75c0-1.928-1.197-3.125-3.125-3.125a3.6 3.6 0 0 0-1.481.294C10.894 3.056 9.68 2.5 8.125 2.5c-2.7 0-4.375 1.675-4.375 4.375z",fill:"currentColor"})})}])}]);
+
+//# debugId=9a5b58cd-ca15-7041-f297-3f7cbf3fa170
+//# sourceMappingURL=3-cnj-8cz5uta.js.map

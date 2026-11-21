@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="bb43dcf9-1ac2-081e-5ea0-92c37c201aec")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,547156,c=>{"use strict";var o=c.i(968946),t=c.i(707821);c.s(["BugleIcon",0,function(c){return(0,o.jsx)(t.l,{...c,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M17.5 3.125c0 2.313-1.437 3.75-3.75 3.75H0V8.75h2.663a4.36 4.36 0 0 0-.788 2.5 4.376 4.376 0 0 0 4.375 4.375H10a4.376 4.376 0 0 0 4.375-4.375c0-.931-.294-1.79-.787-2.5h.162c2.313 0 3.75 1.438 3.75 3.75H20V3.125zm-5 8.125a2.5 2.5 0 0 1-2.5 2.5H6.25a2.5 2.5 0 1 1 0-5H10a2.5 2.5 0 0 1 2.5 2.5",fill:"currentColor"})})}])}]);
+
+//# debugId=bb43dcf9-1ac2-081e-5ea0-92c37c201aec
+//# sourceMappingURL=2yzedhcxaz-rd.js.map

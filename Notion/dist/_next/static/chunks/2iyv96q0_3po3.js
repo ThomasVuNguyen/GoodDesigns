@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="ddea87c8-2e78-553b-ed20-d02223deb027")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,207016,h=>{"use strict";var l=h.i(968946),t=h.i(707821);h.s(["ReceiptIcon",0,function(h){return(0,l.jsx)(t.l,{...h,viewBox:"0 0 20 20",children:(0,l.jsx)("path",{d:"m14.375 2.5-1.25 1.25-1.25-1.25h-.625L10 3.75 8.75 2.5h-.625l-1.25 1.25-1.25-1.25h-.937v15h.937l1.25-1.25 1.25 1.25h.625L10 16.25l1.25 1.25h.625l1.25-1.25 1.25 1.25h.938v-15zM9.063 13.125h-2.5v-1.25h2.5zm1.25-2.5h-3.75v-1.25h3.75zm-2.188-3.75v-1.25h3.75v1.25zm5.313 6.25h-1.876v-1.25h1.876zm0-2.5h-1.876v-1.25h1.876z",fill:"currentColor"})})}])}]);
+
+//# debugId=ddea87c8-2e78-553b-ed20-d02223deb027
+//# sourceMappingURL=2x0ewsqw5tu8x.js.map

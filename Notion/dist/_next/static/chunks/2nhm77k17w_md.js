@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="d15c8750-676f-6976-0f1f-6fc2d54048a5")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,970812,o=>{"use strict";var t=o.i(968946),e=o.i(707821);o.s(["StovetopIcon",0,function(o){return(0,t.jsx)(e.l,{...o,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M16.25 1.875v2.5H3.75v-2.5zm-12.5 3.75h12.5v12.5H3.75zm5 9.063a1.563 1.563 0 1 0-3.126 0 1.563 1.563 0 0 0 3.126 0m2.5-5.626a1.563 1.563 0 1 0 3.126 0 1.563 1.563 0 0 0-3.126 0m-.937 5.313a2.187 2.187 0 1 0 2.187-2.187 2.186 2.186 0 0 0-2.187 2.187m-5-5A2.187 2.187 0 1 0 7.5 7.188a2.186 2.186 0 0 0-2.187 2.187",fill:"currentColor"})})}])}]);
+
+//# debugId=d15c8750-676f-6976-0f1f-6fc2d54048a5
+//# sourceMappingURL=0riciuon45f3w.js.map

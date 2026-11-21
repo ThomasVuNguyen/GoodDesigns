@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="44286670-c23c-0570-5b95-de0718e15c1e")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,461269,c=>{"use strict";var o=c.i(968946),e=c.i(707821);c.s(["VideoCameraIcon",0,function(c){return(0,o.jsx)(e.l,{...c,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M13.125 7.188v5.625c0 1.537-.963 2.5-2.5 2.5H3.75c-1.537 0-2.5-.963-2.5-2.5V7.187c0-1.537.962-2.5 2.5-2.5h6.875c1.537 0 2.5.963 2.5 2.5M17.5 5.625 14.375 8.75v2.5l3.125 3.125h1.25v-8.75z",fill:"currentColor"})})}])}]);
+
+//# debugId=44286670-c23c-0570-5b95-de0718e15c1e
+//# sourceMappingURL=2on1fc-9fjkwu.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="fb7b757f-cb02-d15d-5faf-2d61cae7ce3b")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,215434,(e,o,t)=>{let a="/product/dev/run.module.scss.d";(window.__NEXT_P=window.__NEXT_P||[]).push([a,()=>e.r(665445)]),o.hot&&o.hot.dispose(function(){window.__NEXT_P.push([a])})},665445,e=>{"use strict";let o,t,a,g,r,n,P,d,m,s,u,c;e.s(["__esModule",0,o,"gamePage",0,t,"gamePageContent",0,a,"gamePageFooter",0,g,"gamePageFooterActions",0,r,"gamePageFooterBrand",0,n,"gamePageFooterButtonGroup",0,P,"gamePageFooterButtonText",0,d,"gamePageFooterInner",0,m,"gamePageFooterLogoMark",0,s,"gamePageFooterLogoWordmark",0,u,"gamePageFooterSecondaryCta",0,c])}]);
+
+//# debugId=fb7b757f-cb02-d15d-5faf-2d61cae7ce3b
+//# sourceMappingURL=0285-zf201qdi.js.map

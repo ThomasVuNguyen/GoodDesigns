@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="bc2ffd05-50c7-19f0-f12f-c71fd38d7fa7")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,40449,c=>{"use strict";var o=c.i(968946),t=c.i(707821);c.s(["FuelIcon",0,function(c){return(0,o.jsx)(t.l,{...c,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"m15.7 2.5-1.325 1.325 1.472 1.472A2.498 2.498 0 0 0 17.5 8.744v3.444c0 .64-.297.937-.937.937s-.938-.297-.938-.937v-1.25c0-1.682-1.131-2.813-2.812-2.813h-.938V2.5h-8.75V15H1.25v1.875h12.5V15h-1.875v-5h.938c.64 0 .937.297.937.938v1.25c0 1.68 1.131 2.812 2.813 2.812 1.68 0 2.812-1.131 2.812-2.812V6.175zM5 4.375h5v3.75H5z",fill:"currentColor"})})}])}]);
+
+//# debugId=bc2ffd05-50c7-19f0-f12f-c71fd38d7fa7
+//# sourceMappingURL=02s7fum3g9nx0.js.map

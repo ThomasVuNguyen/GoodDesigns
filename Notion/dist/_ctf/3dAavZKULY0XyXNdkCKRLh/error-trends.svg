@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300">
+  <!-- Background -->
+  <rect width="600" height="300" fill="#FFFFFF"/>
+  
+  <!-- Definitions for fonts -->
+  <defs>
+    <style>
+      text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    </style>
+  </defs>
+  
+  <!-- Axes -->
+  <line x1="60" y1="240" x2="540" y2="240" stroke="#E2E8F0" stroke-width="1.5"/>
+  <line x1="60" y1="60" x2="60" y2="240" stroke="#E2E8F0" stroke-width="1.5"/>
+  
+  <!-- Title -->
+  <text x="300" y="40" text-anchor="middle" font-size="16" font-weight="600" fill="#1A202C">Errors over time</text>
+  
+  <!-- Axis labels -->
+  <text x="300" y="270" text-anchor="middle" font-size="12" fill="#4A5568">Time</text>
+  <text x="35" y="150" text-anchor="middle" transform="rotate(-90, 35, 150)" font-size="12" fill="#4A5568"># of errors</text>
+  
+  <!-- Lines -->
+  <!-- No changes (steep increase) -->
+  <path d="M60 150 Q300 130 540 45" stroke="#EF4444" stroke-width="2.5" fill="none"/>
+  
+  <!-- Lint warning only (moderate increase) -->
+  <path d="M60 150 Q300 140 540 92" stroke="#EAB308" stroke-width="2.5" fill="none"/>
+  
+  <!-- With ratchet (slight decrease) -->
+  <path d="M60 150 Q300 160 540 177" stroke="#22C55E" stroke-width="2.5" fill="none"/>
+  
+  <!-- Legend -->
+  <rect x="70" y="190" width="15" height="2.5" fill="#EF4444"/>
+  <text x="95" y="195" font-size="12" fill="#4A5568">No changes to infra</text>
+  
+  <rect x="70" y="210" width="15" height="2.5" fill="#EAB308"/>
+  <text x="95" y="215" font-size="12" fill="#4A5568">With lint warning only</text>
+  
+  <rect x="70" y="230" width="15" height="2.5" fill="#22C55E"/>
+  <text x="95" y="235" font-size="12" fill="#4A5568">With ratchet</text>
+</svg>

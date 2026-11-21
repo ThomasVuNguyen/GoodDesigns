@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="10795c66-f313-fae2-f89e-da3d624dc465")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,597109,l=>{"use strict";var i=l.i(968946),o=l.i(707821);l.s(["AirplaneIcon",0,function(l){return(0,i.jsx)(o.l,{...l,viewBox:"0 0 20 20",children:(0,i.jsx)("path",{d:"M11.875 10.938v3.437l2.5 1.25V17.5L10 16.406 5.625 17.5v-1.875l2.5-1.25v-3.437L1.875 12.5V10l6.25-3.125v-2.5c0-2.119.719-3.125 1.875-3.125s1.875 1.006 1.875 3.125v2.5L18.125 10v2.5z",fill:"currentColor"})})}])}]);
+
+//# debugId=10795c66-f313-fae2-f89e-da3d624dc465
+//# sourceMappingURL=378_07d4ngwe-.js.map

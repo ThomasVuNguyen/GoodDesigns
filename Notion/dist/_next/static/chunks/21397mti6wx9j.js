@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="c7bdbba8-39d7-e87d-11ae-bb547dfec3ea")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,609961,i=>{"use strict";var r=i.i(968946),c=i.i(707821);i.s(["CampingTrailerIcon",0,function(i){return(0,r.jsx)(c.l,{...i,viewBox:"0 0 20 20",children:(0,r.jsx)("path",{d:"M16.875 12.5V5.625h-10c-3.084 0-5 1.916-5 5v3.75H6.25V15c0 1.034.84 1.875 1.875 1.875C9.159 16.875 10 16.035 10 15v-.625h9.375V12.5zM15 10.625h-4.375V7.5H15z",fill:"currentColor"})})}])}]);
+
+//# debugId=c7bdbba8-39d7-e87d-11ae-bb547dfec3ea
+//# sourceMappingURL=3-zk_m1-n_igo.js.map

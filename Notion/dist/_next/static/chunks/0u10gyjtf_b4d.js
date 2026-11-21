@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="af458c83-5272-b274-0e9e-ba5993aca8c7")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,476326,h=>{"use strict";var o=h.i(968946),t=h.i(707821);h.s(["BusIcon",0,function(h){return(0,o.jsx)(t.l,{...h,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M17.5 6.25h-1.25v-2.4S14.228 1.875 10 1.875 3.75 3.85 3.75 3.85v2.4H2.5V10h1.25v5.625H5V17.5h2.5v-1.875h5V17.5H15v-1.875h1.25V10h1.25zM5.625 4.797C6.353 4.369 7.791 3.75 10 3.75s3.64.619 4.375 1.05V10h-8.75zm1.25 8.953a.936.936 0 0 1-.937-.937.936.936 0 1 1 1.875 0 .936.936 0 0 1-.938.937m5.313-.937a.936.936 0 1 1 1.875 0 .936.936 0 0 1-.938.937.936.936 0 0 1-.937-.937",fill:"currentColor"})})}])}]);
+
+//# debugId=af458c83-5272-b274-0e9e-ba5993aca8c7
+//# sourceMappingURL=0sml8noyoppsg.js.map

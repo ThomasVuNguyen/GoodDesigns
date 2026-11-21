@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="ed031a44-3e79-68f0-2ec0-5661fe7f748f")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,915772,e=>{"use strict";var l=e.i(968946),o=e.i(707821);e.s(["TelescopeIcon",0,function(e){return(0,l.jsx)(o.l,{...e,viewBox:"0 0 20 20",children:(0,l.jsx)("path",{d:"m10.938 12.54 6.562 3.282-.837 1.678-5.725-2.863V17.5H9.062v-2.863L3.339 17.5 2.5 15.822l6.563-3.281V8.825L6.678 10.02l-.418-.84-2.918 1.46-.838-1.678 2.919-1.46-.419-.837 6.669-3.335-.419-.837L14.988.628l2.515 5.031-3.734 1.866-.419-.837-2.41 1.203v4.653z",fill:"currentColor"})})}])}]);
+
+//# debugId=ed031a44-3e79-68f0-2ec0-5661fe7f748f
+//# sourceMappingURL=020c2es3gjw07.js.map

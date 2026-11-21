@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="6490e975-c144-fe05-46e6-61a925963b5b")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,653346,e=>{"use strict";e.s(["K",0,"0.5rem","v",0,"#000000bf","d",0,"#000000","Q",0,"#097fe8","c",0,"#0075de","e",0,"#9c7054","M",0,"#1313ba","W",0,"#f6f5f4","A",0,"#dfdcd9","$",0,"#a39e98","I",0,"#78736f","t",0,"#615d59","R",0,"#494744","_",0,"#1aae39","w",0,"#0f6220","X",0,"#ff6d00","Z",0,"#ff64c8","p",0,"#ad6ded","h",0,"#9849e8","i",0,"#562983","S",0,"#f64932","D",0,"#83cbc9","f",0,"#27918d","k",0,"#0a4d4b","L",0,"#ffb110","Y",0,"1rem","n",0,"NotionInter, Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Apple Color Emoji, Arial, sans-serif, Segoe UI Emoji, Segoe UI Symbol","q",0,"0.75rem"])}]);
+
+//# debugId=6490e975-c144-fe05-46e6-61a925963b5b
+//# sourceMappingURL=07yd1s5rk3ct7.js.map

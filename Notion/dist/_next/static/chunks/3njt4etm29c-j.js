@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="a97f095d-1617-d762-41e9-bbd440da8744")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,123991,o=>{"use strict";var t=o.i(968946),r=o.i(707821);o.s(["PostcardIcon",0,function(o){return(0,t.jsx)(r.l,{...o,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M2.5 4.375v11.25h15V4.375zM4.375 6.25H8.75V7.5H4.375zM7.5 12.5H4.375v-1.25H7.5zM10 10H4.375V8.75H10zm5.625 0H12.5V6.25h3.125z",fill:"currentColor"})})}])}]);
+
+//# debugId=a97f095d-1617-d762-41e9-bbd440da8744
+//# sourceMappingURL=0n5qplkrvzk_k.js.map

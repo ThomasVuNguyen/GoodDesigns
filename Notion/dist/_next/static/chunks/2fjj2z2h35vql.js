@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="7bab8f92-1c50-6a38-d9ff-d82819394d2a")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,896013,c=>{"use strict";var h=c.i(968946),t=c.i(707821);c.s(["ElectricPlugIcon",0,function(c){return(0,h.jsx)(t.l,{...c,viewBox:"0 0 20 20",children:(0,h.jsx)("path",{d:"M15.625 6.25v1.875h-1.25v2.5c0 1.544-.956 2.5-2.5 2.5h-.937v1.25c0 1.21.665 1.875 1.874 1.875h.938v1.875h-.937c-2.244 0-3.75-1.506-3.75-3.75v-1.25h-.938c-1.544 0-2.5-.956-2.5-2.5v-2.5h-1.25V6.25h2.188V1.875h1.875V6.25h3.124V1.875h1.876V6.25z",fill:"currentColor"})})}])}]);
+
+//# debugId=7bab8f92-1c50-6a38-d9ff-d82819394d2a
+//# sourceMappingURL=2xs4yr3mfz0o6.js.map

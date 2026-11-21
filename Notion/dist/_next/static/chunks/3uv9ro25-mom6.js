@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="beb86d15-761c-6245-0ce2-15622d4b77b9")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,594829,e=>{"use strict";var c=e.i(968946),t=e.i(707821);e.s(["SteeringWheelIcon",0,function(e){return(0,c.jsx)(t.l,{...e,viewBox:"0 0 20 20",children:(0,c.jsx)("path",{d:"M10 2.5c-4.14 0-7.5 3.36-7.5 7.5s3.36 7.5 7.5 7.5 7.5-3.36 7.5-7.5-3.36-7.5-7.5-7.5m0 1.875a5.62 5.62 0 0 1 5.619 5.512L13.644 8.9c-.666-.331-1.213-.463-1.957-.463H8.31c-.743 0-1.29.129-1.956.463l-1.975.987a5.623 5.623 0 0 1 5.619-5.512zm-5.316 7.456 2.444-1.222a3.12 3.12 0 0 0 1.935 1.747v3.185a5.63 5.63 0 0 1-4.379-3.71m6.254 3.71v-3.185a3.15 3.15 0 0 0 1.934-1.747l2.444 1.222a5.63 5.63 0 0 1-4.379 3.71",fill:"currentColor"})})}])}]);
+
+//# debugId=beb86d15-761c-6245-0ce2-15622d4b77b9
+//# sourceMappingURL=0bg5kglx_adgd.js.map

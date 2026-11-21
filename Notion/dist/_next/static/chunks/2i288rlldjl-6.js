@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="07026845-f455-878b-ca86-a71701820bfa")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,115617,i=>{"use strict";var l=i.i(968946),h=i.i(707821);i.s(["TrainLightRailIcon",0,function(i){return(0,l.jsx)(h.l,{...i,viewBox:"0 0 20 20",children:(0,l.jsx)("path",{d:"m14.375 15.625 1.563 3.125h-2.11l-.625-1.25H6.797l-.625 1.25h-2.11l1.563-3.125zM16.25 8.75v3.125c0 1.544-.956 2.5-2.5 2.5h-7.5c-1.544 0-2.5-.956-2.5-2.5V8.75l1.25-5h4.063V2.5H6.874V.625h6.25V2.5h-2.187v1.25H15zm-8.437 2.813a.936.936 0 0 0-.938-.938.936.936 0 0 0-.937.938.936.936 0 1 0 1.875 0m6.25 0a.936.936 0 0 0-.938-.938.936.936 0 0 0-.937.938.936.936 0 1 0 1.875 0m.256-2.813-.782-3.125h-7.07L5.684 8.75z",fill:"currentColor"})})}])}]);
+
+//# debugId=07026845-f455-878b-ca86-a71701820bfa
+//# sourceMappingURL=3g4j6e_z9doov.js.map

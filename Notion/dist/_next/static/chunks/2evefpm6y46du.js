@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="142ba407-676d-cd60-f8d1-e6fb7758450d")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,585965,i=>{"use strict";var t=i.i(968946),h=i.i(707821);i.s(["TrainMagneticLevitationIcon",0,function(i){return(0,t.jsx)(h.l,{...i,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M11.088 3.178h.034l-.525-1.615h-1.19L8.88 3.178h.035C5.644 3.472 4.066 5 4.066 5v10a2.5 2.5 0 0 0 2.5 2.5h1.562v-1.875h-1.25A.627.627 0 0 1 6.253 15v-1.25h7.5V15a.627.627 0 0 1-.625.625h-1.25V17.5h1.563a2.5 2.5 0 0 0 2.5-2.5V5s-1.578-1.528-4.85-1.822zM6.875 12.5a.936.936 0 0 1-.938-.937.937.937 0 1 1 1.875 0 .936.936 0 0 1-.937.937m6.25 0a.936.936 0 0 1-.937-.937.936.936 0 1 1 1.875 0 .936.936 0 0 1-.938.937m.938-3.125H5.937V6.25h8.125z",fill:"currentColor"})})}])}]);
+
+//# debugId=142ba407-676d-cd60-f8d1-e6fb7758450d
+//# sourceMappingURL=2wjj5cf0xop5d.js.map

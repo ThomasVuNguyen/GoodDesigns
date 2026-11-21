@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="f4bd7fb0-291f-e431-ecd0-f6ef06c67ec4")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,203509,c=>{"use strict";var i=c.i(968946),o=c.i(707821);c.s(["MusicIcon",0,function(c){return(0,i.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,i.jsx)("path",{d:"M16.25 1.875v11.563c0 1.543-1.078 2.5-2.812 2.5-1.735 0-2.813-.957-2.813-2.5s1.078-2.5 2.813-2.5c.337 0 .653.037.937.109V7.344L7.5 9.062v6.563c0 1.544-1.078 2.5-2.812 2.5-1.735 0-2.813-.956-2.813-2.5s1.078-2.5 2.813-2.5c.337 0 .653.037.937.11V4.53z",fill:"currentColor"})})}])}]);
+
+//# debugId=f4bd7fb0-291f-e431-ecd0-f6ef06c67ec4
+//# sourceMappingURL=0eoz3s6p5-a3k.js.map

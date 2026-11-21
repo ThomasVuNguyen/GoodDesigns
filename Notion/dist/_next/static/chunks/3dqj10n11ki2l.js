@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="557de88a-e7fa-07f2-4cb2-38762e6ae58b")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,831843,c=>{"use strict";var i=c.i(968946),o=c.i(707821);c.s(["PizzaIcon",0,function(c){return(0,i.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,i.jsx)("path",{d:"M7.16 1.875c-.97 0-1.535 1.066-1.535 1.94q.001.51.303.904L1.875 16.875l1.25 1.25 12.156-4.053q.394.302.903.303c.757 0 1.941-.481 1.941-1.534 0-2.838-7.347-10.966-10.966-10.966M5.936 15.313a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5m2.188-5.938a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5m2.5 4.375a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5",fill:"currentColor"})})}])}]);
+
+//# debugId=557de88a-e7fa-07f2-4cb2-38762e6ae58b
+//# sourceMappingURL=3o16jh_8xlwab.js.map

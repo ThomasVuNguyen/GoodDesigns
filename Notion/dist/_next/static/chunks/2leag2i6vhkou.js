@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="109fb6a9-6e46-67d3-872c-dcc4384dfb86")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,515624,t=>{"use strict";var o=t.i(968946),c=t.i(707821);t.s(["DentalIcon",0,function(t){return(0,o.jsx)(c.l,{...t,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M11.056 14.653a9 9 0 0 1 .194 1.963v.884H3.125v-.884c0-.735.05-1.241.194-1.963L5 6.25h4.375zM9.375 2.5H5V5h4.375zM15 2.5v1.25h-2.5v5H15v8.75h1.875v-15z",fill:"currentColor"})})}])}]);
+
+//# debugId=109fb6a9-6e46-67d3-872c-dcc4384dfb86
+//# sourceMappingURL=3y034nz1rhc2x.js.map

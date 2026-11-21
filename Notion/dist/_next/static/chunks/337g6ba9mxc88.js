@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="39766fdd-9024-d637-4d35-2556dcbe2131")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,168783,t=>{"use strict";var e=t.i(968946);let s=(0,t.i(801373).defineIcon)({className:"frontPauseButton",viewBox:"0 0 16 16",svg:(0,e.jsxs)(e.Fragment,{children:[(0,e.jsx)("rect",{x:"1",y:"0",width:"5",height:"16",rx:"1"}),(0,e.jsx)("rect",{x:"9",y:"0",width:"5",height:"16",rx:"1"})]})});t.s(["FrontPauseButton",0,s])}]);
+
+//# debugId=39766fdd-9024-d637-4d35-2556dcbe2131
+//# sourceMappingURL=3qsuzaduqet5v.js.map

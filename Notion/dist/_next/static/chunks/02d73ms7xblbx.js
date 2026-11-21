@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="d4e10c74-f96d-bef9-a493-f19632ae41bb")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,943330,v=>{"use strict";var o=v.i(968946),t=v.i(707821);v.s(["GovernmentIcon",0,function(v){return(0,o.jsx)(t.l,{...v,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M17.5 10.625v-2.5h-1.978c-.431-2.537-2.213-4.137-4.897-4.35v-.65l2.5-1.25V.625h-3.75v3.15c-2.684.212-4.466 1.813-4.897 4.35H2.5v2.5h1.875v3.75H2.5v2.5h15v-2.5h-1.875v-3.75zm-10.625 0H8.75v3.75H6.875zm6.25 3.75H11.25v-3.75h1.875z",fill:"currentColor"})})}])}]);
+
+//# debugId=d4e10c74-f96d-bef9-a493-f19632ae41bb
+//# sourceMappingURL=0avxmkxhodsol.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="35ba7591-0235-b81c-6479-183b956c3174")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,512710,c=>{"use strict";var i=c.i(968946),o=c.i(707821);c.s(["ChairIcon",0,function(c){return(0,i.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,i.jsx)("path",{d:"M18.125 7.5c0 .772-.478 1.25-1.25 1.25v5.625H15v1.875h-1.875v-1.875h-6.25v1.875H5v-1.875H3.125V8.75c-.772 0-1.25-.478-1.25-1.25s.478-1.25 1.25-1.25H5v4.375h10V6.25h1.875c.772 0 1.25.478 1.25 1.25M13.75 4.322c0-.478-.175-.8-.581-1.056-.556-.35-1.435-.766-3.169-.766s-2.616.413-3.169.766c-.406.256-.581.578-.581 1.056v5.053h7.5z",fill:"currentColor"})})}])}]);
+
+//# debugId=35ba7591-0235-b81c-6479-183b956c3174
+//# sourceMappingURL=3ujafots5k2s-.js.map

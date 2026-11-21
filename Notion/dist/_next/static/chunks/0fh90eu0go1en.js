@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="584c032d-28eb-ed84-c4ca-0c3aee4810e3")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,93265,c=>{"use strict";var o=c.i(968946),t=c.i(707821);c.s(["LaptopIcon",0,function(c){return(0,o.jsx)(t.l,{...c,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M16.875 12.5H3.125V5c0-.772.478-1.25 1.25-1.25h11.25c.772 0 1.25.478 1.25 1.25zM1.25 13.75c0 1.544.956 2.5 2.5 2.5h12.5c1.544 0 2.5-.956 2.5-2.5z",fill:"currentColor"})})}])}]);
+
+//# debugId=584c032d-28eb-ed84-c4ca-0c3aee4810e3
+//# sourceMappingURL=18d625pk2gbts.js.map

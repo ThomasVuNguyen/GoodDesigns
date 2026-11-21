@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="35853b5a-14ef-2c77-5a1a-0defc7b2c4db")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,814871,c=>{"use strict";var r=c.i(968946),i=c.i(707821);c.s(["HairCareIcon",0,function(c){return(0,r.jsx)(i.l,{...c,viewBox:"0 0 20 20",children:(0,r.jsx)("path",{d:"M7.188 5.181V2.5h-2.5v2.681C3.313 5.606 2.5 6.771 2.5 8.438V17.5h6.875V8.438c0-1.666-.812-2.832-2.187-3.257M7.5 12.5H4.375V10H7.5zm7.813-7.319V2.5h-2.5v2.681c-1.376.425-2.188 1.59-2.188 3.257V17.5H17.5V8.438c0-1.666-.812-2.832-2.187-3.257m.312 10.444H12.5V12.5h3.125zm0-5.625H12.5V8.438c0-.966.597-1.563 1.563-1.563.965 0 1.562.597 1.562 1.563z",fill:"currentColor"})})}])}]);
+
+//# debugId=35853b5a-14ef-2c77-5a1a-0defc7b2c4db
+//# sourceMappingURL=1v_qfpv4p3pxf.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="cd6bbef3-eb7b-06d7-b814-8f621d27f826")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,396178,o=>{"use strict";var t=o.i(968946),i=o.i(707821);o.s(["MapIcon",0,function(o){return(0,t.jsx)(i.l,{...o,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M11.25 3.75h1.25v10.625L8.75 16.25H7.5V5.625zm-10 0v10.625L5 16.25h1.25V5.625L2.5 3.75zm13.75 0h-1.25v10.625l3.75 1.875h1.25V5.625z",fill:"currentColor"})})}])}]);
+
+//# debugId=cd6bbef3-eb7b-06d7-b814-8f621d27f826
+//# sourceMappingURL=26ogsh1h0plb7.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="695eac4f-5e59-bdd4-a9fd-c23fc00b3e5f")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,998364,l=>{"use strict";var t=l.i(968946),i=l.i(707821);l.s(["ChessKnightIcon",0,function(l){return(0,t.jsx)(i.l,{...l,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M14.375 15.625h1.875V17.5H3.75v-1.875h2.188l-2.191-4.381a5.7 5.7 0 0 1-.566-1.769 5.56 5.56 0 0 1 3-5.75 5.5 5.5 0 0 1-.462-2.244l.856-.856 2.506 2.506c1.428.035 2.79.61 3.8 1.622l3.372 3.372-2.5 2.5-3.125-2.084v1.875l2.081 1.387a3.75 3.75 0 0 1 1.67 3.119v.7z",fill:"currentColor"})})}])}]);
+
+//# debugId=695eac4f-5e59-bdd4-a9fd-c23fc00b3e5f
+//# sourceMappingURL=33u22sw8zjfn9.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="40c4e196-54fb-004b-a27b-9e307d47eabd")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,616733,t=>{"use strict";var c=t.i(968946),i=t.i(707821);t.s(["SuitClubIcon",0,function(t){return(0,c.jsx)(i.l,{...t,viewBox:"0 0 20 20",children:(0,c.jsx)("path",{d:"M17.5 10.938a3.749 3.749 0 0 1-6.562 2.474v.044c0 .947.534 1.813 1.38 2.238l1.12.56v1.25H6.562v-1.25l1.12-.56a2.5 2.5 0 0 0 1.38-2.238v-.043A3.749 3.749 0 0 1 2.5 10.938a3.75 3.75 0 0 1 4.103-3.732 3.7 3.7 0 0 1-.353-1.581A3.75 3.75 0 0 1 10 1.875a3.75 3.75 0 0 1 3.75 3.75c0 .566-.128 1.1-.353 1.581q.174-.017.353-.019a3.75 3.75 0 0 1 3.75 3.75",fill:"currentColor"})})}])}]);
+
+//# debugId=40c4e196-54fb-004b-a27b-9e307d47eabd
+//# sourceMappingURL=2gk3g4m5bj-4f.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="e871318f-fffb-6d2e-56a9-870f068e78b4")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,432535,c=>{"use strict";var o=c.i(968946),t=c.i(707821);c.s(["MosqueIcon",0,function(c){return(0,o.jsx)(t.l,{...c,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"m2.5 5.625 1.25 2.5v8.75h-2.5v-8.75zm15 0-1.25 2.5v8.75h2.5v-8.75zM15 5c0-1.875-2.5-3.125-5-4.375C7.5 1.875 5 3.125 5 5c0 1.037.769 1.881 1.875 2.431v.694H5v8.75h3.75V13.75c0-.772.478-1.25 1.25-1.25s1.25.478 1.25 1.25v3.125H15v-8.75h-1.875v-.694C14.231 6.881 15 6.037 15 5",fill:"currentColor"})})}])}]);
+
+//# debugId=e871318f-fffb-6d2e-56a9-870f068e78b4
+//# sourceMappingURL=39py5jw1-z9hv.js.map

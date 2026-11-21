@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="1759e5f5-419b-97d0-435c-061a6591057b")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,871385,o=>{"use strict";var t=o.i(968946),e=o.i(707821);o.s(["GamePawnIcon",0,function(o){return(0,t.jsx)(e.l,{...o,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M16.25 15.625V17.5H3.75v-1.875q2.19.001 2.878-2.075l1.753-5.256a3.12 3.12 0 0 1-1.506-2.669 3.126 3.126 0 0 1 6.25 0 3.12 3.12 0 0 1-1.506 2.669l1.753 5.256q.691 2.076 2.878 2.075",fill:"currentColor"})})}])}]);
+
+//# debugId=1759e5f5-419b-97d0-435c-061a6591057b
+//# sourceMappingURL=10caj2hvycvec.js.map

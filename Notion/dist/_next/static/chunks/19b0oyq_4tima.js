@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="395ad5c4-29db-f9dc-5be3-f9adb97aff53")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,194467,c=>{"use strict";var h=c.i(968946),i=c.i(707821);c.s(["SinkIcon",0,function(c){return(0,h.jsx)(i.l,{...c,viewBox:"0 0 20 20",children:(0,h.jsx)("path",{d:"M18.75 10.625H17.5v1.25c0 3.084-1.916 5-5 5h-5c-3.084 0-5-1.916-5-5v-1.25H1.25V8.75h4.063V6.875h1.875V8.75h1.875V4.063c0-1.682 1.13-2.813 2.812-2.813s2.813 1.131 2.813 2.813V5h-1.876v-.937c0-.641-.296-.938-.937-.938-.64 0-.937.297-.937.938V8.75h1.874V6.875h1.876V8.75h4.062z",fill:"currentColor"})})}])}]);
+
+//# debugId=395ad5c4-29db-f9dc-5be3-f9adb97aff53
+//# sourceMappingURL=2q6a7hq0m2gvm.js.map

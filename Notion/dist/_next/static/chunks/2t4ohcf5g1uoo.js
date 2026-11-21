@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="09e780b7-3cf4-830b-15de-e70011323afc")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,61276,h=>{"use strict";var v=h.i(968946),o=h.i(707821);h.s(["PianoIcon",0,function(h){return(0,v.jsx)(o.l,{...h,viewBox:"0 0 20 20",children:(0,v.jsx)("path",{d:"M13.75 4.219V2.344h-3.125v1.875h-1.25V2.344H6.25v1.875H2.5v10.625a2.5 2.5 0 0 0 2.5 2.5h10a2.5 2.5 0 0 0 2.5-2.5V4.219zM5 15.469a.627.627 0 0 1-.625-.625v-8.75H6.25v5h.625v4.375zm3.75 0v-4.375h.625v-5h1.25v5h.625v4.375zm6.875-.625a.627.627 0 0 1-.625.625h-1.875v-4.375h.625v-5h1.875z",fill:"currentColor"})})}])}]);
+
+//# debugId=09e780b7-3cf4-830b-15de-e70011323afc
+//# sourceMappingURL=0h8qcbu-0sgi7.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="bd744bf8-71ac-12d5-01c5-c52a815e6deb")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,823171,c=>{"use strict";var i=c.i(968946),o=c.i(707821);c.s(["VoicemailIcon",0,function(c){return(0,i.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,i.jsx)("path",{d:"M7.813 10a1.877 1.877 0 0 1-1.875 1.875A1.876 1.876 0 0 1 4.063 10c0-1.034.84-1.875 1.875-1.875 1.034 0 1.875.84 1.875 1.875M18.75 4.375v11.25H1.25V4.375zM17.188 10a3.13 3.13 0 0 0-3.125-3.125A3.13 3.13 0 0 0 10.937 10c0 .703.238 1.353.632 1.875H8.43A3.1 3.1 0 0 0 9.063 10a3.13 3.13 0 0 0-3.126-3.125A3.13 3.13 0 0 0 2.813 10a3.13 3.13 0 0 0 3.126 3.125h8.125A3.13 3.13 0 0 0 17.187 10m-3.125-1.875c-1.035 0-1.876.84-1.876 1.875a1.876 1.876 0 0 0 3.75 0c0-1.034-.84-1.875-1.875-1.875",fill:"currentColor"})})}])}]);
+
+//# debugId=bd744bf8-71ac-12d5-01c5-c52a815e6deb
+//# sourceMappingURL=1s7x594-90o96.js.map

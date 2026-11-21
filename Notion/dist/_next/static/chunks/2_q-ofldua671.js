@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="08b816c9-069f-10af-a246-1fe70c774162")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,2633,o=>{"use strict";var r=o.i(968946),t=o.i(707821);o.s(["HeartbrokenIcon",0,function(o){return(0,r.jsx)(t.l,{...o,viewBox:"0 0 20 20",children:(0,r.jsx)("path",{d:"M17.5 7.5c0 4.36-4.578 7.972-7.5 10-2.922-2.028-7.5-5.64-7.5-10 0-2.669 1.819-4.375 4.063-4.375.984 0 1.878.381 2.546 1L7.5 7.344l2.54 2.54-1.027 2.057 1.118.559 1.431-2.863-2.54-2.54c.922-1.84 1.937-3.972 4.416-3.972 2.243 0 4.062 1.706 4.062 4.375",fill:"currentColor"})})}])}]);
+
+//# debugId=08b816c9-069f-10af-a246-1fe70c774162
+//# sourceMappingURL=1ukhnlf2m4623.js.map

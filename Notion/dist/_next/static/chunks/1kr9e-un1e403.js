@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="630311ac-1bb8-6563-e3bf-4070b387a64f")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,733203,h=>{"use strict";var c=h.i(968946),o=h.i(707821);h.s(["MahjongIcon",0,function(h){return(0,c.jsx)(o.l,{...h,viewBox:"0 0 20 20",children:(0,c.jsx)("path",{d:"M7.813 10h1.562v1.875H7.813zM5.938 4.375h8.125c.578 0 .937-.36.937-.937 0-.579-.36-.938-.937-.938H5.937C5.36 2.5 5 2.86 5 3.438s.36.937.938.937M15 6.563v10c0 .575-.363.937-.937.937H5.937c-.575 0-.937-.363-.937-.937v-10c0-.575.362-.938.938-.938h8.125c.574 0 .937.362.937.938M13.438 8.75h-2.813V7.5h-1.25v1.25H6.563v5h1.25v-.625h1.562v2.5h1.25v-2.5h1.563v.625h1.25zm-2.813 3.125h1.563V10h-1.563z",fill:"currentColor"})})}])}]);
+
+//# debugId=630311ac-1bb8-6563-e3bf-4070b387a64f
+//# sourceMappingURL=07-17szs7iu_t.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="f7a3f757-b7a1-256c-69db-14010533957d")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,122085,t=>{"use strict";var o=t.i(968946),r=t.i(707821);t.s(["EarthquakeIcon",0,function(t){return(0,o.jsx)(r.l,{...t,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M17.5 9.375v1.25h-2.187v6.25h-4.61l1.485-2.969-2.541-2.54 1.028-2.057-1.119-.559-1.431 2.863 2.54 2.54-1.362 2.722H4.684v-6.25H2.497v-1.25L10 1.875l2.813 2.813V2.5h2.5v4.688z",fill:"currentColor"})})}])}]);
+
+//# debugId=f7a3f757-b7a1-256c-69db-14010533957d
+//# sourceMappingURL=35laoln56-wmf.js.map

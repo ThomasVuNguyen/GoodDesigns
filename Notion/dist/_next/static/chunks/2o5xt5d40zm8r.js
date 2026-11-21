@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="3757be29-e1c6-b436-45cf-4489b9535889")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,485208,o=>{"use strict";var t=o.i(968946),c=o.i(707821);o.s(["CompassIcon",0,function(o){return(0,t.jsx)(c.l,{...o,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M10.938 10a.936.936 0 0 1-.938.938.936.936 0 0 1-.937-.938.936.936 0 1 1 1.875 0m6.562 0c0 4.14-3.36 7.5-7.5 7.5S2.5 14.14 2.5 10 5.86 2.5 10 2.5s7.5 3.36 7.5 7.5m-3.125-3.934-.44-.441-5.498 2.813-2.812 5.496.44.441 5.498-2.812z",fill:"currentColor"})})}])}]);
+
+//# debugId=3757be29-e1c6-b436-45cf-4489b9535889
+//# sourceMappingURL=3ex7ot3o204g8.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="663cca08-1e2f-f03c-3afe-2a53248fd9ba")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,324781,r=>{"use strict";var c=r.i(968946),i=r.i(707821);r.s(["HairdryerIcon",0,function(r){return(0,c.jsx)(i.l,{...r,viewBox:"0 0 20 20",children:(0,c.jsx)("path",{d:"M18.125 9.375h-4.144c-.575 1.188-1.756 1.875-3.356 1.875h-2.5l1.25 5H6.25l-1.26-5.044C3.054 10.963 1.876 9.591 1.876 7.5c0-2.312 1.438-3.75 3.75-3.75h5c1.6 0 2.778.688 3.356 1.875h4.144z",fill:"currentColor"})})}])}]);
+
+//# debugId=663cca08-1e2f-f03c-3afe-2a53248fd9ba
+//# sourceMappingURL=42asvdjxjbi-k.js.map

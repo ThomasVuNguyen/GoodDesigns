@@ -1,0 +1,9 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="3ef247a4-a8f9-c9e5-635e-9db5c9bfec0d")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,882022,e=>{"use strict";var t=e.i(968946);e.i(460027);var i=e.i(202465);let n={component:i.f,title:"TerminalRichText"};e.s(["MultiLineWithComments",0,function(){return(0,t.jsxs)(i.f,{children:[(0,t.jsx)("small",{children:"# Install the Notion CLI\n"}),(0,t.jsx)("small",{children:"$ "}),"curl -fsSL https://ntn.dev | bash\n\n",(0,t.jsx)("small",{children:"# Authenticate\n"}),(0,t.jsx)("small",{children:"$ "}),"notion login"]})},"PreformattedString",0,function(){return(0,t.jsx)(i.f,{children:`$ notion deploy
+Deploying to workers runtime...
+✓ Build complete
+✓ Uploaded artifact
+✓ Live at https://my-app.notion.dev`})},"SingleLine",0,function(){return(0,t.jsxs)(i.f,{children:[(0,t.jsx)("small",{children:"$ "}),"curl -fsSL https://ntn.dev | bash"]})},"default",0,n])},460027,202465,e=>{"use strict";var t=e.i(968946),i=e.i(189891),n=e.i(533337);e.i(534780);var l=e.i(170111),r=e.i(801538),s=e.i(557851);let a=(0,n.forwardRef)(function({className:e,children:n,...a},o){return(0,t.jsx)(l.f,{"data-fui-story":(0,r.f)("components/TerminalRichText"),...a,ref:o,as:"pre",variant:"globalCode",className:(0,i.default)(s.terminalRichText,e),children:(0,t.jsx)("code",{className:s.code,children:n})})});e.s(["f",0,a],202465),e.s([],460027)},557851,e=>{e.v({code:"aBf-CW_code",terminalRichText:"aBf-CW_terminalRichText"})}]);
+
+//# debugId=3ef247a4-a8f9-c9e5-635e-9db5c9bfec0d
+//# sourceMappingURL=3i3b8mx-3cag6.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="611c53ca-3a6c-9a37-9ddc-d41d243f489f")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,852027,c=>{"use strict";var h=c.i(968946),l=c.i(707821);c.s(["DnaIcon",0,function(c){return(0,h.jsx)(l.l,{...c,viewBox:"0 0 20 20",children:(0,h.jsx)("path",{d:"m12.603 9.219 1.46-1.094c1.296-.972 1.874-2.128 1.874-3.75V2.5h-1.874v1.25H5.937V2.5H4.063v1.875c0 1.622.579 2.778 1.875 3.75l5.835 4.375h-3.54l.727-.547-1.562-1.172-1.46 1.094c-1.296.972-1.875 2.128-1.875 3.75V17.5h1.875v-1.25h8.125v1.25h1.876v-1.875c0-1.622-.579-2.778-1.876-3.75L8.229 7.5h3.54l-.727.547zM5.988 5h8.024a2.2 2.2 0 0 1-.646 1.25H6.63A2.2 2.2 0 0 1 5.984 5zm8.024 10H5.989c.084-.497.287-.887.646-1.25h6.735c.36.363.562.753.647 1.25z",fill:"currentColor"})})}])}]);
+
+//# debugId=611c53ca-3a6c-9a37-9ddc-d41d243f489f
+//# sourceMappingURL=1ae8mot0ccek8.js.map

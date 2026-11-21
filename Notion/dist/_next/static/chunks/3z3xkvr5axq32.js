@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="bce30ced-5b1f-b39b-6d10-5d702edb8676")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,285823,h=>{"use strict";var c=h.i(968946),v=h.i(707821);h.s(["ChurchIcon",0,function(h){return(0,c.jsx)(v.l,{...h,viewBox:"0 0 20 20",children:(0,c.jsx)("path",{d:"m13.75 7.5-3.125-3.125v-1.25h1.25v-1.25h-1.25V.625h-1.25v1.25h-1.25v1.25h1.25v1.25L6.25 7.5h-5v1.875H2.5v7.5h6.25V13.75c0-.772.478-1.25 1.25-1.25s1.25.478 1.25 1.25v3.125h6.25v-7.5h1.25V7.5zM6.875 15h-2.5v-3.75c0-.772.478-1.25 1.25-1.25s1.25.478 1.25 1.25zM10 10.625a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5M15.625 15h-2.5v-3.75c0-.772.478-1.25 1.25-1.25s1.25.478 1.25 1.25z",fill:"currentColor"})})}])}]);
+
+//# debugId=bce30ced-5b1f-b39b-6d10-5d702edb8676
+//# sourceMappingURL=23ajf2bsj68xg.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="4fd3a92a-77a5-ff57-f48a-8ded5747f463")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,956675,l=>{"use strict";var h=l.i(968946),i=l.i(707821);l.s(["MandirIcon",0,function(l){return(0,h.jsx)(i.l,{...l,viewBox:"0 0 20 20",children:(0,h.jsx)("path",{d:"M17.5 9.375v7.5h-6.25V13.75c0-.772-.478-1.25-1.25-1.25s-1.25.478-1.25 1.25v3.125H2.5v-7.5h1.875l1.25-5h1.25l.313 1.25h.937l1.25-5h1.25l1.25 5h.938l.312-1.25h1.25l1.25 5z",fill:"currentColor"})})}])}]);
+
+//# debugId=4fd3a92a-77a5-ff57-f48a-8ded5747f463
+//# sourceMappingURL=2emhy8j7_nhto.js.map

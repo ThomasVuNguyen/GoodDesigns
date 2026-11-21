@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="e98ffa34-d7a3-fe73-c235-317690824063")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,512487,o=>{"use strict";var r=o.i(968946),t=o.i(707821);o.s(["CameraIcon",0,function(o){return(0,r.jsx)(t.l,{...o,viewBox:"0 0 20 20",children:(0,r.jsx)("path",{d:"M12.813 10.313a2.813 2.813 0 1 1-5.626-.001 2.813 2.813 0 0 1 5.626 0M17.5 5v11.25h-15V5h3.438l1.25-2.5h5.625l1.25 2.5zm-3.437 5.313a4.062 4.062 0 1 0-8.125 0 4.062 4.062 0 0 0 8.125 0",fill:"currentColor"})})}])}]);
+
+//# debugId=e98ffa34-d7a3-fe73-c235-317690824063
+//# sourceMappingURL=1exg9twm1gek3.js.map

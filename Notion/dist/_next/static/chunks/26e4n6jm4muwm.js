@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="e57e4720-7084-9086-6554-8370d42880a4")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,207790,c=>{"use strict";var o=c.i(968946),t=c.i(707821);c.s(["FanDeckIcon",0,function(c){return(0,o.jsx)(t.l,{...c,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M2.5 17.5H10v-15H2.5zm4.688-1.875a.936.936 0 0 1-.938-.937c0-.52.419-.938.938-.938s.937.419.937.938a.936.936 0 0 1-.937.937M4.374 4.375h3.75v2.5h-3.75zm0 4.375h3.75v2.5h-3.75zm14.981-.606L11.25 16.25V6.894l3.428-3.428z",fill:"currentColor"})})}])}]);
+
+//# debugId=e57e4720-7084-9086-6554-8370d42880a4
+//# sourceMappingURL=2pg5bcgwfwvj-.js.map

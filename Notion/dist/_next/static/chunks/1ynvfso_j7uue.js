@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="a9f9707c-7df0-1285-5995-706b73262e89")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,638780,(o,t,n)=>{let i="/__front-admin/contentful/oauth/redirect";(window.__NEXT_P=window.__NEXT_P||[]).push([i,()=>o.r(747642)]),t.hot&&t.hot.dispose(function(){window.__NEXT_P.push([i])})},747642,o=>{"use strict";var t=o.i(533337),n=o.i(293078);o.s(["default",0,function(){return(0,t.useEffect)(()=>{window.location.href=new URL(n.p.frontAdmin,window.location.href).href},[]),null}])}]);
+
+//# debugId=a9f9707c-7df0-1285-5995-706b73262e89
+//# sourceMappingURL=2upvwo_e77l2m.js.map

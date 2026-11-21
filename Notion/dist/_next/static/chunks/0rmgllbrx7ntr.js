@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="e4905caf-1b4b-19e9-4656-e5e69e6d836a")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,338486,c=>{"use strict";var r=c.i(968946),e=c.i(707821);c.s(["DeliveryTruckIcon",0,function(c){return(0,r.jsx)(e.l,{...c,viewBox:"0 0 20 20",children:(0,r.jsx)("path",{d:"M15.625 6.25h-3.75V4.375h-10v10H3.75V15c0 1.034.84 1.875 1.875 1.875 1.034 0 1.875-.84 1.875-1.875v-.625h5V15c0 1.034.84 1.875 1.875 1.875 1.034 0 1.875-.84 1.875-1.875v-.625h1.875V11.25zm-3.75 4.375v-2.5h2.59l1.25 2.5z",fill:"currentColor"})})}])}]);
+
+//# debugId=e4905caf-1b4b-19e9-4656-e5e69e6d836a
+//# sourceMappingURL=1rkvgx_etck01.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="05d4e5fc-99de-2d58-63cf-62679a856052")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,971660,h=>{"use strict";var o=h.i(968946),r=h.i(707821);h.s(["BarcodeIcon",0,function(h){return(0,o.jsx)(r.l,{...h,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M4.375 4.375h2.5v11.25h-2.5zm3.75 11.25h1.25V4.375h-1.25zm-6.25 0h1.25V4.375h-1.25zm8.75 0h2.5V4.375h-2.5zm6.25-11.25v11.25h1.25V4.375zm-2.5 11.25h1.25V4.375h-1.25z",fill:"currentColor"})})}])}]);
+
+//# debugId=05d4e5fc-99de-2d58-63cf-62679a856052
+//# sourceMappingURL=1fis3z8is7tdv.js.map

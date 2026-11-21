@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="a789a873-0176-63a8-b079-638cc75dadff")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,304955,c=>{"use strict";var o=c.i(968946),t=c.i(707821);c.s(["PhoneIcon",0,function(c){return(0,o.jsx)(t.l,{...c,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M12.5 2.5h-5C5.956 2.5 5 3.456 5 5v10c0 1.544.956 2.5 2.5 2.5h5c1.544 0 2.5-.956 2.5-2.5V5c0-1.544-.956-2.5-2.5-2.5m-.625 13.125h-3.75c-.384 0-.625-.24-.625-.625 0-.384.24-.625.625-.625h3.75c.384 0 .625.24.625.625 0 .384-.24.625-.625.625",fill:"currentColor"})})}])}]);
+
+//# debugId=a789a873-0176-63a8-b079-638cc75dadff
+//# sourceMappingURL=27o7htuxordio.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="e3ab8d80-3278-a6de-a5ab-e2aa06baa66b")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,703886,t=>{"use strict";var i=t.i(968946),l=t.i(707821);t.s(["ShirtIcon",0,function(t){return(0,i.jsx)(l.l,{...t,viewBox:"0 0 20 20",children:(0,i.jsx)("path",{d:"M15.74 3.781Q15.314 2.5 13.964 2.5h-.838S12.406 1.25 10 1.25 6.875 2.5 6.875 2.5h-.838q-1.352 0-1.778 1.281L.937 13.75l2.813.938 1.875-5.626V17.5h8.75V9.063l1.875 5.624 2.813-.937zM8.439 6.875l-1.876-2.5.938-.937 1.875 2.5zm3.124 0-.937-.937 1.875-2.5.938.937z",fill:"currentColor"})})}])}]);
+
+//# debugId=e3ab8d80-3278-a6de-a5ab-e2aa06baa66b
+//# sourceMappingURL=0_3f923i4p6r3.js.map

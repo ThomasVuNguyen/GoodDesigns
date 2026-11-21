@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="ed9ed449-98b2-bb07-3300-2cb61dba08be")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,339490,l=>{"use strict";var o=l.i(968946),c=l.i(707821);l.s(["PhoneCallIcon",0,function(l){return(0,o.jsx)(c.l,{...l,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"m17.5 15-1.616 1.616a3.02 3.02 0 0 1-2.134.884c-5 0-11.25-6.25-11.25-11.25 0-.8.319-1.569.884-2.134L5 2.5l3.75 3.75-2.5 2.5c.031.447.44 1.69 1.875 3.125 1.434 1.434 2.678 1.844 3.125 1.875l2.5-2.5z",fill:"currentColor"})})}])}]);
+
+//# debugId=ed9ed449-98b2-bb07-3300-2cb61dba08be
+//# sourceMappingURL=32d9mzomua46u.js.map

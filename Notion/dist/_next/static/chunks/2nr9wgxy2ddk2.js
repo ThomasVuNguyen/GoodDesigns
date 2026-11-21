@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="a90a9e97-40c0-16aa-85c6-9bf5fa2f7663")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,536933,c=>{"use strict";var o=c.i(968946),t=c.i(707821);c.s(["ScooterIcon",0,function(c){return(0,o.jsx)(t.l,{...c,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M19.375 13.125a3.126 3.126 0 0 1-6.234.313H6.859a3.125 3.125 0 1 1-4.387-3.163L4.1 5.938h2.153c1.544 0 2.5.956 2.5 2.5v.624c-.772 0-1.25.479-1.25 1.25 0 .772.478 1.25 1.25 1.25h3.125V4.689h-1.875v-1.25h3.125l1.875-.938h.625v2.188h-1.44l1.993 5.315.072-.003c1.725 0 3.125 1.4 3.125 3.125z",fill:"currentColor"})})}])}]);
+
+//# debugId=a90a9e97-40c0-16aa-85c6-9bf5fa2f7663
+//# sourceMappingURL=2lna38d_e1-ky.js.map

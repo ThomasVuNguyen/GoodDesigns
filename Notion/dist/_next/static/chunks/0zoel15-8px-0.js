@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="0e0417d8-f32f-c34f-5eef-1be6efe9ff56")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,932319,o=>{"use strict";var c=o.i(968946),e=o.i(707821);o.s(["UnlockKeyholeIcon",0,function(o){return(0,c.jsx)(e.l,{...o,viewBox:"0 0 20 20",children:(0,c.jsx)("path",{d:"M13.75 8.125v-3.75c0-2.312-1.437-3.75-3.75-3.75s-3.75 1.438-3.75 3.75V6.25h1.875V4.375C8.125 3.097 8.722 2.5 10 2.5s1.875.597 1.875 1.875v3.75H3.75V17.5h12.5V8.125zM11.563 15v.625H8.437V15l.785-2.09a1.56 1.56 0 0 1-.784-1.348 1.563 1.563 0 0 1 3.124 0c0 .579-.318 1.079-.784 1.347z",fill:"currentColor"})})}])}]);
+
+//# debugId=0e0417d8-f32f-c34f-5eef-1be6efe9ff56
+//# sourceMappingURL=1rqaw221209qo.js.map

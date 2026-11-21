@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="7e5f28da-153d-6174-4c93-265a3426b38e")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,847893,l=>{"use strict";var o=l.i(968946),t=l.i(707821);l.s(["SnowflakeIcon",0,function(l){return(0,o.jsx)(t.l,{...l,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"m17.394 12.19-2.456.66.659 2.456-1.81.485-.8-2.988-2.046-1.181v2.362l2.187 2.188-1.325 1.325-1.8-1.8-1.8 1.8-1.325-1.325 2.188-2.188v-2.362l-2.047 1.181-.8 2.988-1.81-.485.66-2.456-2.456-.66.484-1.809 2.987.8L8.131 10 6.084 8.819l-2.987.8-.485-1.81L5.07 7.15l-.66-2.456 1.81-.485.8 2.988 2.047 1.181V6.016L6.878 3.828l1.325-1.325 1.8 1.8 1.8-1.8 1.325 1.325-2.187 2.188v2.362l2.047-1.181.8-2.988 1.809.485-.66 2.456 2.457.66-.485 1.809-2.987-.8L11.875 10l2.047 1.181 2.987-.8z",fill:"currentColor"})})}])}]);
+
+//# debugId=7e5f28da-153d-6174-4c93-265a3426b38e
+//# sourceMappingURL=0q9ycymo8w-0n.js.map

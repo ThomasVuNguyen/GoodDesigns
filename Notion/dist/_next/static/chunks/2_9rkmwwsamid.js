@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="a812d2dd-52c3-8907-9b16-403006e207ef")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,388150,c=>{"use strict";var o=c.i(968946),t=c.i(707821);c.s(["ToiletPaperIcon",0,function(c){return(0,o.jsx)(t.l,{...c,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M13.75 3.125h-7.5c-2.416 0-4.375 2.519-4.375 5.625s1.96 5.625 4.375 5.625c1.225 0 2.331-.65 3.125-1.69v4.19h8.75V8.75c0-3.106-1.96-5.625-4.375-5.625m-7.5 7.813c-.862 0-1.562-.979-1.562-2.188s.7-2.187 1.562-2.187 1.563.978 1.563 2.187c0 1.21-.7 2.188-1.563 2.188",fill:"currentColor"})})}])}]);
+
+//# debugId=a812d2dd-52c3-8907-9b16-403006e207ef
+//# sourceMappingURL=2vlgr91og-9do.js.map

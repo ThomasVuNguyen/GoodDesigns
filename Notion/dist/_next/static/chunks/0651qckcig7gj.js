@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="62531a22-bbf3-4630-1ac0-e21443f4fe0e")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,381947,t=>{"use strict";var l=t.i(968946),o=t.i(707821);t.s(["LaundryBasketIcon",0,function(t){return(0,l.jsx)(o.l,{...t,viewBox:"0 0 20 20",children:(0,l.jsx)("path",{d:"M7.5 7.5H3.75c0-1.928 1.197-3.125 3.125-3.125.56 0 1.056.103 1.481.294.75-.988 1.963-1.544 3.519-1.544 2.7 0 4.375 1.675 4.375 4.375zm10.625 1.25v1.875h-1.25l-1.04 6.25H4.164l-1.04-6.25h-1.25V8.75zm-9.062 1.875V15h1.874v-4.375zM5.756 15h1.431v-4.375H5.026L5.753 15zm9.219-4.375h-2.162V15h1.43l.729-4.375z",fill:"currentColor"})})}])}]);
+
+//# debugId=62531a22-bbf3-4630-1ac0-e21443f4fe0e
+//# sourceMappingURL=1-3o35w_5zp5z.js.map

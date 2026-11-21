@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="41b052c8-64a5-4ae6-50e7-f3dc5a562d46")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,462161,c=>{"use strict";var o=c.i(968946),i=c.i(707821);c.s(["FoodAndDrinkIcon",0,function(c){return(0,o.jsx)(i.l,{...c,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M10 10.625c0-2.312 1.675-3.75 4.375-3.75s4.375 1.438 4.375 3.75zm8.75 1.25H10c-.384 0-.625.24-.625.625v.625c0 .384.24.625.625.625h8.75c.384 0 .625-.24.625-.625V12.5c0-.384-.24-.625-.625-.625M10 15.625c0 .772.478 1.25 1.25 1.25h6.25c.772 0 1.25-.478 1.25-1.25V15H10zm0-8.75V5H6.881l.3-3.594-1.868-.156L5 5H0v1.875h1.406l.835 10h5.522l.834-10h1.406z",fill:"currentColor"})})}])}]);
+
+//# debugId=41b052c8-64a5-4ae6-50e7-f3dc5a562d46
+//# sourceMappingURL=1f449np3-byn0.js.map

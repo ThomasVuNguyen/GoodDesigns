@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="256c341d-8e38-47af-0c69-4608de2df30e")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,835337,l=>{"use strict";var o=l.i(968946),t=l.i(707821);l.s(["ElevatorIcon",0,function(l){return(0,o.jsx)(t.l,{...l,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M18.675 10.938 20 12.262l-4.062 4.063-4.063-4.062 1.325-1.325 1.8 1.8V7.266l-1.8 1.8-1.325-1.325 4.063-4.063L20 7.741l-1.325 1.325-1.8-1.8v5.472zM0 3.125h10.625v13.75H0zm4.063 2.188c0 .771.478 1.25 1.25 1.25.771 0 1.25-.479 1.25-1.25 0-.772-.479-1.25-1.25-1.25-.772 0-1.25.478-1.25 1.25m-2.97 4.121.65.975 2.398-1.597v1.894L2.5 15.628h1.481l1.332-3.99 1.33 3.99h1.482l-1.64-4.922V8.813l2.396 1.596.65-.975-2.66-1.771c-.515-.344-.937-.472-1.559-.472s-1.043.128-1.559.471z",fill:"currentColor"})})}])}]);
+
+//# debugId=256c341d-8e38-47af-0c69-4608de2df30e
+//# sourceMappingURL=1tv_uavg5-ega.js.map

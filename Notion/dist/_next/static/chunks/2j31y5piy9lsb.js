@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="573f6bf2-0775-9319-7d23-7f84899ae32c")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,681134,r=>{"use strict";var i=r.i(968946),o=r.i(707821);r.s(["ArchBridgeIcon",0,function(r){return(0,i.jsx)(o.l,{...r,viewBox:"0 0 20 20",children:(0,i.jsx)("path",{d:"M1.25 5v11.25h2.138a6.88 6.88 0 0 1 6.612-5 6.88 6.88 0 0 1 6.613 5h2.137V5zm1.875 7.719V6.875H6.25v3.353a8.85 8.85 0 0 0-3.125 2.49m5-3.138V6.875h3.75v2.706a8.7 8.7 0 0 0-3.75 0m8.75 3.138a8.8 8.8 0 0 0-3.125-2.49V6.874h3.125z",fill:"currentColor"})})}])}]);
+
+//# debugId=573f6bf2-0775-9319-7d23-7f84899ae32c
+//# sourceMappingURL=385-bowq6k4d4.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="288a07b0-d66a-d8c5-76bc-b176af6a2beb")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,231762,o=>{"use strict";var t=o.i(968946),r=o.i(707821);o.s(["ConstructionCraneIcon",0,function(o){return(0,t.jsx)(r.l,{...o,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M18.75 6.875V5H8.125V3.75L7.5 1.25H6.25l-.625 2.5V5H1.25v1.875H2.5V8.75h1.875V6.875h1.25v7.5l-1.875 1.25V17.5H10v-1.875l-1.875-1.25v-7.5h8.125V10L15 11.25v1.25h3.75v-1.25L17.5 10V6.875z",fill:"currentColor"})})}])}]);
+
+//# debugId=288a07b0-d66a-d8c5-76bc-b176af6a2beb
+//# sourceMappingURL=3uc1rvh6sp1o2.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="17c6130f-b7fa-beb6-bec7-6b739d0c62f3")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,184071,c=>{"use strict";var l=c.i(968946),o=c.i(707821);c.s(["CardClubIcon",0,function(c){return(0,l.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,l.jsx)("path",{d:"M13.125 2.5h-6.25c-1.544 0-2.5.956-2.5 2.5v10c0 1.544.956 2.5 2.5 2.5h6.25c1.544 0 2.5-.956 2.5-2.5V5c0-1.544-.956-2.5-2.5-2.5m-1.25 9.688a1.87 1.87 0 0 1-1.406-.638v.178c0 .475.269.906.69 1.119l.56.278v.469H8.28v-.469l.56-.278c.425-.213.69-.644.69-1.119v-.178a1.87 1.87 0 0 1-1.406.637 1.876 1.876 0 0 1-1.875-1.874A1.876 1.876 0 0 1 8.3 8.447 1.876 1.876 0 0 1 10 5.78a1.876 1.876 0 0 1 1.7 2.666q.088-.01.175-.01a1.876 1.876 0 0 1 0 3.75",fill:"currentColor"})})}])}]);
+
+//# debugId=17c6130f-b7fa-beb6-bec7-6b739d0c62f3
+//# sourceMappingURL=2mt50jem-s8fm.js.map

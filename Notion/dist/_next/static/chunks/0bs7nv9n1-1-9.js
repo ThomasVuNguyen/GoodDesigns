@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="a8fe0105-6b8e-8bf9-5a12-b78cb37ecdec")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,184889,e=>{"use strict";var o=e.i(968946),t=e.i(707821);e.s(["LongSleeveShirtIcon",0,function(e){return(0,o.jsx)(t.l,{...e,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"m19.063 13.75-2.813.938-1.875-5.626V17.5h-8.75V9.063L3.75 14.686.938 13.75l3.321-9.969Q4.687 2.5 6.037 2.5H7.5s.35 1.875 2.5 1.875S12.5 2.5 12.5 2.5h1.463c.903 0 1.493.428 1.778 1.281z",fill:"currentColor"})})}])}]);
+
+//# debugId=a8fe0105-6b8e-8bf9-5a12-b78cb37ecdec
+//# sourceMappingURL=0g73nt5ljgflx.js.map

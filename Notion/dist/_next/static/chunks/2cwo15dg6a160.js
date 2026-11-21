@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="44be9e09-52b3-1436-da9a-bad2496034d6")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,71165,c=>{"use strict";var h=c.i(968946),v=c.i(707821);c.s(["LuggageIcon",0,function(c){return(0,h.jsx)(v.l,{...c,viewBox:"0 0 20 20",children:(0,h.jsx)("path",{d:"M13.75 5.625v-2.5c0-1.544-.956-2.5-2.5-2.5h-2.5c-1.544 0-2.5.956-2.5 2.5v2.5H4.375v12.5H6.25v1.25h1.875v-1.25h3.75v1.25h1.875v-1.25h1.875v-12.5zm-5.625-2.5c0-.51.116-.625.625-.625h2.5c.51 0 .625.116.625.625v2.5h-3.75zm5.625 7.5h-7.5v-1.25h7.5z",fill:"currentColor"})})}])}]);
+
+//# debugId=44be9e09-52b3-1436-da9a-bad2496034d6
+//# sourceMappingURL=0am-b98xa8ew7.js.map

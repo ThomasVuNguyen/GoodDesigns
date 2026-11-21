@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="5af590c3-2ecc-21dc-ef9b-89bc101137d1")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,328239,t=>{"use strict";var o=t.i(968946),e=t.i(783253);let r={title:"MarketoHero",component:e.f};t.s(["DefaultMarketoHero",0,function(){return(0,o.jsx)(e.f,{formType:"aiConnectors",title:"The wiki that redefines ‘wiki’",subtitle:"\n	It’s hard to move fast if you’ve got a clunky and disorganized workspace. Centralize all your knowledge in Notion instead.",cta:[{text:"Try Notion for free",href:"notion.so/product"},{text:"Try Notion for free",href:"notion.so/product",variant:"text",noArrow:!0}]})},"default",0,r])}]);
+
+//# debugId=5af590c3-2ecc-21dc-ef9b-89bc101137d1
+//# sourceMappingURL=3yd4ps1gz7idr.js.map

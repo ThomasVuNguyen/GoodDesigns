@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="676b3251-bae5-e0b6-c8ce-c5ee4d0d7803")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,339428,c=>{"use strict";var o=c.i(968946),e=c.i(707821);c.s(["MovieCameraIcon",0,function(c){return(0,o.jsx)(e.l,{...c,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M15.938 6.25A3.749 3.749 0 0 0 8.75 4.753a3.749 3.749 0 1 0-4.375 5.125v6.997h8.75V9.878a3.75 3.75 0 0 0 2.813-3.628M5.313 8.125A1.876 1.876 0 0 1 3.438 6.25c0-1.034.84-1.875 1.874-1.875s1.875.84 1.875 1.875c0 1.034-.84 1.875-1.875 1.875m6.875 0a1.876 1.876 0 0 1-1.876-1.875 1.876 1.876 0 0 1 3.75 0c0 1.034-.84 1.875-1.875 1.875m5.937 1.25v7.5h-1.25l-2.5-2.5v-2.5l2.5-2.5z",fill:"currentColor"})})}])}]);
+
+//# debugId=676b3251-bae5-e0b6-c8ce-c5ee4d0d7803
+//# sourceMappingURL=0e5v-v-vtv__1.js.map

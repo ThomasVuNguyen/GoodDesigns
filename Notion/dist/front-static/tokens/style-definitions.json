@@ -1,0 +1,1889 @@
+{
+	"textStyles": [
+		{
+			"name": "definitions/handwriting/100/regular",
+			"fontSize": 14,
+			"fontWeight": 400,
+			"fontFamily": "NotionHand",
+			"lineHeight": 20,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/handwriting/150/regular",
+			"fontSize": 15,
+			"fontWeight": 400,
+			"fontFamily": "NotionHand",
+			"lineHeight": 20,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/handwriting/200/regular",
+			"fontSize": 16,
+			"fontWeight": 400,
+			"fontFamily": "NotionHand",
+			"lineHeight": 24,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/handwriting/300/regular",
+			"fontSize": 18,
+			"fontWeight": 400,
+			"fontFamily": "NotionHand",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/handwriting/350/regular",
+			"fontSize": 20,
+			"fontWeight": 400,
+			"fontFamily": "NotionHand",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/handwriting/400/regular",
+			"fontSize": 22,
+			"fontWeight": 400,
+			"fontFamily": "NotionHand",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/handwriting/50/regular",
+			"fontSize": 12,
+			"fontWeight": 400,
+			"fontFamily": "NotionHand",
+			"lineHeight": 16,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/handwriting/500/regular",
+			"fontSize": 26,
+			"fontWeight": 400,
+			"fontFamily": "NotionHand",
+			"lineHeight": 32,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/mono/100/bold",
+			"fontSize": 14,
+			"fontWeight": 700,
+			"fontFamily": "iA Writer Mono",
+			"lineHeight": 20,
+			"letterSpacing": -0.125
+		},
+		{
+			"name": "definitions/mono/100/regular",
+			"fontSize": 14,
+			"fontWeight": 400,
+			"fontFamily": "iA Writer Mono",
+			"lineHeight": 20,
+			"letterSpacing": -0.125
+		},
+		{
+			"name": "definitions/mono/200/regular",
+			"fontSize": 16,
+			"fontWeight": 400,
+			"fontFamily": "iA Writer Mono",
+			"lineHeight": 24,
+			"letterSpacing": -0.1429
+		},
+		{
+			"name": "definitions/mono/300/regular",
+			"fontSize": 18,
+			"fontWeight": 400,
+			"fontFamily": "iA Writer Mono",
+			"lineHeight": 28,
+			"letterSpacing": -0.1607
+		},
+		{
+			"name": "definitions/mono/400/regular",
+			"fontSize": 22,
+			"fontWeight": 400,
+			"fontFamily": "iA Writer Mono",
+			"lineHeight": 28,
+			"letterSpacing": -0.1964
+		},
+		{
+			"name": "definitions/mono/50/regular",
+			"fontSize": 12,
+			"fontWeight": 400,
+			"fontFamily": "iA Writer Mono",
+			"lineHeight": 16,
+			"letterSpacing": -0.1071
+		},
+		{
+			"name": "definitions/mono/500/regular",
+			"fontSize": 26,
+			"fontWeight": 400,
+			"fontFamily": "iA Writer Mono",
+			"lineHeight": 32,
+			"letterSpacing": -0.2321
+		},
+		{
+			"name": "definitions/mono/600/regular",
+			"fontSize": 32,
+			"fontWeight": 400,
+			"fontFamily": "iA Writer Mono",
+			"lineHeight": 40,
+			"letterSpacing": -0.2857
+		},
+		{
+			"name": "definitions/mono/700/bold",
+			"fontSize": 42,
+			"fontWeight": 700,
+			"fontFamily": "iA Writer Mono",
+			"lineHeight": 48,
+			"letterSpacing": -0.375
+		},
+		{
+			"name": "definitions/mono/800/bold",
+			"fontSize": 54,
+			"fontWeight": 700,
+			"fontFamily": "iA Writer Mono",
+			"lineHeight": 56,
+			"letterSpacing": -0.4821
+		},
+		{
+			"name": "definitions/mono/900/bold",
+			"fontSize": 64,
+			"fontWeight": 700,
+			"fontFamily": "iA Writer Mono",
+			"lineHeight": 64,
+			"letterSpacing": -0.5714
+		},
+		{
+			"name": "definitions/sans/100/bold",
+			"fontSize": 14,
+			"fontWeight": 700,
+			"fontFamily": "NotionInter",
+			"lineHeight": 20,
+			"letterSpacing": 0,
+			"styleKey": "f86adcd3a65726372a2cf125f439a925440013f9"
+		},
+		{
+			"name": "definitions/sans/100/medium",
+			"fontSize": 14,
+			"fontWeight": 500,
+			"fontFamily": "NotionInter",
+			"lineHeight": 20,
+			"letterSpacing": 0,
+			"styleKey": "584f6291102aebda4fd6a9f7d660f9e6271282de"
+		},
+		{
+			"name": "definitions/sans/100/regular",
+			"fontSize": 14,
+			"fontWeight": 400,
+			"fontFamily": "NotionInter",
+			"lineHeight": 20,
+			"letterSpacing": 0,
+			"styleKey": "7401fc63a87dcdb8923acdbde1b3a2e535c9ff94"
+		},
+		{
+			"name": "definitions/sans/100/semibold",
+			"fontSize": 14,
+			"fontWeight": 600,
+			"fontFamily": "NotionInter",
+			"lineHeight": 20,
+			"letterSpacing": 0,
+			"styleKey": "d454648af86153313bdf6537aea2a6d2de27a8e8"
+		},
+		{
+			"name": "definitions/sans/1000/bold",
+			"fontSize": 76,
+			"fontWeight": 700,
+			"fontFamily": "NotionInter",
+			"lineHeight": 80,
+			"letterSpacing": -2.5,
+			"styleKey": "2611d291c6d3456dcf64a61011bd8f58d1972606"
+		},
+		{
+			"name": "definitions/sans/1000/regular",
+			"fontSize": 76,
+			"fontWeight": 400,
+			"fontFamily": "NotionInter",
+			"lineHeight": 80,
+			"letterSpacing": -4,
+			"styleKey": "27da1843157aec1e5ef8226f2e927dd82af8ddbd"
+		},
+		{
+			"name": "definitions/sans/1100/medium",
+			"fontSize": 96,
+			"fontWeight": 500,
+			"fontFamily": "NotionInter",
+			"lineHeight": 96,
+			"letterSpacing": -2.125
+		},
+		{
+			"name": "definitions/sans/1100/semibold",
+			"fontSize": 96,
+			"fontWeight": 600,
+			"fontFamily": "NotionInter",
+			"lineHeight": 100,
+			"letterSpacing": -4.6
+		},
+		{
+			"name": "definitions/sans/150/bold",
+			"fontSize": 15,
+			"fontWeight": 700,
+			"fontFamily": "NotionInter",
+			"lineHeight": 20,
+			"letterSpacing": 0,
+			"styleKey": "12549c93f9976c4f3d13be32adf5ccd95620141c"
+		},
+		{
+			"name": "definitions/sans/150/medium",
+			"fontSize": 15,
+			"fontWeight": 500,
+			"fontFamily": "NotionInter",
+			"lineHeight": 20,
+			"letterSpacing": 0,
+			"styleKey": "0c562d0f2ea8301770ef4208b00c9a7b8e90dbc9"
+		},
+		{
+			"name": "definitions/sans/150/regular",
+			"fontSize": 15,
+			"fontWeight": 400,
+			"fontFamily": "NotionInter",
+			"lineHeight": 20,
+			"letterSpacing": 0,
+			"styleKey": "5bf5ffd7c33287f6889be268db8ccf16cbf21abc"
+		},
+		{
+			"name": "definitions/sans/150/semibold",
+			"fontSize": 15,
+			"fontWeight": 600,
+			"fontFamily": "NotionInter",
+			"lineHeight": 20,
+			"letterSpacing": 0,
+			"styleKey": "0a9b5aae8a169f9f114b5ba921555e3c47737866"
+		},
+		{
+			"name": "definitions/sans/200/bold",
+			"fontSize": 16,
+			"fontWeight": 700,
+			"fontFamily": "NotionInter",
+			"lineHeight": 24,
+			"letterSpacing": 0,
+			"styleKey": "0dddfe1a4c12c2f76468a381930a3898b69279ab"
+		},
+		{
+			"name": "definitions/sans/200/medium",
+			"fontSize": 16,
+			"fontWeight": 500,
+			"fontFamily": "NotionInter",
+			"lineHeight": 24,
+			"letterSpacing": 0,
+			"styleKey": "2e0791f50a1624dfe6c2792af4eabdf70402714b"
+		},
+		{
+			"name": "definitions/sans/200/regular",
+			"fontSize": 16,
+			"fontWeight": 400,
+			"fontFamily": "NotionInter",
+			"lineHeight": 24,
+			"letterSpacing": 0,
+			"styleKey": "24464cbdc91ec6f1a00f1ac0af2b333198917582"
+		},
+		{
+			"name": "definitions/sans/200/semibold",
+			"fontSize": 16,
+			"fontWeight": 600,
+			"fontFamily": "NotionInter",
+			"lineHeight": 24,
+			"letterSpacing": 0,
+			"styleKey": "39778efa7a0fe0283aee3ac37847a789e77f1c46"
+		},
+		{
+			"name": "definitions/sans/300/bold",
+			"fontSize": 18,
+			"fontWeight": 700,
+			"fontFamily": "NotionInter",
+			"lineHeight": 28,
+			"letterSpacing": -0.125,
+			"styleKey": "d803a8bef7bd78c0ef0902d4ee413b70de35e1e0"
+		},
+		{
+			"name": "definitions/sans/300/medium",
+			"fontSize": 18,
+			"fontWeight": 500,
+			"fontFamily": "NotionInter",
+			"lineHeight": 28,
+			"letterSpacing": -0.125,
+			"styleKey": "1fe848744ebc3888ea7f71e6c714c27b240d1734"
+		},
+		{
+			"name": "definitions/sans/300/regular",
+			"fontSize": 18,
+			"fontWeight": 400,
+			"fontFamily": "NotionInter",
+			"lineHeight": 28,
+			"letterSpacing": -0.125,
+			"styleKey": "52d4a66d4747ebb142f89db2cd10ee46a7338479"
+		},
+		{
+			"name": "definitions/sans/300/semibold",
+			"fontSize": 18,
+			"fontWeight": 600,
+			"fontFamily": "NotionInter",
+			"lineHeight": 28,
+			"letterSpacing": -0.125,
+			"styleKey": "65f2757bb25fea00693dc21060ed75dc28178b9b"
+		},
+		{
+			"name": "definitions/sans/350/bold",
+			"fontSize": 20,
+			"fontWeight": 700,
+			"fontFamily": "NotionInter",
+			"lineHeight": 28,
+			"letterSpacing": -0.125,
+			"styleKey": "2bd85d9904194433048d5958b0142e60e9750870"
+		},
+		{
+			"name": "definitions/sans/350/medium",
+			"fontSize": 20,
+			"fontWeight": 500,
+			"fontFamily": "NotionInter",
+			"lineHeight": 28,
+			"letterSpacing": -0.125,
+			"styleKey": "1f30d806151f36eff5e40c47c845fae6ee3e46f8"
+		},
+		{
+			"name": "definitions/sans/350/regular",
+			"fontSize": 20,
+			"fontWeight": 400,
+			"fontFamily": "NotionInter",
+			"lineHeight": 28,
+			"letterSpacing": -0.125,
+			"styleKey": "32dac9975793ce47a8799df471d61dcb2ed9b136"
+		},
+		{
+			"name": "definitions/sans/350/semibold",
+			"fontSize": 20,
+			"fontWeight": 600,
+			"fontFamily": "NotionInter",
+			"lineHeight": 28,
+			"letterSpacing": -0.125,
+			"styleKey": "b1914ee6c7f84112b352a404c33fcc36857acb5c"
+		},
+		{
+			"name": "definitions/sans/400/bold",
+			"fontSize": 22,
+			"fontWeight": 700,
+			"fontFamily": "NotionInter",
+			"lineHeight": 28,
+			"letterSpacing": -0.25,
+			"styleKey": "6b7cf8d9fd1aadb1ac767d7159e2a51fa93d0577"
+		},
+		{
+			"name": "definitions/sans/400/medium",
+			"fontSize": 22,
+			"fontWeight": 500,
+			"fontFamily": "NotionInter",
+			"lineHeight": 28,
+			"letterSpacing": -0.25,
+			"styleKey": "9f801a3d7f41ea8886811c17e85b1ed8c5d785c0"
+		},
+		{
+			"name": "definitions/sans/400/regular",
+			"fontSize": 22,
+			"fontWeight": 400,
+			"fontFamily": "NotionInter",
+			"lineHeight": 28,
+			"letterSpacing": -0.25,
+			"styleKey": "535308bb3ce60e97f62f23dff91e2b50243d23d2"
+		},
+		{
+			"name": "definitions/sans/400/semibold",
+			"fontSize": 22,
+			"fontWeight": 600,
+			"fontFamily": "NotionInter",
+			"lineHeight": 28,
+			"letterSpacing": -0.25,
+			"styleKey": "d1bcb18af0586f59b5eb11caf80abfb4754b3a48"
+		},
+		{
+			"name": "definitions/sans/450/bold",
+			"fontSize": 24,
+			"fontWeight": 700,
+			"fontFamily": "NotionInter",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sans/450/medium",
+			"fontSize": 24,
+			"fontWeight": 500,
+			"fontFamily": "NotionInter",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sans/450/regular",
+			"fontSize": 24,
+			"fontWeight": 400,
+			"fontFamily": "NotionInter",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sans/450/semibold",
+			"fontSize": 24,
+			"fontWeight": 600,
+			"fontFamily": "NotionInter",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sans/50/bold",
+			"fontSize": 12,
+			"fontWeight": 700,
+			"fontFamily": "NotionInter",
+			"lineHeight": 16,
+			"letterSpacing": 0.125,
+			"styleKey": "c5d17840af4163d71db9954e09c97470fd83c52a"
+		},
+		{
+			"name": "definitions/sans/50/medium",
+			"fontSize": 12,
+			"fontWeight": 500,
+			"fontFamily": "NotionInter",
+			"lineHeight": 16,
+			"letterSpacing": 0.125,
+			"styleKey": "bec4ed0660983726ff40bb3f6e058783f9d5d38f"
+		},
+		{
+			"name": "definitions/sans/50/regular",
+			"fontSize": 12,
+			"fontWeight": 400,
+			"fontFamily": "NotionInter",
+			"lineHeight": 16,
+			"letterSpacing": 0.125,
+			"styleKey": "50ec1b1d4a7658d9d7e5c67b796bd67c9f447762"
+		},
+		{
+			"name": "definitions/sans/50/semibold",
+			"fontSize": 12,
+			"fontWeight": 600,
+			"fontFamily": "NotionInter",
+			"lineHeight": 16,
+			"letterSpacing": 0.125,
+			"styleKey": "e3cd2c08fe5c1481a66d74c3450978653815c586"
+		},
+		{
+			"name": "definitions/sans/500/bold",
+			"fontSize": 26,
+			"fontWeight": 700,
+			"fontFamily": "NotionInter",
+			"lineHeight": 32,
+			"letterSpacing": -0.625,
+			"styleKey": "9d6e4e86cb40917799e934356c4012534a94d16b"
+		},
+		{
+			"name": "definitions/sans/500/medium",
+			"fontSize": 26,
+			"fontWeight": 500,
+			"fontFamily": "NotionInter",
+			"lineHeight": 32,
+			"letterSpacing": -0.625,
+			"styleKey": "28a58893cf7741f397900809a921c2420ce553cc"
+		},
+		{
+			"name": "definitions/sans/500/regular",
+			"fontSize": 26,
+			"fontWeight": 400,
+			"fontFamily": "NotionInter",
+			"lineHeight": 32,
+			"letterSpacing": -0.625
+		},
+		{
+			"name": "definitions/sans/500/semibold",
+			"fontSize": 26,
+			"fontWeight": 600,
+			"fontFamily": "NotionInter",
+			"lineHeight": 32,
+			"letterSpacing": -0.625,
+			"styleKey": "3138d4a4b130870372b42f38aa4b4e953924dbc7"
+		},
+		{
+			"name": "definitions/sans/600/bold",
+			"fontSize": 32,
+			"fontWeight": 700,
+			"fontFamily": "NotionInter",
+			"lineHeight": 40,
+			"letterSpacing": -0.75,
+			"styleKey": "ecf39fadea4057dcd347ff2dea780135e6ac7bbe"
+		},
+		{
+			"name": "definitions/sans/600/regular",
+			"fontSize": 32,
+			"fontWeight": 400,
+			"fontFamily": "NotionInter",
+			"lineHeight": 40,
+			"letterSpacing": -1,
+			"styleKey": "21b47c936b2af9b162936e80a3582bbc775b17d6"
+		},
+		{
+			"name": "definitions/sans/600/semibold",
+			"fontSize": 32,
+			"fontWeight": 600,
+			"fontFamily": "NotionInter",
+			"lineHeight": 40,
+			"letterSpacing": -0.75,
+			"styleKey": "c39be3f4d063b7e992d7cc8b3c7115f6bf2df4be"
+		},
+		{
+			"name": "definitions/sans/700/bold",
+			"fontSize": 42,
+			"fontWeight": 700,
+			"fontFamily": "NotionInter",
+			"lineHeight": 48,
+			"letterSpacing": -1.5,
+			"styleKey": "14b2fc7330a13e84d7508971ea3287566731d4f5"
+		},
+		{
+			"name": "definitions/sans/700/medium",
+			"fontSize": 42,
+			"fontWeight": 500,
+			"fontFamily": "NotionInter",
+			"lineHeight": 48,
+			"letterSpacing": -1.5
+		},
+		{
+			"name": "definitions/sans/700/regular",
+			"fontSize": 42,
+			"fontWeight": 400,
+			"fontFamily": "NotionInter",
+			"lineHeight": 48,
+			"letterSpacing": -2,
+			"styleKey": "249ce8b220846e443f8d81194f060b44c170f1a1"
+		},
+		{
+			"name": "definitions/sans/700/semibold",
+			"fontSize": 42,
+			"fontWeight": 600,
+			"fontFamily": "NotionInter",
+			"lineHeight": 48,
+			"letterSpacing": -1.5,
+			"styleKey": "1ad0251ead4d63c30ee5c6d9d1051c4ce53847b5"
+		},
+		{
+			"name": "definitions/sans/800/bold",
+			"fontSize": 54,
+			"fontWeight": 700,
+			"fontFamily": "NotionInter",
+			"lineHeight": 56,
+			"letterSpacing": -1.875,
+			"styleKey": "e401f84df609ea8ef72d073608bd5cd81b98a0fe"
+		},
+		{
+			"name": "definitions/sans/800/regular",
+			"fontSize": 54,
+			"fontWeight": 400,
+			"fontFamily": "NotionInter",
+			"lineHeight": 56,
+			"letterSpacing": -3.5,
+			"styleKey": "6258affe64b0a008ab93e3ab0a78fbf60feba685"
+		},
+		{
+			"name": "definitions/sans/800/semibold",
+			"fontSize": 54,
+			"fontWeight": 600,
+			"fontFamily": "NotionInter",
+			"lineHeight": 56,
+			"letterSpacing": -1.875,
+			"styleKey": "523b164bd57a413e5f88208f084d6940bc24cc4c"
+		},
+		{
+			"name": "definitions/sans/900/bold",
+			"fontSize": 64,
+			"fontWeight": 700,
+			"fontFamily": "NotionInter",
+			"lineHeight": 64,
+			"letterSpacing": -2.125,
+			"styleKey": "9ad01af048da6b6b55bcb564fdbcef7dbebc7178"
+		},
+		{
+			"name": "definitions/sans/900/medium",
+			"fontSize": 64,
+			"fontWeight": 500,
+			"fontFamily": "NotionInter",
+			"lineHeight": 64,
+			"letterSpacing": -2.125
+		},
+		{
+			"name": "definitions/sans/900/regular",
+			"fontSize": 64,
+			"fontWeight": 400,
+			"fontFamily": "NotionInter",
+			"lineHeight": 64,
+			"letterSpacing": -2.75,
+			"styleKey": "7f0919da383b4fbded11798a04091e41f94935b8"
+		},
+		{
+			"name": "definitions/sans/900/semibold",
+			"fontSize": 64,
+			"fontWeight": 600,
+			"fontFamily": "NotionInter",
+			"lineHeight": 64,
+			"letterSpacing": -2.125,
+			"styleKey": "9e3552655f5c6561c5cf6f674f48de9f038ef56c"
+		},
+		{
+			"name": "definitions/sansNeue/100/bold",
+			"fontSize": 13,
+			"fontWeight": 700,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 20,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/100/medium",
+			"fontSize": 13,
+			"fontWeight": 500,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 20,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/100/regular",
+			"fontSize": 13,
+			"fontWeight": 420,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 20,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/100/semibold",
+			"fontSize": 13,
+			"fontWeight": 600,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 20,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/1000/bold",
+			"fontSize": 76,
+			"fontWeight": 700,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 80,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/1000/regular",
+			"fontSize": 76,
+			"fontWeight": 400,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 80,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/1050/medium",
+			"fontSize": 80,
+			"fontWeight": 500,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 80,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/1100/medium",
+			"fontSize": 96,
+			"fontWeight": 500,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 96,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/1100/semibold",
+			"fontSize": 96,
+			"fontWeight": 600,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 100,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/125/medium",
+			"fontSize": 14,
+			"fontWeight": 500,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 20,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/125/regular",
+			"fontSize": 14,
+			"fontWeight": 420,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 20,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/125/semibold",
+			"fontSize": 14,
+			"fontWeight": 600,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 20,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/150/bold",
+			"fontSize": 15,
+			"fontWeight": 700,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 20,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/150/medium",
+			"fontSize": 15,
+			"fontWeight": 500,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 20,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/150/regular",
+			"fontSize": 15,
+			"fontWeight": 420,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 20,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/150/semibold",
+			"fontSize": 15,
+			"fontWeight": 600,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 20,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/200/bold",
+			"fontSize": 16,
+			"fontWeight": 700,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 24,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/200/medium",
+			"fontSize": 16,
+			"fontWeight": 500,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 24,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/200/regular",
+			"fontSize": 16,
+			"fontWeight": 400,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 24,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/200/semibold",
+			"fontSize": 16,
+			"fontWeight": 600,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 24,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/300/bold",
+			"fontSize": 18,
+			"fontWeight": 700,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/300/medium",
+			"fontSize": 18,
+			"fontWeight": 500,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/300/regular",
+			"fontSize": 18,
+			"fontWeight": 400,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/300/semibold",
+			"fontSize": 18,
+			"fontWeight": 600,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/350/bold",
+			"fontSize": 20,
+			"fontWeight": 700,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/350/medium",
+			"fontSize": 20,
+			"fontWeight": 500,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/350/regular",
+			"fontSize": 20,
+			"fontWeight": 400,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/350/semibold",
+			"fontSize": 20,
+			"fontWeight": 600,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/400/bold",
+			"fontSize": 22,
+			"fontWeight": 700,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/400/medium",
+			"fontSize": 22,
+			"fontWeight": 500,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/400/regular",
+			"fontSize": 22,
+			"fontWeight": 400,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/400/semibold",
+			"fontSize": 22,
+			"fontWeight": 600,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/450/bold",
+			"fontSize": 24,
+			"fontWeight": 700,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/450/medium",
+			"fontSize": 24,
+			"fontWeight": 500,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/450/regular",
+			"fontSize": 24,
+			"fontWeight": 400,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/450/semibold",
+			"fontSize": 24,
+			"fontWeight": 600,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/50/bold",
+			"fontSize": 12,
+			"fontWeight": 700,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 16,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/50/medium",
+			"fontSize": 12,
+			"fontWeight": 500,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 16,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/50/regular",
+			"fontSize": 12,
+			"fontWeight": 420,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 16,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/50/semibold",
+			"fontSize": 12,
+			"fontWeight": 600,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 16,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/500/bold",
+			"fontSize": 26,
+			"fontWeight": 700,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 32,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/500/medium",
+			"fontSize": 26,
+			"fontWeight": 500,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 32,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/500/regular",
+			"fontSize": 26,
+			"fontWeight": 400,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 32,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/500/semibold",
+			"fontSize": 26,
+			"fontWeight": 600,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 32,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/600/bold",
+			"fontSize": 32,
+			"fontWeight": 700,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 40,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/600/medium",
+			"fontSize": 32,
+			"fontWeight": 500,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 40,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/600/regular",
+			"fontSize": 32,
+			"fontWeight": 400,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 40,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/600/semibold",
+			"fontSize": 32,
+			"fontWeight": 600,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 40,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/650/medium",
+			"fontSize": 40,
+			"fontWeight": 500,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 40,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/650/semibold",
+			"fontSize": 40,
+			"fontWeight": 600,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 40,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/700/bold",
+			"fontSize": 42,
+			"fontWeight": 700,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 48,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/700/medium",
+			"fontSize": 42,
+			"fontWeight": 500,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 48,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/700/regular",
+			"fontSize": 42,
+			"fontWeight": 400,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 48,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/700/semibold",
+			"fontSize": 42,
+			"fontWeight": 600,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 48,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/800/bold",
+			"fontSize": 54,
+			"fontWeight": 700,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 56,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/800/medium",
+			"fontSize": 54,
+			"fontWeight": 500,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 56,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/800/regular",
+			"fontSize": 54,
+			"fontWeight": 400,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 56,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/800/semibold",
+			"fontSize": 54,
+			"fontWeight": 600,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 56,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/900/bold",
+			"fontSize": 64,
+			"fontWeight": 700,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 64,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/900/medium",
+			"fontSize": 64,
+			"fontWeight": 500,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 64,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/900/regular",
+			"fontSize": 64,
+			"fontWeight": 400,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 64,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/sansNeue/900/semibold",
+			"fontSize": 64,
+			"fontWeight": 600,
+			"fontFamily": "Die Grotesk",
+			"lineHeight": 64,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/serif/200/regular",
+			"fontSize": 16,
+			"fontWeight": 400,
+			"fontFamily": "Lyon Text",
+			"lineHeight": 24,
+			"letterSpacing": 0,
+			"styleKey": "3fd021d151ae249213ab10a2b0ac924f6a1c974b"
+		},
+		{
+			"name": "definitions/serif/300/regular",
+			"fontSize": 18,
+			"fontWeight": 400,
+			"fontFamily": "Lyon Text",
+			"lineHeight": 28,
+			"letterSpacing": 0,
+			"styleKey": "3ceee23462ed6d4a073da237462d00176c8d4dd9"
+		},
+		{
+			"name": "definitions/serif/350/regular",
+			"fontSize": 20,
+			"fontWeight": 400,
+			"fontFamily": "Lyon Text",
+			"lineHeight": 28,
+			"letterSpacing": 0,
+			"styleKey": "5b0b8bccf7e54eb50913c478895999380ac34270"
+		},
+		{
+			"name": "definitions/serif/400/regular",
+			"fontSize": 22,
+			"fontWeight": 400,
+			"fontFamily": "Lyon Text",
+			"lineHeight": 28,
+			"letterSpacing": 0,
+			"styleKey": "73035f4de60f6bd4fafab5658ebb8ab587fdc06c"
+		},
+		{
+			"name": "definitions/serif/500/regular",
+			"fontSize": 26,
+			"fontWeight": 400,
+			"fontFamily": "Lyon Text",
+			"lineHeight": 32,
+			"letterSpacing": 0,
+			"styleKey": "61c593a553455d0d226b3393e804a84c6347cca3"
+		},
+		{
+			"name": "definitions/serif/600/regular",
+			"fontSize": 32,
+			"fontWeight": 400,
+			"fontFamily": "Lyon Text",
+			"lineHeight": 40,
+			"letterSpacing": 0,
+			"styleKey": "fe03f10a7d774a6e3920bbe9cc9d22ccc53dea25"
+		},
+		{
+			"name": "definitions/serif/700/regular",
+			"fontSize": 42,
+			"fontWeight": 400,
+			"fontFamily": "Lyon Text",
+			"lineHeight": 48,
+			"letterSpacing": -1.5,
+			"styleKey": "3da23f1b7e69328795c700cb53dfde695415f2bf"
+		},
+		{
+			"name": "definitions/serif/800/regular",
+			"fontSize": 54,
+			"fontWeight": 400,
+			"fontFamily": "Lyon Text",
+			"lineHeight": 56,
+			"letterSpacing": -2,
+			"styleKey": "9d193fb1fb46ef1058e058dae781085ec739cee6"
+		},
+		{
+			"name": "definitions/serif/900/regular",
+			"fontSize": 64,
+			"fontWeight": 400,
+			"fontFamily": "Lyon Text",
+			"lineHeight": 64,
+			"letterSpacing": -2,
+			"styleKey": "6d616f12bc61ddfaad239104b5e4a1939d5e3787"
+		},
+		{
+			"name": "definitions/serifNeue/150/regular",
+			"fontSize": 15,
+			"fontWeight": 460,
+			"fontFamily": "Termoli",
+			"lineHeight": 20,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/serifNeue/200/regular",
+			"fontSize": 16,
+			"fontWeight": 460,
+			"fontFamily": "Termoli",
+			"lineHeight": 24,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/serifNeue/300/regular",
+			"fontSize": 18,
+			"fontWeight": 460,
+			"fontFamily": "Termoli",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/serifNeue/350/regular",
+			"fontSize": 20,
+			"fontWeight": 460,
+			"fontFamily": "Termoli",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/serifNeue/400/regular",
+			"fontSize": 22,
+			"fontWeight": 460,
+			"fontFamily": "Termoli",
+			"lineHeight": 28,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/serifNeue/500/regular",
+			"fontSize": 26,
+			"fontWeight": 460,
+			"fontFamily": "Termoli",
+			"lineHeight": 32,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/serifNeue/600/regular",
+			"fontSize": 32,
+			"fontWeight": 400,
+			"fontFamily": "Termoli",
+			"lineHeight": 40,
+			"letterSpacing": 0
+		},
+		{
+			"name": "definitions/serifNeue/700/regular",
+			"fontSize": 42,
+			"fontWeight": 400,
+			"fontFamily": "Termoli",
+			"lineHeight": 48,
+			"letterSpacing": -1.5
+		},
+		{
+			"name": "definitions/serifNeue/800/regular",
+			"fontSize": 54,
+			"fontWeight": 400,
+			"fontFamily": "Termoli",
+			"lineHeight": 56,
+			"letterSpacing": -2
+		},
+		{
+			"name": "definitions/serifNeue/900/regular",
+			"fontSize": 64,
+			"fontWeight": 400,
+			"fontFamily": "Termoli",
+			"lineHeight": 64,
+			"letterSpacing": -2
+		}
+	],
+	"semanticTokens": [
+		{
+			"name": "theme/article/body",
+			"definition": "definitions/sans/200/regular",
+			"breakpoints": {
+				"lg": "definitions/sans/300/regular"
+			}
+		},
+		{
+			"name": "theme/article/body-bold",
+			"definition": "definitions/sans/200/semibold",
+			"breakpoints": {
+				"lg": "definitions/sans/300/semibold"
+			}
+		},
+		{
+			"name": "theme/article/body-editorial",
+			"definition": "definitions/serif/200/regular",
+			"breakpoints": {
+				"lg": "definitions/serif/350/regular"
+			}
+		},
+		{
+			"name": "theme/article/caption",
+			"definition": "definitions/sans/50/medium"
+		},
+		{
+			"name": "theme/article/context",
+			"definition": "definitions/sans/200/regular"
+		},
+		{
+			"name": "theme/article/deck",
+			"definition": "definitions/sans/350/regular",
+			"breakpoints": {
+				"lg": "definitions/sans/400/regular"
+			}
+		},
+		{
+			"name": "theme/article/dropcap",
+			"definition": "definitions/sans/500/bold"
+		},
+		{
+			"name": "theme/article/heading",
+			"definition": "definitions/sans/400/bold",
+			"breakpoints": {
+				"lg": "definitions/sans/500/bold"
+			}
+		},
+		{
+			"name": "theme/article/meta",
+			"definition": "definitions/sans/50/medium"
+		},
+		{
+			"name": "theme/article/navigation",
+			"definition": "definitions/sans/100/regular"
+		},
+		{
+			"name": "theme/article/quote",
+			"definition": "definitions/serif/500/regular",
+			"breakpoints": {
+				"lg": "definitions/serif/600/regular"
+			}
+		},
+		{
+			"name": "theme/article/statistics",
+			"definition": "definitions/sans/700/semibold",
+			"breakpoints": {
+				"lg": "definitions/sans/800/semibold"
+			}
+		},
+		{
+			"name": "theme/article/subheading",
+			"definition": "definitions/sans/300/bold",
+			"breakpoints": {
+				"lg": "definitions/sans/400/bold"
+			}
+		},
+		{
+			"name": "theme/article/title",
+			"definition": "definitions/sans/600/bold",
+			"breakpoints": {
+				"lg": "definitions/sans/800/bold"
+			}
+		},
+		{
+			"name": "theme/article/title-subtle",
+			"definition": "definitions/sans/600/bold",
+			"breakpoints": {
+				"lg": "definitions/sans/700/bold"
+			}
+		},
+		{
+			"name": "theme/card/body",
+			"definition": "definitions/sans/200/regular",
+			"styleKey": "8b3056bc85b65bb8a0dbe8db04bb45f44ff3089d"
+		},
+		{
+			"name": "theme/card/body-summary",
+			"definition": "definitions/sans/100/regular"
+		},
+		{
+			"name": "theme/card/context",
+			"definition": "definitions/sans/100/regular",
+			"styleKey": "84e48902755d20a0f6438a15549163659010cb07"
+		},
+		{
+			"name": "theme/card/context-feature",
+			"definition": "definitions/sans/100/regular"
+		},
+		{
+			"name": "theme/card/note",
+			"definition": "definitions/sans/100/regular",
+			"styleKey": "3d015ad6e3f3a923b3eb2bf77a0f78961debc1c6"
+		},
+		{
+			"name": "theme/card/quote",
+			"definition": "definitions/serif/350/regular",
+			"styleKey": "9e8afade5a940a0b00b60cc2e8a2991c908238af"
+		},
+		{
+			"name": "theme/card/title",
+			"definition": "definitions/sans/400/bold",
+			"styleKey": "8db15e5d1b0fb88d4425966019757f1749482467"
+		},
+		{
+			"name": "theme/card/title-block",
+			"definition": "definitions/sans/300/bold"
+		},
+		{
+			"name": "theme/card/title-feature",
+			"definition": "definitions/sans/500/bold",
+			"breakpoints": {
+				"md": "definitions/sans/600/bold"
+			}
+		},
+		{
+			"name": "theme/card/title-summary",
+			"definition": "definitions/sans/200/bold"
+		},
+		{
+			"name": "theme/consent/body",
+			"definition": "definitions/sans/100/regular"
+		},
+		{
+			"name": "theme/consent/caption",
+			"definition": "definitions/sans/50/medium"
+		},
+		{
+			"name": "theme/consent/fine-print",
+			"definition": "definitions/sans/100/regular"
+		},
+		{
+			"name": "theme/consent/label",
+			"definition": "definitions/sans/100/medium"
+		},
+		{
+			"name": "theme/consent/title",
+			"definition": "definitions/sans/200/semibold"
+		},
+		{
+			"name": "theme/global/body",
+			"definition": "definitions/sans/200/regular",
+			"styleKey": "f328de57b6c387eaf4a389c86b5c029aab9ce1a9"
+		},
+		{
+			"name": "theme/global/body-annotation",
+			"definition": "definitions/handwriting/200/regular"
+		},
+		{
+			"name": "theme/global/body-link",
+			"definition": "definitions/sans/200/regular",
+			"styleKey": "603ccdc016ea753438f5a8ffe5657e51cd716c15"
+		},
+		{
+			"name": "theme/global/body-serif",
+			"definition": "definitions/serif/350/regular"
+		},
+		{
+			"name": "theme/global/caption",
+			"definition": "definitions/sans/100/regular",
+			"styleKey": "0447656004c7f63a05c8cafbd833adcaac5934ee"
+		},
+		{
+			"name": "theme/global/code",
+			"definition": "definitions/mono/100/regular"
+		},
+		{
+			"name": "theme/global/context",
+			"definition": "definitions/sans/100/regular",
+			"styleKey": "bf855972f40042b2c8d2ee286ec1ba1bd15d3664"
+		},
+		{
+			"name": "theme/global/deck",
+			"definition": "definitions/sans/200/regular",
+			"styleKey": "b1c47d8bada84fe1ac9ddcdd21e4df770c364fbf",
+			"breakpoints": {
+				"sm": "definitions/sans/350/regular"
+			}
+		},
+		{
+			"name": "theme/global/eyebrow",
+			"definition": "definitions/sans/200/regular",
+			"styleKey": "f328de57b6c387eaf4a389c86b5c029aab9ce1a9"
+		},
+		{
+			"name": "theme/global/heading",
+			"definition": "definitions/sans/600/bold",
+			"styleKey": "9b53e9df6be1807a7b500bfcad40ff0a78ff8342",
+			"breakpoints": {
+				"md": "definitions/sans/700/bold",
+				"lg": "definitions/sans/800/bold"
+			}
+		},
+		{
+			"name": "theme/global/heading-subtle",
+			"definition": "definitions/sans/500/bold",
+			"breakpoints": {
+				"md": "definitions/sans/600/bold",
+				"lg": "definitions/sans/700/bold"
+			}
+		},
+		{
+			"name": "theme/global/meta",
+			"definition": "definitions/sans/50/regular",
+			"styleKey": "b3772e8939d6fb92292b4ac3df14fca817659c78"
+		},
+		{
+			"name": "theme/global/prose",
+			"definition": "definitions/sans/350/regular",
+			"breakpoints": {
+				"lg": "definitions/sans/500/regular"
+			}
+		},
+		{
+			"name": "theme/global/quote",
+			"definition": "definitions/serif/400/regular",
+			"styleKey": "ee19136aff37e9cd8945692ee3cdcbc7fbd108c8",
+			"breakpoints": {
+				"sm": "definitions/serif/500/regular",
+				"md": "definitions/serif/600/regular"
+			}
+		},
+		{
+			"name": "theme/global/quote-deemphasized",
+			"definition": "definitions/serif/200/regular"
+		},
+		{
+			"name": "theme/global/stat",
+			"definition": "definitions/sans/700/bold",
+			"styleKey": "25cd02cbe719b2076b0cc2844fb10a9e8b75a708",
+			"breakpoints": {
+				"sm": "definitions/sans/800/bold",
+				"md": "definitions/sans/900/bold"
+			}
+		},
+		{
+			"name": "theme/global/subheading",
+			"definition": "definitions/sans/400/bold",
+			"styleKey": "33ef03a2a50aab304e2018ebae6b7a6da849909b"
+		},
+		{
+			"name": "theme/global/subheading-annotation",
+			"definition": "definitions/handwriting/500/regular"
+		},
+		{
+			"name": "theme/global/title",
+			"definition": "definitions/sans/700/bold",
+			"styleKey": "0104b12d9e7d70ead2d825a04a75b620b5eecb31",
+			"breakpoints": {
+				"sm": "definitions/sans/800/bold",
+				"md": "definitions/sans/900/bold"
+			}
+		},
+		{
+			"name": "theme/global/title-emphasis",
+			"definition": "definitions/sans/800/bold",
+			"breakpoints": {
+				"md": "definitions/sans/900/bold"
+			}
+		},
+		{
+			"name": "theme/global/title-subtle",
+			"definition": "definitions/sans/700/bold"
+		},
+		{
+			"name": "theme/interaction/banner-body",
+			"definition": "definitions/sans/100/regular"
+		},
+		{
+			"name": "theme/interaction/banner-title",
+			"definition": "definitions/sans/200/semibold"
+		},
+		{
+			"name": "theme/interaction/button-large",
+			"definition": "definitions/sans/200/semibold"
+		},
+		{
+			"name": "theme/interaction/button-medium",
+			"definition": "definitions/sans/200/medium"
+		},
+		{
+			"name": "theme/interaction/button-small",
+			"definition": "definitions/sans/100/medium"
+		},
+		{
+			"name": "theme/interaction/form-caption",
+			"definition": "definitions/sans/100/regular"
+		},
+		{
+			"name": "theme/interaction/form-code-input",
+			"definition": "definitions/mono/100/regular"
+		},
+		{
+			"name": "theme/interaction/form-input",
+			"definition": "definitions/sans/200/regular"
+		},
+		{
+			"name": "theme/interaction/form-label",
+			"definition": "definitions/sans/100/regular"
+		},
+		{
+			"name": "theme/interaction/menu-button",
+			"definition": "definitions/sans/100/regular"
+		},
+		{
+			"name": "theme/interaction/menu-list-heading",
+			"definition": "definitions/sans/50/medium"
+		},
+		{
+			"name": "theme/interaction/menu-list-item-caption",
+			"definition": "definitions/sans/100/medium"
+		},
+		{
+			"name": "theme/interaction/menu-list-item-card-label",
+			"definition": "definitions/sans/200/semibold",
+			"breakpoints": {
+				"lg": "definitions/sans/100/semibold"
+			}
+		},
+		{
+			"name": "theme/interaction/menu-list-item-label",
+			"definition": "definitions/sans/100/medium"
+		},
+		{
+			"name": "theme/interaction/menu-list-item-label-emphasis",
+			"definition": "definitions/sans/100/medium",
+			"breakpoints": {
+				"md": "definitions/sans/400/bold",
+				"lg": "definitions/sans/400/bold"
+			}
+		},
+		{
+			"name": "theme/navigation/body",
+			"definition": "definitions/sans/100/regular"
+		},
+		{
+			"name": "theme/navigation/caption",
+			"definition": "definitions/sans/50/medium",
+			"styleKey": "84084f63b3ed34e30ecf8fbed175a03c44e5bc2e"
+		},
+		{
+			"name": "theme/navigation/caption-subtle",
+			"definition": "definitions/sans/50/medium"
+		},
+		{
+			"name": "theme/navigation/heading",
+			"definition": "definitions/sans/50/medium",
+			"styleKey": "8fa473fbda742dafcd0407c576d3351755a41dbc"
+		},
+		{
+			"name": "theme/navigation/link",
+			"definition": "definitions/sans/100/medium",
+			"styleKey": "37d6b89882db40bef64905a5f8e1fcaae89ef82a"
+		},
+		{
+			"name": "theme/navigation/link-emphasis",
+			"definition": "definitions/sans/100/medium",
+			"breakpoints": {
+				"md": "definitions/sans/400/bold"
+			}
+		}
+	],
+	"effectStyles": [
+		{
+			"name": "shadow/0",
+			"effects": [
+				{
+					"type": "DROP_SHADOW",
+					"offset": {
+						"x": 0,
+						"y": 0
+					},
+					"radius": 0,
+					"spread": 0,
+					"color": {
+						"r": 0,
+						"g": 0,
+						"b": 0,
+						"a": 0
+					}
+				}
+			]
+		},
+		{
+			"name": "shadow/100",
+			"effects": [
+				{
+					"type": "DROP_SHADOW",
+					"offset": {
+						"x": 0,
+						"y": 0.7
+					},
+					"radius": 1.462,
+					"spread": 0,
+					"color": {
+						"r": 0,
+						"g": 0,
+						"b": 0,
+						"a": 0.015
+					}
+				},
+				{
+					"type": "DROP_SHADOW",
+					"offset": {
+						"x": 0,
+						"y": 3
+					},
+					"radius": 9,
+					"spread": 0,
+					"color": {
+						"r": 0,
+						"g": 0,
+						"b": 0,
+						"a": 0.03
+					}
+				}
+			]
+		},
+		{
+			"name": "shadow/200",
+			"effects": [
+				{
+					"type": "DROP_SHADOW",
+					"offset": {
+						"x": 0,
+						"y": 0.175
+					},
+					"radius": 1.041,
+					"spread": 0,
+					"color": {
+						"r": 0,
+						"g": 0,
+						"b": 0,
+						"a": 0.013
+					}
+				},
+				{
+					"type": "DROP_SHADOW",
+					"offset": {
+						"x": 0,
+						"y": 0.8
+					},
+					"radius": 2.925,
+					"spread": 0,
+					"color": {
+						"r": 0,
+						"g": 0,
+						"b": 0,
+						"a": 0.02
+					}
+				},
+				{
+					"type": "DROP_SHADOW",
+					"offset": {
+						"x": 0,
+						"y": 2.025
+					},
+					"radius": 7.847,
+					"spread": 0,
+					"color": {
+						"r": 0,
+						"g": 0,
+						"b": 0,
+						"a": 0.027
+					}
+				},
+				{
+					"type": "DROP_SHADOW",
+					"offset": {
+						"x": 0,
+						"y": 4
+					},
+					"radius": 18,
+					"spread": 0,
+					"color": {
+						"r": 0,
+						"g": 0,
+						"b": 0,
+						"a": 0.04
+					}
+				}
+			]
+		},
+		{
+			"name": "shadow/300",
+			"effects": [
+				{
+					"type": "DROP_SHADOW",
+					"offset": {
+						"x": 0,
+						"y": 0.667
+					},
+					"radius": 3.502,
+					"spread": 0,
+					"color": {
+						"r": 0,
+						"g": 0,
+						"b": 0,
+						"a": 0.0096
+					}
+				},
+				{
+					"type": "DROP_SHADOW",
+					"offset": {
+						"x": 0,
+						"y": 2.933
+					},
+					"radius": 7.252,
+					"spread": 0,
+					"color": {
+						"r": 0,
+						"g": 0,
+						"b": 0,
+						"a": 0.0157
+					}
+				},
+				{
+					"type": "DROP_SHADOW",
+					"offset": {
+						"x": 0,
+						"y": 7.2
+					},
+					"radius": 14.462,
+					"spread": 0,
+					"color": {
+						"r": 0,
+						"g": 0,
+						"b": 0,
+						"a": 0.02
+					}
+				},
+				{
+					"type": "DROP_SHADOW",
+					"offset": {
+						"x": 0,
+						"y": 13.867
+					},
+					"radius": 28.348,
+					"spread": 0,
+					"color": {
+						"r": 0,
+						"g": 0,
+						"b": 0,
+						"a": 0.0243
+					}
+				},
+				{
+					"type": "DROP_SHADOW",
+					"offset": {
+						"x": 0,
+						"y": 23.333
+					},
+					"radius": 52.123,
+					"spread": 0,
+					"color": {
+						"r": 0,
+						"g": 0,
+						"b": 0,
+						"a": 0.0304
+					}
+				},
+				{
+					"type": "DROP_SHADOW",
+					"offset": {
+						"x": 0,
+						"y": 36
+					},
+					"radius": 89,
+					"spread": 0,
+					"color": {
+						"r": 0,
+						"g": 0,
+						"b": 0,
+						"a": 0.04
+					}
+				}
+			]
+		}
+	]
+}

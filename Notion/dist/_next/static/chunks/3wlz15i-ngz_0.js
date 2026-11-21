@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="53a8de88-a9d6-6d21-584e-fe675aed27c6")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,515032,c=>{"use strict";var o=c.i(968946),s=c.i(707821);c.s(["FloodIcon",0,function(c){return(0,o.jsx)(s.l,{...c,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M13.75 16.25c1.181 0 1.91-1.25 3.75-1.25v1.875c-1.181 0-1.91 1.25-3.75 1.25s-2.544-1.25-3.75-1.25-1.91 1.25-3.75 1.25-2.544-1.25-3.75-1.25V15c1.866 0 2.544 1.25 3.75 1.25S8.16 15 10 15s2.544 1.25 3.75 1.25m1.563-9.062V2.5h-2.5v2.188L10 1.874l-7.5 7.5v1.25h2.188v3.625c.275.131.518.269.734.39.4.229.634.36.828.36s.475-.16.828-.36c.366-.206.81-.456 1.36-.637v-2.128h3.124V14c.554.181.994.431 1.36.64.4.229.634.36.828.36s.475-.16.828-.36c.216-.121.46-.259.735-.387v-3.628H17.5v-1.25z",fill:"currentColor"})})}])}]);
+
+//# debugId=53a8de88-a9d6-6d21-584e-fe675aed27c6
+//# sourceMappingURL=0f216gg2qbdov.js.map

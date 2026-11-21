@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="e4017a94-7b4c-ffea-aedf-60b7ad7d87c9")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,391667,o=>{"use strict";var c=o.i(968946),t=o.i(707821);o.s(["AvocadoIcon",0,function(o){return(0,c.jsx)(t.l,{...o,viewBox:"0 0 20 20",children:(0,c.jsx)("path",{d:"M14.688 1.875c-1 0-1.96.397-2.67 1.106l-1.54 1.54A3.78 3.78 0 0 1 7.81 5.629a5.94 5.94 0 0 0-5.937 5.938 5.939 5.939 0 0 0 11.25 2.653l4.025-8.047c.231-.46.35-.966.35-1.481a2.813 2.813 0 0 0-2.813-2.813zm-4.063 9.688A2.813 2.813 0 1 1 7.813 8.75h2.812z",fill:"currentColor"})})}])}]);
+
+//# debugId=e4017a94-7b4c-ffea-aedf-60b7ad7d87c9
+//# sourceMappingURL=2vl1mb-za4_la.js.map

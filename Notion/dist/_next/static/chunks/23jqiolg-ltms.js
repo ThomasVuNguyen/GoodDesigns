@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="b8ecf2d5-a990-947a-2d56-32563559f98d")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,360595,c=>{"use strict";var o=c.i(968946),e=c.i(707821);c.s(["PaperTowelsIcon",0,function(c){return(0,o.jsx)(e.l,{...c,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M12.125 7.5c.625-.594 1-1.356 1-2.187 0-1.9-1.96-3.438-4.375-3.438S4.375 3.413 4.375 5.313v9.375c0 1.9 1.96 3.437 4.375 3.437h6.875V7.5zM8.75 4.063c.863 0 1.563.559 1.563 1.25 0 .69-.7 1.25-1.563 1.25-.862 0-1.562-.56-1.562-1.25 0-.691.7-1.25 1.562-1.25",fill:"currentColor"})})}])}]);
+
+//# debugId=b8ecf2d5-a990-947a-2d56-32563559f98d
+//# sourceMappingURL=4106gpxhkyn1j.js.map

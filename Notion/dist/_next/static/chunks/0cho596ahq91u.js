@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="58c1005b-99e5-f566-cc00-a2cae38415c5")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,728531,h=>{"use strict";var v=h.i(968946),c=h.i(707821);h.s(["BunkBedIcon",0,function(h){return(0,v.jsx)(c.l,{...h,viewBox:"0 0 20 20",children:(0,v.jsx)("path",{d:"M16.25 3.75v1.875H9.375c0-1.544-.956-2.5-2.5-2.5H3.75V1.25H1.875v17.5H3.75v-2.5h8.125v2.5h1.875v-2.5h2.5v2.5h1.875v-15zm0 6.25h-2.5V7.5h2.5zm-6.875 4.375c0-1.544-.956-2.5-2.5-2.5H3.75V7.5h8.125v6.875zm4.375 0v-2.5h2.5v2.5z",fill:"currentColor"})})}])}]);
+
+//# debugId=58c1005b-99e5-f566-cc00-a2cae38415c5
+//# sourceMappingURL=0vwtpol945jge.js.map

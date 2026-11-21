@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="19e624b2-96ce-fc81-8c72-a9c71c3ad2b3")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,448119,t=>{"use strict";var i=t.i(968946),c=t.i(707821);t.s(["MusicArtistIcon",0,function(t){return(0,i.jsx)(c.l,{...t,viewBox:"0 0 20 20",children:(0,i.jsx)("path",{d:"m11.453 5.625 1.678 3.353-2.193 1.097V17.5H9.062v-6.488l-2.384 1.194-.419-.837-2.918 1.46-.838-1.679 2.919-1.46-.419-.837 6.453-3.228zM15.625 2.5a3.126 3.126 0 0 0-3.069 2.534l1.697 3.394c.416.203.878.319 1.369.319a3.126 3.126 0 0 0 0-6.25z",fill:"currentColor"})})}])}]);
+
+//# debugId=19e624b2-96ce-fc81-8c72-a9c71c3ad2b3
+//# sourceMappingURL=0dv1wm47_bql0.js.map

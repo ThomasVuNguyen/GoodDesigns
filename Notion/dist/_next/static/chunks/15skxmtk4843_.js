@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="4d065222-32d5-af4b-9c82-fd8267db2b47")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,137484,c=>{"use strict";var e=c.i(968946),o=c.i(707821);c.s(["TelephoneIcon",0,function(c){return(0,e.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,e.jsx)("path",{d:"M11.875 12.5c0 .863-.84 1.563-1.875 1.563-1.034 0-1.875-.7-1.875-1.563s.84-1.562 1.875-1.562c1.034 0 1.875.7 1.875 1.562M10 2.5c-3.91 0-8.125 1.022-8.125 3.656V7.5H6.25V5.625c.353-.303 1.787-.937 3.75-.937s3.397.634 3.75.937V7.5h4.375V6.156C18.125 3.503 13.881 2.5 10 2.5m5 6.25 2.5 7.5v1.25h-15v-1.25L5 8.75h2.5V6.875h5V8.75zm-1.25 3.75c0-1.725-1.678-3.125-3.75-3.125s-3.75 1.4-3.75 3.125 1.678 3.125 3.75 3.125 3.75-1.4 3.75-3.125",fill:"currentColor"})})}])}]);
+
+//# debugId=4d065222-32d5-af4b-9c82-fd8267db2b47
+//# sourceMappingURL=2fjm5chtp_3ki.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="59eaf724-e852-70d0-4400-2400a696f746")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,996224,i=>{"use strict";var o=i.i(968946),c=i.i(707821);i.s(["SuspensionBridgeIcon",0,function(i){return(0,o.jsx)(c.l,{...i,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M20 11.25s-3.125-3.125-4.375-8.125H13.75c-.9 3.6-2.772 6.228-3.75 7.419-.978-1.19-2.85-3.816-3.75-7.419H4.375C3.125 8.125 0 11.25 0 11.25v1.875h4.375v3.75H6.25v-3.75h7.5v3.75h1.875v-3.75H20zm-17.544 0c.56-.725 1.25-1.738 1.919-2.988v2.988zm3.794 0V8.262a22 22 0 0 0 1.919 2.988zm5.581 0a22 22 0 0 0 1.919-2.988v2.988zm3.794 0V8.262a21.4 21.4 0 0 0 1.919 2.988z",fill:"currentColor"})})}])}]);
+
+//# debugId=59eaf724-e852-70d0-4400-2400a696f746
+//# sourceMappingURL=3slf5o6hhbtd7.js.map

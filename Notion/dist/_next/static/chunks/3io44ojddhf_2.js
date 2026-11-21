@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="d5469ab7-6071-21cd-dd85-75a11f23ff72")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,968223,c=>{"use strict";var o=c.i(968946),i=c.i(707821);c.s(["MicrophoneOffIcon",0,function(c){return(0,o.jsx)(i.l,{...c,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"m14.738 12.084-1.41-1.409c.275-.54.422-1.187.422-1.928h1.875c0 1.319-.312 2.444-.887 3.334zM12.5 8.75V4.375c0-1.544-.956-2.5-2.5-2.5s-2.5.956-2.5 2.5v.472L12.353 9.7c.094-.284.147-.603.147-.953zm-1.562 3.75H10c-2.312 0-3.75-1.437-3.75-3.75H4.375c0 3.144 1.772 5.203 4.688 5.563v1.312H6.25V17.5h7.5v-1.875h-2.812zM2.758 1.875l-.884.884L17.24 18.125l.884-.884z",fill:"currentColor"})})}])}]);
+
+//# debugId=d5469ab7-6071-21cd-dd85-75a11f23ff72
+//# sourceMappingURL=1qj6sd2dfxg4-.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="f2740192-e58e-6666-c5bf-797d3406e47d")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,938989,o=>{"use strict";var t=o.i(968946),r=o.i(707821);o.s(["ToasterIcon",0,function(o){return(0,t.jsx)(r.l,{...o,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M18.125 14.375H16.25V17.5H3.75v-5.625a2.5 2.5 0 0 1 2.5-2.5h7.5a2.5 2.5 0 0 1 2.5 2.5v.625h1.875zm-4.375-7.5c0-.812-.625-1.25-.625-1.25s.625-.437.625-1.25S12.94 2.5 10 2.5 6.25 3.563 6.25 4.375s.625 1.25.625 1.25-.625.438-.625 1.25v1.25h7.5z",fill:"currentColor"})})}])}]);
+
+//# debugId=f2740192-e58e-6666-c5bf-797d3406e47d
+//# sourceMappingURL=3069bgcbe0w_8.js.map

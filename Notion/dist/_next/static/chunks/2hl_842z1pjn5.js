@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="8698a90f-6bd6-d461-418c-457c0261fb96")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,919842,h=>{"use strict";var r=h.i(968946),o=h.i(707821);h.s(["SnareDrumIcon",0,function(h){return(0,r.jsx)(o.l,{...h,viewBox:"0 0 20 20",children:(0,r.jsx)("path",{d:"m12.888 7.188-1.325-1.325 4.612-4.613L17.5 2.575zm-4.45-1.325L3.824 1.25 2.5 2.575l4.613 4.613zM3.125 8.124h13.75V10h-1.25v5.625h1.25V17.5H3.125v-1.875h1.25V10h-1.25zm8.75 7.5h1.25V10h-1.25zm-5 0h1.25V10h-1.25z",fill:"currentColor"})})}])}]);
+
+//# debugId=8698a90f-6bd6-d461-418c-457c0261fb96
+//# sourceMappingURL=2j4l6s6xc6ssd.js.map

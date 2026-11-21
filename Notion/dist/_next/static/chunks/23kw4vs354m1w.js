@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="b9dc8f22-4e19-69b2-5850-360e05af3338")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,787957,i=>{"use strict";var o=i.i(968946),t=i.i(707821);i.s(["OfficialDocumentIcon",0,function(i){return(0,o.jsx)(t.l,{...i,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"m8.75 14.331-.537 1.294.537 1.294-1.294.537-.537 1.294-1.294-.538-1.294.538-.537-1.294L2.5 16.92l.538-1.294-.538-1.294 1.294-.537.537-1.294 1.294.537 1.294-.537.537 1.294zM11.875 2.5h-1.25v5.625h5.625v-1.25zm-2.5 0H3.75v8.406l1.875.775 1.972-.815.815 1.972 1.972.815-.815 1.972.778 1.875h5.906V9.375H9.378V2.5z",fill:"currentColor"})})}])}]);
+
+//# debugId=b9dc8f22-4e19-69b2-5850-360e05af3338
+//# sourceMappingURL=1c18o-ueldulf.js.map

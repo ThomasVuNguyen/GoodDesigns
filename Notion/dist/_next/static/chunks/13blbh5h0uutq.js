@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="5ad45ec2-2171-c33a-b467-492d988e6417")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,898524,c=>{"use strict";var h=c.i(968946),i=c.i(707821);c.s(["ImmigrationIcon",0,function(c){return(0,h.jsx)(i.l,{...c,viewBox:"0 0 20 20",children:(0,h.jsx)("path",{d:"M7.5 10h-5V3.75L5 2.5h.625v1.25H7.5zm6.875-2.5c1.544 0 2.5-.956 2.5-2.5V1.875h-5V3.75H10V5h1.875c0 1.544.956 2.5 2.5 2.5m-3.125 10h6.25V15h-6.25zm0-3.75h1.25l2.5-5h-3.484c-.794 0-1.322.328-1.678 1.037l-1.044 2.088H6.247v1.875H9.95l1.297-2.59v2.59zm5-5-2.5 5h3.75V10c0-.772-.478-1.25-1.25-1.25",fill:"currentColor"})})}])}]);
+
+//# debugId=5ad45ec2-2171-c33a-b467-492d988e6417
+//# sourceMappingURL=0cfc4sm-y4-jt.js.map

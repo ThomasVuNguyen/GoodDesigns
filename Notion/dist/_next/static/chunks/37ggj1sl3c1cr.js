@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="c28c7b6b-9978-1c4b-3a2a-e38637224991")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,985835,c=>{"use strict";var t=c.i(968946),e=c.i(707821);c.s(["HelpAlternateIcon",0,function(c){return(0,t.jsx)(e.l,{...c,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M10 2.5c-4.14 0-7.5 3.36-7.5 7.5s3.36 7.5 7.5 7.5 7.5-3.36 7.5-7.5-3.36-7.5-7.5-7.5m1.25 12.188h-2.5v-1.876h2.5zm-.312-3.126H9.062c0-2.187 2.344-2.128 2.344-3.28 0-.745-.534-1.094-1.484-1.094s-1.485.35-1.485 1.25H6.563c0-1.913 1.315-3.126 3.437-3.126s3.438 1.213 3.438 2.97c0 2.187-2.5 2.127-2.5 3.28",fill:"currentColor"})})}])}]);
+
+//# debugId=c28c7b6b-9978-1c4b-3a2a-e38637224991
+//# sourceMappingURL=1gn4btibzzn8z.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="5a40b96b-27ab-9dc0-6704-2b63c1ad1569")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,962867,h=>{"use strict";var v=h.i(968946),e=h.i(707821);h.s(["GridDenseIcon",0,function(h){return(0,v.jsx)(e.l,{...h,viewBox:"0 0 20 20",children:(0,v.jsx)("path",{d:"M8.125 13.125h3.75v3.75h-3.75zm-5-6.25h3.75v-3.75h-3.75zm0 10h3.75v-3.75h-3.75zm0-5h3.75v-3.75h-3.75zm10 5h3.75v-3.75h-3.75zm-5-5h3.75v-3.75h-3.75zm5-8.75v3.75h3.75v-3.75zm0 8.75h3.75v-3.75h-3.75zm-5-5h3.75v-3.75h-3.75z",fill:"currentColor"})})}])}]);
+
+//# debugId=5a40b96b-27ab-9dc0-6704-2b63c1ad1569
+//# sourceMappingURL=2uklt4v6l7hcp.js.map

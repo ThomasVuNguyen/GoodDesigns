@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="a20bd200-008e-b154-b880-7c33d0ecfcde")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,945359,o=>{"use strict";var t=o.i(968946),e=o.i(707821);o.s(["ChessRookIcon",0,function(o){return(0,t.jsx)(e.l,{...o,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M16.25 15.625V17.5H3.75v-1.875h1.978L6.875 8.75l-2.5-2.5V2.5H6.25v1.875h2.5V2.5h2.5v1.875h2.5V2.5h1.875v3.75l-2.5 2.5 1.147 6.875z",fill:"currentColor"})})}])}]);
+
+//# debugId=a20bd200-008e-b154-b880-7c33d0ecfcde
+//# sourceMappingURL=343j985o2zd79.js.map

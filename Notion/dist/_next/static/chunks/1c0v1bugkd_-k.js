@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="3533b0c2-dbe3-0c45-d328-d4607d824262")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,992591,h=>{"use strict";var c=h.i(968946),o=h.i(707821);h.s(["CalculatorIcon",0,function(h){return(0,c.jsx)(o.l,{...h,viewBox:"0 0 20 20",children:(0,c.jsx)("path",{d:"M15.313 1.875H4.688c-.772 0-1.25.478-1.25 1.25v13.75c0 .772.478 1.25 1.25 1.25h10.625c.771 0 1.25-.478 1.25-1.25V3.125c0-.772-.479-1.25-1.25-1.25M7.187 15.938H5.313v-1.563h1.875zm0-3.438H5.313v-1.562h1.875zm0-3.437H5.313V7.5h1.875zm7.5 6.874H9.064v-1.562h5.624zm-3.75-5V12.5H9.064v-1.562zM9.064 9.064V7.5h1.874v1.563zm5.624 3.437h-1.874v-1.562h1.874zm0-3.437h-1.874V7.5h1.874zm0-3.438H5.313V3.75h9.375z",fill:"currentColor"})})}])}]);
+
+//# debugId=3533b0c2-dbe3-0c45-d328-d4607d824262
+//# sourceMappingURL=0e-d-sf7yd79-.js.map

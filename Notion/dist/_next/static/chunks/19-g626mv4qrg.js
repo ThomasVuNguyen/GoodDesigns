@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="a89bffbd-c49a-7554-8fac-0548cbba0ef9")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,238598,o=>{"use strict";var t=o.i(968946),c=o.i(707821);o.s(["HotAirBalloonIcon",0,function(o){return(0,t.jsx)(c.l,{...o,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M16.25 6.25c0 2.744-1.875 4.375-5 7.5h-2.5c-3.125-3.125-5-4.756-5-7.5s2.181-5 6.25-5 6.25 2.288 6.25 5M8.125 17.5h3.75V15h-3.75z",fill:"currentColor"})})}])}]);
+
+//# debugId=a89bffbd-c49a-7554-8fac-0548cbba0ef9
+//# sourceMappingURL=43esrib6nvppr.js.map

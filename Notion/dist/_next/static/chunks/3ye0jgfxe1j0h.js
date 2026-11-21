@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="31893372-1cc6-f236-50f2-10f5ee27341d")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,238687,o=>{"use strict";var c=o.i(968946),i=o.i(707821);o.s(["VideoGameJoystickIcon",0,function(o){return(0,c.jsx)(i.l,{...o,viewBox:"0 0 20 20",children:(0,c.jsx)("path",{d:"M17.5 15v1.875h-15V15c0-1.544.956-2.5 2.5-2.5h4.063V7.981a3.126 3.126 0 1 1 1.875 0V12.5h1.25v-1.25h2.5v1.25H15c1.544 0 2.5.956 2.5 2.5",fill:"currentColor"})})}])}]);
+
+//# debugId=31893372-1cc6-f236-50f2-10f5ee27341d
+//# sourceMappingURL=2akq-geni8j9o.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="98260ac8-9666-e83b-88d9-ae90348740b7")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,780259,o=>{"use strict";var t=o.i(968946),c=o.i(707821);o.s(["PlateFoodIcon",0,function(o){return(0,t.jsx)(c.l,{...o,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M18.75 10.625V12.5h-2.344l-.312 1.875H3.906L3.594 12.5H1.25v-1.875zm-6.25-1.25h3.75c0-1.928-1.197-3.125-3.125-3.125a3.6 3.6 0 0 0-1.481.294C10.894 5.556 9.68 5 8.125 5 5.425 5 3.75 6.675 3.75 9.375z",fill:"currentColor"})})}])}]);
+
+//# debugId=98260ac8-9666-e83b-88d9-ae90348740b7
+//# sourceMappingURL=0gdye8riwr9re.js.map

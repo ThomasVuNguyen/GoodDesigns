@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="5615fd3a-8742-997a-357f-1cb642831b16")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,10741,t=>{"use strict";var o=t.i(968946),c=t.i(707821);t.s(["PottedPlantIcon",0,function(t){return(0,o.jsx)(c.l,{...t,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M10.625 8.438V10h5v1.875h-1.406L12.813 17.5H7.187l-1.406-5.625H4.375V10h5V8.438h-5V7.225c1.347-1.347 3.363-1.631 5-.869v-.912L5.403 1.48 6.25.625A4.356 4.356 0 0 1 10.625 5v.106c1.637-.762 3.653-.478 5 .869v1.213h-5z",fill:"currentColor"})})}])}]);
+
+//# debugId=5615fd3a-8742-997a-357f-1cb642831b16
+//# sourceMappingURL=1lh69thsiicpl.js.map

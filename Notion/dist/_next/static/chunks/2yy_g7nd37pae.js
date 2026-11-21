@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="2da39f5b-852a-fa62-9b6a-f5ab72a8a96c")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,996004,o=>{"use strict";var r=o.i(968946),t=o.i(707821);o.s(["TrainMetroIcon",0,function(o){return(0,r.jsx)(t.l,{...o,viewBox:"0 0 20 20",children:(0,r.jsx)("path",{d:"m14.375 15.625 1.563 3.125h-2.11l-.625-1.25H6.797l-.625 1.25h-2.11l1.563-3.125zm-8.75-1.25S3.75 12.453 3.75 8.438 5.625 2.5 5.625 2.5h8.75s1.875 1.922 1.875 5.938c0 4.015-1.875 5.937-1.875 5.937zm8.438-2.812a.936.936 0 0 0-.938-.938.936.936 0 0 0-.937.938.936.936 0 1 0 1.875 0M8.125 5h3.75V3.75h-3.75zM5.938 8.75h8.125v-2.5H5.937zm0 2.813a.936.936 0 1 0 1.875 0 .936.936 0 0 0-.938-.938.936.936 0 0 0-.937.938",fill:"currentColor"})})}])}]);
+
+//# debugId=2da39f5b-852a-fa62-9b6a-f5ab72a8a96c
+//# sourceMappingURL=2lnqvypg90qq2.js.map

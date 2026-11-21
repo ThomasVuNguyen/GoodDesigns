@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="d393527c-cbd4-de06-2b19-a6cd3c7a9625")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,676216,c=>{"use strict";var o=c.i(968946),t=c.i(707821);c.s(["AppleIcon",0,function(c){return(0,o.jsx)(t.l,{...c,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M16.875 9.375c0 3.75-2.528 7.5-4.375 7.5-1.134 0-1.375-.625-2.5-.625s-1.366.625-2.5.625c-1.847 0-4.375-3.75-4.375-7.5s1.903-5 3.75-5c1.013 0 1.784.59 2.39.963.241-2.454 1.36-4.088 1.36-4.088l1.875.938s-1.097 1.159-1.653 3.078c.59-.37 1.328-.891 2.278-.891 1.847 0 3.75 1.25 3.75 5",fill:"currentColor"})})}])}]);
+
+//# debugId=d393527c-cbd4-de06-2b19-a6cd3c7a9625
+//# sourceMappingURL=30w-sgo9fs1fg.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="6a2231e7-07f6-728c-21df-797eab2bdb38")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,249291,h=>{"use strict";var i=h.i(968946),l=h.i(707821);h.s(["TulipNameTagIcon",0,function(h){return(0,i.jsx)(l.l,{...h,viewBox:"0 0 20 20",children:(0,i.jsx)("path",{d:"M15 3.125h-1.25L12.71 6.25h-1.041l-1.04-3.125h-1.25L8.337 6.25h-1.04l-1.04-3.125h-1.25c-1.3 3.903-2.5 5.728-2.5 8.125 0 3.856 2.871 6.25 7.5 6.25 4.627 0 7.5-2.394 7.5-6.25 0-2.397-1.2-4.222-2.5-8.125zM13.75 13.75h-7.5v-5h7.5z",fill:"currentColor"})})}])}]);
+
+//# debugId=6a2231e7-07f6-728c-21df-797eab2bdb38
+//# sourceMappingURL=1jto5yjazyk26.js.map

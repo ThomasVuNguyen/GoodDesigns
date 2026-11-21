@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="b3f92e3f-806e-48d3-7b7c-2601ad281ee1")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,208262,c=>{"use strict";var o=c.i(968946),t=c.i(707821);c.s(["SkateboardIcon",0,function(c){return(0,o.jsx)(t.l,{...c,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M19.406 8.794c-.987.987-1.95 1.528-3.156 1.731v1.034a1.563 1.563 0 0 1-3.125 0v-.937h-6.25v.937a1.563 1.563 0 0 1-3.125 0v-1.034c-1.206-.206-2.169-.744-3.156-1.731L0 8.2l1.325-1.325.594.594c.915.915 1.797 1.281 3.093 1.281h9.976c1.296 0 2.178-.366 3.093-1.281l.535-.535L20 8.204l-.594.593z",fill:"currentColor"})})}])}]);
+
+//# debugId=b3f92e3f-806e-48d3-7b7c-2601ad281ee1
+//# sourceMappingURL=15bpkde9q3nk-.js.map

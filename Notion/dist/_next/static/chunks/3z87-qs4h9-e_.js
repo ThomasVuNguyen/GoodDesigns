@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="8037cd5a-7920-d855-c423-08709bd1b306")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,608824,o=>{"use strict";var c=o.i(968946),e=o.i(707821);o.s(["MegaphoneIcon",0,function(o){return(0,c.jsx)(e.l,{...o,viewBox:"0 0 20 20",children:(0,c.jsx)("path",{d:"M16.875 3.125v12.5h-1.25L9.375 12.5h-1.25l1.25 5H6.25L5 12.5c-1.544 0-2.5-.956-2.5-2.5V8.75c0-1.544.956-2.5 2.5-2.5h4.375l6.25-3.125z",fill:"currentColor"})})}])}]);
+
+//# debugId=8037cd5a-7920-d855-c423-08709bd1b306
+//# sourceMappingURL=42oxznxw-69d3.js.map

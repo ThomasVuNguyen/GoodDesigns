@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="0ad1f856-2ae6-70f1-8982-022fadeda489")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,617662,c=>{"use strict";var t=c.i(968946),o=c.i(707821);c.s(["AtmIcon",0,function(c){return(0,t.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M15 8.125h1.875V15H3.125V8.125H5v2.5c1.544 0 2.5.956 2.5 2.5h5c0-1.544.956-2.5 2.5-2.5zm-2.812 1.25v-1.25H7.812v1.25c0 1.544.838 2.5 2.188 2.5s2.188-.956 2.188-2.5M0 5v7.5h1.875V6.875h16.25V12.5H20V5z",fill:"currentColor"})})}])}]);
+
+//# debugId=0ad1f856-2ae6-70f1-8982-022fadeda489
+//# sourceMappingURL=2a1d8uls07ox-.js.map

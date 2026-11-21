@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="f0cd0886-97f3-4de7-99d3-2ba83a2432d6")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,323572,l=>{"use strict";var c=l.i(968946),o=l.i(707821);l.s(["AmbulanceIcon",0,function(l){return(0,c.jsx)(o.l,{...l,viewBox:"0 0 20 20",children:(0,c.jsx)("path",{d:"M15.625 6.25h-3.75V4.375h-10v10H3.75V15c0 1.034.84 1.875 1.875 1.875 1.034 0 1.875-.84 1.875-1.875v-.625h5V15c0 1.034.84 1.875 1.875 1.875 1.034 0 1.875-.84 1.875-1.875v-.625h1.875V11.25zm-12.5.625v-1.25H5v1.25zm6.228 3.834-.625 1.082-1.228-.71V12.5H6.25v-1.419l-1.228.71-.625-1.082L5.625 10l-1.228-.71.625-1.08 1.228.709V7.5H7.5v1.419l1.228-.71.625 1.082L8.125 10zm1.272-3.834H8.75v-1.25h1.875zm1.25 3.75v-2.5h2.59l1.25 2.5z",fill:"currentColor"})})}])}]);
+
+//# debugId=f0cd0886-97f3-4de7-99d3-2ba83a2432d6
+//# sourceMappingURL=0856wynl0fnwy.js.map

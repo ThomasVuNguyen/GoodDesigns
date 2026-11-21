@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="5a6878e8-6e5f-f61d-002a-25fa67872eac")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,142411,c=>{"use strict";var t=c.i(968946),o=c.i(707821);c.s(["BatteryIcon",0,function(c){return(0,t.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M16.875 7.5v5c0 1.537-.963 2.5-2.5 2.5H3.75c-1.537 0-2.5-.963-2.5-2.5v-5c0-1.537.962-2.5 2.5-2.5h10.625c1.537 0 2.5.963 2.5 2.5m1.875.625h-.625v3.75h.625c.772 0 1.25-.478 1.25-1.25v-1.25c0-.772-.478-1.25-1.25-1.25",fill:"currentColor"})})}])}]);
+
+//# debugId=5a6878e8-6e5f-f61d-002a-25fa67872eac
+//# sourceMappingURL=39nkzfyjvw4eb.js.map

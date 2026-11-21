@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="105cc850-23f0-3b4c-d1ee-f491b52a14d2")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,476673,c=>{"use strict";var t=c.i(968946),o=c.i(707821);c.s(["WineBottleIcon",0,function(c){return(0,t.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M6.875 5.825V1.25h-2.5v4.575C3.194 6.241 2.5 7.281 2.5 8.75v7.5c0 .772.478 1.25 1.25 1.25H7.5c.772 0 1.25-.478 1.25-1.25v-7.5c0-1.466-.694-2.51-1.875-2.925m0 7.925h-2.5v-3.125c0-.772.478-1.25 1.25-1.25s1.25.478 1.25 1.25zm11.875-5q0-.483-.119-.953L17.306 2.5h-5.865l-1.325 5.297a4 4 0 0 0-.12.953c0 2.397 1.107 3.984 3.438 4.31v2.565h-2.5V17.5h6.875v-1.875h-2.5v-2.566c2.332-.325 3.438-1.912 3.438-4.309zm-2.906-4.375.937 3.75H11.97l.937-3.75h2.94z",fill:"currentColor"})})}])}]);
+
+//# debugId=105cc850-23f0-3b4c-d1ee-f491b52a14d2
+//# sourceMappingURL=1ll8e_j1wl59x.js.map

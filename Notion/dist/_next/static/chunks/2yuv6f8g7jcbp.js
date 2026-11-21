@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="5eaae353-bb21-a79b-97a7-046231e89ffa")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,873548,h=>{"use strict";var c=h.i(968946),o=h.i(707821);h.s(["KeyboardIcon",0,function(h){return(0,c.jsx)(o.l,{...h,viewBox:"0 0 20 20",children:(0,c.jsx)("path",{d:"M17.188 3.75H2.813c-.772 0-1.25.478-1.25 1.25v10c0 .772.478 1.25 1.25 1.25h14.375c.771 0 1.25-.478 1.25-1.25V5c0-.772-.479-1.25-1.25-1.25m-6.25 1.875h1.874v1.563h-1.874zm-3.75 0h1.875v1.563H7.187zm3.75 3.438v1.562H9.062V9.063zm-7.5-3.438h1.874v1.563H3.438zm1.874 8.438H3.438V12.5h1.876zm0-5h1.875v1.562H5.313zm7.5 5H7.189V12.5h5.625zm0-5h1.876v1.562h-1.876zm3.75 5h-1.875V12.5h1.876zm0-6.876h-1.875V5.626h1.876z",fill:"currentColor"})})}])}]);
+
+//# debugId=5eaae353-bb21-a79b-97a7-046231e89ffa
+//# sourceMappingURL=217isu0z8nwe6.js.map

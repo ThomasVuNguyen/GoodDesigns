@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="51bc714c-85c4-297c-9e1e-caa4f553098b")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,460009,i=>{"use strict";var l=i.i(968946),c=i.i(707821);i.s(["BikiniIcon",0,function(i){return(0,l.jsx)(c.l,{...i,viewBox:"0 0 20 20",children:(0,l.jsx)("path",{d:"M5 13.438h10v2.187c-2.128.478-3.584 1.934-4.062 4.063H9.062C8.585 17.559 7.129 16.103 5 15.625zm10.378-8.15-.434-.87a10 10 0 0 1-.757-2.046L13.75.625h-1.562v.625l.843 3.375L10 7.656 6.969 4.625l.843-3.375V.625H6.25l-.437 1.747q-.269 1.066-.757 2.047l-.434.869a5.3 5.3 0 0 0-.56 2.368A2.967 2.967 0 0 0 9.45 9.375h1.103a2.967 2.967 0 0 0 5.387-1.719c0-.822-.19-1.631-.559-2.368z",fill:"currentColor"})})}])}]);
+
+//# debugId=51bc714c-85c4-297c-9e1e-caa4f553098b
+//# sourceMappingURL=34v7m1yu34s3z.js.map

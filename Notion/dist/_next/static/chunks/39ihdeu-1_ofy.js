@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="bcb72dfc-4589-b98a-0e05-48d9379663e7")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,559090,l=>{"use strict";var o=l.i(968946),t=l.i(707821);l.s(["FootballIcon",0,function(l){return(0,o.jsx)(t.l,{...l,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M17.016 2.984c-1.157-.35-1.997-.484-3.266-.484C6.81 2.5 2.5 6.81 2.5 13.75c0 1.269.134 2.113.484 3.266 1.157.35 1.997.484 3.266.484 6.94 0 11.25-4.31 11.25-11.25 0-1.269-.134-2.112-.484-3.266M13.384 7.5l.991.99-.884.885-.991-.99L10.884 10l.991.99-.884.885-.991-.99L8.384 12.5l.991.99-.884.885-.991-.99L5.884 15 5 14.116 6.616 12.5l-.991-.99.884-.885.991.99L9.116 10l-.991-.99.884-.885.991.99L11.616 7.5l-.991-.99.884-.885.991.99L14.116 5l.884.884z",fill:"currentColor"})})}])}]);
+
+//# debugId=bcb72dfc-4589-b98a-0e05-48d9379663e7
+//# sourceMappingURL=2zd_79rfxvkpr.js.map

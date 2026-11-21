@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="9f5bc927-2915-5eb5-e066-9b0c742f8ac4")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,490821,i=>{"use strict";var c=i.i(968946),o=i.i(707821);i.s(["FacialTissuesIcon",0,function(i){return(0,c.jsx)(o.l,{...i,viewBox:"0 0 20 20",children:(0,c.jsx)("path",{d:"M6.875 8.75 5 3.125S6.094 2.5 7.188 2.5c1.7 0 2.943 1.25 4.375 1.25 1.093 0 2.187-.625 2.187-.625H15L13.125 8.75zM2.5 10v7.5h15V10z",fill:"currentColor"})})}])}]);
+
+//# debugId=9f5bc927-2915-5eb5-e066-9b0c742f8ac4
+//# sourceMappingURL=1w5tsu77kuwdc.js.map

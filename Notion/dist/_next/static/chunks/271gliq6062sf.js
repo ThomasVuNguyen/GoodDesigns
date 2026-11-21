@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="39a9b1ba-8ec3-2e28-3774-8b76bb786da2")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,491754,c=>{"use strict";var i=c.i(968946),t=c.i(707821);c.s(["LipstickIcon",0,function(c){return(0,i.jsx)(t.l,{...c,viewBox:"0 0 20 20",children:(0,i.jsx)("path",{d:"M11.875 6.875h-3.75V3.741c0-.457.037-.77.15-1.213L8.75.625h.625l1.769 1.769c.525.525.731 1.028.731 1.768v2.716zM12.5 12.5V8.125h-5V12.5H6.25v5h7.5v-5z",fill:"currentColor"})})}])}]);
+
+//# debugId=39a9b1ba-8ec3-2e28-3774-8b76bb786da2
+//# sourceMappingURL=289dg_yud-2yl.js.map

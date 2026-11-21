@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="2e846257-2fab-a1d1-e22a-afaa7850b8cb")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,367670,i=>{"use strict";var l=i.i(968946),t=i.i(707821);i.s(["TrafficLightIcon",0,function(i){return(0,l.jsx)(t.l,{...i,viewBox:"0 0 20 20",children:(0,l.jsx)("path",{d:"M16.875 5V3.75H13.75V2.5h-7.5v1.25H3.125V5L6.25 6.563v1.562H3.125v1.25l3.125 1.563V12.5H3.125v1.25l3.125 1.563V17.5h7.5v-2.187l3.125-1.563V12.5H13.75v-1.562l3.125-1.563v-1.25H13.75V6.563zM10 15.938a1.563 1.563 0 1 1 .001-3.127A1.563 1.563 0 0 1 10 15.938m0-4.376a1.563 1.563 0 1 1 .001-3.126A1.563 1.563 0 0 1 10 11.563m0-4.374a1.563 1.563 0 1 1 .001-3.127A1.563 1.563 0 0 1 10 7.188",fill:"currentColor"})})}])}]);
+
+//# debugId=2e846257-2fab-a1d1-e22a-afaa7850b8cb
+//# sourceMappingURL=3qvknfxc6mlnq.js.map

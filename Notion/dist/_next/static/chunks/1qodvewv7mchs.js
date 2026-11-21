@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="c45ad8d9-02a8-59e1-d0ca-fac3b6828d77")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,812406,i=>{"use strict";var o=i.i(968946),r=i.i(707821);i.s(["DefibrillatorIcon",0,function(i){return(0,o.jsx)(r.l,{...i,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M13.438 3.125c-1.538 0-2.86.928-3.438 2.253a3.75 3.75 0 0 0-3.437-2.253C4.319 3.125 2.5 4.831 2.5 7.5c0 4.36 4.578 7.972 7.5 10 2.922-2.028 7.5-5.64 7.5-10 0-2.669-1.819-4.375-4.062-4.375m-.313 7.5-2.5 3.75h-1.25V11.25h-2.5v-.625l2.5-3.75h1.25V10h2.5z",fill:"currentColor"})})}])}]);
+
+//# debugId=c45ad8d9-02a8-59e1-d0ca-fac3b6828d77
+//# sourceMappingURL=15qombrl0_5e8.js.map

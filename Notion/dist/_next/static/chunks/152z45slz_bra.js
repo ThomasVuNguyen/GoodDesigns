@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="0f696ec4-bfd0-45a1-8d54-e36904a7a8cd")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,167978,c=>{"use strict";var v=c.i(968946),i=c.i(707821);c.s(["JudicialScalesIcon",0,function(c){return(0,v.jsx)(i.l,{...c,viewBox:"0 0 20 20",children:(0,v.jsx)("path",{d:"m18.75 6.25-1.325-1.325S16.444 5.938 15 5.938c-1.722 0-2.572-.722-3.75-1.07V2.5h-2.5v2.369C7.569 5.216 6.719 5.938 5 5.938c-1.444 0-2.425-1.013-2.425-1.013L1.25 6.25s1.237 1.272 3.125 1.519v.981L2.5 12.5v1.25h5V12.5L5.625 8.75v-.966c1.438-.112 2.331-.6 3.125-.925v8.763H5v1.875h10v-1.875h-3.75V6.859c.8.325 1.706.807 3.125.922v.966l-1.875 3.75v1.25h5v-1.25l-1.875-3.75v-.981c1.887-.247 3.125-1.52 3.125-1.52zM6.103 12.5H3.897L5 10.294zm10 0h-2.206L15 10.294z",fill:"currentColor"})})}])}]);
+
+//# debugId=0f696ec4-bfd0-45a1-8d54-e36904a7a8cd
+//# sourceMappingURL=0zztxcil-2uuv.js.map

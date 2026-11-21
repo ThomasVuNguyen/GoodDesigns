@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="a41ac3f4-49cf-184d-2d7e-216e51df261e")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,805229,o=>{"use strict";var e=o.i(968946);let C=(0,o.i(801373).defineIcon)({className:"googleLogo",viewBox:"0 0 14 14",svg:(0,e.jsx)("path",{d:"M6.8 5.985V8.4H10.633C10.467 9.415 9.467 11.41 6.8 11.41C4.467 11.41 2.6 9.415 2.6 7C2.6 4.585 4.5 2.59 6.8 2.59C8.133 2.59 9 3.185 9.5 3.675L11.333 1.855C10.167 0.7 8.633 0 6.8 0C3.033 0 0 3.115 0 7C0 10.885 3.033 14 6.8 14C10.733 14 13.3 11.165 13.3 7.175C13.3 6.72 13.267 6.37 13.2 6.02H6.8V5.985V5.985Z"})});o.s(["GoogleLogo",0,C])}]);
+
+//# debugId=a41ac3f4-49cf-184d-2d7e-216e51df261e
+//# sourceMappingURL=0jr71kfy2nukv.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="ce922328-3121-6739-25bc-7f00cceb528e")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,92313,l=>{"use strict";var o=l.i(968946),c=l.i(707821);l.s(["ChessBishopIcon",0,function(l){return(0,o.jsx)(c.l,{...l,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M16.25 15.625V17.5H3.75v-1.875h3.016l-1.072-2.147a3.6 3.6 0 0 1-.378-1.603c0-.556.128-1.106.378-1.603l2.744-5.488a1.876 1.876 0 0 1 1.566-2.906c1.034 0 1.874.84 1.874 1.875 0 1.034-.778 1.81-1.762 1.869l-2.503 5.006h1.396l1.875-3.75h1.729l1.696 3.397a3.57 3.57 0 0 1 0 3.206l-1.071 2.147h3.015z",fill:"currentColor"})})}])}]);
+
+//# debugId=ce922328-3121-6739-25bc-7f00cceb528e
+//# sourceMappingURL=1i5f3t3nym133.js.map

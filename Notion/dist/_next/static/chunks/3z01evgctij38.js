@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="68cb52ab-a3f5-dfcc-28a0-ed6484397f10")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,887007,c=>{"use strict";var o=c.i(968946),l=c.i(707821);c.s(["GolfIcon",0,function(c){return(0,o.jsx)(l.l,{...c,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M10.625 11.272V8.125l5-2.5v-1.25l-5-2.5h-1.25v9.397c-4.256.21-6.875 2.55-6.875 6.228h15c0-3.678-2.619-6.022-6.875-6.228M10 15.625c-1.725 0-3.125-.7-3.125-1.562 0-.757 1.075-1.388 2.5-1.532v1.844h1.25v-1.844c1.425.144 2.5.775 2.5 1.531 0 .863-1.4 1.563-3.125 1.563",fill:"currentColor"})})}])}]);
+
+//# debugId=68cb52ab-a3f5-dfcc-28a0-ed6484397f10
+//# sourceMappingURL=063u8xvd82o9q.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="da86c2df-4311-fa7e-2610-ed8d8deaffd1")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,301216,c=>{"use strict";var h=c.i(968946),o=c.i(707821);c.s(["HandbagIcon",0,function(c){return(0,h.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,h.jsx)("path",{d:"M15 6.875h-1.25V5c0-1.544-.956-2.5-2.5-2.5h-2.5c-1.544 0-2.5.956-2.5 2.5v1.875H5s-2.5 2.5-2.5 10h15c0-7.5-2.5-10-2.5-10M8.125 5c0-.51.116-.625.625-.625h2.5c.51 0 .625.116.625.625v1.875h-3.75zm5.625 8.125h-7.5v-1.25h7.5z",fill:"currentColor"})})}])}]);
+
+//# debugId=da86c2df-4311-fa7e-2610-ed8d8deaffd1
+//# sourceMappingURL=1xo9nj9atcab5.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="dcd60e1b-025b-d534-b57c-6447551f76e3")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,628196,c=>{"use strict";var l=c.i(968946),o=c.i(707821);c.s(["WrenchIcon",0,function(c){return(0,l.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,l.jsx)("path",{d:"M17.5 7.5a5 5 0 0 1-6.953 4.603l-4.781 4.781c-.82.82-1.835.82-2.653 0-.82-.818-.82-1.834 0-2.653l4.78-4.781a5 5 0 0 1 4.603-6.953c.432 0 .85.06 1.25.165v.935l-2.5 2.5.56 2.09 2.09.56 2.5-2.5h.935c.103.4.166.819.166 1.25z",fill:"currentColor"})})}])}]);
+
+//# debugId=dcd60e1b-025b-d534-b57c-6447551f76e3
+//# sourceMappingURL=24y6om211renp.js.map

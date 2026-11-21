@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="17adee78-65fe-0cea-dff9-81f06cae928e")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,742507,r=>{"use strict";var o=r.i(968946),t=r.i(707821);r.s(["LaundryWasherIcon",0,function(r){return(0,o.jsx)(t.l,{...r,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M6.875 11.25h6.25a3.126 3.126 0 0 1-6.25 0M16.25 2.5v15H3.75v-15zm-1.875 8.75a4.376 4.376 0 1 0-8.752.002 4.376 4.376 0 0 0 8.752-.002m0-5.937a.936.936 0 0 0-.937-.938.936.936 0 0 0-.938.938c0 .518.419.937.938.937a.936.936 0 0 0 .937-.937",fill:"currentColor"})})}])}]);
+
+//# debugId=17adee78-65fe-0cea-dff9-81f06cae928e
+//# sourceMappingURL=2lzguvc3vzphg.js.map

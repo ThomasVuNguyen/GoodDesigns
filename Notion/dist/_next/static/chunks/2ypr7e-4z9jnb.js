@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="b24e0fb2-d9d2-6c6f-5a75-8fd5178e43eb")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,33277,t=>{"use strict";var i=t.i(968946),o=t.i(707821);t.s(["ChartPieIcon",0,function(t){return(0,i.jsx)(o.l,{...t,viewBox:"0 0 20 20",children:(0,i.jsx)("path",{d:"M17.472 9.375h-6.847V2.528a7.496 7.496 0 0 1 6.847 6.847M9.375 2.528A7.5 7.5 0 0 0 10 17.5a7.46 7.46 0 0 0 4.84-1.775l-5.465-5.466zm6.35 12.313a7.45 7.45 0 0 0 1.747-4.216h-5.963z",fill:"currentColor"})})}])}]);
+
+//# debugId=b24e0fb2-d9d2-6c6f-5a75-8fd5178e43eb
+//# sourceMappingURL=13zjp-iguvrr8.js.map

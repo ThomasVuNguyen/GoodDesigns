@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="edf473ec-5ea8-1f7c-d081-5a7d4314f513")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,146286,c=>{"use strict";var i=c.i(968946),t=c.i(707821);c.s(["KnifeKitchenIcon",0,function(c){return(0,i.jsx)(t.l,{...c,viewBox:"0 0 20 20",children:(0,i.jsx)("path",{d:"m18.125 5.153-1.303 1.303c-.278.278-.59.419-.903.419q-.471 0-.885-.4l-2.868 2.869 2.209 2.21-1.96 1.958c-2.5 2.5-4.602 3.988-7.102 3.988-1.194 0-2.5-.466-3.438-1.403L15.472 2.5z",fill:"currentColor"})})}])}]);
+
+//# debugId=edf473ec-5ea8-1f7c-d081-5a7d4314f513
+//# sourceMappingURL=39c3g1d0fp7ac.js.map

@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="3f1e4470-921c-ac53-e25a-496d2e9205fb")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,298183,c=>{"use strict";var t=c.i(968946),h=c.i(707821);c.s(["BeltIcon",0,function(c){return(0,t.jsx)(h.l,{...c,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M.625 13.125H6.25v-6.25H.625zm2.813-4.062a.936.936 0 1 1 0 1.875A.936.936 0 0 1 2.5 10c0-.519.419-.937.938-.937m7.187 5.312h5.625v1.875h-5.625c-1.928 0-3.125-1.197-3.125-3.125v-6.25c0-1.928 1.197-3.125 3.125-3.125h5.625v1.875h-5.625c-.772 0-1.25.478-1.25 1.25v6.25c0 .772.478 1.25 1.25 1.25m7.813-7.5h-7.813v2.5H12.5v1.25h-1.875v2.5h7.813L20 10zm-3.125 4.063a.936.936 0 0 1-.938-.938c0-.519.419-.937.938-.937s.937.418.937.937a.936.936 0 0 1-.937.938",fill:"currentColor"})})}])}]);
+
+//# debugId=3f1e4470-921c-ac53-e25a-496d2e9205fb
+//# sourceMappingURL=2b-ma16d22qyj.js.map

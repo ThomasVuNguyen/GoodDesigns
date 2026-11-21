@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="f249a9af-9f52-2294-462e-1843b5a50e0c")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,260156,c=>{"use strict";var o=c.i(968946),r=c.i(707821);c.s(["StrollerIcon",0,function(c){return(0,o.jsx)(r.l,{...c,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M17.5 15.625c0 1.034-.84 1.875-1.875 1.875a1.876 1.876 0 0 1-1.875-1.875c0-.816.522-1.51 1.25-1.766v-.734H8.125v.734A1.873 1.873 0 0 1 7.5 17.5a1.876 1.876 0 0 1-1.875-1.875c0-.816.522-1.51 1.25-1.766v-.968L5.456 4.375H2.5V2.5h3.34c.741 0 1.244.21 1.77.731l7.909 7.91c.525.525.731 1.028.731 1.768v.95c.728.257 1.25.95 1.25 1.766",fill:"currentColor"})})}])}]);
+
+//# debugId=f249a9af-9f52-2294-462e-1843b5a50e0c
+//# sourceMappingURL=3wlg43wtd83cp.js.map

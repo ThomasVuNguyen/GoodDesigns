@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="073598d8-e816-b212-683c-2a1c5f8d86f4")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,246019,c=>{"use strict";var i=c.i(968946),l=c.i(707821);c.s(["WifiIcon",0,function(c){return(0,i.jsx)(l.l,{...c,viewBox:"0 0 20 20",children:(0,i.jsx)("path",{d:"M10 12.5c1 0 1.906.406 2.563 1.063L10 16.125l-2.562-2.562A3.6 3.6 0 0 1 10 12.5m-5.656-2.031 1.768 1.769A5.48 5.48 0 0 1 10 10.628c1.519 0 2.894.616 3.887 1.61l1.77-1.77A7.98 7.98 0 0 0 10 8.126c-2.21 0-4.21.897-5.656 2.344M10 3.75c-3.416 0-6.51 1.384-8.75 3.625l1.769 1.769A9.84 9.84 0 0 1 10 6.254a9.85 9.85 0 0 1 6.981 2.89l1.769-1.769A12.34 12.34 0 0 0 10 3.75",fill:"currentColor"})})}])}]);
+
+//# debugId=073598d8-e816-b212-683c-2a1c5f8d86f4
+//# sourceMappingURL=028na3sft-br4.js.map

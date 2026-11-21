@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="e89e329d-3047-e47b-d62d-7ecdb77e89b3")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,478455,t=>{"use strict";var i=t.i(968946),l=t.i(707821);t.s(["StarOfLifeIcon",0,function(t){return(0,i.jsx)(l.l,{...t,viewBox:"0 0 20 20",children:(0,i.jsx)("path",{d:"m13.75 10 3.681 2.125-1.875 3.247-3.681-2.125V17.5h-3.75v-4.253l-3.681 2.125-1.875-3.247L6.25 10 2.569 7.875l1.875-3.247 3.681 2.125V2.5h3.75v4.253l3.681-2.125 1.875 3.247z",fill:"currentColor"})})}])}]);
+
+//# debugId=e89e329d-3047-e47b-d62d-7ecdb77e89b3
+//# sourceMappingURL=0e3lk24f_tyzn.js.map

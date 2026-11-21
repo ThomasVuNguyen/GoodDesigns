@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="001a8e9a-acc9-16ce-d67a-49b4bf361b97")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,355708,c=>{"use strict";var l=c.i(968946),o=c.i(707821);c.s(["BoardingPassIcon",0,function(c){return(0,l.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,l.jsx)("path",{d:"M15.625 4.375H13.75V6.25H12.5V4.375H4.375c-1.544 0-2.5.956-2.5 2.5v6.25c0 1.544.956 2.5 2.5 2.5H12.5V13.75h1.25v1.875h1.875c1.544 0 2.5-.956 2.5-2.5v-6.25c0-1.544-.956-2.5-2.5-2.5m-4.062 7.188-3.126-.782V12.5l1.25.625v.938L7.5 13.516l-2.187.547v-.938l1.25-.625v-1.719l-3.125.781v-1.25L6.563 8.75V7.5c0-1.06.359-1.562.937-1.562s.938.503.938 1.562v1.25l3.124 1.563z",fill:"currentColor"})})}])}]);
+
+//# debugId=001a8e9a-acc9-16ce-d67a-49b4bf361b97
+//# sourceMappingURL=2xy7upv1vbil6.js.map

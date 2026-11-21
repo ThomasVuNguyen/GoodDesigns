@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="71b9b33e-84a4-1d7f-fa05-2175ca57034f")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,962641,e=>{"use strict";var l=e.i(968946),o=e.i(707821);e.s(["NewBadgeIcon",0,function(e){return(0,l.jsx)(o.l,{...e,viewBox:"0 0 20 20",children:(0,l.jsx)("path",{d:"m16.653 11.784.653 2.435-2.434.653-.653 2.434-2.435-.653L10 18.438l-1.784-1.785-2.435.653-.653-2.434-2.434-.653.653-2.435L1.563 10l1.784-1.784-.653-2.435 2.434-.653.653-2.434 2.435.653L10 1.563l1.784 1.784 2.435-.653.653 2.434 2.434.653-.653 2.435L18.438 10z",fill:"currentColor"})})}])}]);
+
+//# debugId=71b9b33e-84a4-1d7f-fa05-2175ca57034f
+//# sourceMappingURL=1ntud21iyvkug.js.map

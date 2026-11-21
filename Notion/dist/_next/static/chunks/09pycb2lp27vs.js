@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="f6b175ed-d03e-7af6-7440-77b1dd9dd4a4")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,92258,l=>{"use strict";var h=l.i(968946),o=l.i(707821);l.s(["GradebookIcon",0,function(l){return(0,h.jsx)(o.l,{...l,viewBox:"0 0 20 20",children:(0,h.jsx)("path",{d:"M15 5.625v10H7.025l-1.25-1.25h7.975V2.5H3.125v10.84c0 .741.21 1.244.731 1.77l1.66 1.659c.525.525 1.028.731 1.768.731h9.591V5.625zM8.75 6.719h1.094V5.625h.937v1.094h1.094v.937h-1.094V8.75h-.937V7.656H8.75zM4.688 8.75 5.938 5h1.25l1.25 3.75H7.45l-.197-.625H5.875l-.197.625zm2.318-1.406h-.884l.444-1.403.443 1.403z",fill:"currentColor"})})}])}]);
+
+//# debugId=f6b175ed-d03e-7af6-7440-77b1dd9dd4a4
+//# sourceMappingURL=2-5kqmlvjmcrw.js.map

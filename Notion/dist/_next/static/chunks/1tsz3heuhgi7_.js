@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="1686e8ae-7dfe-4a9d-7252-91dabf5ada57")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,888608,c=>{"use strict";var l=c.i(968946),o=c.i(707821);c.s(["FontIcon",0,function(c){return(0,l.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,l.jsx)("path",{d:"M4.963 4.447H7.7l3.832 11.107H9.55l-.863-2.5h-4.71l-.862 2.5H1.13zm-.34 6.732H8.04L6.363 6.321H6.3zM16.995 9.08l.195-.467h1.68v6.94h-1.68l-.195-.796.004-.008a2.9 2.9 0 0 1-2.036.804c-1.825 0-3.28-1.513-3.28-3.635s1.455-3.635 3.28-3.635c.8 0 1.497.29 2.032.796m-3.438 2.835c0 1.145.715 1.96 1.719 1.96s1.719-.816 1.719-1.96-.715-1.96-1.72-1.96c-1.003 0-1.718.815-1.718 1.96",fill:"currentColor"})})}])}]);
+
+//# debugId=1686e8ae-7dfe-4a9d-7252-91dabf5ada57
+//# sourceMappingURL=0fgsd-cghi9u3.js.map

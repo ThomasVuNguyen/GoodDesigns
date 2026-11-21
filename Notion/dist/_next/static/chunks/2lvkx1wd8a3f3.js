@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="bc41ae63-108f-e331-f95e-f982dc61d292")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,620329,l=>{"use strict";var s=l.i(968946),c=l.i(707821);l.s(["GlassesIcon",0,function(l){return(0,s.jsx)(c.l,{...l,viewBox:"0 0 20 20",children:(0,s.jsx)("path",{d:"M.625 7.188v1.875h1.25l.353 2.121c.31 1.857 1.516 2.879 3.397 2.879s3.088-1.022 3.397-2.879l.25-1.506c.066-.397.325-.616.728-.616s.662.22.728.616l.25 1.506c.31 1.857 1.516 2.879 3.397 2.879s3.087-1.022 3.397-2.879l.353-2.121h1.25V7.187zm6.547 3.69c-.16.956-.578 1.31-1.547 1.31s-1.388-.357-1.547-1.31l-.303-1.815h3.697l-.303 1.815zm8.75 0c-.16.956-.578 1.31-1.547 1.31s-1.387-.357-1.547-1.31l-.303-1.815h3.697l-.303 1.815z",fill:"currentColor"})})}])}]);
+
+//# debugId=bc41ae63-108f-e331-f95e-f982dc61d292
+//# sourceMappingURL=2pkitggb6a4d_.js.map

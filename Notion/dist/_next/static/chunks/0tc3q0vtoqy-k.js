@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="a6b2788e-0456-83d9-f748-66437c7fce81")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,263369,c=>{"use strict";var t=c.i(968946),h=c.i(707821);c.s(["BatteryChargingIcon",0,function(c){return(0,t.jsx)(h.l,{...c,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M20 9.375v1.25c0 .772-.478 1.25-1.25 1.25h-.625v-3.75h.625c.772 0 1.25.478 1.25 1.25M16.875 7.5v5c0 1.537-.963 2.5-2.5 2.5H3.75c-1.537 0-2.5-.963-2.5-2.5v-5c0-1.537.962-2.5 2.5-2.5h10.625c1.537 0 2.5.963 2.5 2.5m-4.687 1.875h-2.5V6.25h-1.25L5.938 10v.625h2.5v3.125h1.25l2.5-3.75z",fill:"currentColor"})})}])}]);
+
+//# debugId=a6b2788e-0456-83d9-f748-66437c7fce81
+//# sourceMappingURL=0aih6mcolv13r.js.map

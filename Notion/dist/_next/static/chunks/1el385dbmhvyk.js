@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="d5ec8c97-0fa5-a506-6a11-16c206e902a5")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,37078,c=>{"use strict";var o=c.i(968946),i=c.i(707821);c.s(["MicroscopeIcon",0,function(c){return(0,o.jsx)(i.l,{...c,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"m16.04 10.047-1.68 3.362 1 2c.193.388.262.685.262 1.12v.971H3.125v-1.875h7.5v-1.25H5V12.5h7.019l1.553-3.106-2.184-1.09-1.163 2.321-3.353-1.678L10.094 2.5l.837.419.835-1.669 1.678.837-.835 1.67.838.418-.944 1.888 2.647 1.321a1.97 1.97 0 0 1 1.094 1.772c0 .306-.072.613-.21.885z",fill:"currentColor"})})}])}]);
+
+//# debugId=d5ec8c97-0fa5-a506-6a11-16c206e902a5
+//# sourceMappingURL=115gkweluryx4.js.map

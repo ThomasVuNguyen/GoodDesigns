@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="813e4d02-a066-5a29-d8e5-684014afa789")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,487662,o=>{"use strict";var t=o.i(968946),c=o.i(707821);o.s(["RobotIcon",0,function(o){return(0,t.jsx)(c.l,{...o,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M16.25 8.125V6.25c0-1.544-.956-2.5-2.5-2.5h-2.812V.625H9.062V3.75H6.25c-1.544 0-2.5.956-2.5 2.5v1.875H1.875v5H3.75v3.75h12.5v-3.75h1.875v-5zm-9.375-1.25a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5m6.25 6.875h-6.25a1.25 1.25 0 1 1 0-2.5h6.25a1.25 1.25 0 1 1 0 2.5m0-4.375a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5",fill:"currentColor"})})}])}]);
+
+//# debugId=813e4d02-a066-5a29-d8e5-684014afa789
+//# sourceMappingURL=3hh-l1xeehp-6.js.map

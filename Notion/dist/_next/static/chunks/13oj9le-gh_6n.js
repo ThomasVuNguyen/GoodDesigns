@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="ab7bfd71-8586-9d39-2c08-71c1ae08ccea")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,7872,t=>{"use strict";var e=t.i(968946);t.i(171118);var i=t.i(554864);t.i(553768);var s=t.i(3413);t.s(["CalendarIntegratedWorkspace",0,function(){return(0,e.jsxs)(s.f,{type:"section",children:[(0,e.jsx)(i.f,{type:"block",position:{x:127,y:41},sm:{x:380,y:35}}),(0,e.jsx)(i.f,{type:"bullets",position:{x:309,y:283},sm:{x:1082,y:225}})]})}])}]);
+
+//# debugId=ab7bfd71-8586-9d39-2c08-71c1ae08ccea
+//# sourceMappingURL=3z4fuj8pzl9rn.js.map

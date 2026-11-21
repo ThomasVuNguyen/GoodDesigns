@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not cloned · GoodDesigns</title>
+  <meta name="robots" content="noindex">
+  <!-- Firebase Hosting serves this for any missing path. Inside a site (/sites/<slug>/...) it is a page the clone does
+       not include: it offers Back and the same page on the original site. -->
+  <style>
+    :root { --bg: #f2efe8; --ink: #151412; --muted: #6f6a60; --line: #d9d4c8; --card: #faf8f3; --accent: #e4572e;
+      --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body { display: grid; place-items: center; padding: 24px 16px; background: var(--bg); color: var(--ink); font: 15px/1.5 var(--sans); }
+    main { max-width: 460px; text-align: center; }
+    h1 { margin: 0 0 12px; font: 400 clamp(36px, 8vw, 52px)/1 var(--serif); letter-spacing: -0.02em; }
+    h1 em { color: var(--accent); }
+    p { margin: 0 0 28px; color: var(--muted); font-size: 16px; overflow-wrap: anywhere; }
+    code { font: 13px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; color: var(--ink); }
+    nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+    a, button { display: inline-flex; align-items: center; height: 40px; padding: 0 18px; border-radius: 999px; border: 1px solid rgba(21, 20, 18, 0.12); background: var(--card); color: var(--ink); font: 500 14px/1 var(--sans); text-decoration: none; cursor: pointer; }
+    a.primary { background: var(--ink); color: var(--bg); }
+    a:hover, button:hover { color: var(--accent); }
+    a.primary:hover { background: var(--accent); color: #fff; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Not <em>cloned</em></h1>
+    <p id="msg">This page isn’t part of GoodDesigns.</p>
+    <nav>
+      <button type="button" id="back" hidden>Back</button>
+      <a class="primary" id="original" target="_blank" rel="noopener" hidden>Open the original ↗</a>
+      <a id="home" href="/" target="_top">GoodDesigns</a>
+    </nav>
+  </main>
+  <script>
+    (async () => {
+      const m = location.pathname.match(/^\/sites\/([^/]+)(\/.*)?$/);
+      const back = document.getElementById('back');
+      if (history.length > 1) {
+        back.hidden = false;
+        back.addEventListener('click', () => history.back());
+      }
+      if (!m) return;
+      const [, slug, rest = '/'] = m;
+      try {
+        const { sites } = await (await fetch('/sites.json')).json();
+        const site = sites.find((s) => s.slug === slug);
+        if (!site) return;
+        document.getElementById('msg').innerHTML = `The ${site.name.replace(/[&<>]/g, '')} clone doesn’t include <code></code>.`;
+        document.querySelector('#msg code').textContent = rest;
+        if (/^https?:\/\//.test(site.reference)) {
+          const original = document.getElementById('original');
+          original.href = new URL(rest.replace(/^\//, '') + location.search, new URL('/', site.reference)).href;
+          original.hidden = false;
+        }
+      } catch (e) { /* the plain message stands */ }
+    })();
+  </script>
+</body>
+</html>

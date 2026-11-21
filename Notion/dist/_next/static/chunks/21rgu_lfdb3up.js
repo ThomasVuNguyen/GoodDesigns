@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="3289cfb7-fc15-08c3-05d8-9f9b65756b17")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,801993,c=>{"use strict";var r=c.i(968946),h=c.i(707821);c.s(["FireTruckIcon",0,function(c){return(0,r.jsx)(h.l,{...c,viewBox:"0 0 20 20",children:(0,r.jsx)("path",{d:"M17.5 6.25h-1.875V5h-2.5v1.25H11.25V7.5h-2.5V6.25H10V5H1.25v1.25H2.5V7.5H1.25v6.875h1.875V15c0 1.034.84 1.875 1.875 1.875 1.034 0 1.875-.84 1.875-1.875v-.625h6.25V15c0 1.034.84 1.875 1.875 1.875 1.034 0 1.875-.84 1.875-1.875v-.625h1.875V11.25zm-11.25 0H7.5V7.5H6.25zm-2.5 0H5V7.5H3.75zM10 10.625H2.5v-1.25H10zm3.125 0v-2.5h2.913l.625 2.5z",fill:"currentColor"})})}])}]);
+
+//# debugId=3289cfb7-fc15-08c3-05d8-9f9b65756b17
+//# sourceMappingURL=3nbj_-gp42k2k.js.map

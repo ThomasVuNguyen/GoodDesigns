@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="df044d7e-9f9f-6ec9-2e8e-50cea2d64050")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,922789,c=>{"use strict";var t=c.i(968946),e=c.i(707821);c.s(["BeerBottleIcon",0,function(c){return(0,t.jsx)(e.l,{...c,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"m7.316 6.025-.363-2.9H7.5V1.25H3.75v1.875h.547l-.363 2.9C3.025 6.525 2.5 7.478 2.5 8.75v7.5c0 .772.478 1.25 1.25 1.25H7.5c.772 0 1.25-.478 1.25-1.25v-7.5c0-1.275-.525-2.225-1.434-2.725m-.441 7.725h-2.5V9.375h2.5zm9.063 0c0-1.875 2.187-2.5 2.187-6.875 0-2.5-1.25-4.375-1.25-4.375H11.25S10 4.375 10 6.875c0 4.375 2.188 5 2.188 6.875 0 1.25-1.25 1.875-1.25 1.875V17.5h6.25v-1.875s-1.25-.625-1.25-1.875m-3.541-9.375h3.334c.25.606.522 1.497.522 2.5h-4.375c0-1.003.269-1.89.522-2.5z",fill:"currentColor"})})}])}]);
+
+//# debugId=df044d7e-9f9f-6ec9-2e8e-50cea2d64050
+//# sourceMappingURL=3-dh8_av8q509.js.map

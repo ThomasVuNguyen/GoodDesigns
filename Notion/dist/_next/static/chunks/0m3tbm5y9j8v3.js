@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="ae8dd486-50b7-07a7-165d-8e8c49c785ab")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,839707,h=>{"use strict";var t=h.i(968946),v=h.i(707821);h.s(["KeyboardAlternateIcon",0,function(h){return(0,t.jsx)(v.l,{...h,viewBox:"0 0 20 20",children:(0,t.jsx)("path",{d:"M7.5 7.5H5V5h2.5zM11.25 5h-2.5v2.5h2.5zm3.125 6.25h2.5v-2.5h-2.5zM15 5h-2.5v2.5H15zm-4.375 6.25h2.5v-2.5h-2.5zm-3.75 0h2.5v-2.5h-2.5zM16.25 15h2.5v-2.5h-2.5zm0-10v2.5h2.5V5zM5 15h10v-2.5H5zm-1.875-3.75h2.5v-2.5h-2.5zM1.25 15h2.5v-2.5h-2.5zM3.766 5h-2.5v2.5h2.5z",fill:"currentColor"})})}])}]);
+
+//# debugId=ae8dd486-50b7-07a7-165d-8e8c49c785ab
+//# sourceMappingURL=3yxqjosxzccs0.js.map

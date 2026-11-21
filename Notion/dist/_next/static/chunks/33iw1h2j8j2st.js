@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="5e8d95ac-cb7d-9252-eb81-758eab84c594")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,192623,c=>{"use strict";var e=c.i(968946),o=c.i(707821);c.s(["PhoneSpeakerIcon",0,function(c){return(0,e.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,e.jsx)("path",{d:"M10 3.75V1.875A8.125 8.125 0 0 1 18.125 10H16.25A6.25 6.25 0 0 0 10 3.75m1.25 10c-.447-.031-1.69-.44-3.125-1.875C6.691 10.441 6.281 9.197 6.25 8.75l2.5-2.5L5 2.5 3.384 4.116A3.02 3.02 0 0 0 2.5 6.25c0 5 6.25 11.25 11.25 11.25.8 0 1.569-.319 2.134-.884L17.5 15l-3.75-3.75zM13.125 10H15a5 5 0 0 0-5-5v1.875c1.725 0 3.125 1.4 3.125 3.125",fill:"currentColor"})})}])}]);
+
+//# debugId=5e8d95ac-cb7d-9252-eb81-758eab84c594
+//# sourceMappingURL=3mst3kr77-5cq.js.map

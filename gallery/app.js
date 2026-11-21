@@ -33,7 +33,8 @@
   // Several cards can share one folder, each opening a different route inside it
   // (buildspace's six pages). The first card for a folder is the one that gets built.
   const siteRoot = (s) => sites.find((x) => x.folder === s.folder) ?? s;
-  const siteUrl = (s) => `sites/${siteRoot(s).slug}${s.entry ?? '/'}`;
+  // `inner` is a path inside the site (#/granola/blog/series-c opens /sites/granola/blog/series-c).
+  const siteUrl = (s, inner) => `sites/${siteRoot(s).slug}${inner ?? s.entry ?? '/'}`;
   const PLATFORM = { youtube: 'YouTube', x: 'X', linkedin: 'LinkedIn', instagram: 'Instagram' };
   const ICON = {
     youtube: '<svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8ZM9.8 15.1V8.9l5.8 3.1-5.8 3.1Z"/></svg>',
@@ -384,10 +385,90 @@
     return $(`panel-${tab}`).offsetTop - parseFloat(style.marginBottom) - tabs.offsetHeight - parseFloat(style.top);
   }
 
-  function route() {
-    const [hash, query = ''] = location.hash.replace(/^#\/?/, '').split('?');
-    if (hash === 'videos') showVideoCategory(new URLSearchParams(query).get('category'));
+  // A site's hash can go on with a path inside it: #/<slug>/<path>. The path keeps its own ?query and #hash.
+  function find(raw) {
+    const [hash] = raw.split('?');
     const i = items.findIndex((x) => x.hash === hash);
+    if (i >= 0) return { i, inner: null };
+    const at = items.findIndex((x) => x.kind === 'site' && raw.startsWith(`${x.hash}/`));
+    return at >= 0 ? { i: at, inner: raw.slice(items[at].hash.length) } : { i: -1, inner: null };
+  }
+
+  // The page the frame shows, as a same-origin path, or null before it loads or once it has left this origin.
+  function framePath() {
+    try {
+      const l = frame.contentWindow.location;
+      return l.origin === location.origin ? l.pathname + l.search + l.hash : null;
+    } catch (e) { return null; }
+  }
+
+  // Inside a site, the address follows the frame: clicking through to a subpage, Back and Forward all rewrite the
+  // hash in place (replaceState: the frame's own navigation already made the history entry). Refreshing or sharing
+  // the address then opens the same page.
+  function syncFromFrame() {
+    const cur = items[current];
+    if (!cur || cur.kind !== 'site' || $('viewer').hidden) return;
+    const root = siteRoot(cur.item);
+    const base = `/sites/${root.slug}`;
+    const path = framePath();
+    if (!path || !(path === base || path.startsWith(`${base}/`) || path.startsWith(`${base}?`) || path.startsWith(`${base}#`))) return;
+    let inner = path.slice(base.length) || '/';
+    if (!inner.startsWith('/')) inner = `/${inner}`;
+    // A page that has a card of its own keeps that card's address (#/buildspace-faq, not #/buildspace/faq).
+    const card = (cur.item.entry ?? '/') === inner ? cur.item : sites.find((s) => s.folder === root.folder && (s.entry ?? '/') === inner);
+    const hash = card ? `#/${card.slug}` : `#/${root.slug}${inner}`;
+    if (location.hash !== hash) {
+      history.replaceState(history.state, '', hash);
+      current = items.findIndex((x) => x.kind === 'site' && x.item === (card ?? root));
+    }
+    const { item } = items[current];
+    let title = '';
+    try { title = frame.contentDocument.title.trim().replace(/ · GoodDesigns$/, ''); } catch (e) { /* cross-origin */ }
+    document.title = `${card || !title ? item.name : title} · GoodDesigns`;
+    $('back').setAttribute('aria-label', `Back to GoodDesigns from ${item.name}`);
+    $('v-src').href = srcUrl(item);
+  }
+
+  frame.addEventListener('load', () => {
+    let win;
+    try { win = frame.contentWindow; win.document; } catch (e) { return; }
+    if (!win || framePath() === null) return;
+    // Single-page clones move between views with pushState or the hash, without a load.
+    for (const m of ['pushState', 'replaceState']) {
+      const original = win.history[m];
+      win.history[m] = function (...args) {
+        const result = original.apply(this, args);
+        setTimeout(syncFromFrame);
+        // Routers update the page's <title> after the URL; take it again once they have.
+        setTimeout(syncFromFrame, 600);
+        return result;
+      };
+    }
+    win.addEventListener('hashchange', syncFromFrame);
+    win.addEventListener('popstate', () => setTimeout(syncFromFrame));
+    // Links that leave the clone open in a new tab, so the viewer keeps the clone.
+    win.document.addEventListener('click', (e) => {
+      const a = e.target.closest?.('a[href]');
+      if (!a || a.target || e.defaultPrevented) return;
+      let url;
+      try { url = new URL(a.href, win.location.href); } catch (err) { return; }
+      if (/^https?:$/.test(url.protocol) && url.origin !== location.origin) {
+        a.target = '_blank';
+        a.rel = 'noopener';
+      }
+    }, true);
+    // Keys pressed inside the clone still step between sites.
+    win.addEventListener('keydown', (e) => {
+      if (e.altKey && (e.key === 'ArrowLeft' || e.key === 'ArrowRight')) onKey(e);
+    });
+    syncFromFrame();
+  });
+
+  function route() {
+    const raw = location.hash.replace(/^#\/?/, '');
+    const [hash, query = ''] = raw.split('?');
+    if (hash === 'videos') showVideoCategory(new URLSearchParams(query).get('category'));
+    const { i, inner } = find(raw);
     const open = i >= 0;
     const wasOpen = $('gallery').hidden;
     const prev = tab;
@@ -446,8 +527,17 @@
       postView.innerHTML = '';
       frame.hidden = false;
       frame.title = kind === 'site' ? `${name} preview` : name;
-      const target = kind === 'site' ? siteUrl(item) : embedUrl(item);
-      if (frame.getAttribute('src') !== target) frame.src = target;
+      const target = kind === 'site' ? siteUrl(item, inner) : embedUrl(item);
+      const at = new URL(target, location.href);
+      const path = framePath();
+      if (kind === 'site' && path !== null && path === at.pathname + at.search + at.hash) {
+        syncFromFrame();
+      } else if (kind === 'site' && path !== null) {
+        // Moving within the same document's history would add an entry; replace the page instead.
+        frame.contentWindow.location.replace(at.href);
+      } else if (frame.getAttribute('src') !== target) {
+        frame.src = target;
+      }
     }
   }
   addEventListener('hashchange', route);
@@ -455,7 +545,7 @@
   new IntersectionObserver(([e]) => tabs.toggleAttribute('data-stuck', e.intersectionRatio < 1 && e.boundingClientRect.top < 40), {
     threshold: 1, rootMargin: '-17px 0px 0px 0px',
   }).observe(tabs);
-  addEventListener('keydown', (e) => {
+  function onKey(e) {
     if ($('viewer').hidden) return;
     const cur = items[current];
     if (!cur) return;
@@ -472,6 +562,7 @@
     // Motion references are only pictures, so the arrows alone step through them.
     if (e.key === 'ArrowLeft' && (e.altKey || kind === 'motion')) step(-1);
     if (e.key === 'ArrowRight' && (e.altKey || kind === 'motion')) step(1);
-  });
+  }
+  addEventListener('keydown', onKey);
   route();
 })();

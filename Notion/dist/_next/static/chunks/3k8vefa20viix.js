@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="40fc3a17-8ed2-8457-3a75-e5ec9120516f")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,931205,l=>{"use strict";var s=l.i(968946),c=l.i(707821);l.s(["SunglassesIcon",0,function(l){return(0,s.jsx)(c.l,{...l,viewBox:"0 0 20 20",children:(0,s.jsx)("path",{d:"M.625 7.188v1.875h1.25l.353 2.121c.31 1.857 1.516 2.879 3.397 2.879s3.088-1.022 3.397-2.879l.25-1.506c.066-.397.325-.616.728-.616s.662.22.728.616l.25 1.506c.31 1.857 1.516 2.879 3.397 2.879s3.087-1.022 3.397-2.879l.353-2.121h1.25V7.187zm4.975 5H4.35l1.563-3.126h1.25zm8.75 0H13.1l1.563-3.126h1.25z",fill:"currentColor"})})}])}]);
+
+//# debugId=40fc3a17-8ed2-8457-3a75-e5ec9120516f
+//# sourceMappingURL=2q20d72fcufjf.js.map

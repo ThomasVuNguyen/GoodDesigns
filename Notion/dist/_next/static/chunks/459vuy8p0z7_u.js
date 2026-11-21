@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="11d880c6-d1b0-83a3-d843-2a30a4ef99d6")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,402443,c=>{"use strict";var e=c.i(968946),o=c.i(707821);c.s(["CoffeeMakerIcon",0,function(c){return(0,e.jsx)(o.l,{...c,viewBox:"0 0 20 20",children:(0,e.jsx)("path",{d:"M7.5 15.625h8.75V17.5H2.5V5c0-1.544.956-2.5 2.5-2.5h10L16.25 5v1.25H7.5zm11.25-6.25v1.094c0 1.156-.719 1.875-1.875 1.875h-.625v.156c0 1.156-.719 1.875-1.875 1.875h-3.75c-1.156 0-1.875-.719-1.875-1.875v-5h8.125c1.156 0 1.875.719 1.875 1.875m-1.25 0c0-.469-.156-.625-.625-.625h-.625v2.344h.625c.469 0 .625-.156.625-.625z",fill:"currentColor"})})}])}]);
+
+//# debugId=11d880c6-d1b0-83a3-d843-2a30a4ef99d6
+//# sourceMappingURL=1vxlr38k08f4s.js.map

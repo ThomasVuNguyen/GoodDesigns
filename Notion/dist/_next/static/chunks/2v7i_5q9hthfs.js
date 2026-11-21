@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="4bc93d4e-fc58-856e-ac27-e578274d209e")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,491095,c=>{"use strict";var o=c.i(968946),i=c.i(707821);c.s(["MicrophoneIcon",0,function(c){return(0,o.jsx)(i.l,{...c,viewBox:"0 0 20 20",children:(0,o.jsx)("path",{d:"M10.938 14.313v1.312h2.812V17.5h-7.5v-1.875h2.813v-1.312c-2.916-.36-4.688-2.42-4.688-5.563H6.25c0 2.313 1.438 3.75 3.75 3.75s3.75-1.437 3.75-3.75h1.875c0 3.144-1.772 5.203-4.687 5.563M10 11.25c1.544 0 2.5-.956 2.5-2.5V4.375c0-1.544-.956-2.5-2.5-2.5s-2.5.956-2.5 2.5V8.75c0 1.544.956 2.5 2.5 2.5",fill:"currentColor"})})}])}]);
+
+//# debugId=4bc93d4e-fc58-856e-ac27-e578274d209e
+//# sourceMappingURL=1ryrc2h7elsrt.js.map

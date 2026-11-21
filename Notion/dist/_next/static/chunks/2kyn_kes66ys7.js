@@ -1,0 +1,5 @@
+;!function(){try { var e="undefined"!=typeof globalThis?globalThis:"undefined"!=typeof global?global:"undefined"!=typeof window?window:"undefined"!=typeof self?self:{},n=(new e.Error).stack;n&&((e._debugIds|| (e._debugIds={}))[n]="fde73a8d-56ab-3efb-9cc7-3b7bac64e6d5")}catch(e){}}();
+(globalThis.TURBOPACK||(globalThis.TURBOPACK=[])).push(["object"==typeof document?document.currentScript:void 0,86018,l=>{"use strict";var a=l.i(968946),t=l.i(707821);l.s(["MenstrualPadIcon",0,function(l){return(0,a.jsx)(t.l,{...l,viewBox:"0 0 20 20",children:(0,a.jsx)("path",{d:"M13.334 2.5a4.17 4.17 0 0 0-3.809 2.475l-.584 1.316L7.65 5 4.997 7.653l1.29 1.29-1.315.585a4.167 4.167 0 1 0 5.5 5.5l.584-1.315 1.29 1.29L15 12.35l-1.29-1.29 1.315-.585a4.167 4.167 0 0 0-1.69-7.975m.932 6.262-1.685.75a6.04 6.04 0 0 0-3.068 3.07l-.75 1.684a2.3 2.3 0 0 1-2.094 1.362 2.294 2.294 0 0 1-2.29-2.29c0-.907.534-1.729 1.362-2.094l1.684-.75a6.04 6.04 0 0 0 3.069-3.069l.75-1.684a2.3 2.3 0 0 1 2.094-1.363 2.294 2.294 0 0 1 2.29 2.29c0 .907-.534 1.729-1.362 2.094",fill:"currentColor"})})}])}]);
+
+//# debugId=fde73a8d-56ab-3efb-9cc7-3b7bac64e6d5
+//# sourceMappingURL=07j-_fm5sr7v3.js.map
