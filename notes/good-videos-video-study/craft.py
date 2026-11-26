@@ -6,7 +6,10 @@ Each film's craft notes live in `studies/<NN>-<slug>.json` under "craft". The se
 - a film map: parallel lanes (story, voices, sound, picture) laid against the running time, so you
   can see how the pieces stack up at any moment. Every segment seeks the player;
 - aspects: essays on only the crafts the film actually uses (story, voices, frames, world, screens,
-  sound, trust, attention, persuasion), each anchored to timestamped moments with the frame from that second;
+  sound, trust, attention, persuasion), each anchored to timestamped moments with the frame from that second.
+  An aspect may carry a "figure": {"svg": inline SVG markup, "caption": text, "text": [lines]}, a diagram such
+  as a floor plan of camera positions. The SVG is written into the page as is; "text" is its plain-text
+  version for craft.md;
 - patterns: techniques worth reusing, and a line on what the film does not lean on.
 
 The same content is written to `frames/<video>/craft.md` so an agent reading the folder gets it as text.
@@ -141,6 +144,7 @@ def section(name, item, craft):
         out.append(f'<article class="craft-aspect" id="c-{a["id"]}">'
                    f'<p class="craft-kicker">{html.escape(kicker) if kicker and kicker != title else ""}</p>'
                    f'<h3>{html.escape(title)}</h3><div class="craft-body">{body}</div>'
+                   + _figure(a.get("figure"))
                    + (f'<ol class="craft-moments">{moments}</ol>' if moments else '') + '</article>')
     patterns = craft.get("patterns", [])
     if patterns:
@@ -154,6 +158,13 @@ def section(name, item, craft):
         out.append(f'<p class="craft-absent"><strong>Not the lesson here.</strong> {html.escape(craft["absent"])}</p>')
     out.append('</section>')
     return "".join(out)
+
+
+def _figure(figure):
+    if not figure:
+        return ""
+    caption = f'<figcaption>{html.escape(figure["caption"])}</figcaption>' if figure.get("caption") else ""
+    return f'<figure class="craft-figure">{figure["svg"]}{caption}</figure>'
 
 
 def _paragraphs(text):
@@ -184,6 +195,9 @@ def markdown(name, item, craft):
         lines += [f"## {a.get('title') or ASPECTS.get(a['id'], a['id'])}", ""]
         for p in a["paragraphs"]:
             lines += [p, ""]
+        if a.get("figure"):
+            figure = a["figure"]
+            lines += [f"Diagram: {figure.get('caption', '')}", "", *[f"- {line}" for line in figure.get("text", [])], ""]
         for m in a.get("moments", []):
             lines.append(f"- {clock(m['t'])} `seconds/second-{min(item['second_frames'], int(m['t']) + 1):05d}.jpg` {m['text']}")
         if a.get("moments"):

@@ -1,0 +1,644 @@
+{
+  "note": "Cognition's 62-second film for Devin Bots, with Sage Cadence, a Stanford electrical engineering student who builds circuit boards and posts about them. It opens on an outtake, 'Also, where should I look?', and answers it with a cut to her looking straight down the lens; a laugh and a 'Sorry.' are kept too. Everything happens at one table covered from eight positions: across the table with test gear stacked on both sides like bookends, a three-quarter interview, table-level macros, a straight-down shot, the laptop screen at a raking angle, and one high wide from the corner of the room, held back until halfway and used four times. The interface enters in steps: her own videos in a window over a chat with her bots, then over her defocused bench, then a frosted chip like her own lower third, then the bots' name tags placed on the table, and the logo growing between her hands. The breakdown maps the camera positions on a plan of the room and samples 13 transitions as flip books.",
+  "frame_copy": [
+    "Shots and angles",
+    "One frame per shot idea, with where the camera sits, what is on the table, and how each cut hands off to the next."
+  ],
+  "transcript_kind": "Local speech recognition on the isolated voice stem, with 'Devon Bots' corrected to the product's spelling, Devin Bots. YouTube's English captions paraphrase her lines instead of transcribing them ('Here's how I created a heartbeat-shaped board' where she says, and her clip's caption reads, 'here's how I built a beating heart circuit board'), so they were not used. The lines from 0:10 to 0:15 are the audio of her own short videos",
+  "shot_notes": {
+    "0": "The opening wide, from across the table at eye level. Sage sits dead center against a sash window, framed by two stacks of vintage test gear like bookends: an analog power supply and a soldering station on the left, a scope under a bench meter on the right. Boards and a blue cutting mat fill the bottom third. Her first words are an outtake: 'Also, where should I look?'",
+    "2": "Cut to a profile close from her side. Her hair falls across the left of the frame while her ringed hand turns a knob on the scope, its one green trace lit. The lens is long and the focus is on the hand, so the first close-up is of her working, not talking.",
+    "3": "The answer to 'where should I look?': a medium close-up straight down the lens, window light behind her, the room soft. At bottom left a frosted glass chip reads 'Sage Cadence / Electrical Engineering Student @ Stanford'. Note its shape and place; the bots get the same chip later.",
+    "8": "'Sorry.' She breaks into a laugh mid-introduction, and the edit keeps it. The music that hit at 0:06.4 has just been cut dead under her.",
+    "10": "The film leaves the room for a flat graphic at 0:10.4. The background is a dark chat with her bots (a bot called Sawyer, short replies, a purple message 'it's in starjamlabs/'), and her own vertical videos play in a fixed 9:16 window in the middle. First clip: her with a board on her forehead, 'two months ago?'.",
+    "11": "Next clip in the same window: 'design circuit board', a pink star PCB in a layout tool.",
+    "12": "Next clip in the same window: 'here's how I built a beating heart circuit board', a red heart PCB held up to the camera over a Stanford sweatshirt. Behind it the chat has scrolled to another bot's thread.",
+    "13": "'electrical engineering projects / this is how to build': a clip from her channel in its own purple-lit style. The window never moves; only what plays inside it and the chat behind it change.",
+    "14": "Behind the window, in the chat's input box, someone is typing 'i have voice diary recordings (.wav format), can you build me a local app that saves these .wav files by date and...'. The same prompt is typed on the real laptop at 0:37 and sent at 0:39.",
+    "15": "The last clip, 'make your first circuit board with me'. Seven clips in five seconds, each cut on one of her phrases, and the prompt behind still typing.",
+    "16": "The window cuts at 0:15.5 to a 0.6-second shot straight down on the table (laptop, grid mat, striped rug), the one angle as flat as the graphic. Then this: a macro at table level, a gold soldering iron touching a tiny star board on the blue grid mat, a spool of solder soft behind. A second, higher macro follows at 0:16.8, a change the cut detector misses.",
+    "17": "Profile close, window behind: she clips a teal star into her hair. The board becomes a prop she wears for the rest of the film.",
+    "18": "Back to the opening angle across the table. She holds a star board up to the lens, laughing: 'So I have these two star-shaped circuit boards.'",
+    "19": "A close of her hands holding the grey star up, her face soft behind it. The attention moves from her to the object.",
+    "21": "The second graphic window, now over a defocused shot of her own bench (an orange multimeter, the laptop), not over the interface. A clip of her with a star board, captioned 'the constellations'.",
+    "22": "Inside the window, a teal star sticker covers her face, named 'cassiopeia', as she says 'The first lights up in the dark.'",
+    "23": "The pink 'lyra' star for 'The second is a portable voice diary.' At 0:23.15 the shot behind the window cuts to the laptop and mat while the window holds still: a cut in the back layer only.",
+    "25": "A yellow star with a question mark, 'mystery', for 'and the third is a secret.'",
+    "26": "The three-quarter interview. She sits at left of frame, windows behind, a trailing plant on the white wall, and looks just past the lens toward frame right. The teal star is in her hair.",
+    "27": "A low shot across the mat from table height: her hands solder a laptop motherboard, a grey tool soft and huge in the foreground.",
+    "29": "Over her shoulder, down to her hands and a red probe lead on the mat, the laptop behind. One of four short inserts from four places on the table in under three seconds; the iron on the star returns at 0:29.7 from yet another angle.",
+    "30": "The three-quarter interview again, for less than a second, between the inserts and the laptop.",
+    "31": "Over her shoulder to the laptop, the soldering iron's cable across the frame. At bottom left the first bot appears as a frosted chip, the same shape and place as her own lower third: 'Caesar / Build my hardware's software'. It faded up on the interview just before the cut and rides over it.",
+    "32": "The laptop screen at a raking angle, the keyboard in the foreground. The chip is still there.",
+    "34": "The high wide, the first time the film shows the whole room. She smears with motion while the room stays sharp: time compressed under 'Devin Bots really trims down the time to success.' The Caesar chip has stayed through four shots.",
+    "35": "Hands typing close, a green bubble in the chat: the last shot under the Caesar chip.",
+    "36": "The same high wide at normal speed. She looks up into the lens near the ceiling: 'Look, it's already done.' The high camera becomes someone in the room she can talk to.",
+    "38": "The screen close: the voice diary prompt from 0:14, now typed on the real laptop, 'make it look cute too :)'. Her ringed fingers blur at the bottom.",
+    "40": "The high wide again, as she spreads her hands over the table: 'Meet my Devin Bots.' Name chips pop onto the table around the scope stack, Jonas, then Caesar, then Sawyer, as if the bots had seats at it.",
+    "41": "Screen close: a magenta request, 'can you help me compare different microcontroller options for the lyra project?', and the answer under it (stay on the STM32G0 or swap to a cheaper part). A side panel opens next.",
+    "44": "Beside her at table height: hands typing, a laptop seen from the side, star boards on the mat in the foreground, the window soft behind.",
+    "46": "The three-quarter interview, a little tighter, for 'One is constantly researching for new components'.",
+    "48": "The screen again: a document titled with 'What the design needs' has grown in a side panel. Each bot she names gets a screen.",
+    "50": "Hands holding a red probe, the orange multimeter big and soft in the foreground, the laptop at right: 'while I'm actually building the thing.'",
+    "55": "The three-quarter interview, the longest of the four (3.4 s), for 'It allows me to try much more ambitious projects while learning'.",
+    "58": "Back to the high wide for the last line. A white dot appears between her open hands at 0:57.4 and grows into the Devin mark, three hexagonal cells.",
+    "60": "The wordmark has slid out from the mark, 'Devin' in white over the table, held to the end as the music fades."
+  },
+  "motion_intro": "Almost all the movement in this film is in the cutting, not in the camera. Most setups are locked off or barely drift, and a 62-second film has 32 shots across eight positions around one table, plus two graphic sequences. The moves worth studying are the hand-offs: from an outtake to a look down the lens, from the room into a flat window of her own videos and back out into the flattest camera angle, from a sticker star to the real star in her hair, and the interface's steady move into the room, from a full-screen chat to a chip over the footage to name tags placed on the table. The sequences below sample those changes.",
+  "motion": [
+    {
+      "id": "where-to-look",
+      "start": 0.0,
+      "end": 3.6,
+      "fps": 8,
+      "title": "'Where should I look?', then a look down the lens",
+      "tags": [
+        "outtake",
+        "front wide",
+        "profile",
+        "to the lens",
+        "lower third"
+      ],
+      "text": "The film opens mid-conversation on the wide across the table: Sage gestures and asks 'Also, where should I look?' At 1.29 it cuts to a profile close of her hand on the scope knob, so the question hangs over a shot where she is looking at her work. At 2.84 it answers itself: a medium close-up with her eyes straight into the lens, and 'My name is Sage Cadence' begins. The frosted lower third fades in from about 3.1."
+    },
+    {
+      "id": "sorry",
+      "start": 6.0,
+      "end": 11.4,
+      "fps": 4,
+      "title": "The music hits, she laughs, the music is cut",
+      "tags": [
+        "music hit",
+        "hard stop",
+        "kept blooper",
+        "hard cut to graphic"
+      ],
+      "text": "At 6.4 the music enters under 'who loves to build hardware'. At 7.9 it stops dead and she says 'Sorry.', laughing, then 'That I also share on the internet.' over room sound alone. She smiles straight into the lens, and at 10.43 the film cuts away from the room to a dark chat interface with her vertical video in the middle, the music slamming back at 11.0 with the first clip's line."
+    },
+    {
+      "id": "clip-window",
+      "start": 10.3,
+      "end": 15.7,
+      "fps": 6,
+      "title": "Seven of her videos in one fixed window",
+      "tags": [
+        "frame in frame",
+        "9:16 window",
+        "cut on phrase",
+        "screen behind"
+      ],
+      "text": "The window is a 9:16 frame dead center, and it never moves. Inside it, seven clips from her channel change about every 0.7 seconds, each on one of her own lines: 'Hi, friends', 'Here's how I built a beating heart circuit board', 'This is how to build an engineering project', 'Make your first circuit board with me'. Behind it a dark chat with her bots scrolls from one thread to another, and from 13.9 the chat's input box types out the voice diary prompt. Two layers of time run at once: her past videos on top, her bots working underneath."
+    },
+    {
+      "id": "window-to-table",
+      "start": 15.3,
+      "end": 18.6,
+      "fps": 8,
+      "title": "Out of the window, straight down onto the table",
+      "tags": [
+        "overhead",
+        "macro",
+        "missed cut",
+        "profile"
+      ],
+      "text": "At 15.52 the graphic gives way to the flattest angle a camera can take: straight down on the table, where the laptop, the striped rug, the grid mat and a coiled cable read as flat shapes much like the interface did. Then the scale drops: a table-level macro of the iron on a star board at 16.14, a higher macro with her fingertips at 16.77 (a change the cut detector misses), and at 17.31 a profile close as she clips a star into her hair."
+    },
+    {
+      "id": "star-names",
+      "start": 19.0,
+      "end": 26.3,
+      "fps": 4,
+      "title": "Sticker stars in a window, then the real one in her hair",
+      "tags": [
+        "frame in frame",
+        "defocused plate",
+        "sticker",
+        "back-layer cut"
+      ],
+      "text": "Her hands hold a grey star to the lens at 19.14, her face soft behind. At 20.98 the 9:16 window comes back, but now over a defocused shot of her own bench instead of the interface. Inside it a star sticker lands on her face for each board as she names it: teal 'cassiopeia' at 21.5, pink 'lyra' at 22.7, yellow 'mystery' at 24.7. At 23.15 only the background cuts, from the multimeter to the laptop and mat. At 25.73 the window is gone and she is back in the room, in three-quarter, with the real teal star in her hair."
+    },
+    {
+      "id": "bench-inserts",
+      "start": 26.8,
+      "end": 31.4,
+      "fps": 6,
+      "title": "Four inserts from four places on the table",
+      "tags": [
+        "inserts",
+        "table level",
+        "missed cut",
+        "match on action"
+      ],
+      "text": "Under 'the process of building a circuit board like this would take a long time because I have to build it and then check it', four short inserts: a low shot across the mat to the motherboard at 26.98, hands with tweezers at about 28.4, over her shoulder to the probes at 29.03, and the iron on the star at 29.66. Each is under a second and a half, and each sees the table from a different height. The three-quarter interview returns at 30.41."
+    },
+    {
+      "id": "caesar-chip",
+      "start": 30.9,
+      "end": 34.3,
+      "fps": 6,
+      "title": "One chip held across the cuts",
+      "tags": [
+        "overlay",
+        "held across cuts",
+        "lower third",
+        "message bubble"
+      ],
+      "text": "At 31.0, still on the interview, a frosted chip fades up at bottom left, 'Caesar / Build my hardware's software', in the place and style of her own lower third. It stays fixed through the cuts to over the shoulder at 31.24 and to the laptop screen at 32.20, where a magenta message bubble slides in at about 34.0. The angles change but the task does not."
+    },
+    {
+      "id": "time-lapse",
+      "trail": true,
+      "start": 34.3,
+      "end": 35.05,
+      "fps": 12,
+      "title": "The room holds still while she smears",
+      "tags": [
+        "high wide",
+        "time-lapse",
+        "frame blend",
+        "locked off"
+      ],
+      "text": "The first view of the whole room, from high in the corner, arrives on 'Devin Bots really trims down the time to success'. The camera is locked and the room is sharp, but she moves in ghosted smears, turning and reaching as if minutes pass in a second. The Caesar chip stays in its corner."
+    },
+    {
+      "id": "look-up",
+      "start": 35.2,
+      "end": 37.0,
+      "fps": 8,
+      "title": "'Look, it's already done'",
+      "tags": [
+        "insert",
+        "to the high camera",
+        "sync sound"
+      ],
+      "text": "Hands typing close at 35.24, a green bubble in the chat; then at 35.83 the high wide again at normal speed, and she tips her head back and looks straight up into the lens near the ceiling as she says 'Look, it's already done.' The overview shot becomes a person she can address."
+    },
+    {
+      "id": "prompt-send",
+      "start": 36.9,
+      "end": 40.1,
+      "fps": 4,
+      "title": "The prompt from 0:14, typed for real and sent",
+      "tags": [
+        "screen",
+        "rack focus",
+        "callback"
+      ],
+      "text": "A raking close of the laptop screen. The prompt that was typing behind her clips at 0:14 is here in full: 'i have voice diary recordings (.wav format). can you build me a local app that saves these .wav files by date and transcribes them into actual diary entries? make it look cute too :)'. Her fingers pass soft in the foreground, and at about 39.4 the message is sent and drops into a brown bubble."
+    },
+    {
+      "id": "meet-bots",
+      "start": 39.8,
+      "end": 41.4,
+      "fps": 12,
+      "title": "Name tags placed on the table",
+      "tags": [
+        "high wide",
+        "labels in space",
+        "stagger"
+      ],
+      "text": "On 'Meet my Devin Bots' she spreads her hands over the table, and three name chips pop in one after another, about 0.2 seconds apart: Jonas at 40.2 by the scope, Caesar at 40.4 below it, Sawyer at 40.6 near the laptop. They sit on the table's surface among the gear, the interface finally placed in the room."
+    },
+    {
+      "id": "angle-rotation",
+      "start": 41.3,
+      "end": 57.3,
+      "fps": 2,
+      "title": "One bot per line, four angles in rotation",
+      "tags": [
+        "cutting pattern",
+        "screen",
+        "typing",
+        "interview"
+      ],
+      "text": "For the last sixteen seconds the film cycles a few set-ups: the screen at 41.33 (the research bot comparing microcontrollers), typing from the side at 43.71, the three-quarter interview at 45.75, the screen at 47.51 (a design document growing), the hands and probe at 49.30, typing at 50.55, the interview at 53.89. Each of her three 'one is... another one... another one' lines gets a screen or her hands, and the shots grow longer toward the end, 3.3 and 3.4 seconds."
+    },
+    {
+      "id": "logo",
+      "start": 57.2,
+      "end": 62.0,
+      "fps": 6,
+      "title": "The logo grows between her hands",
+      "tags": [
+        "high wide",
+        "logo build",
+        "end card in scene"
+      ],
+      "text": "The high wide returns for 'It's kind of like having a little engineering team of my own', its longest use at 4.8 seconds. At 57.4 a white dot appears between her open hands, swells into a hexagon, then into the Devin mark's three cells by 58.3. At about 59.0 the wordmark 'Devin' slides out of it, and it holds over the room as the music fades. There is no separate end card: the logo sits on the table where the bots' name tags were."
+    }
+  ],
+  "craft": {
+    "lede": [
+      "A 62-second Cognition film for Devin Bots, built around Sage Cadence, a Stanford electrical engineering student who makes circuit boards and posts about them. It is set in one room at one table, covered from eight camera positions, with two graphic sequences made from her own short videos. She explains what the bots do in her own words: one researches parts, one writes firmware, one checks her work.",
+      "It is worth studying for its coverage and for how it moves between camera footage and interface. A cluttered bench is dressed so that every angle has a foreground, and one high wide from the corner works as the map you return to. The interface comes into the film in steps: first a flat window of her videos over a chat, then a chip over the footage, then name tags placed on the table, then the logo growing between her hands."
+    ],
+    "map": {
+      "lanes": [
+        {
+          "id": "story",
+          "segments": [
+            {
+              "start": 0,
+              "end": 2.84,
+              "label": "Where should I look?",
+              "note": "An outtake as the cold open."
+            },
+            {
+              "start": 2.84,
+              "end": 10.43,
+              "label": "Who she is",
+              "note": "Name, school, 'Sorry.', and that she shares it online."
+            },
+            {
+              "start": 10.43,
+              "end": 15.52,
+              "label": "Her channel",
+              "note": "Seven of her own videos in five seconds."
+            },
+            {
+              "start": 15.52,
+              "end": 25.73,
+              "label": "Three stars",
+              "note": "Two star boards and a secret third."
+            },
+            {
+              "start": 25.73,
+              "end": 35.83,
+              "label": "Before and after",
+              "note": "Build, then check; the bots trim the time."
+            },
+            {
+              "start": 35.83,
+              "end": 41.33,
+              "label": "Meet the bots",
+              "note": "'Look, it's already done.' Three name tags on the table."
+            },
+            {
+              "start": 41.33,
+              "end": 57.27,
+              "label": "What each one does",
+              "note": "Research, firmware, checking her work."
+            },
+            {
+              "start": 57.27,
+              "end": 62.1,
+              "label": "A little team",
+              "note": "The logo between her hands."
+            }
+          ]
+        },
+        {
+          "id": "voices",
+          "segments": [
+            {
+              "start": 0,
+              "end": 10.22,
+              "label": "To the lens",
+              "kind": "interview",
+              "note": "Sync sound, with the outtake and 'Sorry.' kept."
+            },
+            {
+              "start": 10.38,
+              "end": 15.44,
+              "label": "Her videos' own audio",
+              "kind": "archival",
+              "note": "Lines from her channel, each on its own clip."
+            },
+            {
+              "start": 17.88,
+              "end": 25.52,
+              "label": "Naming the stars",
+              "kind": "interview-vo",
+              "note": "On camera at 0:18, then over the clip window."
+            },
+            {
+              "start": 25.76,
+              "end": 34.88,
+              "label": "Before Devin Bots",
+              "kind": "interview-vo"
+            },
+            {
+              "start": 35.36,
+              "end": 36.62,
+              "label": "'Look, it's already done.'",
+              "kind": "interview",
+              "note": "Said up to the high camera."
+            },
+            {
+              "start": 36.82,
+              "end": 39.92,
+              "label": "A few more hands",
+              "kind": "interview-vo"
+            },
+            {
+              "start": 40.16,
+              "end": 41.24,
+              "label": "'Meet my Devin Bots.'",
+              "kind": "interview",
+              "note": "On camera in the high wide."
+            },
+            {
+              "start": 41.46,
+              "end": 59.66,
+              "label": "One, another, another",
+              "kind": "interview-vo",
+              "note": "Each bot gets a line and a screen."
+            }
+          ]
+        },
+        {
+          "id": "sound",
+          "segments": [
+            {
+              "start": 0,
+              "end": 6.4,
+              "label": "Room sound",
+              "kind": "ambience",
+              "note": "No music under the outtake and the introduction."
+            },
+            {
+              "start": 6.4,
+              "end": 7.9,
+              "label": "Music hits",
+              "kind": "music"
+            },
+            {
+              "start": 7.9,
+              "end": 10.9,
+              "label": "Cut for 'Sorry.'",
+              "kind": "silence",
+              "note": "The music stops dead when she laughs."
+            },
+            {
+              "start": 10.9,
+              "end": 37.9,
+              "label": "Music",
+              "kind": "music",
+              "note": "Slams back in with her first clip; carries the wordless inserts at 0:15–0:18."
+            },
+            {
+              "start": 37.9,
+              "end": 38.7,
+              "label": "Dip",
+              "kind": "silence",
+              "note": "About 20 dB down for under a second while the prompt is typed."
+            },
+            {
+              "start": 38.7,
+              "end": 59.3,
+              "label": "Music",
+              "kind": "music"
+            },
+            {
+              "start": 59.3,
+              "end": 62.1,
+              "label": "Fades under logo",
+              "kind": "music"
+            }
+          ]
+        },
+        {
+          "id": "picture",
+          "segments": [
+            {
+              "start": 0,
+              "end": 10.43,
+              "label": "Across the table, profile, to the lens",
+              "kind": "interview"
+            },
+            {
+              "start": 10.43,
+              "end": 15.52,
+              "label": "Her clips over the bot chat",
+              "kind": "graphics"
+            },
+            {
+              "start": 15.52,
+              "end": 20.98,
+              "label": "Overhead, macro, hair clip",
+              "kind": "b-roll"
+            },
+            {
+              "start": 20.98,
+              "end": 25.73,
+              "label": "Clips over the defocused bench",
+              "kind": "graphics"
+            },
+            {
+              "start": 25.73,
+              "end": 31.24,
+              "label": "Interview and bench inserts",
+              "kind": "interview"
+            },
+            {
+              "start": 31.24,
+              "end": 34.24,
+              "label": "Laptop, Caesar chip",
+              "kind": "screen"
+            },
+            {
+              "start": 34.24,
+              "end": 41.33,
+              "label": "High wide and the screen",
+              "kind": "b-roll",
+              "note": "Time-lapse, the look up, the prompt sent, the name tags."
+            },
+            {
+              "start": 41.33,
+              "end": 57.27,
+              "label": "Screen, typing, interview in rotation",
+              "kind": "screen"
+            },
+            {
+              "start": 57.27,
+              "end": 62.1,
+              "label": "Logo in the high wide",
+              "kind": "title"
+            }
+          ]
+        }
+      ]
+    },
+    "aspects": [
+      {
+        "id": "story",
+        "title": "An outtake as the cold open",
+        "paragraphs": [
+          "The first words in the film are a question meant for the crew: 'Also, where should I look?' The edit keeps it and answers it with the next cut to a look straight down the lens. Four seconds later she laughs and says 'Sorry.' mid-introduction, and that stays in too. Before the product is mentioned, the film has told you this is a real person who was not reading lines, and it has done it with footage most edits would throw away.",
+          "The structure is short and plain. Who she is (0:03), what she already makes, shown through her own channel (0:10) and three star boards (0:18), how long that used to take (0:26), the bots (0:40), one line for each of the three (0:41 to 0:52), and a summary in her words: 'It's kind of like having a little engineering team of my own.' The product description on YouTube quotes the same line. Her own projects carry the specifics: a heart-shaped board, a portable voice diary called lyra, a board that lights up in the dark called cassiopeia, and a third star that is 'a secret'."
+        ],
+        "moments": [
+          {
+            "t": 0,
+            "text": "'Also, where should I look?'"
+          },
+          {
+            "t": 3,
+            "text": "The answer: straight down the lens."
+          },
+          {
+            "t": 8,
+            "text": "'Sorry.', kept."
+          },
+          {
+            "t": 25,
+            "text": "'And the third is a secret.'"
+          }
+        ]
+      },
+      {
+        "id": "frames",
+        "title": "Eight angles around one table",
+        "paragraphs": [
+          "The whole film happens at one table, and the coverage is planned so it never looks like the same place twice in a row. The table is dressed like a skyline: vintage test gear stacked high (a scope under a bench meter, an analog power supply, a soldering station), a pile of books with boards on top, a clear parts box, green and blue boards, a blue grid cutting mat with the laptop and an orange multimeter. Every angle has something of it in the foreground. The opening wide puts a stack of gear on each side of her like bookends; the low shots put a grey tool or the orange meter big and soft in front of the lens; the inserts sit right down on the mat among the parts.",
+          "The angles fall into a few families, each with its own job. Across the table at eye level is for presenting: the opening wide, the interview to the lens, and the moment she holds up the star. The three-quarter interview, with her eyeline just past the lens, carries the explaining after 0:25, so she is no longer selling to you but talking to someone. Beside her at table height, along her arms to the laptop, is the working angle: typing and hands. Table-level macros and one straight-down shot show the making. The laptop screen at a raking angle shows the bots' answers without ever going to a flat screen recording.",
+          "The high wide from the corner is the anchor. It is the only shot that shows the room (glazed door, boombox, walnut credenza, a window and sun across the floor, a striped rug under the table), and it is held back until 0:34, more than halfway in. It is used four times, each at a turning point: time compressed into smears for 'trims down the time to success', the look up for 'Look, it's already done', the name tags for 'Meet my Devin Bots', and the logo. She speaks to it twice on camera, so the overview is also a character in the room.",
+          "The cutting follows her phrases, not the music. Shots average about two seconds (median 1.5) and are shortest from 0:30 to 0:40, eight cuts in ten seconds, across 'build it and then check it' and 'trims down the time to success'. The beat check gives no lock: 5 of 29 detected cuts fall within 70 ms of a beat, exactly what chance would give."
+        ],
+        "figure": {
+          "svg": "<svg viewBox=\"0 0 860 520\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Top-down plan of the room and table with eight numbered camera positions around Sage\" font-family=\"-apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif\"><defs><pattern id=\"rug79\" width=\"12\" height=\"12\" patternUnits=\"userSpaceOnUse\"><rect width=\"12\" height=\"6\" fill=\"#151412\"/><rect y=\"6\" width=\"12\" height=\"6\" fill=\"#fbfaf6\"/></pattern></defs><rect x=\"20\" y=\"30\" width=\"500\" height=\"470\" rx=\"4\" fill=\"#efe4d0\" stroke=\"#151412\" stroke-width=\"2\"/><polygon points=\"455,250 520,232 520,300 470,312\" fill=\"#fbefc4\" opacity=\".9\"/><polygon points=\"470,340 520,328 520,392 484,400\" fill=\"#fbefc4\" opacity=\".9\"/><rect x=\"270\" y=\"38\" width=\"130\" height=\"34\" rx=\"2\" fill=\"#a8754a\"/><text x=\"335\" y=\"59\" font-size=\"11\" fill=\"#fff\" text-anchor=\"middle\" font-weight=\"400\">credenza</text><line x1=\"420\" y1=\"30\" x2=\"512\" y2=\"30\" stroke=\"#8fbcd3\" stroke-width=\"7\"/><text x=\"466\" y=\"22\" font-size=\"11\" fill=\"#6f6a60\" text-anchor=\"middle\" font-weight=\"400\">window</text><line x1=\"520\" y1=\"120\" x2=\"520\" y2=\"330\" stroke=\"#8fbcd3\" stroke-width=\"7\"/><circle cx=\"492\" cy=\"66\" r=\"17\" fill=\"#6b8f5a\"/><circle cx=\"498\" cy=\"160\" r=\"9\" fill=\"#6b8f5a\"/><circle cx=\"496\" cy=\"184\" r=\"8\" fill=\"#6b8f5a\"/><rect x=\"40\" y=\"42\" width=\"62\" height=\"26\" rx=\"2\" fill=\"#9a9a96\"/><text x=\"71\" y=\"87\" font-size=\"10.5\" fill=\"#6f6a60\" text-anchor=\"middle\" font-weight=\"400\">boombox</text><circle cx=\"134\" cy=\"56\" r=\"13\" fill=\"#fbfaf6\" stroke=\"#b8b2a6\"/><circle cx=\"134\" cy=\"56\" r=\"6\" fill=\"#6b8f5a\"/><rect x=\"20\" y=\"170\" width=\"9\" height=\"120\" fill=\"#fbfaf6\" stroke=\"#b8b2a6\"/><text x=\"42\" y=\"232\" font-size=\"10.5\" fill=\"#6f6a60\" transform=\"rotate(-90 42 232)\" text-anchor=\"middle\">glazed door</text><rect x=\"398\" y=\"318\" width=\"56\" height=\"168\" fill=\"url(#rug79)\" opacity=\".85\"/><text x=\"426\" y=\"512\" font-size=\"10.5\" fill=\"#6f6a60\" text-anchor=\"middle\" font-weight=\"400\">striped rug</text><rect x=\"150\" y=\"150\" width=\"262\" height=\"202\" rx=\"6\" fill=\"#c9a27a\" stroke=\"#8a6a48\" stroke-width=\"1.5\"/><rect x=\"160\" y=\"208\" width=\"112\" height=\"132\" rx=\"2\" fill=\"#5b9cc0\"/><rect x=\"192\" y=\"238\" width=\"48\" height=\"70\" rx=\"3\" fill=\"#e4e4e2\" stroke=\"#9a9a96\"/><rect x=\"240\" y=\"238\" width=\"5\" height=\"70\" fill=\"#6f6a60\"/><rect x=\"166\" y=\"314\" width=\"24\" height=\"18\" rx=\"2\" fill=\"#e06a2c\"/><rect x=\"272\" y=\"160\" width=\"48\" height=\"50\" rx=\"2\" fill=\"#5f7f9c\"/><text x=\"296\" y=\"225\" font-size=\"10\" fill=\"#fff\" text-anchor=\"middle\" font-weight=\"400\">scope stack</text><rect x=\"346\" y=\"166\" width=\"56\" height=\"74\" rx=\"2\" fill=\"#3c5a8a\"/><rect x=\"354\" y=\"180\" width=\"38\" height=\"26\" fill=\"#3f9b5a\"/><text x=\"374\" y=\"232\" font-size=\"10\" fill=\"#fff\" text-anchor=\"middle\" font-weight=\"400\">books</text><rect x=\"298\" y=\"248\" width=\"40\" height=\"32\" rx=\"3\" fill=\"#eef3f5\" stroke=\"#9fb3bd\"/><rect x=\"332\" y=\"290\" width=\"62\" height=\"46\" rx=\"2\" fill=\"#3f9b5a\"/><rect x=\"276\" y=\"300\" width=\"44\" height=\"40\" rx=\"2\" fill=\"#3f6f8f\"/><text x=\"216\" y=\"352\" font-size=\"10\" fill=\"#fff\" text-anchor=\"middle\" font-weight=\"400\">cutting mat</text><circle cx=\"128\" cy=\"272\" r=\"19\" fill=\"#f3e3a3\" stroke=\"#151412\" stroke-width=\"1.5\"/><path d=\"M147 272 L166 272\" stroke=\"#151412\" stroke-width=\"1.5\" marker-end=\"url(#arr79)\"/><defs><marker id=\"arr79\" viewBox=\"0 0 8 8\" refX=\"6\" refY=\"4\" markerWidth=\"7\" markerHeight=\"7\" orient=\"auto\"><path d=\"M0 0 L8 4 L0 8 z\" fill=\"#151412\"/></marker></defs><text x=\"128\" y=\"306\" font-size=\"12\" fill=\"#151412\" text-anchor=\"middle\" font-weight=\"600\">Sage</text><circle cx=\"216\" cy=\"274\" r=\"34\" fill=\"none\" stroke=\"#e4572e\" stroke-width=\"1.6\" stroke-dasharray=\"4 4\"/><polygon points=\"58,468 68,409 110,438\" fill=\"#e4572e\" fill-opacity=\".22\"/><circle cx=\"58\" cy=\"468\" r=\"11\" fill=\"#e4572e\"/><text x=\"58\" y=\"472.5\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"700\" fill=\"#fff\">1</text><polygon points=\"452,262 409,279 409,245\" fill=\"#e4572e\" fill-opacity=\".22\"/><circle cx=\"452\" cy=\"262\" r=\"11\" fill=\"#e4572e\"/><text x=\"452\" y=\"266.5\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"700\" fill=\"#fff\">2</text><polygon points=\"206,418 171,388 201,372\" fill=\"#e4572e\" fill-opacity=\".22\"/><circle cx=\"206\" cy=\"418\" r=\"11\" fill=\"#e4572e\"/><text x=\"206\" y=\"422.5\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"700\" fill=\"#fff\">3</text><circle cx=\"216\" cy=\"274\" r=\"11\" fill=\"#e4572e\"/><text x=\"216\" y=\"278.5\" font-size=\"12.5\" fill=\"#fff\" text-anchor=\"middle\" font-weight=\"700\">4</text><polygon points=\"312,372 268,358 290,331\" fill=\"#e4572e\" fill-opacity=\".22\"/><circle cx=\"312\" cy=\"372\" r=\"11\" fill=\"#e4572e\"/><text x=\"312\" y=\"376.5\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"700\" fill=\"#fff\">5</text><polygon points=\"212,128 242,163 209,174\" fill=\"#e4572e\" fill-opacity=\".22\"/><circle cx=\"212\" cy=\"128\" r=\"11\" fill=\"#e4572e\"/><text x=\"212\" y=\"132.5\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"700\" fill=\"#fff\">6</text><polygon points=\"150,334 172,301 188,320\" fill=\"#e4572e\" fill-opacity=\".22\"/><circle cx=\"150\" cy=\"334\" r=\"11\" fill=\"#e4572e\"/><text x=\"150\" y=\"338.5\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"700\" fill=\"#fff\">7</text><polygon points=\"92,206 124,230 104,244\" fill=\"#e4572e\" fill-opacity=\".22\"/><circle cx=\"92\" cy=\"206\" r=\"11\" fill=\"#e4572e\"/><text x=\"92\" y=\"210.5\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"700\" fill=\"#fff\">8</text><text x=\"560\" y=\"46\" font-size=\"15\" fill=\"#151412\" text-anchor=\"start\" font-weight=\"600\">Camera setups</text><text x=\"560\" y=\"64\" font-size=\"11.5\" fill=\"#6f6a60\" text-anchor=\"start\" font-weight=\"400\">32 shots in 62 seconds</text><circle cx=\"571\" cy=\"92\" r=\"10\" fill=\"#e4572e\"/><text x=\"571\" y=\"96.5\" font-size=\"11.5\" fill=\"#fff\" text-anchor=\"middle\" font-weight=\"700\">1</text><text x=\"590\" y=\"96\" font-size=\"12.5\" fill=\"#151412\" text-anchor=\"start\" font-weight=\"600\">High wide from the corner</text><text x=\"590\" y=\"112\" font-size=\"11\" fill=\"#6f6a60\" text-anchor=\"start\" font-weight=\"400\">4 shots · 7.8 s · 0:34, 0:35, 0:39, 0:57</text><circle cx=\"571\" cy=\"136\" r=\"10\" fill=\"#e4572e\"/><text x=\"571\" y=\"140.5\" font-size=\"11.5\" fill=\"#fff\" text-anchor=\"middle\" font-weight=\"700\">2</text><text x=\"590\" y=\"140\" font-size=\"12.5\" fill=\"#151412\" text-anchor=\"start\" font-weight=\"600\">Across the table</text><text x=\"590\" y=\"156\" font-size=\"11\" fill=\"#6f6a60\" text-anchor=\"start\" font-weight=\"400\">front wide ×2, to the lens ×1 · 9.8 s</text><circle cx=\"571\" cy=\"180\" r=\"10\" fill=\"#e4572e\"/><text x=\"571\" y=\"184.5\" font-size=\"11.5\" fill=\"#fff\" text-anchor=\"middle\" font-weight=\"700\">3</text><text x=\"590\" y=\"184\" font-size=\"12.5\" fill=\"#151412\" text-anchor=\"start\" font-weight=\"600\">Three-quarter interview</text><text x=\"590\" y=\"200\" font-size=\"11\" fill=\"#6f6a60\" text-anchor=\"start\" font-weight=\"400\">4 shots · 7.2 s · she talks just past the lens</text><circle cx=\"571\" cy=\"224\" r=\"10\" fill=\"#e4572e\"/><text x=\"571\" y=\"228.5\" font-size=\"11.5\" fill=\"#fff\" text-anchor=\"middle\" font-weight=\"700\">4</text><text x=\"590\" y=\"228\" font-size=\"12.5\" fill=\"#151412\" text-anchor=\"start\" font-weight=\"600\">Straight down on the mat</text><text x=\"590\" y=\"244\" font-size=\"11\" fill=\"#6f6a60\" text-anchor=\"start\" font-weight=\"400\">1 shot · 0.6 s</text><circle cx=\"571\" cy=\"268\" r=\"10\" fill=\"#e4572e\"/><text x=\"571\" y=\"272.5\" font-size=\"11.5\" fill=\"#fff\" text-anchor=\"middle\" font-weight=\"700\">5</text><text x=\"590\" y=\"272\" font-size=\"12.5\" fill=\"#151412\" text-anchor=\"start\" font-weight=\"600\">Table-level macro</text><text x=\"590\" y=\"288\" font-size=\"11\" fill=\"#6f6a60\" text-anchor=\"start\" font-weight=\"400\">4 shots · 3.3 s · solder, boards</text><circle cx=\"571\" cy=\"312\" r=\"10\" fill=\"#e4572e\"/><text x=\"571\" y=\"316.5\" font-size=\"11.5\" fill=\"#fff\" text-anchor=\"middle\" font-weight=\"700\">6</text><text x=\"590\" y=\"316\" font-size=\"12.5\" fill=\"#151412\" text-anchor=\"start\" font-weight=\"600\">Beside her, table height</text><text x=\"590\" y=\"332\" font-size=\"11\" fill=\"#6f6a60\" text-anchor=\"start\" font-weight=\"400\">typing ×4, hands ×4 · 11.3 s</text><circle cx=\"571\" cy=\"356\" r=\"10\" fill=\"#e4572e\"/><text x=\"571\" y=\"360.5\" font-size=\"11.5\" fill=\"#fff\" text-anchor=\"middle\" font-weight=\"700\">7</text><text x=\"590\" y=\"360\" font-size=\"12.5\" fill=\"#151412\" text-anchor=\"start\" font-weight=\"600\">The laptop screen, raking</text><text x=\"590\" y=\"376\" font-size=\"11\" fill=\"#6f6a60\" text-anchor=\"start\" font-weight=\"400\">4 shots · 9.2 s</text><circle cx=\"571\" cy=\"400\" r=\"10\" fill=\"#e4572e\"/><text x=\"571\" y=\"404.5\" font-size=\"11.5\" fill=\"#fff\" text-anchor=\"middle\" font-weight=\"700\">8</text><text x=\"590\" y=\"404\" font-size=\"12.5\" fill=\"#151412\" text-anchor=\"start\" font-weight=\"600\">Profile close</text><text x=\"590\" y=\"420\" font-size=\"11\" fill=\"#6f6a60\" text-anchor=\"start\" font-weight=\"400\">2 shots · 2.5 s · the scope knob, the hair clip</text><circle cx=\"571\" cy=\"444\" r=\"10\" fill=\"#151412\"/><text x=\"571\" y=\"448.5\" font-size=\"11.5\" fill=\"#fff\" text-anchor=\"middle\" font-weight=\"700\">G</text><text x=\"590\" y=\"448\" font-size=\"12.5\" fill=\"#151412\" text-anchor=\"start\" font-weight=\"600\">Graphic windows, not in the room</text><text x=\"590\" y=\"464\" font-size=\"11\" fill=\"#6f6a60\" text-anchor=\"start\" font-weight=\"400\">2 sequences · 9.8 s · 0:10, 0:21</text></svg>",
+          "caption": "A schematic, read from the frames. The high wide is the only shot that shows the room, so the other positions are drawn relative to Sage and the table, not measured. The backgrounds in the front and interview shots show the gear and furniture were moved between set-ups, so read this as a map of angles, not a survey of the set.",
+          "text": [
+            "The room, as the high wide shows it: a glazed door on the left wall, a boombox on a side table and a white planter in the back-left corner, a walnut credenza on the back wall, a window and a large plant at back right, sun across the wood floor on the right, and a black-and-white striped rug under the right edge of the table.",
+            "The table: Sage at the left end facing along it. In front of her a blue cutting mat with the laptop and an orange multimeter. Beyond the laptop a stack of a scope and a bench meter; to its right a pile of books with boards on it; in the middle a clear parts box; at the front green and blue boards and a keyboard.",
+            "1 High wide from the corner, near ceiling height: 4 shots, 7.8 s (0:34, 0:35, 0:39, 0:57). The only shot that shows the room.",
+            "2 Across the table at eye level, with test gear in the foreground on both sides: front wide twice (0:00, 0:18) and the interview to the lens (0:02).",
+            "3 Three-quarter interview from her front, she talks just past the lens: 4 shots, 7.2 s (0:25, 0:30, 0:45, 0:53).",
+            "4 Straight down on the mat: 1 shot, 0.6 s (0:15).",
+            "5 Table-level macro on the mat (soldering, a motherboard): 4 shots, 3.3 s (0:16, 0:16.8, 0:27, 0:29.7).",
+            "6 Beside her at table height, along her arms to the laptop: typing 4 times and hands 4 times, 11.3 s.",
+            "7 The laptop screen at a raking angle: 4 shots, 9.2 s (0:32, 0:36, 0:41, 0:47).",
+            "8 Profile close: 2 shots, 2.5 s (the scope knob at 0:01, the hair clip at 0:17).",
+            "G Two graphic sequences that are not in the room: her clips in a window over the bot chat (0:10) and over a defocused shot of the bench (0:21), 9.8 s."
+          ]
+        },
+        "moments": [
+          {
+            "t": 0,
+            "text": "Gear on both sides like bookends."
+          },
+          {
+            "t": 27,
+            "text": "A tool big in the foreground at table level."
+          },
+          {
+            "t": 26,
+            "text": "The three-quarter interview, eyeline just past the lens."
+          },
+          {
+            "t": 44,
+            "text": "The working angle: beside her, along her arms."
+          },
+          {
+            "t": 36,
+            "text": "The high wide, held back until halfway, and talked to."
+          },
+          {
+            "t": 16,
+            "text": "A macro right down on the mat."
+          }
+        ]
+      },
+      {
+        "id": "screens",
+        "title": "The interface moves into the room",
+        "paragraphs": [
+          "The interface enters the film in four steps, and each one sits closer to the room than the last. At 0:10 it takes over the whole frame: a dark chat with her bots fills the background, and her own vertical videos play in a fixed 9:16 window in the middle. The camera footage is gone. At 0:21 the window comes back, but the background is a defocused shot of her bench, so the window now floats in her room. At 0:31 the interface is only a small frosted chip in the corner of camera footage. At 0:40 the bots' name tags are placed on the table itself, among the gear, and at 0:57 the logo grows between her hands in the same shot.",
+          "The hand-offs out of the graphics are matched. The first window cuts to a shot straight down on the table, the one camera angle as flat as a screen: laptop, grid mat, striped rug and coiled cable read as shapes, the way the chat did. The second window ends on star stickers placed over her face to name each board, and the next shot has the real teal star clipped in her hair. The flat version is shown first and the physical one replaces it.",
+          "The bots are introduced the way she was. Her name came up at 0:03 as a frosted chip at bottom left, name over role. Caesar arrives at 0:31 as the same chip in the same place, name over task, 'Build my hardware's software'. It is held across four shots and three angles, so the task stays while the camera moves. Later the screen shots pay off something planted early: the voice diary prompt typing in the chat behind her clips at 0:14 is typed in full on the real laptop at 0:37 and sent at 0:39.",
+          "The product is never shown as a flat recording. Every screen is shot on the laptop at a raking angle, with her fingers soft in front and the keys in the corner, so the interface keeps the same light and grain as everything else."
+        ],
+        "moments": [
+          {
+            "t": 11,
+            "text": "Step one: the interface fills the frame, her videos in a window."
+          },
+          {
+            "t": 21,
+            "text": "Step two: the window over her own bench."
+          },
+          {
+            "t": 31,
+            "text": "Step three: a chip in her lower third's place."
+          },
+          {
+            "t": 40,
+            "text": "Step four: name tags on the table."
+          },
+          {
+            "t": 14,
+            "text": "The prompt, typing behind the clips."
+          },
+          {
+            "t": 38,
+            "text": "The same prompt on the real laptop."
+          }
+        ]
+      },
+      {
+        "id": "sound",
+        "title": "The music stops for 'Sorry.'",
+        "paragraphs": [
+          "The first six seconds have no music, only her voice and the room, which suits an outtake. The music hits at 0:06.4 under 'who loves to build hardware', and at 0:07.9 it is cut dead as she breaks and says 'Sorry.' Three seconds of room sound follow, under 'That I also share on the internet' and her smile into the lens, and the music slams back at 0:11.0 with the first of her own videos. It treats her laugh like a record scratch, and it makes the cut into her channel the start of the film proper.",
+          "From there the music runs at an even level under her voice to the end, carrying the two wordless seconds of soldering at 0:15–0:18 and dipping once for under a second at 0:38 while she types the prompt. It fades under the logo. The ten-second stretch of her clips uses their own audio, so her channel voice ('Hi, friends', 'Make your first circuit board with me') and her interview voice sit side by side."
+        ],
+        "moments": [
+          {
+            "t": 6,
+            "text": "The music hits."
+          },
+          {
+            "t": 8,
+            "text": "...and stops for 'Sorry.'"
+          },
+          {
+            "t": 11,
+            "text": "Back in with her own videos."
+          },
+          {
+            "t": 16,
+            "text": "Music alone over the soldering."
+          }
+        ]
+      }
+    ],
+    "patterns": [
+      {
+        "name": "Keep the outtake that proves it is real",
+        "t": 0,
+        "text": "Open on a question meant for the crew and answer it with the next cut. A laugh and a 'Sorry.' do more for trust than any line about being authentic."
+      },
+      {
+        "name": "Hold the room back",
+        "t": 34,
+        "text": "Shoot one high wide that shows the whole space, save it until halfway, and use it only at turning points. It becomes the map the rest of the coverage hangs on."
+      },
+      {
+        "name": "Dress the table for every lens",
+        "t": 27,
+        "text": "Arrange gear in stacks and piles at different heights so each camera position finds its own foreground: bookends for the wide, a soft tool for the low shot, parts around the macro."
+      },
+      {
+        "name": "Bring the interface in by steps",
+        "t": 40,
+        "text": "Start with a full-frame graphic, then a window over the real room, then a chip over the footage, then labels placed in the scene. The product moves from a screen into the person's world."
+      },
+      {
+        "name": "Give the product a lower third like the person's",
+        "t": 31,
+        "text": "Introduce each bot with the same chip, in the same place, as the human, and hold it across cuts so a task stays on screen while the angles change."
+      },
+      {
+        "name": "Match the flat to the flat",
+        "t": 16,
+        "text": "Leave a flat graphic on a straight-down shot, and swap a sticker for the real object it stood for. The eye reads the change as one move."
+      },
+      {
+        "name": "Plant the prompt early",
+        "t": 14,
+        "text": "Let the prompt type in the background of an early graphic, then type and send it on the real laptop twenty seconds later."
+      }
+    ],
+    "absent": "It does not explain how Devin Bots work, show a setup, or put a number on the time saved. There is no narrator, no product walkthrough and no call to action on screen; the description carries the link."
+  }
+}

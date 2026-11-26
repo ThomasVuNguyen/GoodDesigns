@@ -1,0 +1,24 @@
+[00:00:00] Also, where should I look?
+[00:00:02] My name is Sage Cadence.
+[00:00:03] I'm a Stanford electrical engineering student who loves to build hardware.
+[00:00:07] Sorry.
+[00:00:08] That I also share on the internet.
+[00:00:10] Hi, friends.
+[00:00:11] Here's how I built a beating heart circuit board.
+[00:00:12] This is how to build an engineering project.
+[00:00:14] Make your first circuit board with me.
+[00:00:17] So I have these two star-shaped circuit boards.
+[00:00:21] The first lights up in the dark.
+[00:00:22] The second is a portable voice diary.
+[00:00:24] And the third is a secret.
+[00:00:25] Before Devin Bots, the process of building a circuit board like this would take a long time
+[00:00:29] because I have to build it and then check it.
+[00:00:31] Devin Bots really trims down the time to success.
+[00:00:35] Look, it's already done.
+[00:00:36] The only difference is that now I have a few more hands to help me make it happen.
+[00:00:40] Meet my Devin Bots.
+[00:00:41] One is constantly researching for new components, parts that I haven't seen before, new ways to do things.
+[00:00:47] Another one can work on the firmware while I'm actually building the thing.
+[00:00:50] Another one is constantly checking my work.
+[00:00:52] It allows me to try much more ambitious projects while learning, while focusing on the parts that I enjoy.
+[00:00:57] It's kind of like having a little engineering team of my own.

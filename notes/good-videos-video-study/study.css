@@ -158,6 +158,9 @@ body:has(.frame-grid.is-square) .frame-preview img { aspect-ratio: 1; }
 .craft-kicker:empty { display: none; }
 .craft-aspect h3 { margin: 0 0 14px; font: 400 clamp(24px, 2.8vw, 32px)/1.12 var(--serif); letter-spacing: -.01em; }
 .craft-body p { max-width: 68ch; margin: 0 0 14px; font-size: 16px; line-height: 1.62; }
+.craft-figure { max-width: 860px; margin: 22px 0 6px; padding: 18px; overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--card); }
+.craft-figure svg { display: block; width: 100%; min-width: 640px; height: auto; }
+.craft-figure figcaption { max-width: 68ch; margin-top: 12px; color: var(--muted); font-size: 14px; line-height: 1.5; }
 .craft-moments { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 16px; margin: 22px 0 0; padding: 0; list-style: none; }
 .craft-moment { min-width: 0; }
 .craft-moment-thumb { display: block; width: 100%; padding: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 7px; background: var(--ink); aspect-ratio: 16/9; cursor: pointer; }
